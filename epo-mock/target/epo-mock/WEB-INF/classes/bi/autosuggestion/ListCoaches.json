@@ -1,0 +1,228 @@
+{
+  "AM39ListCoaches": [
+    {
+      "AM39_Result": "OK",
+      "AM39_Explanation": ""
+    },
+    {
+      "CoachCaseID": "50894",
+      "CoachUserID": "EDOEX20",
+      "CoachFullname": "Examiner 20 eDossier Testing"
+    },
+    {
+      "CoachCaseID": "50895",
+      "CoachUserID": "EDODI05",
+      "CoachFullname": "Director 05 eDossier Testing"
+    },
+    {
+      "CoachCaseID": "50925",
+      "CoachUserID": "MP53426",
+      "CoachFullname": "Matthias Pacevicius"
+    },
+    {
+      "CoachCaseID": "50927",
+      "CoachUserID": "RO04091",
+      "CoachFullname": "Ricardo Oltra García"
+    },
+    {
+      "CoachCaseID": "50931",
+      "CoachUserID": "TJ01711",
+      "CoachFullname": "Mark Jones"
+    },
+    {
+      "CoachCaseID": "50932",
+      "CoachUserID": "MG02729",
+      "CoachFullname": "Maarten Giesen"
+    },
+    {
+      "CoachCaseID": "51039",
+      "CoachUserID": "EDOEX21",
+      "CoachFullname": "Examiner 21 eDossier Testing"
+    },
+    {
+      "CoachCaseID": "51244",
+      "CoachUserID": "SC03911",
+      "CoachFullname": "Sabino Cianci"
+    },
+    {
+      "CoachCaseID": "51438",
+      "CoachUserID": "WV03540",
+      "CoachFullname": "Wim Vermander"
+    },
+    {
+      "CoachCaseID": "51509",
+      "CoachUserID": "MS03784",
+      "CoachFullname": "Alexandra Forjaz"
+    },
+    {
+      "CoachCaseID": "51578",
+      "CoachUserID": "EE51005",
+      "CoachFullname": "Els Espeel"
+    },
+    {
+      "CoachCaseID": "51919",
+      "CoachUserID": "AM02947",
+      "CoachFullname": "Alain Merckx"
+    },
+    {
+      "CoachCaseID": "51985",
+      "CoachUserID": "RP53287",
+      "CoachFullname": "Rob Postma"
+    },
+    {
+      "CoachCaseID": "52495",
+      "CoachUserID": "MN52503",
+      "CoachFullname": "Morgan Nédélec"
+    },
+    {
+      "CoachCaseID": "52769",
+      "CoachUserID": "LC53514",
+      "CoachFullname": "Lucian Chirvase"
+    },
+    {
+      "CoachCaseID": "52804",
+      "CoachUserID": "EDOEX19",
+      "CoachFullname": "Examiner 19 eDossier Testing"
+    },
+    {
+      "CoachCaseID": "52927",
+      "CoachUserID": "DC53591",
+      "CoachFullname": "Adrian Ciubotariu"
+    },
+    {
+      "CoachCaseID": "53112",
+      "CoachUserID": "MB52592",
+      "CoachFullname": "Maarten Balzar"
+    },
+    {
+      "CoachCaseID": "53160",
+      "CoachUserID": "BC03312",
+      "CoachFullname": "Benoît Claudel"
+    },
+    {
+      "CoachCaseID": "53502",
+      "CoachUserID": "DS03253",
+      "CoachFullname": "Dirk Schwingel"
+    },
+    {
+      "CoachCaseID": "53583",
+      "CoachUserID": "SS51679",
+      "CoachFullname": "Stephan Seide"
+    },
+    {
+      "CoachCaseID": "54024",
+      "CoachUserID": "HV51675",
+      "CoachFullname": "Erik Van Leeuwen"
+    },
+    {
+      "CoachCaseID": "54360",
+      "CoachUserID": "IK52868",
+      "CoachFullname": "Ismail Utku Kiyak"
+    },
+    {
+      "CoachCaseID": "54467",
+      "CoachUserID": "AR50576",
+      "CoachFullname": "Ángel Rojo Galindo"
+    },
+    {
+      "CoachCaseID": "54615",
+      "CoachUserID": "LB51908",
+      "CoachFullname": "Lucía Batres Arnal"
+    },
+    {
+      "CoachCaseID": "54699",
+      "CoachUserID": "AB53411",
+      "CoachFullname": "Arnaud Benedetti"
+    },
+    {
+      "CoachCaseID": "54818",
+      "CoachUserID": "CW53468",
+      "CoachFullname": "Christian Weinmüller"
+    },
+    {
+      "CoachCaseID": "55484",
+      "CoachUserID": "BM04024",
+      "CoachFullname": "Benoit Moeremans"
+    },
+    {
+      "CoachCaseID": "55963",
+      "CoachUserID": "MW02562",
+      "CoachFullname": "Mark Williams"
+    },
+    {
+      "CoachCaseID": "56815",
+      "CoachUserID": "AG52764",
+      "CoachFullname": "Angeliki Gkionaki"
+    },
+    {
+      "CoachCaseID": "56919",
+      "CoachUserID": "LS53526",
+      "CoachFullname": "Lorenz Steinbock"
+    },
+    {
+      "CoachCaseID": "57357",
+      "CoachUserID": "JH00918",
+      "CoachFullname": "Jan Herijgers"
+    },
+    {
+      "CoachCaseID": "57360",
+      "CoachUserID": "JD01664",
+      "CoachFullname": "Jean-Paul Deutsch"
+    },
+    {
+      "CoachCaseID": "57396",
+      "CoachUserID": "VV01788",
+      "CoachFullname": "Vik von Arx"
+    },
+    {
+      "CoachCaseID": "57952",
+      "CoachUserID": "RM50307",
+      "CoachFullname": "Renan Menier"
+    },
+    {
+      "CoachCaseID": "58099",
+      "CoachUserID": "FR52387",
+      "CoachFullname": "Friedrich Reininghaus"
+    },
+    {
+      "CoachCaseID": "58453",
+      "CoachUserID": "CB51000",
+      "CoachFullname": "Cédric Beaufumé"
+    },
+    {
+      "CoachCaseID": "58624",
+      "CoachUserID": "AD50641",
+      "CoachFullname": "Alain Duquénoy"
+    },
+    {
+      "CoachCaseID": "58985",
+      "CoachUserID": "AG50579",
+      "CoachFullname": "Adrian-Léon Gex-Collet"
+    },
+    {
+      "CoachCaseID": "59032",
+      "CoachUserID": "KK52458",
+      "CoachFullname": "Klaus Kasten"
+    },
+    {
+      "CoachCaseID": "59296",
+      "CoachUserID": "MB50408",
+      "CoachFullname": "Mathieu Been"
+    },
+    {
+      "CoachCaseID": "59870",
+      "CoachUserID": "JD52032",
+      "CoachFullname": "Joëlle Dagnelies"
+    },
+    {
+      "CoachCaseID": "60035",
+      "CoachUserID": "RM03618",
+      "CoachFullname": "Richard Millward"
+    },
+    {
+      "CoachCaseID": "60214",
+      "CoachUserID": "IG51678",
+      "CoachFullname": "Isabel Guillem Gisbert"
+    }
+  ]
+}

@@ -1,0 +1,101 @@
+{
+  "_embedded" : {
+    "results" : [ {
+      "Patent" : {
+        "id" : "GBW  2014053012-SA      1310980-007",
+        "applicationNumber" : "GBW  2014053012",
+        "applicationTitle" : "INTERVENTION SYSTEM AND APPARATUS",
+        "_links" : {
+          "self" : {
+            "href" : "/workmanager/Patent/GBW++2014053012"
+          }
+        },
+        "_id" : {
+          "@type" : "number",
+          "#text" : "GBW  2014053012"
+        }
+      }
+    }, {
+      "Patent" : {
+        "id" : "EPA    11154279-EP     11154279-001",
+        "applicationNumber" : "EPA    11154279",
+        "applicationTitle" : "Low-noise high efficiency bias generation circuits and method",
+        "_links" : {
+          "self" : {
+            "href" : "/workmanager/Patent/EPA++++11154279"
+          }
+        },
+        "_id" : {
+          "@type" : "number",
+          "#text" : "EPA    11154279"
+        }
+      }
+    }, {
+      "Patent" : {
+        "id" : "EPA    11002312-EP     11002312-001",
+        "applicationNumber" : "EPA    11002312",
+        "applicationTitle" : "Gas combustion type fastener driving machine",
+        "_links" : {
+          "self" : {
+            "href" : "/workmanager/Patent/EPA++++11002312"
+          }
+        },
+        "_id" : {
+          "@type" : "number",
+          "#text" : "EPA    11002312"
+        }
+      }
+    }, {
+      "Patent" : {
+        "id" : "EPA    11002162-EP     11002162-001",
+        "applicationNumber" : "EPA    11002162",
+        "applicationTitle" : "Device and method to fasten a removable cross piece, a so called glazing bar",
+        "_links" : {
+          "self" : {
+            "href" : "/workmanager/Patent/EPA++++11002162"
+          }
+        },
+        "_id" : {
+          "@type" : "number",
+          "#text" : "EPA    11002162"
+        }
+      }
+    }, {
+      "Patent" : {
+        "id" : "EPA    11002127-EP     11002127-001",
+        "applicationNumber" : "EPA    11002127",
+        "applicationTitle" : "Nasslaufender Elektromotor und Pumpenaggregat",
+        "_links" : {
+          "self" : {
+            "href" : "/workmanager/Patent/EPA++++11002127"
+          }
+        },
+        "_id" : {
+          "@type" : "number",
+          "#text" : "EPA    11002127"
+        }
+      }
+    }, {
+      "Patent" : {
+        "id" : "EPA    10731181-EP     10731181-002",
+        "applicationNumber" : "EPA    10731181",
+        "applicationTitle" : "FOOD AND DRINK CONVEYING DEVICE",
+        "_links" : {
+          "self" : {
+            "href" : "/workmanager/Patent/EPA++++10731181"
+          }
+        },
+        "_id" : {
+          "@type" : "number",
+          "#text" : "EPA    10731181"
+        }
+      }
+    } ]
+  },
+  "filter" : [ ],
+  "_links" : {
+    "self" : {
+      "href" : "/workmanager/AllPatents"
+    }
+  }
+}

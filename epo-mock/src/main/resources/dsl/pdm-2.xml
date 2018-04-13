@@ -1,0 +1,1372 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<teiCorpus subtype="simple" type="patentFamily">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <bibl subtype="simple" type="patentFamily">
+                    <idno type="familyId">049301271</idno>
+                </bibl>
+            </titleStmt>
+        </fileDesc>
+    </teiHeader>
+    <teiCorpus type="application">
+        <teiHeader>
+            <fileDesc>
+                <titleStmt>
+                    <bibl type="application">
+                        <idno notation="docdb" type="docNumber">13185435</idno>
+                        <authority>
+                            <orgName type="regional">EP</orgName>
+                        </authority>
+                        <classCode scheme="kindCode">A</classCode>
+                        <date type="dateOfFiling" when="2013-09-21"/>
+                        <idno notation="docdb" type="docId">410564974</idno>
+                        <idno notation="original" type="docNumber">EP 13 185 435.8</idno>
+                    </bibl>
+                </titleStmt>
+            </fileDesc>
+        </teiHeader>
+        <TEI availability="confidential" type="applicationDocument">
+            <teiHeader>
+                <fileDesc>
+                    <publicationStmt>
+                        <listPlace type="designationOfStates">
+                            <listPlace type="designationEPC">
+                                <place type="contractingStates">
+                                    <country>AL</country>
+                                    <country>AT</country>
+                                    <country>BE</country>
+                                    <country>BG</country>
+                                    <country>CH</country>
+                                    <country>CY</country>
+                                    <country>CZ</country>
+                                    <country>DE</country>
+                                    <country>DK</country>
+                                    <country>EE</country>
+                                    <country>ES</country>
+                                    <country>FI</country>
+                                    <country>FR</country>
+                                    <country>GB</country>
+                                    <country>GR</country>
+                                    <country>HR</country>
+                                    <country>HU</country>
+                                    <country>IE</country>
+                                    <country>IS</country>
+                                    <country>IT</country>
+                                    <country>LI</country>
+                                    <country>LT</country>
+                                    <country>LU</country>
+                                    <country>LV</country>
+                                    <country>MC</country>
+                                    <country>MK</country>
+                                    <country>MT</country>
+                                    <country>NL</country>
+                                    <country>NO</country>
+                                    <country>PL</country>
+                                    <country>PT</country>
+                                    <country>RO</country>
+                                    <country>RS</country>
+                                    <country>SE</country>
+                                    <country>SI</country>
+                                    <country>SK</country>
+                                    <country>SM</country>
+                                    <country>TR</country>
+                                </place>
+                            </listPlace>
+                        </listPlace>
+                    </publicationStmt>
+                    <noteStmt>
+                        <note corresp="1c5f8f86f71f25e7e253424437684830" type="abstract_information">
+                            <idno type="lang">en</idno>
+                        </note>
+                    </noteStmt>
+                    <sourceDesc>
+                        <listBibl type="doublures">
+                            <bibl type="application">
+                                <authority>
+                                    <orgName type="regional">EP</orgName>
+                                </authority>
+                                <idno notation="docdb" type="docNumber">13185436</idno>
+                                <classCode scheme="kindCode">A</classCode>
+                            </bibl>
+                            <bibl type="application">
+                                <authority>
+                                    <orgName type="regional">EP</orgName>
+                                </authority>
+                                <idno notation="docdb" type="docNumber">13185432</idno>
+                                <classCode scheme="kindCode">A</classCode>
+                            </bibl>
+                        </listBibl>
+                        <listBibl type="priorityClaims">
+                            <bibl type="application">
+                                <authority>
+                                    <orgName type="national">US</orgName>
+                                </authority>
+                                <date when="2012-09-20"/>
+                                <idno notation="docdb" type="docNumber">201261703404</idno>
+                                <classCode scheme="kindCode">P</classCode>
+                                <idno notation="dnum" type="docNumber">USP201261703404</idno>
+                                <idno notation="original" type="docNumber">61/703404</idno>
+                            </bibl>
+                            <bibl type="application">
+                                <authority>
+                                    <orgName type="national">US</orgName>
+                                </authority>
+                                <date when="2013-03-15"/>
+                                <idno notation="docdb" type="docNumber">201313832490</idno>
+                                <classCode scheme="kindCode">A</classCode>
+                                <idno notation="dnum" type="docNumber">USA201313832490</idno>
+                                <idno notation="original" type="docNumber">13/832490</idno>
+                            </bibl>
+                        </listBibl>
+                        <listBibl type="divisionals">
+                            <bibl status="oldestParent" type="application">
+                                <authority>
+                                    <orgName type="regional">EP</orgName>
+                                </authority>
+                                <idno notation="docdb" type="docNumber">13188606</idno>
+                                <classCode scheme="kindCode">A</classCode>
+                                <date type="dateOfFiling" when="2013-09-21"/>
+                            </bibl>
+                        </listBibl>
+                    </sourceDesc>
+                    <titleStmt>
+                        <funder role="applicant">
+                            <name notation="unknown">DePuy (Ireland)</name>
+                            <address type="adrStruct">
+                                <addrLine>Loughbeg
+                                    County Cork,, Ringaskiddy
+                                </addrLine>
+                                <country type="national">IE</country>
+                            </address>
+                        </funder>
+                        <title notation="docdba" type="invention" xml:id="_30bcd9" xml:lang="en">Orthopaedic Surgical Instrument System</title>
+                        <title type="procedural" xml:id="_30bcd9" xml:lang="en">Orthopaedic Surgical Instrument System</title>
+                        <author role="inventor">
+                            <persName notation="unknown">BERNASEK, Thomas L</persName>
+                            <address type="adrStruct">
+                                <addrLine>5820 Mariner Street, Tampa, FL Florida 33609</addrLine>
+                                <country type="national">US</country>
+                            </address>
+                        </author>
+                        <author role="inventor">
+                            <persName notation="unknown">CROSSETT, Lawrence S</persName>
+                            <address type="adrStruct">
+                                <addrLine>9 Fairview Manor, Pittsburg, PA Pennsylvania 15238</addrLine>
+                                <country type="national">US</country>
+                            </address>
+                        </author>
+                        <author role="inventor">
+                            <persName notation="unknown">HAIDUKEWYCH, George J</persName>
+                            <address type="adrStruct">
+                                <addrLine>5855 Emerington Crescent, Orlando, FL Florida 32819</addrLine>
+                                <country type="national">US</country>
+                            </address>
+                        </author>
+                        <author role="inventor">
+                            <persName notation="unknown">LIEBERMAN, Jay R</persName>
+                            <address type="adrStruct">
+                                <addrLine>5 Westland Road, Avon, CT Connecticut 06001</addrLine>
+                                <country type="national">US</country>
+                            </address>
+                        </author>
+                        <author role="inventor">
+                            <persName notation="unknown">SORDELET, Benjamin J</persName>
+                            <address type="adrStruct">
+                                <addrLine>1685 N 450 East, Columbia City, IN Indiana 46725</addrLine>
+                                <country type="national">US</country>
+                            </address>
+                        </author>
+                        <author role="inventor">
+                            <persName notation="unknown">JONES, Richard Spencer</persName>
+                            <address type="adrStruct">
+                                <addrLine>The Red House@Edge, Yockleton, Shropshire SY5 9PY</addrLine>
+                                <country type="national">GB</country>
+                            </address>
+                        </author>
+                        <author role="inventor">
+                            <persName notation="unknown">VENDRELY, Timothy G</persName>
+                            <address type="adrStruct">
+                                <addrLine>3360 Eastbrook Drive, Fort Wayne, IN Indiana 46805</addrLine>
+                                <country type="national">US</country>
+                            </address>
+                        </author>
+                        <author role="inventor">
+                            <persName notation="unknown">WAINSCOTT, Stephanie M</persName>
+                            <address type="adrStruct">
+                                <addrLine>1294 North Riverwood@Ranch Road, Warsaw, IN Indiana 46580</addrLine>
+                                <country type="national">US</country>
+                            </address>
+                        </author>
+                        <author role="inventor">
+                            <persName notation="unknown">COOK, Michael A</persName>
+                            <address type="adrStruct">
+                                <addrLine>C/O DePuy Synthes Products, LLC@700 Orthopaedic Drive, Warsaw, IN Indiana 46581</addrLine>
+                                <country type="national">US</country>
+                            </address>
+                        </author>
+                        <author role="inventor">
+                            <persName notation="unknown">CHANEY, Rebecca L</persName>
+                            <address type="adrStruct">
+                                <addrLine>C/O DePuy Synthes Products, LLC@700 Orthopaedic Drive, Warsaw, IN Indiana 46581</addrLine>
+                                <country type="national">US</country>
+                            </address>
+                        </author>
+                        <author role="inventor">
+                            <persName notation="unknown">WYSS, Joseph G</persName>
+                            <address type="adrStruct">
+                                <addrLine>C/O DePuy Synthes Products, LLC@700 Orthopaedic Drive, Warsaw, IN Indiana 46581</addrLine>
+                                <country type="national">US</country>
+                            </address>
+                        </author>
+                        <author role="inventor">
+                            <persName notation="unknown">HAZEBROUCK, Stephen A</persName>
+                            <address type="adrStruct">
+                                <addrLine>C/O DePuy Synthes Products, LLC@700 Orthopaedic Drive, Warsaw, IN Indiana 46581</addrLine>
+                                <country type="national">US</country>
+                            </address>
+                        </author>
+                        <author role="inventor">
+                            <persName notation="unknown">MATYAS, Aaron J</persName>
+                            <address type="adrStruct">
+                                <addrLine>C/O DePuy Synthes Products, LLC@700 Orthopaedic Drive, Warsaw, IN Indiana 46581</addrLine>
+                                <country type="national">US</country>
+                            </address>
+                        </author>
+                        <editor role="representative">
+                            <name>Belcher, Simon James</name>
+                            <address type="adrStruct">
+                                <addrLine>Urquhart-Dykes &amp; Lord LLP
+                                    Tower North Central
+                                    Merrion Way, Leeds LS2 8PA
+                                </addrLine>
+                                <country type="national">GB</country>
+                            </address>
+                            <address type="adrTotal">Belcher, Simon James<lb/>Urquhart-Dykes &amp; Lord LLP<lb/>Tower North Central<lb/>Merrion Way<lb/>Leeds LS2 8PA
+                            </address>
+                        </editor>
+                    </titleStmt>
+                </fileDesc>
+                <profileDesc>
+                    <langUsage type="filingLanguage">
+                        <language ident="en"/>
+                    </langUsage>
+                </profileDesc>
+                <revisionDesc>
+                    <listChange>
+                        <change when="2013-09-20" xml:id="_30bcd9"/>
+                    </listChange>
+                </revisionDesc>
+                <creation>
+                    <listChange>
+                        <change xml:id="1c5f8f86f71f25e7e253424437684830">
+                            <date type="dateProduced">20130920</date>
+                            <orgName type="supplier">JOUVE</orgName>
+                            <idno type="formatSubtype">ST36XOCR</idno>
+                            <idno type="qualityLevel">02</idno>
+                            <language ident="EN"/>
+                            <idno type="section">A</idno>
+                        </change>
+                        <change xml:id="82eb49e77ac5e25361655af900834808">
+                            <date type="dateProduced">20130920</date>
+                            <orgName type="supplier">JOUVE</orgName>
+                            <idno type="formatSubtype">ST36XOCR</idno>
+                            <idno type="qualityLevel">02</idno>
+                            <language ident="EN"/>
+                            <idno type="section">C</idno>
+                        </change>
+                        <change xml:id="32ecb72eff48594f909e466181341af0">
+                            <date type="dateProduced">20130920</date>
+                            <orgName type="supplier">JOUVE</orgName>
+                            <idno type="formatSubtype">ST36XOCR</idno>
+                            <idno type="qualityLevel">02</idno>
+                            <language ident="EN"/>
+                            <idno type="section">D</idno>
+                        </change>
+                    </listChange>
+                </creation>
+            </teiHeader>
+            <facsimile xml:id="EU5BCNLP7524FI4">
+                <surface n="1" type="page">
+                    <graphic url="/api/pre-publication/410564974/EP2013185435A/facsimile/description/1"/>
+                    <zone type="description" xml:id="EU5BCNLP7524FI41"/>
+                </surface>
+                <surface n="2" type="page">
+                    <graphic url="/api/pre-publication/410564974/EP2013185435A/facsimile/description/2"/>
+                    <zone type="description" xml:id="EU5BCNLP7524FI42"/>
+                </surface>
+                <surface n="3" type="page">
+                    <graphic url="/api/pre-publication/410564974/EP2013185435A/facsimile/description/3"/>
+                    <zone type="description" xml:id="EU5BCNLP7524FI43"/>
+                </surface>
+                <surface n="4" type="page">
+                    <graphic url="/api/pre-publication/410564974/EP2013185435A/facsimile/description/4"/>
+                    <zone type="description" xml:id="EU5BCNLP7524FI44"/>
+                </surface>
+                <surface n="5" type="page">
+                    <graphic url="/api/pre-publication/410564974/EP2013185435A/facsimile/description/5"/>
+                    <zone type="description" xml:id="EU5BCNLP7524FI45"/>
+                </surface>
+                <surface n="6" type="page">
+                    <graphic url="/api/pre-publication/410564974/EP2013185435A/facsimile/description/6"/>
+                    <zone type="description" xml:id="EU5BCNLP7524FI46"/>
+                </surface>
+                <surface n="7" type="page">
+                    <graphic url="/api/pre-publication/410564974/EP2013185435A/facsimile/description/7"/>
+                    <zone type="description" xml:id="EU5BCNLP7524FI47"/>
+                </surface>
+                <surface n="8" type="page">
+                    <graphic url="/api/pre-publication/410564974/EP2013185435A/facsimile/description/8"/>
+                    <zone type="description" xml:id="EU5BCNLP7524FI48"/>
+                </surface>
+                <surface n="9" type="page">
+                    <graphic url="/api/pre-publication/410564974/EP2013185435A/facsimile/description/9"/>
+                    <zone type="description" xml:id="EU5BCNLP7524FI49"/>
+                </surface>
+                <surface n="10" type="page">
+                    <graphic url="/api/pre-publication/410564974/EP2013185435A/facsimile/description/10"/>
+                    <zone type="description" xml:id="EU5BCNLP7524FI410"/>
+                </surface>
+                <surface n="11" type="page">
+                    <graphic url="/api/pre-publication/410564974/EP2013185435A/facsimile/description/11"/>
+                    <zone type="description" xml:id="EU5BCNLP7524FI411"/>
+                </surface>
+                <surface n="12" type="page">
+                    <graphic url="/api/pre-publication/410564974/EP2013185435A/facsimile/description/12"/>
+                    <zone type="description" xml:id="EU5BCNLP7524FI412"/>
+                </surface>
+                <surface n="13" type="page">
+                    <graphic url="/api/pre-publication/410564974/EP2013185435A/facsimile/description/13"/>
+                    <zone type="description" xml:id="EU5BCNLP7524FI413"/>
+                </surface>
+                <surface n="14" type="page">
+                    <graphic url="/api/pre-publication/410564974/EP2013185435A/facsimile/description/14"/>
+                    <zone type="description" xml:id="EU5BCNLP7524FI414"/>
+                </surface>
+                <surface n="15" type="page">
+                    <graphic url="/api/pre-publication/410564974/EP2013185435A/facsimile/description/15"/>
+                    <zone type="description" xml:id="EU5BCNLP7524FI415"/>
+                </surface>
+            </facsimile>
+            <facsimile xml:id="EU5BCNLQ5617FI4">
+                <surface n="1" type="page">
+                    <graphic url="/api/pre-publication/410564974/EP2013185435A/facsimile/claims/1"/>
+                    <zone type="claims" xml:id="EU5BCNLQ5617FI41"/>
+                </surface>
+                <surface n="2" type="page">
+                    <graphic url="/api/pre-publication/410564974/EP2013185435A/facsimile/claims/2"/>
+                    <zone type="claims" xml:id="EU5BCNLQ5617FI42"/>
+                </surface>
+                <surface n="3" type="page">
+                    <graphic url="/api/pre-publication/410564974/EP2013185435A/facsimile/claims/3"/>
+                    <zone type="claims" xml:id="EU5BCNLQ5617FI43"/>
+                </surface>
+                <surface n="4" type="page">
+                    <graphic url="/api/pre-publication/410564974/EP2013185435A/facsimile/claims/4"/>
+                    <zone type="claims" xml:id="EU5BCNLQ5617FI44"/>
+                </surface>
+                <surface n="5" type="page">
+                    <graphic url="/api/pre-publication/410564974/EP2013185435A/facsimile/claims/5"/>
+                    <zone type="claims" xml:id="EU5BCNLQ5617FI45"/>
+                </surface>
+            </facsimile>
+            <facsimile xml:id="EU5BCNLR2452FI4">
+                <surface n="1" type="page">
+                    <graphic url="/api/pre-publication/410564974/EP2013185435A/facsimile/abstract/1"/>
+                    <zone type="abstract" xml:id="EU5BCNLR2452FI41"/>
+                </surface>
+            </facsimile>
+            <facsimile xml:id="EU5BCNU09353FI4">
+                <surface n="1" type="page">
+                    <graphic url="/api/pre-publication/410564974/EP2013185435A/facsimile/drawings/1"/>
+                    <zone type="drawings" xml:id="EU5BCNU09353FI41"/>
+                </surface>
+                <surface n="2" type="page">
+                    <graphic url="/api/pre-publication/410564974/EP2013185435A/facsimile/drawings/2"/>
+                    <zone type="drawings" xml:id="EU5BCNU09353FI42"/>
+                </surface>
+            </facsimile>
+            <text>
+                <front>
+                    <div change="1c5f8f86f71f25e7e253424437684830" facs="./EU5BCNLR2452FI4" type="abstract" xml:id="3e2aed28b6549ab43efb9b27c740c177" xml:lang="en">
+                        <p n="0001" xml:id="_6848300002">ORTHOPAEDIC SURGICAL INSTRUMENT SYSTEM</p>
+                        <p n="0002" xml:id="_6848300003">An orthopaedic surgical instrument system includes a first broach including a first end configured to be separately secured
+                            to a handle and a tapered body having a plurality of cutting teeth defined therein, and a second broach including a first end configured to be
+                            separately secured to the handle in place of the first broach, a first tapered body extending distally from a second end positioned opposite the first
+                            end, and a second tapered body extending distally from the first tapered body. The tapered body of the first broach and the first tapered body of the
+                            second broach have a first outer geometry and the second tapered body has a second outer geometry different from the first outer geometry.
+                        </p>
+                    </div>
+                    <div type="abstractFigures">
+                        <figure n="9" resp="#applicant" sortKey="1"/>
+                        <figure xml:id="_024629">
+                            <graphic url="./EP2011154276A/imgaf001.tif"/>
+                        </figure>
+                    </div>
+                </front>
+                <group>
+                    <text change="82eb49e77ac5e25361655af900834808">
+                        <body>
+                            <div facs="/api/pre-publication/410564974/EP2013185435A/facsimiles/RFVNTVkvRVU1QkNOTFE1NjE3Rkk0" type="claims" xml:id="f796dbb298aa8d5559fc216bb995071f"
+                                 xml:lang="en">
+
+                                <div n="0001" type="claim" xml:id="_8348080003">
+                                    <p xml:id="_8348080004">1. An orthopaedic surgical instrument system, comprising:
+                                        <p xml:id="_8348080005">a first broach including (i) a first end configured to be separately secured to a handle and (ii) a tapered body
+                                            extending distally from a second end positioned opposite the first end, the tapered body having a plurality of cutting teeth defined
+                                            therein, and
+                                        </p>
+                                        <p xml:id="_8348080006">a second broach including (i) a first end configured to be separately secured to the handle in place of the first
+                                            broach, (ii) a first tapered body extending distally from a second end positioned opposite the first end, the first tapered body having
+                                            a plurality of cutting teeth defined therein, and (iii) a second tapered body extending distally from the first tapered body, the second
+                                            tapered body having a plurality of cutting teeth defined therein,
+                                        </p>
+                                        <p xml:id="_8348080007">in which the tapered body of the first broach and the first tapered body of the second broach have a first outer
+                                            geometry and the second tapered body has a second outer geometry different from the first outer geometry.
+                                        </p>
+                                    </p>
+                                </div>
+                                <div n="0002" type="claim" xml:id="_8348080008">
+                                    <p xml:id="_8348080009">2. The orthopaedic surgical instrument system of claim 1, in which the first outer geometry of the tapered body is
+                                        defined by the tips of the plurality of cutting teeth of the tapered body, and the first outer geometry of the first tapered body is defined
+                                        by the tips of the plurality of cutting teeth of the first tapered body.
+                                    </p>
+                                </div>
+                                <div n="0003" type="claim" xml:id="_8348080010">
+                                    <p xml:id="_8348080011">3. The orthopaedic surgical instrument system of claim 2, in which the second outer geometry is defined by the tips of
+                                        the plurality of cutting teeth of the second tapered body.
+                                    </p>
+                                </div>
+                                <div n="0004" type="claim" xml:id="_8348080012">
+                                    <p xml:id="_8348080013">4. The orthopaedic surgical instrument system of claim 3, in which (i) the tip of each cutting tooth of the first outer
+                                        geometry has a maximum medial-lateral dimension, (ii) the tip of each cutting tooth defining the second outer geometry has a maximum
+                                        medial-lateral dimension, and (iii) the maximum medial-lateral dimension of the tip of each cutting tooth defining the first outer geometry
+                                        is less than the maximum medial-lateral dimension of the tip of each cutting tooth defining the second outer geometry.
+                                    </p>
+                                </div>
+                                <div n="0005" type="claim" xml:id="_8348080014">
+                                    <p xml:id="_8348080015">5. The orthopaedic surgical instrument system of claim 4, in which the maximum medial-lateral dimension of the tip of
+                                        each cutting tooth defining the first outer geometry is
+                                        greater than or equal to a maximum medial-lateral dimension of a first tapered body of a femoral metaphyseal sleeve, and the maximum
+                                        medial-lateral dimension of the tip of each cutting tooth defining the second outer geometry is less than a maximum medial-lateral dimension
+                                        of a second tapered body of the femoral metaphyseal sleeve.
+                                    </p>
+                                </div>
+                                <div n="0006" type="claim" xml:id="_8348080016">
+                                    <p xml:id="_8348080017">6. The orthopaedic surgical instrument system of claim 5, in which:
+                                        <p xml:id="_8348080018">the tip of each cutting tooth defining the first outer geometry has a maximum anterior-posterior dimension,</p>
+                                        <p xml:id="_8348080019">the tip of each cutting tooth defining the second outer geometry has a maximum anterior-posterior dimension, and</p>
+                                        <p xml:id="_8348080020">the maximum anterior-posterior dimension of the tip of each cutting tooth defining the first outer geometry is less
+                                            than the maximum anterior-posterior dimension of the tip of each cutting tooth defining the second outer geometry.
+                                        </p>
+                                    </p>
+                                </div>
+                                <div n="0007" type="claim" xml:id="_8348080021">
+                                    <p xml:id="_8348080022">7. The orthopaedic surgical instrument system of claim 6, in which the maximum anterior-posterior dimension of the tip
+                                        of each cutting tooth defining the first outer geometry is greater than or equal to a maximum medial-lateral dimension of the first tapered
+                                        body of the femoral metaphyseal sleeve, and the maximum medial-lateral dimension of the tip of each cutting tooth defining the second outer
+                                        geometry is less than a maximum medial-lateral dimension of the second tapered body of the femoral metaphyseal sleeve.
+                                    </p>
+                                </div>
+                                <div n="0008" type="claim" xml:id="_8348080023">
+                                    <p xml:id="_8348080024">8. The orthopaedic surgical instrument system of claim 1, which includes a third broach including (i) a first end
+                                        configured to be separately secured to the handle, (ii) a first tapered body extending distally from a second end positioned opposite the
+                                        first end, the first tapered body having a first plurality of cutting teeth defined therein, (iii) a second tapered body extending distally
+                                        from the first tapered body, the second tapered body having a second plurality of cutting teeth defined therein, and (iv) a third tapered
+                                        body extending distally from the second tapered body, the third tapered body having a third plurality of cutting teeth defined therein,<lb/>
+                                        in which (i) the first tapered body has the first outer geometry, the first outer geometry being defined by the tips of the first plurality
+                                        of cutting teeth, (ii) the second
+                                        tapered body has the second outer geometry, the second outer geometry being defined by the tips of the second plurality of cutting teeth,
+                                        and (iii) the third tapered body has a third outer geometry different from the first outer geometry and the second outer geometry, the third
+                                        outer geometry being defined by the tips of the third plurality of cutting teeth.
+                                    </p>
+                                </div>
+                                <div n="0009" type="claim" xml:id="_8348080026">
+                                    <p xml:id="_8348080027">9. The orthopaedic surgical instrument system of claim 8, in which the tip of each cutting tooth of the third plurality
+                                        of cutting teeth has a maximum medial-lateral dimension, and the maximum medial-lateral dimension of the tip of each cutting tooth defining
+                                        the second outer geometry is less than the maximum medial-lateral dimension of the tip of each cutting tooth of the third plurality of
+                                        cutting teeth.
+                                    </p>
+                                </div>
+                                <div n="0010" type="claim" xml:id="_8348080028">
+                                    <p xml:id="_8348080029">10. An orthopaedic surgical instrument system, comprising:
+                                        <p xml:id="_8348080030">a first broach including (i) a first end configured to be separately secured to a handle and (ii) a tapered body
+                                            extending from the first end to a second end positioned opposite the first end, the tapered body having a plurality of cutting teeth
+                                            defined therein,
+                                        </p>
+                                        <p xml:id="_8348080031">a second broach including (i) a first end configured to be separately secured to the handle in place of the first
+                                            broach, (ii) a first tapered body extending distally from a second end positioned opposite the first end, the first tapered body having
+                                            a plurality of cutting teeth defined therein, and (iii) a second tapered body extending distally from the first tapered body, the second
+                                            tapered body having a plurality of cutting teeth defined therein, and
+                                        </p>
+                                        <p xml:id="_8348080032">in which (i) the tapered body of the first broach having a plurality of medial-lateral dimensions that are identical
+                                            to a plurality of medial-lateral dimensions of the first tapered body of the second broach, (ii) the tapered body of the first broach
+                                            having a plurality of anterior-posterior dimensions that are identical to a plurality of anterior-posterior dimensions of the first
+                                            tapered body of the second broach, and (iii) the second tapered body of the second broach having a plurality medial-lateral dimensions
+                                            and a plurality anterior-posterior dimensions that are different from the medial-lateral dimensions and the anterior-posterior
+                                            dimensions of the first tapered body.
+                                        </p>
+                                    </p>
+                                </div>
+
+
+                                <div n="0011" type="claim" xml:id="_8348080033">
+                                    <p xml:id="_8348080034">11. The orthopaedic surgical instrument system of claim 10, in which:
+                                        <p xml:id="_8348080035">the first broach has a longitudinal axis that extends through the first end and the second end, and the tapered body
+                                            has an axial length defined along the longitudinal axis of the first broach,
+                                        </p>
+                                        <p xml:id="_8348080036">the second broach has a longitudinal axis that extends through the first end and the second end, and the first
+                                            tapered body has an axial length defined along the longitudinal axis of the second broach, and
+                                        </p>
+                                        <p xml:id="_8348080037">the axial length of the first tapered body of the second broach is less than the axial length of the tapered body of
+                                            the first broach.
+                                        </p>
+                                    </p>
+                                </div>
+                                <div n="0012" type="claim" xml:id="_8348080038">
+                                    <p xml:id="_8348080039">12. The orthopaedic surgical instrument system of claim 11, which includes a third broach including (i) a first end
+                                        configured to be separately secured to the handle, (ii) a first tapered body extending distally from a second end positioned opposite the
+                                        first end, the first tapered body having a first plurality of cutting teeth defined therein, (iii) a second tapered body extending distally
+                                        from the first tapered body, the second tapered body having a second plurality of cutting teeth defined therein, and (iv) a third tapered
+                                        body extending distally from the second tapered body, the third tapered body having a third plurality of cutting teeth defined therein,
+                                    </p>
+                                </div>
+                                <div n="0013" type="claim" xml:id="_8348080040">
+                                    <p xml:id="_8348080041">in which (i) the first tapered body of the third broach having a plurality of medial-lateral dimensions and a plurality
+                                        of anterior-posterior dimensions that are identical to a plurality of medial-lateral dimensions and a plurality of anterior-posterior
+                                        dimensions of the first tapered body of the second broach, (ii) the second tapered body of the third broach having a plurality of
+                                        medial-lateral dimensions and a plurality of anterior-posterior dimensions that are identical to a plurality of medial-lateral dimensions
+                                        and a plurality of anterior-posterior dimensions of the second tapered body of the second broach, and (ii) the third tapered body of the
+                                        third broach has a plurality medial-lateral dimensions and a plurality anterior-posterior dimensions that are different from the
+                                        medial-lateral dimensions and the anterior-posterior dimensions of the first tapered body and the second tapered body of the third broach.
+                                    </p>
+                                </div>
+                                <div n="0014" type="claim" xml:id="_8348080042">
+                                    <p xml:id="_8348080043">13. The orthopaedic surgical instrument system of claim 12, in which the third broach has a longitudinal axis that
+                                        extends through the first end and the second end, and the first
+                                        tapered body of the third broach has an axial length defined along the longitudinal axis of the third broach, and the axial length of the
+                                        first tapered body of the third broach is less than the axial length of the first tapered body of the second broach.
+                                    </p>
+                                    <p xml:id="crazyNesting">
+                                        <head><hi rend="bold">Hi <hi rend="underline">this is <hi rend="superscript">CRAZY</hi> but here's my number </hi> and call me, </hi> maybe</head>
+                                    </p>
+                                </div>
+                            </div>
+                        </body>
+                    </text>
+                    <text change="32ecb72eff48594f909e466181341af0">
+                        <body>
+                            <div facs="/api/pre-publication/410564974/EP2013185435A/facsimiles/RFVNTVkvRVU1QkNOTFA3NTI0Rkk0" type="description"
+                                 xml:id="fa86093ed16ffd726783fabf6c5c1253" xml:lang="en">
+                                <title desc="invention-title">ORTHOPAEDIC SURGICAL INSTRUMENT SYSTEM</title>
+                                <p n="0001" xml:id="_341af00004">The present invention relates generally to prosthetic joints, and more particularly to a modular prosthetic knee
+                                    joint system that includes a metaphyseal sleeve component.
+                                </p>
+                                <p n="0002" xml:id="_341af00005">The knee joint basically consists of the bone interface of the distal end of the femur and the proximal end of the
+                                    tibia. Appearing to cover or at least partially protect this interface is the patella, which is a sesamoid bone within the tendon of the long
+                                    muscle (quadriceps) on the front of the thigh. This tendon inserts into the tibial tuberosity and the posterior surface of the patella is smooth
+                                    and glides over the femur.
+                                </p>
+                                <p n="0003" xml:id="_341af00006">The femur is configured with two knob like processes (the medial condyle and the lateral condyle) which are
+                                    substantially smooth and which articulate with the medial plateau and the lateral plateau of the tibia, respectively. The plateaus of the tibia
+                                    are substantially smooth and slightly cupped thereby providing a slight receptacle for receipt of the femoral condyles.
+                                </p>
+                                <p n="0004" xml:id="_341af00007">When the knee joint is damaged whether as a result of an accident or illness, a prosthetic replacement of the
+                                    damaged joint may be necessary to relieve pain and to restore normal use to the joint. Typically the entire knee joint is replaced by means of a
+                                    surgical procedure that involves removal of the surfaces of the corresponding damaged bones and replacement of these surfaces with prosthetic
+                                    implants. This replacement of a native joint with a prosthetic joint is referred to as a primary total-knee arthroplasty.
+                                </p>
+                                <p n="0005" xml:id="_341af00008">On occasion, the primary knee prostheses fails. Failure can result from many causes, including wear, aseptic
+                                    loosening, osteolysis, ligamentous instability, arthrofibrosis and patellofemoral complications. When the failure is debilitating, revision knee
+                                    surgery may be necessary. In a revision, the primary knee prosthesis is removed and replaced with components of a revision prosthetic knee
+                                    system.
+                                </p>
+                                <p n="0006" xml:id="_341af00009">Knee implant systems for both primary and revision applications are available from a variety of manufacturers,
+                                    including DePuy Synthes. DePuy Synthes and others offer several different systems for both primary and revision applications. For example, DePuy
+                                    Synthes offers systems under the trade marks PFC SIGMA, LCS and S-ROM. These orthopaedic knee systems includes several components, some
+                                    appropriate for use in primary knee arthroplasty and some appropriate for use in revision surgery.
+                                </p>
+
+                                <p n="0007" xml:id="_341af00010">DePuy Synthes also offers other orthopaedic implant systems for other applications. One such system is the system
+                                    sold under the trade mark LPS. The LPS system is provided for use in cases of severe trauma and disease. In such cases, the trauma or disease
+                                    can lead to significant amounts of bone loss. The LPS system provides components that can replace all or significant portions of a particular
+                                    bone, such as the femur. The DePuy Synthes LPS system is described more fully in EP-A-1358860.
+                                </p>
+                                <p n="0008" xml:id="_341af00011">In some patients, the metaphysis of the bone near the joint presents cavitary defects that are not completely
+                                    filled by standard knee implants. The presence of such metaphyseal defects can result in loosening of the prosthetic implant over time,
+                                    compromising the stability of the prosthetic implant and frequently requiring revision of the prosthetic implant.
+                                </p>
+                                <p n="0009" xml:id="_341af00012">To fill metaphyseal cavitary defects, knee systems with modular metaphyseal sleeves have been provided. Such
+                                    sleeves are disclosed in, for example, US-A-2010/ 114323, US-A-2006/030945, US-7799085, US-7291174, US-6171342, US-5824097, US- 5782921 and
+                                    US-4634444. Such sleeves have been used in commercially available prosthetic knee implant systems, such as those sold under the trade marks PFC
+                                    SIGMA, LCS, S-ROM and LPS.
+                                </p>
+                                <p n="0010" xml:id="_341af00013">Modular sleeves have also been used in hip implant systems, as disclosed in, for example, US-6264699, US-4790852.
+                                    Such hip sleeves have been used in commercially available prosthetic hip implant systems, such as the S-ROM hip systems, available from DePuy
+                                    Synthes.
+                                </p>
+                                <p n="0011" xml:id="_341af00014">In knee systems with modular metaphyseal sleeves, the conventional shape of many of the sleeves is generally an
+                                    elliptical cone with a large ellipse profile close to the joint line tapering down to a smaller elliptical or circular profile at the
+                                    termination of the component distal to the joint line. Generally, the sleeves have a terraced or stepped outer surface and an inner channel for
+                                    frictional fixation to another component. This geometry fills cavitary defects in the metaphysis, allows for a wider surface area for load
+                                    transfer through the joint and provides rotational stability for the articulating components of the prosthesis.
+                                </p>
+                                <p n="0012" xml:id="_341af00015">The outer surface of the sleeve is supported by solid bony structure or the bone bed. In the case of the distal
+                                    femur, patient anatomy and the condition of the bone, particularly in a revision surgery, may require that the distal femur be resected to a
+                                    more
+                                    proximal level. Implanting a prosthetic distal femoral component and sleeve at this more proximal level may elevate the joint line (that is, the
+                                    line defined by the articulation of the articular surfaces of the distal femoral component and proximal tibial component). Elevation of the
+                                    joint line may adversely affect performance of the prosthetic knee system: the positions of the collateral ligament attachments to the femur
+                                    relative to the joint line may impact knee kinematics, the articulation of the patella against the femoral component will be impacted, and the
+                                    function of the extensor mechanism will also be impacted.
+                                </p>
+                                <p n="0013" xml:id="_341af00016">Prosthetic knee implant systems have commonly included femoral augments for use on the distal and posterior
+                                    bone-facing surfaces of the femoral implant components. Examples of such augments are disclosed in US-6005018 and US-5984969. Such components
+                                    serve to augment the inferior and posterior portions of the femoral component to add additional thickness to compensate for the lack of
+                                    sufficient boney tissue, allowing the joint line to be distalized. However, with the femoral component so distalized, the metaphyseal sleeve
+                                    used with the femoral component may no longer be optimally seated on a healthy bone bed. To compensate, surgeons may sometimes opt to use a
+                                    larger size of metaphyseal sleeve.
+                                </p>
+                                <p n="0014" xml:id="_341af00017">Accordingly, a need exists for a knee prosthesis system that allows the surgeon the flexibility to optimize the
+                                    position of the joint line while also allowing for a metaphyseal sleeve to be optimally sized and optimally positioned on a healthy bone bed.
+                                </p>
+                                <p n="0015" xml:id="_341af00018">A modular knee implant system that allows the surgeon to prepare the bone to receive a metaphyseal sleeve and to
+                                    optimize the position of the joint line without further bone preparation to receive a different size of metaphyseal sleeve is provided.
+                                </p>
+                                <p n="0016" xml:id="_341af00019">According to one aspect of the present disclosure, a modular knee prosthesis system is provided. The system
+                                    includes a distal femoral implant component, a proximal tibial implant component and two metaphyseal members. The distal femoral implant
+                                    component has a pair of spaced, curved distal condylar surfaces and a stem. The stem has an outer surface tapering from a distal end in the
+                                    proximal direction. The outer surface of the stem has a maximum outer diameter at the distal end and a smaller outer diameter at a second
+                                    position proximal to the distal end. The proximal tibial implant component has an articulating surface to receive and articulate with the distal
+                                    articulating surfaces of the distal femoral component and a stem. The tibial stem has an outer surface tapering from a proximal end in the
+                                    distal direction. The outer surface of the tibial stem has a maximum
+                                    outer diameter at the proximal end and a smaller outer diameter at a second position distal to the proximal end. The first metaphyseal member
+                                    has an outer surface that tapers in a proximal direction and an inner surface defining a tapered bore sized and shaped to be mountable on the
+                                    stem of one of the implant components and to create a frictional lock between the stem and the first metaphyseal member. The outer surface of
+                                    the first metaphyseal member comprises a stepped portion having a plurality of steps. Each step has a maximum medial-lateral dimension and a
+                                    maximum anterior-posterior dimension. The stepped portion of the first metaphyseal sleeve has an overall axial length L. The second metaphyseal
+                                    member has an outer surface that tapers in a proximal direction and an inner surface defining a tapered bore sized and shaped to be mountable on
+                                    the stem of one of the implant components and to create a frictional lock between the stem component and the second metaphyseal member. The
+                                    outer surface of the second metaphyseal member comprises a stepped portion having a plurality of steps. Each step has a maximum medial- lateral
+                                    dimension and a maximum anterior-posterior dimension. The stepped portion of the second metaphyseal sleeve has an overall axial length L+X and
+                                    has a common geometry with the first metaphyseal sleeve over axial length L: over axial length L, the maximum medial-lateral dimension and
+                                    maximum anterior-posterior dimension of each step is the same as the maximum medial-lateral dimension and maximum anterior-posterior dimension
+                                    of each step over the axial length L of the stepped portion of the first meta- physeal member. With this common geometry over axial length L,
+                                    the same prepared bone space will receive either the first metaphyseal member or the second metaphyseal member.
+                                </p>
+                                <p n="0017" xml:id="_341af00020">Optionally, the first metaphyseal member and the second metaphyseal member have the same number of steps over axial
+                                    length L of the stepped portions of the first metaphyseal member and the second metaphyseal member.
+                                </p>
+                                <p n="0018" xml:id="_341af00021">Optionally, each step of the stepped portion of the first metaphyseal member has an axial height, each step of the
+                                    stepped portion of the second metaphyseal member has an axial height, and the axial heights of corresponding steps of the first metaphyseal
+                                    member and the second metaphyseal member are the same.
+                                </p>
+                                <p n="0019" xml:id="_341af00022">Optionally, the system includes a third metaphyseal member having an outer surface that tapers in a proximal
+                                    direction and an inner surface defining a tapered bore sized and shaped to be mountable on the stem of one of the implants components and to
+                                    create a frictional lock between the stem and the third metaphyseal member. The outer
+                                    surface of the third metaphyseal member comprises a stepped portion having a plurality of steps. Each step has a maximum medial-lateral
+                                    dimension and a maximum anterior- posterior dimension. The stepped portion having an overall axial length L+X+Y. The maximum medial-lateral
+                                    dimension and maximum anterior-posterior dimension of each step over the axial length L of the stepped portion of the third metaphyseal member
+                                    is the same as the maximum medial-lateral dimension and maximum anterior-posterior dimension of each step over the axial length L of the stepped
+                                    portion of the first metaphyseal member and the second metaphyseal member. The maximum medial-lateral dimension and maximum anterior-posterior
+                                    dimension of each step over the axial length L+X of the stepped portion of the third metaphyseal member is the same as the maximum
+                                    medial-lateral dimension and maximum anterior-posterior dimension of each step over the axial length L+X of the stepped portion of the second
+                                    metaphyseal member.
+                                </p>
+                                <p n="0020" xml:id="_341af00023">Optionally, the tapered bore of the first metaphyseal member is sized and shaped to be mountable on the stem of the
+                                    distal femoral implant component and to create a frictional lock between the stem of the distal femoral implant component and the first
+                                    metaphyseal member and the tapered bore of the second metaphyseal member is sized and shaped to be mountable on the stem of the distal femoral
+                                    implant component and to create a frictional lock between the stem of the distal femoral implant component and the first metaphyseal member. The
+                                    contact between the articulating surfaces of the tibial member and the distal femoral component define a first joint line when the distal
+                                    femoral component is assembled with the first metaphyseal member and the contact between the articulating surfaces of the tibial member and the
+                                    distal femoral component define a second joint line when the distal femoral component is assembled with the second metaphyseal member. The
+                                    second joint line is more distal than the first joint line in this construction.
+                                </p>
+                                <p n="0021" xml:id="_341af00024">Optionally, the distance between the first joint line and the second joint line corresponds with the difference
+                                    between the overall axial lengths of the first metaphyseal member and the second metaphyseal member and defines a distal offset.
+                                </p>
+                                <p n="0022" xml:id="_341af00025">The invention also provides a modular knee prosthesis system comprises a distal femoral component, a first
+                                    metaphyseal member and a second metaphyseal member. The distal femoral component has a pair of spaced, curved distal condylar surfaces and a
+                                    stem having an outer surface tapering from a distal end in the proximal direction. The outer surface of the femoral stem has a maximum outer
+                                    diameter at the distal end and a smaller
+                                    outer diameter at a second position proximal to the distal end. The first metaphyseal member includes an inner surface defining a tapered bore
+                                    sized and shaped to be mountable on the stem of the distal femoral component and to create a frictional lock between the stem of the distal
+                                    femoral component and the first metaphyseal member. The tapered bore extends proximally from an opening at the distal end of the first
+                                    metaphyseal member. The first metaphyseal member also includes a tapered stepped outer surface having an axial length L. The second metaphyseal
+                                    member includes an inner surface defining a tapered bore sized and shaped to be mountable on the stem of the distal femoral component and to
+                                    create a frictional lock between the stem of the distal femoral component and the second metaphyseal member, the tapered bore extending
+                                    proximally from an opening at the distal end of the second metaphyseal member. The second metaphyseal member includes a tapered stepped outer
+                                    surface having an axial length L+X. The tapered stepped outer surface of the first metaphyseal member and the tapered stepped outer surface of
+                                    the second metaphyseal member have the same shape and the same medial- lateral dimensions and the same anterior-posterior dimensions over axial
+                                    length L. When the first metaphyseal member is mounted on the distal femoral component with the first metaphyseal member frictionally locked to
+                                    the distal femoral component, the assembly has a maximum axial length. When the second metaphyseal member is mounted on the distal femoral
+                                    component with the second metaphyseal member frictionally locked to the distal femoral component, the assembly has a maximum axial length. The
+                                    maximum axial length of the assembly of the second metaphyseal member and the distal femoral component is greater than the maximum axial length
+                                    of the assembly of the first metaphyseal member and the distal femoral component.
+                                </p>
+                                <p n="0023" xml:id="_341af00026">Optionally, the first metaphyseal member and the second metaphyseal member have the same number of steps over axial
+                                    length L of the tapered stepped outer surface of the first metaphyseal member and the tapered stepped outer surface of the second metaphyseal
+                                    member.
+                                </p>
+                                <p n="0024" xml:id="_341af00027">Optionally, each step of the tapered stepped outer surface of the first metaphyseal member has an axial height and
+                                    each step of the tapered stepped outer surface of the second metaphyseal member has an axial height. The axial heights of corresponding steps of
+                                    the first metaphyseal member and the second metaphyseal member are the same.
+                                </p>
+
+                                <p n="0025" xml:id="_341af00028">Optionally, the system further comprises a third metaphyseal member including an inner surface defining a tapered
+                                    bore sized and shaped to be mountable on the stem of the distal femoral component and to create a frictional lock between the stem of the distal
+                                    femoral component and the first metaphyseal member. The tapered bore extends proximally from an opening at the distal end of the first
+                                    metaphyseal member. The first metaphyseal member includes a tapered stepped outer surface having an axial length L+X+Y. When the third
+                                    metaphyseal member is mounted on the distal femoral component with the third metaphyseal member frictionally locked to the distal femoral
+                                    component, the assembly has a maximum axial length. The maximum axial length of the assembly of the third metaphyseal member and the distal
+                                    femoral component is greater than the maximum axial length of the assembly of the second metaphyseal member and the distal femoral component.
+                                </p>
+                                <p n="0026" xml:id="_341af00029">Optionally, the distal femoral component has a distal bone-facing surface and the system further comprises a distal
+                                    femoral augment. The distal femoral augment has a thickness that is substantially the same as X.
+                                </p>
+                                <p n="0027" xml:id="_341af00030">Instruments provided by the invention can be used in a method of performing an orthopaedic surgical procedure on a
+                                    distal end of a patient's femur, comprising:
+                                    <list type="bulleted" xml:id="_341af00031">
+                                        <item>selecting a femoral prosthetic component,</item>
+                                        <item>selecting a first sleeve component for use with the femoral prosthetic component, the first sleeve component including a tapered body
+                                            that has a first outer geometry,
+                                        </item>
+                                        <item>inserting a first broach into the distal end of the patient's femur to engage a plurality of cutting teeth with the patient's femur,
+                                            the plurality of cutting teeth being defined in a tapered outer surface of the first broach and defining a first outer geometry
+                                            corresponding to the first outer geometry of the first sleeve component,
+                                        </item>
+                                        <item>defining a cavity in the distal end of the patient's femur with the first broach,</item>
+                                        <item>determining a joint line of the femoral prosthetic component,</item>
+                                        <item>selecting a second sleeve component based on the determination of the joint line, the second sleeve component including a first
+                                            tapered body having the first outer geometry and a second tapered body having a second outer geometry different from the first outer
+                                            geometry, and
+                                        </item>
+                                        <item>inserting the second sleeve component into the cavity defined by the first broach.</item>
+                                    </list>
+                                </p>
+                                <p n="0028" xml:id="_341af00039">Optionally, the first outer geometry of the first broach includes a plurality of stepped sections defined by the
+                                    plurality of cutting teeth, each stepped section having a maximum medial-lateral dimension, the first outer geometry of the first sleeve
+                                    component is defined by a plurality of stepped walls and a plurality of annular walls connecting pairs of stepped walls, each stepped wall
+                                    having a maximum medial-lateral dimension, and the maximum medial-lateral dimension of the stepped section at the proximal end of the first
+                                    broach is equal to the maximum medial-lateral dimension of the stepped wall at the proximal end of the first sleeve component.
+                                </p>
+                                <p n="0029" xml:id="_341af00040">Optionally, the maximum medial-lateral dimension of the stepped section at the distal end of the first broach is
+                                    less than the maximum medial-lateral dimension of the stepped wall at the distal end of the first sleeve component.
+                                </p>
+                                <p n="0030" xml:id="_341af00041">Optionally, the second outer geometry of the second sleeve component is defined by a plurality of stepped walls and
+                                    a plurality of annular walls connecting pairs of stepped walls, each stepped wall of the plurality of stepped walls having a maximum
+                                    medial-lateral dimension, and the maximum medial-lateral dimension of each of the plurality of stepped walls is greater than the maximum
+                                    medial-lateral dimension of each stepped section of the first broach.
+                                </p>
+                                <p n="0031" xml:id="_341af00042">The invention is described below by way of example with reference to the accompanying drawings, in which:
+                                    <list type="bulleted" xml:id="_341af00043">
+                                        <item>FIG. 1 is a view of the femoral components of a modular knee prosthesis system.</item>
+                                        <item>FIG. 2 is a view of the tibial components of a modular knee prosthesis system.</item>
+                                        <item>FIG. 3 is a medial-lateral view of the smallest size of metaphyseal sleeves of the modular knee prosthesis system of FIG. 1.</item>
+                                        <item>FIG. 4 is a medial-lateral view of another size of metaphyseal sleeves of the modular knee prosthesis system of FIG. 1.</item>
+                                        <item>FIG. 5 is a medial-lateral view of another size of metaphyseal sleeves of the modular knee prosthesis system of FIG. 1.</item>
+                                        <item>FIG. 6 is a medial-lateral view of the largest size of metaphyseal sleeves of the modular knee prosthesis system of FIG. 1.</item>
+                                        <item>FIG. 7 is an anterior-posterior view of the metaphyseal sleeve of FIG. 3.</item>
+                                        <item>FIG. 8 is an anterior-posterior view of the metaphyseal sleeve of FIG. 4.</item>
+                                        <item>FIG. 9 is an anterior-posterior view of the metaphyseal sleeve of FIG. 5.</item>
+
+
+                                        <item>FIG. 10 is an anterior-posterior view of the metaphyseal sleeve of FIG. 6.</item>
+                                        <item>FIG. 11 is a cross-sectional view of the metaphyseal sleeve of FIG. 7, taken along line 11-11 of FIG. 7.</item>
+                                        <item>FIG. 12 is a cross-sectional view of the metaphyseal sleeve FIG. 10, taken along line 12-12 of FIG. 10.</item>
+                                        <item>FIG. 13 is an anterior-posterior view of a modular knee prosthesis system using a standard femoral stem and the smallest size of
+                                            metaphyseal sleeve.
+                                        </item>
+                                        <item>FIG. 14 is an anterior-posterior view of a modular knee prosthesis system similar to FIG. 13 but shown with the largest size of
+                                            metaphyseal sleeve.
+                                        </item>
+                                        <item>FIG. 15 is a view of another modular prosthesis system.</item>
+                                        <item>FIG. 16 is a medial-lateral view of one size of metaphyseal sleeves of the modular knee prosthesis system of FIG. 15.</item>
+                                        <item>FIG. 17 is a medial-lateral view of another size of metaphyseal sleeves of the modular knee prosthesis system of FIG. 15.</item>
+                                        <item>FIG. 18 is a medial-lateral view of another size of metaphyseal sleeves of the modular knee prosthesis system of FIG. 15.</item>
+                                        <item>FIG. 19 is a cross sectional plan view taken along the lines 19-19 in FIGS. 16-18.</item>
+                                        <item>FIG. 20 is a cross sectional plan view taken along the lines 20-20 in FIGS. 17-18.</item>
+                                        <item>FIG. 21 is a medial-lateral view of a surgical broach of an orthopaedic surgical instrument system for use with the modular knee
+                                            prosthesis system of FIG. 15.
+                                        </item>
+                                        <item>FIG. 22 is a medial-lateral of another size of surgical broach of the orthopaedic surgical instrument system.</item>
+                                        <item>FIG. 23 is a medial-lateral of another size of surgical broach of the orthopaedic surgical instrument system.</item>
+                                        <item>FIG. 24 is a cross sectional plan view taken along the lines 24-24 in FIGS. 21-23.</item>
+                                        <item>FIG. 25 is a cross sectional plan view taken along the lines 20-20 in FIGS. 22-23.</item>
+                                        <item>FIG. 26 is a perspective view of a distal augment for use with a femoral component of the modular knee prosthesis system of FIG. 15.
+                                        </item>
+                                        <item>FIG. 27 is a fragmentary cross sectional view of the distal augment taken along the lines 27-27 in FIG. 26.</item>
+                                        <item>FIG. 28 is a perspective view of another size of distal augment for use with the femoral component of FIG. 15.</item>
+
+
+                                        <item>FIG. 29 is a fragmentary cross sectional view of the distal augment taken along the lines 29-29 in FIG. 28.</item>
+                                        <item>FIG. 30 is an elevation view of the femoral component of FIG. 15 and a posterior augment.</item>
+                                        <item>FIG. 31 is a view similar to FIG. 30 showing the posterior augment secured to the femoral component and the distal augment of FIGS. 26
+                                            and 27.
+                                        </item>
+                                        <item>FIG. 32 is an elevation view of the femoral component of FIG. 15 and another size of posterior augment.</item>
+                                        <item>FIG. 33 is a view similar to FIG. 32 showing the posterior augment secured to the femoral component and the distal augment of FIGS.
+                                            28-29.
+                                        </item>
+                                        <item>FIG. 34 is a view similar to FIGS. 32 and 33 showing the installation of the distal augment of FIGS. 28-29.</item>
+                                        <item>FIG. 35 is a view similar to FIGS. 32 to 34 showing the posterior augment and the distal augment secured to the femoral component.
+                                        </item>
+                                        <item>FIG. 36 is an anterior-posterior view of a modular knee prosthesis system of FIG. 15 using the metaphyseal sleeve of FIG. 16 and the
+                                            augments of FIGS. 30 and 31.
+                                        </item>
+                                    </list>
+                                </p>
+                                <p n="0032" xml:id="_341af00080">FIG. 37 is an anterior-posterior view similar to FIG. 36 showing the metaphyseal sleeve of FIG. 18 and the augments
+                                    of FIGS. 32 to 35.
+                                </p>
+                                <p n="0033" xml:id="_341af00081">Terms representing anatomical references, such as anterior, posterior, medial, lateral, superior and inferior may
+                                    be used throughout this document to refer to the orthopaedic implants and orthopaedic surgical instruments described herein as well as in
+                                    reference to the patient's natural anatomy. Such terms have well-understood meanings in both the study of anatomy and the field of orthopaedics.
+                                    Use of such anatomical reference terms in this document is intended to be consistent with their well-understood meanings unless noted otherwise.
+                                </p>
+                                <p n="0034" xml:id="_341af00082">FIG. 1 shows an example of the femoral components of a modular knee prosthesis system. The femoral components of
+                                    the system include a distal femoral component 10 with distal curved convex condylar surfaces 12, 14. The distal femoral component is a posterior
+                                    stabilized component. The system shown in FIG. 1 also includes a femoral stem 16, along with a collar 18 for placement between the stem 16 and
+                                    the distal femoral component 10 and a bolt 20 so that the stem 16 and collar 18 may be selectively mounted on the distal femoral component. Each
+                                    stem 16 has a frusto-conical outer surface that is
+                                    smooth and tapers from a maximum outer diameter at the distal end to smaller outer diameters at positions proximal to the distal end. Stem
+                                    extensions 22 are also provided. All of the above components may be standard parts of the knee system sold under the trade mark PFC SIGMA by
+                                    DePuy Synthes, for example. Each stem 16 is an adapter with features like those disclosed in US-A-2006/0030945. The stems 16 may also have
+                                    features like those disclosed in US-6171342, US-5824097 and US-5782921. Also as disclosed in US-A-2006/0030945, the stem extension may have
+                                    features other than those shown in FIG. 1. Optionally, the femoral component 10 may have an integral stem 16 instead of the stem adapter 16,
+                                    collar 18 and bolt 20.
+                                </p>
+                                <p n="0035" xml:id="_341af00083">The femoral components of the system shown in FIG. 1 include a plurality of sizes of metaphyseal sleeves 24, 24A,
+                                    24B, 24C. As described in more detail below, the geometries of the exterior surfaces of the four sizes of metaphyseal sleeves 24, 24A, 24B, 24C
+                                    are the same over a substantial portion of their axial lengths. It should be understood that multiple sizes of distal femoral components 10 and
+                                    stem extensions 22 would typically be included in the modular knee prosthesis system. It should also be understood that a modular knee
+                                    prosthesis system may include fewer or more sizes of metaphyseal sleeves 24, 24A, 24B, 24C.
+                                </p>
+                                <p n="0036" xml:id="_341af00084">As shown in FIG. 2, on the tibial side, the kit includes a tibial tray component 30, a tibial bearing insert 32 and
+                                    a stem extension 34. The tibial tray component 30 is a tibial tray as sold by DePuy Synthes under the trade mark MBT. The tray component 30 has
+                                    an integral stem portion 36 with a bore (not shown) with internal threads to which the stem extension 34 may be attached. The outer surface of
+                                    the stem portion 36 has a smooth finish, tapers away from the joint motion surface and is connected to the inferior surface of the tibial tray
+                                    component 30 through keels 31, 33. The stem portion 36 extends distally from a platform 38, which has a proximal surface on which the tibial
+                                    bearing insert 32 rests. The tibial components may also include one or more types or sizes of metaphyseal sleeves, such as sleeve 40 that has a
+                                    tapered bore (not shown) sized and shaped to lock frictionally with the tapered stem portion 36 of the tibial tray component 30. Optionally, the
+                                    tibial component may comprise a unitary, all-polymer component or a fixed bearing system, such as those disclosed in US-7628818 and US-8128703.
+                                </p>
+                                <p n="0037" xml:id="_341af00085">The juncture of the curved convex condyles 12, 14 of the distal femoral component 10 and the curved concave
+                                    condylar surfaces of the tibial bearing insert 32 (the
+                                    curved concave condylar surfaces of the tibial bearing insert being shown in FIG. 2 in phantom at 37, 39) define the articulation of the femoral
+                                    and tibial components as the knee flexes and extends. When the patient's leg is in extension, the contact between the curved convex condyles 12,
+                                    14 and concave condylar surfaces 37, 39 corresponds with a distal joint line. As the knee is flexed from full extension, the distal femoral
+                                    component 10 and tibial bearing insert 32 move with respect to each other so that the joint line at full flexion (when the posterior surfaces of
+                                    the femoral condyles contact the bearing surface) may vary somewhat from the distal joint line. The plane of the joint line, tangent to the
+                                    point of contact of the condylar surfaces of the distal femoral component on the tibial insert, is shown at 21 in FIGS. 1 and 13 and at 21A in
+                                    FIG. 14.
+                                </p>
+                                <p n="0038" xml:id="_341af00086">It should be understood that a typical modular knee prosthesis system or kit would include multiple sizes of each
+                                    of the tibial components 30, 32, 34, 40.
+                                </p>
+                                <p n="0039" xml:id="_341af00087">The metaphyseal sleeves 24, 24A, 24B, 24C are designed for use in a bone in which the condition of the bone
+                                    requires additional support or fixation in the metaphysis of the bone. Each of the femoral sleeves 24, 24A, 24B, 24C has an outer surface that
+                                    includes a distal base 47, 47A, 47B, 47C and a stepped portion 49, 49A, 49B, 49C extending proximally from the distal base to the proximal ends
+                                    26, 26A, 26B, 26C. Each stepped portion 49, 49A, 49B, 49C has a plurality of adjacent steps or terraces, shown in FIGS. 3- 10 at 50A, 50B, 50C
+                                    and 50D for the femoral sleeves 24, 24A, 24B, 24C and at 54 for the tibial sleeve 40 (FIG. 2). For the femoral sleeves, the stepped outer
+                                    surfaces taper proximally: the steps 50, 50A, 50B, 50C at the distal ends 56, 56A, 56B, 56C have the largest anterior-posterior and
+                                    medial-lateral dimensions and the steps 50, 50A, 50B, 50C at the proximal ends 26, 26A, 26B, 26C have the smallest anterior-posterior and
+                                    medial- lateral dimensions; the intermediate steps gradually become smaller from the distal ends 56, 56A, 56B, 56C toward the proximal ends 26,
+                                    26A, 26B, 26C. For the tibial sleeve 40, the outer surface tapers distally: the most distal step has the smallest anterior-posterior and
+                                    medial-lateral dimensions and the most proximal step has the largest anterior-posterior and medial-lateral dimensions; the intermediate steps
+                                    gradually become smaller from the proximal end toward the distal end.
+                                </p>
+                                <p n="0040" xml:id="_341af00088">It should be understood that the number and size of the steps 50, 50A, 50B, 50C, may vary. For example, the outer
+                                    surfaces of the metaphyseal sleeves 24, 24A, 24B, 24C, may have steps and be shaped like standard commercially available metaphyseal sleeves
+                                    sold by DePuy Synthes, and may be configured like known sleeves, for example as disclosed in US-7799085. The outer surfaces of the sleeves 24,
+                                    24A, 24B, 24C, may also be porous coated to promote bone ingrowth, as in known products. The porous coating may extend over substantially all or
+                                    a portion of the stepped outer surfaces of the sleeves 24, 24A, 24B, 24C.
+                                </p>
+                                <p n="0041" xml:id="_341af00089">As shown in FIGS. 1, 3 to 6, 11 and 12, the femoral sleeves 24, 24A, 24B, 24C have interior surfaces 64, 64A, 64B,
+                                    64C defining a proximal bore 68, 68A, 68B, 68C and a distal bore 72, 72A, 72B, 72C. The proximal and distal bores 68, 68A, 68B, 68C, 72, 72A,
+                                    72B, 72C in each femoral sleeve may be connected and aligned along central longitudinal axes 76, 76A, 76B, 76C of the bores.
+                                </p>
+                                <p n="0042" xml:id="_341af00090">The proximal bores 68, 68A, 68B, 68C of the femoral sleeves 24, 24A, 24B, 24C are sized and shaped to receive a
+                                    distal end 80 of a stem extension 22. Accordingly, for a stem extension having a Morse taper post at its distal end, the proximal bore would
+                                    comprise a Morse taper bore sized and shaped to receive and frictionally lock with the Morse taper post. Alternatively, for a stem extension
+                                    having a threaded distal end, the proximal bore may be threaded to receive and lock to the threaded distal end of the stem extension. An adapter
+                                    to allow for use of different types of stem extensions may also be used, for example as disclosed in US-7799085.
+                                </p>
+                                <p n="0043" xml:id="_341af00091">The distal bores 72, 72A, 72B, 72C of the femoral metaphyseal sleeves 24, 24A, 24B, 24C are frusto-conical Morse
+                                    taper bores, tapering from the distal ends 56, 56A, 56B, 56C of the sleeves 24, 24A, 24B, 24C toward the proximal ends 26, 26A, 26B, 26C of the
+                                    sleeves 24, 24A, 24B, 24C. These distal bores 72, 72A, 72B, 72C are sized, shaped and finished to be mountable on the stem or adapter 16 of the
+                                    distal femoral component 10 and to create a frictional lock between the stem of the distal femoral component and the metaphyseal sleeve, the
+                                    stem or adapter 16 defining a Morse taper post.
+                                </p>
+                                <p n="0044" xml:id="_341af00092">As used herein, "Morse taper" refers to one type of locking tapers between mating components. Generally, Morse
+                                    taper posts and bores have frusto-conical shapes, substantially the same taper angle and have complementary outer and inner diameters at some
+                                    point along their length to allow for tight frictional engagement between the posts and the walls defining the bores. Standard taper angles and
+                                    standard surface finishes for such locking tapers may be used in the present invention. It should be appreciated that other types of tapered
+                                    components may be used.
+                                </p>
+
+                                <p n="0045" xml:id="_341af00093">The distal bores 72, 72A, 72B, 72C of each size of sleeve 24, 24A, 24B, 24C has the same maximum inner diameter at
+                                    the distal end 56, 56A, 56B, 56C of the sleeve. This maximum inner diameter substantially corresponds with the maximum outer diameter of the
+                                    tapered frusto-conical outer surface 75 of the stem or adapter 16 of the distal femoral component 10. The distal bores 72, 72A, 72B, 72C of all
+                                    the sizes of sleeves 24, 24A, 24B, 24C and the tapered frusto-conical outer surface 75 of the stem or adapter 16 taper in the proximal direction
+                                    at substantially the same taper angle so that relative axial movement of the sleeve 24, 24A, 24B, 24C and stem or adapter 16 locks the two
+                                    together when the interior surface 64, 64A, 64B, 64C of the sleeve 24 engages and frictionally locks with the tapered frusto-conical outer
+                                    surface 75 of the stem or adapter 16.
+                                </p>
+                                <p n="0046" xml:id="_341af00094">As shown in FIGS. 3, 7 and 13, the stepped outer surface 49 of the smallest size of femoral metaphyseal sleeve 24
+                                    has an overall axial length between the distal base 47 and the proximal end 26 shown at "L". The stepped outer surface 49A of the next larger
+                                    size of femoral metaphyseal sleeve 24A has an overall axial length between the base 47A and the proximal end 26A of "L+X", the dimensions "L"
+                                    and "X" being shown in FIGS. 4 and 8. The stepped outer surface 49B of the next larger size of femoral metaphyseal sleeve 24B has an overall
+                                    axial length between the base 47B and the proximal end 26B of "L+X+Y", the dimensions "L", "X" and "Y" being shown in FIGS. 5 and 9. The stepped
+                                    outer surface 49C of the largest size of femoral metaphyseal sleeve 24C has an overall axial length between the base 47C and the proximal end
+                                    26C of "L+X+Y+Z", the dimensions "L", "X", "Y" and "Z" being shown in FIGS. 6, 10 and 14. The different sizes of femoral metaphyseal sleeves may
+                                    be provided with differences of a few millimetres (for example, 4 mm) between each size, so that X=4 mm, Y=4 mm and Z=4 mm. It should be
+                                    understood that these dimensions are provided as examples only.
+                                </p>
+                                <p n="0047" xml:id="_341af00095">The geometries of the stepped outer surfaces 49, 49A, 49B, 49C of all sizes of femoral metaphyseal sleeve 24, 24A,
+                                    24B, 24C are essentially identical over axial length "L". Thus, if "L" is 68 mm for the smallest sleeve, the sizes and shapes of the proximal 68
+                                    mm of the other sleeve sizes 24A, 24B, 24C are essentially identical to the size and shape of the proximal 68 mm of the smallest sleeve 24. In
+                                    other words, over axial length "L" for all of the sizes of femoral metaphyseal sleeves 24, 24A, 24B, 24C, the sleeves have the same number of
+                                    steps, and each step has the same maximum medial-lateral dimension, the same maximum anterior-posterior dimension, the same axial height and the
+                                    same shape.
+                                    The different sizes of femoral metaphyseal sleeves differ only in the sizes of the bases 47, 47A, 47B, 47C and in the distal portions
+                                    corresponding with the axial extensions of the sleeves beyond the length "L" of the smallest sleeve 24.
+                                    <figure xml:id="_341af00097">
+                                        <graphic url="/api/text/C1EP00000COIG1BL /emi/MTMxODU0MzUtMTA4MTQ5NzUtMDAwMS50aWY"/>
+                                    </figure>
+                                </p>
+                                <p n="0048" xml:id="_341af00098">FIGS. 13 and 14 show assemblies of the smallest and largest femoral metaphyseal sleeves 24, 24C with a distal
+                                    femoral implant component 10, femoral stem extension 22, tibial tray 30, tibial insert 32 and tibial stem extension 34. The assemblies have
+                                    maximum axial lengths from planes at the proximal ends 26, 26C (the planes shown at 100 and 102) to the plane of the joint line, shown at 21 in
+                                    FIG. 13 and at 21A in FIG. 14. These maximum axial lengths of the assemblies are shown at ALl in FIG. 13 and AL2 in FIG. 14. AL2 is longer than
+                                    ALl by the dimension "X+Y+Z", that is the axial length of the sleeve 24C beyond the length "L" of the smallest sleeve 24.
+                                </p>
+                                <p n="0049" xml:id="_341af00099">As can also be seen from a comparison of FIGS. 13 and 14, using the larger sleeve 24C distalizes the joint line 21
+                                    to the position 21A by the offset distance o,. This offset distance o, also corresponds with the dimension "X+Y+Z". Similarly, using the sleeve
+                                    24A distalizes the joint line by the dimension "X" and using the sleeve 24B distalizes the joint line by the dimension "X+Y".
+                                </p>
+                                <p n="0050" xml:id="_341af00100">Since the geometries of the stepped outer surfaces 49, 49A, 49B, 49C of the different sizes of sleeves 24, 24A,
+                                    24B, 24C are the same through axial length "L", the surgeon can prepare the distal femur to receive the smallest size of femoral sleeve 24. If
+                                    the surgeon determines intraoperatively that the joint line should be distalized, the surgeon may use any of the other sizes of sleeve 24A, 24B,
+                                    24C, and the proximal portion of the larger size sleeve will fit within the opening prepared in the femur to receive the smaller sleeve and
+                                    extend distally from the bone by the distance "X", "X+Y" or "X+Y+Z" thereby
+                                    to offset the joint line distally. The surgeon can accomplish this distalization without any further preparation of the bone cavity.
+                                </p>
+                                <p n="0051" xml:id="_341af00101">As described above, femoral augments may be used on the distal and posterior bone-facing surfaces of the femoral
+                                    implant components when the joint line is distalized. In the device shown in the drawings, a distal augment 110 may be attached to one of a pair
+                                    of distal fixation surfaces 109 of the distal femoral implant component 10 when the sleeve 24C is used, as shown in FIG. 14. In the device shown
+                                    in the drawing, the thickness of the augment 109 is equal to the offset distance o . One of the distal fixation surfaces 109 is positioned
+                                    opposite the condylar surface 12 and the other distal fixation surface 109 is positioned opposite the condylar surface 14. It should be
+                                    appreciated that another distal augment may be attached to that surface as well. When the sleeve 24 is used, no augment is necessary, as shown
+                                    in FIG. 13.
+                                </p>
+                                <p n="0052" xml:id="_341af00102">The design features discussed above may also be applied to the tibial components of the knee implant system, such
+                                    as the tibial sleeve 40 shown in FIG. 2. Such a system could allow the surgeon to select components to provide a proximal offset to the tibial
+                                    tray platform 38.
+                                </p>
+                                <p n="0053" xml:id="_341af00103">All of the components of the prosthesis systems described herein may be made of standard materials, such as a
+                                    standard polymer (UHMWPE, for example) for the tibial bearing insert 32 and standard metals, such as cobalt-chromium and titanium alloys, for
+                                    the remaining components. To promote bone ingrowth, the sleeves 24, 24A, 24B, 24C may be porous coated, or could comprise titanium foam as
+                                    disclosed in US-A-2010/0057212 and US-A-2010/0076565.
+                                </p>
+                                <p n="0054" xml:id="_341af00104">Referring now to FIGS. 15 to 37, another modular knee prosthesis system is shown with different femoral components
+                                    (hereinafter components 200). An orthopaedic surgical instrument system 300 for use with the modular knee prosthesis system is also shown. Some
+                                    features of the devices shown in FIGS. 15 to 37 are substantially similar to those discussed above in reference to the device shown in FIGS. 1
+                                    to 14. Such features are designated in FIGS. 15 to 37 with the same reference numbers as those used in FIGS. 1 to 14.
+                                </p>
+                                <p n="0055" xml:id="_341af00105">As shown in FIG. 15, the femoral components 200 of the system include a femoral component 210 including distal
+                                    curved convex condylar surfaces 12, 14. The surfaces 12, 14 are shaped (i.e., curved) in a manner that approximates the condyles of the natural
+                                    femur. In the device shown in the drawings, the condylar surface 12 is a medial condyle surface 12, and the condylar surface 14 is a lateral
+                                    condyle surface 14. The surfaces 12, 14 are spaced apart from one another, thereby defining an intercondylar notch between them.
+                                </p>
+                                <p n="0056" xml:id="_341af00106">The condyle surfaces 12, 14 are formed in a bearing surface 212 of the femoral component 210, and the femoral
+                                    component 210 includes a fixation surface 214 positioned opposite the bearing surface 212. The femoral component 210 also includes an elongated
+                                    stem post 216 that extends superiorly away from the surface 214. The elongated stem post 216 is configured to receive a stem component such as,
+                                    for example, the stem extension 22, or engage a metaphyseal sleeve such as, for example, the sleeves 24, 24A, 24B, 24C described above or
+                                    sleeves 224, 224A, 224B, which are described in greater below.
+                                </p>
+                                <p n="0057" xml:id="_341af00107">Specifically, as shown in FIG. 15, the elongated stem post 216 of the femoral component 210 has a tapered bore 218
+                                    defined therein into which the tapered distal end 80 of the stem extension 22 may be advanced to taper lock the post 216 to the stem extension
+                                    22. Similar to the adaptor 16 of the distal femoral component 10, the outer surface 220 of the elongated stem post 216 is also tapered and may
+                                    be advanced into one of the distal bores 72, 72A, 72B, 72C of the sleeves 24, 24A, 24B, 24C, respectively, or one of the tapered distal bores
+                                    272, 272A, 272B of the sleeves 224, 224A, 224B. As described above, each distal bore is shaped and finished to create a frictional lock such as,
+                                    for example, a taper lock, between the corresponding sleeve and the femoral component 210. In the device shown in the drawing, the outer surface
+                                    220 defines a Morse taper.
+                                </p>
+                                <p n="0058" xml:id="_341af00108">The fixation surface 214 of the femoral component 210 includes a number of surfaces 230, 232, 234, 236 positioned
+                                    opposite the condyle surfaces 12, 14. The fixation surface 214 includes a pair of distal fixation surfaces 230 similar to the distal fixation
+                                    surface 109 of distal femoral component 10. One of the distal fixation surfaces 230 is positioned medially and the other is positioned
+                                    laterally. The fixation surface 214 also includes a pair of posterior fixation surfaces 232, with one being medially positioned and the other
+                                    laterally positioned. As shown in FIG. 15, the posterior fixation surfaces 232 extend generally in the superior/inferior direction.
+                                </p>
+                                <p n="0059" xml:id="_341af00109">The fixation surface 214 also includes a pair of posterior chamfer surfaces 234, with one being medially positioned
+                                    and the other laterally positioned. The medial and lateral posterior-chamfer fixation surfaces 234 extend superiorly and posteriorly from their
+                                    respective lateral and medial distal fixation surfaces 230 to their respective posterior
+                                    fixation surfaces 232. As shown in FIG. 15, the fixation surface 214 has a pair of anterior chamfer surfaces 236, with one being medially
+                                    positioned and the other laterally positioned. The medial and lateral anterior-chamfer fixation surfaces 236 extend superiorly and posteriorly
+                                    from their respective lateral and medial distal fixation surfaces 230 to their respective posterior fixation surfaces 232.
+                                </p>
+                                <p n="0060" xml:id="_341af00110">Each of the fixation surfaces 230, 232, 234, 236 has a cement pocket formed therein. In the device shown in the
+                                    drawings, the cement pockets are contiguous with one another such that a single, continuous cement pocket 240 is formed in both the medial and
+                                    lateral fixation surfaces 214 of the femoral component 210. Each cement pocket 240 is defined by a side wall 242 that extends inwardly from the
+                                    respective fixation surface 214 to a bottom wall 244. A mounting aperture 250 is defined in each distal fixation surface 230. As shown in FIG.
+                                    15, the aperture 250 is defined by a cylindrical wall 252 that extends inwardly from a rim 254 positioned in the cement pocket 240. As described
+                                    in greater detail below, the aperture 250 is sized to receive a mounting plug 256 of a distal augment component 342, 344 to secure the augment
+                                    component 342, 344 to the femoral component 210.
+                                </p>
+                                <p n="0061" xml:id="_341af00111">Another mounting aperture 260 is defined in each posterior fixation surface 232. As shown in FIG. 15, the aperture
+                                    260 is defined by a cylindrical wall 252 that extends inwardly from a rim 254 positioned in the cement pocket 240. As described in greater
+                                    detail below, the aperture 260 is sized to receive a mounting plug 256 of a posterior augment component 346, 348 to secure the augment component
+                                    346, 348 to the femoral component 210. As shown in FIG. 15, the femoral components 200 include a plurality of sizes of metaphyseal sleeves 224,
+                                    224A, 224B. Similar to the sleeves 24, 24A, 24B, 24C described above, the geometries of the sleeves 224, 224A, 224B of the exterior surfaces of
+                                    the three sizes are the same over a portion of their axial lengths. As used herein, the terms "same", "match", and "identical" refer to
+                                    components that are designed to have the same dimensions and configuration. Such components may be subject to accepted tolerances or
+                                    manufacturing variations that cause the components to vary slightly in some respect. For example, the portions of metaphyseal sleeves 224, 224A,
+                                    224B that are designed to be the same may nevertheless vary slightly due to manufacturing tolerances. Nevertheless, such components are the
+                                    same, match, or are identical because they are designed to have the same configuration and dimensions. It should be understood that multiple
+                                    sizes of femoral
+                                    components 210 would typically be included in the modular knee prosthesis system. A modular knee prosthesis system may include fewer or more
+                                    sizes of metaphyseal sleeves 224, 224A, 224B.
+                                </p>
+                                <p n="0062" xml:id="_341af00112">Similar to the sleeves 24, 24A, 24B, 24C, the sleeves 224, 224A, 224B are designed for use with bones in which the
+                                    condition of the bone requires additional support or fixation in the metaphysis of the bone. As shown in FIG. 15, each of the sleeves 224, 224A,
+                                    224B has a distal base 262, 262A, 262B and a body 264, 264A, 264B extending proximally from its respective distal base to a respective proximal
+                                    end 266, 266A, 266B.
+                                </p>
+                                <p n="0063" xml:id="_341af00113">As shown in FIG. 15, each of the sleeves 224, 224A, 224B has a proximal bore 268, 268A, 268B defined in the
+                                    proximal end 266, 266A, 266B thereof. The proximal bores 268, 268A, 268B, of the femoral sleeves 224, 224A, 224B are sized and shaped to receive
+                                    a distal end 80 of a stem extension 22. Accordingly, for a stem extension having a tapered post at its distal end, the proximal bore would
+                                    comprise a tapered bore sized and shaped to receive and frictionally lock with the tapered post. Alternatively, for a stem extension having a
+                                    threaded distal end, the proximal bore may be threaded to receive and lock to the threaded distal end of the stem extension. As described above,
+                                    each of the sleeves 224, 224A, 224B has a distal bore 272, 272A, 272B, which is defined in the respective distal base 262, 262A, 262B of each
+                                    sleeve, as shown in FIGS. 16 to 18.
+                                </p>
+                                <p n="0064" xml:id="_341af00114">Referring now to FIGS. 16 to 18, the bodies 264, 264A, 264B of the sleeves 224, 224A, 224B include a plurality of
+                                    stepped walls 274, 274A, 274B.
+                                </p>
+                                <p n="0065" xml:id="_341af00115">Each pair of adjacent stepped walls 274, 274A, 274B is connected by an annular surface 276, 276A, 276B. As a
+                                    result, the bodies 264, 264A, 264B are terraced similar to the sleeves 24, 24A, 24B, 24C. In the device shown in the drawings, the bodies 264,
+                                    264A, 264B are tapered such that the sleeves 224, 224A, 224B have the smallest anterior- posterior dimensions and the smallest medial-lateral
+                                    dimensions at their respective proximal ends 266, 266A, 266B and become progressively larger as the bodies 264, 264A, 264B extend to their
+                                    respective distal bases 262, 262A, 262B.
+                                </p>
+                                <p n="0066" xml:id="_341af00116">It should be understood that the number and size of the stepped walls 274, 274A, 274B may vary. The outer surfaces
+                                    of the sleeves 262, 262A, 262B may also be porous coated to promote bone ingrowth, as disclosed in the prior art; the porous coating may extend
+                                    over substantially all or a portion of the stepped outer surfaces of the sleeves 224, 224A, 224B. It should be understood that these dimensions
+                                    are provided as examples only
+                                    and may vary. As shown in FIG. 16, the body 264 of the sleeve 224 has a longitudinal axis 280 and a tapered outer surface 282 that has an axial
+                                    length "L" defined along the axis 280. In the device shown in the drawing, the annular surfaces 276 are substantially flat. As a result, the
+                                    stepped walls 274 combine to define the axial length L of the body 264. In the device shown in the drawings, the axial length L is equal to
+                                    approximately 45 mm.
+                                </p>
+                                <p n="0067" xml:id="_341af00117">As shown in FIG. 17, the body 264A of the sleeve 224A has a longitudinal axis 280A and a tapered outer surface
+                                    282A. The tapered outer surface 282A has a proximal section 284A that has an axial length "L" defined along the axis 280A and a section 286A
+                                    extending distally from the proximal section 284A to the distal base 262A. The section 286A has an axial length "X" defined along the axis 280A.
+                                    As a result, the overall axial length of the body 264A is "L+X". In the device shown in the drawing, the axial length "L+X" is equal to
+                                    approximately 50 mm.
+                                </p>
+                                <p n="0068" xml:id="_341af00118">As shown in FIG. 18, the body 264B of the sleeve 224B has a longitudinal axis 280B and a tapered outer surface
+                                    282B. The tapered outer surface 282B has a proximal section 284B that has an axial length "L" defined along the axis 280B and a section 286B
+                                    extending distally from the proximal section 284A. The section 286A has an axial length "X" defined along the axis 280B. The tapered outer
+                                    surface 282B has another section 288B that extends distally from the section 286B to the distal base 262B. The section 288B has an axial length
+                                    "Y" defined along the axis 280B. As a result, the overall axial length of the body 264A is "L+X+Y". In the device shown in the drawing, the
+                                    axial length "L+X+Y" is equal to approximately 55 mm.
+                                </p>
+                                <p n="0069" xml:id="_341af00119">In the device shown in the drawing, the different sizes of femoral metaphyseal sleeves may be provided with
+                                    differences of a few millimetres (for example, 5 millimetres) between each size, so that X=5 mm, Y=5 mm and Z=5 mm. Additionally, the overall
+                                    axial length of the different sleeves may vary.
+                                </p>
+                                <p n="0070" xml:id="_341af00120">For example, the overall axial lengths of the sleeves may be between 30 mm and 55 mm.</p>
+                                <p n="0071" xml:id="_341af00121">Optionally, the outer geometries of the tapered outer surfaces 282, 282A, 282B of all sizes of femoral metaphyseal
+                                    sleeve 224, 224A, 224B are essentially identical over axial length "L". Thus, if "L" of the sleeve 224 is 45 mm, the sizes and shapes of the
+                                    proximal 45 mm of the other sleeve sizes 224A, 224B (i.e., the proximal sections 284A, 284B) are essentially identical to the size and shape of
+                                    the proximal 45 mm of the sleeve 224. In
+                                    other words, over axial length "L" for all of the sizes of femoral metaphyseal sleeves 224, 224A, 224B, the sleeves have the same number of
+                                    stepped walls, as shown in FIGS. 16 to 18. Further, as shown in FIG. 19, each stepped wall over axial length "L" also has the same maximum
+                                    medial-lateral dimension 290, the same maximum anterior-posterior dimension 292, and the same shape. Each stepped wall over axial length "L"
+                                    also has the same axial height, as shown in FIGS. 16 to 18.
+                                </p>
+                                <p n="0072" xml:id="_341af00122">The different sizes of femoral metaphyseal sleeves 224, 224A, 224B differ only in the sizes of the bases 262, 262A,
+                                    262B and in the distal portions corresponding with the axial extensions of the sleeves beyond a given axial length. For example, the tapered
+                                    outer surfaces 282A, 282B of the femoral metaphyseal sleeve 224A, 224B are essentially identical over axial length "X". Thus, if "X" of the
+                                    sleeve 224A is 5 mm, the size and shape of the section 286B of the sleeve 224B is essentially identical to the size and shape of the section
+                                    286A of the sleeve 224A. In other words, over axial length "X" for the sizes of femoral metaphyseal sleeves 224A, 224B, the sleeves have the
+                                    same number of stepped walls, as shown in FIGS. 17 to 18. Further, as shown in FIG. 20, each stepped wall has the same maximum medial-lateral
+                                    dimension 294, the same maximum anterior-posterior dimension 296, and the same shape. Nevertheless, the femoral metaphyseal sleeve 224B differs
+                                    from the sleeve 224A in the size of the base 262B and in the configuration of the distal section 288B.
+                                </p>
+                                <p n="0073" xml:id="_341af00123">FIGS. 21 to 25 show a plurality of surgical instruments 300, which may be used with the femoral components 200. The
+                                    surgical instruments 300 are a plurality of sizes of surgical broaches 302, 302A, 302B. Each of the broaches 302, 302A, 302B is formed from a
+                                    metallic material such as, for example, stainless steel or cobalt chromium. As described in greater detail below, the outer geometries of the
+                                    broaches 302, 302A, 302B are the same over a portion of their axial lengths and correspond to the outer geometries of the metaphyseal sleeves
+                                    224, 224A, 224B. As described above, the femoral components 200 may include fewer or more sizes of metaphyseal sleeves 224, 224A, 224B; it
+                                    should be appreciated that the surgical instruments 300 may include fewer or more sizes of broaches 302, 302A, 302B.
+                                </p>
+                                <p n="0074" xml:id="_341af00124">Each of the broaches 302, 302A, 302B includes a proximal tip 304, 304A, 304B and a body 306, 306A, 306B extending
+                                    from the proximal tip 304, 304A, 304B to a respective distal end 308, 308A, 308B. The tip 304, 304A, 304B of each broach 302,
+                                    302A, 302B has an aperture 310, 310A, 310B defined therein that is sized to receive a femoral stem trial. The distal end 308, 308A, 308B of each
+                                    broach 302, 302A, 302B is configured to engage an attachment mechanism of an instrument handle.
+                                </p>
+                                <p n="0075" xml:id="_341af00125">The bodies 306, 306A, 306B have a plurality of cutting teeth 312, 312A, 312B defined in the outer surface 322,
+                                    322A, 322B thereof. The cutting teeth 312, 312A, 312B are configured to engage the bone surrounding the medullary canal of the patient's femur
+                                    to define a cavity in the bone sized to receive a sleeve. The cutting teeth 312, 312A, 312B cooperate to define a plurality of stepped planes
+                                    314, 314A, 314B of their respective outer surfaces 322, 322A, 322B. As a result, the bodies 264, 264A, 264B are terraced. The bodies 306, 306A,
+                                    306B are tapered such that the broaches 302, 302A, 302B have the smallest anterior-posterior dimensions and the smallest medial-lateral
+                                    dimensions at their respective proximal tips 304, 304A, 304B and become progressively larger as the bodies 306, 306A, 306B extend to their
+                                    respective distal ends 308, 308A, 308B. The number of stepped planes 314, 314A, 314B of the broaches 302, 302A, 302B corresponds to the number
+                                    of the stepped walls 274, 274A, 274B of the sleeves 224, 224A, 224B, respectively.
+                                </p>
+                                <p n="0076" xml:id="_341af00126">As shown in FIG. 21, the body 306 of the broach 302 has a longitudinal axis 320 and a tapered outer surface 322
+                                    defined by the tips 324 of the cutting teeth 312. The tapered outer surface 322 has an axial length "L" defined along the axis 320. In that way,
+                                    the body 306 has the same axial height as the body 264 of the sleeve 224. Additionally, the stepped planes 314 of the body 306 combine to define
+                                    the axial length L of the body 306. The number of stepped planes 314 is equal to the number of stepped walls 274 of the sleeve 224; as such,
+                                    each stepped plane 314 corresponds to a stepped wall 274 of the sleeve 224.
+                                </p>
+                                <p n="0077" xml:id="_341af00127">The tapered outer surface 322 of the broach 302 has a proximal section 326 extending from the proximal tip 304 and
+                                    a section 328 extending from the proximal section 326 to the distal end 308. The distal section 328 has an axial length that is approximately
+                                    50% of the axial length L.
+                                </p>
+                                <p n="0078" xml:id="_341af00128">In the proximal section 326 of the tapered outer surface 322, the outer geometry of the broach 302 defined by the
+                                    stepped planes 314 is the same as the corresponding outer geometry of the sleeve 224 defined by the stepped walls 274. In other words, the
+                                    number of stepped planes 314 is equal to the number of stepped walls 274, and each stepped plane
+                                    314 has the same maximum medial-lateral dimension, the same maximum anterior- posterior dimension, and the same axial height as the
+                                    corresponding stepped wall 274. For example, as shown in FIG. 24, the stepped planes 314 in the proximal section 326 define the same maximum
+                                    medial-lateral dimension 290 and the same maximum anterior- posterior dimension 292 as the corresponding stepped wall 274 of the sleeve 224. As
+                                    a result, the broach 302 is configured to define a cavity in the patient's femur that includes a proximal section that is substantially the same
+                                    as the sleeve 224 such that the sleeve 224 is fitted into that section.
+                                </p>
+                                <p n="0079" xml:id="_341af00129">In the distal section 328 of the tapered outer surface 322 the number of stepped planes 314 is equal to the number
+                                    of stepped walls 274, and each stepped plane 314 has the same axial height as the corresponding stepped wall 274. However, the maximum medial-
+                                    lateral dimension and the maximum anterior-posterior dimension of each stepped plane 314 are smaller than the maximum medial-lateral dimension
+                                    and the maximum anterior- posterior dimension of the corresponding stepped wall 274. In other words, the outer geometry of the broach 302
+                                    defined by the stepped planes 314 is smaller than the corresponding outer geometry of the sleeve 224 defined by the stepped walls 274. As a
+                                    result, the broach 302 is configured to define a cavity in the patient's femur that includes a distal section that is smaller than the sleeve
+                                    224 such that the sleeve 224 is press fit into that section.
+                                </p>
+                                <p n="0080" xml:id="_341af00130">The maximum medial-lateral dimension of each stepped plane 314 in the distal section 328 is 0.35 mm less than the
+                                    maximum medial-lateral dimension of the corresponding stepped wall 274 of the sleeve 224. Similarly, the maximum anterior- posterior dimension
+                                    of each stepped plane 314 in the distal section 328 is 0.35 mm less than the maximum anterior-posterior dimension of the corresponding stepped
+                                    wall 274 of the sleeve 224. It should be appreciated that the dimensions of the broach 302 may be adjusted to provide greater or less press fit
+                                    for the sleeve 224.
+                                </p>
+                                <p n="0081" xml:id="_341af00131">Furthermore, since the geometries of the outer surfaces 282, 282A, 282B of the femoral metaphyseal sleeves 224,
+                                    224A, 224B are essentially identical through axial length "L", the sleeves 224A, 224B will fit within a cavity prepared by the broach 302 in a
+                                    patient's femur and extend distally from the bone by the distance "X" or "X+Y". As such, if the sleeve 224A is inserted into a cavity prepared
+                                    by the broach 302, the portion of the sleeve 224 corresponding to the distal section 328 of the broach 302 will be press fit, while
+                                    the portion corresponding to the proximal section 326 of the broach 302 will be fitted into that portion of the cavity.
+                                </p>
+                                <p n="0082" xml:id="_341af00132">As shown in FIG. 22, the body 306A of the broach 302A has a longitudinal axis 320A and a tapered outer surface 322A
+                                    defined by the tips 324A of the cutting teeth 312A. The tapered outer surface 322A has an axial length "L+X" defined along the axis 320A. In
+                                    that way, the body 306A has the same axial height as the sleeve 224A. Additionally, the stepped planes 314A of the body 306A combine to define
+                                    the axial length "L+X" of the body 306A. The number of stepped planes 314A is equal to the number of stepped walls 274A of the sleeve 224A; as
+                                    such, each stepped plane 314 corresponds to a stepped wall 274A of the sleeve 224A.
+                                </p>
+                                <p n="0083" xml:id="_341af00133">The tapered outer surface 322A of the broach 302A has a proximal section 326A extending from the proximal tip 304A
+                                    and a section 328A extending from the proximal section 326A to the distal end 308A. The distal section 328 has an axial length that is
+                                    approximately 50% of the axial length "L+X".
+                                </p>
+                                <p n="0084" xml:id="_341af00134">In the proximal section 326A of the tapered outer surface 322A, the outer geometry of the broach 302A defined by
+                                    the stepped planes 314A is the same as the corresponding outer geometry of the sleeve 224A defined by the stepped walls 274A. In other words,
+                                    the number of stepped planes 314A is equal to the number of stepped walls 274A, and each stepped plane 314A has the same maximum medial-lateral
+                                    dimension, the same maximum anterior-posterior dimension, and the same axial height as the corresponding stepped wall 274A. For example, as
+                                    shown in FIG. 24, the stepped planes 314A in the proximal section 326A define the same maximum medial-lateral dimension 290 and the same maximum
+                                    anterior-posterior dimension 292 as the corresponding stepped wall 274A of the sleeve 224A. As a result, the broach 302A is configured to define
+                                    a cavity in the patient's femur that includes a proximal section that is substantially the same as the sleeve 224A such that the sleeve 224A is
+                                    fitted into that section.
+                                </p>
+                                <p n="0085" xml:id="_341af00135">In the distal section 328A of the tapered outer surface 322A the number of stepped planes 314A is equal to the
+                                    number of stepped walls 274A, and each stepped plane 314A has the same axial height as the corresponding stepped wall 274A. However, the maximum
+                                    medial-lateral dimension and the maximum anterior-posterior dimension of each stepped plane 314A are smaller than the maximum medial-lateral
+                                    dimension and the maximum anterior-posterior dimension of the corresponding stepped wall 274A. In other
+                                    words, the outer geometry of the broach 302A defined by the stepped planes 314A is smaller than the corresponding outer geometry of the sleeve
+                                    224A defined by the stepped walls 274A.
+                                </p>
+                                <p n="0086" xml:id="_341af00136">For example, as shown in FIG. 25, a stepped plane 314A in the distal section 328 defines a maximum medial-lateral
+                                    dimension 330 that is less than the maximum medial- lateral dimension 294 of the corresponding stepped wall 274A. Similarly, the same stepped
+                                    plane 314A in the distal section 328 defines a maximum anterior-posterior dimension 332 that is less than the maximum medial-lateral dimension
+                                    294 of the corresponding stepped wall 274A. As a result, the broach 302A is configured to define a cavity in the patient's femur that includes a
+                                    distal section that is smaller than the sleeve 224A such that the sleeve 224A is press fit into that section.
+                                </p>
+                                <p n="0087" xml:id="_341af00137">The maximum medial-lateral dimension of each stepped plane 314A in the distal section 328A is 0.35 mm less than the
+                                    maximum medial-lateral dimension of the corresponding stepped wall 274A of the sleeve 224A. Similarly, the maximum anterior- posterior dimension
+                                    of each stepped plane 314A in the distal section 328A is 0.35 mm less than the maximum anterior-posterior dimension of the corresponding stepped
+                                    wall 274A of the sleeve 224A. It should be appreciated that the dimensions of the broach 302A may be adjusted to provide greater or less press
+                                    fit for the sleeve 224A. It should also be appreciated that the medial-lateral press fit and the anterior-posterior press fit may or may not be
+                                    equal.
+                                </p>
+                                <p n="0088" xml:id="_341af00138">Furthermore, since the geometries of the outer surfaces 282A, 282B of the femoral metaphyseal sleeves 224A, 224B
+                                    are essentially identical through axial length "L+X," the sleeve 224B will fit within a cavity prepared by the broach 302A in a patient's femur
+                                    and extend distally from the bone by the distance "X+Y". As such, if the sleeve 224B is inserted into a cavity prepared by the broach 302A, the
+                                    portion of the sleeve 224B corresponding to the distal section 328A of the broach 302A will be press fit, while the portion of the sleeve 224B
+                                    corresponding to the proximal section 326A of the broach 302A will be fitted into that portion of the cavity.
+                                </p>
+                                <p n="0089" xml:id="_341af00139">As shown in FIG. 23, the body 306B of the broach 302B has a longitudinal axis 320B and a tapered outer surface 322B
+                                    defined by the tips 324B of the cutting teeth 312B. The tapered outer surface 322B has an axial length "L+X+Y" defined along the axis 320B. In
+                                    that way, the body 306B has the same axial height as the sleeve 224B. Additionally, the
+                                    stepped planes 314B of the body 306B combine to define the axial length "L+X+Y" of the body 306B. The number of stepped planes 314B is equal to
+                                    the number of stepped walls 274B of the sleeve 224B; as such, each stepped plane 314 corresponds to a stepped wall 274B of the sleeve 224B.
+                                </p>
+                                <p n="0090" xml:id="_341af00140">The tapered outer surface 322B of the broach 302B has a proximal section 326B extending from the proximal tip 304B
+                                    and a section 328B extending from the proximal section 326B to the distal end 308B. The distal section 328 has an axial length that is
+                                    approximately 50% of the axial length "L+X+Y".
+                                </p>
+                                <p n="0091" xml:id="_341af00141">In the proximal section 326B of the tapered outer surface 322B, the outer geometry of the broach 302B defined by
+                                    the stepped planes 314B is the same as the corresponding outer geometry of the sleeve 224B defined by the stepped walls 274B. In other words,
+                                    the number of stepped planes 314B is equal to the number of stepped walls 274B, and each stepped plane 314B has the same maximum medial-lateral
+                                    dimension, the same maximum anterior-posterior dimension, and the same axial height as the corresponding stepped wall 274B. As a result, the
+                                    broach 302B is configured to define a cavity in the patient's femur that includes a proximal section that is substantially the same as the
+                                    sleeve 224B such that the sleeve 224B is fitted into that section.
+                                </p>
+                                <p n="0092" xml:id="_341af00142">In the distal section 328B of the tapered outer surface 322B the number of stepped planes 314B is equal to the
+                                    number of stepped walls 274B, and each stepped plane 314B has the same axial height as the corresponding stepped wall 274B. However, the maximum
+                                    medial-lateral dimension and the maximum anterior-posterior dimension of each stepped plane 314B are smaller than the maximum medial-lateral
+                                    dimension and the maximum anterior-posterior dimension of the corresponding stepped wall 274B. In other words, the outer geometry of the broach
+                                    302B defined by the stepped planes 314B is smaller than the corresponding outer geometry of the sleeve 224B defined by the stepped walls 274B.
+                                    As a result, the broach 302B is configured to define a cavity in the patient's femur that includes a distal section that is smaller than the
+                                    sleeve 224B such that the sleeve 224B is press fit into that section.
+                                </p>
+                                <p n="0093" xml:id="_341af00143">The maximum medial-lateral dimension of each stepped plane 314B in the distal section 328B is 0.35 mm less than the
+                                    maximum medial-lateral dimension of the corresponding stepped wall 274B of the sleeve 224B. Similarly, the maximum anterior- posterior dimension
+                                    of each stepped plane 314B in the distal section 328B is 0.35 mm less
+                                    than the maximum anterior-posterior dimension of the corresponding stepped wall 274B of the sleeve 224B. It should be appreciated that the
+                                    dimensions of the broach 302B may be adjusted to provide greater or less press fit for the sleeve 224B.
+                                </p>
+                                <p n="0094" xml:id="_341af00144">FIGS. 26 to 35 show a plurality of augments 340 of the femoral components 200. The augments 340 include a plurality
+                                    of distal augments 342, 344 (see FIGS. 26 to 29) and a plurality of posterior augments 346, 348. As described above, each of the augments 340
+                                    includes a mounting plug 256 that is configured to be received in the mounting aperture 250. Each augment 340 also includes a retention
+                                    mechanism 350 configured secure the corresponding augment 340 to the femoral component 210, as described in greater detail below. The augments
+                                    340 are formed from any suitable implant-grade metallic material such as, for example, cobalt-chromium, titanium, or stainless steel.
+                                </p>
+                                <p n="0095" xml:id="_341af00145">As shown in FIGS. 26 and 27, the distal augment 342 includes a wedge-shaped body 358 that has a proximal surface
+                                    360, a distal surface 362 positioned opposite the proximal surface 360, and a side wall 364 that connects the surfaces 360, 362. The side wall
+                                    364 includes a tapered anterior surface 366 and a tapered posterior surface 368, which extend obliquely relative the surfaces 360, 362. When the
+                                    distal augment 342 is secured to the femoral component 210, the tapered anterior surface 366 is configured to engage the anterior chamfer
+                                    surface 236 of the femoral component 210, and the tapered posterior surface 368 is configured to engage the posterior chamfer surface 234 of the
+                                    femoral component 210.
+                                </p>
+                                <p n="0096" xml:id="_341af00146">As shown in FIG. 26, the proximal surface 360 of the distal augment 342 has a rim surface 370 and a side wall 372
+                                    that extends inwardly from the rim surface 370. The side wall 372 cooperates with a bottom surface 374 to define a pocket 376 in the proximal
+                                    surface 360. The upper end 378 of the mounting plug 256 is positioned an opening 380 defined in the bottom surface 374, and the body 382 of the
+                                    plug 256 extends through the augment body 358 to an end 384 positioned below the body 358, as shown in FIG. 27. The end 384 of the body 382 is
+                                    divided into four legs 386.
+                                </p>
+                                <p n="0097" xml:id="_341af00147">The retention mechanism 350 of the augment 340 includes a fastener 388 that is threaded into the body 382 of the
+                                    mounting plug 256. The fastener 288 includes a socket in which a driver may be inserted to rotate the fastener 288. When the fastener 388 is
+                                    rotated in a first direction, the fastener 388 is driven toward the end 384 of the body 382, causing the legs 386 to expand outward; when the
+                                    fastener is rotated in the opposite
+                                    direction, the fastener 388 moves away from the end 384 of the body 382 such that the legs 386 are permitted to retract.
+                                </p>
+                                <p n="0098" xml:id="_341af00148">The distal surface 362 of the wedge-shaped body 358 is configured to engage the distal surface 230 of the femoral
+                                    component 210. A plurality of feet 390 extend from the distal surface 362 of the wedge-shaped body 358. Each foot 390 is sized to be positioned
+                                    in the cement pocket 240 of the femoral component 210. As shown in FIG. 27, the wedge- shaped body 358 also has a thickness 392 defined between
+                                    the distal surface 362 and the proximal surface 360.
+                                </p>
+                                <p n="0099" xml:id="_341af00149">As shown in FIGS. 28 and 29, the distal augment 344 includes a wedge-shaped body 400 that has a proximal surface
+                                    402, a distal surface 404 positioned opposite the proximal surface 402, and a side wall 406 that connects the surfaces 402, 404. The side wall
+                                    406 includes a tapered anterior surface 408 and a tapered posterior surface 410, which extend obliquely relative the surfaces 408, 410. When the
+                                    distal augment 344 is secured to the femoral component 210, the tapered anterior surface 408 is configured to engage the anterior chamfer
+                                    surface 236 of the femoral component 210, and the tapered posterior surface 410 is configured to engage the posterior chamfer surface 234 of the
+                                    femoral component 210.
+                                </p>
+                                <p n="0100" xml:id="_341af00150">The side wall 406 has a posterior notch 412 defined therein. As shown in FIGS. 28 and 29, the notch 412 is defined
+                                    by a substantially planar proximal surface 414 extending parallel to the proximal surface 402 and anteriorly from an edge of the tapered
+                                    posterior surface 410 and a substantially planar posterior surface 416 extending orthogonal to the proximal surface 414.
+                                </p>
+                                <p n="0101" xml:id="_341af00151">The notch 412 is sized to receive the posterior augment 348, as described in greater detail below.</p>
+                                <p n="0102" xml:id="_341af00152">As shown in FIG. 28, the proximal surface 402 of the distal augment 344 has a configuration similar to the proximal
+                                    surface 360 of the distal augment 342. The surface 402 has a rim surface 420 and a side wall 422 that extends inwardly from the rim surface 420.
+                                    The side wall 422 cooperates with a bottom surface 424 to define a pocket 426 in the proximal surface 402. The upper end 428 of the mounting
+                                    plug 256 is positioned an opening 430 defined in the bottom surface 424, and the body 432 of the plug 256 extends through the augment body 358
+                                    to an end 384 positioned below the body 358, as shown in FIG. 29. The end 384 of the body 432 is divided into four legs 386. The retention
+                                    mechanism 350 of the augment 340 includes a fastener 438 that is threaded into the body 432 of the mounting plug 256. The fastener 438 includes
+                                    a socket in which a driver may be inserted to rotate the fastener 438. When the fastener 438 is rotated in a first direction, the fastener 438
+                                    is driven toward the end 384 of the body 432, causing the legs 386 to expand outward; when the fastener is rotated in the opposite direction,
+                                    the fastener 438 moves away from the end 384 of the body 432 such that the legs 386 are permitted to retract.
+                                </p>
+                                <p n="0103" xml:id="_341af00153">The distal surface 404 of the wedge-shaped body 400 is configured to engage the distal surface 230 of the femoral
+                                    component 210. A plurality of feet 440 extend from the distal surface 404 of the wedge-shaped body 400. Each foot 440 is sized to be positioned
+                                    in the cement pocket 240 of the femoral component 210. As shown in FIG. 29, the wedge- shaped body 358 also has a thickness 442 defined between
+                                    the distal surface 404 and the proximal surface 402.
+                                </p>
+                                <p n="0104" xml:id="_341af00154">As shown in FIGS. 27 and 29, the thickness 442 of the augment 344 is greater than the thickness 392 of the augment
+                                    342. The thickness 392 is equal to approximately 4 mm, and the thickness 442 is equal to approximately 12 mm. The thicknesses of the augments
+                                    may be more or less than these values depending with the size of the other femoral components 200. Additionally, as shown in FIGS. 27 and 29,
+                                    the distal surface 404 of the augment 344 is wider than distal surface 362 of the augment 342.
+                                </p>
+                                <p n="0105" xml:id="_341af00155">As described above, the femoral components 200 also include posterior augments 346, 348. Each of the posterior
+                                    augments 346, 348 includes a body 450 having an anterior surface 452 and a posterior surface 454 positioned opposite the anterior surface 452.
+                                    As shown in FIGS. 30 and 32, each of the posterior augments 346, 348 includes the mounting plug 256, which has a configuration similar to the
+                                    configurations described above in regard to the distal augments 342, 344.
+                                </p>
+                                <p n="0106" xml:id="_341af00156">The posterior surface 454 of the body 450 is configured to engage the posterior fixation surface 232 of the femoral
+                                    component 210. A plurality of feet 456 extend from the posterior surface 454. Each foot 456 is sized to be positioned in the cement pocket 240
+                                    of the femoral component 210. As shown in FIG. 30, the posterior augment 346 has a thickness 460 defined between the anterior surface 452 and
+                                    the posterior surface 454; as shown in FIG. 32, the posterior augment 348 has a thickness 462 defined between the anterior surface 452 and the
+                                    posterior surface 454. The thickness 462 of the augment 348 is greater than the thickness 460 of the augment 346.
+                                </p>
+
+                                <p n="0107" xml:id="_341af00157">In use, the augments 340 may be attached to the femoral component 210 in the same sequence, regardless of the
+                                    combination of augments 340 used. For example, as shown in FIGS. 30 and 31, the posterior augment 346 may be attached first to the posterior
+                                    fixation surface 232 of the femoral component 210 via the mounting plug 256, which is inserted into the aperture 260. Using the fastener (not
+                                    shown) of the mounting plug 256, the legs 386 of the mounting plug 256 are expanded into engagement with the wall 252 defining the aperture 250,
+                                    thereby securing the augment 346 to the posterior fixation surface 232.
+                                </p>
+                                <p n="0108" xml:id="_341af00158">The distal augment 342 may then be attached to the distal fixation surface 230. As shown in FIG. 31, the mounting
+                                    plug 256 is aligned with the aperture 250 of the distal fixation surface 230. The distal augment 342 may be advanced downward such that the plug
+                                    256 is received in the aperture 250. The fastener 388 may then be operated to engage the wall 252 with the legs 386 of the mounting plug 256,
+                                    thereby securing the augment 342 to the distal fixation surface 230.
+                                </p>
+                                <p n="0109" xml:id="_341af00159">As shown in FIGS. 32 to 35, another combination of augments 340 (in this case, the largest augments 344, 348) may
+                                    be attached in the same sequence as the augments 342, 346. To do so, the posterior augment 348 may be attached first to the posterior fixation
+                                    surface 232 of the femoral component 210 by means of the mounting plug 256, which is inserted into the aperture 260. Using the fastener (not
+                                    shown) of the mounting plug 256, the legs 386 of the mounting plug 256 are expanded into engagement with the wall 252 defining the aperture 250,
+                                    thereby securing the augment 348 to the posterior fixation surface 232.
+                                </p>
+                                <p n="0110" xml:id="_341af00160">The distal augment 344 may then be attached to the distal fixation surface 230. To do so, the distal augment 344 is
+                                    positioned above the distal fixation surface 230 as shown in FIG. 33. The augment 344 may then be rotated as shown in FIG. 34 and advanced
+                                    downward.
+                                </p>
+                                <p n="0111" xml:id="_341af00161">As shown in FIG. 34, the user may slide posterior edge of the distal augment 344 under the posterior augment 348 to
+                                    "hook" the distal augment 344 into position. In doing so, the posterior augment 348 is advanced into the posterior notch 412 of the distal
+                                    augment 344. When the plug 256 of the distal augment 344 is received in the aperture 250 and the augment 344 is properly seated as shown in FIG.
+                                    35, the posterior augment 348 remains in the posterior notch 412. The fastener 388 may then be operated to engage the
+                                    wall 252 with the legs 386 of the mounting plug 256, thereby securing the augment 348 to the distal fixation surface 230.
+                                </p>
+                                <p n="0112" xml:id="_341af00162">As shown in FIGS. 36 and 37, the femoral components 200 may be assembled to form a femoral orthopaedic prosthesis.
+                                    In FIG. 36, the smallest femoral sleeve 224 and the smallest augments 342, 346 are assembled with the femoral component 210 to form prosthesis
+                                    470. In FIG. 37, the largest femoral sleeve 224B and the largest augments 344, 348 are assembled with the femoral component 210 to form
+                                    prosthesis 472. As shown in FIGS. 36-37, the distalmost points 474 of the condyle surfaces 12, 14 define a joint line of the femoral orthopaedic
+                                    prosthesis when the patient's leg is extension. In FIG. 36, the joint line is indicated by line 476; in FIG. 37, the joint line is indicated by
+                                    line 478. The assemblies have maximum axial lengths from planes at the proximal ends 266, 266B (the planes shown at 480 and 482) to the plane of
+                                    the joint line, shown at 476 in FIG. 36 and at 478 in FIG. 37. These maximum axial lengths of the assemblies are shown at ALl in FIG. 36 and AL2
+                                    in FIG. 37. In the device shown in the drawings, AL2 is longer than ALl by the dimension "X+Y", that is the axial length of the sleeve 224B
+                                    beyond the length "L" of the smallest sleeve 224.
+                                </p>
+                                <p n="0113" xml:id="_341af00163">As can also be seen from a comparison of FIGS. 36 and 37, using the larger sleeve 224B distalizes the joint line
+                                    476 to the position 478 by the offset distance o,. This offset distance o, also corresponds with the dimension "X+Y". Similarly, using the
+                                    sleeve 224A distalizes the joint line by the dimension "X" relative to the joint line 476.
+                                </p>
+                                <p n="0114" xml:id="_341af00164">Since the geometries of the stepped bodies 264, 264B, 264C of the different sizes of sleeves 224, 224A, 224B are
+                                    the same through axial length "L", the surgeon can prepare the distal femur using the broach 302 to receive the smallest size of femoral sleeve
+                                    224. If the surgeon determines intraoperatively that the joint line should be distalized, the surgeon may use any of the other sizes of sleeve
+                                    224A, 224B, and the proximal portion of the larger size sleeve will fit within the opening prepared in the femur to receive the smaller sleeve
+                                    and extend distally from the bone by the distance "X" or "X+Y" thereby to offset the joint line distally. The thickness 442 of the distal
+                                    augment 344 is equal to the offset distance o, such that the sleeve 224B the prosthesis 472 may be stabilized when the joint line is distalized.
+                                    The surgeon can therefore accomplish this distalization without any further preparation of the bone cavity.
+                                    <figure xml:id="inlineFigure">
+                                        <graphic
+                                                url="/api/text/C1EP00000COYFNBL/emi/MTMxODU1NjItMTA4MjE4MjEtMDAwMi50aWY"/>
+                                    </figure>
+                                </p>
+
+                                <p n="0115" xml:id="_341af00165">Another system providing the option of distalizing the joint line is disclosed in the European patent application
+                                    filed with the present application and claiming priority from US patent application no. 61/703412.
+                                </p>
+                            </div>
+                        </body>
+                    </text>
+                </group>
+            </text>
+        </TEI>
+    </teiCorpus>
+</teiCorpus>

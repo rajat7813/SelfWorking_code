@@ -1,0 +1,107 @@
+{
+  "_links": {
+    "ht:self": {
+      "href": "http://nplapi-t.internal.epo.org/v01/groups?from=4&length=10"
+    },
+    "curies": [
+      {
+        "href": "http://nplapi-t.internal.epo.org/doc/v01/groups/{rel}",
+        "name": "ht",
+        "templated": true
+      }
+    ],
+    "group": {
+      "href": "http://nplapi-t.internal.epo.org/v01/groups/{group-number}?page=1"
+    },
+    "prev": {
+      "href": "http://nplapi-t.internal.epo.org/v01/groups?from=1&length=10"
+    },
+    "next": {
+      "href": "http://nplapi-t.internal.epo.org/v01/groups?from=13081990&length=10"
+    }
+  },
+  "_embedded": {
+    "group-list": [
+      {
+        "_links": {
+          "self": {
+            "href": "http://nplapi-t.internal.epo.org/v01/groups/4?page=1",
+            "group-number": "4"
+          }
+        }
+      },
+      {
+        "_links": {
+          "self": {
+            "href": "http://nplapi-t.internal.epo.org/v01/groups/9?page=1",
+            "group-number": "9"
+          }
+        }
+      },
+      {
+        "_links": {
+          "self": {
+            "href": "http://nplapi-t.internal.epo.org/v01/groups/22?page=1",
+            "group-number": "22"
+          }
+        }
+      },
+      {
+        "_links": {
+          "self": {
+            "href": "http://nplapi-t.internal.epo.org/v01/groups/24?page=1",
+            "group-number": "24"
+          }
+        }
+      },
+      {
+        "_links": {
+          "self": {
+            "href": "http://nplapi-t.internal.epo.org/v01/groups/41?page=1",
+            "group-number": "41"
+          }
+        }
+      },
+      {
+        "_links": {
+          "self": {
+            "href": "http://nplapi-t.internal.epo.org/v01/groups/58?page=1",
+            "group-number": "58"
+          }
+        }
+      },
+      {
+        "_links": {
+          "self": {
+            "href": "http://nplapi-t.internal.epo.org/v01/groups/99?page=1",
+            "group-number": "99"
+          }
+        }
+      },
+      {
+        "_links": {
+          "self": {
+            "href": "http://nplapi-t.internal.epo.org/v01/groups/999?page=1",
+            "group-number": "999"
+          }
+        }
+      },
+      {
+        "_links": {
+          "self": {
+            "href": "http://nplapi-t.internal.epo.org/v01/groups/5555?page=1",
+            "group-number": "5555"
+          }
+        }
+      },
+      {
+        "_links": {
+          "self": {
+            "href": "http://nplapi-t.internal.epo.org/v01/groups/13081990?page=1",
+            "group-number": "13081990"
+          }
+        }
+      }
+    ]
+  }
+}

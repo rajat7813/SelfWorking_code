@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<teiCorpus type="nplGroup">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <bibl type="nplGroup">
+                    <idno type="nplGroup">4</idno>
+                </bibl>
+                <title xml:lang="en">EPO NPL Group number 4</title>
+            </titleStmt>
+        </fileDesc>
+    </teiHeader>
+    <TEI xml:id="12592054-6e94-41bd-bbf1-1330bbb90387" type="npl" subtype="search">
+        <teiHeader>
+            <fileDesc>
+                <titleStmt>
+                    <title xml:lang="en">20th%20IPI%20actions.doc</title>
+                </titleStmt>
+                <editionStmt>
+                    <edition>
+                        <date type="processedDate">2017-01-23</date>
+                        <date type="whenCreated">2014-02-01</date>
+                    </edition>
+                    <respStmt>
+                        <resp>Supplier</resp>
+                        <name>XPDVB</name>
+                    </respStmt>
+                </editionStmt>
+                <publicationStmt>
+                    <authority>EPO</authority>
+                    <idno type="XP">XP564</idno>
+                    <availability>
+                        <licence>$$EPO specific: To Be Determined$$</licence>
+                    </availability>
+                </publicationStmt>
+                <sourceDesc>
+                    <biblStruct type="other">
+                        <analytic>
+                            <title xml:lang="en">The new titlte after update</title>
+                            <author sortKey="1">
+                                <persName>DVB Organization</persName>
+                            </author>
+                        </analytic>
+                        <monogr>
+                            <title level="m">DVB ; Online 10/03/2003 ; Digital Video Broadcasting (DVB); c/o EBU - 17a
+                                Ancienne Route - CH-1218 Grand Saconnex, Geneva; Switzerland
+                            </title>
+                            <idno type="publisherAccessionNumberAbstract">20th%20IPI%20actions</idno>
+                            <imprint>
+                                <date type="printDate" when="2003-10-03">20031003</date>
+                            </imprint>
+                            <availability>
+                                <licence>THIS IS THE COPYRIGHT</licence>
+                            </availability>
+                        </monogr>
+                    </biblStruct>
+                    <bibl/>
+                </sourceDesc>
+            </fileDesc>
+            <profileDesc>
+            </profileDesc>
+
+        </teiHeader>
+        <text xml:id="5c6159da-cea3-4170-8f21-1a87a8944b05">Some text belonging to the citation search</text>
+    </TEI>
+</teiCorpus>

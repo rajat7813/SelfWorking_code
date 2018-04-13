@@ -1,0 +1,32 @@
+{
+  "ID10GetDossierInvolvement": [
+    {
+      "ID10_Result": "OK",
+      "ID10_Explanation": ""
+    },
+    {
+      "dossierInvolvementAccountId": "EDOEX01",
+      "accountFullname": "Examiner One",
+      "dossierInvolvementType": "SL_RTE_FirstExaminer",
+      "roleTypeDescription": "SL_RTE_FirstExaminer",
+      "dossierInvolvementStartDate": "2015-01-01",
+      "dossierInvolvementEndDate": ""
+    },
+    {
+      "dossierInvolvementAccountId": "EDOEX02",
+      "accountFullname": "Examiner Two",
+      "dossierInvolvementType": "SL_RTE_SecondExaminer",
+      "roleTypeDescription": "SL_RTE_SecondExaminer",
+      "dossierInvolvementStartDate": "2015-02-01",
+      "dossierInvolvementEndDate": ""
+    },
+    {
+      "dossierInvolvementAccountId": "SL04038",
+      "accountFullname": "Sylvia Lampreia",
+      "dossierInvolvementType": "SL_RTE_Chairman",
+      "roleTypeDescription": "SL_RTE_Chairman",
+      "dossierInvolvementStartDate": "2015-03-01",
+      "dossierInvolvementEndDate": ""
+    }
+  ]
+}

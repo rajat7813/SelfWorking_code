@@ -1,0 +1,1089 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<teiCorpus subtype="simple" type="patentFamily">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <bibl subtype="simple" type="patentFamily">
+                    <idno type="familyId">057138164</idno>
+                </bibl>
+            </titleStmt>
+        </fileDesc>
+    </teiHeader>
+    <teiCorpus type="application">
+        <teiHeader>
+            <fileDesc>
+                <titleStmt>
+                    <bibl type="application">
+                        <idno notation="docdb" type="docNumber">2016055150</idno>
+                        <authority>
+                            <orgName type="national">US</orgName>
+                        </authority>
+                        <classCode scheme="kindCode">W</classCode><date type="dateOfFiling" when="2016-10-03"/>
+                        <idno notation="docdb" type="docId">470611410</idno>
+                        <idno notation="original" type="docNumber">PCT/US 2016/055 150</idno>
+                    </bibl>
+                </titleStmt>
+            </fileDesc>
+        </teiHeader>
+        <TEI availability="confidential" type="applicationDocument">
+            <teiHeader>
+                <fileDesc>
+                    <publicationStmt>
+                        <listPlace type="designationOfStates">
+                            <listPlace type="designationPCT">
+                                <place type="regional">
+                                    <country>EP</country>
+                                </place>
+                                <place type="national">
+                                    <country>JP</country>
+                                    <country>US</country>
+                                </place>
+                            </listPlace>
+                        </listPlace>
+                    </publicationStmt>
+                    <noteStmt>
+                        <note corresp="9254195a1a48e8c2df695246aae40384" type="abstract_information">
+                            <idno type="lang">en</idno>
+                        </note>
+                        <note corresp="9254195a1a48e8c2df695246aae40384" type="abstract_information">
+                            <idno type="lang">en</idno>
+                        </note>
+                    </noteStmt>
+                    <sourceDesc>
+                        <listBibl type="priorityClaims">
+                            <bibl type="application">
+                                <authority>
+                                    <orgName type="national">US</orgName>
+                                </authority><date when="2015-10-12"/>
+                                <idno notation="docdb" type="docNumber">201562240220</idno>
+                                <idno notation="dnum" type="docNumber">USP201562240220</idno>
+                                <classCode scheme="kindCode">P</classCode>
+                            </bibl>
+                            <bibl type="application">
+                                <authority>
+                                    <orgName type="national">US</orgName>
+                                </authority><date when="2016-10-03"/>
+                                <idno notation="docdb" type="docNumber">201615283482</idno>
+                                <idno notation="dnum" type="docNumber">USA201615283482</idno>
+                                <classCode scheme="kindCode">A</classCode>
+                            </bibl>
+                        </listBibl>
+                    </sourceDesc>
+                    <titleStmt>
+                        <title notation="docdba" type="invention" xml:id="_99402a" xml:lang="en">INSTRUMENT HANDLE AND REPLACEABLE TIP</title>
+                        <title type="procedural" xml:id="_99402a" xml:lang="en">INSTRUMENT HANDLE AND REPLACEABLE TIP</title>
+                        <funder role="applicant">
+                            <name notation="unknown">ROLLINS, Kevin, P.</name>
+                            <address type="adrStruct">
+                                <addrLine>701 Treeside Court Suite H, Chesterfield, MO 63017</addrLine>
+                                <country type="national">US</country>
+                            </address>
+                        </funder>
+                        <funder role="applicant">
+                            <name notation="unknown">KATALYST SURGICAL, LLC</name>
+                            <address type="adrStruct">
+                                <addrLine>754 Goddard Avenue, Chesterfield, MO 63005</addrLine>
+                                <country type="national">US</country>
+                            </address>
+                        </funder>
+                        <funder role="applicant">
+                            <name notation="unknown">SCHELLER, Gregg, D.</name>
+                            <address type="adrStruct">
+                                <addrLine>17820 Suzanne Ridge Drive, Wildwood, MO 63038</addrLine>
+                                <country type="national">US</country>
+                            </address>
+                        </funder>
+                        <funder role="applicant">
+                            <name notation="unknown">BASS, Eric, J.</name>
+                            <address type="adrStruct">
+                                <addrLine>111 Pearl Avenue, Webster Groves, MO 63119</addrLine>
+                                <country type="national">US</country>
+                            </address>
+                        </funder>
+                        <funder role="applicant">
+                            <name notation="unknown">KATALYST SURGICAL, LLC</name>
+                        </funder>
+                        <author role="inventor">
+                            <persName notation="unknown">SCHELLER, Gregg, D.</persName>
+                            <address type="adrStruct">
+                                <addrLine>17820 Suzanne Ridge Drive, Wildwood, MO 63038</addrLine>
+                                <country type="national">US</country>
+                            </address>
+                        </author>
+                        <author role="inventor">
+                            <persName notation="unknown">BASS, Eric, J.</persName>
+                            <address type="adrStruct">
+                                <addrLine>111 Pearl Avenue, Webster Groves, MO 63119</addrLine>
+                                <country type="national">US</country>
+                            </address>
+                        </author>
+                        <editor role="representative">
+                            <address type="adrTotal">ROLLINS, Kevin P.<lb/>701 Treeside Court Suite H<lb/>Chesterfield MO 63017<lb/>ETATS-UNIS D'AMERIQUE
+                            </address>
+                        </editor>
+                    </titleStmt>
+                </fileDesc>
+                <profileDesc>
+                    <textClass>
+                        <classCode scheme="undetermined" type="preClassification">
+                            <ident type="classificationSymbol">A61B17/30</ident>
+                        </classCode>
+                        <classCode scheme="undetermined" type="preClassification">
+                            <ident type="classificationSymbol">A61B17/04</ident>
+                        </classCode>
+                    </textClass>
+                </profileDesc>
+                <revisionDesc>
+                    <listChange><change xml:id="_99402a"/></listChange>
+                </revisionDesc>
+                <creation>
+                    <listChange>
+                        <change xml:id="786b7efe9c4744567979ae554ba8e432">
+                            <date type="dateProduced">20161014</date>
+                            <orgName type="supplier">JOUVE</orgName>
+                            <idno type="formatSubtype">ST36XOCR</idno>
+                            <idno type="qualityLevel">02</idno><language ident="EN"/>
+                            <idno type="section">C</idno>
+                        </change>
+                        <change xml:id="786b7efe9c4744567979ae554ba8e432">
+                            <date type="dateProduced">20161024</date>
+                            <orgName type="supplier">JOUVE</orgName>
+                            <idno type="formatSubtype">ST36XOCR</idno>
+                            <idno type="qualityLevel">02</idno><language ident="EN"/>
+                            <idno type="section">C</idno>
+                        </change>
+                        <change xml:id="fd9b9913f5bd4d9f1ee3c5632f78eb8c">
+                            <date type="dateProduced">20161014</date>
+                            <orgName type="supplier">JOUVE</orgName>
+                            <idno type="formatSubtype">ST36XOCR</idno>
+                            <idno type="qualityLevel">02</idno><language ident="EN"/>
+                            <idno type="section">D</idno>
+                        </change>
+                        <change xml:id="9254195a1a48e8c2df695246aae40384">
+                            <date type="dateProduced">20161014</date>
+                            <orgName type="supplier">JOUVE</orgName>
+                            <idno type="formatSubtype">ST36XOCR</idno>
+                            <idno type="qualityLevel">02</idno><language ident="EN"/>
+                            <idno type="section">A</idno>
+                        </change>
+                        <change xml:id="9254195a1a48e8c2df695246aae40384">
+                            <date type="dateProduced">20161024</date>
+                            <orgName type="supplier">JOUVE</orgName>
+                            <idno type="formatSubtype">ST36XOCR</idno>
+                            <idno type="qualityLevel">02</idno><language ident="EN"/>
+                            <idno type="section">A</idno>
+                        </change>
+                        <change xml:id="1646b789f770b346c7753e5b7ca9bac1">
+                            <date type="dateProduced">20161024</date>
+                            <orgName type="supplier">JOUVE</orgName>
+                            <idno type="formatSubtype">ST36XOCR</idno>
+                            <idno type="qualityLevel">02</idno><language ident="EN"/>
+                            <idno type="section">D</idno>
+                        </change>
+                    </listChange>
+                </creation>
+            </teiHeader>
+            <facsimile xml:id="EZLA7IXD4854DSU">
+                <surface n="1" type="page"><graphic url="/api/pre-publication/470611410/US2016055150W/facsimiles/RFVNTVkvRVpMQTdJWEQ0ODU0RFNV/1"/><zone type="description" xml:id="EZLA7IXD4854DSU1"/></surface>
+                <surface n="2" type="page"><graphic url="/api/pre-publication/470611410/US2016055150W/facsimiles/RFVNTVkvRVpMQTdJWEQ0ODU0RFNV/2"/><zone type="description" xml:id="EZLA7IXD4854DSU2"/></surface>
+                <surface n="3" type="page"><graphic url="/api/pre-publication/470611410/US2016055150W/facsimiles/RFVNTVkvRVpMQTdJWEQ0ODU0RFNV/3"/><zone type="description" xml:id="EZLA7IXD4854DSU3"/></surface>
+                <surface n="4" type="page"><graphic url="/api/pre-publication/470611410/US2016055150W/facsimiles/RFVNTVkvRVpMQTdJWEQ0ODU0RFNV/4"/><zone type="description" xml:id="EZLA7IXD4854DSU4"/></surface>
+                <surface n="5" type="page"><graphic url="/api/pre-publication/470611410/US2016055150W/facsimiles/RFVNTVkvRVpMQTdJWEQ0ODU0RFNV/5"/><zone type="description" xml:id="EZLA7IXD4854DSU5"/></surface>
+                <surface n="6" type="page"><graphic url="/api/pre-publication/470611410/US2016055150W/facsimiles/RFVNTVkvRVpMQTdJWEQ0ODU0RFNV/6"/><zone type="description" xml:id="EZLA7IXD4854DSU6"/></surface>
+                <surface n="7" type="page"><graphic url="/api/pre-publication/470611410/US2016055150W/facsimiles/RFVNTVkvRVpMQTdJWEQ0ODU0RFNV/7"/><zone type="description" xml:id="EZLA7IXD4854DSU7"/></surface>
+                <surface n="8" type="page"><graphic url="/api/pre-publication/470611410/US2016055150W/facsimiles/RFVNTVkvRVpMQTdJWEQ0ODU0RFNV/8"/><zone type="description" xml:id="EZLA7IXD4854DSU8"/></surface>
+                <surface n="9" type="page"><graphic url="/api/pre-publication/470611410/US2016055150W/facsimiles/RFVNTVkvRVpMQTdJWEQ0ODU0RFNV/9"/><zone type="description" xml:id="EZLA7IXD4854DSU9"/></surface>
+                <surface n="10" type="page"><graphic url="/api/pre-publication/470611410/US2016055150W/facsimiles/RFVNTVkvRVpMQTdJWEQ0ODU0RFNV/10"/><zone type="description" xml:id="EZLA7IXD4854DSU10"/></surface>
+                <surface n="11" type="page"><graphic url="/api/pre-publication/470611410/US2016055150W/facsimiles/RFVNTVkvRVpMQTdJWEQ0ODU0RFNV/11"/><zone type="description" xml:id="EZLA7IXD4854DSU11"/></surface>
+                <surface n="12" type="page"><graphic url="/api/pre-publication/470611410/US2016055150W/facsimiles/RFVNTVkvRVpMQTdJWEQ0ODU0RFNV/12"/><zone type="description" xml:id="EZLA7IXD4854DSU12"/></surface>
+                <surface n="13" type="page"><graphic url="/api/pre-publication/470611410/US2016055150W/facsimiles/RFVNTVkvRVpMQTdJWEQ0ODU0RFNV/13"/><zone type="description" xml:id="EZLA7IXD4854DSU13"/></surface>
+                <surface n="14" type="page"><graphic url="/api/pre-publication/470611410/US2016055150W/facsimiles/RFVNTVkvRVpMQTdJWEQ0ODU0RFNV/14"/><zone type="description" xml:id="EZLA7IXD4854DSU14"/></surface>
+                <surface n="15" type="page"><graphic url="/api/pre-publication/470611410/US2016055150W/facsimiles/RFVNTVkvRVpMQTdJWEQ0ODU0RFNV/15"/><zone type="description" xml:id="EZLA7IXD4854DSU15"/></surface>
+                <surface n="16" type="page"><graphic url="/api/pre-publication/470611410/US2016055150W/facsimiles/RFVNTVkvRVpMQTdJWEQ0ODU0RFNV/16"/><zone type="description" xml:id="EZLA7IXD4854DSU16"/></surface>
+                <surface n="17" type="page"><graphic url="/api/pre-publication/470611410/US2016055150W/facsimiles/RFVNTVkvRVpMQTdJWEQ0ODU0RFNV/17"/><zone type="description" xml:id="EZLA7IXD4854DSU17"/></surface>
+                <surface n="18" type="page"><graphic url="/api/pre-publication/470611410/US2016055150W/facsimiles/RFVNTVkvRVpMQTdJWEQ0ODU0RFNV/18"/><zone type="description" xml:id="EZLA7IXD4854DSU18"/></surface>
+                <surface n="19" type="page"><graphic url="/api/pre-publication/470611410/US2016055150W/facsimiles/RFVNTVkvRVpMQTdJWEQ0ODU0RFNV/19"/><zone type="description" xml:id="EZLA7IXD4854DSU19"/></surface>
+                <surface n="20" type="page"><graphic url="/api/pre-publication/470611410/US2016055150W/facsimiles/RFVNTVkvRVpMQTdJWEQ0ODU0RFNV/20"/><zone type="description" xml:id="EZLA7IXD4854DSU20"/></surface>
+                <surface n="21" type="page"><graphic url="/api/pre-publication/470611410/US2016055150W/facsimiles/RFVNTVkvRVpMQTdJWEQ0ODU0RFNV/21"/><zone type="description" xml:id="EZLA7IXD4854DSU21"/></surface>
+                <surface n="22" type="page"><graphic url="/api/pre-publication/470611410/US2016055150W/facsimiles/RFVNTVkvRVpMQTdJWEQ0ODU0RFNV/22"/><zone type="description" xml:id="EZLA7IXD4854DSU22"/></surface>
+                <surface n="23" type="page"><graphic url="/api/pre-publication/470611410/US2016055150W/facsimiles/RFVNTVkvRVpMQTdJWEQ0ODU0RFNV/23"/><zone type="description" xml:id="EZLA7IXD4854DSU23"/></surface>
+                <surface n="24" type="page"><graphic url="/api/pre-publication/470611410/US2016055150W/facsimiles/RFVNTVkvRVpMQTdJWEQ0ODU0RFNV/24"/><zone type="description" xml:id="EZLA7IXD4854DSU24"/></surface>
+                <surface n="25" type="page"><graphic url="/api/pre-publication/470611410/US2016055150W/facsimiles/RFVNTVkvRVpMQTdJWEQ0ODU0RFNV/25"/><zone type="description" xml:id="EZLA7IXD4854DSU25"/></surface>
+            </facsimile>
+            <facsimile xml:id="EZLA7IXD7544DSU">
+                <surface n="1" type="page"><graphic url="/api/pre-publication/470611410/US2016055150W/facsimiles/RFVNTVkvRVpMQTdJWEQ3NTQ0RFNV/1"/><zone type="claims" xml:id="EZLA7IXD7544DSU1"/></surface>
+                <surface n="2" type="page"><graphic url="/api/pre-publication/470611410/US2016055150W/facsimiles/RFVNTVkvRVpMQTdJWEQ3NTQ0RFNV/2"/><zone type="claims" xml:id="EZLA7IXD7544DSU2"/></surface>
+                <surface n="3" type="page"><graphic url="/api/pre-publication/470611410/US2016055150W/facsimiles/RFVNTVkvRVpMQTdJWEQ3NTQ0RFNV/3"/><zone type="claims" xml:id="EZLA7IXD7544DSU3"/></surface>
+                <surface n="4" type="page"><graphic url="/api/pre-publication/470611410/US2016055150W/facsimiles/RFVNTVkvRVpMQTdJWEQ3NTQ0RFNV/4"/><zone type="claims" xml:id="EZLA7IXD7544DSU4"/></surface>
+                <surface n="5" type="page"><graphic url="/api/pre-publication/470611410/US2016055150W/facsimiles/RFVNTVkvRVpMQTdJWEQ3NTQ0RFNV/5"/><zone type="claims" xml:id="EZLA7IXD7544DSU5"/></surface>
+            </facsimile>
+            <facsimile xml:id="EZLA7IXE0111DSU">
+                <surface n="1" type="page"><graphic url="/api/pre-publication/470611410/US2016055150W/facsimiles/RFVNTVkvRVpMQTdJWEUwMTExRFNV/1"/><zone type="drawings" xml:id="EZLA7IXE0111DSU1"/></surface>
+                <surface n="2" type="page"><graphic url="/api/pre-publication/470611410/US2016055150W/facsimiles/RFVNTVkvRVpMQTdJWEUwMTExRFNV/2"/><zone type="drawings" xml:id="EZLA7IXE0111DSU2"/></surface>
+                <surface n="3" type="page"><graphic url="/api/pre-publication/470611410/US2016055150W/facsimiles/RFVNTVkvRVpMQTdJWEUwMTExRFNV/3"/><zone type="drawings" xml:id="EZLA7IXE0111DSU3"/></surface>
+                <surface n="4" type="page"><graphic url="/api/pre-publication/470611410/US2016055150W/facsimiles/RFVNTVkvRVpMQTdJWEUwMTExRFNV/4"/><zone type="drawings" xml:id="EZLA7IXE0111DSU4"/></surface>
+                <surface n="5" type="page"><graphic url="/api/pre-publication/470611410/US2016055150W/facsimiles/RFVNTVkvRVpMQTdJWEUwMTExRFNV/5"/><zone type="drawings" xml:id="EZLA7IXE0111DSU5"/></surface>
+                <surface n="6" type="page"><graphic url="/api/pre-publication/470611410/US2016055150W/facsimiles/RFVNTVkvRVpMQTdJWEUwMTExRFNV/6"/><zone type="drawings" xml:id="EZLA7IXE0111DSU6"/></surface>
+                <surface n="7" type="page"><graphic url="/api/pre-publication/470611410/US2016055150W/facsimiles/RFVNTVkvRVpMQTdJWEUwMTExRFNV/7"/><zone type="drawings" xml:id="EZLA7IXE0111DSU7"/></surface>
+                <surface n="8" type="page"><graphic url="/api/pre-publication/470611410/US2016055150W/facsimiles/RFVNTVkvRVpMQTdJWEUwMTExRFNV/8"/><zone type="drawings" xml:id="EZLA7IXE0111DSU8"/></surface>
+                <surface n="9" type="page"><graphic url="/api/pre-publication/470611410/US2016055150W/facsimiles/RFVNTVkvRVpMQTdJWEUwMTExRFNV/9"/><zone type="drawings" xml:id="EZLA7IXE0111DSU9"/></surface>
+                <surface n="10" type="page"><graphic url="/api/pre-publication/470611410/US2016055150W/facsimiles/RFVNTVkvRVpMQTdJWEUwMTExRFNV/10"/><zone type="drawings" xml:id="EZLA7IXE0111DSU10"/></surface>
+            </facsimile>
+            <facsimile xml:id="EZLA7IXE3279DSU">
+                <surface n="1" type="page"><graphic url="/api/pre-publication/470611410/US2016055150W/facsimiles/RFVNTVkvRVpMQTdJWEUzMjc5RFNV/1"/><zone type="abstract" xml:id="EZLA7IXE3279DSU1"/></surface>
+            </facsimile>
+            <facsimile xml:id="EZMQIVDJ4933DSU">
+                <surface n="1" type="page"><graphic url="/api/pre-publication/470611410/US2016055150W/facsimiles/RFVNTVkvRVpNUUlWREo0OTMzRFNV/1"/><zone type="claims" xml:id="EZMQIVDJ4933DSU1"/></surface>
+                <surface n="2" type="page"><graphic url="/api/pre-publication/470611410/US2016055150W/facsimiles/RFVNTVkvRVpNUUlWREo0OTMzRFNV/2"/><zone type="claims" xml:id="EZMQIVDJ4933DSU2"/></surface>
+                <surface n="3" type="page"><graphic url="/api/pre-publication/470611410/US2016055150W/facsimiles/RFVNTVkvRVpNUUlWREo0OTMzRFNV/3"/><zone type="claims" xml:id="EZMQIVDJ4933DSU3"/></surface>
+                <surface n="4" type="page"><graphic url="/api/pre-publication/470611410/US2016055150W/facsimiles/RFVNTVkvRVpNUUlWREo0OTMzRFNV/4"/><zone type="claims" xml:id="EZMQIVDJ4933DSU4"/></surface>
+                <surface n="5" type="page"><graphic url="/api/pre-publication/470611410/US2016055150W/facsimiles/RFVNTVkvRVpNUUlWREo0OTMzRFNV/5"/><zone type="claims" xml:id="EZMQIVDJ4933DSU5"/></surface>
+            </facsimile>
+            <facsimile xml:id="EZMQIVD91056DSU">
+                <surface n="1" type="page"><graphic url="/api/pre-publication/470611410/US2016055150W/facsimiles/RFVNTVkvRVpNUUlWRDkxMDU2RFNV/1"/><zone type="abstract" xml:id="EZMQIVD91056DSU1"/></surface>
+            </facsimile>
+            <facsimile xml:id="EZMQIVEO5454DSU">
+                <surface n="1" type="page"><graphic url="/api/pre-publication/470611410/US2016055150W/facsimiles/RFVNTVkvRVpNUUlWRU81NDU0RFNV/1"/><zone type="description" xml:id="EZMQIVEO5454DSU1"/></surface>
+                <surface n="2" type="page"><graphic url="/api/pre-publication/470611410/US2016055150W/facsimiles/RFVNTVkvRVpNUUlWRU81NDU0RFNV/2"/><zone type="description" xml:id="EZMQIVEO5454DSU2"/></surface>
+                <surface n="3" type="page"><graphic url="/api/pre-publication/470611410/US2016055150W/facsimiles/RFVNTVkvRVpNUUlWRU81NDU0RFNV/3"/><zone type="description" xml:id="EZMQIVEO5454DSU3"/></surface>
+                <surface n="4" type="page"><graphic url="/api/pre-publication/470611410/US2016055150W/facsimiles/RFVNTVkvRVpNUUlWRU81NDU0RFNV/4"/><zone type="description" xml:id="EZMQIVEO5454DSU4"/></surface>
+                <surface n="5" type="page"><graphic url="/api/pre-publication/470611410/US2016055150W/facsimiles/RFVNTVkvRVpNUUlWRU81NDU0RFNV/5"/><zone type="description" xml:id="EZMQIVEO5454DSU5"/></surface>
+                <surface n="6" type="page"><graphic url="/api/pre-publication/470611410/US2016055150W/facsimiles/RFVNTVkvRVpNUUlWRU81NDU0RFNV/6"/><zone type="description" xml:id="EZMQIVEO5454DSU6"/></surface>
+                <surface n="7" type="page"><graphic url="/api/pre-publication/470611410/US2016055150W/facsimiles/RFVNTVkvRVpNUUlWRU81NDU0RFNV/7"/><zone type="description" xml:id="EZMQIVEO5454DSU7"/></surface>
+                <surface n="8" type="page"><graphic url="/api/pre-publication/470611410/US2016055150W/facsimiles/RFVNTVkvRVpNUUlWRU81NDU0RFNV/8"/><zone type="description" xml:id="EZMQIVEO5454DSU8"/></surface>
+                <surface n="9" type="page"><graphic url="/api/pre-publication/470611410/US2016055150W/facsimiles/RFVNTVkvRVpNUUlWRU81NDU0RFNV/9"/><zone type="description" xml:id="EZMQIVEO5454DSU9"/></surface>
+                <surface n="10" type="page"><graphic url="/api/pre-publication/470611410/US2016055150W/facsimiles/RFVNTVkvRVpNUUlWRU81NDU0RFNV/10"/><zone type="description" xml:id="EZMQIVEO5454DSU10"/></surface>
+                <surface n="11" type="page"><graphic url="/api/pre-publication/470611410/US2016055150W/facsimiles/RFVNTVkvRVpNUUlWRU81NDU0RFNV/11"/><zone type="description" xml:id="EZMQIVEO5454DSU11"/></surface>
+                <surface n="12" type="page"><graphic url="/api/pre-publication/470611410/US2016055150W/facsimiles/RFVNTVkvRVpNUUlWRU81NDU0RFNV/12"/><zone type="description" xml:id="EZMQIVEO5454DSU12"/></surface>
+                <surface n="13" type="page"><graphic url="/api/pre-publication/470611410/US2016055150W/facsimiles/RFVNTVkvRVpNUUlWRU81NDU0RFNV/13"/><zone type="description" xml:id="EZMQIVEO5454DSU13"/></surface>
+                <surface n="14" type="page"><graphic url="/api/pre-publication/470611410/US2016055150W/facsimiles/RFVNTVkvRVpNUUlWRU81NDU0RFNV/14"/><zone type="description" xml:id="EZMQIVEO5454DSU14"/></surface>
+                <surface n="15" type="page"><graphic url="/api/pre-publication/470611410/US2016055150W/facsimiles/RFVNTVkvRVpNUUlWRU81NDU0RFNV/15"/><zone type="description" xml:id="EZMQIVEO5454DSU15"/></surface>
+                <surface n="16" type="page"><graphic url="/api/pre-publication/470611410/US2016055150W/facsimiles/RFVNTVkvRVpNUUlWRU81NDU0RFNV/16"/><zone type="description" xml:id="EZMQIVEO5454DSU16"/></surface>
+                <surface n="17" type="page"><graphic url="/api/pre-publication/470611410/US2016055150W/facsimiles/RFVNTVkvRVpNUUlWRU81NDU0RFNV/17"/><zone type="description" xml:id="EZMQIVEO5454DSU17"/></surface>
+                <surface n="18" type="page"><graphic url="/api/pre-publication/470611410/US2016055150W/facsimiles/RFVNTVkvRVpNUUlWRU81NDU0RFNV/18"/><zone type="description" xml:id="EZMQIVEO5454DSU18"/></surface>
+                <surface n="19" type="page"><graphic url="/api/pre-publication/470611410/US2016055150W/facsimiles/RFVNTVkvRVpNUUlWRU81NDU0RFNV/19"/><zone type="description" xml:id="EZMQIVEO5454DSU19"/></surface>
+                <surface n="20" type="page"><graphic url="/api/pre-publication/470611410/US2016055150W/facsimiles/RFVNTVkvRVpNUUlWRU81NDU0RFNV/20"/><zone type="description" xml:id="EZMQIVEO5454DSU20"/></surface>
+                <surface n="21" type="page"><graphic url="/api/pre-publication/470611410/US2016055150W/facsimiles/RFVNTVkvRVpNUUlWRU81NDU0RFNV/21"/><zone type="description" xml:id="EZMQIVEO5454DSU21"/></surface>
+                <surface n="22" type="page"><graphic url="/api/pre-publication/470611410/US2016055150W/facsimiles/RFVNTVkvRVpNUUlWRU81NDU0RFNV/22"/><zone type="description" xml:id="EZMQIVEO5454DSU22"/></surface>
+                <surface n="23" type="page"><graphic url="/api/pre-publication/470611410/US2016055150W/facsimiles/RFVNTVkvRVpNUUlWRU81NDU0RFNV/23"/><zone type="description" xml:id="EZMQIVEO5454DSU23"/></surface>
+                <surface n="24" type="page"><graphic url="/api/pre-publication/470611410/US2016055150W/facsimiles/RFVNTVkvRVpNUUlWRU81NDU0RFNV/24"/><zone type="description" xml:id="EZMQIVEO5454DSU24"/></surface>
+            </facsimile>
+            <text>
+                <front>
+                    <div change="9254195a1a48e8c2df695246aae40384" facs="./EZLA7IXE3279DSU" type="abstract" xml:id="4a15a72d2e9bf54e1e9b708b1075a955" xml:lang="en">
+                        <p n="0001" xml:id="_e403840002">An instrument handle and replaceable tip may include a reusable instrument handle and a single-use instrument tip. The instrument tip may include an outer base, a nosecone, a pressure mechanism, a hypodermic tube, a
+                            blank, and a fixation mechanism. The instrument handle may include an actuation structure, a fixation mechanism receptacle, and an instrument tip housing. The fixation mechanism and the fixation mechanism receptacle may be configured to temporarily
+                            fix the instrument tip in the instrument tip housing. A compression of the actuation structure may be configured to actuate the hypodermic tube relative to the blank. The instrument tip may be removed from the instrument tip housing after use by
+                            removing the fixation mechanism from the fixation mechanism receptacle.</p>
+                    </div>
+                    <div change="9254195a1a48e8c2df695246aae40384" facs="./EZMQIVD91056DSU" type="abstract" xml:id="457ef983822a0de5344af4b9b7115c8a" xml:lang="en">
+                        <p n="0001" xml:id="_e403840002">An instrument handle and replaceable tip may include a reusable instrument handle and a single-use instrument tip. The instrument tip may include an outer base, a nosecone, a pressure mechanism, a hypodermic tube, a
+                            blank, and a fixation mechanism. The instrument handle may include an actuation structure, a fixation mechanism receptacle, and an instrument tip housing. The fixation mechanism and the fixation mechanism receptacle may be configured to temporarily
+                            fix the instrument tip in the instrument tip housing. A compression of the actuation structure may be configured to actuate the hypodermic tube relative to the blank. The instrument tip may be removed from the instrument tip housing after use by
+                            removing the fixation mechanism from the fixation mechanism receptacle.</p>
+                    </div>
+                </front>
+                <group>
+                    <text change="786b7efe9c4744567979ae554ba8e432">
+                        <body>
+                            <div facs="/api/pre-publication/470611410/US2016055150W/facsimiles/RFVNTVkvRVpMQTdJWEQ3NTQ0RFNV" type="claims" xml:id="bb57f88785132cf57fac63fcac0f7ace" xml:lang="en">
+                                <div n="0001" type="claim" xml:id="_a8e4320003">
+                                    <p xml:id="_a8e4320004">1. An instrument comprising:<p xml:id="_a8e4320005">a handle having a handle distal end and a handle proximal end;</p>
+                                        <p xml:id="_a8e4320006">an actuation structure of the handle having an actuation structure distal end and an actuation structure proximal end;</p>
+                                        <p xml:id="_a8e4320007">a plurality of actuation arms of the actuation structure;</p>
+                                        <p xml:id="_a8e4320008">a fixation mechanism proximal receptacle having a fixation mechanism proximal receptacle distal end, a fixation mechanism proximal receptacle proximal end, and a fixation mechanism proximal housing, the fixation mechanism
+                                            proximal receptacle disposed in the actuation structure;</p>
+                                        <p xml:id="_a8e4320009">an instrument tip housing of the actuation structure;</p>
+                                        <p xml:id="_a8e4320010">an instrument tip having an instrument tip distal end and an instrument tip proximal end;</p>
+                                        <p xml:id="_a8e4320011">a transitory element of the instrument tip having a transitory element distal end and a transitory element proximal end;</p>
+                                        <p xml:id="_a8e4320012">a hypodermic tube of the instrument tip having a hypodermic tube distal end and a hypodermic tube proximal end wherein the hypodermic tube proximal end is disposed in the transitory element;</p>
+                                        <p xml:id="_a8e4320013">a blank of the instrument tip having a blank distal end and a blank proximal end wherein the blank is disposed in the hypodermic tube and the transitory element; and</p>
+                                        <p xml:id="_a8e4320014">a fixation mechanism disposed in the transitory element and the fixation mechanism proximal housing wherein the fixation mechanism and the fixation mechanism proximal receptacle are configured to temporarily fix the instrument
+                                            tip in the instrument tip housing.</p>
+                                    </p>
+                                </div>
+                                <div n="0002" type="claim" xml:id="_a8e4320015">
+                                    <p xml:id="_a8e4320016">2. The instrument of Claim 1 further comprising:<p xml:id="_a8e4320017">a nosecone of the transitory element having a nosecone distal end and a nosecone proximal end; and</p>
+
+                                        <p xml:id="_a8e4320018">an outer base of the transitory element having an outer base distal end and an outer base proximal end wherein the outer base distal end is disposed between the nosecone distal end and the nosecone proximal end.</p>
+                                    </p>
+                                </div>
+                                <div n="0003" type="claim" xml:id="_a8e4320019">
+                                    <p xml:id="_a8e4320020">3. The instrument of Claim 2 further comprising:<p xml:id="_a8e4320021">a pressure mechanism of the transitory element having a pressure mechanism distal end and a pressure mechanism proximal end wherein the pressure mechanism is configured to provide a force.</p>
+                                    </p>
+                                </div>
+                                <div n="0004" type="claim" xml:id="_a8e4320022">
+                                    <p xml:id="_a8e4320023">4. The instrument of Claim 3 further comprising:<p xml:id="_a8e4320024">an outer base aperture of the outer base; and</p>
+                                        <p xml:id="_a8e4320025">a lock housing of the outer base aperture.</p>
+                                    </p>
+                                </div>
+                                <div n="0005" type="claim" xml:id="_a8e4320026">
+                                    <p xml:id="_a8e4320027">5. The instrument of Claim 4 further comprising:<p xml:id="_a8e4320028">a lock having a lock superior end, a lock inferior end, and a blank housing wherein the lock is disposed in the lock housing and a portion of the blank is disposed in the blank housing.</p>
+                                    </p>
+                                </div>
+                                <div n="0006" type="claim" xml:id="_a8e4320029">
+                                    <p xml:id="_a8e4320030">6. The instrument of Claim 5 wherein a compression of the actuation structure is configured to extend the nosecone relative to the outer base.</p>
+                                </div>
+                                <div n="0007" type="claim" xml:id="_a8e4320031">
+                                    <p xml:id="_a8e4320032">7. The instrument of Claim 6 wherein the compression of the actuation structure is configured to extend the hypodermic tube relative to the blank.</p>
+                                </div>
+                                <div n="0008" type="claim" xml:id="_a8e4320033">
+                                    <p xml:id="_a8e4320034">8. The instrument of Claim 5 wherein a decompression of the actuation structure is configured to retract the nosecone relative to the outer base.</p>
+                                </div>
+                                <div n="0009" type="claim" xml:id="_a8e4320035">
+                                    <p xml:id="_a8e4320036">9. The instrument of Claim 8 wherein the decompression of the actuation structure is configured to retract the hypodermic tube relative to the blank.</p>
+                                </div>
+
+                                <div n="0010" type="claim" xml:id="_a8e4320037">
+                                    <p xml:id="_a8e4320038">10. The instrument of Claim 1 wherein the transitory element is manufactured from a material configured to deform if the transitory element is sterilized in a medical autoclave.</p>
+                                </div>
+                                <div n="0011" type="claim" xml:id="_a8e4320039">
+                                    <p xml:id="_a8e4320040">11. The instrument of Claim 10 wherein the material has a melting point in a range of 158.0 to 212.0 degrees Fahrenheit.</p>
+                                </div>
+                                <div n="0012" type="claim" xml:id="_a8e4320041">
+                                    <p xml:id="_a8e4320042">12. The instrument of Claim 10 wherein the material has a melting point of less than 140.0 degrees Fahrenheit.</p>
+                                </div>
+                                <div n="0013" type="claim" xml:id="_a8e4320043">
+                                    <p xml:id="_a8e4320044">13. The instrument of Claim 1 wherein the transitory element is manufactured from a material configured to retain ethylene oxide.</p>
+                                </div>
+                                <div n="0014" type="claim" xml:id="_a8e4320045">
+                                    <p xml:id="_a8e4320046">14. The instrument of Claim 13 wherein the material has a degree of crystallinity greater than 60.0 percent.</p>
+                                </div>
+                                <div n="0015" type="claim" xml:id="_a8e4320047">
+                                    <p xml:id="_a8e4320048">15. The instrument of Claim 13 wherein the material is configured to retain less than 4.0 milligrams of ethylene oxide after a first sterilization by ethylene oxide and the material is configured to retain more than 4.0
+                                        milligrams of ethylene oxide after a second sterilization by ethylene oxide.</p>
+                                </div>
+                                <div n="0016" type="claim" xml:id="_a8e4320049">
+                                    <p xml:id="_a8e4320050">16. An instrument comprising:<p xml:id="_a8e4320051">a handle having a handle distal end and a handle proximal end;</p>
+                                        <p xml:id="_a8e4320052">an actuation structure of the handle having an actuation structure distal end and an actuation structure proximal end;</p>
+                                        <p xml:id="_a8e4320053">a plurality of actuation arms of the actuation structure;</p>
+                                        <p xml:id="_a8e4320054">a fixation mechanism proximal receptacle having a fixation mechanism proximal receptacle distal end, a fixation mechanism proximal receptacle proximal end, and a fixation mechanism proximal housing, the fixation mechanism
+                                            proximal receptacle disposed in the actuation structure;</p>
+                                        <p xml:id="_a8e4320055">an instrument tip housing of the actuation structure;</p>
+
+                                        <p xml:id="_a8e4320056">an instrument tip having an instrument tip distal end and an instrument tip proximal end;</p>
+                                        <p xml:id="_a8e4320057">a transitory element of the instrument tip having a transitory element distal end and a transitory element proximal end wherein the transitory element is manufactured from a material configured to deform if the transitory
+                                            element is sterilized in a medical autoclave;</p>
+                                        <p xml:id="_a8e4320058">a hypodermic tube of the instrument tip having a hypodermic tube distal end and a hypodermic tube proximal end wherein the hypodermic tube proximal end is disposed in the transitory element;</p>
+                                        <p xml:id="_a8e4320059">a blank of the instrument tip having a blank distal end and a blank proximal end wherein the blank is disposed in the hypodermic tube and the transitory element; and</p>
+                                        <p xml:id="_a8e4320060">a fixation mechanism disposed in the transitory element and the fixation mechanism proximal housing wherein the fixation mechanism and the fixation mechanism proximal receptacle are configured to temporarily fix the instrument
+                                            tip in the instrument tip housing.</p>
+                                    </p>
+                                </div>
+                                <div n="0017" type="claim" xml:id="_a8e4320061">
+                                    <p xml:id="_a8e4320062">17. The instrument of Claim 16 wherein the material has a melting point of less than 140.0 degrees Fahrenheit.</p>
+                                </div>
+                                <div n="0018" type="claim" xml:id="_a8e4320063">
+                                    <p xml:id="_a8e4320064">18. The instrument of Claim 16 wherein the transitory element is manufactured from a material configured to retain ethylene oxide.</p>
+                                </div>
+                                <div n="0019" type="claim" xml:id="_a8e4320065">
+                                    <p xml:id="_a8e4320066">19. An instrument comprising:<p xml:id="_a8e4320067">a handle having a handle distal end and a handle proximal end;</p>
+                                        <p xml:id="_a8e4320068">an actuation structure of the handle having an actuation structure distal end and an actuation structure proximal end;</p>
+                                        <p xml:id="_a8e4320069">a plurality of actuation arms of the actuation structure;</p>
+                                        <p xml:id="_a8e4320070">a fixation mechanism proximal receptacle having a fixation mechanism proximal receptacle distal end, a fixation mechanism proximal receptacle proximal end, and a fixation mechanism proximal housing, the fixation mechanism
+                                            proximal receptacle disposed in the actuation structure;</p>
+
+                                        <p xml:id="_a8e4320071">an instrument tip housing of the actuation structure;</p>
+                                        <p xml:id="_a8e4320072">an instrument tip having an instrument tip distal end and an instrument tip proximal end;</p>
+                                        <p xml:id="_a8e4320073">a transitory element of the instrument tip having a transitory element distal end and a transitory element proximal end wherein the transitory element is manufactured from a material configured to deform if the transitory
+                                            element is sterilized in a medical autoclave and configured to retain ethylene oxide;</p>
+                                        <p xml:id="_a8e4320074">a hypodermic tube of the instrument tip having a hypodermic tube distal end and a hypodermic tube proximal end wherein the hypodermic tube proximal end is disposed in the transitory element;</p>
+                                        <p xml:id="_a8e4320075">a blank of the instrument tip having a blank distal end and a blank proximal end wherein the blank is disposed in the hypodermic tube and the transitory element; and</p>
+                                        <p xml:id="_a8e4320076">a fixation mechanism disposed in the transitory element and the fixation mechanism proximal housing wherein the fixation mechanism and the fixation mechanism proximal receptacle are configured to temporarily fix the instrument
+                                            tip in the instrument tip housing.</p>
+                                    </p>
+                                </div>
+                                <div n="0020" type="claim" xml:id="_a8e4320077">
+                                    <p xml:id="_a8e4320078">20. The instrument of Claim 19 wherein the material has a melting point of less than 140.0 degrees Fahrenheit.</p>
+                                </div>
+                            </div>
+                        </body>
+                    </text>
+                    <text change="786b7efe9c4744567979ae554ba8e432">
+                        <body>
+                            <div facs="/api/pre-publication/470611410/US2016055150W/facsimiles/RFVNTVkvRVpNUUlWREo0OTMzRFNV" type="claims" xml:id="3e6f08558d41878d180df43a94e9c8b3" xml:lang="en">
+                                <div n="0001" type="claim" xml:id="_a8e4320003">
+                                    <p xml:id="_a8e4320004">1. An instrument comprising:<p xml:id="_a8e4320005">a handle having a handle distal end and a handle proximal end;</p>
+                                        <p xml:id="_a8e4320006">an actuation structure of the handle having an actuation structure distal end and an actuation structure proximal end;</p>
+                                        <p xml:id="_a8e4320007">a plurality of actuation arms of the actuation structure;</p>
+                                        <p xml:id="_a8e4320008">a fixation mechanism proximal receptacle having a fixation mechanism proximal receptacle distal end, a fixation mechanism proximal receptacle proximal end, and a fixation mechanism proximal housing, the fixation mechanism
+                                            proximal receptacle disposed in the actuation structure;</p>
+                                        <p xml:id="_a8e4320009">an instrument tip housing of the actuation structure;</p>
+                                        <p xml:id="_a8e4320010">an instrument tip having an instrument tip distal end and an instrument tip proximal end;</p>
+                                        <p xml:id="_a8e4320011">a transitory element of the instrument tip having a transitory element distal end and a transitory element proximal end;</p>
+                                        <p xml:id="_a8e4320012">a hypodermic tube of the instrument tip having a hypodermic tube distal end and a hypodermic tube proximal end wherein the hypodermic tube proximal end is disposed in the transitory element;</p>
+                                        <p xml:id="_a8e4320013">a blank of the instrument tip having a blank distal end and a blank proximal end wherein the blank is disposed in the hypodermic tube and the transitory element; and</p>
+                                        <p xml:id="_a8e4320014">a fixation mechanism disposed in the transitory element and the fixation mechanism proximal housing wherein the fixation mechanism and the fixation mechanism proximal receptacle are configured to temporarily fix the instrument
+                                            tip in the instrument tip housing.</p>
+                                    </p>
+                                </div>
+                                <div n="0002" type="claim" xml:id="_a8e4320015">
+                                    <p xml:id="_a8e4320016">2. The instrument of Claim 1 further comprising:<p xml:id="_a8e4320017">a nosecone of the transitory element having a nosecone distal end and a nosecone proximal end; and</p>
+
+                                        <p xml:id="_a8e4320018">an outer base of the transitory element having an outer base distal end and an outer base proximal end wherein the outer base distal end is disposed between the nosecone distal end and the nosecone proximal end.</p>
+                                    </p>
+                                </div>
+                                <div n="0003" type="claim" xml:id="_a8e4320019">
+                                    <p xml:id="_a8e4320020">3. The instrument of Claim 2 further comprising:<p xml:id="_a8e4320021">a pressure mechanism of the transitory element having a pressure mechanism distal end and a pressure mechanism proximal end wherein the pressure mechanism is configured to provide a force.</p>
+                                    </p>
+                                </div>
+                                <div n="0004" type="claim" xml:id="_a8e4320022">
+                                    <p xml:id="_a8e4320023">4. The instrument of Claim 3 further comprising:<p xml:id="_a8e4320024">an outer base aperture of the outer base; and</p>
+                                        <p xml:id="_a8e4320025">a lock housing of the outer base aperture.</p>
+                                    </p>
+                                </div>
+                                <div n="0005" type="claim" xml:id="_a8e4320026">
+                                    <p xml:id="_a8e4320027">5. The instrument of Claim 4 further comprising:<p xml:id="_a8e4320028">a lock having a lock superior end, a lock inferior end, and a blank housing wherein the lock is disposed in the lock housing and a portion of the blank is disposed in the blank housing.</p>
+                                    </p>
+                                </div>
+                                <div n="0006" type="claim" xml:id="_a8e4320029">
+                                    <p xml:id="_a8e4320030">6. The instrument of Claim 5 wherein a compression of the actuation structure is configured to extend the nosecone relative to the outer base.</p>
+                                </div>
+                                <div n="0007" type="claim" xml:id="_a8e4320031">
+                                    <p xml:id="_a8e4320032">7. The instrument of Claim 6 wherein the compression of the actuation structure is configured to extend the hypodermic tube relative to the blank.</p>
+                                </div>
+                                <div n="0008" type="claim" xml:id="_a8e4320033">
+                                    <p xml:id="_a8e4320034">8. The instrument of Claim 5 wherein a decompression of the actuation structure is configured to retract the nosecone relative to the outer base.</p>
+                                </div>
+                                <div n="0009" type="claim" xml:id="_a8e4320035">
+                                    <p xml:id="_a8e4320036">9. The instrument of Claim 8 wherein the decompression of the actuation structure is configured to retract the hypodermic tube relative to the blank.</p>
+                                </div>
+
+                                <div n="0010" type="claim" xml:id="_a8e4320037">
+                                    <p xml:id="_a8e4320038">10. The instrument of Claim 1 wherein the transitory element is manufactured from a material configured to deform if the transitory element is sterilized in a medical autoclave.</p>
+                                </div>
+                                <div n="0011" type="claim" xml:id="_a8e4320039">
+                                    <p xml:id="_a8e4320040">11. The instrument of Claim 10 wherein the material has a melting point in a range of 158.0 to 212.0 degrees Fahrenheit.</p>
+                                </div>
+                                <div n="0012" type="claim" xml:id="_a8e4320041">
+                                    <p xml:id="_a8e4320042">12. The instrument of Claim 10 wherein the material has a melting point of less than 140.0 degrees Fahrenheit.</p>
+                                </div>
+                                <div n="0013" type="claim" xml:id="_a8e4320043">
+                                    <p xml:id="_a8e4320044">13. The instrument of Claim 1 wherein the transitory element is manufactured from a material configured to retain ethylene oxide.</p>
+                                </div>
+                                <div n="0014" type="claim" xml:id="_a8e4320045">
+                                    <p xml:id="_a8e4320046">14. The instrument of Claim 13 wherein the material has a degree of crystallinity greater than 60.0 percent.</p>
+                                </div>
+                                <div n="0015" type="claim" xml:id="_a8e4320047">
+                                    <p xml:id="_a8e4320048">15. The instrument of Claim 13 wherein the material is configured to retain less than 4.0 milligrams of ethylene oxide after a first sterilization by ethylene oxide and the material is configured to retain more than 4.0
+                                        milligrams of ethylene oxide after a second sterilization by ethylene oxide.</p>
+                                </div>
+                                <div n="0016" type="claim" xml:id="_a8e4320049">
+                                    <p xml:id="_a8e4320050">16. An instrument comprising:<p xml:id="_a8e4320051">a handle having a handle distal end and a handle proximal end;</p>
+                                        <p xml:id="_a8e4320052">an actuation structure of the handle having an actuation structure distal end and an actuation structure proximal end;</p>
+                                        <p xml:id="_a8e4320053">a plurality of actuation arms of the actuation structure;</p>
+                                        <p xml:id="_a8e4320054">a fixation mechanism proximal receptacle having a fixation mechanism proximal receptacle distal end, a fixation mechanism proximal receptacle proximal end, and a fixation mechanism proximal housing, the fixation mechanism
+                                            proximal receptacle disposed in the actuation structure;</p>
+                                        <p xml:id="_a8e4320055">an instrument tip housing of the actuation structure;</p>
+
+                                        <p xml:id="_a8e4320056">an instrument tip having an instrument tip distal end and an instrument tip proximal end;</p>
+                                        <p xml:id="_a8e4320057">a transitory element of the instrument tip having a transitory element distal end and a transitory element proximal end wherein the transitory element is manufactured from a material configured to deform if the transitory
+                                            element is sterilized in a medical autoclave;</p>
+                                        <p xml:id="_a8e4320058">a hypodermic tube of the instrument tip having a hypodermic tube distal end and a hypodermic tube proximal end wherein the hypodermic tube proximal end is disposed in the transitory element;</p>
+                                        <p xml:id="_a8e4320059">a blank of the instrument tip having a blank distal end and a blank proximal end wherein the blank is disposed in the hypodermic tube and the transitory element; and</p>
+                                        <p xml:id="_a8e4320060">a fixation mechanism disposed in the transitory element and the fixation mechanism proximal housing wherein the fixation mechanism and the fixation mechanism proximal receptacle are configured to temporarily fix the instrument
+                                            tip in the instrument tip housing.</p>
+                                    </p>
+                                </div>
+                                <div n="0017" type="claim" xml:id="_a8e4320061">
+                                    <p xml:id="_a8e4320062">17. The instrument of Claim 16 wherein the material has a melting point of less than 140.0 degrees Fahrenheit.</p>
+                                </div>
+                                <div n="0018" type="claim" xml:id="_a8e4320063">
+                                    <p xml:id="_a8e4320064">18. The instrument of Claim 16 wherein the transitory element is manufactured from a material configured to retain ethylene oxide.</p>
+                                </div>
+                                <div n="0019" type="claim" xml:id="_a8e4320065">
+                                    <p xml:id="_a8e4320066">19. An instrument comprising:<p xml:id="_a8e4320067">a handle having a handle distal end and a handle proximal end;</p>
+                                        <p xml:id="_a8e4320068">an actuation structure of the handle having an actuation structure distal end and an actuation structure proximal end;</p>
+                                        <p xml:id="_a8e4320069">a plurality of actuation arms of the actuation structure;</p>
+                                        <p xml:id="_a8e4320070">a fixation mechanism proximal receptacle having a fixation mechanism proximal receptacle distal end, a fixation mechanism proximal receptacle proximal end, and a fixation mechanism proximal housing, the fixation mechanism
+                                            proximal receptacle disposed in the actuation structure;</p>
+
+                                        <p xml:id="_a8e4320071">an instrument tip housing of the actuation structure;</p>
+                                        <p xml:id="_a8e4320072">an instrument tip having an instrument tip distal end and an instrument tip proximal end;</p>
+                                        <p xml:id="_a8e4320073">a transitory element of the instrument tip having a transitory element distal end and a transitory element proximal end wherein the transitory element is manufactured from a material configured to deform if the transitory
+                                            element is sterilized in a medical autoclave and configured to retain ethylene oxide;</p>
+                                        <p xml:id="_a8e4320074">a hypodermic tube of the instrument tip having a hypodermic tube distal end and a hypodermic tube proximal end wherein the hypodermic tube proximal end is disposed in the transitory element;</p>
+                                        <p xml:id="_a8e4320075">a blank of the instrument tip having a blank distal end and a blank proximal end wherein the blank is disposed in the hypodermic tube and the transitory element; and</p>
+                                        <p xml:id="_a8e4320076">a fixation mechanism disposed in the transitory element and the fixation mechanism proximal housing wherein the fixation mechanism and the fixation mechanism proximal receptacle are configured to temporarily fix the instrument
+                                            tip in the instrument tip housing.</p>
+                                    </p>
+                                </div>
+                                <div n="0020" type="claim" xml:id="_a8e4320077">
+                                    <p xml:id="_a8e4320078">20. The instrument of Claim 19 wherein the material has a melting point of less than 140.0 degrees Fahrenheit.</p>
+                                </div>
+                            </div>
+                        </body>
+                    </text>
+                    <text change="fd9b9913f5bd4d9f1ee3c5632f78eb8c">
+                        <body>
+                            <div facs="/api/pre-publication/470611410/US2016055150W/facsimiles/RFVNTVkvRVpMQTdJWEQ0ODU0RFNV" type="description" xml:id="4a6b2dab2f5f86056479cba0c678d2d5" xml:lang="en">
+                                <title desc="invention-title">
+                                    <hi rend="bold">INSTRUMENT v.1</hi>
+                                    HANDLE AND REPLACEABLE TIP</title>
+                                <head xml:id="_78eb8c0005">CROSS-REFERENCE TO RELATED APPLICATIONS</head>
+                                <p n="0001" xml:id="_78eb8c0006">This Application claims the benefit of U.S. Provisional Application No. 62/240,220, filed October 12, 2015.</p>
+                                <head xml:id="_78eb8c0007">FIELD OF THE INVENTION</head>
+                                <p n="0002" xml:id="_78eb8c0008">The present disclosure relates to a medical device, and, more particularly, to a surgical instrument.</p>
+                                <head xml:id="_78eb8c0009">BACKGROUND OF THE INVENTION</head>
+                                <p n="0003" xml:id="_78eb8c0010">A variety of surgical procedures are performed through a very small surgical incision in a particular tissue. Reducing the size of a surgical incision during a surgical procedure generally reduces the amount of trauma
+                                    to the surgical site and generally facilitates faster wound healing. In order to perform surgical procedures through a very small surgical incision, a surgeon may require specialized surgical instruments configured to fit through the very small
+                                    surgical incision and provide the surgeon with a surgical utility. Sometimes a surgeon may require a surgical utility that may not be easily controlled close to a particular surgical site, e.g., closing forceps jaws inside of an eye. It is generally
+                                    desirable for a surgeon to be able to control such a surgical utility with a minimal amount of effort. For example, if a surgical utility is controlled by a lever or a switch on an instrument handle, a surgeon may need to adjust an orientation of a
+                                    surgical instrument in order to actuate the lever or the switch. Additionally, if a surgical utility control mechanism requires a surgeon to apply a significant amount of force to a portion of a surgical instrument, then it may be difficult for the
+                                    surgeon to manipulate the surgical utility control mechanism without unintentionally moving a portion of the surgical instrument.</p>
+
+                                <p n="0004" xml:id="_78eb8c0011">Ophthalmic surgical instruments are generally categorized as either reusable or single-use. A single-use instrument is typically sterilized prior to sale and is shipped to a surgery center sterile and ready for use in
+                                    a surgical procedure. A reusable instrument is typically shipped to a surgery center non-sterile and is sterilized by the surgery center between uses in surgery. Reusable instruments are generally lower in overall cost for a surgery center compared
+                                    to single-use instruments. Single-use instruments offer a surgery center greater convenience compared to reusable instruments. Accordingly, there is a need for an instrument that offers a surgery center the convenience of a single-use instrument at
+                                    the overall lower cost of a reusable instrument.</p>
+                                <head xml:id="_78eb8c0012">BRIEF SUMMARY OF THE INVENTION</head>
+                                <p n="0005" xml:id="_78eb8c0013">The present disclosure provides an instrument handle and replaceable tip. In one or more embodiments, an instrument handle and replaceable tip may comprise a reusable instrument handle and a single-use instrument tip.
+                                    Illustratively, the instrument tip may comprise an outer base, a nosecone, a pressure mechanism, a hypodermic tube, a blank, and a fixation mechanism. In one or more embodiments, the instrument handle may comprise an actuation structure, a fixation
+                                    mechanism receptacle, and an instrument tip housing. Illustratively, the fixation mechanism and the fixation mechanism receptacle may be configured to temporarily fix the instrument tip in the instrument tip housing. In one or more embodiments, a
+                                    compression of the actuation structure may be configured to actuate the hypodermic tube relative to the blank. Illustratively, the instrument tip may be removed from the instrument tip housing after use by removing the fixation mechanism from the
+                                    fixation mechanism receptacle.</p>
+
+                                <head xml:id="_78eb8c0014">
+                                    <hi rend="bold">BRIEF</hi>
+                                    DESCRIPTION OF THE DRAWINGS</head>
+                                <p n="0006" xml:id="_78eb8c0016">The above and further advantages of the present invention may be better understood by referring to the following description in conjunction with the accompanying drawings in which like reference numerals indicate
+                                    identical or functionally similar elements:<list type="bulleted" xml:id="_78eb8c0017">
+                                        <item>FIGs. 1A, 1B, and 1C are schematic diagrams illustrating a transitory element;</item>
+                                        <item>FIG. 2 is a schematic diagram illustrating an exploded view of an instrument tip assembly;</item>
+                                        <item>FIGs. 3A and 3B are schematic diagrams illustrating an assembled instrument tip;</item>
+                                        <item>FIG. 4 is a schematic diagram illustrating an exploded view of an instrument handle assembly;</item>
+                                        <item>FIGs. 5A and 5B are schematic diagrams illustrating an assembled instrument handle;</item>
+                                        <item>FIG. 6 is a schematic diagram illustrating an exploded view of an instrument assembly;</item>
+                                        <item>FIGs. 7A and 7B are schematic diagrams illustrating an instrument with open jaws;</item>
+                                        <item>FIGs. 8A and 8B are schematic diagrams illustrating an instrument with partially closed jaws;</item>
+                                        <item>FIGs. 9A and 9B are schematic diagrams illustrating an instrument with closed jaws.</item>
+                                    </list>
+                                </p>
+                                <head xml:id="_78eb8c0027">DETAILED DESCRIPTION OF AN ILLUSTRATIVE</head>
+                                <head xml:id="_78eb8c0028">EMBODIMENT</head>
+                                <p n="0007" xml:id="_78eb8c0029">FIGs. 1A, 1B, and 1C are schematic diagrams illustrating a transitory element 100. FIG. 1A illustrates an isometric view of a transitory element 100. FIG. 1B illustrates a superior view of a transitory element 100.
+                                    FIG. 1C illustrates a cross-sectional view in a sagittal plane of a transitory element 100. Illustratively, a transitory element 100 may comprise a transitory element distal end 101 and a transitory element proximal end 102. In one or more
+                                    embodiments, transitory element 100 may comprise an outer base 105, a nosecone 110, and a fixation mechanism distal receptacle 120. Illustratively, outer base 105 may comprise an outer base distal end 106 and an outer base proximal end 107. In one or
+                                    more embodiments, outer base 105 may comprise an outer base aperture 108. Illustratively, nosecone 110 may comprise a nosecone distal end 111 and a nosecone proximal end 112. In one or more embodiments, nosecone 110 may comprise a hypodermic tube
+                                    housing 113 and a plurality of radial projections 115. Illustratively, each radial projection 115 of the plurality of radial projections 115 may comprise a radial projection distal end 116 and a radial projection proximal end 117. In one or more
+                                    embodiments, each radial projection 115 of the plurality of radial projections 115 may be separated from at least one radial projection 115 of the plurality of radial projections 115 by an aperture. Illustratively, nosecone 110 may comprise a
+                                    plurality of apertures. In one or more embodiments, a portion of outer base 105 may be disposed in a portion of nosecone 110, e.g., outer base distal end 106 may be disposed in nosecone 110. Illustratively, a portion of outer base 105 may be disposed
+                                    in a portion of nosecone 110 wherein outer base distal end 106 may be disposed between nosecone distal end 111 and nosecone proximal end 112, e.g., a portion of outer base 105 may be disposed in a portion of nosecone 110 wherein nosecone proximal end
+                                    112 may be disposed between outer base distal end 106 and outer base proximal end 107.</p>
+                                <p n="0008" xml:id="_78eb8c0030">In one or more embodiments, transitory element 100 may comprise a fixation mechanism distal housing 121, an inner lumen 122, an inner bore 123, a lock housing 125, and a pressure mechanism 130. Illustratively,
+                                    pressure mechanism 130 may comprise a pressure mechanism distal end 131 and a pressure mechanism proximal end 132. In one or more embodiments, pressure mechanism 130 may be disposed between inner lumen 122 and hypodermic tube housing 113, e.g.,
+                                    pressure mechanism 130 may be disposed between inner lumen 122 and hypodermic tube housing 113 wherein pressure mechanism distal end 131 is adjacent to a proximal end of hypodermic tube housing 113 and pressure mechanism proximal end 132 is adjacent
+                                    to a distal end of inner lumen 122. Illustratively, inner bore 123 may be disposed in pressure mechanism 130. In one or more embodiments, a portion of pressure mechanism 130 may be disposed in the plurality of radial projections 115. In one or more
+                                    embodiments, pressure mechanism 130 may be configured to provide a force. Illustratively, pressure mechanism 130 may be config ured to provide a constant or uniform force. In one or more embodiments, pressure mechanism 130 may be configured to
+                                    provide a variable force. Illustratively, pressure mechanism 130 may comprise a spring or a coil. In one or more embodiments, pressure mechanism 130 may comprise a spring having a spring constant in a range of 5.25 to 11.0 pounds per inch, e.g.,
+                                    pressure mechanism 130 may comprise a spring having a spring constant of 7.5 pounds per inch. Illustratively, pressure mechanism 130 may comprise a spring having a spring constant less than 5.25 pounds per inch or greater than 11.0 pounds per inch.
+                                    In one or more embodiments, pressure mechanism 130 may comprise a spring having a spring constant in a range of 7.7 to 15.8 pounds per inch, e.g., pressure mechanism 130 may comprise a spring having a spring constant of 9.5 pounds per inch.
+                                    Illustratively, pressure mechanism 130 may comprise a spring having a spring constant less than 7.7 pounds per inch or greater than 15.8 pounds per inch. In one or more embodiments, pressure mechanism 130 may comprise a pneumatic system.
+                                    Illustratively, lock housing 125 may be disposed in outer base aperture 108, e.g., lock housing 125 may be configured to actuate within outer base aperture 108. In one or more embodiments, pressure mechanism 130 may be configured to provide a force
+                                    that resists an actuation of lock housing 125 within outer base aperture 108. Illustratively, pressure mechanism 130 may be configured to provide a force that facilitates an actuation of lock housing 125 within outer base aperture 108.</p>
+                                <p n="0009" xml:id="_78eb8c0031">In one or more embodiments, fixation mechanism distal receptacle 120 may be configured to extend a distance from outer base proximal end 107. Illustratively, fixation mechanism distal receptacle 120 may be configured
+                                    to extend a distance from outer base proximal end 107 in a range of 0.02 to 0.06 inches, e.g., fixation mechanism distal receptacle 120 may be configured to extend a distance from outer base proximal end 107 of 0.045 inches. In one or more
+                                    embodiments, fixation mechanism distal receptacle 120 may be configured to extend a distance from outer base proximal end 107 of less than 0.02 inches or greater than 0.06 inches. Illustratively, fixation mechanism distal housing 121 may be disposed
+                                    in fixation mechanism distal receptacle 120. In one or more embodiments, inner lumen 122 may be disposed between fixation mechanism distal housing 121 and pressure mechanism 130. Illustratively, inner lumen 122 may be disposed between nosecone
+                                    proximal end 112 and outer base proximal end 107. In one or more em bodiments, a portion of lock housing 125 may be disposed in a portion of inner lumen 122. Illustratively, outer base aperture 108 may be disposed between fixation mechanism distal
+                                    housing 121 and pressure mechanism proximal end 132. In one or more embodiments, lock housing 125 may be disposed between fixation mechanism distal housing 121 and pressure mechanism proximal end 132. Illustratively, hypodermic tube housing 113 may
+                                    be disposed between inner bore 123 and nosecone distal end 111.</p>
+                                <p n="0010" xml:id="_78eb8c0032">In one or more embodiments, transitory element 100 may be manufactured from a material configured to deform if transitory element 100 is sterilized in a medical autoclave, e.g., transitory element 100 may be
+                                    manufactured from a material configured to permanently deform if transitory element 100 is sterilized in a medical autoclave. Illustratively, transitory element 100 may be manufactured from a material having a melting point below a temperature
+                                    parameter for a steam sterilization cycle, e.g., transitory element 100 may be manufactured from a material having a melting point below a temperature parameter for a gravity-displacement steam sterilization cycle, a dynamic-air-removal steam
+                                    sterilization cycle, etc. In one or more embodiments, transitory element 100 may be manufactured from a material having a melting point below 140.0 degrees Fahrenheit. Illustratively, transitory element 100 may be manufactured from a material having
+                                    a melting point in a range of 158.0 to 212.0 degrees Fahrenheit, e.g., transitory element 100 may be manufactured from a material having a melting point of 160.0 degrees Fahrenheit. In one or more embodiments, transitory element 100 may be
+                                    manufactured from a material having a melting point of less than 158.0 degrees Fahrenheit or greater than 212.0 degrees Fahrenheit. In one or more embodiments, transitory element 100 may be manufactured from a material having a melting point below
+                                    250.0 degrees Fahrenheit. Illustratively, transitory element 100 may be manufactured from a material having a melting point below 270.0 degrees Fahrenheit. In one or more embodiments, transitory element 100 may be manufactured from a material having
+                                    a melting point below 275.0 degrees Fahrenheit.</p>
+                                <p n="0011" xml:id="_78eb8c0033">Illustratively, transitory element 100 may be manufactured from a material configured to temporarily deform if transitory element 100 is sterilized in a medical autoclave, e.g., transitory element 100 may be
+                                    manufactured from a material configured to absorb water in a medical autoclave. In one or more embodiments, an absorption of wa ter may be configured to deform transitory element 100, e.g., an absorption of water may be configured to cause transitory
+                                    element 100 to expand. Illustratively, transitory element 100 may be manufactured from a porous material configured to facilitate a deformation of transitory element 100 if transitory element 100 is sterilized in a medical autoclave. In one or more
+                                    embodiments, transitory element 100 may be manufactured with one or more cavities configured to facilitate a deformation of transitory element 100 if transitory element 100 is sterilized in a medical autoclave. Illustratively, transitory element 100
+                                    may be manufactured from any suitable material, e.g., polymers, metals, metal alloys, etc., or from any combination of suitable materials. In one or more embodiments, transitory element 100 may be manufactured by a 3D printing process. For example,
+                                    transitory element 100 may be manufactured by selective laser sintering, selective heat sintering, selective laser melting, electron-beam melting, direct metal laser sintering, electron beam freeform fabrication, etc. Illustratively, transitory
+                                    element 100 may be manufactured by injection molding.</p>
+                                <p n="0012" xml:id="_78eb8c0034">In one or more embodiments, transitory element 100 may be manufactured from poly(acrylamide), poly(acrylic acid), poly(adipic anhydride), poly(7-aminoenanthic acid), poly(12-aminolauric acid), poly(ll-aminoundecanoic
+                                    acid), poly(azelaic anhydride), poly[ 1,3-butadiene( 1,4-)-alt-methacrylonitrile], poly[ 1,3-butadiene( 1,4-)-alt-methyl methacrylate], poly(butadiene oxide), poly(caprylaldehyde), poly(1,4-cyclohexylenedimethylene azelate),
+                                    poly(l,4-cyclohexylenedimethylene dodecanedioate), poly(1,4-cyclohexylenedimethylene glutarate), poly(1,4-cyclohexylenedimethylene p-phenylenediacetate), poly(1,4-cyclohexylenedimethylene pimelate), poly(1,4-cyclohexylenedimethylene sebacate),
+                                    poly(1,4-cyclohexylenedimethylene suberate), poly(cyclohexylidenethiohexamethylene sulfide), poly(cyclopropylenedimethylene piperazinediurethane), poly(cyclopropylidenedimethylene oxide), poly(decamethylene), poly(decamethylene carbonate),
+                                    poly[(decamethylenedioxy)-dihexamethylene oxide], poly(decamethylene disulfide), poly(decamethylenedithioethylene disulfide), poly(decamethylenedithiohexamethylene disulfide), poly(decamethylene dithioladipate), poly(decamethylenedithiotetramethylene
+                                    disulfide), poly(decamethylene pimelate), poly(decamethylene fumaramide), poly(decamethylene glutaramide), poly(decamethylene isophthalate), poly(decamethylene malonate), poly(decamethylene oxydiacetate), poly(decamethyleneoxymethylene oxide),
+                                    poly(decamethylene succinate), poly(decamethylene sulfide), poly(decamethylene thiodivalerate), poly(decamethylenethiohexamethylene sulfide), poly(divinylbenzal), poly(dodecamethylene), poly(dodecanedioic anhydride), poly(eicosamethylene adipate),
+                                    poly(eicosamethylene azelate), poly(eicosamethylene glutarate), poly(eicosamethylene isophthalate), poly(eicosamethylene malonate), poly(eicosamethylene oxalate), poly(eicosamethylene oxydiacetate), poly(eicosamethylene phthalate),
+                                    poly(eicosamethylene pimelate), poly(eicosamethylene sebacate), poly(eicosamethylene suberate), poly(eicosamethylene succinate), poly(eicosamethylene thiodivalerate), poly[ethylene p-(carboxyphenoxy)-butyrate], poly[ethylene
+                                    p-(carboxyphenoxy)-caproate], poly[ethylene p-(carboxyphenoxy)-heptanoate], poly[ethylene p-(carboxyphenoxy)-undecanoate], poly[ethylene p-(carboxyphenoxy)-valerate], poly(ethylene 2,2'-dibenzoate), poly[(ethylenedioxy)-diethylene 2,2'-dibenzoate],
+                                    poly(ethylene 2,2'-dibenzoate), poly[(ethylenedioxy)-diethylene 3,3'-dibenzoate], poly[(ethylenedioxy)-diethylene isophthalate], poly[(ethylenedioxy)-diethylene sebacate], poly[(ethylenedioxy)-diethylene thiodivalerate], poly(ethylene
+                                    disiloxanylenedi-propionamide), poly[(ethylenedithio)-diacetic anhydride], poly[(ethylenedithio)-dipropionic anhydride], poly(ethylene dithionisophthalate), poly(ethelene dithiotetra-methylene disulfide), poly(ethylene fumaramide), poly(ethylene
+                                    glutarate), poly(ethylene 2,4-hexadienediamide), poly(ethylene phthalate), poly(ethylene sulfonyldivalerate), poly(ethylene terephthalate), poly(heptamethylene), poly(hexamethylene azelate), poly(hexamethylene carbonate), poly[hexamethylene
+                                    p-(carboxyphenoxy)-acetate], poly[hexamethylene p-(carboxyphenoxy)-caproate], poly[hexamethylene p-(carboxyphenoxy)-undecanoate], poly[hexamethylene p-(carboxyphenoxy)-valerate], poly(hexamethylene isophthalate), poly[hexamethylene
+                                    (methylene-2,5-tetrahydrofuran)-dicarboxamide], poly(hexamethylene octadecanediamide), poly(hexamethylene oxydiacetate), poly(hexamethylene 4,4'-oxydibenzoate), poly(hexamethylene pimelate), poly(hexamethylene succinate), poly(hexamethylene
+                                    thiodivalerate), poly(hexamethylenethiooentamethylene sulfide), poly(hexamethylenethiotetramethylene sulfide), poly(hexenamer), etc. Illustratively, transitory element 100 may be manufactured from any substituted polymers of poly(acrylamide),
+                                    poly(acrylic acid), poly(adipic anhydride), poly(7-aminoenanthic acid), poly(12-aminolauric acid), poly(ll-aminoundecanoic acid), poly(azelaic anhydride), poly[l,3-butadiene(l,4-)-alt-methacrylonitrile], poly[l,3-butadiene(l,4-)-alt-methyl
+                                    methacrylate], poly(butadiene oxide), poly(caprylaldehyde), poly(1,4-cyclohexylenedimethylene azelate), poly(1,4-cyclohexylenedimethylene dodecanedioate), poly(l,4-cyclohexylenedimethylene glutarate), poly(1,4-cyclohexylenedimethylene
+                                    p-phenylenediacetate), poly(1,4-cyclohexylenedimethylene pimelate), poly(1,4-cyclohexylenedimethylene sebacate), poly(1,4-cyclohexylenedimethylene suberate), poly(cyclohexylidenethiohexamethylene sulfide), poly(cyclopropylenedimethylene
+                                    piperazinediurethane), poly(cyclopropylidenedimethylene oxide), poly(decamethylene), poly(decamethylene carbonate), poly[(decamethylenedioxy)-dihexamethylene oxide], poly(decamethylene disulfide), poly(decamethylenedithioethylene disulfide),
+                                    poly(decamethylenedithiohexamethylene disulfide), poly(decamethylene dithioladipate), poly(decamethylenedithiotetramethylene disulfide), poly(decamethylene pimelate), poly(decamethylene fumaramide), poly(decamethylene glutaramide), poly(decamethylene
+                                    isophthalate), poly(decamethylene malonate), poly(decamethylene oxydiacetate), poly(decamethyleneoxymethylene oxide), poly(decamethylene succinate), poly(decamethylene sulfide), poly(decamethylene thiodivalerate), poly(decamethylenethiohexamethylene
+                                    sulfide), poly(divinylbenzal), poly(dodecamethylene), poly(dodecanedioic anhydride), poly(eicosamethylene adipate), poly(eicosamethylene azelate), poly(eicosamethylene glutarate), poly(eicosamethylene isophthalate), poly(eicosamethylene malonate),
+                                    poly(eicosamethylene oxalate), poly(eicosamethylene oxydiacetate), poly(eicosamethylene phthalate), poly(eicosamethylene pimelate), poly(eicosamethylene sebacate), poly(eicosamethylene suberate), poly(eicosamethylene succinate), poly(eicosamethylene
+                                    thiodivalerate), poly[ethylene p-(carboxyphenoxy)-butyrate], poly[ethylene p-(carboxyphenoxy)-caproate], poly[ethylene p-(carboxyphenoxy)-heptanoate], poly[ethylene p-(carboxyphenoxy)-undecanoate], poly[ethylene p-(carboxyphenoxy)-valerate],
+                                    poly(ethylene 2,2'-dibenzoate), poly[(ethylenedioxy)-diethylene 2,2'-dibenzoate], poly(ethylene 2,2'-dibenzoate), poly[(ethylenedioxy)-diethylene 3,3'-dibenzoate], poly[(ethylenedioxy)-diethylene isophthalate], poly[(ethylenedioxy)-diethylene seba
+                                    cate], poly[(ethylenedioxy)-diethylene thiodivalerate], poly(ethylene disiloxanylenedi-propionamide), poly[(ethylenedithio)-diacetic anhydride], poly[(ethylenedithio)-dipropionic anhydride], poly(ethylene dithionisophthalate), poly(ethelene
+                                    dithiotetra-methylene disulfide), poly(ethylene fumaramide), poly(ethylene glutarate), poly(ethylene 2,4-hexadienediamide), poly(ethylene phthalate), poly(ethylene sulfonyldivalerate), poly(ethylene terephthalate), poly(heptamethylene),
+                                    poly(hexamethylene azelate), poly(hexamethylene carbonate), poly[hexamethylene p-(carboxyphenoxy)-acetate], poly[hexamethylene p-(carboxyphenoxy)-caproate], poly[hexamethylene p-(carboxyphenoxy)-undecanoate], poly[hexamethylene
+                                    p-(carboxyphenoxy)-valerate], poly(hexamethylene isophthalate), poly[hexamethylene (methylene-2,5-tetrahydrofuran)-dicarboxamide], poly(hexamethylene octadecanediamide), poly(hexamethylene oxydiacetate), poly(hexamethylene 4,4'-oxydibenzoate),
+                                    poly(hexamethylene pimelate), poly(hexamethylene succinate), poly(hexamethylene thiodivalerate), poly(hexamethylenethiooentamethylene sulfide), poly(hexamethylenethiotetramethylene sulfide), poly(hexenamer), etc.</p>
+                                <p n="0013" xml:id="_78eb8c0035">FIG. 2 is a schematic diagram illustrating an exploded view of an instrument tip assembly 200. Illustratively, an instrument tip assembly 200 may comprise a transitory element 100, a lock 210, a superior fixation
+                                    mechanism 220, an inferior fixation mechanism 225, a fixation mechanism 230, a hypodermic tube 240, and a blank 250. In one or more embodiments, lock 210 may comprise a lock superior end 211 and a lock inferior end 212. Illustratively, lock 210 may
+                                    comprise a blank housing 215, e.g., lock 210 may comprise a blank housing 215 disposed between lock superior end 211 and lock inferior end 212. In one or more embodiments, superior fixation mechanism 220 may comprise a setscrew, a magnet, an
+                                    adhesive, a weld, etc. Illustratively, inferior fixation mechanism 225 may comprise a setscrew, a magnet, an adhesive, a weld, etc. In one or more embodiments, fixation mechanism 230 may comprise a fixation mechanism distal end 231 and a fixation
+                                    mechanism proximal end 232. Illustratively, fixation mechanism 230 may comprise a setscrew, a magnet, an adhesive, a weld, etc. In one or more embodiments, hypodermic tube 240 may comprise a hypodermic tube distal end 241 and a hypodermic tube
+                                    proximal end 242. Illustratively, blank 250 may comprise a blank distal end 251 and a blank proximal end 252. In one or more embodiments, blank 250 may comprise one or more instrument jaws 260, e.g., blank 250 may comprise a pair of instrument jaws
+                                    260. Illustratively, blank 250 may comprise a plurality of instrument jaws 260, e.g., blank 250 may comprise two instrument jaws 260, three instrument jaws 260, four instrument jaws 260, five instrument jaws 260, six instrument jaws 260, etc. In one
+                                    or more embodiments, instrument jaws 260 may comprise forceps jaws. Illustratively, instrument jaws 260 may comprise scissors jaws.</p>
+                                <p n="0014" xml:id="_78eb8c0036">FIGs. 3A and 3B are schematic diagrams illustrating an assembled instrument tip 300. FIG. 3A illustrates a superior view of an assembled instrument tip 300. FIG. 3B illustrates a cross-sectional view in a sagittal
+                                    plane of an assembled instrument tip 300. Illustratively, a portion of hypodermic tube 240 may be disposed in a portion of nosecone 110, e.g., hypodermic tube proximal end 242 may be disposed in a portion of nosecone 110. In one or more embodiments,
+                                    a portion of hypodermic tube 240 may be fixed within a portion of nosecone 110, e.g., a portion of hypodermic tube 240 may be fixed within a portion of nosecone 110 by an interference fit, an adhesive, a setscrew, a weld, etc. Illustratively, a
+                                    portion of hypodermic tube 240 may be disposed in hypodermic tube housing 113, e.g., hypodermic tube proximal end 242 may be disposed in hypodermic tube housing 113 wherein hypodermic tube distal end 241 extends from transitory element distal end
+                                    101. In one or more embodiments, a portion of hypodermic tube 240 may be fixed within hypodermic tube housing 113, e.g., a portion of hypodermic tube 240 may be fixed within hypodermic tube housing 113 by an interference fit, an adhesive, a setscrew,
+                                    a weld, etc. Illustratively, lock 210 may be disposed in a portion of transitory element 100, e.g., lock 210 may be disposed in outer base aperture 108. In one or more embodiments, lock 210 may be disposed in outer base aperture 108 wherein lock 210
+                                    may be disposed in lock housing 125. Illustratively, lock 210 may be disposed in lock housing 125 wherein blank housing 215 is oriented to align with hypodermic tube housing 113, e.g., lock 210 may be disposed in lock housing 125 wherein blank
+                                    housing 215 is disposed within inner lumen 122. In one or more embodiments, lock 210 may be fixed in lock housing 125, e.g., lock 210 may be fixed in lock housing 125 by an interference fit, an adhesive, a setscrew, a weld, etc.</p>
+                                <p n="0015" xml:id="_78eb8c0037">Illustratively, blank 250 may be disposed in hypodermic tube 240, e.g., blank 250 may be disposed in hypodermic tube 240 wherein blank distal end 251 extends from hy podermic tube distal end 241. In one or more
+                                    embodiments, blank 250 may be disposed in hypodermic tube 240, nosecone 110, hypodermic tube housing 113, inner bore 123, pressure mechanism 130, outer base 105, inner lumen 122, outer base aperture 108, lock housing 125, lock 210, and blank housing
+                                    215. Illustratively, superior fixation mechanism 220 may be disposed in lock 210, e.g., superior fixation mechanism 220 may be disposed in lock superior end 211. In one or more embodiments, inferior fixation mechanism 225 may be disposed in lock 210,
+                                    e.g., inferior fixation mechanism 225 may be disposed in lock inferior end 212. Illustratively, a portion of blank 250 may be disposed between superior fixation mechanism 220 and inferior fixation mechanism 225 within lock 210. In one or more
+                                    embodiments, superior fixation mechanism 220 and inferior fixation mechanism 225 may be configured to fix a portion of blank 250 within lock 210. For example, superior fixation mechanism 220 may comprise a first setscrew and inferior fixation
+                                    mechanism 225 may comprise a second setscrew. Illustratively, a portion of blank 250 may be fixed in lock 210 by an interference fit, an adhesive, a setscrew, a weld, etc.</p>
+                                <p n="0016" xml:id="_78eb8c0038">In one or more embodiments, a portion of fixation mechanism 230 may be disposed in fixation mechanism distal receptacle 120, e.g., fixation mechanism distal end 231 may be disposed in fixation mechanism distal
+                                    receptacle 120. Illustratively, a first portion of fixation mechanism 230 may be disposed in fixation mechanism distal receptacle 120 wherein a second portion of fixation mechanism 230 extends from transitory element proximal end 102, e.g., fixation
+                                    mechanism distal end 231 may be disposed in fixation mechanism distal receptacle 120 wherein fixation mechanism proximal end 232 extends from transitory element proximal end 102. In one or more embodiments, a portion of fixation mechanism 230 may be
+                                    disposed in fixation mechanism distal housing 121. Illustratively, fixation mechanism distal end 231 may be disposed in fixation mechanism distal housing 121 wherein fixation mechanism proximal end 232 extends from transitory element proximal end
+                                    102. In one or more embodiments, fixation mechanism distal end 231 may be disposed in fixation mechanism distal housing 121 wherein fixation mechanism proximal end 232 extends a distance from transitory element proximal end 102 in a range of 0.065 to
+                                    0.125 inches, e.g., fixation mechanism distal end 231 may be disposed in fixation mechanism distal housing 121 wherein fixation mechanism proximal end 232 extends a distance from transitory element proximal end 102 of 0.094 inch es. Illustratively,
+                                    fixation mechanism distal end 231 may be disposed in fixation mechanism distal housing 121 wherein fixation mechanism proximal end 232 extends a distance from transitory element proximal end 102 of less than 0.065 inches or greater than 0.125 inches.
+                                    In one or more embodiments, a portion of fixation mechanism 230 may be fixed in fixation mechanism distal housing 121, e.g., fixation mechanism distal end 231 may be fixed in fixation mechanism distal housing 121. Illustratively, a portion of
+                                    fixation mechanism 230 may be fixed in fixation mechanism distal housing 121 by an interference fit, an adhesive, a magnetic field, a weld, a threading, etc.</p>
+                                <p n="0017" xml:id="_78eb8c0039">In one or more embodiments, assembled instrument tip 300 may be a single-use instrument, e.g., assembled instrument tip 300 may be intended for only one use in a surgery. Illustratively, assembled instrument tip 300
+                                    may be sterilized after manufacturing but prior to shipment of assembled instrument tip 300 to a user, e.g., assembled instrument tip 300 may be sterilized by ethylene oxide after manufacturing but prior to shipment of assembled instrument tip 300 to
+                                    a user. In one or more embodiments, one or more properties of assembled instrument tip 300 may be configured to prevent a user from using a sterile assembled instrument tip 300 in a first surgical procedure causing the assembled instrument tip 300 to
+                                    become non-sterile, sterilizing the assembled instrument tip 300, and using the sterile assembled instrument tip 300 in a second surgical procedure. Illustratively, transitory element 100 may be manufactured from a material configured to deform if
+                                    transitory element 100 is sterilized in a medical autoclave. In one or more embodiments, transitory element 100 may be manufactured from a material configured to retain ethylene oxide, e.g., transitory element 100 may be manufactured from a material
+                                    having a degree of crystallinity greater than 60.0 percent. For example, transitory element 100 may be manufactured from a material having a degree of crystallinity greater than 70.0 percent. In one or more embodiments, transitory element 100 may be
+                                    manufactured from a material having a degree of crystallinity in a range of 60.0 to 80.0 percent, e.g., transitory element 100 may be manufactured from a material having a degree of crystallinity of 75.0 percent. Illustratively, transitory element
+                                    100 may be manufactured from a material having a degree of crystallinity of less than 60.0 percent or greater than 80.0 percent. In one or more embodiments, transitory element 100 may be manufactured from a material configured to retain less than 4.0
+                                    milligrams of ethylene oxide after a first sterilization by ethylene oxide and configured to retain more than 4.0 milligrams of ethylene oxide after a second sterilization by ethylene oxide. For example, transitory element 100 may be manufactured
+                                    from polyoxymethylene, polytetrafluoroethylene, isotactic polypropylene, high-density polyethylene, etc. In one or more embodiments, transitory element 100 may be manufactured from a material configured to degrade if transitory element 100 is
+                                    sterilized by plasma sterilization, e.g., transitory element 100 may be manufactured by a material configured to cross-link in plasma sterilization.</p>
+                                <p n="0018" xml:id="_78eb8c0040">Illustratively, fixation mechanism 230 may be manufactured from a material configured to deform if fixation mechanism 230 is sterilized in a medical autoclave. In one or more embodiments, fixation mechanism 230 may be
+                                    manufactured from a material having a melting point below 140.0 degrees Fahrenheit. Illustratively, fixation mechanism 230 may be manufactured from a material having a melting point in a range of 158.0 to 212.0 degrees Fahrenheit, e.g., fixation
+                                    mechanism 230 may be manufactured from a material having a melting point of 160.0 degrees Fahrenheit. In one or more embodiments, fixation mechanism 230 may be manufactured from a material having a melting point of less than 158.0 degrees Fahrenheit
+                                    or greater than 212.0 degrees Fahrenheit. Illustratively, lock 210 may be manufactured from a material configured to deform if lock 210 is sterilized in a medical autoclave. In one or more embodiments, lock 210 may be manufactured from a material
+                                    having a melting point below 140.0 degrees Fahrenheit. Illustratively, lock 210 may be manufactured from a material having a melting point in a range of 158.0 to 212.0 degrees Fahrenheit, e.g., lock 210 may be manufactured from a material having a
+                                    melting point of 160.0 degrees Fahrenheit. In one or more embodiments, lock 210 may be manufactured from a material having a melting point of less than 158.0 degrees Fahrenheit or greater than 212.0 degrees Fahrenheit. Illustratively, hypodermic tube
+                                    240 may be manufactured from a material configured to deform if hypodermic tube 240 is sterilized in a medical autoclave. In one or more embodiments, hypodermic tube 240 may be manufactured from a material having a melting point below 140.0 degrees
+                                    Fahrenheit. Illustratively, hypodermic tube 240 may be manufactured from a material having a melting point in a range of 158.0 to 212.0 degrees Fahrenheit, e.g., hypodermic tube 240 may be manufactured from a material having a melting point of 160.0
+                                    degrees Fahrenheit. In one or more embodiments, hypodermic tube 240 may be manufactured from a material having a melting point of less than 158.0 degrees Fahrenheit or greater than 212.0 degrees Fahrenheit. Illustratively, blank 250 may be
+                                    manufactured from a material configured to deform if blank 250 is sterilized in a medical autoclave. In one or more embodiments, blank 250 may be manufactured from a material having a melting point below 140.0 degrees Fahrenheit. Illustratively,
+                                    blank 250 may be manufactured from a material having a melting point in a range of 158.0 to 212.0 degrees Fahrenheit, e.g., blank 250 may be manufactured from a material having a melting point of 160.0 degrees Fahrenheit. In one or more embodiments,
+                                    blank 250 may be manufactured from a material having a melting point of less than 158.0 degrees Fahrenheit or greater than 212.0 degrees Fahrenheit.</p>
+                                <p n="0019" xml:id="_78eb8c0041">FIG. 4 is a schematic diagram illustrating an exploded view of an instrument handle assembly 400. Illustratively, an instrument handle assembly 400 may comprise an actuation structure 410, a handle base 440, and a
+                                    fixation mechanism proximal receptacle 450. In one or more embodiments, an actuation structure 410 may comprise an actuation structure distal end 411 and an actuation structure proximal end 412. Illustratively, actuation structure 410 may comprise an
+                                    instrument tip housing 430. In one or more embodiments, instrument tip housing 430 may be configured to house assembled instrument tip 300. Illustratively, actuation structure 410 may comprise a plurality of actuation arms 420. In one or more
+                                    embodiments, each actuation arm 420 may comprise at least one extension joint 425. In one or more embodiments, actuation structure 410 may comprise a shape memory material configured to project actuation structure distal end 411 a first distance from
+                                    actuation structure proximal end 412, e.g., when actuation structure 410 is fully decompressed. Illustratively, actuation structure 410 may comprise a shape memory material configured to project actuation structure distal end 411 a second distance
+                                    from actuation structure proximal end 412, e.g., when actuation structure 410 is fully compressed. In one or more embodiments, the second distance from actuation structure proximal end 412 may be greater than the first distance from actuation
+                                    structure proximal end 412. Actuation structure 410 may be manufactured from any suitable material, e.g., polymers, metals, metal alloys, etc., or from any combination of suitable materials. Illustratively, actuation structure 410 may be compressed
+                                    by an application of a compressive force to actuation structure 410. In one or more embodiments, actuation structure 410 may be compressed by an application of one or more compressive forces located at one or more locations around an outer perimeter
+                                    of actuation structure 410. Illustratively, the one or more locations may comprise any of a plurality of locations around the outer perimeter of actuation structure 410. For example, a surgeon may compress actuation structure 410 by squeezing
+                                    actuation structure 410. Illustratively, the surgeon may compress actuation structure 410 by squeezing actuation structure 410 at any particular location of a plurality of locations around an outer perimeter of actuation structure 410. In one or more
+                                    embodiments, actuation structure 410 may be compressed by an application of a compressive force to any one or more of the plurality of actuation arms 420. Illustratively, each actuation arm 420 may be configured to actuate independently. In one or
+                                    more embodiments, each actuation arm 420 may be connected to one or more of the plurality of actuation arms 420 wherein an actuation of a particular actuation arm 420 may be configured to actuate every actuation arm 420 of the plurality of actuation
+                                    arms 420. Illustratively, one or more actuation arms 420 may be configured to actuate in pairs or groups. For example, an actuation of a first actuation arm 420 may be configured to actuate a second actuation arm 420. In one or more embodiments, a
+                                    compression of actuation structure 410, e.g., due to an application of a compressive force to a particular actuation arm 420, may be configured to actuate the particular actuation arm 420. Illustratively, an actuation of the particular actuation arm
+                                    420 may be configured to actuate every actuation arm 420 of the plurality of actuation arms 420. In one or more embodiments, an application of a compressive force to a particular actuation arm 420 may be configured to extend at least one extension
+                                    joint 425 of the particular actuation arm 420.</p>
+                                <p n="0020" xml:id="_78eb8c0042">Illustratively, handle base 440 may comprise a handle base distal end 441 and a handle base proximal end 442. In one or more embodiments, handle base 440 may comprise a handle base inner lumen 445. Illustratively,
+                                    handle base 440 may comprise an actuation structure interface 446 configured to interface with a portion of actuation structure 410, e.g., handle base 440 may comprise an actuation structure interface 446 configured to interface with actuation
+                                    structure proximal end 412. In one or more embodiments, fixation mechanism proximal receptacle 450 may comprise a fixation mechanism proximal receptacle distal end 451 and a fixation mechanism proximal receptacle proximal end 452. Illustratively,
+                                    fixation mechanism proximal receptacle 450 may comprise a fixation mechanism proximal housing 455. In one or more embodiments, fixation mechanism proximal housing 455 may be configured to house a portion of fixation mechanism 230, e.g., fixation
+                                    mechanism proximal housing 455 may be configured to house fixation mechanism proximal end 232.</p>
+                                <p n="0021" xml:id="_78eb8c0043">FIGs. 5A and 5B are schematic diagrams illustrating an assembled instrument handle 500. FIG. 5A illustrates a superior view of an assembled instrument handle 500. FIG. 5B illustrates a cross-sectional view in a
+                                    sagittal plane of an assembled instrument handle 500. Illustratively, assembled instrument handle 500 may comprise an assembled instrument handle distal end 501 and an assembled instrument handle proximal end 502. In one or more embodiments,
+                                    assembled instrument handle 500 may comprise a handle inner lumen 510. Illustratively, a portion of handle base 440 may be disposed in a portion of actuation structure 410, e.g., handle base distal end 441 may be disposed in actuation structure
+                                    proximal end 412. In one or more embodiments, a portion of handle base 440 may be disposed in a portion of actuation structure 410 wherein actuation structure interface 446 is adjacent to actuation structure proximal end 412. Illustratively, a
+                                    portion of handle base 440 may be disposed in a portion of actuation structure 410 wherein handle base inner lumen 445 is oriented to align with handle inner lumen 510. In one or more embodiments, a portion of handle base 440 may be disposed in
+                                    actuation structure 410 wherein handle base proximal end 442 is assembled instrument handle proximal end 502. Illustratively, a portion of handle base 440 may be fixed in a portion of actuation structure 410, e.g., a portion of handle base 440 may be
+                                    fixed in a portion of actuation structure 410 by an interference fit, an adhesive, a magnetic field, a weld, a threading, etc.</p>
+                                <p n="0022" xml:id="_78eb8c0044">In one or more embodiments, fixation mechanism proximal receptacle 450 may be disposed in actuation structure 410, e.g., fixation mechanism proximal receptacle 450 may be disposed in actuation structure 410 wherein
+                                    fixation mechanism proximal receptacle distal end 451 is disposed in actuation structure 410 and fixation mechanism proximal receptacle proximal end 452 is disposed in actuation structure 410. Illustratively, fixation mechanism proximal receptacle
+                                    450 may be disposed in actuation structure 410 wherein fixation mechanism proximal receptacle 450 is disposed between handle inner lumen 510 and instrument tip housing 430. In one or more embodiments, fixation mech anism proximal receptacle 450 may
+                                    be disposed in actuation structure 410 wherein fixation mechanism proximal receptacle distal end 451 may be adjacent to a portion of instrument tip housing 430. Illustratively, fixation mechanism proximal receptacle 450 may be disposed in actuation
+                                    structure 410 wherein fixation mechanism proximal receptacle proximal end 452 may be adjacent to a portion of handle inner lumen 510. In one or more embodiments, fixation mechanism proximal receptacle 450 may be fixed in actuation structure 410,
+                                    e.g., fixation mechanism proximal receptacle 450 may be fixed in actuation structure 410 by an interference fit, an adhesive, a magnetic field, a weld, a threading, etc. In one or more embodiments, assembled instrument handle 500 may be manufactured
+                                    from a material suitable for sterilization by a medical autoclave. Illustratively, assembled instrument handle 500 may be manufactured from a material, e.g., Nylon, configured to withstand exposure to temperatures, pressures, and ambient conditions
+                                    present in a medical autoclave without degradation. For example, assembled instrument handle 500 may be configured to function normally after exposure in a temperature 275 degrees Fahrenheit. In one or more embodiments, assembled instrument handle
+                                    500 may be configured to be used in a surgical procedure and then sterilized by a medical autoclave at least three times. Illustratively, assembled instrument handle 500 may be configured to be used in a surgical procedure and then sterilized by a
+                                    medical autoclave more than three times. In one or more embodiments, assembled instrument handle 500 may be configured to be used in a surgical procedure and then sterilized by a medical autoclave at least nine times. Illustratively, assembled
+                                    instrument handle 500 may be configured to be used in a surgical procedure and then sterilized by a medical autoclave more than nine times.</p>
+                                <p n="0023" xml:id="_78eb8c0045">FIG. 6 is a schematic diagram illustrating an exploded view of an instrument assembly 600. Illustratively, an instrument assembly 600 may comprise a handle base 440, an actuation structure 410, a fixation mechanism
+                                    proximal receptacle 450, a fixation mechanism 230, a transitory element 100, a lock 210, a superior fixation mechanism 220, an inferior fixation mechanism 225, a hypodermic tube 240, and a blank 250. In one or more embodiments, a portion of fixation
+                                    mechanism 230 may be disposed in fixation mechanism proximal receptacle 450, e.g., fixation mechanism proximal end 232 may be disposed in fixation mechanism proximal receptacle 450. Illustratively, a first portion of fixation mechanism 230 may be
+                                    disposed in fixation mechanism proximal receptacle 450 wherein a second portion of fixation mechanism 230 may be disposed in fixation mechanism distal receptacle 120, e.g., fixation mechanism proximal end 232 may be disposed in fixation mechanism
+                                    proximal receptacle 450 and fixation mechanism distal end 231 may be disposed in fixation mechanism distal receptacle 120. In one or more embodiments, a portion of fixation mechanism 230 may be disposed in fixation mechanism proximal housing 455,
+                                    e.g., fixation mechanism proximal end 232 may be disposed in fixation mechanism proximal housing 455. Illustratively, a first portion of fixation mechanism 230 may be disposed in fixation mechanism proximal housing 455 wherein a second portion of
+                                    fixation mechanism 230 may be disposed in fixation mechanism distal housing 121, e.g., fixation mechanism proximal end 232 may be disposed in fixation mechanism proximal housing 455 and fixation mechanism distal end 321 may be disposed in fixation
+                                    mechanism distal housing 121. In one or more embodiments, a portion of fixation mechanism 230 may be fixed in fixation mechanism proximal housing 455, e.g., fixation mechanism proximal end 232 may be fixed in fixation mechanism proximal housing 455.
+                                    Illustratively, a portion of fixation mechanism 230 may be fixed in fixation mechanism proximal housing 455 by an interference fit, an adhesive, a magnetic field, a weld, a threading, etc. In one or more embodiments, a first portion of fixation
+                                    mechanism 230 may be fixed in fixation mechanism proximal housing 455 and a second portion of fixation mechanism 230 may be fixed in fixation mechanism distal housing 121, e.g., fixation mechanism proximal end 232 may be fixed in fixation mechanism
+                                    proximal housing 455 and fixation mechanism distal end 231 may be fixed in fixation mechanism distal housing 121.</p>
+                                <p n="0024" xml:id="_78eb8c0046">Illustratively, a portion of transitory element 100 may be disposed in a portion of actuation structure 410, e.g., a portion of outer base 105 may be disposed in instrument tip housing 430. In one or more embodiments,
+                                    fixation mechanism 230 may be configured to fix a portion of transitory element 100 in a portion of actuation structure 410, e.g., fixation mechanism 230 may be configured to fix a portion of outer base 105 in instrument tip housing 430.
+                                    Illustratively, fixation mechanism 230 may comprise a setscrew configured to screw into fixation mechanism distal housing 121 and fixation mechanism proximal housing 455. In one or more embodiments, fixation mechanism 230 may be permanently fixed in
+                                    fixation mechanism distal housing 121, e.g., fixation mechanism distal end 231 may be fixed in distal housing 121 wherein removing fixation mechanism distal end 231 from distal housing 121 may be configured to damage a portion of transitory element
+                                    100. Illustratively, fixation mechanism distal end 231 may be permanently fixed in distal housing 121 wherein removing fixation mechanism distal end 231 from distal housing 121 may be configured to damage fixation mechanism distal receptacle 120. In
+                                    one or more embodiments, fixation mechanism 230 may be temporarily fixed in fixation mechanism proximal housing 455, e.g., fixation mechanism proximal end 232 may be fixed in fixation mechanism proximal housing 455 wherein fixation mechanism proximal
+                                    end 232 is removable from fixation mechanism proximal housing 455. Illustratively, a first fixation mechanism proximal end 232 may be temporarily fixed in fixation mechanism proximal housing 455 wherein the first fixation mechanism proximal end 232
+                                    may be removed from fixation mechanism proximal housing 455 and a second fixation mechanism proximal end 232 may be inserted in fixation mechanism proximal housing 455. In one or more embodiments, a first fixation mechanism proximal end 232 may be
+                                    temporarily fixed in fixation mechanism proximal housing 455 wherein the first fixation mechanism proximal end 232 may be removed from fixation mechanism proximal housing 455 and a second fixation mechanism proximal end 232 may be temporarily fixed
+                                    in fixation mechanism proximal housing 455.</p>
+                                <p n="0025" xml:id="_78eb8c0047">FIGs. 7A and 7B are schematic diagrams illustrating an instrument with open jaws 700. FIG. 7A illustrates a superior view of an instrument with open jaws 700. FIG. 7B illustrates a cross-sectional view in a sagittal
+                                    plane of an instrument with open jaws 700. Illustratively, assembled instrument handle 500 and assembled instrument tip 300 may comprise an instrument with open jaws 700 when fixation mechanism proximal end 232 is temporarily fixed in fixation
+                                    mechanism proximal housing 455. In one or more embodiments, assembled instrument handle 500 and assembled instrument tip 300 may comprise an instrument with open jaws 700 when a first instrument jaw 260 is fully separated from a second instrument jaw
+                                    260. Illustratively, assembled instrument handle 500 and assembled instrument tip 300 may comprise an instrument with open jaws 700 when actuation structure 210 is fully decompressed. In one or more embodiments, assembled instrument handle 500 and
+                                    assembled instrument tip 300 may comprise an instrument with open jaws 700 when hypodermic tube 240 is fully retracted relative to blank 250. Illustratively, assembled instrument handle 500 and assembled instrument tip 300 may comprise an instrument
+                                    with open jaws 700 when nosecone 110 is fully retracted relative to outer base 105. In one or more embodiments, assembled instrument handle 500 and assembled instrument tip 300 may comprise an instrument with open jaws 700 when pressure mechanism 130
+                                    is fully compressed.</p>
+                                <p n="0026" xml:id="_78eb8c0048">FIGs. 8A and 8B are schematic diagrams illustrating an instrument with partially closed jaws 800. FIG. 8A illustrates a superior view of an instrument with partially closed jaws 800. FIG. 8B illustrates a
+                                    cross-sectional view in a sagittal plane of an instrument with partially closed jaws 800. Illustratively, a compression of actuation structure 410 may be configured to gradually transition assembled instrument handle 500 and assembled instrument tip
+                                    300 from an instrument with open jaws 700 to an instrument with partially closed jaws 800. In one or more embodiments, a compression of actuation structure 410 may be configured to extend actuation structure distal end 411 relative to actuation
+                                    structure proximal end 412. Illustratively, an extension of actuation structure distal end 411 relative to actuation structure proximal end 412 may be configured to extend nosecone 110 relative to handle base 105. In one or more embodiments, an
+                                    extension of nosecone 110 relative to handle base 105 may be configured to extend hypodermic tube 240 relative to blank 250. Illustratively, an extension of hypodermic tube 240 relative to blank 250 may be configured to extend hypodermic tube distal
+                                    end 241 over a portion of a first instrument jaw 260 and over a portion of a second instrument jaw 260. In one or more embodiments, an extension of hypodermic tube distal end 241 over a portion of a first instrument jaw 260 and over a portion of a
+                                    second instrument jaw 260 may be configured to reduce a separation distance between the first instrument jaw 260 and the second instrument jaw 260 until assembled instrument handle 500 and assembled instrument tip 300 comprise an instrument with
+                                    partially closed jaws 800. Illustratively, an extension of nosecone 110 relative to handle base 105 may be configured to expand pressure mechanism 130, e.g., an extension of nosecone 110 relative to handle base 105 may be configured to extend
+                                    pressure mechanism distal end 131 relative to pressure mechanism proximal end 132. In one or more embodiments, pressure mechanism 130 may be configured to provide a force that resists an extension of nosecone 110 relative to handle base 105, e.g.,
+                                    pressure mechanism 130 may be configured to provide a force that facilitates a retraction of nosecone 110 relative to handle base 105.</p>
+                                <p n="0027" xml:id="_78eb8c0049">FIGs. 9A and 9B are schematic diagrams illustrating an instrument with closed jaws 900. FIG. 9A illustrates a superior view of an instrument with closed jaws 900. FIG. 9B illustrates a cross-sectional view in a
+                                    sagittal plane of an instrument with closed jaws 900. Illustratively, a compression of actuation structure 410 may be configured to gradually transition assembled instrument handle 500 and assembled instrument tip 300 from an instrument with
+                                    partially closed jaws 800 to an instrument with closed jaws 900. In one or more embodiments, a compression of actuation structure 410 may be configured to extend actuation structure distal end 411 relative to actuation structure proximal end 412.
+                                    Illustratively, an extension of actuation structure distal end 411 relative to actuation structure proximal end 412 may be configured to extend nosecone 110 relative to handle base 105. In one or more embodiments, an extension of nosecone 110
+                                    relative to handle base 105 may be configured to extend hypodermic tube 240 relative to blank 250. Illustratively, an extension of hypodermic tube 240 relative to blank 250 may be configured to extend hypodermic tube distal end 241 over a portion of
+                                    a first instrument jaw 260 and over a portion of a second instrument jaw 260. In one or more embodiments, an extension of hypodermic tube distal end 241 over a portion of a first instrument jaw 260 and over a portion of a second instrument jaw 260
+                                    may be configured to reduce a separation distance between the first instrument jaw 260 and the second instrument jaw 260 until assembled instrument handle 500 and assembled instrument tip 300 comprise an instrument with closed jaws 900.
+                                    Illustratively, an extension of nosecone 110 relative to handle base 105 may be configured to expand pressure mechanism 130, e.g., an extension of nosecone 110 relative to handle base 105 may be configured to extend pressure mechanism distal end 131
+                                    relative to pressure mechanism proximal end 132. In one or more embodiments, pressure mechanism 130 may be configured to provide a force that resists an extension of nosecone 110 relative to handle base 105, e.g., pressure mechanism 130 may be
+                                    configured to provide a force that facilitates a retraction of nosecone 110 relative to handle base 105.</p>
+                                <p n="0028" xml:id="_78eb8c0050">Illustratively, a decompression of actuation structure 410 may be configured to gradually transition assembled instrument handle 500 and assembled instrument tip 300 from an instrument with closed jaws 900 to an
+                                    instrument with partially closed jaws 800. In one or more embodiments, a decompression of actuation structure 410 may be configured to retract actuation structure distal end 411 relative to actuation structure proximal end 412. Illustratively, a
+                                    retraction of actuation structure distal end 411 relative to actuation structure proximal end 412 may be configured to retrace nosecone 110 relative to handle base 105. In one or more embodiments, a retraction of nosecone 110 relative to handle base
+                                    105 may be configured to retract hypodermic tube 240 relative to blank 250. Illustratively, a retraction of hypodermic tube 240 relative to blank 250 may be configured to retract hypodermic tube distal end 241 off from a portion of a first instrument
+                                    jaw 260 and off from a portion of a second instrument jaw 260. In one or more embodiments, a retraction of hypodermic tube distal end 241 off from a portion of a first instrument jaw 260 and off from a portion of a second instrument jaw 260 may be
+                                    configured to increase a separation distance between the first instrument jaw 260 and the second instrument jaw 260 until assembled instrument handle 500 and assembled instrument tip 300 comprise an instrument with partially closed jaws 800.
+                                    Illustratively, a retraction of nosecone 110 relative to handle base 105 may be configured to collapse pressure mechanism 130, e.g., a retraction of nosecone 110 relative to handle base 105 may be configured to retract pressure mechanism distal end
+                                    131 relative to pressure mechanism proximal end 132. In one or more embodiments, pressure mechanism 130 may be configured to provide a force that facilitates a retraction of nosecone 110 relative to handle base 105.</p>
+                                <p n="0029" xml:id="_78eb8c0051">Illustratively, assembled instrument handle 500 may comprise a reusable instrument and assembled instrument tip 300 may comprise a single-use instrument. In one or more embodiments, a user may install a first
+                                    assembled instrument tip 300 in assembled instrument handle 500 by inserting fixation mechanism proximal end 232 into fixation mechanism proximal housing 455. Illustratively, fixation mechanism proximal housing 455 may be configured to temporarily
+                                    fix the first assembled instrument tip 300 in instrument tip housing 430, e.g., fixation mechanism proximal housing 455 may be configured to temporarily fix the first assembled instrument tip 300 in instrument tip housing 430 while the user performs
+                                    a first surgical procedure. In one or more embodiments, the user may remove the first assembled instrument tip 300 from assembled instrument handle 500 by removing fixation mechanism proximal end 232 from fixation mechanism proximal housing 455.
+                                    Illustratively, the user may install a second assembled instrument tip 300 in assembled instrument handle 500 by inserting fixation mechanism proximal end 232 into fixation mechanism proximal housing 455. In one or more embodiments, fixation
+                                    mechanism proximal housing 455 may be configured to temporarily fix the first assembled instrument tip 300 in instrument tip housing 430, e.g., fixation mechanism proximal housing 455 may be configured to temporarily fix the first assembled
+                                    instrument tip 300 in instrument tip housing 430 while the user performs a second surgical procedure.</p>
+                                <p n="0030" xml:id="_78eb8c0052">The foregoing description has been directed to particular embodiments of this invention. It will be apparent; however, that other variations and modifications may be made to the described embodiments, with the
+                                    attainment of some or all of their advantages. Specifically, it should be noted that the principles of the present invention may be implemented in any system. Furthermore, while this description has been written in terms of a surgical instrument, the
+                                    teachings of the present invention are equally suitable to any systems where the functionality may be employed. Therefore, it is the object of the appended claims to cover all such variations and modifications as come within the true spirit and scope
+                                    of the invention.</p>
+                            </div>
+                        </body>
+                    </text>
+                    <text change="1646b789f770b346c7753e5b7ca9bac1">
+                        <body>
+                            <div facs="/api/pre-publication/470611410/US2016055150W/facsimiles/RFVNTVkvRVpNUUlWRU81NDU0RFNV" type="description" xml:id="d877a838f027a94bb2681484365e19c0" xml:lang="en">
+                                <title desc="invention-title">
+                                    <hi rend="bold">INSTRUMENT v.2</hi>
+                                    HANDLE AND REPLACEABLE TIP</title>
+                                <head xml:id="_a9bac10005">CROSS-REFERENCE TO RELATED APPLICATIONS</head>
+                                <p n="0001" xml:id="_a9bac10006">This Application claims the benefit of U.S. Provisional Application No. 62/240,220, filed October 12, 2015.</p>
+                                <head xml:id="_a9bac10007">FIELD OF THE INVENTION</head>
+                                <p n="0002" xml:id="_a9bac10008">The present disclosure relates to a medical device, and, more particularly, to a surgical instrument.</p>
+                                <head xml:id="_a9bac10009">BACKGROUND OF THE INVENTION</head>
+                                <p n="0003" xml:id="_a9bac10010">A variety of surgical procedures are performed through a very small surgical incision in a particular tissue. Reducing the size of a surgical incision during a surgical procedure generally reduces the amount of trauma
+                                    to the surgical site and generally facilitates faster wound healing. In order to perform surgical procedures through a very small surgical incision, a surgeon may require specialized surgical instruments configured to fit through the very small
+                                    surgical incision and provide the surgeon with a surgical utility. Sometimes a surgeon may require a surgical utility that may not be easily controlled close to a particular surgical site, e.g., closing forceps jaws inside of an eye. It is generally
+                                    desirable for a surgeon to be able to control such a surgical utility with a minimal amount of effort. For example, if a surgical utility is controlled by a lever or a switch on an instrument handle, a surgeon may need to adjust an orientation of a
+                                    surgical instrument in order to actuate the lever or the switch. Additionally, if a surgical utility control mechanism requires a surgeon to apply a significant amount of force to a portion of a surgical instrument, then it may be difficult for the
+                                    surgeon to manipulate the surgical utility control mechanism without unintentionally moving a portion of the surgical instrument.</p>
+
+                                <p n="0004" xml:id="_a9bac10011">Ophthalmic surgical instruments are generally categorized as either reusable or single-use. A single-use instrument is typically sterilized prior to sale and is shipped to a surgery center sterile and ready for use in
+                                    a surgical procedure. A reusable instrument is typically shipped to a surgery center non-sterile and is sterilized by the surgery center between uses in surgery. Reusable instruments are generally lower in overall cost for a surgery center compared
+                                    to single-use instruments. Single-use instruments offer a surgery center greater convenience compared to reusable instruments. Accordingly, there is a need for an instrument that offers a surgery center the convenience of a single-use instrument at
+                                    the overall lower cost of a reusable instrument.</p>
+                                <head xml:id="_a9bac10012">BRIEF SUMMARY OF THE INVENTION</head>
+                                <p n="0005" xml:id="_a9bac10013">The present disclosure provides an instrument handle and replaceable tip. In one or more embodiments, an instrument handle and replaceable tip may comprise a reusable instrument handle and a single-use instrument tip.
+                                    Illustratively, the instrument tip may comprise an outer base, a nosecone, a pressure mechanism, a hypodermic tube, a blank, and a fixation mechanism. In one or more embodiments, the instrument handle may comprise an actuation structure, a fixation
+                                    mechanism receptacle, and an instrument tip housing. Illustratively, the fixation mechanism and the fixation mechanism receptacle may be configured to temporarily fix the instrument tip in the instrument tip housing. In one or more embodiments, a
+                                    compression of the actuation structure may be configured to actuate the hypodermic tube relative to the blank. Illustratively, the instrument tip may be removed from the instrument tip housing after use by removing the fixation mechanism from the
+                                    fixation mechanism receptacle.</p>
+
+                                <head xml:id="_a9bac10014">
+                                    <hi rend="bold">BRIEF</hi>
+                                    DESCRIPTION OF THE DRAWINGS</head>
+                                <p n="0006" xml:id="_a9bac10016">The above and further advantages of the present invention may be better understood by referring to the following description in conjunction with the accompanying drawings in which like reference numerals indicate
+                                    identical or functionally similar elements:<list type="bulleted" xml:id="_a9bac10017">
+                                        <item>FIGs. 1A, 1B, and 1C are schematic diagrams illustrating a transitory element;</item>
+                                        <item>FIG. 2 is a schematic diagram illustrating an exploded view of an instrument tip assembly;</item>
+                                        <item>FIGs. 3A and 3B are schematic diagrams illustrating an assembled instrument tip;</item>
+                                        <item>FIG. 4 is a schematic diagram illustrating an exploded view of an instrument handle assembly;</item>
+                                        <item>FIGs. 5A and 5B are schematic diagrams illustrating an assembled instrument handle;</item>
+                                        <item>FIG. 6 is a schematic diagram illustrating an exploded view of an instrument assembly;</item>
+                                        <item>FIGs. 7A and 7B are schematic diagrams illustrating an instrument with open jaws;</item>
+                                        <item>FIGs. 8A and 8B are schematic diagrams illustrating an instrument with partially closed jaws;</item>
+                                        <item>FIGs. 9A and 9B are schematic diagrams illustrating an instrument with closed jaws.</item>
+                                    </list>
+                                </p>
+                                <head xml:id="_a9bac10027">DETAILED DESCRIPTION OF AN ILLUSTRATIVE</head>
+                                <head xml:id="_a9bac10028">EMBODIMENT</head>
+                                <p n="0007" xml:id="_a9bac10029">FIGs. 1A, 1B, and 1C are schematic diagrams illustrating a transitory element 100. FIG. 1A illustrates an isometric view of a transitory element 100. FIG. 1B illustrates a superior view of a transitory element 100.
+                                    FIG. 1C illustrates a cross-sectional view in a sagittal plane of a transitory element 100. Illustratively, a transitory element 100 may comprise a transitory element distal end 101 and a transitory element proximal end 102. In one or more
+                                    embodiments, transitory element 100 may comprise an outer base 105, a nosecone 110, and a fixation mechanism distal receptacle 120. Illustratively, outer base 105 may comprise an outer base distal end 106 and an outer base proximal end 107. In one or
+                                    more embodiments, outer base 105 may comprise an outer base aperture 108. Illustratively, nosecone 110 may comprise a nosecone distal end 111 and a nosecone proximal end 112. In one or more embodiments, nosecone 110 may comprise a hypodermic tube
+                                    housing 113 and a plurality of radial projections 115. Illustratively, each radial projection 115 of the plurality of radial projections 115 may comprise a radial projection distal end 116 and a radial projection proximal end 117. In one or more
+                                    embodiments, each radial projection 115 of the plurality of radial projections 115 may be separated from at least one radial projection 115 of the plurality of radial projections 115 by an aperture. Illustratively, nosecone 110 may comprise a
+                                    plurality of apertures. In one or more embodiments, a portion of outer base 105 may be disposed in a portion of nosecone 110, e.g., outer base distal end 106 may be disposed in nosecone 110. Illustratively, a portion of outer base 105 may be disposed
+                                    in a portion of nosecone 110 wherein outer base distal end 106 may be disposed between nosecone distal end 111 and nosecone proximal end 112, e.g., a portion of outer base 105 may be disposed in a portion of nosecone 110 wherein nosecone proximal end
+                                    112 may be disposed between outer base distal end 106 and outer base proximal end 107.</p>
+                                <p n="0008" xml:id="_a9bac10030">In one or more embodiments, transitory element 100 may comprise a fixation mechanism distal housing 121, an inner lumen 122, an inner bore 123, a lock housing 125, and a pressure mechanism 130. Illustratively,
+                                    pressure mechanism 130 may comprise a pressure mechanism distal end 131 and a pressure mechanism proximal end 132. In one or more embodiments, pressure mechanism 130 may be disposed between inner lumen 122 and hypodermic tube housing 113, e.g.,
+                                    pressure mechanism 130 may be disposed between inner lumen 122 and hypodermic tube housing 113 wherein pressure mechanism distal end 131 is adjacent to a proximal end of hypodermic tube housing 113 and pressure mechanism proximal end 132 is adjacent
+                                    to a distal end of inner lumen 122. Illustratively, inner bore 123 may be disposed in pressure mechanism 130. In one or more embodiments, a portion of pressure mechanism 130 may be disposed in the plurality of radial projections 115. In one or more
+                                    embodiments, pressure mechanism 130 may be configured to provide a force. Illustratively, pressure mechanism 130 may be config ured to provide a constant or uniform force. In one or more embodiments, pressure mechanism 130 may be configured to
+                                    provide a variable force. Illustratively, pressure mechanism 130 may comprise a spring or a coil. In one or more embodiments, pressure mechanism 130 may comprise a spring having a spring constant in a range of 5.25 to 11.0 pounds per inch, e.g.,
+                                    pressure mechanism 130 may comprise a spring having a spring constant of 7.5 pounds per inch. Illustratively, pressure mechanism 130 may comprise a spring having a spring constant less than 5.25 pounds per inch or greater than 11.0 pounds per inch.
+                                    In one or more embodiments, pressure mechanism 130 may comprise a spring having a spring constant in a range of 7.7 to 15.8 pounds per inch, e.g., pressure mechanism 130 may comprise a spring having a spring constant of 9.5 pounds per inch.
+                                    Illustratively, pressure mechanism 130 may comprise a spring having a spring constant less than 7.7 pounds per inch or greater than 15.8 pounds per inch. In one or more embodiments, pressure mechanism 130 may comprise a pneumatic system.
+                                    Illustratively, lock housing 125 may be disposed in outer base aperture 108, e.g., lock housing 125 may be configured to actuate within outer base aperture 108. In one or more embodiments, pressure mechanism 130 may be configured to provide a force
+                                    that resists an actuation of lock housing 125 within outer base aperture 108. Illustratively, pressure mechanism 130 may be configured to provide a force that facilitates an actuation of lock housing 125 within outer base aperture 108.</p>
+                                <p n="0009" xml:id="_a9bac10031">In one or more embodiments, fixation mechanism distal receptacle 120 may be configured to extend a distance from outer base proximal end 107. Illustratively, fixation mechanism distal receptacle 120 may be configured
+                                    to extend a distance from outer base proximal end 107 in a range of 0.02 to 0.06 inches, e.g., fixation mechanism distal receptacle 120 may be configured to extend a distance from outer base proximal end 107 of 0.045 inches. In one or more
+                                    embodiments, fixation mechanism distal receptacle 120 may be configured to extend a distance from outer base proximal end 107 of less than 0.02 inches or greater than 0.06 inches. Illustratively, fixation mechanism distal housing 121 may be disposed
+                                    in fixation mechanism distal receptacle 120. In one or more embodiments, inner lumen 122 may be disposed between fixation mechanism distal housing 121 and pressure mechanism 130. Illustratively, inner lumen 122 may be disposed between nosecone
+                                    proximal end 112 and outer base proximal end 107. In one or more em bodiments, a portion of lock housing 125 may be disposed in a portion of inner lumen 122. Illustratively, outer base aperture 108 may be disposed between fixation mechanism distal
+                                    housing 121 and pressure mechanism proximal end 132. In one or more embodiments, lock housing 125 may be disposed between fixation mechanism distal housing 121 and pressure mechanism proximal end 132. Illustratively, hypodermic tube housing 113 may
+                                    be disposed between inner bore 123 and nosecone distal end 111.</p>
+                                <p n="0010" xml:id="_a9bac10032">In one or more embodiments, transitory element 100 may be manufactured from a material configured to deform if transitory element 100 is sterilized in a medical autoclave, e.g., transitory element 100 may be
+                                    manufactured from a material configured to permanently deform if transitory element 100 is sterilized in a medical autoclave. Illustratively, transitory element 100 may be manufactured from a material having a melting point below a temperature
+                                    parameter for a steam sterilization cycle, e.g., transitory element 100 may be manufactured from a material having a melting point below a temperature parameter for a gravity-displacement steam sterilization cycle, a dynamic-air-removal steam
+                                    sterilization cycle, etc. In one or more embodiments, transitory element 100 may be manufactured from a material having a melting point below 140.0 degrees Fahrenheit. Illustratively, transitory element 100 may be manufactured from a material having
+                                    a melting point in a range of 158.0 to 212.0 degrees Fahrenheit, e.g., transitory element 100 may be manufactured from a material having a melting point of 160.0 degrees Fahrenheit. In one or more embodiments, transitory element 100 may be
+                                    manufactured from a material having a melting point of less than 158.0 degrees Fahrenheit or greater than 212.0 degrees Fahrenheit. In one or more embodiments, transitory element 100 may be manufactured from a material having a melting point below
+                                    250.0 degrees Fahrenheit. Illustratively, transitory element 100 may be manufactured from a material having a melting point below 270.0 degrees Fahrenheit. In one or more embodiments, transitory element 100 may be manufactured from a material having
+                                    a melting point below 275.0 degrees Fahrenheit.</p>
+                                <p n="0011" xml:id="_a9bac10033">Illustratively, transitory element 100 may be manufactured from a material configured to temporarily deform if transitory element 100 is sterilized in a medical autoclave, e.g., transitory element 100 may be
+                                    manufactured from a material configured to absorb water in a medical autoclave. In one or more embodiments, an absorption of wa ter may be configured to deform transitory element 100, e.g., an absorption of water may be configured to cause transitory
+                                    element 100 to expand. Illustratively, transitory element 100 may be manufactured from a porous material configured to facilitate a deformation of transitory element 100 if transitory element 100 is sterilized in a medical autoclave. In one or more
+                                    embodiments, transitory element 100 may be manufactured with one or more cavities configured to facilitate a deformation of transitory element 100 if transitory element 100 is sterilized in a medical autoclave. Illustratively, transitory element 100
+                                    may be manufactured from any suitable material, e.g., polymers, metals, metal alloys, etc., or from any combination of suitable materials. In one or more embodiments, transitory element 100 may be manufactured by a 3D printing process. For example,
+                                    transitory element 100 may be manufactured by selective laser sintering, selective heat sintering, selective laser melting, electron-beam melting, direct metal laser sintering, electron beam freeform fabrication, etc. Illustratively, transitory
+                                    element 100 may be manufactured by injection molding.</p>
+                                <p n="0012" xml:id="_a9bac10034">In one or more embodiments, transitory element 100 may be manufactured from poly(acrylamide), poly(acrylic acid), poly(adipic anhydride), poly(7-aminoenanthic acid), poly(12-aminolauric acid), poly(ll-aminoundecanoic
+                                    acid), poly(azelaic anhydride), poly[ 1,3-butadiene( 1,4-)-alt-methacrylonitrile], poly[ 1,3-butadiene( 1,4-)-alt-methyl methacrylate], poly(butadiene oxide), poly(caprylaldehyde), poly(1,4-cyclohexylenedimethylene azelate),
+                                    poly(l,4-cyclohexylenedimethylene dodecanedioate), poly(1,4-cyclohexylenedimethylene glutarate), poly(1,4-cyclohexylenedimethylene p-phenylenediacetate), poly(1,4-cyclohexylenedimethylene pimelate), poly(1,4-cyclohexylenedimethylene sebacate),
+                                    poly(1,4-cyclohexylenedimethylene suberate), poly(cyclohexylidenethiohexamethylene sulfide), poly(cyclopropylenedimethylene piperazinediurethane), poly(cyclopropylidenedimethylene oxide), poly(decamethylene), poly(decamethylene carbonate),
+                                    poly[(decamethylenedioxy)-dihexamethylene oxide], poly(decamethylene disulfide), poly(decamethylenedithioethylene disulfide), poly(decamethylenedithiohexamethylene disulfide), poly(decamethylene dithioladipate), poly(decamethylenedithiotetramethylene
+                                    disulfide), poly(decamethylene pimelate), poly(decamethylene fumaramide), poly(decamethylene glutaramide), poly(decamethylene isophthalate), poly(decamethylene malonate), poly(decamethylene oxydiacetate), poly(decamethyleneoxymethylene oxide),
+                                    poly(decamethylene succinate), poly(decamethylene sulfide), poly(decamethylene thiodivalerate), poly(decamethylenethiohexamethylene sulfide), poly(divinylbenzal), poly(dodecamethylene), poly(dodecanedioic anhydride), poly(eicosamethylene adipate),
+                                    poly(eicosamethylene azelate), poly(eicosamethylene glutarate), poly(eicosamethylene isophthalate), poly(eicosamethylene malonate), poly(eicosamethylene oxalate), poly(eicosamethylene oxydiacetate), poly(eicosamethylene phthalate),
+                                    poly(eicosamethylene pimelate), poly(eicosamethylene sebacate), poly(eicosamethylene suberate), poly(eicosamethylene succinate), poly(eicosamethylene thiodivalerate), poly[ethylene p-(carboxyphenoxy)-butyrate], poly[ethylene
+                                    p-(carboxyphenoxy)-caproate], poly[ethylene p-(carboxyphenoxy)-heptanoate], poly[ethylene p-(carboxyphenoxy)-undecanoate], poly[ethylene p-(carboxyphenoxy)-valerate], poly(ethylene 2,2'-dibenzoate), poly[(ethylenedioxy)-diethylene 2,2'-dibenzoate],
+                                    poly(ethylene 2,2'-dibenzoate), poly[(ethylenedioxy)-diethylene 3,3'-dibenzoate], poly[(ethylenedioxy)-diethylene isophthalate], poly[(ethylenedioxy)-diethylene sebacate], poly[(ethylenedioxy)-diethylene thiodivalerate], poly(ethylene
+                                    disiloxanylenedi-propionamide), poly[(ethylenedithio)-diacetic anhydride], poly[(ethylenedithio)-dipropionic anhydride], poly(ethylene dithionisophthalate), poly(ethelene dithiotetra-methylene disulfide), poly(ethylene fumaramide), poly(ethylene
+                                    glutarate), poly(ethylene 2,4-hexadienediamide), poly(ethylene phthalate), poly(ethylene sulfonyldivalerate), poly(ethylene terephthalate), poly(heptamethylene), poly(hexamethylene azelate), poly(hexamethylene carbonate), poly[hexamethylene
+                                    p-(carboxyphenoxy)-acetate], poly[hexamethylene p-(carboxyphenoxy)-caproate], poly[hexamethylene p-(carboxyphenoxy)-undecanoate], poly[hexamethylene p-(carboxyphenoxy)-valerate], poly(hexamethylene isophthalate), poly[hexamethylene
+                                    (methylene-2,5-tetrahydrofuran)-dicarboxamide], poly(hexamethylene octadecanediamide), poly(hexamethylene oxydiacetate), poly(hexamethylene 4,4'-oxydibenzoate), poly(hexamethylene pimelate), poly(hexamethylene succinate), poly(hexamethylene
+                                    thiodivalerate), poly(hexamethylenethiooentamethylene sulfide), poly(hexamethylenethiotetramethylene sulfide), poly(hexenamer), etc. Illustratively, transitory element 100 may be manufactured from any substituted polymers of poly(acrylamide),
+                                    poly(acrylic acid), poly(adipic anhydride), poly(7-aminoenanthic acid), poly(12-aminolauric acid), poly(ll-aminoundecanoic acid), poly(azelaic anhydride), poly[l,3-butadiene(l,4-)-alt-methacrylonitrile], poly[l,3-butadiene(l,4-)-alt-methyl
+                                    methacrylate], poly(butadiene oxide), poly(caprylaldehyde), poly(1,4-cyclohexylenedimethylene azelate), poly(1,4-cyclohexylenedimethylene dodecanedioate), poly(l,4-cyclohexylenedimethylene glutarate), poly(1,4-cyclohexylenedimethylene
+                                    p-phenylenediacetate), poly(1,4-cyclohexylenedimethylene pimelate), poly(1,4-cyclohexylenedimethylene sebacate), poly(1,4-cyclohexylenedimethylene suberate), poly(cyclohexylidenethiohexamethylene sulfide), poly(cyclopropylenedimethylene
+                                    piperazinediurethane), poly(cyclopropylidenedimethylene oxide), poly(decamethylene), poly(decamethylene carbonate), poly[(decamethylenedioxy)-dihexamethylene oxide], poly(decamethylene disulfide), poly(decamethylenedithioethylene disulfide),
+                                    poly(decamethylenedithiohexamethylene disulfide), poly(decamethylene dithioladipate), poly(decamethylenedithiotetramethylene disulfide), poly(decamethylene pimelate), poly(decamethylene fumaramide), poly(decamethylene glutaramide), poly(decamethylene
+                                    isophthalate), poly(decamethylene malonate), poly(decamethylene oxydiacetate), poly(decamethyleneoxymethylene oxide), poly(decamethylene succinate), poly(decamethylene sulfide), poly(decamethylene thiodivalerate), poly(decamethylenethiohexamethylene
+                                    sulfide), poly(divinylbenzal), poly(dodecamethylene), poly(dodecanedioic anhydride), poly(eicosamethylene adipate), poly(eicosamethylene azelate), poly(eicosamethylene glutarate), poly(eicosamethylene isophthalate), poly(eicosamethylene malonate),
+                                    poly(eicosamethylene oxalate), poly(eicosamethylene oxydiacetate), poly(eicosamethylene phthalate), poly(eicosamethylene pimelate), poly(eicosamethylene sebacate), poly(eicosamethylene suberate), poly(eicosamethylene succinate), poly(eicosamethylene
+                                    thiodivalerate), poly[ethylene p-(carboxyphenoxy)-butyrate], poly[ethylene p-(carboxyphenoxy)-caproate], poly[ethylene p-(carboxyphenoxy)-heptanoate], poly[ethylene p-(carboxyphenoxy)-undecanoate], poly[ethylene p-(carboxyphenoxy)-valerate],
+                                    poly(ethylene 2,2'-dibenzoate), poly[(ethylenedioxy)-diethylene 2,2'-dibenzoate], poly(ethylene 2,2'-dibenzoate), poly[(ethylenedioxy)-diethylene 3,3'-dibenzoate], poly[(ethylenedioxy)-diethylene isophthalate], poly[(ethylenedioxy)-diethylene seba
+                                    cate], poly[(ethylenedioxy)-diethylene thiodivalerate], poly(ethylene disiloxanylenedi-propionamide), poly[(ethylenedithio)-diacetic anhydride], poly[(ethylenedithio)-dipropionic anhydride], poly(ethylene dithionisophthalate), poly(ethelene
+                                    dithiotetra-methylene disulfide), poly(ethylene fumaramide), poly(ethylene glutarate), poly(ethylene 2,4-hexadienediamide), poly(ethylene phthalate), poly(ethylene sulfonyldivalerate), poly(ethylene terephthalate), poly(heptamethylene),
+                                    poly(hexamethylene azelate), poly(hexamethylene carbonate), poly[hexamethylene p-(carboxyphenoxy)-acetate], poly[hexamethylene p-(carboxyphenoxy)-caproate], poly[hexamethylene p-(carboxyphenoxy)-undecanoate], poly[hexamethylene
+                                    p-(carboxyphenoxy)-valerate], poly(hexamethylene isophthalate), poly[hexamethylene (methylene-2,5-tetrahydrofuran)-dicarboxamide], poly(hexamethylene octadecanediamide), poly(hexamethylene oxydiacetate), poly(hexamethylene 4,4'-oxydibenzoate),
+                                    poly(hexamethylene pimelate), poly(hexamethylene succinate), poly(hexamethylene thiodivalerate), poly(hexamethylenethiooentamethylene sulfide), poly(hexamethylenethiotetramethylene sulfide), poly(hexenamer), etc.</p>
+                                <p n="0013" xml:id="_a9bac10035">FIG. 2 is a schematic diagram illustrating an exploded view of an instrument tip assembly 200. Illustratively, an instrument tip assembly 200 may comprise a transitory element 100, a lock 210, a superior fixation
+                                    mechanism 220, an inferior fixation mechanism 225, a fixation mechanism 230, a hypodermic tube 240, and a blank 250. In one or more embodiments, lock 210 may comprise a lock superior end 211 and a lock inferior end 212. Illustratively, lock 210 may
+                                    comprise a blank housing 215, e.g., lock 210 may comprise a blank housing 215 disposed between lock superior end 211 and lock inferior end 212. In one or more embodiments, superior fixation mechanism 220 may comprise a setscrew, a magnet, an
+                                    adhesive, a weld, etc. Illustratively, inferior fixation mechanism 225 may comprise a setscrew, a magnet, an adhesive, a weld, etc. In one or more embodiments, fixation mechanism 230 may comprise a fixation mechanism distal end 231 and a fixation
+                                    mechanism proximal end 232. Illustratively, fixation mechanism 230 may comprise a setscrew, a magnet, an adhesive, a weld, etc. In one or more embodiments, hypodermic tube 240 may comprise a hypodermic tube distal end 241 and a hypodermic tube
+                                    proximal end 242. Illustratively, blank 250 may comprise a blank distal end 251 and a blank proximal end 252. In one or more embodiments, blank 250 may comprise one or more instrument jaws 260, e.g., blank 250 may comprise a pair of instrument jaws
+                                    260. Illustratively, blank 250 may comprise a plurality of instrument jaws 260, e.g., blank 250 may comprise two instrument jaws 260, three instrument jaws 260, four instrument jaws 260, five instrument jaws 260, six instrument jaws 260, etc. In one
+                                    or more embodiments, instrument jaws 260 may comprise forceps jaws. Illustratively, instrument jaws 260 may comprise scissors jaws.</p>
+                                <p n="0014" xml:id="_a9bac10036">FIGs. 3A and 3B are schematic diagrams illustrating an assembled instrument tip 300. FIG. 3A illustrates a superior view of an assembled instrument tip 300. FIG. 3B illustrates a cross-sectional view in a sagittal
+                                    plane of an assembled instrument tip 300. Illustratively, a portion of hypodermic tube 240 may be disposed in a portion of nosecone 110, e.g., hypodermic tube proximal end 242 may be disposed in a portion of nosecone 110. In one or more embodiments,
+                                    a portion of hypodermic tube 240 may be fixed within a portion of nosecone 110, e.g., a portion of hypodermic tube 240 may be fixed within a portion of nosecone 110 by an interference fit, an adhesive, a setscrew, a weld, etc. Illustratively, a
+                                    portion of hypodermic tube 240 may be disposed in hypodermic tube housing 113, e.g., hypodermic tube proximal end 242 may be disposed in hypodermic tube housing 113 wherein hypodermic tube distal end 241 extends from transitory element distal end
+                                    101. In one or more embodiments, a portion of hypodermic tube 240 may be fixed within hypodermic tube housing 113, e.g., a portion of hypodermic tube 240 may be fixed within hypodermic tube housing 113 by an interference fit, an adhesive, a setscrew,
+                                    a weld, etc. Illustratively, lock 210 may be disposed in a portion of transitory element 100, e.g., lock 210 may be disposed in outer base aperture 108. In one or more embodiments, lock 210 may be disposed in outer base aperture 108 wherein lock 210
+                                    may be disposed in lock housing 125. Illustratively, lock 210 may be disposed in lock housing 125 wherein blank housing 215 is oriented to align with hypodermic tube housing 113, e.g., lock 210 may be disposed in lock housing 125 wherein blank
+                                    housing 215 is disposed within inner lumen 122. In one or more embodiments, lock 210 may be fixed in lock housing 125, e.g., lock 210 may be fixed in lock housing 125 by an interference fit, an adhesive, a setscrew, a weld, etc.</p>
+                                <p n="0015" xml:id="_a9bac10037">Illustratively, blank 250 may be disposed in hypodermic tube 240, e.g., blank 250 may be disposed in hypodermic tube 240 wherein blank distal end 251 extends from hy podermic tube distal end 241. In one or more
+                                    embodiments, blank 250 may be disposed in hypodermic tube 240, nosecone 110, hypodermic tube housing 113, inner bore 123, pressure mechanism 130, outer base 105, inner lumen 122, outer base aperture 108, lock housing 125, lock 210, and blank housing
+                                    215. Illustratively, superior fixation mechanism 220 may be disposed in lock 210, e.g., superior fixation mechanism 220 may be disposed in lock superior end 211. In one or more embodiments, inferior fixation mechanism 225 may be disposed in lock 210,
+                                    e.g., inferior fixation mechanism 225 may be disposed in lock inferior end 212. Illustratively, a portion of blank 250 may be disposed between superior fixation mechanism 220 and inferior fixation mechanism 225 within lock 210. In one or more
+                                    embodiments, superior fixation mechanism 220 and inferior fixation mechanism 225 may be configured to fix a portion of blank 250 within lock 210. For example, superior fixation mechanism 220 may comprise a first setscrew and inferior fixation
+                                    mechanism 225 may comprise a second setscrew. Illustratively, a portion of blank 250 may be fixed in lock 210 by an interference fit, an adhesive, a setscrew, a weld, etc.</p>
+                                <p n="0016" xml:id="_a9bac10038">In one or more embodiments, a portion of fixation mechanism 230 may be disposed in fixation mechanism distal receptacle 120, e.g., fixation mechanism distal end 231 may be disposed in fixation mechanism distal
+                                    receptacle 120. Illustratively, a first portion of fixation mechanism 230 may be disposed in fixation mechanism distal receptacle 120 wherein a second portion of fixation mechanism 230 extends from transitory element proximal end 102, e.g., fixation
+                                    mechanism distal end 231 may be disposed in fixation mechanism distal receptacle 120 wherein fixation mechanism proximal end 232 extends from transitory element proximal end 102. In one or more embodiments, a portion of fixation mechanism 230 may be
+                                    disposed in fixation mechanism distal housing 121. Illustratively, fixation mechanism distal end 231 may be disposed in fixation mechanism distal housing 121 wherein fixation mechanism proximal end 232 extends from transitory element proximal end
+                                    102. In one or more embodiments, fixation mechanism distal end 231 may be disposed in fixation mechanism distal housing 121 wherein fixation mechanism proximal end 232 extends a distance from transitory element proximal end 102 in a range of 0.065 to
+                                    0.125 inches, e.g., fixation mechanism distal end 231 may be disposed in fixation mechanism distal housing 121 wherein fixation mechanism proximal end 232 extends a distance from transitory element proximal end 102 of 0.094 inch es. Illustratively,
+                                    fixation mechanism distal end 231 may be disposed in fixation mechanism distal housing 121 wherein fixation mechanism proximal end 232 extends a distance from transitory element proximal end 102 of less than 0.065 inches or greater than 0.125 inches.
+                                    In one or more embodiments, a portion of fixation mechanism 230 may be fixed in fixation mechanism distal housing 121, e.g., fixation mechanism distal end 231 may be fixed in fixation mechanism distal housing 121. Illustratively, a portion of
+                                    fixation mechanism 230 may be fixed in fixation mechanism distal housing 121 by an interference fit, an adhesive, a magnetic field, a weld, a threading, etc.</p>
+                                <p n="0017" xml:id="_a9bac10039">In one or more embodiments, assembled instrument tip 300 may be a single-use instrument, e.g., assembled instrument tip 300 may be intended for only one use in a surgery. Illustratively, assembled instrument tip 300
+                                    may be sterilized after manufacturing but prior to shipment of assembled instrument tip 300 to a user, e.g., assembled instrument tip 300 may be sterilized by ethylene oxide after manufacturing but prior to shipment of assembled instrument tip 300 to
+                                    a user. In one or more embodiments, one or more properties of assembled instrument tip 300 may be configured to prevent a user from using a sterile assembled instrument tip 300 in a first surgical procedure causing the assembled instrument tip 300 to
+                                    become non-sterile, sterilizing the assembled instrument tip 300, and using the sterile assembled instrument tip 300 in a second surgical procedure. Illustratively, transitory element 100 may be manufactured from a material configured to deform if
+                                    transitory element 100 is sterilized in a medical autoclave. In one or more embodiments, transitory element 100 may be manufactured from a material configured to retain ethylene oxide, e.g., transitory element 100 may be manufactured from a material
+                                    having a degree of crystallinity greater than 60.0 percent. For example, transitory element 100 may be manufactured from a material having a degree of crystallinity greater than 70.0 percent. In one or more embodiments, transitory element 100 may be
+                                    manufactured from a material having a degree of crystallinity in a range of 60.0 to 80.0 percent, e.g., transitory element 100 may be manufactured from a material having a degree of crystallinity of 75.0 percent. Illustratively, transitory element
+                                    100 may be manufactured from a material having a degree of crystallinity of less than 60.0 percent or greater than 80.0 percent. In one or more embodiments, transitory element 100 may be manufactured from a material configured to retain less than 4.0
+                                    milligrams of ethylene oxide after a first sterilization by ethylene oxide and configured to retain more than 4.0 milligrams of ethylene oxide after a second sterilization by ethylene oxide. For example, transitory element 100 may be manufactured
+                                    from polyoxymethylene, polytetrafluoroethylene, isotactic polypropylene, high-density polyethylene, etc. In one or more embodiments, transitory element 100 may be manufactured from a material configured to degrade if transitory element 100 is
+                                    sterilized by plasma sterilization, e.g., transitory element 100 may be manufactured by a material configured to cross-link in plasma sterilization.</p>
+                                <p n="0018" xml:id="_a9bac10040">Illustratively, fixation mechanism 230 may be manufactured from a material configured to deform if fixation mechanism 230 is sterilized in a medical autoclave. In one or more embodiments, fixation mechanism 230 may be
+                                    manufactured from a material having a melting point below 140.0 degrees Fahrenheit. Illustratively, fixation mechanism 230 may be manufactured from a material having a melting point in a range of 158.0 to 212.0 degrees Fahrenheit, e.g., fixation
+                                    mechanism 230 may be manufactured from a material having a melting point of 160.0 degrees Fahrenheit. In one or more embodiments, fixation mechanism 230 may be manufactured from a material having a melting point of less than 158.0 degrees Fahrenheit
+                                    or greater than 212.0 degrees Fahrenheit. Illustratively, lock 210 may be manufactured from a material configured to deform if lock 210 is sterilized in a medical autoclave. In one or more embodiments, lock 210 may be manufactured from a material
+                                    having a melting point below 140.0 degrees Fahrenheit. Illustratively, lock 210 may be manufactured from a material having a melting point in a range of 158.0 to 212.0 degrees Fahrenheit, e.g., lock 210 may be manufactured from a material having a
+                                    melting point of 160.0 degrees Fahrenheit. In one or more embodiments, lock 210 may be manufactured from a material having a melting point of less than 158.0 degrees Fahrenheit or greater than 212.0 degrees Fahrenheit. Illustratively, hypodermic tube
+                                    240 may be manufactured from a material configured to deform if hypodermic tube 240 is sterilized in a medical autoclave. In one or more embodiments, hypodermic tube 240 may be manufactured from a material having a melting point below 140.0 degrees
+                                    Fahrenheit. Illustratively, hypodermic tube 240 may be manufactured from a material having a melting point in a range of 158.0 to 212.0 degrees Fahrenheit, e.g., hypodermic tube 240 may be manufactured from a material having a melting point of 160.0
+                                    degrees Fahrenheit. In one or more embodiments, hypodermic tube 240 may be manufactured from a material having a melting point of less than 158.0 degrees Fahrenheit or greater than 212.0 degrees Fahrenheit. Illustratively, blank 250 may be
+                                    manufactured from a material configured to deform if blank 250 is sterilized in a medical autoclave. In one or more embodiments, blank 250 may be manufactured from a material having a melting point below 140.0 degrees Fahrenheit. Illustratively,
+                                    blank 250 may be manufactured from a material having a melting point in a range of 158.0 to 212.0 degrees Fahrenheit, e.g., blank 250 may be manufactured from a material having a melting point of 160.0 degrees Fahrenheit. In one or more embodiments,
+                                    blank 250 may be manufactured from a material having a melting point of less than 158.0 degrees Fahrenheit or greater than 212.0 degrees Fahrenheit.</p>
+                                <p n="0019" xml:id="_a9bac10041">FIG. 4 is a schematic diagram illustrating an exploded view of an instrument handle assembly 400. Illustratively, an instrument handle assembly 400 may comprise an actuation structure 410, a handle base 440, and a
+                                    fixation mechanism proximal receptacle 450. In one or more embodiments, an actuation structure 410 may comprise an actuation structure distal end 411 and an actuation structure proximal end 412. Illustratively, actuation structure 410 may comprise an
+                                    instrument tip housing 430. In one or more embodiments, instrument tip housing 430 may be configured to house assembled instrument tip 300. Illustratively, actuation structure 410 may comprise a plurality of actuation arms 420. In one or more
+                                    embodiments, each actuation arm 420 may comprise at least one extension joint 425. In one or more embodiments, actuation structure 410 may comprise a shape memory material configured to project actuation structure distal end 411 a first distance from
+                                    actuation structure proximal end 412, e.g., when actuation structure 410 is fully decompressed. Illustratively, actuation structure 410 may comprise a shape memory material configured to project actuation structure distal end 411 a second distance
+                                    from actuation structure proximal end 412, e.g., when actuation structure 410 is fully compressed. In one or more embodiments, the second distance from actuation structure proximal end 412 may be greater than the first distance from actuation
+                                    structure proximal end 412. Actuation structure 410 may be manufactured from any suitable material, e.g., polymers, metals, metal alloys, etc., or from any combination of suitable materials. Illustratively, actuation structure 410 may be compressed
+                                    by an application of a compressive force to actuation structure 410. In one or more embodiments, actuation structure 410 may be compressed by an application of one or more compressive forces located at one or more locations around an outer perimeter
+                                    of actuation structure 410. Illustratively, the one or more locations may comprise any of a plurality of locations around the outer perimeter of actuation structure 410. For example, a surgeon may compress actuation structure 410 by squeezing
+                                    actuation structure 410. Illustratively, the surgeon may compress actuation structure 410 by squeezing actuation structure 410 at any particular location of a plurality of locations around an outer perimeter of actuation structure 410. In one or more
+                                    embodiments, actuation structure 410 may be compressed by an application of a compressive force to any one or more of the plurality of actuation arms 420. Illustratively, each actuation arm 420 may be configured to actuate independently. In one or
+                                    more embodiments, each actuation arm 420 may be connected to one or more of the plurality of actuation arms 420 wherein an actuation of a particular actuation arm 420 may be configured to actuate every actuation arm 420 of the plurality of actuation
+                                    arms 420. Illustratively, one or more actuation arms 420 may be configured to actuate in pairs or groups. For example, an actuation of a first actuation arm 420 may be configured to actuate a second actuation arm 420. In one or more embodiments, a
+                                    compression of actuation structure 410, e.g., due to an application of a compressive force to a particular actuation arm 420, may be configured to actuate the particular actuation arm 420. Illustratively, an actuation of the particular actuation arm
+                                    420 may be configured to actuate every actuation arm 420 of the plurality of actuation arms 420. In one or more embodiments, an application of a compressive force to a particular actuation arm 420 may be configured to extend at least one extension
+                                    joint 425 of the particular actuation arm 420.</p>
+                                <p n="0020" xml:id="_a9bac10042">Illustratively, handle base 440 may comprise a handle base distal end 441 and a handle base proximal end 442. In one or more embodiments, handle base 440 may comprise a handle base inner lumen 445. Illustratively,
+                                    handle base 440 may comprise an actuation structure interface 446 configured to interface with a portion of actuation structure 410, e.g., handle base 440 may comprise an actuation structure interface 446 configured to interface with actuation
+                                    structure proximal end 412. In one or more embodiments, fixation mechanism proximal receptacle 450 may comprise a fixation mechanism proximal receptacle distal end 451 and a fixation mechanism proximal receptacle proximal end 452. Illustratively,
+                                    fixation mechanism proximal receptacle 450 may comprise a fixation mechanism proximal housing 455. In one or more embodiments, fixation mechanism proximal housing 455 may be configured to house a portion of fixation mechanism 230, e.g., fixation
+                                    mechanism proximal housing 455 may be configured to house fixation mechanism proximal end 232.<list type="bulleted" xml:id="_a9bac10043">
+                                        <item>FIGs. 5A and 5B are schematic diagrams illustrating an assembled instrument handle 500. FIG. 5A illustrates a superior view of an assembled instrument handle 500. FIG. 5B illustrates a cross-sectional view in a sagittal plane of an assembled
+                                            instrument handle 500. Illustratively, assembled instrument handle 500 may comprise an assembled instrument handle distal end 501 and an assembled instrument handle proximal end 502. In one or more embodiments, assembled instrument handle 500 may
+                                            comprise a handle inner lumen 510. Illustratively, a portion of handle base 440 may be disposed in a portion of actuation structure 410, e.g., handle base distal end 441 may be disposed in actuation structure proximal end 412. In one or more
+                                            embodiments, a portion of handle base 440 may be disposed in a portion of actuation structure 410 wherein actuation structure interface 446 is adjacent to actuation structure proximal end 412. Illustratively, a portion of handle base 440 may be
+                                            disposed in a portion of actuation structure 410 wherein handle base inner lumen 445 is oriented to align with handle inner lumen 510. In one or more embodiments, a portion of handle base 440 may be disposed in actuation structure 410 wherein handle
+                                            base proximal end 442 is assembled instrument handle proximal end 502. Illustratively, a portion of handle base 440 may be fixed in a portion of actuation structure 410, e.g., a portion of handle base 440 may be fixed in a portion of actuation
+                                            structure 410 by an interference fit, an adhesive, a magnetic field, a weld, a threading, etc.</item>
+                                    </list>
+                                </p>
+                                <p n="0021" xml:id="_a9bac10045">In one or more embodiments, fixation mechanism proximal receptacle 450 may be disposed in actuation structure 410, e.g., fixation mechanism proximal receptacle 450 may be disposed in actuation structure 410 wherein
+                                    fixation mechanism proximal receptacle distal end 451 is disposed in actuation structure 410 and fixation mechanism proximal receptacle proximal end 452 is disposed in actuation structure 410. Illustratively, fixation mechanism proximal receptacle
+                                    450 may be disposed in actuation structure 410 wherein fixation mechanism proximal receptacle 450 is disposed between handle inner lumen 510 and instrument tip housing 430. In one or more embodiments, fixation mech anism proximal receptacle 450 may
+                                    be disposed in actuation structure 410 wherein fixation mechanism proximal receptacle distal end 451 may be adjacent to a portion of instrument tip housing 430. Illustratively, fixation mechanism proximal receptacle 450 may be disposed in actuation
+                                    structure 410 wherein fixation mechanism proximal receptacle proximal end 452 may be adjacent to a portion of handle inner lumen 510. In one or more embodiments, fixation mechanism proximal receptacle 450 may be fixed in actuation structure 410,
+                                    e.g., fixation mechanism proximal receptacle 450 may be fixed in actuation structure 410 by an interference fit, an adhesive, a magnetic field, a weld, a threading, etc. In one or more embodiments, assembled instrument handle 500 may be manufactured
+                                    from a material suitable for sterilization by a medical autoclave. Illustratively, assembled instrument handle 500 may be manufactured from a material, e.g., Nylon, configured to withstand exposure to temperatures, pressures, and ambient conditions
+                                    present in a medical autoclave without degradation. For example, assembled instrument handle 500 may be configured to function normally after exposure in a temperature 275 degrees Fahrenheit. In one or more embodiments, assembled instrument handle
+                                    500 may be configured to be used in a surgical procedure and then sterilized by a medical autoclave at least three times. Illustratively, assembled instrument handle 500 may be configured to be used in a surgical procedure and then sterilized by a
+                                    medical autoclave more than three times. In one or more embodiments, assembled instrument handle 500 may be configured to be used in a surgical procedure and then sterilized by a medical autoclave at least nine times. Illustratively, assembled
+                                    instrument handle 500 may be configured to be used in a surgical procedure and then sterilized by a medical autoclave more than nine times.</p>
+                                <p n="0022" xml:id="_a9bac10046">FIG. 6 is a schematic diagram illustrating an exploded view of an instrument assembly 600. Illustratively, an instrument assembly 600 may comprise a handle base 440, an actuation structure 410, a fixation mechanism
+                                    proximal receptacle 450, a fixation mechanism 230, a transitory element 100, a lock 210, a superior fixation mechanism 220, an inferior fixation mechanism 225, a hypodermic tube 240, and a blank 250. In one or more embodiments, a portion of fixation
+                                    mechanism 230 may be disposed in fixation mechanism proximal receptacle 450, e.g., fixation mechanism proximal end 232 may be disposed in fixation mechanism proximal receptacle 450. Illustratively, a first portion of fixation mechanism 230 may be
+                                    disposed in fixation mechanism proximal receptacle 450 wherein a second portion of fixation mechanism 230 may be disposed in fixation mechanism distal receptacle 120, e.g., fixation mechanism proximal end 232 may be disposed in fixation mechanism
+                                    proximal receptacle 450 and fixation mechanism distal end 231 may be disposed in fixation mechanism distal receptacle 120. In one or more embodiments, a portion of fixation mechanism 230 may be disposed in fixation mechanism proximal housing 455,
+                                    e.g., fixation mechanism proximal end 232 may be disposed in fixation mechanism proximal housing 455. Illustratively, a first portion of fixation mechanism 230 may be disposed in fixation mechanism proximal housing 455 wherein a second portion of
+                                    fixation mechanism 230 may be disposed in fixation mechanism distal housing 121, e.g., fixation mechanism proximal end 232 may be disposed in fixation mechanism proximal housing 455 and fixation mechanism distal end 321 may be disposed in fixation
+                                    mechanism distal housing 121. In one or more embodiments, a portion of fixation mechanism 230 may be fixed in fixation mechanism proximal housing 455, e.g., fixation mechanism proximal end 232 may be fixed in fixation mechanism proximal housing 455.
+                                    Illustratively, a portion of fixation mechanism 230 may be fixed in fixation mechanism proximal housing 455 by an interference fit, an adhesive, a magnetic field, a weld, a threading, etc. In one or more embodiments, a first portion of fixation
+                                    mechanism 230 may be fixed in fixation mechanism proximal housing 455 and a second portion of fixation mechanism 230 may be fixed in fixation mechanism distal housing 121, e.g., fixation mechanism proximal end 232 may be fixed in fixation mechanism
+                                    proximal housing 455 and fixation mechanism distal end 231 may be fixed in fixation mechanism distal housing 121.</p>
+                                <p n="0023" xml:id="_a9bac10047">Illustratively, a portion of transitory element 100 may be disposed in a portion of actuation structure 410, e.g., a portion of outer base 105 may be disposed in instrument tip housing 430. In one or more embodiments,
+                                    fixation mechanism 230 may be configured to fix a portion of transitory element 100 in a portion of actuation structure 410, e.g., fixation mechanism 230 may be configured to fix a portion of outer base 105 in instrument tip housing 430.
+                                    Illustratively, fixation mechanism 230 may comprise a setscrew configured to screw into fixation mechanism distal housing 121 and fixation mechanism proximal housing 455. In one or more embodiments, fixation mechanism 230 may be permanently fixed in
+                                    fixation mechanism distal housing 121, e.g., fixation mechanism distal end 231 may be fixed in distal housing 121 wherein removing fixation mechanism distal end 231 from distal housing 121 may be configured to damage a portion of transitory element
+                                    100. Illustratively, fixation mechanism distal end 231 may be permanently fixed in distal housing 121 wherein removing fixation mechanism distal end 231 from distal housing 121 may be configured to damage fixation mechanism distal receptacle 120. In
+                                    one or more embodiments, fixation mechanism 230 may be temporarily fixed in fixation mechanism proximal housing 455, e.g., fixation mechanism proximal end 232 may be fixed in fixation mechanism proximal housing 455 wherein fixation mechanism proximal
+                                    end 232 is removable from fixation mechanism proximal housing 455. Illustratively, a first fixation mechanism proximal end 232 may be temporarily fixed in fixation mechanism proximal housing 455 wherein the first fixation mechanism proximal end 232
+                                    may be removed from fixation mechanism proximal housing 455 and a second fixation mechanism proximal end 232 may be inserted in fixation mechanism proximal housing 455. In one or more embodiments, a first fixation mechanism proximal end 232 may be
+                                    temporarily fixed in fixation mechanism proximal housing 455 wherein the first fixation mechanism proximal end 232 may be removed from fixation mechanism proximal housing 455 and a second fixation mechanism proximal end 232 may be temporarily fixed
+                                    in fixation mechanism proximal housing 455.</p>
+                                <p n="0024" xml:id="_a9bac10048">FIGs. 7A and 7B are schematic diagrams illustrating an instrument with open jaws 700. FIG. 7A illustrates a superior view of an instrument with open jaws 700. FIG. 7B illustrates a cross-sectional view in a sagittal
+                                    plane of an instrument with open jaws 700. Illustratively, assembled instrument handle 500 and assembled instrument tip 300 may comprise an instrument with open jaws 700 when fixation mechanism proximal end 232 is temporarily fixed in fixation
+                                    mechanism proximal housing 455. In one or more embodiments, assembled instrument handle 500 and assembled instrument tip 300 may comprise an instrument with open jaws 700 when a first instrument jaw 260 is fully separated from a second instrument jaw
+                                    260. Illustratively, assembled instrument handle 500 and assembled instrument tip 300 may comprise an instrument with open jaws 700 when actuation structure 210 is fully decompressed. In one or more embodiments, assembled instrument handle 500 and
+                                    assembled instrument tip 300 may comprise an instrument with open jaws 700 when hypodermic tube 240 is fully retracted relative to blank 250. Illustratively, assembled instrument handle 500 and assembled instrument tip 300 may comprise an instrument
+                                    with open jaws 700 when nosecone 110 is fully retracted relative to outer base 105. In one or more embodiments, assembled instrument handle 500 and assembled instrument tip 300 may comprise an instrument with open jaws 700 when pressure mechanism 130
+                                    is fully compressed.</p>
+                                <p n="0025" xml:id="_a9bac10049">FIGs. 8A and 8B are schematic diagrams illustrating an instrument with partially closed jaws 800. FIG. 8A illustrates a superior view of an instrument with partially closed jaws 800. FIG. 8B illustrates a
+                                    cross-sectional view in a sagittal plane of an instrument with partially closed jaws 800. Illustratively, a compression of actuation structure 410 may be configured to gradually transition assembled instrument handle 500 and assembled instrument tip
+                                    300 from an instrument with open jaws 700 to an instrument with partially closed jaws 800. In one or more embodiments, a compression of actuation structure 410 may be configured to extend actuation structure distal end 411 relative to actuation
+                                    structure proximal end 412. Illustratively, an extension of actuation structure distal end 411 relative to actuation structure proximal end 412 may be configured to extend nosecone 110 relative to handle base 105. In one or more embodiments, an
+                                    extension of nosecone 110 relative to handle base 105 may be configured to extend hypodermic tube 240 relative to blank 250. Illustratively, an extension of hypodermic tube 240 relative to blank 250 may be configured to extend hypodermic tube distal
+                                    end 241 over a portion of a first instrument jaw 260 and over a portion of a second instrument jaw 260. In one or more embodiments, an extension of hypodermic tube distal end 241 over a portion of a first instrument jaw 260 and over a portion of a
+                                    second instrument jaw 260 may be configured to reduce a separation distance between the first instrument jaw 260 and the second instrument jaw 260 until assembled instrument handle 500 and assembled instrument tip 300 comprise an instrument with
+                                    partially closed jaws 800. Illustratively, an extension of nosecone 110 relative to handle base 105 may be configured to expand pressure mechanism 130, e.g., an extension of nosecone 110 relative to handle base 105 may be configured to extend
+                                    pressure mechanism distal end 131 relative to pressure mechanism proximal end 132. In one or more embodiments, pressure mechanism 130 may be configured to provide a force that resists an extension of nosecone 110 relative to handle base 105, e.g.,
+                                    pressure mechanism 130 may be configured to provide a force that facilitates a retraction of nosecone 110 relative to handle base 105.</p>
+                                <p n="0026" xml:id="_a9bac10050">FIGs. 9A and 9B are schematic diagrams illustrating an instrument with closed jaws 900. FIG. 9A illustrates a superior view of an instrument with closed jaws 900. FIG. 9B illustrates a cross-sectional view in a
+                                    sagittal plane of an instrument with closed jaws 900. Illustratively, a compression of actuation structure 410 may be configured to gradually transition assembled instrument handle 500 and assembled instrument tip 300 from an instrument with
+                                    partially closed jaws 800 to an instrument with closed jaws 900. In one or more embodiments, a compression of actuation structure 410 may be configured to extend actuation structure distal end 411 relative to actuation structure proximal end 412.
+                                    Illustratively, an extension of actuation structure distal end 411 relative to actuation structure proximal end 412 may be configured to extend nosecone 110 relative to handle base 105. In one or more embodiments, an extension of nosecone 110
+                                    relative to handle base 105 may be configured to extend hypodermic tube 240 relative to blank 250. Illustratively, an extension of hypodermic tube 240 relative to blank 250 may be configured to extend hypodermic tube distal end 241 over a portion of
+                                    a first instrument jaw 260 and over a portion of a second instrument jaw 260. In one or more embodiments, an extension of hypodermic tube distal end 241 over a portion of a first instrument jaw 260 and over a portion of a second instrument jaw 260
+                                    may be configured to reduce a separation distance between the first instrument jaw 260 and the second instrument jaw 260 until assembled instrument handle 500 and assembled instrument tip 300 comprise an instrument with closed jaws 900.
+                                    Illustratively, an extension of nosecone 110 relative to handle base 105 may be configured to expand pressure mechanism 130, e.g., an extension of nosecone 110 relative to handle base 105 may be configured to extend pressure mechanism distal end 131
+                                    relative to pressure mechanism proximal end 132. In one or more embodiments, pressure mechanism 130 may be configured to provide a force that resists an extension of nosecone 110 relative to handle base 105, e.g., pressure mechanism 130 may be
+                                    configured to provide a force that facilitates a retraction of nosecone 110 relative to handle base 105.</p>
+                                <p n="0027" xml:id="_a9bac10051">Illustratively, a decompression of actuation structure 410 may be configured to gradually transition assembled instrument handle 500 and assembled instrument tip 300 from an instrument with closed jaws 900 to an
+                                    instrument with partially closed jaws 800. In one or more embodiments, a decompression of actuation structure 410 may be configured to retract actuation structure distal end 411 relative to actuation structure proximal end 412. Illustratively, a
+                                    retraction of actuation structure distal end 411 relative to actuation structure proximal end 412 may be configured to retrace nosecone 110 relative to handle base 105. In one or more embodiments, a retraction of nosecone 110 relative to handle base
+                                    105 may be configured to retract hypodermic tube 240 relative to blank 250. Illustratively, a retraction of hypodermic tube 240 relative to blank 250 may be configured to retract hypodermic tube distal end 241 off from a portion of a first instrument
+                                    jaw 260 and off from a portion of a second instrument jaw 260. In one or more embodiments, a retraction of hypodermic tube distal end 241 off from a portion of a first instrument jaw 260 and off from a portion of a second instrument jaw 260 may be
+                                    configured to increase a separation distance between the first instrument jaw 260 and the second instrument jaw 260 until assembled instrument handle 500 and assembled instrument tip 300 comprise an instrument with partially closed jaws 800.
+                                    Illustratively, a retraction of nosecone 110 relative to handle base 105 may be configured to collapse pressure mechanism 130, e.g., a retraction of nosecone 110 relative to handle base 105 may be configured to retract pressure mechanism distal end
+                                    131 relative to pressure mechanism proximal end 132. In one or more embodiments, pressure mechanism 130 may be configured to provide a force that facilitates a retraction of nosecone 110 relative to handle base 105.</p>
+                                <p n="0028" xml:id="_a9bac10052">Illustratively, assembled instrument handle 500 may comprise a reusable instrument and assembled instrument tip 300 may comprise a single-use instrument. In one or more embodiments, a user may install a first
+                                    assembled instrument tip 300 in assembled instrument handle 500 by inserting fixation mechanism proximal end 232 into fixation mechanism proximal housing 455. Illustratively, fixation mechanism proximal housing 455 may be configured to temporarily
+                                    fix the first assembled instrument tip 300 in instrument tip housing 430, e.g., fixation mechanism proximal housing 455 may be configured to temporarily fix the first assembled instrument tip 300 in instrument tip housing 430 while the user performs
+                                    a first surgical procedure. In one or more embodiments, the user may remove the first assembled instrument tip 300 from assembled instrument handle 500 by removing fixation mechanism proximal end 232 from fixation mechanism proximal housing 455.
+                                    Illustratively, the user may install a second assembled instrument tip 300 in assembled instrument handle 500 by inserting fixation mechanism proximal end 232 into fixation mechanism proximal housing 455. In one or more embodiments, fixation
+                                    mechanism proximal housing 455 may be configured to temporarily fix the first assembled instrument tip 300 in instrument tip housing 430, e.g., fixation mechanism proximal housing 455 may be configured to temporarily fix the first assembled
+                                    instrument tip 300 in instrument tip housing 430 while the user performs a second surgical procedure.</p>
+                                <p n="0029" xml:id="_a9bac10053">The foregoing description has been directed to particular embodiments of this invention. It will be apparent; however, that other variations and modifications may be made to the described embodiments, with the
+                                    attainment of some or all of their advantages. Specifically, it should be noted that the principles of the present invention may be implemented in any system. Furthermore, while this description has been written in terms of a surgical instrument, the
+                                    teachings of the present invention are equally suitable to any systems where the functionality may be employed. Therefore, it is the object of the appended claims to cover all such variations and modifications as come within the true spirit and scope
+                                    of the invention.</p>
+                            </div>
+                        </body>
+                    </text>
+                </group>
+            </text>
+        </TEI>
+    </teiCorpus>
+</teiCorpus>

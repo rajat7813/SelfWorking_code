@@ -1,0 +1,48 @@
+{
+   "eventResponse":{
+      "eventid":"1482319",
+      "dataset":[
+         {
+            "label":"AM32_Response",
+            "property":[
+               {
+                  "key":"AM32_Result",
+                  "value":"NOK"
+               },
+               {
+                  "key":"AM32_Explanation",
+                  "value":"Technical fields will only be retrieved for stock managers retrieved"
+               }
+            ]
+         },
+         {
+            "label":"AM32_Get_Technical_Fields_service_response_repeating",
+            "property":{
+               "key":"TechField",
+               "value":null
+            }
+         },
+         {
+            "label":"Service_response_metadata",
+            "property":[
+               {
+                  "key":"Service_prefix_on_response_objects",
+                  "value":"AM32_"
+               },
+               {
+                  "key":"Service_response_root_object",
+                  "value":"AM32GetTechnicalFieldsFromDirectorate"
+               },
+               {
+                  "key":"http_errorcode",
+                  "value":"400"
+               },
+               {
+                  "key":"http_errorcode_message",
+                  "value":"Technical fields will only be retrieved for stock managers retrieved"
+               }
+            ]
+         }
+      ]
+   }
+}

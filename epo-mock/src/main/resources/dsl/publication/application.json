@@ -1,0 +1,57 @@
+{
+  "sequenceNumber": "DE102014011379A",
+  "_links": {
+    "dwpi": {
+      "href": "{serviceUrl}/application/{applicationRID}/dwpi"
+    },
+    "self": {
+      "href": "{serviceUrl}/application/{applicationRID}"
+    },
+    "family": {
+      "href": "{serviceUrl}/family/055134491"
+    },
+    "publications": {
+      "href": "{serviceUrl}/application/{applicationRID}/publications"
+    }
+  },
+  "id": "{applicationRID}",
+  "familyId": "055134491",
+  "number": {
+    "CC": "DE",
+    "SN": "102014011379",
+    "KC": "A"
+  },
+  "_embedded": {
+    "publications": [{
+      "title": "Dichtung zwischen zwei sich gegeneinander bewegenden Oberflächen",
+      "sequenceNumber": "DE102014011379A1",
+      "date": "2016-02-11",
+      "_links": {
+        "self": {
+          "href": "{serviceUrl}/publication/{applicationRID}"
+        }
+      },
+      "id": "{applicationRID}",
+      "number": {
+        "CC": "DE",
+        "SN": "102014011379",
+        "KC": "A1"
+      }
+    }],
+    "dwpi": [{
+      "sequenceNumber": "DE102014011379A1",
+      "date": "2016-02-11",
+      "_links": {
+        "self": {
+          "href": "{serviceUrl}/dwpi/448859101"
+        }
+      },
+      "id": "{applicationRID}",
+      "number": {
+        "CC": "DE",
+        "SN": "102014011379",
+        "KC": "A1"
+      }
+    }]
+  }
+}

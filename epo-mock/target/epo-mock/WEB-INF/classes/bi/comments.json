@@ -1,0 +1,58 @@
+{
+ "SE43GetComments": [ 
+  {
+   "SE43_Result": "OK",
+   "SE43_Explanation": ""
+  },
+  {
+   "AuthorId": "200296",
+   "CreatedDateTime": "2017-05-31 10:57:10",
+   "Text": "Test van 1655 naar 1603",
+   "RelatedTransaction": "Redistribution",
+   "DOSSIERNUMBER": "EP     14822901",
+   "APPLICATIONNUMBER": "EPA    14822901",
+   "CaseId": "61316",
+   "CMT_ID": "3083725"
+  },
+  {
+   "AuthorId": "",
+   "CreatedDateTime": "",
+   "Text": "",
+   "RelatedTransaction": "",
+   "DOSSIERNUMBER": "EP     14822901",
+   "APPLICATIONNUMBER": "EPA    14822901",
+   "CaseId": "61316",
+   "CMT_ID": "3098919"
+  },
+  {
+   "AuthorId": "200296",
+   "CreatedDateTime": "1486649255",
+   "Text": "Redistribution: <ayxs<y",
+   "RelatedTransaction": "",
+   "DOSSIERNUMBER": "EP     14822901",
+   "APPLICATIONNUMBER": "EPA    14822901",
+   "CaseId": "61316",
+   "CMT_ID": "3098920"
+  },
+  {
+   "AuthorId": "200296",
+   "CreatedDateTime": "1486649255",
+   "Text": "Redistribution: <ayxs<y",
+   "RelatedTransaction": "",
+   "DOSSIERNUMBER": "EP     14822901",
+   "APPLICATIONNUMBER": "EPA    14822901",
+   "CaseId": "61316",
+   "CMT_ID": "3108012"
+  },
+  {
+   "AuthorId": "200296",
+   "CreatedDateTime": "1486649255",
+   "Text": "Redistribution: <ayxs<y",
+   "RelatedTransaction": "",
+   "DOSSIERNUMBER": "EP     14822901",
+   "APPLICATIONNUMBER": "EPA    14822901",
+   "CaseId": "61316",
+   "CMT_ID": "3113116"
+  }
+ ]
+}

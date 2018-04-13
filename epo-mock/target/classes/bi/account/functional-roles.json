@@ -1,0 +1,436 @@
+{
+  "Functional_roles": {
+    "label": "Functional roles",
+    "_links": {
+      "self": {
+        "href": "/AccountManagement/caseview-user_account/798465/Functionalroles"
+      },
+      "api_doc": {
+        "href": "/api-docs/AccountManagement/caseview-user_account/798465/Functionalroles"
+      }
+    },
+    "actions": {
+      "@class": "array",
+      "actions": {
+        "name": "AddNewFunctionalRole",
+        "title": "Add new functional role",
+        "method": "POST",
+        "href": "/AccountManagement/AddNewFunctionalRole/798465"
+      }
+    },
+    "filter": [
+      {
+        "choicefilter": {
+          "param": "AssignmentTypeSource",
+          "label": "Assignment type source",
+          "options": [
+            {
+              "key": "AM_ATS_Deputization",
+              "count": {
+                "@type": "number",
+                "#text": "2"
+              },
+              "label": "Deputization"
+            },
+            {
+              "key": "AM_ATS_Owner",
+              "count": {
+                "@type": "number",
+                "#text": "1"
+              },
+              "label": "Owner"
+            },
+            {
+              "key": "AM_ATS_Redeputization",
+              "count": {
+                "@type": "number",
+                "#text": "0"
+              },
+              "label": "Redeputization"
+            }
+          ]
+        }
+      },
+      {
+        "choicefilter": {
+          "param": "RoleAssignmentStatus",
+          "label": "Role assignment status",
+          "options": [
+            {
+              "key": "AM_ASS_Draft",
+              "count": {
+                "@type": "number",
+                "#text": "0"
+              },
+              "label": "Draft"
+            },
+            {
+              "key": "AM_ASS_Proposed",
+              "count": {
+                "@type": "number",
+                "#text": "0"
+              },
+              "label": "Proposed"
+            },
+            {
+              "key": "AM_ASS_Assigned",
+              "count": {
+                "@type": "number",
+                "#text": "3"
+              },
+              "label": "Assigned"
+            },
+            {
+              "key": "AM_ASS_Revoked",
+              "count": {
+                "@type": "number",
+                "#text": "0"
+              },
+              "label": "Revoked"
+            },
+            {
+              "key": "AM_ASS_Cancelled",
+              "count": {
+                "@type": "number",
+                "#text": "0"
+              },
+              "label": "Cancelled"
+            },
+            {
+              "key": "AM_ASS_Rejected",
+              "count": {
+                "@type": "number",
+                "#text": "0"
+              },
+              "label": "Rejected"
+            },
+            {
+              "key": "AM_ASS_Accepted",
+              "count": {
+                "@type": "number",
+                "#text": "0"
+              },
+              "label": "Accepted"
+            }
+          ]
+        }
+      },
+      {
+        "choicefilter": {
+          "param": "StatusAccountRole",
+          "label": "Status functional role",
+          "options": [
+            {
+              "key": "Active",
+              "count": {
+                "@type": "number",
+                "#text": "3"
+              },
+              "label": "Active"
+            },
+            {
+              "key": "NActive",
+              "count": {
+                "@type": "number",
+                "#text": "0"
+              },
+              "label": "Not Active"
+            }
+          ]
+        }
+      }
+    ],
+    "dynamicschema": {
+      "StatusAccountRole": [
+        {
+          "code": "Active",
+          "label": "Active"
+        },
+        {
+          "code": "NActive",
+          "label": "Not Active"
+        }
+      ],
+      "AssignmentTypeSource": [
+        {
+          "code": "AM_ATS_Deputization",
+          "label": "Deputization"
+        },
+        {
+          "code": "AM_ATS_Owner",
+          "label": "Owner"
+        },
+        {
+          "code": "AM_ATS_Redeputization",
+          "label": "Redeputization"
+        }
+      ],
+      "RoleAssignmentStatus": [
+        {
+          "code": "AM_ASS_Draft",
+          "label": "Draft"
+        },
+        {
+          "code": "AM_ASS_Proposed",
+          "label": "Proposed"
+        },
+        {
+          "code": "AM_ASS_Assigned",
+          "label": "Assigned"
+        },
+        {
+          "code": "AM_ASS_Revoked",
+          "label": "Revoked"
+        },
+        {
+          "code": "AM_ASS_Cancelled",
+          "label": "Cancelled"
+        },
+        {
+          "code": "AM_ASS_Rejected",
+          "label": "Rejected"
+        },
+        {
+          "code": "AM_ASS_Accepted",
+          "label": "Accepted"
+        }
+      ]
+    },
+    "paging": {
+      "totalresults": {
+        "@type": "number",
+        "#text": "3"
+      },
+      "pagesize": {
+        "param": "pagesize",
+        "currentpagesize": {
+          "@type": "number",
+          "#text": "25"
+        },
+        "option": [
+          {
+            "@type": "number",
+            "#text": "10"
+          },
+          {
+            "@type": "number",
+            "#text": "25"
+          },
+          {
+            "@type": "number",
+            "#text": "50"
+          }
+        ]
+      },
+      "param": "page",
+      "currentpage": {
+        "@type": "number",
+        "#text": "1"
+      },
+      "maxpages": {
+        "@type": "number",
+        "#text": "1"
+      }
+    },
+    "sorting": {
+      "param": "sort",
+      "option": [
+        "RoleName",
+        "StartDateAssignmentType",
+        "EndDateAssignmentType",
+        "FunctionalRoleRecordId",
+        "OriDirectorateID",
+        "refCaseID",
+        "AssignmentRoleDetail",
+        "DeputisationComment"
+      ]
+    },
+    "_embedded": {
+      "results": [
+        {
+          "Functional_Role": {
+            "actions": [
+              {
+                "name": "ChangeFunctionalRoleSettings",
+                "title": "Change functional role settings",
+                "method": "POST",
+                "href": "/AccountManagement/ChangeFunctionalRoleSettings/798465",
+                "fields": {
+                  "@class": "array",
+                  "fields": {
+                    "name": "FunctionalRoleRecordId",
+                    "type": "number",
+                    "value": "839756"
+                  }
+                }
+              },
+              {
+                "name": "DeleteFunctionalFole",
+                "title": "Delete functional fole",
+                "method": "POST",
+                "href": "/AccountManagement/DeleteFunctionalFole/798465",
+                "fields": {
+                  "@class": "array",
+                  "fields": {
+                    "name": "FunctionalRoleRecordId",
+                    "type": "number",
+                    "value": "839756"
+                  }
+                }
+              }
+            ],
+            "_id": {
+              "@type": "number",
+              "#text": "839756"
+            },
+            "_links": {
+              "self": {
+                "href": "/AccountManagement/caseview-user_account/798465/Functionalroles/839756"
+              }
+            },
+            "RoleName": "stock_manager",
+            "StartDateAssignmentType": "2016-07-05",
+            "EndDateAssignmentType": "2016-07-06",
+            "FunctionalRoleRecordId": {
+              "@type": "number",
+              "#text": "839756"
+            },
+            "StatusAccountRole": "Active",
+            "AssignmentTypeSource": "AM_ATS_Deputization",
+            "RoleAssignor": "Bas van Bakel",
+            "OriDirectorateID": null,
+            "RoleAssignmentStatus": "AM_ASS_Assigned",
+            "refCaseID": {
+              "@type": "number",
+              "#text": "798465"
+            },
+            "AssignmentRoleDetail": "A61F2/95,A61F3/00,A61F9/00736,A61F9/0079",
+            "DeputisationComment": "test 05-07-2016 BvB"
+          }
+        },
+        {
+          "Functional_Role": {
+            "actions": [
+              {
+                "name": "ChangeFunctionalRoleSettings",
+                "title": "Change functional role settings",
+                "method": "POST",
+                "href": "/AccountManagement/ChangeFunctionalRoleSettings/798465",
+                "fields": {
+                  "@class": "array",
+                  "fields": {
+                    "name": "FunctionalRoleRecordId",
+                    "type": "number",
+                    "value": "798475"
+                  }
+                }
+              },
+              {
+                "name": "DeleteFunctionalFole",
+                "title": "Delete functional fole",
+                "method": "POST",
+                "href": "/AccountManagement/DeleteFunctionalFole/798465",
+                "fields": {
+                  "@class": "array",
+                  "fields": {
+                    "name": "FunctionalRoleRecordId",
+                    "type": "number",
+                    "value": "798475"
+                  }
+                }
+              }
+            ],
+            "_id": {
+              "@type": "number",
+              "#text": "798475"
+            },
+            "_links": {
+              "self": {
+                "href": "/AccountManagement/caseview-user_account/798465/Functionalroles/798475"
+              }
+            },
+            "RoleName": "examiner",
+            "StartDateAssignmentType": "2016-02-01",
+            "EndDateAssignmentType": "2016-03-01",
+            "FunctionalRoleRecordId": {
+              "@type": "number",
+              "#text": "798475"
+            },
+            "StatusAccountRole": "Active",
+            "AssignmentTypeSource": "AM_ATS_Owner",
+            "RoleAssignor": null,
+            "OriDirectorateID": "Pille",
+            "RoleAssignmentStatus": "AM_ASS_Assigned",
+            "refCaseID": {
+              "@type": "number",
+              "#text": "798465"
+            },
+            "AssignmentRoleDetail": null,
+            "DeputisationComment": null
+          }
+        },
+        {
+          "Functional_Role": {
+            "actions": [
+              {
+                "name": "ChangeFunctionalRoleSettings",
+                "title": "Change functional role settings",
+                "method": "POST",
+                "href": "/AccountManagement/ChangeFunctionalRoleSettings/798465",
+                "fields": {
+                  "@class": "array",
+                  "fields": {
+                    "name": "FunctionalRoleRecordId",
+                    "type": "number",
+                    "value": "839751"
+                  }
+                }
+              },
+              {
+                "name": "DeleteFunctionalFole",
+                "title": "Delete functional fole",
+                "method": "POST",
+                "href": "/AccountManagement/DeleteFunctionalFole/798465",
+                "fields": {
+                  "@class": "array",
+                  "fields": {
+                    "name": "FunctionalRoleRecordId",
+                    "type": "number",
+                    "value": "839751"
+                  }
+                }
+              }
+            ],
+            "_id": {
+              "@type": "number",
+              "#text": "839751"
+            },
+            "_links": {
+              "self": {
+                "href": "/AccountManagement/caseview-user_account/798465/Functionalroles/839751"
+              }
+            },
+            "RoleName": "stock_manager",
+            "StartDateAssignmentType": "2016-07-05",
+            "EndDateAssignmentType": "2016-07-06",
+            "FunctionalRoleRecordId": {
+              "@type": "number",
+              "#text": "839751"
+            },
+            "StatusAccountRole": "Active",
+            "AssignmentTypeSource": "AM_ATS_Deputization",
+            "RoleAssignor": "Bas van Bakel",
+            "OriDirectorateID": "Weiand",
+            "RoleAssignmentStatus": "AM_ASS_Assigned",
+            "refCaseID": {
+              "@type": "number",
+              "#text": "798465"
+            },
+            "AssignmentRoleDetail": "A61F9/013,A61H1/00,A61F9/02",
+            "DeputisationComment": "Redeputisation some additional technical fields"
+          }
+        }
+      ]
+    }
+  }
+}

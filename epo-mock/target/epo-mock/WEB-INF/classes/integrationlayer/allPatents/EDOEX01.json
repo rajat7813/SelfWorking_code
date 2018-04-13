@@ -1,0 +1,116 @@
+{
+  "_embedded" : {
+    "results" : [ {
+      "Patent" : {
+        "id" : "USW  2014053961-SA      1307454-007",
+        "applicationNumber" : "USW  2014053961",
+        "applicationTitle" : "USER INTERFACE FOR MANIPULATING USER INTERFACE OBJECTS WITH MAGNETIC PROPERTIES",
+        "_links" : {
+          "self" : {
+            "href" : "/workmanager/Patent/USW++2014053961"
+          }
+        },
+        "_id" : {
+          "@type" : "number",
+          "#text" : "USW  2014053961"
+        }
+      }
+    }, {
+      "Patent" : {
+        "id" : "EPA    13184349-EP     13184349-001",
+        "applicationNumber" : "EPA    13184349",
+        "applicationTitle" : "Fluidic Interface Valve Assembly with Elastomeric Ferrule Device",
+        "_links" : {
+          "self" : {
+            "href" : "/workmanager/Patent/EPA++++13184349"
+          }
+        },
+        "_id" : {
+          "@type" : "number",
+          "#text" : "EPA    13184349"
+        }
+      }
+    }, {
+      "Patent" : {
+        "id" : "EPA    11154276-EP     11154276-001",
+        "applicationNumber" : "EPA    11154276",
+        "applicationTitle" : "Charge pump with a plurality of transfer control switches",
+        "_links" : {
+          "self" : {
+            "href" : "/workmanager/Patent/EPA++++11154276"
+          }
+        },
+        "_id" : {
+          "@type" : "number",
+          "#text" : "EPA    11154276"
+        }
+      }
+    }, {
+      "Patent" : {
+        "id" : "EPA    11002128-EP     11002128-001",
+        "applicationNumber" : "EPA    11002128",
+        "applicationTitle" : "Pumpenaggregat",
+        "_links" : {
+          "self" : {
+            "href" : "/workmanager/Patent/EPA++++11002128"
+          }
+        },
+        "_id" : {
+          "@type" : "number",
+          "#text" : "EPA    11002128"
+        }
+      }
+    }, {
+      "Patent" : {
+        "id" : "EPA    10731151-EP     10731151-002",
+        "applicationNumber" : "EPA    10731151",
+        "applicationTitle" : "CASE HARDENING STEEL, CARBURIZED COMPONENT, AND METHOD FOR PRODUCING CASE HARDENING STEEL",
+        "_links" : {
+          "self" : {
+            "href" : "/workmanager/Patent/EPA++++10731151"
+          }
+        },
+        "_id" : {
+          "@type" : "number",
+          "#text" : "EPA    10731151"
+        }
+      }
+    }, {
+      "Patent" : {
+        "id" : "EPA    11002272-EP     11002272-001",
+        "applicationNumber" : "EPA    11002272",
+        "applicationTitle" : "Verfahren zur Herstellung einer Feder für eine Unterbewicklung einer Mangelwalze, eine Unterbewicklung und eine Feder",
+        "_links" : {
+          "self" : {
+            "href" : "/workmanager/Patent/EPA++++11002272"
+          }
+        },
+        "_id" : {
+          "@type" : "number",
+          "#text" : "EPA    11002272"
+        }
+      }
+    }, {
+      "Patent" : {
+        "id" : "FRA     1554226-FA       811420-034",
+        "applicationNumber" : "FRA     1554226",
+        "applicationTitle" : null,
+        "_links" : {
+          "self" : {
+            "href" : "/workmanager/Patent/FRA+++++1554226"
+          }
+        },
+        "_id" : {
+          "@type" : "number",
+          "#text" : "FRA     1554226"
+        }
+      }
+    } ]
+  },
+  "filter" : [ ],
+  "_links" : {
+    "self" : {
+      "href" : "/workmanager/AllPatents"
+    }
+  }
+}

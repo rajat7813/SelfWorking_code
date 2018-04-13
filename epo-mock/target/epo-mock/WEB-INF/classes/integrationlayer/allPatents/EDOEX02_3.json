@@ -1,0 +1,129 @@
+{
+  "_embedded" : {
+    "results" : [ {
+      "Patent" : {
+        "id" : "EPA    10004119-EP     10004119-001",
+        "applicationNumber" : "EPA    10004119",
+        "applicationTitle" : "Kreissägenanschlagsschiene",
+        "_links" : {
+          "self" : {
+            "href" : "/workmanager/Patent/EPA++++10004119"
+          }
+        },
+        "_id" : {
+          "@type" : "number",
+          "#text" : "EPA    10004119"
+        }
+      }
+    }, {
+      "Patent" : {
+        "id" : "EPA    11002195-EP     11002195-001",
+        "applicationNumber" : "EPA    11002195",
+        "applicationTitle" : "Vehicle seat cushion with integrated ventilation",
+        "_links" : {
+          "self" : {
+            "href" : "/workmanager/Patent/EPA++++11002195"
+          }
+        },
+        "_id" : {
+          "@type" : "number",
+          "#text" : "EPA    11002195"
+        }
+      }
+    }, {
+      "Patent" : {
+        "id" : "EPA    11002335-EP     11002335-001",
+        "applicationNumber" : "EPA    11002335",
+        "applicationTitle" : "Heat exchanger",
+        "_links" : {
+          "self" : {
+            "href" : "/workmanager/Patent/EPA++++11002335"
+          }
+        },
+        "_id" : {
+          "@type" : "number",
+          "#text" : "EPA    11002335"
+        }
+      }
+    }, {
+      "Patent" : {
+        "id" : "EPA    10731161-EP     10731161-002",
+        "applicationNumber" : "EPA    10731161",
+        "applicationTitle" : "METHOD FOR PRODUCING R-T-B SINTERED MAGNET",
+        "_links" : {
+          "self" : {
+            "href" : "/workmanager/Patent/EPA++++10731161"
+          }
+        },
+        "_id" : {
+          "@type" : "number",
+          "#text" : "EPA    10731161"
+        }
+      }
+    }, {
+      "Patent" : {
+        "id" : "EPA    11745378-EP     11745378-002",
+        "applicationNumber" : "EPA    11745378",
+        "applicationTitle" : "INTERACTIVE EDUCATION SYSTEM FOR TEACHING PATIENT CARE",
+        "_links" : {
+          "self" : {
+            "href" : "/workmanager/Patent/EPA++++11745378"
+          }
+        },
+        "_id" : {
+          "@type" : "number",
+          "#text" : "EPA    11745378"
+        }
+      }
+    }, {
+      "Patent" : {
+        "id" : "EPA    13184495-EP     13184495-001",
+        "applicationNumber" : "EPA    13184495",
+        "applicationTitle" : "Kraftfahrzeugscheinwerfer mit Lichtquelle und einer Kühleinrichtung für die Lichtquelle",
+        "_links" : {
+          "self" : {
+            "href" : "/workmanager/Patent/EPA++++13184495"
+          }
+        },
+        "_id" : {
+          "@type" : "number",
+          "#text" : "EPA    13184495"
+        }
+      }
+    }, {
+      "Patent" : {
+        "id" : "EPA    11154353-EP     11154353-001",
+        "applicationNumber" : "EPA    11154353",
+        "applicationTitle" : "Method for adding metadata to data",
+        "_links" : {
+          "self" : {
+            "href" : "/workmanager/Patent/EPA++++11154353"
+          }
+        },
+        "_id" : {
+          "@type" : "number",
+          "#text" : "EPA    11154353"
+        }
+      }
+    } ]
+  },
+  "filter" : [ ],
+  "paging": {
+    "param": "page",
+    "currentpage": 1,
+    "maxpages": 3,
+    "totalresults": 27,
+    "pagesize": {
+      "param": "pagesize",
+      "currentpagesize": 10,
+      "option": [
+        10
+      ]
+    }
+  },
+  "_links" : {
+    "self" : {
+      "href" : "/workmanager/AllPatents"
+    }
+  }
+}

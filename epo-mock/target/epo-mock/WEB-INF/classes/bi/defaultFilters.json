@@ -1,0 +1,29 @@
+{
+ "TR06GetDefaultFilters": [ 
+  {
+   "Result": "OK",
+   "Explanation": ""
+  },
+  {
+   "code": "proceduralLanguage"
+  },
+  {
+   "code": "NumberOfPagesRange"
+  },
+  {
+   "code": "NumberOfClaimsRange"
+  },
+  {
+   "code": "applicantName"
+  },
+  {
+   "code": "TargetmonthRange"
+  },
+  {
+   "code": "priority"
+  },
+  {
+   "code": "Proposed1stExaminerPresent"
+  }
+ ]
+}

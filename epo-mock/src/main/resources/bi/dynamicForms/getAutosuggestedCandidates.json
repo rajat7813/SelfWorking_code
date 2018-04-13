@@ -1,0 +1,20 @@
+{
+  "SE37GetAutosuggestedCandidates": [
+    {
+      "SE37_Result": "OK",
+      "SE37_Explanation": ""
+    },
+    {
+      "CaseID": "1234",
+      "Examiner2": "EDOEX12",
+      "Chairman": "EDOEX11",
+      "ErrorMessage": ""
+    },
+    {
+      "CaseID": "5678",
+      "Examiner2": "EDOEX13",
+      "Chairman": "EDOEX11",
+      "ErrorMessage": ""
+    }
+  ]
+}

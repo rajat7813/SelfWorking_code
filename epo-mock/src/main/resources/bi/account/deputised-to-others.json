@@ -1,0 +1,268 @@
+{
+  "Functional_roles___Deputised_to_others": {
+    "_links": {
+      "self": {
+        "href": "/AccountManagement/ListDeputisedRoles"
+      },
+      "api_doc": {
+        "href": "/api-docs/AccountManagement/ListDeputisedRoles"
+      }
+    },
+    "filter": {
+      "@class": "array",
+      "filter": {
+        "numberfilter": {
+          "param": "CaseID",
+          "label": "CaseID",
+          "value": "764643"
+        }
+      }
+    },
+    "dynamicschema": {
+      "StatusAccountRole": [
+        {
+          "code": "Active",
+          "label": "Active"
+        },
+        {
+          "code": "NActive",
+          "label": "Not Active"
+        }
+      ],
+      "AssignmentTypeSource": [
+        {
+          "code": "AM_ATS_Deputization",
+          "label": "Deputization"
+        },
+        {
+          "code": "AM_ATS_Owner",
+          "label": "Owner"
+        },
+        {
+          "code": "AM_ATS_Redeputization",
+          "label": "Redeputization"
+        }
+      ],
+      "CurrRoleAssignmentStatus": [
+        {
+          "code": "AM_ASS_Draft",
+          "label": "Draft"
+        },
+        {
+          "code": "AM_ASS_Proposed",
+          "label": "Proposed"
+        },
+        {
+          "code": "AM_ASS_Assigned",
+          "label": "Assigned"
+        },
+        {
+          "code": "AM_ASS_Revoked",
+          "label": "Revoked"
+        },
+        {
+          "code": "AM_ASS_Cancelled",
+          "label": "Cancelled"
+        },
+        {
+          "code": "AM_ASS_Rejected",
+          "label": "Rejected"
+        },
+        {
+          "code": "AM_ASS_Accepted",
+          "label": "Accepted"
+        }
+      ]
+    },
+    "paging": {
+      "totalresults": {
+        "@type": "number",
+        "#text": "1"
+      },
+      "pagesize": {
+        "param": "pagesize",
+        "currentpagesize": {
+          "@type": "number",
+          "#text": "25"
+        },
+        "option": [
+          {
+            "@type": "number",
+            "#text": "10"
+          },
+          {
+            "@type": "number",
+            "#text": "25"
+          },
+          {
+            "@type": "number",
+            "#text": "50"
+          }
+        ]
+      },
+      "param": "page",
+      "currentpage": {
+        "@type": "number",
+        "#text": "1"
+      },
+      "maxpages": {
+        "@type": "number",
+        "#text": "1"
+      }
+    },
+    "sorting": {
+      "param": "sort",
+      "option": [
+        "RoleName",
+        "StartDateAssignmentType",
+        "EndDateAssignmentType",
+        "OriginalRoleOwnerId"
+      ]
+    },
+    "_embedded": {
+      "results": [
+        {
+          "Find_deputised_roles": {
+            "_id": {
+              "@type": "number",
+              "#text": "1"
+            },
+            "_links": {
+              "self": {
+                "href": "/AccountManagement/caseview-user_account/789318/1"
+              }
+            },
+            "ID": {
+              "@type": "number",
+              "#text": "1"
+            },
+            "FunctionalRoleRecordId": {
+              "@type": "number",
+              "#text": "804421"
+            },
+            "RoleName": "stock_manager",
+            "StartDateAssignmentType": "2016-07-04",
+            "EndDateAssignmentType": "2016-07-21",
+            "StatusAccountRole": "Active",
+            "CaseID": {
+              "@type": "number",
+              "#text": "789318"
+            },
+            "CurrRoleOwner": "Valentina Schembri",
+            "CurrRoleOwnerId": {
+              "@type": "number",
+              "#text": "757217"
+            },
+            "CurrRoleRecordId": {
+              "@type": "number",
+              "#text": "859909"
+            },
+            "CurrStartDateAssignmentType": "2017-07-07",
+            "CurrEndDateAssignmentType": "2017-07-13",
+            "CurrStatusAccountRole": "Active",
+            "CurrAssignmentTypeSource": "AM_ATS_Deputization",
+            "CurrRoleAssignor": "789318",
+            "CurrInstructor": null,
+            "CurrOriDirectorateID": "1662",
+            "CurrRoleAssignmentStatus": "AM_ASS_Proposed",
+            "CurrDeputisationComment": null
+          }
+        },
+        {
+          "Find_deputised_roles": {
+            "_id": {
+              "@type": "number",
+              "#text": "2"
+            },
+            "_links": {
+              "self": {
+                "href": "/AccountManagement/caseview-user_account/789318/2"
+              }
+            },
+            "ID": {
+              "@type": "number",
+              "#text": "2"
+            },
+            "FunctionalRoleRecordId": {
+              "@type": "number",
+              "#text": "804421"
+            },
+            "RoleName": "stock_manager",
+            "StartDateAssignmentType": "2016-07-04",
+            "EndDateAssignmentType": "2016-07-21",
+            "StatusAccountRole": "Active",
+            "CaseID": {
+              "@type": "number",
+              "#text": "789318"
+            },
+            "CurrRoleOwner": "Examiner 11 eDossier Testing",
+            "CurrRoleOwnerId": {
+              "@type": "number",
+              "#text": "789294"
+            },
+            "CurrRoleRecordId": {
+              "@type": "number",
+              "#text": "866595"
+            },
+            "CurrStartDateAssignmentType": "2017-02-06",
+            "CurrEndDateAssignmentType": "2017-02-07",
+            "CurrStatusAccountRole": "Active",
+            "CurrAssignmentTypeSource": "AM_ATS_Deputization",
+            "CurrRoleAssignor": "435594",
+            "CurrInstructor": "789318",
+            "CurrOriDirectorateID": "1662",
+            "CurrRoleAssignmentStatus": "AM_ASS_Assigned",
+            "CurrDeputisationComment": "BvB 06 JUly 2016 4PM"
+          }
+        },
+        {
+          "Find_deputised_roles": {
+            "_id": {
+              "@type": "number",
+              "#text": "3"
+            },
+            "_links": {
+              "self": {
+                "href": "/AccountManagement/caseview-user_account/789318/3"
+              }
+            },
+            "ID": {
+              "@type": "number",
+              "#text": "3"
+            },
+            "FunctionalRoleRecordId": {
+              "@type": "number",
+              "#text": "804421"
+            },
+            "RoleName": "stock_manager",
+            "StartDateAssignmentType": "2016-07-04",
+            "EndDateAssignmentType": "2016-07-21",
+            "StatusAccountRole": "Active",
+            "CaseID": {
+              "@type": "number",
+              "#text": "789318"
+            },
+            "CurrRoleOwner": "Examiner 11 eDossier Testing",
+            "CurrRoleOwnerId": {
+              "@type": "number",
+              "#text": "789294"
+            },
+            "CurrRoleRecordId": {
+              "@type": "number",
+              "#text": "839747"
+            },
+            "CurrStartDateAssignmentType": "2017-07-05",
+            "CurrEndDateAssignmentType": "2017-07-06",
+            "CurrStatusAccountRole": "Active",
+            "CurrAssignmentTypeSource": "AM_ATS_Deputization",
+            "CurrRoleAssignor": "435594",
+            "CurrInstructor": "789318",
+            "CurrOriDirectorateID": null,
+            "CurrRoleAssignmentStatus": "AM_ASS_Assigned",
+            "CurrDeputisationComment": "Test 5 July 2016 BvB"
+          }
+        }
+      ]
+    }
+  }
+}

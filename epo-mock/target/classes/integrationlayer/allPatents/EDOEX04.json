@@ -1,0 +1,101 @@
+{
+  "_embedded" : {
+    "results" : [ {
+      "Patent" : {
+        "id" : "EPA    11154734-EP     11154734-001",
+        "applicationNumber" : "EPA    11154734",
+        "applicationTitle" : "Fermentive Production of Four Carbon Alcohols",
+        "_links" : {
+          "self" : {
+            "href" : "/workmanager/Patent/EPA++++11154734"
+          }
+        },
+        "_id" : {
+          "@type" : "number",
+          "#text" : "EPA    11154734"
+        }
+      }
+    }, {
+      "Patent" : {
+        "id" : "NLA     2010462-SN        60488-036",
+        "applicationNumber" : "NLA     2010462",
+        "applicationTitle" : null,
+        "_links" : {
+          "self" : {
+            "href" : "/workmanager/Patent/NLA+++++2010462"
+          }
+        },
+        "_id" : {
+          "@type" : "number",
+          "#text" : "NLA     2010462"
+        }
+      }
+    }, {
+      "Patent" : {
+        "id" : "EPW  2014070688-SA      1309375-007",
+        "applicationNumber" : "EPW  2014070688",
+        "applicationTitle" : "DISPOSITIF ET PROCÉDÉ D'AIDE À LA CONDUITE",
+        "_links" : {
+          "self" : {
+            "href" : "/workmanager/Patent/EPW++2014070688"
+          }
+        },
+        "_id" : {
+          "@type" : "number",
+          "#text" : "EPW  2014070688"
+        }
+      }
+    }, {
+      "Patent" : {
+        "id" : "EPA    11002125-EP     11002125-001",
+        "applicationNumber" : "EPA    11002125",
+        "applicationTitle" : "Pumpenaggregat",
+        "_links" : {
+          "self" : {
+            "href" : "/workmanager/Patent/EPA++++11002125"
+          }
+        },
+        "_id" : {
+          "@type" : "number",
+          "#text" : "EPA    11002125"
+        }
+      }
+    }, {
+      "Patent" : {
+        "id" : "EPA    11002260-EP     11002260-001",
+        "applicationNumber" : "EPA    11002260",
+        "applicationTitle" : "Fastening arrangement for fastening a storage container in a compartment of an aircraft galley, storage container and aircraft galley",
+        "_links" : {
+          "self" : {
+            "href" : "/workmanager/Patent/EPA++++11002260"
+          }
+        },
+        "_id" : {
+          "@type" : "number",
+          "#text" : "EPA    11002260"
+        }
+      }
+    }, {
+      "Patent" : {
+        "id" : "NLA     1034285-SN        49433-036",
+        "applicationNumber" : "NLA     1034285",
+        "applicationTitle" : null,
+        "_links" : {
+          "self" : {
+            "href" : "/workmanager/Patent/NLA+++++1034285"
+          }
+        },
+        "_id" : {
+          "@type" : "number",
+          "#text" : "NLA     1034285"
+        }
+      }
+    } ]
+  },
+  "filter" : [ ],
+  "_links" : {
+    "self" : {
+      "href" : "/workmanager/AllPatents"
+    }
+  }
+}

@@ -1,0 +1,134 @@
+{
+  "Functional_Role": {
+    "_links": {
+      "self": {
+        "href": "/AccountManagement/caseview-user_account/789318/FunctionalRolesDeputisedToMeHistory/1127069"
+      },
+      "api_doc": {
+        "href": "/api-docs/AccountManagement/caseview-user_account/789318/FunctionalRolesDeputisedToMeHistory/1127069"
+      }
+    },
+    "dynamicschema": {
+      "RoleName": {
+        "@class": "array",
+        "option": {
+          "code": "stock_manager",
+          "label": "Stock manager"
+        }
+      },
+      "StatusAccountRole": [
+        {
+          "code": "Active",
+          "label": "Active"
+        },
+        {
+          "code": "NActive",
+          "label": "Not Active"
+        }
+      ],
+      "AssignmentTypeSource": [
+        {
+          "code": "AM_ATS_Deputization",
+          "label": "Deputization"
+        },
+        {
+          "code": "AM_ATS_Owner",
+          "label": "Owner"
+        },
+        {
+          "code": "AM_ATS_Redeputization",
+          "label": "Redeputization"
+        }
+      ],
+      "RoleAssignor": {
+        "@class": "array",
+        "option": {
+          "code": "789318",
+          "label": "Examiner 10 eDossier Testing"
+        }
+      },
+      "Instructor": {
+        "@class": "array",
+        "option": {
+          "code": "764725",
+          "label": "Director 06 eDossier Testing"
+        }
+      },
+      "OriginalRoleOwner": {
+        "@class": "array",
+        "option": {
+          "code": "764725",
+          "label": "Director 06 eDossier Testing"
+        }
+      },
+      "OriDirectorateID": {
+        "@class": "array",
+        "option": {
+          "code": "1651",
+          "label": "Weiand"
+        }
+      },
+      "RoleAssignmentStatus": [
+        {
+          "code": "AM_ASS_Draft",
+          "label": "Draft"
+        },
+        {
+          "code": "AM_ASS_Proposed",
+          "label": "Proposed"
+        },
+        {
+          "code": "AM_ASS_Assigned",
+          "label": "Assigned"
+        },
+        {
+          "code": "AM_ASS_Revoked",
+          "label": "Revoked"
+        },
+        {
+          "code": "AM_ASS_Cancelled",
+          "label": "Cancelled"
+        },
+        {
+          "code": "AM_ASS_Rejected",
+          "label": "Rejected"
+        },
+        {
+          "code": "AM_ASS_Accepted",
+          "label": "Accepted"
+        }
+      ]
+    },
+    "_id": {
+      "@type": "number",
+      "#text": "1127069"
+    },
+    "RoleName": "stock_manager",
+    "StartDateAssignmentType": "2016-07-03",
+    "EndDateAssignmentType": "2017-01-31",
+    "OrganisationalAccountID": null,
+    "OrganisationalAccountName": null,
+    "AssignmentRoleDetail": "A61F9/013,A61H1/00,A61F9/02",
+    "StatusAccountRole": "Active",
+    "DeputisationComment": "no comment",
+    "AssignmentTypeSource": "AM_ATS_Deputization",
+    "RoleAssignorId": "789318",
+    "RoleAssignor": "789318",
+    "InstructorRoleAssignmentId": "764725",
+    "Instructor": "764725",
+    "OriginalRoleOwnerId": "764725",
+    "OriginalRoleOwner": "764725",
+    "OriDirectorateID": "1651",
+    "OriAccountRoleRecordId": "764737",
+    "RoleAssignmentStatus": "AM_ASS_Rejected",
+    "RoleAssignmentTimestamp": "2016-08-10 11:45:15",
+    "FunctionalRoleRecordId": {
+      "@type": "number",
+      "#text": "1127069"
+    },
+    "refCaseID": {
+      "@type": "number",
+      "#text": "789318"
+    }
+  }
+}

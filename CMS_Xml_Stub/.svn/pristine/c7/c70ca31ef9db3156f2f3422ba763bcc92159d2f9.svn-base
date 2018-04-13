@@ -1,0 +1,25 @@
+{
+	"USERROLEMAPPINGLIST":[
+	  {
+	    "role": "CHAIRMAN",
+	    "startDate": 1491948000000,
+	    "endDate": null,
+	    "userId": "AW51492",
+	    "directorate": "1377"
+	  },
+	  {
+	    "role": "SECOND_EXAMINER",
+	    "startDate": 1491948000000,
+	    "endDate": null,
+	    "userId": "SB51668",
+	    "directorate": "1371"
+	  },
+	  {
+	    "role": "EXAMINER_SEARCH",
+	    "startDate": 1491948000000,
+	    "endDate": null,
+	    "userId": "LB51908",
+	    "directorate": "1655"
+	  }
+	]
+}

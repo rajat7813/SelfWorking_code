@@ -1,0 +1,73 @@
+{
+  "formresponse": {
+    "missing": {
+      "anchor": [
+        {
+          "objectid": "AS_SUBMIT",
+          "element": [
+            {
+              "elementid": "TAorRedistribution",
+              "dynamicschema": [
+                {
+                  "code": "TechnicalAcceptance",
+                  "label": "Technical acceptance for technical field ${technicalfield}"
+                },
+                {
+                  "code": "Redistribution",
+                  "label": "Redistribute dossier..."
+                }
+              ]
+            },
+            {
+              "elementid": "Class"
+            },
+            {
+              "elementid": "ClassFrom",
+              "suggestion": {
+                  "@class": "array",
+                  "suggestion": "A61M5/00"
+              }
+            },
+            {
+              "elementid": "Directorate",
+              "dynamicschema": [
+                {
+                  "code": "400",
+                  "label": "directorate - 400"
+                },
+                {
+                  "code": "200",
+                  "label": "directorate - 200"
+                },
+                {
+                  "code": "300",
+                  "label": "directorate - 300"
+                }
+              ]
+            },
+            {
+              "elementid": "ProposedExaminer",
+              "dynamicschema": []
+            },
+            {
+              "elementid": "Comment"
+            },
+            {
+              "elementid": "SUBMIT",
+              "dynamicschema": [
+                {
+                  "code": "TRUE",
+                  "label": "true"
+                },
+                {
+                  "code": "FALSE",
+                  "label": "false"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

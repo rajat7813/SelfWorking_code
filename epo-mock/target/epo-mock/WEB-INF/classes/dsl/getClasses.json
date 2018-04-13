@@ -1,0 +1,64 @@
+{
+ "SE40GetClasses": [ 
+  {
+   "SE40_Result": "OK",
+   "SE40_Explanation": ""
+  },
+  {
+   "CLASS_ID": "3102771",
+   "ClassType": "IPC_CLASS",
+   "ClassValue": "A61F2/02",
+   "ClassDate": "2016-01-27",
+   "ClassDescription": "International Publication Class",
+   "ClassOrigin": "MUSE"
+  },
+  {
+   "CLASS_ID": "3102772",
+   "ClassType": "IPC_CLASS",
+   "ClassValue": "A61F2/02",
+   "ClassDate": "2016-01-27",
+   "ClassDescription": "International Publication Class",
+   "ClassOrigin": "MUSE"
+  },
+  {
+   "CLASS_ID": "3102773",
+   "ClassType": "PRE_CLASS",
+   "ClassValue": "A61B5/4851",
+   "ClassDate": "2016-09-28",
+   "ClassDescription": "Pre Class",
+   "ClassOrigin": "MUSE"
+  },
+  {
+   "CLASS_ID": "3102773",
+   "ClassType": "PRE_CLASS",
+   "ClassValue": "A61B6/4851",
+   "ClassDate": "2016-09-28",
+   "ClassDescription": "Pre Class",
+   "ClassOrigin": "MUSE"
+  },
+  {
+   "CLASS_ID": "3102773",
+   "ClassType": "PRE_CLASS",
+   "ClassValue": "A61B7/4851",
+   "ClassDate": "2016-09-28",
+   "ClassDescription": "Pre Class",
+   "ClassOrigin": "MUSE"
+  },
+  {
+   "CLASS_ID": "3102773",
+   "ClassType": "PRE_CLASS",
+   "ClassValue": "A61B8/4851",
+   "ClassDate": "2016-09-28",
+   "ClassDescription": "Pre Class",
+   "ClassOrigin": "MUSE"
+  },
+  {
+   "CLASS_ID": "3102773",
+   "ClassType": "PRE_CLASS",
+   "ClassValue": "A61B9/4851",
+   "ClassDate": "2016-09-28",
+   "ClassDescription": "Pre Class",
+   "ClassOrigin": "MUSE"
+  }
+ ]
+}

@@ -1,0 +1,645 @@
+{
+  "Organisational_relations": {
+    "_links": {
+      "self": {
+        "href": "/AccountManagement/caseview-org_account/50025/OrganisationalRelations"
+      },
+      "api_doc": {
+        "href": "/api-docs/AccountManagement/caseview-org_account/50025/OrganisationalRelations"
+      }
+    },
+    "filter": [
+      {
+        "choicefilter": {
+          "param": "AccountType",
+          "label": "Organisational role type",
+          "options": [
+            {
+              "key": "AM_OAT_Cluster",
+              "count": 0,
+              "label": "Cluster"
+            },
+            {
+              "key": "AM_OAT_Directorate",
+              "count": 4,
+              "label": "Directorate"
+            },
+            {
+              "key": "AM_OAT_DirectorateGeneral",
+              "count": 0,
+              "label": "Directorate general"
+            },
+            {
+              "key": "AM_OAT_EPO",
+              "count": 0,
+              "label": "EPO"
+            },
+            {
+              "key": "AM_UAT_InternalEPOUser",
+              "count": 11,
+              "label": "Internal EPO user"
+            },
+            {
+              "key": "AM_OAT_JointCluster",
+              "count": 0,
+              "label": "Joint cluster"
+            },
+            {
+              "key": "AM_OAT_OperationalDevelopment",
+              "count": 0,
+              "label": "Operational development"
+            },
+            {
+              "key": "AM_OAT_Support",
+              "count": 0,
+              "label": "Support"
+            },
+            {
+              "key": "AM_OAT_Team",
+              "count": 0,
+              "label": "Team"
+            }
+          ]
+        }
+      },
+      {
+        "choicefilter": {
+          "param": "RoleName",
+          "label": "Functional role"
+        }
+      },
+      {
+        "choicefilter": {
+          "param": "CASETYPE",
+          "label": "Case type",
+          "options": [
+            {
+              "key": "Organisational account",
+              "count": 4,
+              "label": "Organisational account"
+            },
+            {
+              "key": "User account",
+              "count": 11,
+              "label": "User account"
+            }
+          ]
+        }
+      }
+    ],
+    "dynamicschema": {
+      "AccountType": [
+        {
+          "code": "AM_OAT_EPO",
+          "label": "EPO"
+        },
+        {
+          "code": "AM_OAT_Directorate",
+          "label": "Directorate"
+        },
+        {
+          "code": "AM_OAT_Team",
+          "label": "Team"
+        },
+        {
+          "code": "AM_OAT_Cluster",
+          "label": "Cluster"
+        },
+        {
+          "code": "AM_OAT_JointCluster",
+          "label": "Joint cluster"
+        },
+        {
+          "code": "AM_OAT_DirectorateGeneral",
+          "label": "Directorate general"
+        },
+        {
+          "code": "AM_OAT_Support",
+          "label": "Support"
+        },
+        {
+          "code": "AM_OAT_OperationalDevelopment",
+          "label": "Operational development"
+        },
+        {
+          "code": "AM_UAT_InternalEPOUser",
+          "label": "Internal EPO user"
+        }
+      ],
+      "AssignmentRole": [
+        {
+          "code": "AM_ARE_SeCaExpert",
+          "label": "SeCa Expert"
+        },
+        {
+          "code": "AM_ARE_StockManager",
+          "label": "Stock Manager"
+        },
+        {
+          "code": "AM_ARE_ParaTechnical",
+          "label": "PA admemp para-technical"
+        },
+        {
+          "code": "AM_ARE_FormalitiesOfficer",
+          "label": "Patent formalities officer"
+        },
+        {
+          "code": "AM_ARE_Examiner",
+          "label": "Examiner"
+        },
+        {
+          "code": "AM_ARE_Director",
+          "label": "PA dir"
+        },
+        {
+          "code": "AM_ARE_PAAdmempPatentFO",
+          "label": "PA admemp patent FO"
+        },
+        {
+          "code": "AM_ARE_PAExp",
+          "label": "PA exp"
+        },
+        {
+          "code": "AM_ARE_PAExpCO",
+          "label": "PA exp CO"
+        },
+        {
+          "code": "AM_ARE_PAHod",
+          "label": "PA hod"
+        },
+        {
+          "code": "AM_ARE_PAHos",
+          "label": "PA hos"
+        },
+        {
+          "code": "AM_ARE_PAPd",
+          "label": "PA pd"
+        },
+        {
+          "code": "AM_ARE_PEAdmempClassification",
+          "label": "PE admemp classification"
+        },
+        {
+          "code": "AM_ARE_PEAdmempPatentProcManage",
+          "label": "PE admemp patent proc manage"
+        },
+        {
+          "code": "AM_ARE_PEAdminOperationalDevelopment",
+          "label": "PE admin Operational development"
+        },
+        {
+          "code": "AM_ARE_PEAdminClassification",
+          "label": "PE admin classification"
+        },
+        {
+          "code": "AM_ARE_PEAdminPatentProcManage",
+          "label": "PE admin patent proc manager"
+        },
+        {
+          "code": "AM_ARE_PEDirOperationalDevelopment",
+          "label": "PE dir Operational development"
+        },
+        {
+          "code": "AM_ARE_PEDirOperations",
+          "label": "PE dir Operations"
+        },
+        {
+          "code": "AM_ARE_PEDirClassification",
+          "label": "PE dir classification"
+        },
+        {
+          "code": "AM_ARE_PEDirPatentProcManage",
+          "label": "PE dir patent proc manage"
+        },
+        {
+          "code": "AM_ARE_PEExaminer",
+          "label": "PE examiner"
+        },
+        {
+          "code": "AM_ARE_PESenexp",
+          "label": "PE senexp"
+        },
+        {
+          "code": "AM_ARE_PETmClassification",
+          "label": "PE tm classification"
+        },
+        {
+          "code": "AM_ARE_PETmOperations",
+          "label": "PE tm operations"
+        },
+        {
+          "code": "AM_ARE_PrincipalDirector",
+          "label": "Principal Director"
+        },
+        {
+          "code": "OtherRole",
+          "label": "Other role"
+        },
+        {
+          "code": "AM_ARE_ExternalServiceEmployee",
+          "label": "External Service Employee"
+        },
+        {
+          "code": "AM_ARE_ASAdmempManagementAssists",
+          "label": "AS admemp management assists"
+        },
+        {
+          "code": "AM_ARE_BISystemUser",
+          "label": "BISystemUser"
+        }
+      ],
+      "RoleName": [
+        {
+          "code": "director",
+          "label": "Director"
+        },
+        {
+          "code": "formalities_officer",
+          "label": "Formalities officer"
+        }
+      ]
+    },
+    "paging": {
+      "totalresults": 15,
+      "pagesize": {
+        "param": "pagesize",
+        "currentpagesize": 25,
+        "option": [
+          10,
+          25,
+          50
+        ]
+      },
+      "param": "page",
+      "currentpage": 1,
+      "maxpages": 1
+    },
+    "sorting": {
+      "param": "sort",
+      "option": [
+        "ID",
+        "CASENAME",
+        "OrganisationID",
+        "OrgName",
+        "OrgUnitNumber",
+        "UserName",
+        "FullName",
+        "givenName",
+        "familyName"
+      ]
+    },
+    "_embedded": {
+      "results": [
+        {
+          "Organisational_account": {
+            "_id": 50026,
+            "_links": {
+              "self": {
+                "href": "/AccountManagement/ref_ACMOrg/50026"
+              }
+            },
+            "ID": 50026,
+            "CASENAME": "Directorate 1409",
+            "OrganisationID": "1409",
+            "AccountType": "AM_OAT_Directorate",
+            "OrgName": "Directorate 1409",
+            "OrgUnitNumber": "1409"
+          }
+        },
+        {
+          "Organisational_account": {
+            "_id": 50097,
+            "_links": {
+              "self": {
+                "href": "/AccountManagement/ref_ACMOrg/50097"
+              }
+            },
+            "ID": 50097,
+            "CASENAME": "Van Dooren",
+            "OrganisationID": "1901",
+            "AccountType": "AM_OAT_Directorate",
+            "OrgName": "Van Dooren",
+            "OrgUnitNumber": "1901"
+          }
+        },
+        {
+          "Organisational_account": {
+            "_id": 50287,
+            "_links": {
+              "self": {
+                "href": "/AccountManagement/ref_ACMOrg/50287"
+              }
+            },
+            "ID": 50287,
+            "CASENAME": "Boerrigter",
+            "OrganisationID": "1905",
+            "AccountType": "AM_OAT_Directorate",
+            "OrgName": "Boerrigter",
+            "OrgUnitNumber": "1905"
+          }
+        },
+        {
+          "Organisational_account": {
+            "_id": 50291,
+            "_links": {
+              "self": {
+                "href": "/AccountManagement/ref_ACMOrg/50291"
+              }
+            },
+            "ID": 50291,
+            "CASENAME": "Goetz",
+            "OrganisationID": "1903",
+            "AccountType": "AM_OAT_Directorate",
+            "OrgName": "Goetz",
+            "OrgUnitNumber": "1903"
+          }
+        },
+        {
+          "User_account": {
+            "_id": 51571,
+            "_links": {
+              "self": {
+                "href": "/AccountManagement/ref_ACMUsr/51571"
+              }
+            },
+            "ID": 51571,
+            "CASENAME": "MR02928 Carmen Rabasa Garcia",
+            "OrganisationID": "H01",
+            "AccountType": "AM_UAT_InternalEPOUser",
+            "UserName": "MR02928@INTERNAL.EPO.ORG",
+            "FullName": "Carmen Rabasa Garcia",
+            "givenName": "Carmen",
+            "familyName": "Rabasa Garcia",
+            "AssignmentRole": [
+              "AM_ARE_PAAdmempPatentFO"
+            ],
+            "Organisation": "SIS Unit H01",
+            "RoleName": {
+				"@class": "array",
+				"option": "team_manager"
+			}
+          }
+        },
+        {
+          "User_account": {
+            "_id": 53130,
+            "_links": {
+              "self": {
+                "href": "/AccountManagement/ref_ACMUsr/53130"
+              }
+            },
+            "ID": 53130,
+            "CASENAME": "JV01838 Jacqueline van Ekelenburg",
+            "OrganisationID": "H01",
+            "AccountType": "AM_UAT_InternalEPOUser",
+            "UserName": "JV01838@INTERNAL.EPO.ORG",
+            "FullName": "Jacqueline van Ekelenburg",
+            "givenName": "Jacqueline",
+            "familyName": "van Ekelenburg",
+            "AssignmentRole": [
+              "AM_ARE_PAAdmempPatentFO"
+            ],
+            "Organisation": "SIS Unit H01",
+            "RoleName": [
+              "director",
+              "formalities_officer"
+            ]
+          }
+        },
+        {
+          "User_account": {
+            "_id": 53504,
+            "_links": {
+              "self": {
+                "href": "/AccountManagement/ref_ACMUsr/53504"
+              }
+            },
+            "ID": 53504,
+            "CASENAME": "AK51856 Agnieszka Arias-Kraska",
+            "OrganisationID": "H01",
+            "AccountType": "AM_UAT_InternalEPOUser",
+            "UserName": "AK51856@INTERNAL.EPO.ORG",
+            "FullName": "Agnieszka Arias-Kraska",
+            "givenName": "Agnieszka",
+            "familyName": "Arias-Kraska",
+            "AssignmentRole": [
+              "AM_ARE_PAAdmempPatentFO"
+            ],
+            "Organisation": "SIS Unit H01",
+            "RoleName": [
+              "director",
+              "formalities_officer"
+            ]
+          }
+        },
+        {
+          "User_account": {
+            "_id": 55179,
+            "_links": {
+              "self": {
+                "href": "/AccountManagement/ref_ACMUsr/55179"
+              }
+            },
+            "ID": 55179,
+            "CASENAME": "IV04007 Isabel Viegas da Cruz",
+            "OrganisationID": "H01",
+            "AccountType": "AM_UAT_InternalEPOUser",
+            "UserName": "IV04007@INTERNAL.EPO.ORG",
+            "FullName": "Isabel Viegas da Cruz",
+            "givenName": "Isabel",
+            "familyName": "Viegas da Cruz",
+            "AssignmentRole": [
+              "AM_ARE_PAAdmempPatentFO"
+            ],
+            "Organisation": "SIS Unit H01",
+            "RoleName": [
+              "director",
+              "formalities_officer"
+            ]
+          }
+        },
+        {
+          "User_account": {
+            "_id": 55843,
+            "_links": {
+              "self": {
+                "href": "/AccountManagement/ref_ACMUsr/55843"
+              }
+            },
+            "ID": 55843,
+            "CASENAME": "MB03005 Marcos Bello",
+            "OrganisationID": "H01",
+            "AccountType": "AM_UAT_InternalEPOUser",
+            "UserName": "MB03005@INTERNAL.EPO.ORG",
+            "FullName": "Marcos Bello",
+            "givenName": "Marcos",
+            "familyName": "Bello",
+            "AssignmentRole": [
+              "AM_ARE_PAAdmempPatentFO"
+            ],
+            "Organisation": "SIS Unit H01",
+            "RoleName": [
+              "director",
+              "formalities_officer"
+            ]
+          }
+        },
+        {
+          "User_account": {
+            "_id": 56317,
+            "_links": {
+              "self": {
+                "href": "/AccountManagement/ref_ACMUsr/56317"
+              }
+            },
+            "ID": 56317,
+            "CASENAME": "CT03920 Christine Chasset",
+            "OrganisationID": "H01",
+            "AccountType": "AM_UAT_InternalEPOUser",
+            "UserName": "CT03920@INTERNAL.EPO.ORG",
+            "FullName": "Christine Chasset",
+            "givenName": "Christine",
+            "familyName": "Chasset",
+            "AssignmentRole": [
+              "AM_ARE_PAHos"
+            ],
+            "Organisation": "SIS Unit H01",
+            "RoleName": [
+              "formalities_officer"
+            ]
+          }
+        },
+        {
+          "User_account": {
+            "_id": 57019,
+            "_links": {
+              "self": {
+                "href": "/AccountManagement/ref_ACMUsr/57019"
+              }
+            },
+            "ID": 57019,
+            "CASENAME": "JO01716 Jolanda Hazeleger",
+            "OrganisationID": "H01",
+            "AccountType": "AM_UAT_InternalEPOUser",
+            "UserName": "JO01716@INTERNAL.EPO.ORG",
+            "FullName": "Jolanda Hazeleger",
+            "givenName": "Jolanda",
+            "familyName": "Hazeleger",
+            "AssignmentRole": [
+              "AM_ARE_PAAdmempPatentFO"
+            ],
+            "Organisation": "SIS Unit H01",
+            "RoleName": [
+              "director",
+              "formalities_officer"
+            ]
+          }
+        },
+        {
+          "User_account": {
+            "_id": 57504,
+            "_links": {
+              "self": {
+                "href": "/AccountManagement/ref_ACMUsr/57504"
+              }
+            },
+            "ID": 57504,
+            "CASENAME": "KD03967 Krista Delimon",
+            "OrganisationID": "H01",
+            "AccountType": "AM_UAT_InternalEPOUser",
+            "UserName": "KD03967@INTERNAL.EPO.ORG",
+            "FullName": "Krista Delimon",
+            "givenName": "Krista",
+            "familyName": "Delimon",
+            "AssignmentRole": [
+              "AM_ARE_PAAdmempPatentFO"
+            ],
+            "Organisation": "SIS Unit H01",
+            "RoleName": [
+              "director",
+              "formalities_officer"
+            ]
+          }
+        },
+        {
+          "User_account": {
+            "_id": 58669,
+            "_links": {
+              "self": {
+                "href": "/AccountManagement/ref_ACMUsr/58669"
+              }
+            },
+            "ID": 58669,
+            "CASENAME": "CD01255 Coen De Jong",
+            "OrganisationID": "H01",
+            "AccountType": "AM_UAT_InternalEPOUser",
+            "UserName": "CD01255@INTERNAL.EPO.ORG",
+            "FullName": "Coen De Jong",
+            "givenName": "Coen",
+            "familyName": "De Jong",
+            "AssignmentRole": [
+              "AM_ARE_PAAdmempPatentFO"
+            ],
+            "Organisation": "SIS Unit H01",
+            "RoleName": [
+              "director",
+              "formalities_officer"
+            ]
+          }
+        },
+        {
+          "User_account": {
+            "_id": 59002,
+            "_links": {
+              "self": {
+                "href": "/AccountManagement/ref_ACMUsr/59002"
+              }
+            },
+            "ID": 59002,
+            "CASENAME": "VV02983 Valérie Verbeek-Verdelhan",
+            "OrganisationID": "H01",
+            "AccountType": "AM_UAT_InternalEPOUser",
+            "UserName": "VV02983@INTERNAL.EPO.ORG",
+            "FullName": "Valérie Verbeek-Verdelhan",
+            "givenName": "Valérie",
+            "familyName": "Verbeek-Verdelhan",
+            "AssignmentRole": [
+              "AM_ARE_PAAdmempPatentFO"
+            ],
+            "Organisation": "SIS Unit H01",
+            "RoleName": [
+              "director",
+              "formalities_officer"
+            ]
+          }
+        },
+        {
+          "User_account": {
+            "_id": 59899,
+            "_links": {
+              "self": {
+                "href": "/AccountManagement/ref_ACMUsr/59899"
+              }
+            },
+            "ID": 59899,
+            "CASENAME": "HR04052 Helena Madeira",
+            "OrganisationID": "H01",
+            "AccountType": "AM_UAT_InternalEPOUser",
+            "UserName": "HR04052@INTERNAL.EPO.ORG",
+            "FullName": "Helena Madeira",
+            "givenName": "Helena",
+            "familyName": "Madeira",
+            "AssignmentRole": [
+              "AM_ARE_PAAdmempPatentFO"
+            ],
+            "Organisation": "SIS Unit H01",
+            "RoleName": [
+              "director",
+              "formalities_officer"
+            ]
+          }
+        }
+      ]
+    }
+  }
+}

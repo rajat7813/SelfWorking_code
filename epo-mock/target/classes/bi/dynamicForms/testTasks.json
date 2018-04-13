@@ -1,0 +1,68 @@
+{
+  "taskgroup": {
+    "_links": {
+      "self": {
+        "href": "/BPRSearch/BPR_Search/195018/TestTasks"
+      },
+      "api_doc": {
+        "href": "/api-docs/BPRSearch/BPR_Search/195018/TestTasks"
+      }
+    },
+    "actions": [
+      {
+        "name": "frmUpdateWorkflow",
+        "title": "Form Update workflow",
+        "method": "POST",
+        "href": "/BPRSearch/frmUpdateWorkflow/195018"
+      },
+      {
+        "name": "tempUpdateTimeLimit",
+        "title": "TEST Time Limits",
+        "method": "POST",
+        "href": "/BPRSearch/tempUpdateTimeLimit/195018"
+      },
+      {
+        "name": "assignexaminersandchairman",
+        "title": "Assign examiners and chairman",
+        "method": "POST",
+        "href": "/BPRSearch/assignexaminersandchairman/195018"
+      },
+      {
+        "name": "technicalacceptance",
+        "title": "Redistribution",
+        "method": "POST",
+        "href": "/BPRSearch/technicalacceptance/195018"
+      },
+      {
+        "name": "ta",
+        "title": "Technical acceptance",
+        "method": "POST",
+        "href": "/BPRSearch/ta/195018"
+      },
+      {
+        "name": "RemoveHistoryRecordsFrm",
+        "title": "Remove history records",
+        "method": "POST",
+        "href": "/BPRSearch/RemoveHistoryRecordsFrm/195018"
+      },
+      {
+        "name": "MarkToInspectMenu",
+        "title": "Mark to inspect",
+        "method": "POST",
+        "href": "/BPRSearch/MarkToInspectMenu/195018"
+      },
+      {
+        "name": "OffLoad",
+        "title": "Off-load",
+        "method": "POST",
+        "href": "/BPRSearch/OffLoad/195018"
+      },
+      {
+        "name": "Preallocate",
+        "title": "Preallocate",
+        "method": "POST",
+        "href": "/BPRSearch/Preallocate/195018"
+      }
+    ]
+  }
+}

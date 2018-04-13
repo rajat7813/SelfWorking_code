@@ -1,0 +1,28 @@
+{
+  "formresponse": {
+    "missing": {
+      "anchor": {
+        "@class": "array",
+        "anchor": {
+          "objectid": "DUMMY",
+          "element": {
+            "@class": "array",
+            "element": {
+              "elementid": "WatTesten",
+              "dynamicschema": [
+                {
+                  "code": "update",
+                  "label": "Update time limits"
+                },
+                {
+                  "code": "listSearch",
+                  "label": "List time limits search dossier"
+                }
+              ]
+            }
+          }
+        }
+      }
+    }
+  }
+}

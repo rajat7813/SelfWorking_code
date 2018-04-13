@@ -1,0 +1,78 @@
+{
+  "Role_Management_case": {
+    "_links": {
+      "self": {
+        "href": "/RoleManagement/RoleManagementCase"
+      },
+      "api_doc": {
+        "href": "/api-docs/RoleManagement/RoleManagementCase"
+      }
+    },
+    "paging": {
+      "totalresults": {
+        "@type": "number",
+        "#text": "1"
+      },
+      "pagesize": {
+        "param": "pagesize",
+        "currentpagesize": {
+          "@type": "number",
+          "#text": "25"
+        },
+        "option": [
+          {
+            "@type": "number",
+            "#text": "10"
+          },
+          {
+            "@type": "number",
+            "#text": "25"
+          },
+          {
+            "@type": "number",
+            "#text": "50"
+          }
+        ]
+      },
+      "param": "page",
+      "currentpage": {
+        "@type": "number",
+        "#text": "1"
+      },
+      "maxpages": {
+        "@type": "number",
+        "#text": "1"
+      }
+    },
+    "sorting": {
+      "param": "sort",
+      "option": [
+        "ID",
+        "CASENAME"
+      ]
+    },
+    "_embedded": {
+      "results": {
+        "@class": "array",
+        "results": {
+          "REG_Role_management": {
+            "_id": {
+              "@type": "number",
+              "#text": "1464"
+            },
+            "_links": {
+              "self": {
+                "href": "/RoleManagement/REG_RoleManagementCaseView/1464"
+              }
+            },
+            "ID": {
+              "@type": "number",
+              "#text": "1464"
+            },
+            "CASENAME": "Role management"
+          }
+        }
+      }
+    }
+  }
+}

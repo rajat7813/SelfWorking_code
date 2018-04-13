@@ -1,0 +1,104 @@
+{             
+	"AM43Permissions": [
+              {
+               "AM43_Result": "OK",
+               "AM43_Explanation": ""
+              },
+              {
+               "ROLENAME": "Director",
+               "PERMISSION": "accept_deputisation"
+              },            
+              {
+               "ROLENAME": "Examiner",
+               "PERMISSION": "view_list_of_organisational_accounts"
+              },
+              {
+               "ROLENAME": "Examiner",
+               "PERMISSION": "view_user_account_details"
+              },
+              {
+               "ROLENAME": "Examiner",
+               "PERMISSION": "view_user_list"
+              },
+              {
+               "ROLENAME": "Examiner",
+               "PERMISSION": "dossierhistory_view" 
+              },
+              {
+               "ROLENAME": "Examiner",
+               "PERMISSION": "dossierhistory_create"
+              },
+              {
+               "ROLENAME": "Examiner",
+               "PERMISSION": "sourcetype_read"
+              },
+              {
+               "ROLENAME": "Examiner",
+               "PERMISSION": "trackingSheet_create"
+              },
+              {
+               "ROLENAME": "Examiner",
+               "PERMISSION": "doccodetype_view"
+              },
+              {
+               "ROLENAME": "Examiner",
+               "PERMISSION": "document_upload"
+              },                        
+              {
+               "ROLENAME": "Examiner",
+               "PERMISSION": "system_notification_create"
+              },
+              {
+               "ROLENAME": "Examiner",
+               "PERMISSION": "system_notification_view"
+              },
+              {
+               "ROLENAME": "Examiner",
+               "PERMISSION": "system_notification_count"
+              },
+              {
+               "ROLENAME": "Examiner",
+               "PERMISSION": "notification_change"
+              },
+              {
+               "ROLENAME": "Examiner",
+               "PERMISSION": "user_notification_create"
+              },
+              {
+               "ROLENAME": "Examiner",
+               "PERMISSION": "user_notification_view"
+              },
+              {
+               "ROLENAME": "Examiner",
+               "PERMISSION": "user_notification_count"
+              },
+              {
+               "ROLENAME": "Examiner",
+               "PERMISSION": "search_user_view"
+              },           
+              {
+               "ROLENAME": "Examiner",
+               "PERMISSION": "toc_access"
+              }, 
+              {
+               "ROLENAME": "Examiner",
+               "PERMISSION": "setting_access"
+              },
+			  {
+               "ROLENAME": "Examiner",
+               "PERMISSION": "search_product_document"
+              },
+              {
+               "ROLENAME": "Examiner",
+               "PERMISSION": "divisionworkflow_searchwork_task"
+              },
+              {
+               "ROLENAME": "Examiner",
+               "PERMISSION": "get_report_permissions"
+              },
+			  {
+               "ROLENAME": "Examiner",
+               "PERMISSION": "product_create"
+              }
+             ]
+}

@@ -1,0 +1,13 @@
+{
+  "formresponse": {
+    "error": {
+      "param": {
+        "@class": "array",
+        "param": {
+          "elementid": "ID",
+          "message": "Numeric value 'ID' is invalid, only numbers are allowed"
+        }
+      }
+    }
+  }
+}

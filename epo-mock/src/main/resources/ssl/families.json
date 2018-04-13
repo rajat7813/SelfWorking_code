@@ -1,0 +1,69 @@
+{
+  "took": 31,
+  "successfulShards": 8,
+  "totalShards": 8,
+  "hits": [{
+    "familyNumber": "055083426",
+    "publicationsCount": 1,
+    "bucket": [],
+    "hits": [{
+      "score": 1.0,
+      "bucket": [],
+      "fields": {
+        "publications.ti_en": ["MASTER BRAKE CYLINDER ARRANGEMENT FOR A HYDRAULIC MOTOR VEHICLE BRAKE SYSTEM"],
+        "publications.pn_epoque": ["WO2016128159"],
+        "publications.ti_de": ["HAUPTBREMSZYLINDERANORDNUNG F\u00dcR EINE HYDRAULISCHE KRAFTFAHRZEUGBREMSANLAGE"],
+        "publications.ti_fr": ["MA\u00ceTRE-CYLINDRE DE FREIN DESTIN\u00c9 \u00c0 UN SYST\u00c8ME DE FREINAGE HYDRAULIQUE D'UN V\u00c9HICULE AUTOMOBILE"]
+      }
+    }]
+  }, {
+    "familyNumber": "055134491",
+    "publicationsCount": 1,
+    "bucket": [],
+    "hits": [{
+      "score": 1.0,
+      "bucket": [],
+      "fields": {
+        "publications.ti_de": ["Dichtung zwischen zwei sich gegeneinander bewegenden Oberfl\u00e4chen"],
+        "publications.pn_epoque": ["DE102014011379"]
+      }
+    }]
+  }, {
+    "familyNumber": "055234886",
+    "publicationsCount": 1,
+    "bucket": [],
+    "hits": [{
+      "score": 1.0,
+      "bucket": [],
+      "fields": {
+        "publications.ti_de": ["Dichtelement"],
+        "publications.pn_epoque": ["DE102014215978"]
+      }
+    }]
+  }, {
+    "familyNumber": "056082732",
+    "publicationsCount": 1,
+    "bucket": [],
+    "hits": [{
+      "score": 1.0,
+      "bucket": [],
+      "fields": {
+        "publications.ti_en": ["MEDIA-TIGHT SEALING OF A PASSAGE REGION BETWEEN A WET REGION AND A DRY REGION"],
+        "publications.pn_epoque": ["WO2016096245"],
+        "publications.ti_de": ["MEDIENDICHTE ABDICHTUNG EINES DURCHTRITTBEREICHS ZWISCHEN EINEM NASSBEREICH UND EINEM TROCKENBEREICH"],
+        "publications.ti_fr": ["\u00c9TANCH\u00c9IT\u00c9 AUX MILIEUX D'UNE ZONE DE PASSAGE ENTRE UNE ZONE HUMIDE ET UNE ZONE S\u00c8CHE"]
+      }
+    }]
+  }],
+  "familiesNumber": 4,
+  "publicationsNumber": 4,
+  "buildDate": "2017-07-03 10:58",
+  "widgets": {
+    "bucket": [{
+      "labels": [],
+      "count": 4,
+      "dejavu": 0,
+      "max-score": 1.0
+    }]
+  }
+}

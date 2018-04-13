@@ -1,0 +1,97 @@
+{
+  "eventResponse": {
+    "eventid": "151199",
+    "dataset": [
+      {
+        "label": "AM34_Response",
+        "property": [
+          {
+            "key": "AM34_Result",
+            "value": "NOK"
+          },
+          {
+            "key": "AM34_Explanation",
+            "value": "Selected user is from a different directorate"
+          }
+        ]
+      },
+      {
+        "label": "AM34_Response_repeating",
+        "property": [
+          {
+            "key": "RoleName",
+            "value": null
+          },
+          {
+            "key": "RoleStartDate",
+            "value": null
+          },
+          {
+            "key": "RoleEndDate",
+            "value": null
+          },
+          {
+            "key": "Deputisable",
+            "value": null
+          },
+          {
+            "key": "Restricted",
+            "value": null
+          },
+          {
+            "key": "Status",
+            "value": "Active"
+          },
+          {
+            "key": "DefaultRole",
+            "value": "No"
+          },
+          {
+            "key": "AssociatedOrganisationalRoles",
+            "value": null
+          },
+          {
+            "key": "RoleNameLabel",
+            "value": null
+          },
+          {
+            "key": "RoleProfile",
+            "value": null
+          },
+          {
+            "key": "REG_User_roleRecordId",
+            "value": null
+          }
+        ]
+      },
+      {
+        "label": "AM34_Response_Technical_Fields",
+        "property": {
+          "key": "TechField",
+          "value": null
+        }
+      },
+      {
+        "label": "Service_response_metadata",
+        "property": [
+          {
+            "key": "Service_prefix_on_response_objects",
+            "value": "AM34_"
+          },
+          {
+            "key": "Service_response_root_object",
+            "value": "AM34ListNewAccountRoles"
+          },
+          {
+            "key": "http_errorcode",
+            "value": "400"
+          },
+          {
+            "key": "http_errorcode_message",
+            "value": "Selected user is from a different directorate"
+          }
+        ]
+      }
+    ]
+  }
+}

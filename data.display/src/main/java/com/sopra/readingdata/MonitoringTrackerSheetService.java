@@ -1,0 +1,317 @@
+package com.sopra.readingdata;
+
+import java.io.FileInputStream;
+import java.io.FileWriter;
+import java.io.IOException;
+import java.text.SimpleDateFormat;
+import java.util.ArrayList;
+import java.util.Date;
+import java.util.Iterator;
+import java.util.List;
+
+import org.apache.poi.EncryptedDocumentException;
+import org.apache.poi.openxml4j.exceptions.InvalidFormatException;
+import org.apache.poi.ss.usermodel.Cell;
+import org.apache.poi.ss.usermodel.DateUtil;
+import org.apache.poi.ss.usermodel.Row;
+import org.apache.poi.ss.usermodel.Sheet;
+import org.apache.poi.ss.usermodel.Workbook;
+import org.apache.poi.ss.usermodel.WorkbookFactory;
+import org.json.simple.JSONArray;
+import org.json.simple.JSONObject;
+
+import com.fasterxml.jackson.databind.ObjectMapper;
+import com.sopra.pojo.FinalA;
+import com.sopra.pojo.TrackingRemarks;
+
+public class MonitoringTrackerSheetService {
+
+	//@SuppressWarnings({ "unchecked", "deprecation" })
+	public FinalA  MonitoringTaskApi() throws EncryptedDocumentException, InvalidFormatException, IOException {
+
+		int i = 0, j = 0;
+		ObjectMapper mapper = new ObjectMapper();
+
+		//FileInputStream inp = new FileInputStream("D:\\Users\\raarora\\Desktop\\Mydocument\\CR3-TrackerSummary.xlsx");
+		
+		/*Resource resource = applicationContext.getResource("classpath:CR3-TrackerSummary.xlsx");
+		FileInputStream inp = resource.getInputStream();*/
+		
+		//Get file from resources folder
+		ClassLoader classLoader = getClass().getClassLoader();
+		FileInputStream inp = new FileInputStream(classLoader.getResource("CR3-TrackerSummary.xlsx").getFile());
+		
+		Workbook workbook = WorkbookFactory.create(inp);
+
+		Sheet sheet = workbook.getSheetAt(0);
+
+		// Start constructing JSON.
+		JSONObject json = new JSONObject();
+
+		// Iterate through the rows.
+		JSONArray rows = new JSONArray();
+
+		List<TrackingRemarks> row1 = new ArrayList<TrackingRemarks>();
+
+		Iterator<Row> rowIterator = sheet.iterator();
+		while (rowIterator.hasNext()) {
+
+			i++;
+
+			TrackingRemarks tR = new TrackingRemarks();
+
+			Row row = rowIterator.next();
+			JSONObject jRow = new JSONObject();
+			// For each row, iterate through all the columns
+			Iterator<Cell> cellIterator = row.cellIterator();
+			JSONArray cells = new JSONArray();
+			while (cellIterator.hasNext()) {
+				j++;
+
+				Cell cell = cellIterator.next();
+
+				if (i == 1) {
+					switch (cell.getCellType()) {
+					case Cell.CELL_TYPE_NUMERIC:
+
+						if (cell.getCellStyle().getDataFormatString().contains("/")) {
+
+							// System.out.println("date cahnged");
+
+							Date javaDate = DateUtil.getJavaDate((double) cell.getNumericCellValue());
+
+							cells.add(new SimpleDateFormat("MM/dd/yyyy").format(javaDate));
+							tR.setKey_Reason_for_display_on_date(new SimpleDateFormat("MM/dd/yyyy").format(javaDate));
+						} else {
+							cells.add(cell.getNumericCellValue() + "");
+							Date javaDate = DateUtil.getJavaDate((double) cell.getNumericCellValue());
+
+							cells.add(new SimpleDateFormat("MM/dd/yyyy").format(javaDate));
+							tR.setKey_Reason_for_display_on_date(new SimpleDateFormat("MM/dd/yyyy").format(javaDate));
+							// tR.setKey_Reason_for_display_on_date(cell.getNumericCellValue()
+							// + "");
+						}
+						break;
+
+					default:
+
+						cells.add("");
+						tR.setKey_Reason_for_display_on_date("");
+						break;
+					}
+				} else if (i >= 2 && i <= 8) {
+					switch (cell.getCellType()) {
+					case Cell.CELL_TYPE_STRING:
+
+						cells.add(cell.getStringCellValue());
+						tR.setKey_Reason_for_display(cell.getStringCellValue());
+
+						if (cell.getCellStyle().getDataFormatString().contains("Total")) {
+
+						}
+						break;
+					default:
+
+						cells.add("");
+						tR.setKey_Reason_for_display("");
+						break;
+					}
+
+				} else if (i >= 9) {
+					if (j == 1) {
+						switch (cell.getCellType()) {
+						case Cell.CELL_TYPE_STRING:
+
+							cells.add(cell.getStringCellValue());
+							tR.setS_No(cell.getStringCellValue());
+
+							if (cell.getCellStyle().getDataFormatString().contains("Total")) {
+
+							}
+							break;
+
+						case Cell.CELL_TYPE_NUMERIC:
+
+							tR.setS_No(cell.getNumericCellValue() + "");
+							break;
+						case Cell.CELL_TYPE_BLANK:
+
+							//tR.setS_No("");
+							break;
+							
+						default:
+
+							cells.add("");
+							tR.setS_No("");
+							break;
+						}
+					} else if (j == 2) {
+						switch (cell.getCellType()) {
+						case Cell.CELL_TYPE_STRING:
+
+							cells.add(cell.getStringCellValue());
+							tR.setEpic_Name(cell.getStringCellValue());
+
+							if (cell.getCellStyle().getDataFormatString().contains("Total")) {
+
+							}
+							break;
+
+						default:
+
+							cells.add("");
+							tR.setEpic_Name("");
+							break;
+						}
+					} else if (j == 3) {
+						switch (cell.getCellType()) {
+						case Cell.CELL_TYPE_STRING:
+
+							cells.add(cell.getStringCellValue());
+							tR.setUser_Story_Title(cell.getStringCellValue());
+
+							if (cell.getCellStyle().getDataFormatString().contains("Total")) {
+
+							}
+							break;
+
+						case Cell.CELL_TYPE_NUMERIC:
+
+							tR.setUser_Story_Title(cell.getNumericCellValue() + "");
+
+						default:
+
+							cells.add("");
+							tR.setUser_Story_Title("");
+							break;
+						}
+					} else if (j == 4) {
+						switch (cell.getCellType()) {
+						case Cell.CELL_TYPE_STRING:
+
+/*							if (cell.getCellStyle().getDataFormatString().contains("/")) {
+
+								// System.out.println("date cahnged");
+								Date javaDate = DateUtil.getJavaDate((double) cell.getNumericCellValue());
+								cells.add(new SimpleDateFormat("MM/dd/yyyy").format(javaDate));
+								tR.setRemarks_Received_On(new SimpleDateFormat("MM/dd/yyyy").format(javaDate));
+							} else {*/
+								cells.add(cell.getStringCellValue());
+								tR.setRemarks_Received_On(cell.getStringCellValue());
+							
+							break;
+
+						case Cell.CELL_TYPE_NUMERIC:
+
+							if (cell.getCellStyle().getDataFormatString().contains("/")) {
+
+								// System.out.println("date cahnged");
+								Date javaDate = DateUtil.getJavaDate((double) cell.getNumericCellValue());
+								cells.add(new SimpleDateFormat("MM/dd/yyyy").format(javaDate));
+								tR.setRemarks_Received_On(new SimpleDateFormat("MM/dd/yyyy").format(javaDate));
+							}
+							break;
+
+						default:
+
+							cells.add("");
+							tR.setRemarks_Received_On("");
+							break;
+						}
+					} else if (j == 5) {
+						switch (cell.getCellType()) {
+						case Cell.CELL_TYPE_STRING:
+
+							cells.add(cell.getStringCellValue());
+							tR.setTracking_Remarks(cell.getStringCellValue());
+
+							if (cell.getCellStyle().getDataFormatString().contains("Total")) {
+
+							}
+							break;
+
+						case Cell.CELL_TYPE_NUMERIC:
+
+							tR.setTracking_Remarks(cell.getNumericCellValue() + "");
+							break;
+
+						default:
+
+							cells.add("");
+							tR.setTracking_Remarks("");
+							break;
+						}
+					} else if (j == 6) {
+						switch (cell.getCellType()) {
+						case Cell.CELL_TYPE_STRING:
+
+							cells.add(cell.getStringCellValue());
+							tR.setImpact_Area(cell.getStringCellValue());
+
+							if (cell.getCellStyle().getDataFormatString().contains("Total")) {
+
+							}
+							break;
+
+						case Cell.CELL_TYPE_NUMERIC:
+
+							tR.setImpact_Area(cell.getNumericCellValue() + "");
+							break;
+
+						default:
+
+							cells.add("");
+							tR.setImpact_Area("");
+							break;
+						}
+					} else if (j == 7) {
+						switch (cell.getCellType()) {
+						case Cell.CELL_TYPE_STRING:
+
+							cells.add(cell.getStringCellValue());
+							tR.setImpact_in_man_days(cell.getStringCellValue());
+
+							if (cell.getCellStyle().getDataFormatString().contains("Total")) {
+
+							}
+							break;
+
+						case Cell.CELL_TYPE_NUMERIC:
+
+							tR.setImpact_in_man_days(cell.getNumericCellValue() + "");
+							break;
+
+						default:
+
+							cells.add("");
+							tR.setImpact_in_man_days("");
+							break;
+						}
+					}
+				}
+
+			}
+			j = 0;
+
+			/*
+			 * if (tR.getKey_Reason_for_display_on_date() != "Null" ) {
+			 * row1.add(tR.getKey_Reason_for_display_on_date()); }
+			 */
+
+			row1.add(tR);
+
+		}
+
+		FinalA f = new FinalA();
+		f.setTrackRem(row1);
+
+		FileWriter fileWriter2 = new FileWriter("D:\\Users\\raarora\\Desktop\\Mydocument\\Sheet20_03_18.json");
+
+		// Writting the jsonObject into sample.json
+		fileWriter2.write(mapper.writerWithDefaultPrettyPrinter().writeValueAsString(f));
+		fileWriter2.close();
+		//return row1;
+		return f;
+	}
+
+}

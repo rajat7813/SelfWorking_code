@@ -1,0 +1,43 @@
+{
+  "formresponse": {
+    "missing": {
+      "anchor": [
+        {
+          "objectid": "AS_SUBMIT",
+          "element": [
+            {
+              "elementid": "TechnicalAcceptance",
+              "suggestion": {
+                "@class": "array",
+                "suggestion": "true"
+              },
+              "dynamicschema": [
+                {
+                  "code": "TRUE",
+                  "label": "true"
+                },
+                {
+                  "code": "FALSE",
+                  "label": "false"
+                }
+              ]
+            },
+            {
+              "elementid": "SUBMIT",
+              "dynamicschema": [
+                {
+                  "code": "TRUE",
+                  "label": "true"
+                },
+                {
+                  "code": "FALSE",
+                  "label": "false"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,94 @@
+{
+  "formresponse": {
+    "missing": {
+      "anchor": [
+        {
+          "objectid": "AS_SUBMIT",
+          "element": [
+            {
+              "elementid": "TAorRedistribution",
+              "suggestion": [
+                "Redistribution"
+              ],
+              "dynamicschema": [
+                {
+                  "code": "TechnicalAcceptance",
+                  "label": "Technical acceptance for technical field ${technicalfield}"
+                },
+                {
+                  "code": "Redistribution",
+                  "label": "Redistribute dossier..."
+                }
+              ]
+            },
+            {
+              "elementid": "Class",
+              "suggestion": [
+                "AJ/300"
+              ]
+            },
+            {
+              "elementid": "ClassFrom",
+              "suggestion": [
+                  "A61M5/00"
+              ]
+            },
+            {
+              "elementid": "Directorate",
+              "suggestion": [
+                "200"
+              ],
+              "dynamicschema": [
+                {
+                  "code": "400",
+                  "label": "directorate - 400"
+                },
+                {
+                  "code": "200",
+                  "label": "directorate - 200"
+                },
+                {
+                  "code": "300",
+                  "label": "directorate - 300"
+                }
+              ]
+            },
+            {
+              "elementid": "ProposedExaminer",
+              "dynamicschema": [
+                {
+                  "code": "EDOEX10",
+                  "label": "EDOEX10"
+                },
+                {
+                  "code": "EDOEX11",
+                  "label": "EDOEX11"
+                },
+                {
+                  "code": "EDOEX12",
+                  "label": "EDOEX12"
+                }
+              ]
+            },
+            {
+              "elementid": "Comment"
+            },
+            {
+              "elementid": "SUBMIT",
+              "dynamicschema": [
+                {
+                  "code": "TRUE",
+                  "label": "true"
+                },
+                {
+                  "code": "FALSE",
+                  "label": "false"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

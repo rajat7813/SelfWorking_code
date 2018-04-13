@@ -1,0 +1,315 @@
+package com.sopra.readingdata;
+
+import java.io.FileInputStream;
+import java.io.FileWriter;
+import java.io.IOException;
+import java.text.SimpleDateFormat;
+import java.util.ArrayList;
+import java.util.Date;
+import java.util.Iterator;
+import java.util.List;
+
+import org.apache.poi.EncryptedDocumentException;
+import org.apache.poi.openxml4j.exceptions.InvalidFormatException;
+import org.apache.poi.ss.usermodel.Cell;
+import org.apache.poi.ss.usermodel.DateUtil;
+import org.apache.poi.ss.usermodel.Row;
+import org.apache.poi.ss.usermodel.Sheet;
+import org.apache.poi.ss.usermodel.Workbook;
+import org.apache.poi.ss.usermodel.WorkbookFactory;
+import org.json.simple.JSONArray;
+import org.json.simple.JSONObject;
+
+import com.fasterxml.jackson.databind.ObjectMapper;
+import com.sopra.pojo.FinalA;
+import com.sopra.pojo.Tracker_9_Feb;
+
+public class ForSheetThree {
+
+	
+	@SuppressWarnings({ "unchecked", "deprecation" })
+	public static void main(String[] args) throws EncryptedDocumentException, InvalidFormatException, IOException {
+
+		int i = 0, j = 0;
+		ObjectMapper mapper = new ObjectMapper();
+
+		FileInputStream inp = new FileInputStream("D:\\Users\\raarora\\Desktop\\Mydocument\\CR3-TrackerSummary.xlsx");
+		Workbook workbook = WorkbookFactory.create(inp);
+
+		Sheet sheet = workbook.getSheetAt(0);
+
+		// Start constructing JSON.
+		JSONObject json = new JSONObject();
+
+		// Iterate through the rows.
+		JSONArray rows = new JSONArray();
+
+		List<Tracker_9_Feb> row1 = new ArrayList<Tracker_9_Feb>();
+
+		Iterator<Row> rowIterator = sheet.iterator();
+		while (rowIterator.hasNext()) {
+
+			i++;
+
+			Tracker_9_Feb tF = new Tracker_9_Feb();
+
+			Row row = rowIterator.next();
+			JSONObject jRow = new JSONObject();
+			// For each row, iterate through all the columns
+			Iterator<Cell> cellIterator = row.cellIterator();
+			JSONArray cells = new JSONArray();
+			while (cellIterator.hasNext()) {
+				j++;
+
+				Cell cell = cellIterator.next();
+
+				if (i == 1) {
+					switch (cell.getCellType()) {
+					case Cell.CELL_TYPE_NUMERIC:
+
+						if (cell.getCellStyle().getDataFormatString().contains("/")) {
+
+							// System.out.println("date cahnged");
+
+							Date javaDate = DateUtil.getJavaDate((double) cell.getNumericCellValue());
+
+							cells.add(new SimpleDateFormat("MM/dd/yyyy").format(javaDate));
+							tR.setKey_Reason_for_display_on_date(new SimpleDateFormat("MM/dd/yyyy").format(javaDate));
+						} else {
+							cells.add(cell.getNumericCellValue() + "");
+							Date javaDate = DateUtil.getJavaDate((double) cell.getNumericCellValue());
+
+							cells.add(new SimpleDateFormat("MM/dd/yyyy").format(javaDate));
+							tR.setKey_Reason_for_display_on_date(new SimpleDateFormat("MM/dd/yyyy").format(javaDate));
+							// tR.setKey_Reason_for_display_on_date(cell.getNumericCellValue()
+							// + "");
+						}
+						break;
+
+					default:
+
+						cells.add("");
+						tR.setKey_Reason_for_display_on_date("");
+						break;
+					}
+				} else if (i >= 2 && i <= 8) {
+					switch (cell.getCellType()) {
+					case Cell.CELL_TYPE_STRING:
+
+						cells.add(cell.getStringCellValue());
+						tR.setKey_Reason_for_display(cell.getStringCellValue());
+
+						if (cell.getCellStyle().getDataFormatString().contains("Total")) {
+
+						}
+						break;
+					default:
+
+						cells.add("");
+						tR.setKey_Reason_for_display("");
+						break;
+					}
+
+				} else if (i >= 9) {
+					if (j == 1) {
+						switch (cell.getCellType()) {
+						case Cell.CELL_TYPE_STRING:
+
+							cells.add(cell.getStringCellValue());
+							tF.setEpic(cell.getStringCellValue());
+
+							if (cell.getCellStyle().getDataFormatString().contains("Total")) {
+
+							}
+							break;
+
+						case Cell.CELL_TYPE_NUMERIC:
+
+							tF.setEpic(cell.getNumericCellValue() + "");
+							break;
+						case Cell.CELL_TYPE_BLANK:
+
+							//tR.setS_No("");
+							break;
+							
+						default:
+
+							cells.add("");
+							tF.setEpic("");
+							break;
+						}
+					} else if (j == 2) {
+						switch (cell.getCellType()) {
+						case Cell.CELL_TYPE_STRING:
+
+							cells.add(cell.getStringCellValue());
+							tF.setNo_of_User_Stories(cell.getStringCellValue());
+
+							if (cell.getCellStyle().getDataFormatString().contains("Total")) {
+
+							}
+							break;
+							
+						case Cell.CELL_TYPE_NUMERIC:
+
+							tF.setNo_of_User_Stories(cell.getNumericCellValue() + "");
+							break;
+
+						default:
+
+							cells.add("");
+							tF.setNo_of_User_Stories("");
+							break;
+						}
+					} else if (j == 3) {
+						switch (cell.getCellType()) {
+						case Cell.CELL_TYPE_STRING:
+
+							cells.add(cell.getStringCellValue());
+							tF.setuS_S_No(cell.getStringCellValue());
+
+							if (cell.getCellStyle().getDataFormatString().contains("Total")) {
+
+							}
+							break;
+
+						case Cell.CELL_TYPE_NUMERIC:
+
+							tF.setuS_S_No(cell.getNumericCellValue() + "");
+
+						default:
+
+							cells.add("");
+							tF.setuS_S_No("");
+							break;
+						}
+					} else if (j == 4) {
+						switch (cell.getCellType()) {
+						case Cell.CELL_TYPE_STRING:
+
+/*							if (cell.getCellStyle().getDataFormatString().contains("/")) {
+
+								// System.out.println("date cahnged");
+								Date javaDate = DateUtil.getJavaDate((double) cell.getNumericCellValue());
+								cells.add(new SimpleDateFormat("MM/dd/yyyy").format(javaDate));
+								tR.setRemarks_Received_On(new SimpleDateFormat("MM/dd/yyyy").format(javaDate));
+							} else {*/
+								cells.add(cell.getStringCellValue());
+								tF.setUser_Story_Title(cell.getStringCellValue());
+							
+							break;
+
+						case Cell.CELL_TYPE_NUMERIC:
+
+							if (cell.getCellStyle().getDataFormatString().contains("/")) {
+
+								// System.out.println("date cahnged");
+								Date javaDate = DateUtil.getJavaDate((double) cell.getNumericCellValue());
+								cells.add(new SimpleDateFormat("MM/dd/yyyy").format(javaDate));
+								tF.setUser_Story_Title(new SimpleDateFormat("MM/dd/yyyy").format(javaDate));
+							}
+							break;
+
+						default:
+
+							cells.add("");
+							tF.setUser_Story_Title("");
+							break;
+						}
+					} else if (j == 5) {
+						switch (cell.getCellType()) {
+						case Cell.CELL_TYPE_STRING:
+
+							cells.add(cell.getStringCellValue());
+							tF.setOriginal_Budget(cell.getStringCellValue());
+
+							if (cell.getCellStyle().getDataFormatString().contains("Total")) {
+
+							}
+							break;
+
+						case Cell.CELL_TYPE_NUMERIC:
+
+							tF.setOriginal_Budget(cell.getNumericCellValue() + "");
+							break;
+
+						default:
+
+							cells.add("");
+							tF.setOriginal_Budget("");
+							break;
+						}
+					} else if (j == 6) {
+						switch (cell.getCellType()) {
+						case Cell.CELL_TYPE_STRING:
+
+							cells.add(cell.getStringCellValue());
+							tF.setActuals_AsonDate(cell.getStringCellValue());
+
+							if (cell.getCellStyle().getDataFormatString().contains("Total")) {
+
+							}
+							break;
+
+						case Cell.CELL_TYPE_NUMERIC:
+
+							tF.setActuals_AsonDate(cell.getNumericCellValue() + "");
+							break;
+
+						default:
+
+							cells.add("");
+							tF.setActuals_AsonDate("");
+							break;
+						}
+					} else if (j == 7) {
+						switch (cell.getCellType()) {
+						case Cell.CELL_TYPE_STRING:
+
+							cells.add(cell.getStringCellValue());
+							tF.setPercentage_completed(cell.getStringCellValue());
+
+							if (cell.getCellStyle().getDataFormatString().contains("Total")) {
+
+							}
+							break;
+
+						case Cell.CELL_TYPE_NUMERIC:
+
+							tF.setPercentage_completed(cell.getNumericCellValue() + "");
+							break;
+
+						default:
+
+							cells.add("");
+							tF.setPercentage_completed("");
+							break;
+						}
+					}
+				}
+
+			}
+			j = 0;
+
+			/*
+			 * if (tR.getKey_Reason_for_display_on_date() != "Null" ) {
+			 * row1.add(tR.getKey_Reason_for_display_on_date()); }
+			 */
+
+			row1.add(tF);
+
+		}
+
+		FinalA f = new FinalA();
+		f.setTrack_mnth(row1);
+
+		FileWriter fileWriter2 = new FileWriter("D:\\Users\\raarora\\Desktop\\Mydocument\\Sheet20_03_18_17.json");
+
+		// Writting the jsonObject into sample.json
+		fileWriter2.write(mapper.writerWithDefaultPrettyPrinter().writeValueAsString(f));
+		fileWriter2.close();
+
+	}
+
+}
+

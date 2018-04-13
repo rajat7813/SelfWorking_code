@@ -1,0 +1,105 @@
+{
+  "User_case_updates": {
+    "label": "User case updates",
+    "_links": {
+      "self": {
+        "href": "\/AccountManagement\/caseview-user_account\/399012\/UserCaseUpdates"
+      },
+      "api_doc": {
+        "href": "\/api-docs\/AccountManagement\/caseview-user_account\/399012\/UserCaseUpdates"
+      }
+    },
+    "dynamicschema": {
+      "NewDeputisation": [
+        {
+          "code": "TRUE",
+          "label": "Yes"
+        },
+        {
+          "code": "FALSE",
+          "label": "No"
+        }
+      ]
+    },
+    "paging": {
+      "totalresults": {
+        "@type": "number",
+        "#text": "1"
+      },
+      "pagesize": {
+        "param": "pagesize",
+        "currentpagesize": {
+          "@type": "number",
+          "#text": "25"
+        },
+        "option": [
+          {
+            "@type": "number",
+            "#text": "10"
+          },
+          {
+            "@type": "number",
+            "#text": "25"
+          },
+          {
+            "@type": "number",
+            "#text": "50"
+          }
+        ]
+      },
+      "param": "page",
+      "currentpage": {
+        "@type": "number",
+        "#text": "1"
+      },
+      "maxpages": {
+        "@type": "number",
+        "#text": "1"
+      }
+    },
+    "sorting": {
+      "param": "sort",
+      "option": {
+        "@class": "array",
+        "option": "UCU_Timestamp"
+      }
+    },
+    "_embedded": {
+      "results": {
+        "@class": "array",
+        "results": {
+          "User_case_updates": {
+            "actions": {
+              "@class": "array",
+              "actions": {
+                "name": "ModifyUserCaseUpdates",
+                "title": "Modify user case updates",
+                "method": "POST",
+                "href": "\/AccountManagement\/ModifyUserCaseUpdates\/399012",
+                "fields": {
+                  "@class": "array",
+                  "fields": {
+                    "name": "UCU_ID",
+                    "type": "number",
+                    "value": "1587445"
+                  }
+                }
+              }
+            },
+            "_id": {
+              "@type": "number",
+              "#text": "1587445"
+            },
+            "_links": {
+              "self": {
+                "href": "\/AccountManagement\/caseview-user_account\/399012\/UserCaseUpdates\/1587445"
+              }
+            },
+            "NewDeputisation": "TRUE",
+            "UCU_Timestamp": "2016-12-07 15:53:52"
+          }
+        }
+      }
+    }
+  }
+}

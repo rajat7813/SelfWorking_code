@@ -1,0 +1,47 @@
+{
+  "delta": {
+    "numbers": [{
+      "id": 209221,
+      "deleted": false,
+      "rid": "RIDPUB448859101",
+      "source": "ansera",
+      "last_modified": "2017-04-12T10:57:06.584+02:00",
+      "fulltext_id": "cd681098-e7ce-4c27-b0f1-e0e33a342fae,25428b68-da6e-4e97-8865-63a0267835d8",
+      "pn_docdb": "DE102014011379A120160211",
+      "pn_epoque": "DE102014011379",
+      "family_id": "055134491"
+    }, {
+      "id": 209222,
+      "deleted": false,
+      "rid": "RIDPUB459385043",
+      "source": "ansera",
+      "last_modified": "2017-04-12T10:57:06.587+02:00",
+      "fulltext_id": "73865d80-c9bb-419c-a295-2774a0aa337a,81fd10cf-7967-4879-ae2a-f242a6ffa1ee",
+      "pn_docdb": "WO2016128159A120160818",
+      "pn_epoque": "WO2016128159",
+      "family_id": "055083426"
+    }, {
+      "id": 209223,
+      "deleted": false,
+      "rid": "RIDPUB457234403",
+      "source": "ansera",
+      "last_modified": "2017-04-12T10:57:06.593+02:00",
+      "fulltext_id": "5dce86ad-8056-4410-a7b8-380c1eea8122,ba72c140-ccdf-42c5-9287-4c59f1820623",
+      "pn_docdb": "WO2016096245A120160623",
+      "pn_epoque": "WO2016096245",
+      "family_id": "056082732"
+    }, {
+      "id": 209224,
+      "deleted": false,
+      "rid": "RIDPUB449304115",
+      "source": "ansera",
+      "last_modified": "2017-04-12T10:57:06.596+02:00",
+      "fulltext_id": "29ff673e-78eb-4e0e-a925-f6f9fbc0ccc6,e645d3b4-f730-4b93-81ea-646911a8cefd",
+      "pn_docdb": "DE102014215978A120160218",
+      "pn_epoque": "DE102014215978",
+      "family_id": "055234886"
+    }],
+    "nextModifiedSince": "2017-07-06T14:38:08.784+02:00",
+    "hasActiveTransactions": false
+  }
+}

@@ -1,0 +1,36 @@
+<stdf:standOff xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:stdf="http://standoff.proposal">
+    <stdf:standOff type="comments" corresp="_6db9c10009">
+        <teiHeader>
+            <fileDesc>
+                <editionStmt>
+                    <author xml:id="123456789">
+                        <idno type="userID">FAKE_USER</idno>
+                    </author>
+                </editionStmt>
+            </fileDesc>
+            <encodingDesc>
+                <appInfo>
+                    <application ident="teamPatent" version="2.0">
+                        <label>TeamPatent</label>
+                    </application>
+                </appInfo>
+            </encodingDesc>
+            <profileDesc>
+                <creation>
+                    <date>2016-01-01</date>
+                </creation>
+            </profileDesc>
+        </teiHeader>
+        <stdf:listAnnotation>
+            <stdf:listAnnotation>
+                <ptr target='#string-range("_6db9c10009", 5, 50)'/>
+                <interp type="comment">
+                    <body>
+                        <head>This is an annotation label!</head>
+                        <text>This is annotation text</text>
+                    </body>
+                </interp>
+            </stdf:listAnnotation>
+        </stdf:listAnnotation>
+    </stdf:standOff>
+</stdf:standOff>

@@ -1,0 +1,72 @@
+{
+  "_links": {
+    "application": {
+      "href": "{serviceUrl}/application/{applicationRID}"
+    },
+    "document": {
+      "href": "{serviceUrl}/pre-publication/{applicationRID}/{applicationNumber}/document"
+    },
+    "annotations": {
+      "href": "{serviceUrl}/pre-publication/{applicationRID}/{applicationNumber}/annotations"
+    },
+    "self": {
+      "href": "{serviceUrl}/pre-publication/{applicationRID}/{applicationNumber}"
+    },
+    "family": {
+      "href": "{serviceUrl}/family/056511628"
+    }
+  },
+  "_embedded": {
+    "document": {
+      "_links": {
+        "facsimiles": {
+          "href": "{serviceUrl}/pre-publication/{applicationRID}/{applicationNumber}/facsimiles"
+        },
+        "parent": {
+          "href": "{serviceUrl}/pre-publication/{applicationRID}/{applicationNumber}"
+        },
+        "facsimile": {
+          "href": "{serviceUrl}/pre-publication/{applicationRID}/{applicationNumber}/facsimiles/{facsimileId}"
+        },
+        "facsimile:content": {
+          "href": "{serviceUrl}/tei/pre-publication/{applicationRID}/{applicationNumber}/facsimiles/{facsimileId}"
+        },
+        "biblio": {
+          "href": "{serviceUrl}/tei/pre-publication/{applicationRID}/{applicationNumber}/biblio"
+        },
+        "self": {
+          "href": "{serviceUrl}/pre-publication/{applicationRID}/{applicationNumber}/document"
+        },
+        "section": {
+          "href": "{serviceUrl}/tei/pre-publication/{applicationRID}/{applicationNumber}/sections/{sectionId}"
+        },
+        "page": {
+          "href": "{serviceUrl}/pre-publication/{applicationRID}/{applicationNumber}/facsimiles/{facsimileId}/{pageId}"
+        },
+        "content": {
+          "href": "{serviceUrl}/tei/pre-publication/{applicationRID}/{applicationNumber}"
+        },
+        "sections": {
+          "href": "{serviceUrl}/pre-publication/{applicationRID}/{applicationNumber}/sections"
+        }
+      },
+      "sections": {
+        "unknown": [{
+          "dateProduced": "2016-08-01",
+          "sectionId": "RVpBUUxOMzIyMDM2RFNV",
+          "facsimileId": "VU5LTk9XTi9FWkFRTE4zMjIwMzZEU1U",
+          "sectionQuality": "02",
+          "sectionProvider": "JOUVE",
+          "facsimileFirstPageNumber": 1,
+          "facsimileLastPageNumber": 20,
+          "sectionDate": "2016-08-01"
+        }]
+      }
+    }
+  },
+  "id": "{applicationRID}/{applicationNumber}",
+  "title": "DISPOSITIF DE TRANSFERT DEPUIS UN VEHICULE POUR HANDICAPES MOTEURS, ET ENSEMBLE OU KIT POUR SA MISE EN PLACE",
+  "date": "2016-05-27",
+  "applicationId": "{applicationRID}",
+  "sequenceNumber": "{applicationNumber}"
+}

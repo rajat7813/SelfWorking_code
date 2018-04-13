@@ -1,0 +1,4100 @@
+{
+  "_links": {
+    "self": {
+      "href": "/resources/uicomponentsService"
+    },
+    "api_doc": {
+      "href": "/api-docs/resources/uicomponentsService"
+    }
+  },
+  "filter": [
+    {
+      "choicefilter": {
+        "param": "roles",
+        "label": "role(s)",
+        "options": [
+          {
+            "key": "access_beinformed",
+            "selected": {
+              "@type": "boolean",
+              "#text": "true"
+            },
+            "count": {
+              "@type": "number",
+              "#text": "0"
+            },
+            "label": "Access Beinformed"
+          },
+          {
+            "key": "configure_division_members_ruleset",
+            "selected": {
+              "@type": "boolean",
+              "#text": "true"
+            },
+            "count": {
+              "@type": "number",
+              "#text": "0"
+            },
+            "label": "Configure Division members ruleset (Stock mgt)"
+          },
+          {
+            "key": "view_user_list",
+            "selected": {
+              "@type": "boolean",
+              "#text": "true"
+            },
+            "count": {
+              "@type": "number",
+              "#text": "1"
+            },
+            "label": "View the users list"
+          },
+          {
+            "key": "view_user_account_details",
+            "selected": {
+              "@type": "boolean",
+              "#text": "true"
+            },
+            "count": {
+              "@type": "number",
+              "#text": "1"
+            },
+            "label": "View the user accounts details with organisational accounts and roles linked to it"
+          },
+          {
+            "key": "propose_deputisation",
+            "selected": {
+              "@type": "boolean",
+              "#text": "true"
+            },
+            "count": {
+              "@type": "number",
+              "#text": "0"
+            },
+            "label": "Propose a deputisation"
+          },
+          {
+            "key": "revoke_deputisation",
+            "selected": {
+              "@type": "boolean",
+              "#text": "true"
+            },
+            "count": {
+              "@type": "number",
+              "#text": "0"
+            },
+            "label": "Revoke a deputisation"
+          },
+          {
+            "key": "reject_deputisation",
+            "selected": {
+              "@type": "boolean",
+              "#text": "true"
+            },
+            "count": {
+              "@type": "number",
+              "#text": "0"
+            },
+            "label": "Reject a deputisation in Team Patent"
+          },
+          {
+            "key": "associate_functions_to_a_role",
+            "count": {
+              "@type": "number",
+              "#text": "0"
+            },
+            "label": "Associate functions to a role"
+          },
+          {
+            "key": "assign_org_role_to_account",
+            "selected": {
+              "@type": "boolean",
+              "#text": "true"
+            },
+            "count": {
+              "@type": "number",
+              "#text": "0"
+            },
+            "label": "Assign an organisational role to accounts"
+          },
+          {
+            "key": "view_all_orga_account_and_linked_tf_users",
+            "selected": {
+              "@type": "boolean",
+              "#text": "true"
+            },
+            "count": {
+              "@type": "number",
+              "#text": "1"
+            },
+            "label": "View any organisational account and the technical fields and users that are linked to it"
+          },
+          {
+            "key": "assign_role_to_accounts",
+            "selected": {
+              "@type": "boolean",
+              "#text": "true"
+            },
+            "count": {
+              "@type": "number",
+              "#text": "1"
+            },
+            "label": "Assign a functional to accounts"
+          },
+          {
+            "key": "configure_legacy_links",
+            "count": {
+              "@type": "number",
+              "#text": "0"
+            },
+            "label": "Configure legacy links (Stock mgt)"
+          },
+          {
+            "key": "modify_own_user_settings",
+            "selected": {
+              "@type": "boolean",
+              "#text": "true"
+            },
+            "count": {
+              "@type": "number",
+              "#text": "0"
+            },
+            "label": "Modify their own Team Patent User Account"
+          },
+          {
+            "key": "accept_deputisation",
+            "selected": {
+              "@type": "boolean",
+              "#text": "true"
+            },
+            "count": {
+              "@type": "number",
+              "#text": "0"
+            },
+            "label": "Accept a deputisation in Team Patent"
+          },
+          {
+            "key": "see_own_role_and_permissions",
+            "selected": {
+              "@type": "boolean",
+              "#text": "true"
+            },
+            "count": {
+              "@type": "number",
+              "#text": "0"
+            },
+            "label": "See his own roles and associated permissions"
+          },
+          {
+            "key": "see_proposed_deputisations_list",
+            "selected": {
+              "@type": "boolean",
+              "#text": "true"
+            },
+            "count": {
+              "@type": "number",
+              "#text": "0"
+            },
+            "label": "See list of proposed deputisations"
+          },
+          {
+            "key": "create_a_role",
+            "selected": {
+              "@type": "boolean",
+              "#text": "true"
+            },
+            "count": {
+              "@type": "number",
+              "#text": "0"
+            },
+            "label": "Create a role"
+          },
+          {
+            "key": "access_edfs",
+            "selected": {
+              "@type": "boolean",
+              "#text": "true"
+            },
+            "count": {
+              "@type": "number",
+              "#text": "4"
+            },
+            "label": "Access edfs"
+          },
+          {
+            "key": "see_his_own_account_details",
+            "selected": {
+              "@type": "boolean",
+              "#text": "true"
+            },
+            "count": {
+              "@type": "number",
+              "#text": "0"
+            },
+            "label": "See his own account details"
+          },
+          {
+            "key": "see_deputised_by_myself",
+            "selected": {
+              "@type": "boolean",
+              "#text": "true"
+            },
+            "count": {
+              "@type": "number",
+              "#text": "0"
+            },
+            "label": "See the deputised tasks by myself"
+          },
+          {
+            "key": "see_history_of_deputisation",
+            "selected": {
+              "@type": "boolean",
+              "#text": "true"
+            },
+            "count": {
+              "@type": "number",
+              "#text": "0"
+            },
+            "label": "See the history of deputisation"
+          },
+          {
+            "key": "open_stock_management_module",
+            "selected": {
+              "@type": "boolean",
+              "#text": "true"
+            },
+            "count": {
+              "@type": "number",
+              "#text": "4"
+            },
+            "label": "Open Stock Management Module (Stock mgt)"
+          },
+          {
+            "key": "manage_cms_time_limits_per_dossier",
+            "selected": {
+              "@type": "boolean",
+              "#text": "true"
+            },
+            "count": {
+              "@type": "number",
+              "#text": "0"
+            },
+            "label": "Manage CMS time limits per dossier (Stock mgt)"
+          },
+          {
+            "key": "configure_cms_time_limits",
+            "selected": {
+              "@type": "boolean",
+              "#text": "true"
+            },
+            "count": {
+              "@type": "number",
+              "#text": "0"
+            },
+            "label": "Configure CMS time limits (Stock mgt)"
+          },
+          {
+            "key": "open_muse_workload_manager",
+            "selected": {
+              "@type": "boolean",
+              "#text": "true"
+            },
+            "count": {
+              "@type": "number",
+              "#text": "1"
+            },
+            "label": "Open MUSE workload manager (Stock mgt)"
+          },
+          {
+            "key": "re_distribution",
+            "selected": {
+              "@type": "boolean",
+              "#text": "true"
+            },
+            "count": {
+              "@type": "number",
+              "#text": "6"
+            },
+            "label": "Re-distribution (Stock mgt)"
+          },
+          {
+            "key": "re_allocation",
+            "selected": {
+              "@type": "boolean",
+              "#text": "true"
+            },
+            "count": {
+              "@type": "number",
+              "#text": "4"
+            },
+            "label": "Re-allocation (Stock mgt)"
+          },
+          {
+            "key": "allocation",
+            "selected": {
+              "@type": "boolean",
+              "#text": "true"
+            },
+            "count": {
+              "@type": "number",
+              "#text": "4"
+            },
+            "label": "Allocation (Stock mgt)"
+          },
+          {
+            "key": "associate_functional_role_to_organisational_role",
+            "count": {
+              "@type": "number",
+              "#text": "0"
+            },
+            "label": "Associate a functional role to an organisational role"
+          },
+          {
+            "key": "technical_acceptance",
+            "selected": {
+              "@type": "boolean",
+              "#text": "true"
+            },
+            "count": {
+              "@type": "number",
+              "#text": "2"
+            },
+            "label": "Technical acceptance (Stock mgt)"
+          },
+          {
+            "key": "repropose_deputisation",
+            "selected": {
+              "@type": "boolean",
+              "#text": "true"
+            },
+            "count": {
+              "@type": "number",
+              "#text": "0"
+            },
+            "label": "Re-propose a deputisation"
+          },
+          {
+            "key": "receive_comment_deputisation_proposal_rejected_reason",
+            "count": {
+              "@type": "number",
+              "#text": "0"
+            },
+            "label": "Receive comment that explain why my deputisation proposal was rejected or forwarder"
+          },
+          {
+            "key": "see_deputisation_details",
+            "selected": {
+              "@type": "boolean",
+              "#text": "true"
+            },
+            "count": {
+              "@type": "number",
+              "#text": "0"
+            },
+            "label": "See the deputisation details"
+          },
+          {
+            "key": "assign_deputisation",
+            "selected": {
+              "@type": "boolean",
+              "#text": "true"
+            },
+            "count": {
+              "@type": "number",
+              "#text": "0"
+            },
+            "label": "Assign a deputization from BeInformed"
+          },
+          {
+            "key": "flag_a_role_as_deputisable",
+            "selected": {
+              "@type": "boolean",
+              "#text": "true"
+            },
+            "count": {
+              "@type": "number",
+              "#text": "0"
+            },
+            "label": "Flag a role as deputisable"
+          },
+          {
+            "key": "modify_a_role",
+            "selected": {
+              "@type": "boolean",
+              "#text": "true"
+            },
+            "count": {
+              "@type": "number",
+              "#text": "0"
+            },
+            "label": "Modify a role"
+          },
+          {
+            "key": "modify_font_size",
+            "selected": {
+              "@type": "boolean",
+              "#text": "true"
+            },
+            "count": {
+              "@type": "number",
+              "#text": "0"
+            },
+            "label": "Modify font size"
+          },
+          {
+            "key": "modifiy_default_settings",
+            "count": {
+              "@type": "number",
+              "#text": "0"
+            },
+            "label": "Modify the default settings in BeInformed"
+          },
+          {
+            "key": "view_list_of_organisational_accounts",
+            "selected": {
+              "@type": "boolean",
+              "#text": "true"
+            },
+            "count": {
+              "@type": "number",
+              "#text": "1"
+            },
+            "label": "View list of organisational accounts"
+          },
+          {
+            "key": "delete_a_role",
+            "selected": {
+              "@type": "boolean",
+              "#text": "true"
+            },
+            "count": {
+              "@type": "number",
+              "#text": "0"
+            },
+            "label": "Delete a role"
+          },
+          {
+            "key": "see_his_own_deputisation",
+            "selected": {
+              "@type": "boolean",
+              "#text": "true"
+            },
+            "count": {
+              "@type": "number",
+              "#text": "0"
+            },
+            "label": "See his own deputisation in Team Patent Account"
+          },
+          {
+            "key": "open_work_manager_module",
+            "selected": {
+              "@type": "boolean",
+              "#text": "true"
+            },
+            "count": {
+              "@type": "number",
+              "#text": "6"
+            },
+            "label": "Open Work Manager Module (Stock mgt)"
+          },
+          {
+            "key": "open_director_module",
+            "selected": {
+              "@type": "boolean",
+              "#text": "true"
+            },
+            "count": {
+              "@type": "number",
+              "#text": "1"
+            },
+            "label": "Open Director Module (Stock mgt)"
+          },
+          {
+            "key": "open_estore_module",
+            "selected": {
+              "@type": "boolean",
+              "#text": "true"
+            },
+            "count": {
+              "@type": "number",
+              "#text": "2"
+            },
+            "label": "Open eStore Module (Stock mgt)"
+          },
+          {
+            "key": "autosuggestion_config",
+            "selected": {
+              "@type": "boolean",
+              "#text": "true"
+            },
+            "count": {
+              "@type": "number",
+              "#text": "1"
+            },
+            "label": "Autosuggestion config"
+          },
+          {
+            "key": "View_dossier_preview",
+            "selected": {
+              "@type": "boolean",
+              "#text": "true"
+            },
+            "count": {
+              "@type": "number",
+              "#text": "4"
+            },
+            "label": "View dossier preview"
+          },
+          {
+            "key": "View_dossier_list",
+            "selected": {
+              "@type": "boolean",
+              "#text": "true"
+            },
+            "count": {
+              "@type": "number",
+              "#text": "3"
+            },
+            "label": "View dossier list"
+          },
+          {
+            "key": "View_tray_list",
+            "selected": {
+              "@type": "boolean",
+              "#text": "true"
+            },
+            "count": {
+              "@type": "number",
+              "#text": "1"
+            },
+            "label": "View tray list"
+          },
+          {
+            "key": "View_workspace",
+            "selected": {
+              "@type": "boolean",
+              "#text": "true"
+            },
+            "count": {
+              "@type": "number",
+              "#text": "3"
+            },
+            "label": "View workspace"
+          },
+          {
+            "key": "Open_in_muse",
+            "selected": {
+              "@type": "boolean",
+              "#text": "true"
+            },
+            "count": {
+              "@type": "number",
+              "#text": "2"
+            },
+            "label": "Open in muse"
+          },
+          {
+            "key": "Check_workload",
+            "selected": {
+              "@type": "boolean",
+              "#text": "true"
+            },
+            "count": {
+              "@type": "number",
+              "#text": "2"
+            },
+            "label": "Check workload"
+          },
+          {
+            "key": "Mark_to_inspect",
+            "selected": {
+              "@type": "boolean",
+              "#text": "true"
+            },
+            "count": {
+              "@type": "number",
+              "#text": "1"
+            },
+            "label": "Mark to inspect"
+          },
+          {
+            "key": "Unmark_to_inspect",
+            "selected": {
+              "@type": "boolean",
+              "#text": "true"
+            },
+            "count": {
+              "@type": "number",
+              "#text": "1"
+            },
+            "label": "Unmark to inspect"
+          },
+          {
+            "key": "Open_formality_module",
+            "count": {
+              "@type": "number",
+              "#text": "0"
+            },
+            "label": "Open formality module"
+          },
+          {
+            "key": "Not_available",
+            "count": {
+              "@type": "number",
+              "#text": "0"
+            },
+            "label": "Not available"
+          },
+          {
+            "key": "open_history_module",
+            "selected": {
+              "@type": "boolean",
+              "#text": "true"
+            },
+            "count": {
+              "@type": "number",
+              "#text": "0"
+            },
+            "label": "Open History Module"
+          },
+          {
+            "key": "View_as_formality_officer",
+            "count": {
+              "@type": "number",
+              "#text": "1"
+            },
+            "label": "View ToC as formality officer"
+          },
+          {
+            "key": "View_transaction_history_module",
+            "count": {
+              "@type": "number",
+              "#text": "0"
+            },
+            "label": "View transaction history module"
+          },
+          {
+            "key": "off-load_reload",
+            "selected": {
+              "@type": "boolean",
+              "#text": "true"
+            },
+            "count": {
+              "@type": "number",
+              "#text": "2"
+            },
+            "label": "Off-load and Reload off-load"
+          },
+          {
+            "key": "Upload_document",
+            "selected": {
+              "@type": "boolean",
+              "#text": "true"
+            },
+            "count": {
+              "@type": "number",
+              "#text": "1"
+            },
+            "label": "Upload document"
+          },
+          {
+            "key": "Export_document",
+            "selected": {
+              "@type": "boolean",
+              "#text": "true"
+            },
+            "count": {
+              "@type": "number",
+              "#text": "1"
+            },
+            "label": "Export document"
+          },
+          {
+            "key": "View_ToC",
+            "selected": {
+              "@type": "boolean",
+              "#text": "true"
+            },
+            "count": {
+              "@type": "number",
+              "#text": "1"
+            },
+            "label": "View table of content"
+          },
+          {
+            "key": "preallocation",
+            "selected": {
+              "@type": "boolean",
+              "#text": "true"
+            },
+            "count": {
+              "@type": "number",
+              "#text": "1"
+            },
+            "label": "Pre-allocation"
+          },
+          {
+            "key": "undo_preallocation",
+            "selected": {
+              "@type": "boolean",
+              "#text": "true"
+            },
+            "count": {
+              "@type": "number",
+              "#text": "1"
+            },
+            "label": "Undo Pre-allocation"
+          },
+          {
+            "key": "trackingSheet_create",
+            "selected": {
+              "@type": "boolean",
+              "#text": "true"
+            },
+            "count": {
+              "@type": "number",
+              "#text": "0"
+            },
+            "label": "trackingSheet_create"
+          },
+          {
+            "key": "doccodetype_view",
+            "selected": {
+              "@type": "boolean",
+              "#text": "true"
+            },
+            "count": {
+              "@type": "number",
+              "#text": "0"
+            },
+            "label": "doccodetype_view"
+          },
+          {
+            "key": "document_upload",
+            "selected": {
+              "@type": "boolean",
+              "#text": "true"
+            },
+            "count": {
+              "@type": "number",
+              "#text": "0"
+            },
+            "label": "document_upload"
+          },
+          {
+            "key": "dossierhistory_view",
+            "selected": {
+              "@type": "boolean",
+              "#text": "true"
+            },
+            "count": {
+              "@type": "number",
+              "#text": "0"
+            },
+            "label": "dossierhistory_view"
+          },
+          {
+            "key": "dossierhistory_create",
+            "selected": {
+              "@type": "boolean",
+              "#text": "true"
+            },
+            "count": {
+              "@type": "number",
+              "#text": "0"
+            },
+            "label": "dossierhistory_create"
+          },
+          {
+            "key": "sourcetype_read",
+            "selected": {
+              "@type": "boolean",
+              "#text": "true"
+            },
+            "count": {
+              "@type": "number",
+              "#text": "0"
+            },
+            "label": "sourcetype_read"
+          },
+          {
+            "key": "system_notification_create",
+            "selected": {
+              "@type": "boolean",
+              "#text": "true"
+            },
+            "count": {
+              "@type": "number",
+              "#text": "0"
+            },
+            "label": "system_notification_create"
+          },
+          {
+            "key": "system_notification_view",
+            "selected": {
+              "@type": "boolean",
+              "#text": "true"
+            },
+            "count": {
+              "@type": "number",
+              "#text": "0"
+            },
+            "label": "system_notification_view"
+          },
+          {
+            "key": "system_notification_count",
+            "selected": {
+              "@type": "boolean",
+              "#text": "true"
+            },
+            "count": {
+              "@type": "number",
+              "#text": "0"
+            },
+            "label": "system_notification_count"
+          },
+          {
+            "key": "notification_change",
+            "selected": {
+              "@type": "boolean",
+              "#text": "true"
+            },
+            "count": {
+              "@type": "number",
+              "#text": "0"
+            },
+            "label": "notification_change"
+          },
+          {
+            "key": "user_notification_create",
+            "selected": {
+              "@type": "boolean",
+              "#text": "true"
+            },
+            "count": {
+              "@type": "number",
+              "#text": "0"
+            },
+            "label": "user_notification_create"
+          },
+          {
+            "key": "user_notification_view",
+            "selected": {
+              "@type": "boolean",
+              "#text": "true"
+            },
+            "count": {
+              "@type": "number",
+              "#text": "0"
+            },
+            "label": "user_notification_view"
+          },
+          {
+            "key": "user_notification_count",
+            "selected": {
+              "@type": "boolean",
+              "#text": "true"
+            },
+            "count": {
+              "@type": "number",
+              "#text": "0"
+            },
+            "label": "user_notification_count"
+          },
+          {
+            "key": "search_user_view",
+            "selected": {
+              "@type": "boolean",
+              "#text": "true"
+            },
+            "count": {
+              "@type": "number",
+              "#text": "0"
+            },
+            "label": "search_user_view"
+          },
+          {
+            "key": "annotation_list_view",
+            "selected": {
+              "@type": "boolean",
+              "#text": "true"
+            },
+            "count": {
+              "@type": "number",
+              "#text": "0"
+            },
+            "label": "annotation_list_view"
+          },
+          {
+            "key": "annotations_create",
+            "selected": {
+              "@type": "boolean",
+              "#text": "true"
+            },
+            "count": {
+              "@type": "number",
+              "#text": "0"
+            },
+            "label": "annotations_create"
+          },
+          {
+            "key": "section_annotations_view",
+            "selected": {
+              "@type": "boolean",
+              "#text": "true"
+            },
+            "count": {
+              "@type": "number",
+              "#text": "0"
+            },
+            "label": "section_annotations_view"
+          },
+          {
+            "key": "annotation_view",
+            "selected": {
+              "@type": "boolean",
+              "#text": "true"
+            },
+            "count": {
+              "@type": "number",
+              "#text": "0"
+            },
+            "label": "annotation_view"
+          },
+          {
+            "key": "annotation_update",
+            "selected": {
+              "@type": "boolean",
+              "#text": "true"
+            },
+            "count": {
+              "@type": "number",
+              "#text": "0"
+            },
+            "label": "annotation_update"
+          },
+          {
+            "key": "annotation_delete",
+            "selected": {
+              "@type": "boolean",
+              "#text": "true"
+            },
+            "count": {
+              "@type": "number",
+              "#text": "0"
+            },
+            "label": "annotation_delete"
+          },
+          {
+            "key": "search_concept_list_view",
+            "selected": {
+              "@type": "boolean",
+              "#text": "true"
+            },
+            "count": {
+              "@type": "number",
+              "#text": "0"
+            },
+            "label": "search_concept_list_view"
+          },
+          {
+            "key": "search_concept_create",
+            "selected": {
+              "@type": "boolean",
+              "#text": "true"
+            },
+            "count": {
+              "@type": "number",
+              "#text": "0"
+            },
+            "label": "search_concept_create"
+          },
+          {
+            "key": "search_concept_view",
+            "selected": {
+              "@type": "boolean",
+              "#text": "true"
+            },
+            "count": {
+              "@type": "number",
+              "#text": "0"
+            },
+            "label": "search_concept_view"
+          },
+          {
+            "key": "search_concept_update",
+            "selected": {
+              "@type": "boolean",
+              "#text": "true"
+            },
+            "count": {
+              "@type": "number",
+              "#text": "0"
+            },
+            "label": "search_concept_update"
+          },
+          {
+            "key": "search_concept_delete",
+            "selected": {
+              "@type": "boolean",
+              "#text": "true"
+            },
+            "count": {
+              "@type": "number",
+              "#text": "0"
+            },
+            "label": "search_concept_delete"
+          },
+          {
+            "key": "annotation_attachment_view",
+            "selected": {
+              "@type": "boolean",
+              "#text": "true"
+            },
+            "count": {
+              "@type": "number",
+              "#text": "0"
+            },
+            "label": "annotation_attachment_view"
+          },
+          {
+            "key": "priorart_annotation_view",
+            "selected": {
+              "@type": "boolean",
+              "#text": "true"
+            },
+            "count": {
+              "@type": "number",
+              "#text": "0"
+            },
+            "label": "priorart_annotation_view"
+          },
+          {
+            "key": "documents_export",
+            "selected": {
+              "@type": "boolean",
+              "#text": "true"
+            },
+            "count": {
+              "@type": "number",
+              "#text": "0"
+            },
+            "label": "documents_export"
+          },
+          {
+            "key": "priorart_list_view",
+            "selected": {
+              "@type": "boolean",
+              "#text": "true"
+            },
+            "count": {
+              "@type": "number",
+              "#text": "0"
+            },
+            "label": "priorart_list_view"
+          },
+          {
+            "key": "priorart_view",
+            "selected": {
+              "@type": "boolean",
+              "#text": "true"
+            },
+            "count": {
+              "@type": "number",
+              "#text": "0"
+            },
+            "label": "priorart_view"
+          },
+          {
+            "key": "priorart_order_update",
+            "selected": {
+              "@type": "boolean",
+              "#text": "true"
+            },
+            "count": {
+              "@type": "number",
+              "#text": "0"
+            },
+            "label": "priorart_order_update"
+          },
+          {
+            "key": "priorart_feature_mapping_list_view",
+            "selected": {
+              "@type": "boolean",
+              "#text": "true"
+            },
+            "count": {
+              "@type": "number",
+              "#text": "0"
+            },
+            "label": "priorart_feature_mapping_list_view"
+          },
+          {
+            "key": "priorart_feature_mapping_view",
+            "selected": {
+              "@type": "boolean",
+              "#text": "true"
+            },
+            "count": {
+              "@type": "number",
+              "#text": "0"
+            },
+            "label": "priorart_feature_mapping_view"
+          },
+          {
+            "key": "priorart_feature_mapping_update",
+            "selected": {
+              "@type": "boolean",
+              "#text": "true"
+            },
+            "count": {
+              "@type": "number",
+              "#text": "0"
+            },
+            "label": "priorart_feature_mapping_update"
+          },
+          {
+            "key": "dossier_document_upload",
+            "selected": {
+              "@type": "boolean",
+              "#text": "true"
+            },
+            "count": {
+              "@type": "number",
+              "#text": "0"
+            },
+            "label": "dossier_document_upload"
+          },
+          {
+            "key": "document_content_view",
+            "selected": {
+              "@type": "boolean",
+              "#text": "true"
+            },
+            "count": {
+              "@type": "number",
+              "#text": "0"
+            },
+            "label": "document_content_view"
+          },
+          {
+            "key": "dossier_document_list_view",
+            "selected": {
+              "@type": "boolean",
+              "#text": "true"
+            },
+            "count": {
+              "@type": "number",
+              "#text": "0"
+            },
+            "label": "dossier_document_list_view"
+          },
+          {
+            "key": "document_metadata_view",
+            "selected": {
+              "@type": "boolean",
+              "#text": "true"
+            },
+            "count": {
+              "@type": "number",
+              "#text": "0"
+            },
+            "label": "document_metadata_view"
+          },
+          {
+            "key": "document_page_metadata_view",
+            "selected": {
+              "@type": "boolean",
+              "#text": "true"
+            },
+            "count": {
+              "@type": "number",
+              "#text": "0"
+            },
+            "label": "document_page_metadata_view"
+          },
+          {
+            "key": "document_page_view",
+            "selected": {
+              "@type": "boolean",
+              "#text": "true"
+            },
+            "count": {
+              "@type": "number",
+              "#text": "0"
+            },
+            "label": "document_page_view"
+          },
+          {
+            "key": "document_page_zoom_update",
+            "selected": {
+              "@type": "boolean",
+              "#text": "true"
+            },
+            "count": {
+              "@type": "number",
+              "#text": "0"
+            },
+            "label": "document_page_zoom_update"
+          },
+          {
+            "key": "document_metadata_update",
+            "selected": {
+              "@type": "boolean",
+              "#text": "true"
+            },
+            "count": {
+              "@type": "number",
+              "#text": "0"
+            },
+            "label": "document_metadata_update"
+          },
+          {
+            "key": "document_label_update",
+            "selected": {
+              "@type": "boolean",
+              "#text": "true"
+            },
+            "count": {
+              "@type": "number",
+              "#text": "0"
+            },
+            "label": "document_label_update"
+          },
+          {
+            "key": "dossier_pamphlet_view",
+            "selected": {
+              "@type": "boolean",
+              "#text": "true"
+            },
+            "count": {
+              "@type": "number",
+              "#text": "0"
+            },
+            "label": "dossier_pamphlet_view"
+          },
+          {
+            "key": "cms_core_services_monitoring_view",
+            "selected": {
+              "@type": "boolean",
+              "#text": "true"
+            },
+            "count": {
+              "@type": "number",
+              "#text": "0"
+            },
+            "label": "cms_core_services_monitoring_view"
+          },
+          {
+            "key": "document_read_by_user_update",
+            "selected": {
+              "@type": "boolean",
+              "#text": "true"
+            },
+            "count": {
+              "@type": "number",
+              "#text": "0"
+            },
+            "label": "document_read_by_user_update"
+          },
+          {
+            "key": "dossier_last_accessed_view",
+            "selected": {
+              "@type": "boolean",
+              "#text": "true"
+            },
+            "count": {
+              "@type": "number",
+              "#text": "0"
+            },
+            "label": "dossier_last_accessed_view"
+          },
+          {
+            "key": "pdm_view",
+            "selected": {
+              "@type": "boolean",
+              "#text": "true"
+            },
+            "count": {
+              "@type": "number",
+              "#text": "0"
+            },
+            "label": "pdm_view"
+          }
+        ]
+      }
+    },
+    {
+      "numberfilter": {
+        "param": "ID",
+        "label": "case id"
+      }
+    },
+    {
+      "choicefilter": {
+        "param": "refParent",
+        "label": "parent(s)",
+        "options": [
+          {
+            "key": "1",
+            "count": {
+              "@type": "number",
+              "#text": "3"
+            },
+            "label": "Work"
+          },
+          {
+            "key": "2",
+            "count": {
+              "@type": "number",
+              "#text": "4"
+            },
+            "label": "Stock"
+          },
+          {
+            "key": "3",
+            "count": {
+              "@type": "number",
+              "#text": "3"
+            },
+            "label": "eStore"
+          },
+          {
+            "key": "13",
+            "count": {
+              "@type": "number",
+              "#text": "0"
+            },
+            "label": "Dossierlist"
+          },
+          {
+            "key": "16",
+            "count": {
+              "@type": "number",
+              "#text": "0"
+            },
+            "label": "Sticker filter"
+          },
+          {
+            "key": "18",
+            "count": {
+              "@type": "number",
+              "#text": "12"
+            },
+            "label": "Dossier (instance)"
+          },
+          {
+            "key": "202",
+            "count": {
+              "@type": "number",
+              "#text": "0"
+            },
+            "label": "Dossier info"
+          },
+          {
+            "key": "205",
+            "count": {
+              "@type": "number",
+              "#text": "4"
+            },
+            "label": "Redistribution"
+          },
+          {
+            "key": "209",
+            "count": {
+              "@type": "number",
+              "#text": "7"
+            },
+            "label": "Module list"
+          },
+          {
+            "key": "214",
+            "count": {
+              "@type": "number",
+              "#text": "0"
+            },
+            "label": "Dossierlist"
+          },
+          {
+            "key": "215",
+            "count": {
+              "@type": "number",
+              "#text": "0"
+            },
+            "label": "User list"
+          },
+          {
+            "key": "281",
+            "count": {
+              "@type": "number",
+              "#text": "3"
+            },
+            "label": "Allocation"
+          },
+          {
+            "key": "295",
+            "count": {
+              "@type": "number",
+              "#text": "0"
+            },
+            "label": "1st Examiner"
+          },
+          {
+            "key": "296",
+            "count": {
+              "@type": "number",
+              "#text": "0"
+            },
+            "label": "2nd Examiner"
+          },
+          {
+            "key": "297",
+            "count": {
+              "@type": "number",
+              "#text": "0"
+            },
+            "label": "Chairman"
+          },
+          {
+            "key": "305",
+            "count": {
+              "@type": "number",
+              "#text": "0"
+            },
+            "label": "Allocate?"
+          },
+          {
+            "key": "447",
+            "count": {
+              "@type": "number",
+              "#text": "0"
+            },
+            "label": "Dossier badge"
+          },
+          {
+            "key": "467",
+            "count": {
+              "@type": "number",
+              "#text": "0"
+            },
+            "label": "Error log"
+          },
+          {
+            "key": "676",
+            "count": {
+              "@type": "number",
+              "#text": "3"
+            },
+            "label": "Pre-allocation"
+          },
+          {
+            "key": "693",
+            "count": {
+              "@type": "number",
+              "#text": "0"
+            },
+            "label": "STOCK_MANAGER_DOSSIER_LIST"
+          },
+          {
+            "key": "719",
+            "count": {
+              "@type": "number",
+              "#text": "0"
+            },
+            "label": "FO_TRAYS_LIST"
+          },
+          {
+            "key": "2081",
+            "count": {
+              "@type": "number",
+              "#text": "4"
+            },
+            "label": "Workspace"
+          },
+          {
+            "key": "2367",
+            "count": {
+              "@type": "number",
+              "#text": "3"
+            },
+            "label": "COVER_PAGE"
+          },
+          {
+            "key": "2482",
+            "count": {
+              "@type": "number",
+              "#text": "1"
+            },
+            "label": "OpenIn"
+          },
+          {
+            "key": "2487",
+            "count": {
+              "@type": "number",
+              "#text": "0"
+            },
+            "label": "Muse"
+          },
+          {
+            "key": "2682",
+            "count": {
+              "@type": "number",
+              "#text": "1"
+            },
+            "label": "CheckWorkload"
+          },
+          {
+            "key": "2689",
+            "count": {
+              "@type": "number",
+              "#text": "0"
+            },
+            "label": "Muse"
+          },
+          {
+            "key": "2941",
+            "count": {
+              "@type": "number",
+              "#text": "0"
+            },
+            "label": "Directorate"
+          },
+          {
+            "key": "2988",
+            "count": {
+              "@type": "number",
+              "#text": "0"
+            },
+            "label": "Proposed Examiner"
+          },
+          {
+            "key": "2992",
+            "count": {
+              "@type": "number",
+              "#text": "0"
+            },
+            "label": "Comment"
+          },
+          {
+            "key": "2996",
+            "count": {
+              "@type": "number",
+              "#text": "0"
+            },
+            "label": "Lead Class"
+          },
+          {
+            "key": "41334",
+            "count": {
+              "@type": "number",
+              "#text": "1"
+            },
+            "label": "Technical acceptance"
+          },
+          {
+            "key": "41343",
+            "count": {
+              "@type": "number",
+              "#text": "0"
+            },
+            "label": "Technical acceptance ?"
+          },
+          {
+            "key": "41362",
+            "count": {
+              "@type": "number",
+              "#text": "0"
+            },
+            "label": "ONLINE_HELP_LINK"
+          },
+          {
+            "key": "41363",
+            "count": {
+              "@type": "number",
+              "#text": "1"
+            },
+            "label": "Accounts"
+          },
+          {
+            "key": "41366",
+            "count": {
+              "@type": "number",
+              "#text": "0"
+            },
+            "label": "Assign a new role"
+          },
+          {
+            "key": "41367",
+            "count": {
+              "@type": "number",
+              "#text": "3"
+            },
+            "label": "Batch allocation"
+          },
+          {
+            "key": "51367",
+            "count": {
+              "@type": "number",
+              "#text": "0"
+            },
+            "label": "Autosuggestion"
+          },
+          {
+            "key": "51369",
+            "count": {
+              "@type": "number",
+              "#text": "0"
+            },
+            "label": "Mark to inspect"
+          },
+          {
+            "key": "51370",
+            "count": {
+              "@type": "number",
+              "#text": "0"
+            },
+            "label": "Unmark to inspect"
+          },
+          {
+            "key": "51371",
+            "count": {
+              "@type": "number",
+              "#text": "1"
+            },
+            "label": "Dossier Content"
+          },
+          {
+            "key": "51372",
+            "count": {
+              "@type": "number",
+              "#text": "0"
+            },
+            "label": "Table of Content for Formality Officer"
+          },
+          {
+            "key": "51376",
+            "count": {
+              "@type": "number",
+              "#text": "0"
+            },
+            "label": "Off Load"
+          },
+          {
+            "key": "51377",
+            "count": {
+              "@type": "number",
+              "#text": "0"
+            },
+            "label": "Reload"
+          },
+          {
+            "key": "51378",
+            "count": {
+              "@type": "number",
+              "#text": "0"
+            },
+            "label": "Table of Content"
+          },
+          {
+            "key": "51379",
+            "count": {
+              "@type": "number",
+              "#text": "0"
+            },
+            "label": "Upload document"
+          },
+          {
+            "key": "51381",
+            "count": {
+              "@type": "number",
+              "#text": "0"
+            },
+            "label": "Export document"
+          },
+          {
+            "key": "51382",
+            "count": {
+              "@type": "number",
+              "#text": "0"
+            },
+            "label": "Pre-allocation"
+          },
+          {
+            "key": "51383",
+            "count": {
+              "@type": "number",
+              "#text": "0"
+            },
+            "label": "Undo Pre-allocation"
+          },
+          {
+            "key": "51384",
+            "count": {
+              "@type": "number",
+              "#text": "2"
+            },
+            "label": "Dossier preview NT"
+          },
+          {
+            "key": "51387",
+            "count": {
+              "@type": "number",
+              "#text": "4"
+            },
+            "label": "Re-distribution WM"
+          },
+          {
+            "key": "51388",
+            "count": {
+              "@type": "number",
+              "#text": "3"
+            },
+            "label": "Allocation WM"
+          },
+          {
+            "key": "51389",
+            "count": {
+              "@type": "number",
+              "#text": "1"
+            },
+            "label": "Technical acceptance WM"
+          },
+          {
+            "key": "61382",
+            "count": {
+              "@type": "number",
+              "#text": "3"
+            },
+            "label": "History"
+          }
+        ]
+      }
+    },
+    {
+      "stringfilter": {
+        "param": "tpFeIdentifier",
+        "label": "tpFeIdentifier"
+      }
+    },
+    {
+      "choicefilter": {
+        "param": "uiComponentClass",
+        "label": "uiComponentClass",
+        "options": [
+          {
+            "key": "class_module",
+            "count": {
+              "@type": "number",
+              "#text": "7"
+            },
+            "label": "Module"
+          },
+          {
+            "key": "class_component",
+            "count": {
+              "@type": "number",
+              "#text": "9"
+            },
+            "label": "Component"
+          },
+          {
+            "key": "class_transaction_start",
+            "count": {
+              "@type": "number",
+              "#text": "0"
+            },
+            "label": "Transaction start event"
+          },
+          {
+            "key": "class_allocation",
+            "count": {
+              "@type": "number",
+              "#text": "0"
+            },
+            "label": "Allocation"
+          },
+          {
+            "key": "List",
+            "count": {
+              "@type": "number",
+              "#text": "4"
+            },
+            "label": "List"
+          },
+          {
+            "key": "class_transaction_stop",
+            "count": {
+              "@type": "number",
+              "#text": "0"
+            },
+            "label": "Transaction stop event"
+          },
+          {
+            "key": "class_dossierlist",
+            "count": {
+              "@type": "number",
+              "#text": "3"
+            },
+            "label": "Dossierlist"
+          },
+          {
+            "key": "class_activity",
+            "count": {
+              "@type": "number",
+              "#text": "7"
+            },
+            "label": "Activity"
+          },
+          {
+            "key": "Dossier",
+            "count": {
+              "@type": "number",
+              "#text": "3"
+            },
+            "label": "Dossier"
+          },
+          {
+            "key": "class_listfilter",
+            "count": {
+              "@type": "number",
+              "#text": "0"
+            },
+            "label": "Filter instance ID"
+          },
+          {
+            "key": "class_activity_secondary",
+            "count": {
+              "@type": "number",
+              "#text": "6"
+            },
+            "label": "Secondary activity"
+          },
+          {
+            "key": "Instance",
+            "count": {
+              "@type": "number",
+              "#text": "0"
+            },
+            "label": "Instance"
+          },
+          {
+            "key": "Key",
+            "count": {
+              "@type": "number",
+              "#text": "2"
+            },
+            "label": "Key"
+          },
+          {
+            "key": "class_attribute",
+            "count": {
+              "@type": "number",
+              "#text": "8"
+            },
+            "label": "Attribute"
+          },
+          {
+            "key": "Library",
+            "count": {
+              "@type": "number",
+              "#text": "0"
+            },
+            "label": "Library"
+          },
+          {
+            "key": "libraryComponent",
+            "count": {
+              "@type": "number",
+              "#text": "0"
+            },
+            "label": "libraryComponent"
+          },
+          {
+            "key": "libraryPage",
+            "count": {
+              "@type": "number",
+              "#text": "0"
+            },
+            "label": "libraryPage"
+          }
+        ]
+      }
+    },
+    {
+      "stringfilter": {
+        "param": "uiServiceUri",
+        "label": "uiServiceUri"
+      }
+    },
+    {
+      "stringfilter": {
+        "param": "attributeID",
+        "label": "attributeID"
+      }
+    }
+  ],
+  "dynamicschema": {
+    "uiComponentClass": [
+      {
+        "code": "class_module",
+        "label": "Module"
+      },
+      {
+        "code": "class_component",
+        "label": "Component"
+      },
+      {
+        "code": "class_transaction_start",
+        "label": "Transaction start event"
+      },
+      {
+        "code": "class_allocation",
+        "label": "Allocation"
+      },
+      {
+        "code": "List",
+        "label": "List"
+      },
+      {
+        "code": "class_transaction_stop",
+        "label": "Transaction stop event"
+      },
+      {
+        "code": "class_dossierlist",
+        "label": "Dossierlist"
+      },
+      {
+        "code": "class_activity",
+        "label": "Activity"
+      },
+      {
+        "code": "Dossier",
+        "label": "Dossier"
+      },
+      {
+        "code": "class_listfilter",
+        "label": "Filter instance ID"
+      },
+      {
+        "code": "class_activity_secondary",
+        "label": "Secondary activity"
+      },
+      {
+        "code": "Instance",
+        "label": "Instance"
+      },
+      {
+        "code": "Key",
+        "label": "Key"
+      },
+      {
+        "code": "class_attribute",
+        "label": "Attribute"
+      },
+      {
+        "code": "Library",
+        "label": "Library"
+      },
+      {
+        "code": "libraryComponent",
+        "label": "libraryComponent"
+      },
+      {
+        "code": "libraryPage",
+        "label": "libraryPage"
+      }
+    ],
+    "roles": [
+      {
+        "code": "access_beinformed",
+        "label": "Access Beinformed"
+      },
+      {
+        "code": "configure_division_members_ruleset",
+        "label": "Configure Division members ruleset (Stock mgt)"
+      },
+      {
+        "code": "view_user_list",
+        "label": "View the users list"
+      },
+      {
+        "code": "view_user_account_details",
+        "label": "View the user accounts details with organisational accounts and roles linked to it"
+      },
+      {
+        "code": "propose_deputisation",
+        "label": "Propose a deputisation"
+      },
+      {
+        "code": "revoke_deputisation",
+        "label": "Revoke a deputisation"
+      },
+      {
+        "code": "reject_deputisation",
+        "label": "Reject a deputisation in Team Patent"
+      },
+      {
+        "code": "associate_functions_to_a_role",
+        "label": "Associate functions to a role"
+      },
+      {
+        "code": "assign_org_role_to_account",
+        "label": "Assign an organisational role to accounts"
+      },
+      {
+        "code": "view_all_orga_account_and_linked_tf_users",
+        "label": "View any organisational account and the technical fields and users that are linked to it"
+      },
+      {
+        "code": "assign_role_to_accounts",
+        "label": "Assign a functional to accounts"
+      },
+      {
+        "code": "configure_legacy_links",
+        "label": "Configure legacy links (Stock mgt)"
+      },
+      {
+        "code": "modify_own_user_settings",
+        "label": "Modify their own Team Patent User Account"
+      },
+      {
+        "code": "accept_deputisation",
+        "label": "Accept a deputisation in Team Patent"
+      },
+      {
+        "code": "see_own_role_and_permissions",
+        "label": "See his own roles and associated permissions"
+      },
+      {
+        "code": "see_proposed_deputisations_list",
+        "label": "See list of proposed deputisations"
+      },
+      {
+        "code": "create_a_role",
+        "label": "Create a role"
+      },
+      {
+        "code": "access_edfs",
+        "label": "Access edfs"
+      },
+      {
+        "code": "see_his_own_account_details",
+        "label": "See his own account details"
+      },
+      {
+        "code": "see_deputised_by_myself",
+        "label": "See the deputised tasks by myself"
+      },
+      {
+        "code": "see_history_of_deputisation",
+        "label": "See the history of deputisation"
+      },
+      {
+        "code": "open_stock_management_module",
+        "label": "Open Stock Management Module (Stock mgt)"
+      },
+      {
+        "code": "manage_cms_time_limits_per_dossier",
+        "label": "Manage CMS time limits per dossier (Stock mgt)"
+      },
+      {
+        "code": "configure_cms_time_limits",
+        "label": "Configure CMS time limits (Stock mgt)"
+      },
+      {
+        "code": "open_muse_workload_manager",
+        "label": "Open MUSE workload manager (Stock mgt)"
+      },
+      {
+        "code": "re_distribution",
+        "label": "Re-distribution (Stock mgt)"
+      },
+      {
+        "code": "re_allocation",
+        "label": "Re-allocation (Stock mgt)"
+      },
+      {
+        "code": "allocation",
+        "label": "Allocation (Stock mgt)"
+      },
+      {
+        "code": "associate_functional_role_to_organisational_role",
+        "label": "Associate a functional role to an organisational role"
+      },
+      {
+        "code": "technical_acceptance",
+        "label": "Technical acceptance (Stock mgt)"
+      },
+      {
+        "code": "repropose_deputisation",
+        "label": "Re-propose a deputisation"
+      },
+      {
+        "code": "receive_comment_deputisation_proposal_rejected_reason",
+        "label": "Receive comment that explain why my deputisation proposal was rejected or forwarder"
+      },
+      {
+        "code": "see_deputisation_details",
+        "label": "See the deputisation details"
+      },
+      {
+        "code": "assign_deputisation",
+        "label": "Assign a deputization from BeInformed"
+      },
+      {
+        "code": "flag_a_role_as_deputisable",
+        "label": "Flag a role as deputisable"
+      },
+      {
+        "code": "modify_a_role",
+        "label": "Modify a role"
+      },
+      {
+        "code": "modify_font_size",
+        "label": "Modify font size"
+      },
+      {
+        "code": "modifiy_default_settings",
+        "label": "Modify the default settings in BeInformed"
+      },
+      {
+        "code": "view_list_of_organisational_accounts",
+        "label": "View list of organisational accounts"
+      },
+      {
+        "code": "delete_a_role",
+        "label": "Delete a role"
+      },
+      {
+        "code": "see_his_own_deputisation",
+        "label": "See his own deputisation in Team Patent Account"
+      },
+      {
+        "code": "open_work_manager_module",
+        "label": "Open Work Manager Module (Stock mgt)"
+      },
+      {
+        "code": "open_director_module",
+        "label": "Open Director Module (Stock mgt)"
+      },
+      {
+        "code": "open_estore_module",
+        "label": "Open eStore Module (Stock mgt)"
+      },
+      {
+        "code": "autosuggestion_config",
+        "label": "Autosuggestion config"
+      },
+      {
+        "code": "View_dossier_preview",
+        "label": "View dossier preview"
+      },
+      {
+        "code": "View_dossier_list",
+        "label": "View dossier list"
+      },
+      {
+        "code": "View_tray_list",
+        "label": "View tray list"
+      },
+      {
+        "code": "View_workspace",
+        "label": "View workspace"
+      },
+      {
+        "code": "Open_in_muse",
+        "label": "Open in muse"
+      },
+      {
+        "code": "Check_workload",
+        "label": "Check workload"
+      },
+      {
+        "code": "Mark_to_inspect",
+        "label": "Mark to inspect"
+      },
+      {
+        "code": "Unmark_to_inspect",
+        "label": "Unmark to inspect"
+      },
+      {
+        "code": "Open_formality_module",
+        "label": "Open formality module"
+      },
+      {
+        "code": "Not_available",
+        "label": "Not available"
+      },
+      {
+        "code": "open_history_module",
+        "label": "Open History Module"
+      },
+      {
+        "code": "View_as_formality_officer",
+        "label": "View ToC as formality officer"
+      },
+      {
+        "code": "View_transaction_history_module",
+        "label": "View transaction history module"
+      },
+      {
+        "code": "off-load_reload",
+        "label": "Off-load and Reload off-load"
+      },
+      {
+        "code": "Upload_document",
+        "label": "Upload document"
+      },
+      {
+        "code": "Export_document",
+        "label": "Export document"
+      },
+      {
+        "code": "View_ToC",
+        "label": "View table of content"
+      },
+      {
+        "code": "215",
+        "label": "User list"
+      },
+      {
+        "code": "281",
+        "label": "Allocation"
+      },
+      {
+        "code": "295",
+        "label": "1st Examiner"
+      },
+      {
+        "code": "296",
+        "label": "2nd Examiner"
+      },
+      {
+        "code": "297",
+        "label": "Chairman"
+      },
+      {
+        "code": "305",
+        "label": "Allocate?"
+      },
+      {
+        "code": "447",
+        "label": "Dossier badge"
+      },
+      {
+        "code": "467",
+        "label": "Error log"
+      },
+      {
+        "code": "676",
+        "label": "Pre-allocation"
+      },
+      {
+        "code": "693",
+        "label": "STOCK_MANAGER_DOSSIER_LIST"
+      },
+      {
+        "code": "719",
+        "label": "FO_TRAYS_LIST"
+      },
+      {
+        "code": "2081",
+        "label": "Workspace"
+      },
+      {
+        "code": "2367",
+        "label": "COVER_PAGE"
+      },
+      {
+        "code": "2482",
+        "label": "OpenIn"
+      },
+      {
+        "code": "2487",
+        "label": "Muse"
+      },
+      {
+        "code": "2682",
+        "label": "CheckWorkload"
+      },
+      {
+        "code": "2689",
+        "label": "Muse"
+      },
+      {
+        "code": "2941",
+        "label": "Directorate"
+      },
+      {
+        "code": "2988",
+        "label": "Proposed Examiner"
+      },
+      {
+        "code": "2992",
+        "label": "Comment"
+      },
+      {
+        "code": "2996",
+        "label": "Lead Class"
+      },
+      {
+        "code": "41334",
+        "label": "Technical acceptance"
+      },
+      {
+        "code": "41343",
+        "label": "Technical acceptance ?"
+      },
+      {
+        "code": "41362",
+        "label": "ONLINE_HELP_LINK"
+      },
+      {
+        "code": "41363",
+        "label": "Accounts"
+      },
+      {
+        "code": "41366",
+        "label": "Assign a new role"
+      },
+      {
+        "code": "41367",
+        "label": "Batch allocation"
+      },
+      {
+        "code": "51367",
+        "label": "Autosuggestion"
+      },
+      {
+        "code": "51369",
+        "label": "Mark to inspect"
+      },
+      {
+        "code": "51370",
+        "label": "Unmark to inspect"
+      },
+      {
+        "code": "51371",
+        "label": "Dossier Content"
+      },
+      {
+        "code": "51372",
+        "label": "Table of Content for Formality Officer"
+      },
+      {
+        "code": "51376",
+        "label": "Off Load"
+      },
+      {
+        "code": "51377",
+        "label": "Reload"
+      },
+      {
+        "code": "51378",
+        "label": "Table of Content"
+      },
+      {
+        "code": "51379",
+        "label": "Upload document"
+      },
+      {
+        "code": "51381",
+        "label": "Export document"
+      },
+      {
+        "code": "51382",
+        "label": "Pre-allocation"
+      },
+      {
+        "code": "51383",
+        "label": "Undo Pre-allocation"
+      },
+      {
+        "code": "51384",
+        "label": "Dossier preview NT"
+      },
+      {
+        "code": "51387",
+        "label": "Re-distribution WM"
+      },
+      {
+        "code": "51388",
+        "label": "Allocation WM"
+      },
+      {
+        "code": "51389",
+        "label": "Technical acceptance WM"
+      },
+      {
+        "code": "61382",
+        "label": "History"
+      }
+    ],
+    "attributeType": [
+      {
+        "code": "choice",
+        "label": "Choice"
+      },
+      {
+        "code": "date",
+        "label": "Date"
+      },
+      {
+        "code": "number",
+        "label": "Number"
+      },
+      {
+        "code": "password",
+        "label": "Password"
+      },
+      {
+        "code": "string",
+        "label": "String"
+      }
+    ],
+    "attributeRequired": [
+      {
+        "code": "true",
+        "label": "true"
+      },
+      {
+        "code": "false",
+        "label": "false"
+      }
+    ],
+    "attributeReadonly": [
+      {
+        "code": "true",
+        "label": "true"
+      },
+      {
+        "code": "false",
+        "label": "false"
+      }
+    ],
+    "attributeMultipleChoice": [
+      {
+        "code": "na",
+        "label": "n/a"
+      },
+      {
+        "code": "true",
+        "label": "true"
+      },
+      {
+        "code": "false",
+        "label": "false"
+      }
+    ]
+  },
+  "paging": null,
+  "sorting": {
+    "param": "sort",
+    "currentsort": "refParent asc",
+    "option": [
+      "tpFeIdentifier",
+      "label",
+      "uiServiceUri",
+      "attributeID",
+      "attributeSize",
+      "attributeDefaultValue"
+    ]
+  },
+  "_embedded": {
+    "results": [
+      {
+        "uicomponent": {
+          "_id": {
+            "@type": "number",
+            "#text": "51387"
+          },
+          "_links": {
+            "self": {
+              "href": "/resources/uicomponentDetails/51387"
+            }
+          },
+          "tpFeIdentifier": "technicalacceptance",
+          "label": "Re-distribution WM",
+          "uiComponentClass": "class_activity",
+          "uiServiceUri": "/eStore/Patent",
+          "roles": [
+            "open_work_manager_module",
+            "re_distribution"
+          ],
+          "attributeID": null,
+          "attributeSize": null,
+          "attributeDefaultValue": null,
+          "attributeType": null,
+          "attributeRequired": "false",
+          "attributeReadonly": "false",
+          "attributeMultipleChoice": "na"
+        }
+      },
+      {
+        "uicomponent": {
+          "_id": {
+            "@type": "number",
+            "#text": "51388"
+          },
+          "_links": {
+            "self": {
+              "href": "/resources/uicomponentDetails/51388"
+            }
+          },
+          "tpFeIdentifier": "assignexaminersandchairman",
+          "label": "Allocation WM",
+          "uiComponentClass": "class_activity",
+          "uiServiceUri": "/eStore/Patent",
+          "roles": {
+            "@class": "array",
+            "option": "open_work_manager_module"
+          },
+          "attributeID": null,
+          "attributeSize": null,
+          "attributeDefaultValue": null,
+          "attributeType": null,
+          "attributeRequired": "false",
+          "attributeReadonly": "false",
+          "attributeMultipleChoice": "na"
+        }
+      },
+      {
+        "uicomponent": {
+          "_id": {
+            "@type": "number",
+            "#text": "51389"
+          },
+          "_links": {
+            "self": {
+              "href": "/resources/uicomponentDetails/51389"
+            }
+          },
+          "tpFeIdentifier": "ta",
+          "label": "Technical acceptance WM",
+          "uiComponentClass": "class_activity",
+          "uiServiceUri": "/eStore/Patent",
+          "roles": {
+            "@class": "array",
+            "option": "open_work_manager_module"
+          },
+          "attributeID": null,
+          "attributeSize": null,
+          "attributeDefaultValue": null,
+          "attributeType": null,
+          "attributeRequired": "false",
+          "attributeReadonly": "false",
+          "attributeMultipleChoice": "na"
+        }
+      },
+      {
+        "uicomponent": {
+          "_id": {
+            "@type": "number",
+            "#text": "2081"
+          },
+          "_links": {
+            "self": {
+              "href": "/resources/uicomponentDetails/2081"
+            }
+          },
+          "tpFeIdentifier": "WORKSPACE",
+          "label": "Workspace",
+          "uiComponentClass": "class_component",
+          "uiServiceUri": "/workmanager/Patent",
+          "roles": {
+            "@class": "array",
+            "option": "View_workspace"
+          },
+          "attributeID": null,
+          "attributeSize": null,
+          "attributeDefaultValue": null,
+          "attributeType": null,
+          "attributeRequired": "false",
+          "attributeReadonly": "false",
+          "attributeMultipleChoice": "na"
+        }
+      },
+      {
+        "uicomponent": {
+          "_id": {
+            "@type": "number",
+            "#text": "41362"
+          },
+          "_links": {
+            "self": {
+              "href": "/resources/uicomponentDetails/41362"
+            }
+          },
+          "tpFeIdentifier": "ONLINE_HELP_LINK",
+          "label": "ONLINE_HELP_LINK",
+          "uiComponentClass": "class_component",
+          "uiServiceUri": "http://confluence-p.internal.epo.org/pages/viewpage.action?spaceKey=eDossier&title=eDossier+user+help",
+          "roles": {
+            "@class": "array",
+            "option": "access_edfs"
+          },
+          "attributeID": null,
+          "attributeSize": null,
+          "attributeDefaultValue": null,
+          "attributeType": null,
+          "attributeRequired": "false",
+          "attributeReadonly": "false",
+          "attributeMultipleChoice": "na"
+        }
+      },
+      {
+        "uicomponent": {
+          "_id": {
+            "@type": "number",
+            "#text": "209"
+          },
+          "_links": {
+            "self": {
+              "href": "/resources/uicomponentDetails/209"
+            },
+            "keyCollection": {
+              "href": "/resources/uicomponentsService/209/keyCollection"
+            }
+          },
+          "tpFeIdentifier": "MODULE_LIST",
+          "label": "Module list",
+          "uiComponentClass": "List",
+          "uiServiceUri": null,
+          "roles": [
+            "open_director_module",
+            "open_estore_module",
+            "open_stock_management_module",
+            "open_work_manager_module"
+          ],
+          "attributeID": null,
+          "attributeSize": null,
+          "attributeDefaultValue": null,
+          "attributeType": null,
+          "attributeRequired": "false",
+          "attributeReadonly": "false",
+          "attributeMultipleChoice": "na"
+        }
+      },
+      {
+        "uicomponent": {
+          "_id": {
+            "@type": "number",
+            "#text": "215"
+          },
+          "_links": {
+            "self": {
+              "href": "/resources/uicomponentDetails/215"
+            },
+            "keyCollection": {
+              "href": "/resources/uicomponentsService/215/keyCollection"
+            }
+          },
+          "tpFeIdentifier": "USERLIST1",
+          "label": "User list",
+          "uiComponentClass": "List",
+          "uiServiceUri": "/Maintenance/users",
+          "roles": {
+            "@class": "array",
+            "option": "access_edfs"
+          },
+          "attributeID": null,
+          "attributeSize": null,
+          "attributeDefaultValue": null,
+          "attributeType": null,
+          "attributeRequired": "false",
+          "attributeReadonly": "false",
+          "attributeMultipleChoice": "na"
+        }
+      },
+      {
+        "uicomponent": {
+          "_id": {
+            "@type": "number",
+            "#text": "18"
+          },
+          "_links": {
+            "self": {
+              "href": "/resources/uicomponentDetails/18"
+            },
+            "keyCollection": {
+              "href": "/resources/uicomponentsService/18/keyCollection"
+            }
+          },
+          "tpFeIdentifier": "DOSSIER_PREVIEW",
+          "label": "Dossier (instance)",
+          "uiComponentClass": "Dossier",
+          "uiServiceUri": "/integrationlayer/workmanager/biblio",
+          "roles": {
+            "@class": "array",
+            "option": "View_dossier_preview"
+          },
+          "refParent": [
+            "1",
+            "2",
+            "3",
+            "676"
+          ],
+          "attributeID": null,
+          "attributeSize": null,
+          "attributeDefaultValue": null,
+          "attributeType": null,
+          "attributeRequired": "false",
+          "attributeReadonly": "false",
+          "attributeMultipleChoice": "na"
+        }
+      },
+      {
+        "uicomponent": {
+          "_id": {
+            "@type": "number",
+            "#text": "719"
+          },
+          "_links": {
+            "self": {
+              "href": "/resources/uicomponentDetails/719"
+            }
+          },
+          "tpFeIdentifier": "TRAYS_LIST",
+          "label": "FO_TRAYS_LIST",
+          "uiComponentClass": "List",
+          "uiServiceUri": "/trays",
+          "roles": {
+            "@class": "array",
+            "option": "View_tray_list"
+          },
+          "refParent": [
+            "1",
+            "2",
+            "3",
+            "676",
+            "61382"
+          ],
+          "attributeID": null,
+          "attributeSize": null,
+          "attributeDefaultValue": null,
+          "attributeType": null,
+          "attributeRequired": "false",
+          "attributeReadonly": "false",
+          "attributeMultipleChoice": "na"
+        }
+      },
+      {
+        "uicomponent": {
+          "_id": {
+            "@type": "number",
+            "#text": "214"
+          },
+          "_links": {
+            "self": {
+              "href": "/resources/uicomponentDetails/214"
+            }
+          },
+          "tpFeIdentifier": "DOSSIER_LIST",
+          "label": "Dossierlist",
+          "uiComponentClass": "class_dossierlist",
+          "uiServiceUri": "/listWork",
+          "roles": {
+            "@class": "array",
+            "option": "View_dossier_list"
+          },
+          "refParent": [
+            "1",
+            "61382"
+          ],
+          "attributeID": null,
+          "attributeSize": null,
+          "attributeDefaultValue": null,
+          "attributeType": null,
+          "attributeRequired": "false",
+          "attributeReadonly": "false",
+          "attributeMultipleChoice": "na"
+        }
+      },
+      {
+        "uicomponent": {
+          "_id": {
+            "@type": "number",
+            "#text": "51369"
+          },
+          "_links": {
+            "self": {
+              "href": "/resources/uicomponentDetails/51369"
+            }
+          },
+          "tpFeIdentifier": "MarkToInspectMenu",
+          "label": "Mark to inspect",
+          "uiComponentClass": "class_activity_secondary",
+          "uiServiceUri": "Mark to inspect",
+          "roles": {
+            "@class": "array",
+            "option": "Mark_to_inspect"
+          },
+          "refParent": [
+            "18",
+            "2367"
+          ],
+          "attributeID": null,
+          "attributeSize": null,
+          "attributeDefaultValue": null,
+          "attributeType": null,
+          "attributeRequired": "false",
+          "attributeReadonly": "false",
+          "attributeMultipleChoice": "na"
+        }
+      },
+      {
+        "uicomponent": {
+          "_id": {
+            "@type": "number",
+            "#text": "51370"
+          },
+          "_links": {
+            "self": {
+              "href": "/resources/uicomponentDetails/51370"
+            }
+          },
+          "tpFeIdentifier": "UnMarkToInspectMenu",
+          "label": "Unmark to inspect",
+          "uiComponentClass": "class_activity_secondary",
+          "uiServiceUri": "Unmark to inspect",
+          "roles": {
+            "@class": "array",
+            "option": "Unmark_to_inspect"
+          },
+          "refParent": [
+            "18",
+            "2367"
+          ],
+          "attributeID": null,
+          "attributeSize": null,
+          "attributeDefaultValue": null,
+          "attributeType": null,
+          "attributeRequired": "false",
+          "attributeReadonly": "false",
+          "attributeMultipleChoice": "na"
+        }
+      },
+      {
+        "uicomponent": {
+          "_id": {
+            "@type": "number",
+            "#text": "51376"
+          },
+          "_links": {
+            "self": {
+              "href": "/resources/uicomponentDetails/51376"
+            }
+          },
+          "tpFeIdentifier": "OffLoad",
+          "label": "Off Load",
+          "uiComponentClass": "class_activity_secondary",
+          "uiServiceUri": "Off Load",
+          "roles": {
+            "@class": "array",
+            "option": "off-load_reload"
+          },
+          "refParent": [
+            "18",
+            "2367"
+          ],
+          "attributeID": null,
+          "attributeSize": null,
+          "attributeDefaultValue": null,
+          "attributeType": null,
+          "attributeRequired": "false",
+          "attributeReadonly": "false",
+          "attributeMultipleChoice": "na"
+        }
+      },
+      {
+        "uicomponent": {
+          "_id": {
+            "@type": "number",
+            "#text": "51377"
+          },
+          "_links": {
+            "self": {
+              "href": "/resources/uicomponentDetails/51377"
+            }
+          },
+          "tpFeIdentifier": "ReloadOffLoad",
+          "label": "Reload",
+          "uiComponentClass": "class_activity_secondary",
+          "uiServiceUri": "Reload Off load",
+          "roles": {
+            "@class": "array",
+            "option": "off-load_reload"
+          },
+          "refParent": [
+            "18",
+            "2367"
+          ],
+          "attributeID": null,
+          "attributeSize": null,
+          "attributeDefaultValue": null,
+          "attributeType": null,
+          "attributeRequired": "false",
+          "attributeReadonly": "false",
+          "attributeMultipleChoice": "na"
+        }
+      },
+      {
+        "uicomponent": {
+          "_id": {
+            "@type": "number",
+            "#text": "51382"
+          },
+          "_links": {
+            "self": {
+              "href": "/resources/uicomponentDetails/51382"
+            }
+          },
+          "tpFeIdentifier": "Preallocate",
+          "label": "Pre-allocation",
+          "uiComponentClass": "class_activity_secondary",
+          "uiServiceUri": null,
+          "roles": [
+            "preallocation",
+            "View_dossier_preview"
+          ],
+          "refParent": [
+            "18",
+            "2367"
+          ],
+          "attributeID": null,
+          "attributeSize": null,
+          "attributeDefaultValue": null,
+          "attributeType": null,
+          "attributeRequired": "false",
+          "attributeReadonly": "false",
+          "attributeMultipleChoice": "na"
+        }
+      },
+      {
+        "uicomponent": {
+          "_id": {
+            "@type": "number",
+            "#text": "51383"
+          },
+          "_links": {
+            "self": {
+              "href": "/resources/uicomponentDetails/51383"
+            }
+          },
+          "tpFeIdentifier": "Undopreallocation",
+          "label": "Undo Pre-allocation",
+          "uiComponentClass": "class_activity_secondary",
+          "uiServiceUri": null,
+          "roles": [
+            "undo_preallocation",
+            "View_dossier_preview"
+          ],
+          "refParent": [
+            "18",
+            "2367"
+          ],
+          "attributeID": null,
+          "attributeSize": null,
+          "attributeDefaultValue": null,
+          "attributeType": null,
+          "attributeRequired": "false",
+          "attributeReadonly": "false",
+          "attributeMultipleChoice": "na"
+        }
+      },
+      {
+        "uicomponent": {
+          "_id": {
+            "@type": "number",
+            "#text": "2682"
+          },
+          "_links": {
+            "self": {
+              "href": "/resources/uicomponentDetails/2682"
+            }
+          },
+          "tpFeIdentifier": "CHECK_WORKLOAD",
+          "label": "CheckWorkload",
+          "uiComponentClass": "class_component",
+          "uiServiceUri": null,
+          "roles": [
+            "Check_workload",
+            "open_muse_workload_manager"
+          ],
+          "refParent": {
+            "@class": "array",
+            "option": "18"
+          },
+          "attributeID": null,
+          "attributeSize": null,
+          "attributeDefaultValue": null,
+          "attributeType": null,
+          "attributeRequired": "false",
+          "attributeReadonly": "false",
+          "attributeMultipleChoice": "na"
+        }
+      },
+      {
+        "uicomponent": {
+          "_id": {
+            "@type": "number",
+            "#text": "41334"
+          },
+          "_links": {
+            "self": {
+              "href": "/resources/uicomponentDetails/41334"
+            }
+          },
+          "tpFeIdentifier": "ta",
+          "label": "Technical acceptance",
+          "uiComponentClass": "class_activity",
+          "uiServiceUri": "/eStore/Patent",
+          "roles": {
+            "@class": "array",
+            "option": "technical_acceptance"
+          },
+          "refParent": [
+            "18",
+            "2367"
+          ],
+          "attributeID": null,
+          "attributeSize": null,
+          "attributeDefaultValue": null,
+          "attributeType": null,
+          "attributeRequired": "false",
+          "attributeReadonly": "false",
+          "attributeMultipleChoice": "na"
+        }
+      },
+      {
+        "uicomponent": {
+          "_id": {
+            "@type": "number",
+            "#text": "205"
+          },
+          "_links": {
+            "self": {
+              "href": "/resources/uicomponentDetails/205"
+            }
+          },
+          "tpFeIdentifier": "technicalacceptance",
+          "label": "Redistribution",
+          "uiComponentClass": "class_activity",
+          "uiServiceUri": "/eStore/Patent",
+          "roles": {
+            "@class": "array",
+            "option": "re_distribution"
+          },
+          "refParent": [
+            "18",
+            "2367"
+          ],
+          "attributeID": null,
+          "attributeSize": null,
+          "attributeDefaultValue": null,
+          "attributeType": null,
+          "attributeRequired": "false",
+          "attributeReadonly": "false",
+          "attributeMultipleChoice": "na"
+        }
+      },
+      {
+        "uicomponent": {
+          "_id": {
+            "@type": "number",
+            "#text": "281"
+          },
+          "_links": {
+            "self": {
+              "href": "/resources/uicomponentDetails/281"
+            }
+          },
+          "tpFeIdentifier": "assignexaminersandchairman",
+          "label": "Allocation",
+          "uiComponentClass": "class_activity",
+          "uiServiceUri": "/eStore/Patent",
+          "roles": [
+            "allocation",
+            "re_allocation"
+          ],
+          "refParent": [
+            "18",
+            "2367"
+          ],
+          "attributeID": null,
+          "attributeSize": null,
+          "attributeDefaultValue": null,
+          "attributeType": null,
+          "attributeRequired": "false",
+          "attributeReadonly": "false",
+          "attributeMultipleChoice": "na"
+        }
+      },
+      {
+        "uicomponent": {
+          "_id": {
+            "@type": "number",
+            "#text": "2482"
+          },
+          "_links": {
+            "self": {
+              "href": "/resources/uicomponentDetails/2482"
+            }
+          },
+          "tpFeIdentifier": "OPEN_IN",
+          "label": "OpenIn",
+          "uiComponentClass": "class_component",
+          "uiServiceUri": "OpenIn",
+          "roles": {
+            "@class": "array",
+            "option": "Open_in_muse"
+          },
+          "refParent": [
+            "18",
+            "51384"
+          ],
+          "attributeID": null,
+          "attributeSize": null,
+          "attributeDefaultValue": null,
+          "attributeType": null,
+          "attributeRequired": "false",
+          "attributeReadonly": "false",
+          "attributeMultipleChoice": "na"
+        }
+      },
+      {
+        "uicomponent": {
+          "_id": {
+            "@type": "number",
+            "#text": "202"
+          },
+          "_links": {
+            "self": {
+              "href": "/resources/uicomponentDetails/202"
+            }
+          },
+          "tpFeIdentifier": "DOSSIER_INFO",
+          "label": "Dossier info",
+          "uiComponentClass": "Dossier",
+          "uiServiceUri": "/eStore/Patent",
+          "roles": {
+            "@class": "array",
+            "option": "View_dossier_preview"
+          },
+          "refParent": [
+            "18",
+            "51384"
+          ],
+          "attributeID": null,
+          "attributeSize": null,
+          "attributeDefaultValue": null,
+          "attributeType": null,
+          "attributeRequired": "false",
+          "attributeReadonly": "false",
+          "attributeMultipleChoice": "na"
+        }
+      },
+      {
+        "uicomponent": {
+          "_id": {
+            "@type": "number",
+            "#text": "41367"
+          },
+          "_links": {
+            "self": {
+              "href": "/resources/uicomponentDetails/41367"
+            }
+          },
+          "tpFeIdentifier": "BATCH_ALLOCATION",
+          "label": "Batch allocation",
+          "uiComponentClass": "class_activity",
+          "uiServiceUri": "/Stock/patent",
+          "roles": {
+            "@class": "array",
+            "option": "open_stock_management_module"
+          },
+          "refParent":[
+            "2",
+            "676"
+          ],
+          "attributeID": null,
+          "attributeSize": null,
+          "attributeDefaultValue": null,
+          "attributeType": null,
+          "attributeRequired": "false",
+          "attributeReadonly": "false",
+          "attributeMultipleChoice": "na"
+        }
+      },
+      {
+        "uicomponent": {
+          "_id": {
+            "@type": "number",
+            "#text": "693"
+          },
+          "_links": {
+            "self": {
+              "href": "/resources/uicomponentDetails/693"
+            }
+          },
+          "tpFeIdentifier": "STOCK_MANAGER_DOSSIER_LIST",
+          "label": "STOCK_MANAGER_DOSSIER_LIST",
+          "uiComponentClass": "class_dossierlist",
+          "uiServiceUri": "/listWork",
+          "roles": {
+            "@class": "array",
+            "option": "View_dossier_list"
+          },
+          "refParent": [
+            "2",
+            "676"
+          ],
+          "attributeID": null,
+          "attributeSize": null,
+          "attributeDefaultValue": null,
+          "attributeType": null,
+          "attributeRequired": "false",
+          "attributeReadonly": "false",
+          "attributeMultipleChoice": "na"
+        }
+      },
+      {
+        "uicomponent": {
+          "_id": {
+            "@type": "number",
+            "#text": "2941"
+          },
+          "_links": {
+            "self": {
+              "href": "/resources/uicomponentDetails/2941"
+            }
+          },
+          "tpFeIdentifier": null,
+          "label": "Directorate",
+          "uiComponentClass": "class_attribute",
+          "uiServiceUri": null,
+          "roles": {
+            "@class": "array",
+            "option": "re_distribution"
+          },
+          "refParent": [
+            "205",
+            "51387"
+          ],
+          "attributeID": "Directorate",
+          "attributeSize": null,
+          "attributeDefaultValue": null,
+          "attributeType": "choice",
+          "attributeRequired": "false",
+          "attributeReadonly": "false",
+          "attributeMultipleChoice": "false"
+        }
+      },
+      {
+        "uicomponent": {
+          "_id": {
+            "@type": "number",
+            "#text": "2988"
+          },
+          "_links": {
+            "self": {
+              "href": "/resources/uicomponentDetails/2988"
+            }
+          },
+          "tpFeIdentifier": null,
+          "label": "Proposed Examiner",
+          "uiComponentClass": "class_attribute",
+          "uiServiceUri": null,
+          "roles": {
+            "@class": "array",
+            "option": "re_distribution"
+          },
+          "refParent": [
+            "205",
+            "51387"
+          ],
+          "attributeID": "ProposedExaminer",
+          "attributeSize": null,
+          "attributeDefaultValue": null,
+          "attributeType": "choice",
+          "attributeRequired": "false",
+          "attributeReadonly": "false",
+          "attributeMultipleChoice": "false"
+        }
+      },
+      {
+        "uicomponent": {
+          "_id": {
+            "@type": "number",
+            "#text": "2992"
+          },
+          "_links": {
+            "self": {
+              "href": "/resources/uicomponentDetails/2992"
+            }
+          },
+          "tpFeIdentifier": null,
+          "label": "Comment",
+          "uiComponentClass": "class_attribute",
+          "uiServiceUri": null,
+          "roles": {
+            "@class": "array",
+            "option": "re_distribution"
+          },
+          "refParent": [
+            "205",
+            "51387"
+          ],
+          "attributeID": "Comment",
+          "attributeSize": null,
+          "attributeDefaultValue": null,
+          "attributeType": "string",
+          "attributeRequired": "false",
+          "attributeReadonly": "false",
+          "attributeMultipleChoice": "na"
+        }
+      },
+      {
+        "uicomponent": {
+          "_id": {
+            "@type": "number",
+            "#text": "2996"
+          },
+          "_links": {
+            "self": {
+              "href": "/resources/uicomponentDetails/2996"
+            }
+          },
+          "tpFeIdentifier": null,
+          "label": "Lead Class",
+          "uiComponentClass": "class_attribute",
+          "uiServiceUri": null,
+          "roles": {
+            "@class": "array",
+            "option": "re_distribution"
+          },
+          "refParent": [
+            "205",
+            "51387"
+          ],
+          "attributeID": "Class",
+          "attributeSize": null,
+          "attributeDefaultValue": null,
+          "attributeType": "string",
+          "attributeRequired": "false",
+          "attributeReadonly": "false",
+          "attributeMultipleChoice": "na"
+        }
+      },
+      {
+        "uicomponent": {
+          "_id": {
+            "@type": "number",
+            "#text": "2367"
+          },
+          "_links": {
+            "self": {
+              "href": "/resources/uicomponentDetails/2367"
+            }
+          },
+          "tpFeIdentifier": "COVER_PAGE",
+          "label": "COVER_PAGE",
+          "uiComponentClass": "class_component",
+          "uiServiceUri": null,
+          "roles": {
+            "@class": "array",
+            "option": "View_workspace"
+          },
+          "refParent": {
+            "@class": "array",
+            "option": "2081"
+          },
+          "attributeID": null,
+          "attributeSize": null,
+          "attributeDefaultValue": null,
+          "attributeType": null,
+          "attributeRequired": "false",
+          "attributeReadonly": "false",
+          "attributeMultipleChoice": "na"
+        }
+      },
+      {
+        "uicomponent": {
+          "_id": {
+            "@type": "number",
+            "#text": "51379"
+          },
+          "_links": {
+            "self": {
+              "href": "/resources/uicomponentDetails/51379"
+            }
+          },
+          "tpFeIdentifier": null,
+          "label": "Upload document",
+          "uiComponentClass": "class_component",
+          "uiServiceUri": null,
+          "roles": {
+            "@class": "array",
+            "option": "Upload_document"
+          },
+          "refParent": {
+            "@class": "array",
+            "option": "2081"
+          },
+          "attributeID": null,
+          "attributeSize": null,
+          "attributeDefaultValue": null,
+          "attributeType": null,
+          "attributeRequired": "false",
+          "attributeReadonly": "false",
+          "attributeMultipleChoice": "na"
+        }
+      },
+      {
+        "uicomponent": {
+          "_id": {
+            "@type": "number",
+            "#text": "51381"
+          },
+          "_links": {
+            "self": {
+              "href": "/resources/uicomponentDetails/51381"
+            }
+          },
+          "tpFeIdentifier": null,
+          "label": "Export document",
+          "uiComponentClass": "class_component",
+          "uiServiceUri": null,
+          "roles": {
+            "@class": "array",
+            "option": "Export_document"
+          },
+          "refParent": {
+            "@class": "array",
+            "option": "2081"
+          },
+          "attributeID": null,
+          "attributeSize": null,
+          "attributeDefaultValue": null,
+          "attributeType": null,
+          "attributeRequired": "false",
+          "attributeReadonly": "false",
+          "attributeMultipleChoice": "na"
+        }
+      },
+      {
+        "uicomponent": {
+          "_id": {
+            "@type": "number",
+            "#text": "51371"
+          },
+          "_links": {
+            "self": {
+              "href": "/resources/uicomponentDetails/51371"
+            }
+          },
+          "tpFeIdentifier": "DOSSIER_CONTENT",
+          "label": "Dossier Content",
+          "uiComponentClass": "class_component",
+          "uiServiceUri": null,
+          "roles": {
+            "@class": "array",
+            "option": "View_workspace"
+          },
+          "refParent": {
+            "@class": "array",
+            "option": "2081"
+          },
+          "attributeID": null,
+          "attributeSize": null,
+          "attributeDefaultValue": null,
+          "attributeType": null,
+          "attributeRequired": "false",
+          "attributeReadonly": "false",
+          "attributeMultipleChoice": "na"
+        }
+      },
+      {
+        "uicomponent": {
+          "_id": {
+            "@type": "number",
+            "#text": "61382"
+          },
+          "_links": {
+            "self": {
+              "href": "/resources/uicomponentDetails/61382"
+            }
+          },
+          "tpFeIdentifier": "DIRECTOR",
+          "label": "History",
+          "uiComponentClass": "class_module",
+          "uiServiceUri": null,
+          "roles": {
+            "@class": "array",
+            "option": "access_edfs"
+          },
+          "refParent": {
+            "@class": "array",
+            "option": "209"
+          },
+          "attributeID": null,
+          "attributeSize": null,
+          "attributeDefaultValue": null,
+          "attributeType": null,
+          "attributeRequired": "false",
+          "attributeReadonly": "false",
+          "attributeMultipleChoice": "na"
+        }
+      },
+      {
+        "uicomponent": {
+          "_id": {
+            "@type": "number",
+            "#text": "1"
+          },
+          "_links": {
+            "self": {
+              "href": "/resources/uicomponentDetails/1"
+            }
+          },
+          "tpFeIdentifier": "WORK_MANAGER",
+          "label": "Work",
+          "uiComponentClass": "class_module",
+          "uiServiceUri": null,
+          "roles": {
+            "@class": "array",
+            "option": "open_work_manager_module"
+          },
+          "refParent": {
+            "@class": "array",
+            "option": "209"
+          },
+          "attributeID": null,
+          "attributeSize": null,
+          "attributeDefaultValue": null,
+          "attributeType": null,
+          "attributeRequired": "false",
+          "attributeReadonly": "false",
+          "attributeMultipleChoice": "na"
+        }
+      },
+      {
+        "uicomponent": {
+          "_id": {
+            "@type": "number",
+            "#text": "2"
+          },
+          "_links": {
+            "self": {
+              "href": "/resources/uicomponentDetails/2"
+            }
+          },
+          "tpFeIdentifier": "STOCK_MANAGER",
+          "label": "Stock",
+          "uiComponentClass": "class_module",
+          "uiServiceUri": null,
+          "roles": {
+            "@class": "array",
+            "option": "open_stock_management_module"
+          },
+          "refParent": {
+            "@class": "array",
+            "option": "209"
+          },
+          "attributeID": null,
+          "attributeSize": null,
+          "attributeDefaultValue": null,
+          "attributeType": null,
+          "attributeRequired": "false",
+          "attributeReadonly": "false",
+          "attributeMultipleChoice": "na"
+        }
+      },
+      {
+        "uicomponent": {
+          "_id": {
+            "@type": "number",
+            "#text": "676"
+          },
+          "_links": {
+            "self": {
+              "href": "/resources/uicomponentDetails/676"
+            }
+          },
+          "tpFeIdentifier": "FORMALITY_OFFICER",
+          "label": "Pre-allocation",
+          "uiComponentClass": "class_module",
+          "uiServiceUri": null,
+          "roles": {
+            "@class": "array",
+            "option": "open_stock_management_module"
+          },
+          "refParent": {
+            "@class": "array",
+            "option": "209"
+          },
+          "attributeID": null,
+          "attributeSize": null,
+          "attributeDefaultValue": null,
+          "attributeType": null,
+          "attributeRequired": "false",
+          "attributeReadonly": "false",
+          "attributeMultipleChoice": "na"
+        }
+      },
+      {
+        "uicomponent": {
+          "_id": {
+            "@type": "number",
+            "#text": "3"
+          },
+          "_links": {
+            "self": {
+              "href": "/resources/uicomponentDetails/3"
+            }
+          },
+          "tpFeIdentifier": "ESTORE",
+          "label": "eStore",
+          "uiComponentClass": "class_module",
+          "uiServiceUri": null,
+          "roles": {
+            "@class": "array",
+            "option": "open_estore_module"
+          },
+          "refParent": {
+            "@class": "array",
+            "option": "209"
+          },
+          "attributeID": null,
+          "attributeSize": null,
+          "attributeDefaultValue": null,
+          "attributeType": null,
+          "attributeRequired": "false",
+          "attributeReadonly": "false",
+          "attributeMultipleChoice": "na"
+        }
+      },
+      {
+        "uicomponent": {
+          "_id": {
+            "@type": "number",
+            "#text": "41363"
+          },
+          "_links": {
+            "self": {
+              "href": "/resources/uicomponentDetails/41363"
+            }
+          },
+          "tpFeIdentifier": "ACCOUNTS_MANAGER",
+          "label": "Accounts",
+          "uiComponentClass": "class_module",
+          "uiServiceUri": null,
+          "roles": [
+            "view_all_orga_account_and_linked_tf_users",
+            "view_list_of_organisational_accounts",
+            "view_user_account_details",
+            "view_user_list"
+          ],
+          "refParent": {
+            "@class": "array",
+            "option": "209"
+          },
+          "attributeID": null,
+          "attributeSize": null,
+          "attributeDefaultValue": null,
+          "attributeType": null,
+          "attributeRequired": "false",
+          "attributeReadonly": "false",
+          "attributeMultipleChoice": "na"
+        }
+      },
+      {
+        "uicomponent": {
+          "_id": {
+            "@type": "number",
+            "#text": "51367"
+          },
+          "_links": {
+            "self": {
+              "href": "/resources/uicomponentDetails/51367"
+            }
+          },
+          "tpFeIdentifier": "AUTO_SUGGESTION",
+          "label": "Autosuggestion",
+          "uiComponentClass": "class_module",
+          "uiServiceUri": null,
+          "roles": {
+            "@class": "array",
+            "option": "autosuggestion_config"
+          },
+          "refParent": {
+            "@class": "array",
+            "option": "209"
+          },
+          "attributeID": null,
+          "attributeSize": null,
+          "attributeDefaultValue": null,
+          "attributeType": null,
+          "attributeRequired": "false",
+          "attributeReadonly": "false",
+          "attributeMultipleChoice": "na"
+        }
+      },
+      {
+        "uicomponent": {
+          "_id": {
+            "@type": "number",
+            "#text": "2487"
+          },
+          "_links": {
+            "self": {
+              "href": "/resources/uicomponentDetails/2487"
+            }
+          },
+          "tpFeIdentifier": null,
+          "label": "Muse",
+          "uiComponentClass": "Key",
+          "uiServiceUri": "http://museservice-i.internal.epo.org/MuseOnline/AppServlet?screen=org.epo.muse.dv.DossierView&application-number={applicationNumber}",
+          "roles": {
+            "@class": "array",
+            "option": "Open_in_muse"
+          },
+          "refParent": {
+            "@class": "array",
+            "option": "2482"
+          },
+          "attributeID": null,
+          "attributeSize": null,
+          "attributeDefaultValue": null,
+          "attributeType": null,
+          "attributeRequired": "false",
+          "attributeReadonly": "false",
+          "attributeMultipleChoice": "na"
+        }
+      },
+      {
+        "uicomponent": {
+          "_id": {
+            "@type": "number",
+            "#text": "2689"
+          },
+          "_links": {
+            "self": {
+              "href": "/resources/uicomponentDetails/2689"
+            }
+          },
+          "tpFeIdentifier": null,
+          "label": "Muse",
+          "uiComponentClass": "Key",
+          "uiServiceUri": "http://museservice-i.internal.epo.org/MuseOnline/AppServlet?&screen=org.epo.muse.lw.WorkloadManager&directorate={directorate}&stock=priority1&wlmview=examiners",
+          "roles": {
+            "@class": "array",
+            "option": "Check_workload"
+          },
+          "refParent": {
+            "@class": "array",
+            "option": "2682"
+          },
+          "attributeID": null,
+          "attributeSize": null,
+          "attributeDefaultValue": null,
+          "attributeType": null,
+          "attributeRequired": "false",
+          "attributeReadonly": "false",
+          "attributeMultipleChoice": "na"
+        }
+      },
+      {
+        "uicomponent": {
+          "_id": {
+            "@type": "number",
+            "#text": "295"
+          },
+          "_links": {
+            "self": {
+              "href": "/resources/uicomponentDetails/295"
+            }
+          },
+          "tpFeIdentifier": null,
+          "label": "1st Examiner",
+          "uiComponentClass": "class_attribute",
+          "uiServiceUri": null,
+          "roles": [
+            "allocation",
+            "re_allocation"
+          ],
+          "refParent": [
+            "281",
+            "41367",
+            "51388"
+          ],
+          "attributeID": "Examiner1",
+          "attributeSize": null,
+          "attributeDefaultValue": null,
+          "attributeType": "choice",
+          "attributeRequired": "true",
+          "attributeReadonly": "false",
+          "attributeMultipleChoice": "false"
+        }
+      },
+      {
+        "uicomponent": {
+          "_id": {
+            "@type": "number",
+            "#text": "296"
+          },
+          "_links": {
+            "self": {
+              "href": "/resources/uicomponentDetails/296"
+            }
+          },
+          "tpFeIdentifier": null,
+          "label": "2nd Examiner",
+          "uiComponentClass": "class_attribute",
+          "uiServiceUri": null,
+          "roles": [
+            "allocation",
+            "re_allocation"
+          ],
+          "refParent": [
+            "281",
+            "41367",
+            "51388"
+          ],
+          "attributeID": "Examiner2",
+          "attributeSize": null,
+          "attributeDefaultValue": null,
+          "attributeType": "choice",
+          "attributeRequired": "false",
+          "attributeReadonly": "false",
+          "attributeMultipleChoice": "false"
+        }
+      },
+      {
+        "uicomponent": {
+          "_id": {
+            "@type": "number",
+            "#text": "297"
+          },
+          "_links": {
+            "self": {
+              "href": "/resources/uicomponentDetails/297"
+            }
+          },
+          "tpFeIdentifier": null,
+          "label": "Chairman",
+          "uiComponentClass": "class_attribute",
+          "uiServiceUri": null,
+          "roles": [
+            "allocation",
+            "re_allocation"
+          ],
+          "refParent": [
+            "281",
+            "41367",
+            "51388"
+          ],
+          "attributeID": "Chairman",
+          "attributeSize": null,
+          "attributeDefaultValue": null,
+          "attributeType": "choice",
+          "attributeRequired": "false",
+          "attributeReadonly": "false",
+          "attributeMultipleChoice": "false"
+        }
+      },
+      {
+        "uicomponent": {
+          "_id": {
+            "@type": "number",
+            "#text": "13"
+          },
+          "_links": {
+            "self": {
+              "href": "/resources/uicomponentDetails/13"
+            }
+          },
+          "tpFeIdentifier": "ESTORE_DOSSIER_LIST",
+          "label": "Dossierlist",
+          "uiComponentClass": "class_dossierlist",
+          "uiServiceUri": "/listWork",
+          "roles": {
+            "@class": "array",
+            "option": "View_dossier_list"
+          },
+          "refParent": {
+            "@class": "array",
+            "option": "3"
+          },
+          "attributeID": null,
+          "attributeSize": null,
+          "attributeDefaultValue": null,
+          "attributeType": null,
+          "attributeRequired": "false",
+          "attributeReadonly": "false",
+          "attributeMultipleChoice": "na"
+        }
+      },
+      {
+        "uicomponent": {
+          "_id": {
+            "@type": "number",
+            "#text": "41343"
+          },
+          "_links": {
+            "self": {
+              "href": "/resources/uicomponentDetails/41343"
+            }
+          },
+          "tpFeIdentifier": null,
+          "label": "Technical acceptance ?",
+          "uiComponentClass": "class_attribute",
+          "uiServiceUri": null,
+          "roles": {
+            "@class": "array",
+            "option": "technical_acceptance"
+          },
+          "refParent": [
+            "41334",
+            "51389"
+          ],
+          "attributeID": null,
+          "attributeSize": null,
+          "attributeDefaultValue": null,
+          "attributeType": null,
+          "attributeRequired": "false",
+          "attributeReadonly": "false",
+          "attributeMultipleChoice": "na"
+        }
+      },
+      {
+        "uicomponent": {
+          "_id": {
+            "@type": "number",
+            "#text": "41366"
+          },
+          "_links": {
+            "self": {
+              "href": "/resources/uicomponentDetails/41366"
+            }
+          },
+          "tpFeIdentifier": "ASSIGN_NEW_ROLE",
+          "label": "Assign a new role",
+          "uiComponentClass": "List",
+          "uiServiceUri": null,
+          "roles": {
+            "@class": "array",
+            "option": "assign_role_to_accounts"
+          },
+          "refParent": {
+            "@class": "array",
+            "option": "41363"
+          },
+          "attributeID": null,
+          "attributeSize": null,
+          "attributeDefaultValue": null,
+          "attributeType": null,
+          "attributeRequired": "false",
+          "attributeReadonly": "false",
+          "attributeMultipleChoice": "na"
+        }
+      },
+      {
+        "uicomponent": {
+          "_id": {
+            "@type": "number",
+            "#text": "51378"
+          },
+          "_links": {
+            "self": {
+              "href": "/resources/uicomponentDetails/51378"
+            }
+          },
+          "tpFeIdentifier": "FO_TABLE_OF_CONTENT",
+          "label": "Table of Content",
+          "uiComponentClass": "class_component",
+          "uiServiceUri": null,
+          "roles": {
+            "@class": "array",
+            "option": "View_ToC"
+          },
+          "refParent": {
+            "@class": "array",
+            "option": "51371"
+          },
+          "attributeID": null,
+          "attributeSize": null,
+          "attributeDefaultValue": null,
+          "attributeType": null,
+          "attributeRequired": "false",
+          "attributeReadonly": "false",
+          "attributeMultipleChoice": "na"
+        }
+      },
+      {
+        "uicomponent": {
+          "_id": {
+            "@type": "number",
+            "#text": "51384"
+          },
+          "_links": {
+            "self": {
+              "href": "/resources/uicomponentDetails/51384"
+            }
+          },
+          "tpFeIdentifier": "DOSSIER_PREVIEW",
+          "label": "Dossier preview NT",
+          "uiComponentClass": "Dossier",
+          "uiServiceUri": "/integrationlayer/workmanager/biblio",
+          "roles": [
+            "access_edfs",
+            "open_work_manager_module"
+          ],
+          "refParent": {
+            "@class": "array",
+            "option": "61382"
+          },
+          "attributeID": null,
+          "attributeSize": null,
+          "attributeDefaultValue": null,
+          "attributeType": null,
+          "attributeRequired": "false",
+          "attributeReadonly": "false",
+          "attributeMultipleChoice": "na"
+        }
+      },
+      {
+        "uicomponent":{
+          "_id":{
+            "@type":"number",
+            "#text":"61385"
+          },
+          "_links":{
+            "self":{
+              "href":"/resources/uicomponentDetails/61385"
+            }
+          },
+          "tpFeIdentifier":"FO_DOSSIER_HISTORY",
+          "label":"FO Dossier history",
+          "uiComponentClass":"class_component",
+          "uiServiceUri":null,
+          "roles":{
+            "@class":"array",
+            "option":"fo_dossier_history"
+          },
+          "refParent":[
+            "202",
+            "2367"
+          ],
+          "attributeID":null,
+          "attributeSize":null,
+          "attributeDefaultValue":null,
+          "attributeType":null,
+          "attributeRequired":"false",
+          "attributeReadonly":"false",
+          "attributeMultipleChoice":"na"
+        }
+      }
+    ]
+  }
+}

@@ -1,0 +1,272 @@
+{"formresponse": {"missing": {"anchor": {
+  "@class": "array",
+  "anchor":    {
+    "objectid": "SE_Request",
+    "element":       [
+      {
+        "elementid": "LAL_taskId",
+        "suggestion":             {
+          "@class": "array",
+          "suggestion": "EPA    13185565-EP     13185565-001"
+        }
+      },
+      {
+        "elementid": "ReceivedEvent",
+        "dynamicschema":             [
+          {
+            "code": "SL_RET_DEAD1",
+            "label": "DEAD(1)"
+          },
+          {
+            "code": "SL_RET_WIDE",
+            "label": "WIDE"
+          },
+          {
+            "code": "SL_RET_ENDS",
+            "label": "ENDS"
+          },
+          {
+            "code": "SL_RET_EDOSU",
+            "label": "EDOSU"
+          },
+          {
+            "code": "SL_RET_EDOSS",
+            "label": "EDOSS"
+          },
+          {
+            "code": "SL_RET_ALOC",
+            "label": "ALOC"
+          },
+          {
+            "code": "SL_RET_RLOC",
+            "label": "RLOC"
+          },
+          {
+            "code": "SL_RET_CLR1",
+            "label": "CLR1"
+          },
+          {
+            "code": "SL_RET_CLR2",
+            "label": "CLR2"
+          },
+          {
+            "code": "SL_RET_CLR3",
+            "label": "CLR3"
+          },
+          {
+            "code": "SL_RET_EE_SA",
+            "label": "EE-SA"
+          },
+          {
+            "code": "SL_RET_EE_FISA",
+            "label": "EE-FISA"
+          },
+          {
+            "code": "SL_RET_CLRI",
+            "label": "CLRI"
+          },
+          {
+            "code": "SL_RET_CLRC",
+            "label": "CLRC"
+          },
+          {
+            "code": "SL_RET_CLRT",
+            "label": "CLRT"
+          },
+          {
+            "code": "SL_RET_EALTFX",
+            "label": "EALTFX"
+          },
+          {
+            "code": "SL_RET_CLAR1",
+            "label": "CLAR(1)"
+          },
+          {
+            "code": "SL_RET_DREP1",
+            "label": "DREP(1)"
+          },
+          {
+            "code": "SL_RET_NUFS",
+            "label": "NUFS"
+          },
+          {
+            "code": "SL_RET_ITSE",
+            "label": "ITSE"
+          },
+          {
+            "code": "SL_RET_FORM206",
+            "label": "FORM206"
+          },
+          {
+            "code": "SL_RET_CLAR3",
+            "label": "CLAR(3)"
+          },
+          {
+            "code": "SL_RET_CLARR",
+            "label": "CLARR"
+          },
+          {
+            "code": "SL_RET_CLARC",
+            "label": "CLARC"
+          },
+          {
+            "code": "SL_RET_FORM206_NR",
+            "label": "FORM206-NR"
+          },
+          {
+            "code": "SL_RET_FEFS",
+            "label": "FEFS"
+          },
+          {
+            "code": "SL_RET_FEFS_NR",
+            "label": "FEFS-NR"
+          },
+          {
+            "code": "SL_RET_CLAR_NR",
+            "label": "CLAR-NR"
+          },
+          {
+            "code": "SL_RET_EALTF",
+            "label": "EALTF"
+          },
+          {
+            "code": "SL_RET_DESUSP",
+            "label": "DESUSP"
+          },
+          {
+            "code": "SL_RET_FODO1",
+            "label": "FODO(1)"
+          },
+          {
+            "code": "SL_RET_IRAP02",
+            "label": "IRAP02=<Date>"
+          },
+          {
+            "code": "SL_RET_LOCA51N",
+            "label": "LOCA51=N"
+          },
+          {
+            "code": "SL_RET_RDEC033",
+            "label": "RDEC03=3"
+          },
+          {
+            "code": "SL_RET_REES053",
+            "label": "REES05=3"
+          },
+          {
+            "code": "SL_RET_REML31",
+            "label": "REML(3)=1"
+          },
+          {
+            "code": "SL_RET_REML32",
+            "label": "REML(3)=2"
+          },
+          {
+            "code": "SL_RET_REML33",
+            "label": "REML(3)=3"
+          },
+          {
+            "code": "SL_RET_RFPR043",
+            "label": "RFPR04=3"
+          },
+          {
+            "code": "SL_RET_WDRA1",
+            "label": "WDRA(1)"
+          },
+          {
+            "code": "SL_RET_ADWI2",
+            "label": "ADWI(2)"
+          },
+          {
+            "code": "SL_RET_SUSP",
+            "label": "SUSP"
+          },
+          {
+            "code": "SL_RET_REFU2",
+            "label": "REFU(2)"
+          },
+          {
+            "code": "SL_RET_LOCAM3",
+            "label": "LOCA M3"
+          },
+          {
+            "code": "SL_RET_CLARD",
+            "label": "CLARD"
+          },
+          {
+            "code": "SL_RET_NOAP02",
+            "label": "NOAP02"
+          },
+          {
+            "code": "SL_RET_NOAP03",
+            "label": "NOAP03"
+          },
+          {
+            "code": "SL_RET_NOAP04",
+            "label": "NOAP04"
+          },
+          {
+            "code": "SL_RET_TSKAC",
+            "label": "TSKAC"
+          },
+          {
+            "code": "SL_RET_TSKDC",
+            "label": "TSKDC"
+          },
+          {
+            "code": "SL_RET_TSKEV",
+            "label": "TSKEV"
+          },
+          {
+            "code": "SL_RET_TSKPEX",
+            "label": "TSKPEX"
+          },
+          {
+            "code": "SL_RET_TSKTA",
+            "label": "TSKTA"
+          },
+          {
+            "code": "SL_RET_REDI",
+            "label": "REDI"
+          },
+          {
+            "code": "SL_RET_ENQR1",
+            "label": "ENQR(1)"
+          },
+          {
+            "code": "SL_RET_FORM",
+            "label": "FORM"
+          },
+          {
+            "code": "SL_RET_A2Reminder",
+            "label": "A2 Reminder"
+          },
+          {
+            "code": "SL_RET_ABEX2",
+            "label": "ABEX(2)"
+          },
+          {
+            "code": "SL_RET_FORA1",
+            "label": "FORA(1)"
+          },
+          {
+            "code": "SL_RET_FORA3",
+            "label": "FORA(3)"
+          },
+          {
+            "code": "SL_RET_PROT",
+            "label": "PROT"
+          },
+          {
+            "code": "SL_RET_RASE1",
+            "label": "RASE(1)"
+          },
+          {
+            "code": "SL_RET_PriorityClaimChange",
+            "label": "Priority Claim Change"
+          }
+        ]
+      }
+    ]
+  }
+}}}}

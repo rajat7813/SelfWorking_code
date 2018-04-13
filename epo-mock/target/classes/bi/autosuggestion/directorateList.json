@@ -1,0 +1,17 @@
+{
+  "AM42ListDirectoratesOfUser": [
+    {
+      "AM42_Result": "OK",
+      "AM42_Explanation": ""
+    },
+    {
+      "Directorate": "123"
+    },
+    {
+      "Directorate": "1603"
+    },
+    {
+      "Directorate": "1655"
+    }
+  ]
+}

@@ -1,0 +1,11 @@
+{
+  "_embedded" : {
+    "results" : [ ]
+  },
+  "filter" : [ ],
+  "_links" : {
+    "self" : {
+      "href" : "/workmanager/AllPatents"
+    }
+  }
+}

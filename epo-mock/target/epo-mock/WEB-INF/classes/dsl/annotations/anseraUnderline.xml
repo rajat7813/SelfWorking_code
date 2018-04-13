@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<standOff xmlns="http://www.tei-c.org/ns/1.0">
+    <standOff type="underline" corresp="6786d38f-009d-4a11-a7df-33d38fe81eeb">
+        <teiHeader>
+            <fileDesc>
+                <titleStmt>
+                    <author>
+                        <idno type="userId">gu88046</idno>
+                    </author>
+                    <biblio type="annotation">
+                        <idno type="annotationID">ansera_amazing_underline</idno>
+                    </biblio>
+                </titleStmt>
+                <sourceDesc>
+                    <listBibl type="annotationContext">
+                        <bibl type="dossier">
+                            <idno type="dossierNumber">FRA1670195</idno>
+                        </bibl>
+                    </listBibl>
+                </sourceDesc>
+                <publicationStmt><availability status="restricted"/></publicationStmt>
+            </fileDesc>
+            <encodingDesc>
+                <appInfo>
+                    <application ident="Ansera" version="1.5.9">
+                        <label>Ansera</label>
+                    </application>
+                </appInfo>
+            </encodingDesc>
+            <profileDesc>
+                <creation>
+                    <date when="2016-11-21T16:41:31+01:00">1479742891</date>
+                </creation>
+            </profileDesc>
+        </teiHeader>
+        <listAnnotation>
+            <listAnnotation>
+                <span type="underline" from="#string-range(_341af00004,12,21)" rend="c1"/>
+            </listAnnotation>
+        </listAnnotation>
+    </standOff>
+</standOff>

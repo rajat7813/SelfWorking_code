@@ -1,0 +1,35 @@
+{
+  "AM32GetTechnicalFieldsFromDirectorate": [
+    {
+      "AM32_Result": "OK",
+      "AM32_Explanation": ""
+    },
+    {
+      "TechField": "A61F2/01"
+    },
+    {
+      "TechField": "A61F13/00"
+    },
+    {
+      "TechField": "A61F2/02"
+    },
+    {
+      "TechField": "A61F2/06"
+    },
+    {
+      "TechField": "A61F2/07"
+    },
+    {
+      "TechField": "A61F2/08"
+    },
+    {
+      "TechField": "A61F2/24"
+    },
+    {
+      "TechField": "A61F2/26"
+    },
+    {
+      "TechField": "A61F2/28"
+    }
+  ]
+}

@@ -1,0 +1,270 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<teiCorpus subtype="simple" type="patentFamily">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <bibl subtype="simple" type="patentFamily">
+                    <idno type="familyId">041550923</idno>
+                </bibl>
+            </titleStmt>
+        </fileDesc>
+    </teiHeader>
+    <teiCorpus type="application">
+        <teiHeader>
+            <fileDesc>
+                <titleStmt>
+                    <bibl type="application">
+                        <idno notation="docdb" type="docNumber">11154276</idno>
+                        <authority>
+                            <orgName type="regional">EP</orgName>
+                        </authority>
+                        <classCode scheme="kindCode">A</classCode>
+                        <date type="dateOfFiling" when="2009-07-17"/>
+                        <idno notation="docdb" type="docId">331745688</idno>
+                        <idno notation="original" type="docNumber">EP 11 154 276.7</idno>
+                    </bibl>
+                </titleStmt>
+            </fileDesc>
+        </teiHeader>
+        <TEI availability="confidential" type="applicationDocument">
+            <teiHeader>
+                <fileDesc>
+                    <publicationStmt>
+                        <listPlace type="designationOfStates">
+                            <listPlace type="designationEPC">
+                                <place type="contractingStates">
+                                    <country>AT</country>
+                                    <country>BE</country>
+                                    <country>BG</country>
+                                    <country>CH</country>
+                                    <country>CY</country>
+                                    <country>CZ</country>
+                                    <country>DE</country>
+                                    <country>DK</country>
+                                    <country>EE</country>
+                                    <country>ES</country>
+                                    <country>FI</country>
+                                    <country>FR</country>
+                                    <country>GB</country>
+                                    <country>GR</country>
+                                    <country>HR</country>
+                                    <country>HU</country>
+                                    <country>IE</country>
+                                    <country>IS</country>
+                                    <country>IT</country>
+                                    <country>LI</country>
+                                    <country>LT</country>
+                                    <country>LU</country>
+                                    <country>LV</country>
+                                    <country>MC</country>
+                                    <country>MK</country>
+                                    <country>MT</country>
+                                    <country>NL</country>
+                                    <country>NO</country>
+                                    <country>PL</country>
+                                    <country>PT</country>
+                                    <country>RO</country>
+                                    <country>SE</country>
+                                    <country>SI</country>
+                                    <country>SK</country>
+                                    <country>SM</country>
+                                    <country>TR</country>
+                                </place>
+                            </listPlace>
+                        </listPlace>
+                    </publicationStmt>
+                    <noteStmt>
+                        <note corresp="5dc518aab649d854badcc86c888fae27" type="abstract_information">
+                            <idno type="lang">en</idno>
+                        </note>
+                    </noteStmt>
+                    <sourceDesc>
+                        <listBibl type="doublures">
+                            <bibl type="application">
+                                <authority>
+                                    <orgName type="regional">EP</orgName>
+                                </authority>
+                                <idno notation="docdb" type="docNumber">09798318</idno>
+                                <classCode scheme="kindCode">A</classCode>
+                                <date when="2009-07-17"/>
+                            </bibl>
+                            <bibl type="application">
+                                <authority>
+                                    <orgName type="regional">EP</orgName>
+                                </authority>
+                                <idno notation="docdb" type="docNumber">11154275</idno>
+                                <classCode scheme="kindCode">A</classCode>
+                                <date when="2009-07-17"/>
+                            </bibl>
+                            <bibl type="application">
+                                <authority>
+                                    <orgName type="regional">EP</orgName>
+                                </authority>
+                                <idno notation="docdb" type="docNumber">11154277</idno>
+                                <classCode scheme="kindCode">A</classCode>
+                                <date when="2009-07-17"/>
+                            </bibl>
+                            <bibl type="application">
+                                <authority>
+                                    <orgName type="regional">EP</orgName>
+                                </authority>
+                                <idno notation="docdb" type="docNumber">11154279</idno>
+                                <classCode scheme="kindCode">A</classCode>
+                                <date when="2009-07-17"/>
+                            </bibl>
+                        </listBibl>
+                        <listBibl type="priorityClaims">
+                            <bibl type="application">
+                                <authority>
+                                    <orgName type="national">US</orgName>
+                                </authority>
+                                <date when="2008-07-18"/>
+                                <idno notation="docdb" type="docNumber">135279</idno>
+                                <classCode scheme="kindCode">P</classCode>
+                                <idno notation="dnum" type="docNumber">USP 135279</idno>
+                                <idno notation="original" type="docNumber">61/135,279</idno>
+                            </bibl>
+                        </listBibl>
+                        <listBibl type="divisionals">
+                            <bibl status="oldestParent" type="application">
+                                <authority>
+                                    <orgName type="regional">EP</orgName>
+                                </authority>
+                                <idno notation="docdb" type="docNumber">09798318</idno>
+                                <classCode scheme="kindCode">A</classCode>
+                                <date type="dateOfFiling" when="2009-07-17"/>
+                            </bibl>
+                        </listBibl>
+                    </sourceDesc>
+                    <titleStmt>
+                        <funder role="applicant">
+                            <name notation="unknown">PEREGRINE SEMICONDUCTOR CORPORATION</name>
+                            <address type="adrStruct">
+                                <addrLine>9380 Carroll Park Drive, San Diego, CA 92121</addrLine>
+                                <country type="national">US</country>
+                            </address>
+                        </funder>
+                        <title notation="docdba" type="invention" xml:id="_616e54" xml:lang="en">Charge pump with a
+                            plurality of transfer control switches
+                        </title>
+                        <title notation="docdba" type="invention" xml:id="_772062" xml:lang="de">Ladungspumpe mit einem
+                            Mehrzahl von Übertragungssteuerschaltern
+                        </title>
+                        <title notation="docdba" type="invention" xml:id="_0985f5" xml:lang="fr">Pompe de charge avec
+                            une pluralité de commutateurs de commende de transferte
+                        </title>
+                        <title type="procedural" xml:id="_616e54" xml:lang="en">Charge pump with a plurality of transfer
+                            control switches
+                        </title>
+                        <author role="inventor">
+                            <persName notation="unknown">Kim, Tae Youn</persName>
+                            <address type="adrStruct">
+                                <addrLine>1137 Piedmont, Invine, CA 82620</addrLine>
+                                <country type="national">US</country>
+                            </address>
+                        </author>
+                        <author role="inventor">
+                            <persName notation="unknown">Englekirk, Robert Mark</persName>
+                            <address type="adrStruct">
+                                <addrLine>@15867 Seabec Circle, Pacific Palisades, CA 90272</addrLine>
+                                <country type="national">US</country>
+                            </address>
+                        </author>
+                        <author role="inventor">
+                            <persName notation="unknown">Kelly, Dylan J.</persName>
+                            <address type="adrStruct">
+                                <addrLine>@556 Tarento Drive, San Diego, CA 92106</addrLine>
+                                <country type="national">US</country>
+                            </address>
+                        </author>
+                        <editor role="representative">
+                            <name>Pizzoli, Antonio</name>
+                            <address type="adrStruct">
+                                <addrLine>Società Italiana Brevetti S.p.A
+                                    Via Carducci 8, 20123 Milano
+                                </addrLine>
+                                <country type="national">IT</country>
+                            </address>
+                            <address type="adrTotal">Pizzoli, Antonio<lb/>Società Italiana Brevetti S.p.A<lb/>Via
+                                Carducci 8<lb/>20123 Milano
+                            </address>
+                        </editor>
+                    </titleStmt>
+                </fileDesc>
+                <profileDesc>
+                    <langUsage type="filingLanguage">
+                        <language ident="en"/>
+                    </langUsage>
+                    <textClass>
+                        <classCode scheme="ipc" type="mainClassification">
+                            <ident type="classificationSymbol">H02M3/07</ident>
+                        </classCode>
+                        <classCode scheme="undetermined" type="preClassification">
+                            <ident type="classificationSymbol">H03F1/26</ident>
+                        </classCode>
+                    </textClass>
+                </profileDesc>
+                <revisionDesc>
+                    <listChange>
+                        <change when="2012-01-16" xml:id="_616e54"/>
+                        <change when="2012-01-16" xml:id="_772062"/>
+                        <change when="2012-01-16" xml:id="_0985f5"/>
+                    </listChange>
+                </revisionDesc>
+                <creation>
+                    <listChange>
+                        <change xml:id="5dc518aab649d854badcc86c888fae27">
+                            <date type="dateProduced">20110214</date>
+                            <orgName type="supplier">JOUVE</orgName>
+                            <idno type="formatSubtype">ST36XOCR</idno>
+                            <idno type="qualityLevel">02</idno>
+                            <language ident="EN"/>
+                            <idno type="section">A</idno>
+                        </change>
+                    </listChange>
+                </creation>
+            </teiHeader>
+            <text>
+                <front>
+                    <div change="5dc518aab649d854badcc86c888fae27" facs="./ERDN57F51925FI4" type="abstract"
+                         xml:id="42d0ddf9c27190db89a51340a84b30cf" xml:lang="en">
+                        <p n="0001" xml:id="_8fae270002">Low-Noise High Efficiency Bias Generation Circuits and Method
+                        </p>
+                        <p n="0002" xml:id="_8fae270003">A bias generation method or apparatus defined by any one or any
+                            practical combination of numerous features that contribute to low noise and/or high
+                            efficiency biasing, including: having a charge pump control clock output with a waveform
+                            having limited harmonic content or distortion compared to a sine wave; having a ring
+                            oscillator to generating a charge pump clock that includes inverters current limited by
+                            cascode devices and achieves substantially rail-to-rail output amplitude; having a
+                            differential ring oscillator with optional startup and/or phase locking features to produce
+                            two phase outputs suitably matched and in adequate phase opposition; having a ring
+                            oscillator of less than five stages generating a charge pump clock; capacitively coupling
+                            the clock output(s) to some or all of the charge transfer capacitor switches; biasing an
+                            FET, which is capacitively coupled to a drive signal, to a bias voltage via an "active bias
+                            resistor" circuit that conducts between output terminals only during portions of a waveform
+                            appearing between the terminals, and/or wherein the bias voltage is generated by switching a
+                            small capacitance at cycles of said waveform. A threshold voltage bias voltage generation
+                            circuit may A charge pump for the bias generation may include a regulating feedback loop
+                            including an OTA that is also suitable for other uses, the OTA having a ratio-control input
+                            that controls a current mirror ratio in a differential amplifier over a continuous range,
+                            and optionally has differential outputs including an inverting output produced by a second
+                            differential amplifier that optionally includes a variable ratio current mirror controlled
+                            by the same ratio-control input. The ratio-control input may therefore control a common mode
+                            voltage of the differential outputs of the OTA. A control loop around the OTA may be
+                            configured to control the ratio of one or more variable ratio current mirrors, which may
+                            particularly control the output common mode voltage, and may control it such that the
+                            inverting output level tracks the non-inverting output level to cause the amplifier to
+                            function as a high-gain integrator.
+                        </p>
+                    </div>
+                    <div type="abstractFigures">
+                        <figure n="9" resp="#applicant" sortKey="1"/>
+                        <figure xml:id="_024629">
+                            <graphic url="./EP2011154276A/imgaf001.tif"/>
+                        </figure>
+                    </div>
+                </front>
+            </text>
+        </TEI>
+    </teiCorpus>
+</teiCorpus>

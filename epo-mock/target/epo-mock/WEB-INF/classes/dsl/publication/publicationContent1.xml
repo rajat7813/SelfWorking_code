@@ -1,0 +1,349 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<teiCorpus type="patentFamily" subtype="simple">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <bibl type="patentFamily" subtype="simple">
+                    <idno type="familyId">055134491</idno>
+                </bibl>
+            </titleStmt>
+            <sourceDesc>
+                <listBibl type="priorityClaims">
+                    <bibl type="application">
+                        <authority>
+                            <orgName type="national">DE</orgName>
+                        </authority>
+                        <idno type="docId" notation="docdb">448859100</idno>
+                        <idno type="docNumber" notation="docdb">102014011379</idno>
+                        <classCode scheme="kindCode">A</classCode>
+                        <date type="filingDate" when="2014-08-05">20140805</date>
+                        <idno type="docNumber" notation="epodoc">DE20141011379</idno>
+                    </bibl>
+                </listBibl>
+            </sourceDesc>
+        </fileDesc>
+        <profileDesc>
+            <textClass>
+                <classCode status="confirmed" scheme="CPC">
+                    <orgName type="classificationSchemeOffice">EP</orgName>
+                    <date type="classificationSchemeDate" when="2013-01-01">20130101</date>
+                    <ident type="classificationSymbol">F16J 15/004
+                    </ident>
+                    <ident type="symbolPosition">F</ident>
+                    <ident type="classificationValue">I</ident>
+                    <ident type="classificationStatus">B</ident>
+                    <ident type="classificationDataSource">H</ident>
+                    <date type="actionDate" when="2016-03-29">20160329</date>
+                </classCode>
+            </textClass>
+        </profileDesc>
+    </teiHeader>
+    <teiCorpus type="application" status="isRepresentative">
+        <teiHeader>
+            <fileDesc>
+                <titleStmt>
+                    <bibl type="application">
+                        <authority>
+                            <orgName type="national">DE</orgName>
+                        </authority>
+                        <idno type="docId" notation="docdb">448859100</idno>
+                        <idno type="docNumber" notation="docdb">102014011379</idno>
+                        <classCode scheme="kindCode">A</classCode>
+                        <date type="filingDate" when="2014-08-05">20140805</date>
+                        <idno type="docNumber" notation="epodoc">DE20141011379</idno>
+                        <idno type="docNumber" notation="original">102014011379</idno>
+                    </bibl>
+                </titleStmt>
+            </fileDesc>
+        </teiHeader>
+        <TEI type="publication">
+            <teiHeader>
+                <fileDesc>
+                    <titleStmt>
+                        <title xml:id="_cc8200e" type="invention" notation="docdba" xml:lang="de">Dichtung zwischen zwei sich gegeneinander bewegenden Oberflächen</title>
+                        <funder role="applicant" sortKey="1">
+                            <name notation="docdb">IAV GMBH</name>
+                            <address type="adrResidence">
+                                <country type="national">DE</country>
+                            </address>
+                            <name notation="docdba">IAV GMBH INGENIEURGESELLSCHAFT AUTO UND VERKEHR</name>
+                        </funder>
+                        <author role="inventor" sortKey="1">
+                            <persName notation="docdb">SEYLBERG FRANK VAN DER</persName>
+                            <address type="adrResidence">
+                                <country type="national">DE</country>
+                            </address>
+                            <persName notation="docdba">SEYLBERG, FRANK VAN DER</persName>
+                        </author>
+                        <bibl type="publication">
+                            <authority>
+                                <orgName type="national">DE</orgName>
+                            </authority>
+                            <idno type="docNumber" notation="docdb">102014011379</idno>
+                            <classCode scheme="kindCode">A1</classCode>
+                            <date type="publicationDate" when="2016-02-11">20160211</date>
+                            <idno type="docNumber" notation="epodoc">DE102014011379</idno>
+                            <idno type="docNumber" notation="original">102014011379</idno>
+                            <idno type="docId" notation="docdb">448859101</idno>
+                        </bibl>
+                    </titleStmt>
+                    <publicationStmt>
+                        <date type="publicAvailability" subtype="unexaminedPrintedWithoutGrant" when="2016-02-11">20160211</date>
+                    </publicationStmt>
+                    <sourceDesc>
+                        <listBibl type="priorityClaims">
+                            <bibl type="application">
+                                <authority>
+                                    <orgName type="national">DE</orgName>
+                                </authority>
+                                <idno type="docId" notation="docdb">448859100</idno>
+                                <idno type="docNumber" notation="docdb">102014011379</idno>
+                                <classCode scheme="kindCode">A</classCode>
+                                <date type="filingDate" when="2014-08-05">20140805</date>
+                                <idno type="docNumber" notation="epodoc">DE20141011379</idno>
+                            </bibl>
+                        </listBibl>
+                    </sourceDesc>
+                </fileDesc>
+                <profileDesc>
+                    <langUsage type="publicationLanguage"><language ident="de"/></langUsage>
+                    <textClass>
+                        <classCode scheme="ipcr">
+                            <ident type="classificationSymbol">F16J 15/32 20060101AFI20160211BHDE
+                            </ident>
+                        </classCode>
+                    </textClass>
+                    <creation>
+                        <listChange>
+                            <change xml:id="9b12803353e5dd2aecc01132a4bf2b37">
+                                <date type="dateProduced">2016-01-30</date>
+                                <orgName type="supplier">DPMA</orgName>
+                                <idno type="formatSubtype">ST36</idno>
+                                <idno type="qualityLevel">02</idno><language ident="DE"/></change>
+                        </listChange>
+                    </creation>
+                </profileDesc>
+            </teiHeader>
+            <standOff type="citations">
+                <standOff type="SEA"><teiHeader/>
+                    <listAnnotation>
+                        <listAnnotation type="citation">
+                            <listBibl type="compoundReference">
+                                <bibl type="publication">
+                                    <authority>
+                                        <orgName type="national">DE</orgName>
+                                    </authority>
+                                    <idno type="docId">279349452</idno>
+                                    <idno type="docNumber">102007012385</idno>
+                                    <classCode scheme="kindCode">A1</classCode>
+                                    <date when="2007-09-27">20070927</date>
+                                    <name>MACROTECH POLYSEAL INC [US]</name>
+                                    <idno type="docNumber" notation="dnum">DE102007012385A1</idno>
+                                </bibl>
+                            </listBibl>
+                        </listAnnotation>
+                        <listAnnotation type="citation">
+                            <listBibl type="compoundReference">
+                                <bibl type="publication">
+                                    <authority>
+                                        <orgName type="national">DE</orgName>
+                                    </authority>
+                                    <idno type="docId">386821843</idno>
+                                    <idno type="docNumber">69916071</idno>
+                                    <classCode scheme="kindCode">T2</classCode>
+                                    <date when="2005-02-24">20050224</date>
+                                    <name>UNITED KINGDOM NIREX LTD [GB]</name>
+                                    <idno type="docNumber" notation="dnum">DE69916071T2</idno>
+                                </bibl>
+                            </listBibl>
+                        </listAnnotation>
+                        <listAnnotation type="citation">
+                            <listBibl type="compoundReference">
+                                <bibl type="publication">
+                                    <authority>
+                                        <orgName type="national">DE</orgName>
+                                    </authority>
+                                    <idno type="docId">320191399</idno>
+                                    <idno type="docNumber">1224106</idno>
+                                    <classCode scheme="kindCode">B</classCode>
+                                    <date when="1966-09-01">19660901</date>
+                                    <name>FORSHEDA GUMMIFABRIK AKTIEBOLA</name>
+                                    <idno type="docNumber" notation="dnum">DE1224106B</idno>
+                                </bibl>
+                            </listBibl>
+                        </listAnnotation>
+                    </listAnnotation>
+                </standOff>
+                <standOff type="APP"><teiHeader/>
+                    <listAnnotation>
+                        <listAnnotation type="citation">
+                            <listBibl type="compoundReference">
+                                <bibl type="publication">
+                                    <authority>
+                                        <orgName type="national">DE</orgName>
+                                    </authority>
+                                    <idno type="docId">320191399</idno>
+                                    <idno type="docNumber">1224106</idno>
+                                    <classCode scheme="kindCode">B</classCode>
+                                    <date when="1966-09-01">19660901</date>
+                                    <name>FORSHEDA GUMMIFABRIK AKTIEBOLA</name>
+                                    <idno type="docNumber" notation="dnum">DE1224106B</idno>
+                                </bibl>
+                            </listBibl>
+                        </listAnnotation>
+                        <listAnnotation type="citation">
+                            <listBibl type="compoundReference">
+                                <bibl type="publication">
+                                    <authority>
+                                        <orgName type="national">DE</orgName>
+                                    </authority>
+                                    <idno type="docId">386821843</idno>
+                                    <idno type="docNumber">69916071</idno>
+                                    <classCode scheme="kindCode">T2</classCode>
+                                    <date when="2005-02-24">20050224</date>
+                                    <name>UNITED KINGDOM NIREX LTD [GB]</name>
+                                    <idno type="docNumber" notation="dnum">DE69916071T2</idno>
+                                </bibl>
+                            </listBibl>
+                        </listAnnotation>
+                    </listAnnotation>
+                </standOff>
+            </standOff>
+            <facsimile xml:id="_3af2fb0000">
+                <surface type="page" n="1"><graphic url="/api/publication/448859101/facsimiles/RFVNTVkvREUxMDIwMTQwMTEzNzlBMQ/1"/><zone xml:id="_3af2fb0001" type="biblio"/><zone xml:id="_3af2fb0002" type="firstPageClipping"/></surface>
+                <surface type="page" n="2"><graphic url="/api/publication/448859101/facsimiles/RFVNTVkvREUxMDIwMTQwMTEzNzlBMQ/2"/><zone xml:id="_3af2fb0003" type="description"/></surface>
+                <surface type="page" n="3"><graphic url="/api/publication/448859101/facsimiles/RFVNTVkvREUxMDIwMTQwMTEzNzlBMQ/3"/><zone xml:id="_3af2fb0004" type="description"/></surface>
+                <surface type="page" n="4"><graphic url="/api/publication/448859101/facsimiles/RFVNTVkvREUxMDIwMTQwMTEzNzlBMQ/4"/><zone xml:id="_3af2fb0005" type="description"/></surface>
+                <surface type="page" n="5"><graphic url="/api/publication/448859101/facsimiles/RFVNTVkvREUxMDIwMTQwMTEzNzlBMQ/5"/><zone xml:id="_3af2fb0006" type="description"/></surface>
+                <surface type="page" n="6"><graphic url="/api/publication/448859101/facsimiles/RFVNTVkvREUxMDIwMTQwMTEzNzlBMQ/6"/><zone xml:id="_3af2fb0007" type="claims"/></surface>
+                <surface type="page" n="7"><graphic url="/api/publication/448859101/facsimiles/RFVNTVkvREUxMDIwMTQwMTEzNzlBMQ/7"/><zone xml:id="_3af2fb0008" type="drawings"/></surface>
+            </facsimile>
+            <text>
+                <front>
+                    <div type="abstract" xml:id="70176f65-8fb2-4a97-82d9-655dc3ff812e" xml:lang="de" notation="docdba">
+                        <p xml:id="_1e6b36b">Die Erfindung stellt eine erfindungsgemäß vorteilhafte Dichtung zwischen zwei sich gegeneinander bewegenden Oberflächen bereit. Eine erste Oberfläche der zwei sich gegeneinander bewegenden Oberflächen weist eine Nut mit zwei
+                            gegenüberliegenden Nutflanken und einem Nutgrund auf. Innerhalb der Nut sind zwei voneinander beabstandete Dichtelemente angeordnet. Ein erstes Dichtelement der Dichtung liegt an einer ersten Nutflanke der Nut und an einer zweiten Oberfläche der zwei
+                            sich gegeneinander bewegenden Oberflächen an. Ein zweites Dichtelement der Dichtung liegt an einer zweiten Nutflanke der Nut und der zweiten Oberfläche der zwei sich gegeneinander bewegenden Oberflächen an. Das erste Dichtelement und das zweite
+                            Dichtelement der Dichtung sind mittels wenigstens eines elastischen Stegs der Dichtung miteinander verbunden. Der elastische Steg ist gegenüber dem Nutgrund der Nut abgestützt, wodurch das erste Dichtelement an der ersten Nutflanke und an der zweiten
+                            Oberfläche sowie das zweite Dichtelement an der zweiten Nutflanke und der zweiten Oberfläche anliegt.</p>
+                    </div>
+                </front>
+                <group>
+                    <text change="9b12803353e5dd2aecc01132a4bf2b37">
+                        <body>
+                            <div facs="/api/pre-publication/429216588/NL2015402A/facsimiles/RFVNTVkvRVhHVjBOMlM4NTU3MjU1" type="claims" xml:lang="de" xml:id="cd681098-e7ce-4c27-b0f1-e0e33a342fae">
+                                <div n="0001" type="claim" xml:id="_0f0a360003">
+                                    <p xml:id="_0f0a360004">Dichtung zwischen zwei sich gegeneinander bewegenden Oberflächen, wobei eine erste Oberfläche eine Nut mit zwei gegenüberliegenden Nutflanken und einem Nutgrund aufweist, und innerhalb der Nut zwei voneinander beabstandete
+                                        Dichtelemente angeordnet sind, wobei ein erstes Dichtelement an einer ersten Nutflanke und einer zweiten Oberfläche und ein zweites Dichtelement an einer zweiten Nutflanke und der zweiten Oberfläche anliegt, indem wenigstens ein elastischer Steg das
+                                        erste Dichtelement und das zweite Dichtelement miteinander verbindet und gegenüber dem Nutgrund abgestützt ist.</p>
+                                </div>
+                                <div n="0002" type="claim" xml:id="_0f0a360005">
+                                    <p xml:id="_0f0a360006">Dichtung nach Patentanspruch 1,
+                                        <hi rend="bold">dadurch gekennzeichnet,</hi>
+                                        dass das erste Dichtelement und das zweite Dichtelement mittels des elastischen Stegs gegenüber dem Nutgrund angehoben sind.</p>
+                                </div>
+                                <div n="0003" type="claim" xml:id="_0f0a360008">
+                                    <p xml:id="_0f0a360009">Dichtung nach einem der vorherigen Patentansprüche,
+                                        <hi rend="bold">dadurch gekennzeichnet,</hi>
+                                        dass zwischen dem ersten Dichtelement, dem zweiten Dichtelement, der Nut und der zweiten Oberfläche ein Druckraum gebildet ist und die zweite Oberfläche und/oder der Nutgrund wenigstens eine Druckmitteldurchführung aufweist.</p>
+                                </div>
+                                <div n="0004" type="claim" xml:id="_0f0a360011">
+                                    <p xml:id="_0f0a360012">Dichtung nach einem der vorherigen Patentansprüche,
+                                        <hi rend="bold">dadurch gekennzeichnet,</hi>
+                                        dass durch Einbringen von Druckmittel über die wenigstens eine Druckmitteldurchführung in den Druckraum das erste Dichtelement an die erste Nutflanke und an die zweite Oberfläche und das zweite Dichtelement an die zweite Nutflanke und die zweite
+                                        Oberfläche angepresst wird.</p>
+                                </div>
+                                <div n="0005" type="claim" xml:id="_0f0a360014">
+                                    <p xml:id="_0f0a360015">Dichtung nach einem der vorherigen Patentansprüche,
+                                        <hi rend="bold">dadurch gekennzeichnet,</hi>
+                                        dass die Oberflächen durch eine Außenmantelfläche einer Welle und durch eine Innenmantelfläche eines Wellenlagers gebildet werden und die Nut als umlaufende Nut ausgeführt ist, wobei die erste Oberfläche als die Außenmantelfläche der Welle und die
+                                        zweite Oberfläche als die Innenmantelfläche des Wellenlagers oder die erste Oberfläche als die Innenmantelfläche des Wellenlagers und die zweite Oberfläche als die Außenmantelfläche der Welle ausgebildet ist.</p>
+                                </div>
+                            </div>
+                            <div facs="/api/pre-publication/429216588/NL2015402A/facsimiles/RFVNTVkvRVhHVjBOMlM4NTU3MjU1" type="description" xml:lang="de" xml:id="25428b68-da6e-4e97-8865-63a0267835d8">
+                                <head xml:id="_0f0a360018">Technisches Gebiet</head>
+                                <p n="0001" xml:id="_0f0a360019">Die vorliegende Erfindung betrifft eine Dichtung zwischen zwei sich gegeneinander bewegenden Oberflächen gemäß den Merkmalen des Patentanspruchs 1.</p>
+                                <head xml:id="_0f0a360020">Stand der Technik</head>
+                                <p n="0002" xml:id="_0f0a360021">Aus dem Stand der Technik sind Berührungsdichtungen an sich zueinander bewegenden Oberflächen bekannt, um einen ungewollten Stoffdurchgang zwischen angrenzenden Räumen zu verhindern. Dazu sind insbesondere neben
+                                    Stopfbuchsendichtungen Gleitringdichtungen bekannt.</p>
+                                <p n="0003" xml:id="_0f0a360022">Aus der Patentschrift DE 1 224 106 B ist ein Dichtungsring aus elastischem Material bekannt, welcher zur Abdichtung zwischen einem wellenförmigen Teil und einer relativ dazu drehbaren, im Wesentlichen radialen
+                                    Gegendichtfläche angeordnet ist. Der Dichtungsring weist einen ringförmigen Einschnitt auf, wodurch eine Dichtlippe und ein Befestigungsring gebildet werden. Durch die Vorspannung des Befestigungsrings im eingebauten Zustand des Dichtungsrings wird
+                                    die Lippe axial abgespreizt und liegt an der Gegendichtfläche an. In einer Weiterbildung weist der Dichtungsring zwei Einschnitte auf, wobei die dadurch gebildeten Dichtlippen an zwei schwach konischen Wänden einer Nut anliegen und der
+                                    Befestigungsring auf der Welle zwischen den Lippen liegt.</p>
+                                <p n="0004" xml:id="_0f0a360023">Aus der Übersetzung der Europäischen Patentschrift DE 699 16 071 T2 geht ein aus elastischem verformbaren Material hergestellter Doppeldichtring in einer einheitlichen Konstruktion zur Abdichtung zweier im
+                                    Wesentlichen ebenen Oberflächen hervor. Der Doppeldichtring umfasst zwei koplanare Dichtringe, welche mittels eines Stegs miteinander verbunden sind und der Steg zumindest eine Öffnung aufweist. Zwischen den beiden Dichtringen wird ein
+                                    Zwischenraumvolumen gebildet, wobei der Steg das Zwischenraumvolumen in einen oberen und einen unteren Teil aufteilt. Die Öffnungen im Steg sorgen für eine Verbindung zwischen dem oberen und unteren Teil.</p>
+                                <head xml:id="_0f0a360024">Aufgabe der Erfindung</head>
+                                <p n="0005" xml:id="_0f0a360025">Die Aufgabe der Erfindung besteht darin, eine verbesserte Dichtung zwischen zwei sich gegeneinander bewegenden Oberflächen bereitzustellen.</p>
+                                <head xml:id="_0f0a360026">Lösung der Aufgabe</head>
+                                <p n="0006" xml:id="_0f0a360027">Die Aufgabe wird durch eine Dichtung zwischen zwei sich gegeneinander bewegenden Oberflächen nach den Merkmalen des Patentanspruches 1 gelöst. Vorteilhafte Weiterbildungen ergeben sich aus den Unteransprüchen und dem Ausführungsbeispiel.</p>
+                                <head xml:id="_0f0a360028">Beschreibung der Erfindung</head>
+                                <p n="0007" xml:id="_0f0a360029">Die Erfindung stellt eine erfindungsgemäß vorteilhafte Dichtung zwischen zwei sich gegeneinander bewegenden Oberflächen bereit, wobei die beiden Oberflächen zueinander gegenüberliegend mit hauptsächlich
+                                    gleichbleibendem Abstand ausgerichtet sind. Eine erste Oberfläche der zwei sich gegeneinander bewegenden Oberflächen weist eine Nut mit zwei gegenüberliegenden Nutflanken und einem Nutgrund auf. Innerhalb der Nut sind zwei voneinander beabstandete
+                                    Dichtelemente angeordnet. Ein erstes Dichtelement der Dichtung liegt an einer ersten Nutflanke der Nut und an einer zweiten Oberfläche der zwei sich gegeneinander bewegenden Oberflächen an. Ein zweites Dichtelement der Dichtung liegt an einer zweiten
+                                    Nutflanke der Nut und der zweiten Oberfläche der zwei sich gegeneinander bewegenden Oberflächen an. Das erste Dichtelement und das zweite Dichtelement der Dichtung sind mittels wenigstens eines elastischen Stegs der Dichtung miteinander verbunden.
+                                    Der elastische Steg ist gegenüber dem Nutgrund der Nut abgestützt, wodurch das erste Dichtelement an der ersten Nutflanke und an der zweiten Oberfläche sowie das zweite Dichtelement an der zweiten Nutflanke und der zweiten Oberfläche anliegen.</p>
+                                <p n="0008" xml:id="_0f0a360030">Die Nut ist vorteilhaft als gerade Nut ausgeführt, wobei die erste Nutflanke und die zweite Nutflanke zueinander parallel angeordnet sind und der Nutgrund zur ersten Nutflanke und zur zweiten Nutflanke im rechten
+                                    Winkel angeordnet ist. Der Steg ist vorteilhaft als in Längsrichtung der Nut zusammenhängender Steg mit wenigstens einer Aussparung ausgeführt. Alternativ kann der Steg mehrere separate Stegelemente umfassen, welche in Längsrichtung der Nut
+                                    voneinander beabstandet angeordnet sind und sich somit eine Aussparung jeweils zwischen zwei benachbarten separaten Stegelementen ausbildet.</p>
+                                <p n="0009" xml:id="_0f0a360031">In einer vorteilhaften Weiterentwicklung der Dichtung sind das erste Dichtelement und das zweite Dichtelement mittels des elastischen Stegs gegenüber dem Nutgrund angehoben. Der Steg ist dazu hinsichtlich seines
+                                    Querschnitts in Richtung Nutgrund gekrümmt ausgeführt, einerseits mit dem ersten Dichtelement, andererseits mit dem zweiten Dichtelement verbunden und liegt mittig am Nutgrund an.</p>
+                                <p n="0010" xml:id="_0f0a360032">In einer besonders vorteilhaften Weiterentwicklung der Dichtung ist zwischen dem ersten Dichtelement, dem zweiten Dichtelement, der Nut und der zweiten Oberfläche ein Druckraum gebildet. Demnach wird der Druckraum von
+                                    dem ersten Dichtelement, dem zweiten Dichtelement, der ersten Nutflanke, der zweiten Nutflanke, dem Nutgrund und der zweiten Oberfläche begrenzt, wobei das erste Dichtelement wenigstens teilweise an der ersten Nutflanke und das zweite Dichtelement
+                                    wenigstens teilweise an der zweiten Nutflanke in einem Flächenkontakt anliegen. Die zweite Oberfläche und/oder der Nutgrund weisen wenigstens eine Druckmitteldurchführung auf. Durch Einbringen von Druckmittel über die wenigstens eine
+                                    Druckmitteldurchführung in den Druckraum wird das erste Dichtelement an die erste Nutflanke und an die zweite Oberfläche und das zweite Dichtelement an die zweite Nutflanke und die zweite Oberfläche angepresst. Dadurch wird die Dichtungswirkung der
+                                    Dichtung erhöht.</p>
+                                <p n="0011" xml:id="_0f0a360033">In einer vorteilhaften Weiterentwicklung der Dichtung weist die zweite Oberfläche wenigstens eine Druckmitteldurchführung und der Nutgrund wenigstens eine Druckmitteldurchführung auf. Durch Einbringen von Druckmittel
+                                    unter Druck über eine erste Druckmitteldurchführung der Druckmitteldurchführungen in den Druckraum wird das erste Dichtelement an die erste Nutflanke und an die zweite Oberfläche und das zweite Dichtelement an die zweite Nutflanke und die zweite
+                                    Oberfläche angepresst. Dadurch wird die Dichtungswirkung der Dichtung erhöht.</p>
+                                <p n="0012" xml:id="_0f0a360034">Durch Ausbringen von Druckmittel über eine zweite Druckmitteldurchführung der Druckmitteldurchführungen aus dem Druckraum wird eine Druckmittelüberleitung zwischen zwei sich gegeneinander bewegenden Oberflächen
+                                    bereitgestellt. Dabei kann die Druckmittelüberleitung von der ersten Oberfläche, insbesondere der Nut über den Druckraum zur zweiten Oberfläche oder in entgegengesetzter Richtung von der zweiten Oberfläche über den Druckmittelraum zur ersten
+                                    Oberfläche, insbesondere der Nut erfolgen.</p>
+                                <p n="0013" xml:id="_0f0a360035">In einer vorteilhaften Weiterentwicklung der Dichtung ist die Nut als trapezförmige Nut ausgeführt, wobei die erste Nutflanke und die zweite Nutflanke zueinander schräg angeordnet sind und sich eine vom Nutgrund zur
+                                    ersten Oberfläche hin öffnende Nutform ergibt. Durch Einbringen von Druckmittel unter Druck kann die Anpressung des ersten Dichtelements und des zweiten Dichtelements an die zweite Oberfläche und damit die Dichtungswirkung der Dichtung weiter erhöht
+                                    werden.</p>
+                                <p n="0014" xml:id="_0f0a360036">In einer vorteilhaften Ausgestaltung ist die Dichtung zwischen zwei sich gegeneinander bewegenden Oberflächen einer Welle und einem Wellenlager angeordnet, wobei die Welle und das Wellenlager zueinander drehbar
+                                    und/oder axial verschiebbar gelagert sind. Die Oberflächen sind durch eine Außenmantelfläche einer Welle und durch eine Innenmantelfläche eines Wellenlagers gebildet und die Nut als umlaufende Nut ausgeführt. Dabei kann die erste Oberfläche als die
+                                    Außenmantelfläche der Welle und die zweite Oberfläche als die Innenmantelfläche des Wellenlagers oder die erste Oberfläche als die Innenmantelfläche des Wellenlagers und die zweite Oberfläche als die Außenmantelfläche der Welle ausgebildet sein.
+                                    Außenmantelfläche und Innenmantelfläche sind dabei zueinander ausgerichtet und ergeben sich aus der Mantelfläche eines hauptsächlich zylinderförmigen Teils mit einer Symmetrieachse, wobei die Außenmantelfläche eine von der Symmetrieachse abgewandte
+                                    Oberfläche und die Innenmantelfläche eine zur Symmetrieachse zugewandte Oberfläche ist.</p>
+                                <p n="0015" xml:id="_0f0a360037">In einer vorteilhaften Weiterentwicklung der Ausgestaltung weist die Außenmantelfläche der Welle wenigstens eine Druckmitteldurchführung und die Innenmantelfläche des Wellenlagers eine Druckmitteldurchführung auf.
+                                    Dadurch wird eine Druckmittelüberleitung zwischen der Welle und der Wellenlagerung bereitgestellt, wobei das Druckmittel von der Welle über den Druckraum zum Wellenlager oder vom Wellenlager über den Druckraum zur Welle geleitet wird.</p>
+                                <p n="0016" xml:id="_0f0a360038">Die vorliegende Erfindung stellt demnach eine verbesserte Dichtung zwischen zwei sich gegeneinander bewegenden Oberflächen bereit, welche bei verbesserter Dichtungswirkung kostengünstig hergestellt werden kann und
+                                    eine sichere und einfache Montage ermöglicht.</p>
+                                <head xml:id="_0f0a360039">Ausführungsbeispiel</head>
+                                <p n="0017" xml:id="_0f0a360040">Beispielhaft wird hier eine Ausführung der erfindungsgemäßen Dichtung zwischen zwei sich gegeneinander bewegenden Oberflächen dargestellt. In der dazugehörigen Figur zeigt:</p>
+                                <p n="0018" xml:id="_0f0a360041">
+                                    <hi rend="bold">Fig. 1</hi>: eine schematische Darstellung einer Dichtung 1 zwischen einer Welle 2 und einem Wellenlager 3 .</p>
+                                <p n="0019" xml:id="_0f0a360043">In einem vorteilhaften Ausführungsbeispiel, dargestellt in
+                                    <hi rend="bold">Fig. 1</hi>, ist die Dichtung 1 zwischen einer Außenmantelfläche 4 der Welle 2 und einer Innenmantelfläche 5 des Wellenlagers 3 angeordnet, wobei die Welle 2 und das Wellenlager 3 zueinander drehbar und/oder axial verschiebbar
+                                    gelagert sind. Auf der Außenmantelfläche 4 der Welle 2 ist eine umlaufende Nut 6 mit einer ersten Nutflanke 7 , einer zur ersten Nutflanke 7 gegenüberliegenden zweiten Nutflanke 8 und einem Nutgrund 9 angeordnet. Innerhalb der Nut 6 sind ein erstes
+                                    Dichtelement 10 der Dichtung 1 und ein zum ersten Dichtelement 10 beabstandetes zweites Dichtelement 11 der Dichtung 1 angeordnet, wobei das erste Dichtelement 10 an der ersten Nutflanke 7 und an der Innenmantelfläche 5 sowie das zweite Dichtelement
+                                    11 an der zweiten Nutflanke 8 und der Innenmantelfläche 5 anliegt. Das erste Dichtelement 10 und das zweite Dichtelement 11 sind mittels wenigstens eines elastischen Stegs 12 der Dichtung 1 miteinander verbunden. Der elastische Steg 12 ist gegenüber
+                                    dem Nutgrund 9 abgestützt und weist wenigstens eine Aussparung 17 auf.</p>
+                                <p n="0020" xml:id="_0f0a360045">Zwischen der Nut 6 , den beiden Dichtelementen 10 , 11 und der Innenmantelfläche 5 wird ein Druckraum 13 gebildet, welcher mit Druckmittel 14 beaufschlagbar ist, wobei der Nutgrund 9 eine erste Druckmitteldurchführung
+                                    15 und die Innenmantelfläche 5 eine zweite Druckmitteldurchführung 16 aufweist. Dadurch wird eine Druckmittelüberleitung zwischen der Welle 2 und dem Wellenlager 3 bereitgestellt, wobei das Druckmittel 14 über die erste Druckmittelzuführung 15 von
+                                    der Welle 2 in den Druckraum 13 und über die zweite Druckmitteldurchführung 16 von dem Druckraum 13 in das Wellenlager 3 , oder das Druckmittel 14 über die zweite Druckmittelzuführung 16 von dem Wellenlager 3 in den Druckraum 13 und über die erste
+                                    Druckmitteldurchführung 15 von dem Druckraum 13 in die Welle 2 geleitet wird. Weiter werden durch die Beaufschlagung des Druckraums 13 mit Druckmittel 14 das erste Dichtelement 10 an die erste Nutflanke 7 und an die Innenmantelfläche 5 sowie das
+                                    zweite Dichtelement 11 an die zweite Nutflanke 8 und an die Innenmantelfläche 5 gepresst.</p>
+                                <head xml:id="_0f0a360046">Bezugszeichenliste</head>
+                                <p xml:id="_0f0a360047">1 Dichtung 2 Welle 3 Wellenlager 4 Außenmantelfläche 5 Innenmantelfläche 6 Nut 7 erste Nutflanke 8 zweite Nutflanke 9 Nutgrund 10 erstes Dichtelement 11 zweites Dichtelement 12 Steg 13 Druckraum 14 Druckmittel 15 erste
+                                    Druckmitteldurchführung 16 zweite Druckmitteldurchführung 17 Aussparung</p>
+                                <head xml:id="_0f0a360048">ZITATE ENTHALTEN IN DER BESCHREIBUNG</head>
+                                <p n="0021" xml:id="_0f0a360049">Diese Liste der vom Anmelder aufgeführten Dokumente wurde automatisiert erzeugt und ist ausschließlich zur besseren Information des Lesers aufgenommen. Die Liste ist nicht Bestandteil der deutschen Patent- bzw.
+                                    Gebrauchsmusteranmeldung. Das DPMA übernimmt keinerlei Haftung für etwaige Fehler oder Auslassungen.</p>
+                                <head xml:id="_0f0a360050">Zitierte Patentliteratur</head><p n="0022" xml:id="_0f0a360051"/>
+                                <list type="bulleted" xml:id="_0f0a360052">
+                                    <item>DE 1224106 B
+                                    </item>
+                                    <item>DE 69916071 T2
+                                    </item>
+                                </list>
+                            </div>
+                        </body>
+                    </text>
+                </group>
+            </text>
+        </TEI>
+    </teiCorpus>
+</teiCorpus>

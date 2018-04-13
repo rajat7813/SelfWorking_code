@@ -1,0 +1,277 @@
+{
+  "View_functional_role_history": {
+    "label": "View functional role history",
+    "_links": {
+      "self": {
+        "href": "\/AccountManagement\/caseview-user_account\/505800\/viewfunctionalrolehistory"
+      },
+      "api_doc": {
+        "href": "\/api-docs\/AccountManagement\/caseview-user_account\/505800\/viewfunctionalrolehistory"
+      }
+    },
+    "filter": {
+      "@class": "array",
+      "filter": {
+        "numberfilter": {
+          "param": "sourcerolerecordid",
+          "label": "sourcerolerecordid",
+          "value": "505815"
+        }
+      }
+    },
+    "dynamicschema": {
+      "StatusAccountRole": [
+        {
+          "code": "Active",
+          "label": "Active"
+        },
+        {
+          "code": "NActive",
+          "label": "Not Active"
+        }
+      ],
+      "AssignmentTypeSource": [
+        {
+          "code": "AM_ATS_Deputization",
+          "label": "Deputization"
+        },
+        {
+          "code": "AM_ATS_Owner",
+          "label": "Owner"
+        },
+        {
+          "code": "AM_ATS_Redeputization",
+          "label": "Redeputization"
+        }
+      ],
+      "RoleAssignmentStatus": [
+        {
+          "code": "AM_ASS_Draft",
+          "label": "Draft"
+        },
+        {
+          "code": "AM_ASS_Proposed",
+          "label": "Proposed"
+        },
+        {
+          "code": "AM_ASS_Assigned",
+          "label": "Assigned"
+        },
+        {
+          "code": "AM_ASS_Revoked",
+          "label": "Revoked"
+        },
+        {
+          "code": "AM_ASS_Cancelled",
+          "label": "Cancelled"
+        },
+        {
+          "code": "AM_ASS_Rejected",
+          "label": "Rejected"
+        },
+        {
+          "code": "AM_ASS_Accepted",
+          "label": "Accepted"
+        }
+      ]
+    },
+    "paging": {
+      "totalresults": {
+        "@type": "number",
+        "#text": "3"
+      },
+      "pagesize": {
+        "param": "pagesize",
+        "currentpagesize": {
+          "@type": "number",
+          "#text": "25"
+        },
+        "option": [
+          {
+            "@type": "number",
+            "#text": "10"
+          },
+          {
+            "@type": "number",
+            "#text": "25"
+          },
+          {
+            "@type": "number",
+            "#text": "50"
+          }
+        ]
+      },
+      "param": "page",
+      "currentpage": {
+        "@type": "number",
+        "#text": "1"
+      },
+      "maxpages": {
+        "@type": "number",
+        "#text": "1"
+      }
+    },
+    "sorting": {
+      "param": "sort",
+      "option": [
+        "ID",
+        "RoleRecordId",
+        "CaseID",
+        "sourcerolerecordid",
+        "OriAccountRoleRecordId",
+        "RoleName",
+        "RoleOwnerId",
+        "StartDateAssignmentType",
+        "EndDateAssignmentType",
+        "DeputisationComment",
+        "AssignmentRoleDetail",
+        "RoleAssignmentTimestamp"
+      ]
+    },
+    "_embedded": {
+      "results": [
+        {
+          "View_functional_role_history": {
+            "_id": {
+              "@type": "number",
+              "#text": "1"
+            },
+            "_links": {
+              "self": {
+                "href": "\/AccountManagement\/caseview-user_account\/505800\/1"
+              }
+            },
+            "ID": {
+              "@type": "number",
+              "#text": "1"
+            },
+            "RoleRecordId": {
+              "@type": "number",
+              "#text": "505815"
+            },
+            "CaseID": {
+              "@type": "number",
+              "#text": "505800"
+            },
+            "sourcerolerecordid": {
+              "@type": "number",
+              "#text": "505815"
+            },
+            "OriAccountRoleRecordId": "505815",
+            "RoleName": "Stock manager",
+            "RoleOwner": "Director 05 eDossier Testing",
+            "RoleOwnerId": {
+              "@type": "number",
+              "#text": "505800"
+            },
+            "StartDateAssignmentType": "2016-10-11",
+            "EndDateAssignmentType": null,
+            "StatusAccountRole": "Active",
+            "AssignmentTypeSource": "AM_ATS_Owner",
+            "RoleAssignor": null,
+            "Instructor": null,
+            "OriDirectorateID": "Kouzelis",
+            "RoleAssignmentStatus": "AM_ASS_Assigned",
+            "DeputisationComment": null,
+            "AssignmentRoleDetail": null,
+            "RoleAssignmentTimestamp": "2016-10-11 16:55:27"
+          }
+        },
+        {
+          "View_functional_role_history": {
+            "_id": {
+              "@type": "number",
+              "#text": "2"
+            },
+            "_links": {
+              "self": {
+                "href": "\/AccountManagement\/caseview-user_account\/505800\/2"
+              }
+            },
+            "ID": {
+              "@type": "number",
+              "#text": "2"
+            },
+            "RoleRecordId": {
+              "@type": "number",
+              "#text": "580148"
+            },
+            "CaseID": {
+              "@type": "number",
+              "#text": "505800"
+            },
+            "sourcerolerecordid": {
+              "@type": "number",
+              "#text": "505815"
+            },
+            "OriAccountRoleRecordId": "505815",
+            "RoleName": "Stock manager",
+            "RoleOwner": "Examiner 19 eDossier Testing",
+            "RoleOwnerId": {
+              "@type": "number",
+              "#text": "421199"
+            },
+            "StartDateAssignmentType": "2016-10-22",
+            "EndDateAssignmentType": "2016-10-23",
+            "StatusAccountRole": "NActive",
+            "AssignmentTypeSource": "AM_ATS_Deputization",
+            "RoleAssignor": "Director 05 eDossier Testing",
+            "Instructor": "Director 05 eDossier Testing",
+            "OriDirectorateID": "Kouzelis",
+            "RoleAssignmentStatus": "AM_ASS_Assigned",
+            "DeputisationComment": null,
+            "AssignmentRoleDetail": "A61F2\/01",
+            "RoleAssignmentTimestamp": "2016-10-20 11:50:05"
+          }
+        },
+        {
+          "View_functional_role_history": {
+            "_id": {
+              "@type": "number",
+              "#text": "3"
+            },
+            "_links": {
+              "self": {
+                "href": "\/AccountManagement\/caseview-user_account\/505800\/3"
+              }
+            },
+            "ID": {
+              "@type": "number",
+              "#text": "3"
+            },
+            "RoleRecordId": {
+              "@type": "number",
+              "#text": "585145"
+            },
+            "CaseID": {
+              "@type": "number",
+              "#text": "505800"
+            },
+            "sourcerolerecordid": {
+              "@type": "number",
+              "#text": "505815"
+            },
+            "OriAccountRoleRecordId": "505815",
+            "RoleName": "Stock manager",
+            "RoleOwner": "Examiner 20 eDossier Testing",
+            "RoleOwnerId": {
+              "@type": "number",
+              "#text": "421399"
+            },
+            "StartDateAssignmentType": "2016-10-22",
+            "EndDateAssignmentType": "2016-10-23",
+            "StatusAccountRole": "NActive",
+            "AssignmentTypeSource": "AM_ATS_Redeputization",
+            "RoleAssignor": "Bas van Bakel",
+            "Instructor": "Examiner 19 eDossier Testing",
+            "OriDirectorateID": "Kouzelis",
+            "RoleAssignmentStatus": "AM_ASS_Assigned",
+            "DeputisationComment": "test bvb 20 okt",
+            "AssignmentRoleDetail": "A61F2\/01",
+            "RoleAssignmentTimestamp": "2016-10-20 13:07:02"
+          }
+        }
+      ]
+    }
+  }
+}

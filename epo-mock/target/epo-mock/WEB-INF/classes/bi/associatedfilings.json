@@ -1,0 +1,63 @@
+{
+ "SE41GetAssociatedFilings": [ 
+  {
+   "SE41_Result": "OK",
+   "SE41_Explanation": ""
+  },
+  {
+              "ASS_ID": "3057504",
+              "ApplicationNumber": "EPA    16186396",
+              "DateOfFiling": "2016-08-30",
+              "TypeOfAssociation": "P",
+              "Parent": "false",
+              "FirstExaminer": "FirstExaminer",
+              "SearchExaminer": "SearchExaminer"
+  },
+  {
+   			  "ASS_ID": "3057505",
+              "ApplicationNumber": "USA201514840659",
+              "DateOfFiling": "2015-08-31",
+              "TypeOfAssociation": "Y",
+              "Parent": "true",
+              "FirstExaminer": "FirstExaminer2",
+              "SearchExaminer": "SearchExaminer2"
+  },
+  {
+   			  "ASS_ID": "3063387",
+              "ApplicationNumber": "USA201514840659",
+              "DateOfFiling": "2015-08-31",
+              "TypeOfAssociation": "E",
+              "Parent": "false",
+              "FirstExaminer": "FirstExaminer3",
+              "SearchExaminer": "SearchExaminer3"
+  },
+    {
+   			  "ASS_ID": "3057585",
+              "ApplicationNumber": "USA201514840659",
+              "DateOfFiling": "2015-08-31",
+              "TypeOfAssociation": "Y",
+              "Parent": "true",
+              "FirstExaminer": "FirstExaminer4",
+              "SearchExaminer": "SearchExaminer4"
+  },
+  {
+   			  "ASS_ID": "3012305",
+              "ApplicationNumber": "USA201514840659",
+              "DateOfFiling": "2015-08-31",
+              "TypeOfAssociation": "Y",
+              "Parent": "true",
+              "FirstExaminer": "FirstExaminer5",
+              "SearchExaminer": "SearchExaminer5"
+  },
+  {
+   			  "ASS_ID": "3025805",
+              "ApplicationNumber": "USA201514840659",
+              "DateOfFiling": "2015-08-31",
+              "TypeOfAssociation": "Y",
+              "Parent": "false",
+              "FirstExaminer": "FirstExaminer6",
+              "SearchExaminer": "SearchExaminer6"
+  }
+ ]
+}
+

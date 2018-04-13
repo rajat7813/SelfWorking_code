@@ -1,0 +1,57 @@
+{
+  "_links": {
+    "ht:self": {
+      "href": "http://nplapi-t.internal.epo.org/v01/groups/4?page=1"
+    },
+    "curies": [
+      {
+        "href": "http://nplapi-t.internal.epo.org/doc/v01/groups/4/{rel}",
+        "name": "ht",
+        "templated": true
+      }
+    ],
+    "parent": {
+      "href": "http://nplapi-t.internal.epo.org/v01/groups?from=1&length=1000"
+    }
+  },
+  "_embedded": {
+    "npl-list": [
+      {
+        "_links": {
+          "self": {
+            "tech-id": "253e9cf9-a96b-4399-a7e0-b14956336dda",
+            "status": "update",
+            "xp-number": "XP56446",
+            "tei-complete": "http://nplapi-t.internal.epo.org/v01/tei/npls/253e9cf9-a96b-4399-a7e0-b14956336dda/?view=complete",
+            "href": "http://nplapi-t.internal.epo.org/v01/npls/253e9cf9-a96b-4399-a7e0-b14956336dda",
+            "supplier": "XPDVB"
+          }
+        }
+      },
+      {
+        "_links": {
+          "self": {
+            "tech-id": "2b7aefbf-c721-4748-89b6-8931ea2e031b",
+            "status": "update",
+            "xp-number": "XP564",
+            "tei-complete": "http://nplapi-t.internal.epo.org/v01/tei/npls/2b7aefbf-c721-4748-89b6-8931ea2e031b/?view=complete",
+            "href": "http://nplapi-t.internal.epo.org/v01/npls/2b7aefbf-c721-4748-89b6-8931ea2e031b",
+            "supplier": "XPDVB"
+          }
+        }
+      },
+      {
+        "_links": {
+          "self": {
+            "tech-id": "75daee5f-467a-45ed-8cb5-f67872060957",
+            "status": "insert",
+            "xp-number": "XP5644",
+            "tei-complete": "http://nplapi-t.internal.epo.org/v01/tei/npls/75daee5f-467a-45ed-8cb5-f67872060957/?view=complete",
+            "href": "http://nplapi-t.internal.epo.org/v01/npls/75daee5f-467a-45ed-8cb5-f67872060957",
+            "supplier": "XPDVB"
+          }
+        }
+      }
+    ]
+  }
+}

@@ -1,0 +1,254 @@
+{
+  "List_account_types": {
+    "_links": {
+      "self": {
+        "href": "/AccountManagement/ListAccountTypes"
+      },
+      "api_doc": {
+        "href": "/api-docs/AccountManagement/ListAccountTypes"
+      }
+    },
+    "filter": {
+      "@class": "array",
+      "filter": {
+        "choicefilter": {
+          "param": "AccountType",
+          "label": "Account types",
+          "options": [
+            {
+              "key": "AM_OAT_EPO",
+              "count": {
+                "@type": "number",
+                "#text": "0"
+              },
+              "label": "EPO"
+            },
+            {
+              "key": "AM_OAT_Directorate",
+              "count": {
+                "@type": "number",
+                "#text": "1"
+              },
+              "label": "Directorate"
+            },
+            {
+              "key": "AM_OAT_Team",
+              "count": {
+                "@type": "number",
+                "#text": "1"
+              },
+              "label": "Team"
+            },
+            {
+              "key": "AM_OAT_Cluster",
+              "count": {
+                "@type": "number",
+                "#text": "1"
+              },
+              "label": "Cluster"
+            },
+            {
+              "key": "AM_OAT_JointCluster",
+              "count": {
+                "@type": "number",
+                "#text": "0"
+              },
+              "label": "Joint cluster"
+            },
+            {
+              "key": "AM_OAT_DirectorateGeneral",
+              "count": {
+                "@type": "number",
+                "#text": "0"
+              },
+              "label": "Directorate general"
+            },
+            {
+              "key": "AM_OAT_Support",
+              "count": {
+                "@type": "number",
+                "#text": "0"
+              },
+              "label": "Support"
+            },
+            {
+              "key": "AM_OAT_OperationalDevelopment",
+              "count": {
+                "@type": "number",
+                "#text": "0"
+              },
+              "label": "Operational development"
+            }
+          ]
+        }
+      }
+    },
+    "dynamicschema": {
+      "AccountType": [
+        {
+          "code": "AM_OAT_EPO",
+          "label": "EPO"
+        },
+        {
+          "code": "AM_OAT_Directorate",
+          "label": "Directorate"
+        },
+        {
+          "code": "AM_OAT_Team",
+          "label": "Team"
+        },
+        {
+          "code": "AM_OAT_Cluster",
+          "label": "Cluster"
+        },
+        {
+          "code": "AM_OAT_JointCluster",
+          "label": "Joint cluster"
+        },
+        {
+          "code": "AM_OAT_DirectorateGeneral",
+          "label": "Directorate general"
+        },
+        {
+          "code": "AM_OAT_Support",
+          "label": "Support"
+        },
+        {
+          "code": "AM_OAT_OperationalDevelopment",
+          "label": "Operational development"
+        }
+      ]
+    },
+    "paging": {
+      "totalresults": {
+        "@type": "number",
+        "#text": "6"
+      },
+      "pagesize": {
+        "param": "pagesize",
+        "currentpagesize": {
+          "@type": "number",
+          "#text": "25"
+        },
+        "option": [
+          {
+            "@type": "number",
+            "#text": "10"
+          },
+          {
+            "@type": "number",
+            "#text": "25"
+          },
+          {
+            "@type": "number",
+            "#text": "50"
+          }
+        ]
+      },
+      "param": "page",
+      "currentpage": {
+        "@type": "number",
+        "#text": "1"
+      },
+      "maxpages": {
+        "@type": "number",
+        "#text": "1"
+      }
+    },
+    "sorting": {
+      "param": "sort",
+      "option": {
+        "@class": "array",
+        "option": "AccountType"
+      }
+    },
+    "_embedded": {
+      "results": [
+        {
+          "Load_Account_types": {
+            "_id": {
+              "@type": "number",
+              "#text": "AM_OAT_Cluster"
+            },
+            "_links": {
+              "self": {
+                "href": "/AccountManagement/ListAccountTypes/AM_OAT_Cluster"
+              }
+            },
+            "AccountType": "AM_OAT_Cluster"
+          }
+        },
+        {
+          "Load_Account_types": {
+            "_id": {
+              "@type": "number",
+              "#text": "AM_OAT_Directorate"
+            },
+            "_links": {
+              "self": {
+                "href": "/AccountManagement/ListAccountTypes/AM_OAT_Directorate"
+              }
+            },
+            "AccountType": "AM_OAT_Directorate"
+          }
+        },
+        {
+          "Load_Account_types": {
+            "_id": {
+              "@type": "number",
+              "#text": "AM_OAT_SISUnit"
+            },
+            "_links": {
+              "self": {
+                "href": "/AccountManagement/ListAccountTypes/AM_OAT_SISUnit"
+              }
+            },
+            "AccountType": "AM_OAT_SISUnit"
+          }
+        },
+        {
+          "Load_Account_types": {
+            "_id": {
+              "@type": "number",
+              "#text": "AM_OAT_Team"
+            },
+            "_links": {
+              "self": {
+                "href": "/AccountManagement/ListAccountTypes/AM_OAT_Team"
+              }
+            },
+            "AccountType": "AM_OAT_Team"
+          }
+        },
+        {
+          "Load_Account_types": {
+            "_id": {
+              "@type": "number",
+              "#text": "IPO"
+            },
+            "_links": {
+              "self": {
+                "href": "/AccountManagement/ListAccountTypes/IPO"
+              }
+            },
+            "AccountType": "IPO"
+          }
+        },
+        {
+          "Load_Account_types": {
+            "_id": {
+              "@type": "number",
+              "#text": "SUP"
+            },
+            "_links": {
+              "self": {
+                "href": "/AccountManagement/ListAccountTypes/SUP"
+              }
+            },
+            "AccountType": "SUP"
+          }
+        }
+      ]
+    }
+  }
+}

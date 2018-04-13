@@ -1,0 +1,138 @@
+{
+             "SE38History": [ 
+              {
+               "SE38_Result": "OK",
+               "SE38_Explanation": ""
+              },
+              {
+               "DOSSIERNUMBER": "EA14880185",
+               "APPLICATIONNUMBER": "EA14880185",
+               "CaseId": "61296",
+               "HTY_ID": "2964254",
+               "TYPEOFLOG": "Event",
+               "DESCRIPTION": "EPO publication date(A)-out",
+               "USERNAME": "JC14880 (James Carville)",
+               "STATUSHISTORY": "DEFINITIVE",
+               "EVENTCODETOVALIDATE": "",
+               "DATEOFLOG": "2017-01-26",
+               "DATETIMESTAMP": "2017-02-12 16:00:47"
+              },
+              {
+               "DOSSIERNUMBER": "EA14880185",
+               "APPLICATIONNUMBER": "EA14880185",
+               "CaseId": "61298",
+               "HTY_ID": "2964257",
+               "TYPEOFLOG": "Event",
+               "DESCRIPTION": "EP SEARCH applications ready for publication-internal",
+               "USERNAME": "KB14881 (Kate Bush)",
+               "STATUSHISTORY": "DEFINITIVE",
+               "EVENTCODETOVALIDATE": "",
+               "DATEOFLOG": "2017-02-13",
+               "DATETIMESTAMP": "2017-02-27 16:00:52"
+              },
+              {
+               "DOSSIERNUMBER": "EA14880185",
+               "APPLICATIONNUMBER": "EA14880185",
+               "CaseId": "61628",
+               "HTY_ID": "2968597",
+               "TYPEOFLOG": "Classification(s)",
+               "DESCRIPTION": "Production classification of final search report",
+               "USERNAME": "PC28141 (Peter Cain)",
+               "STATUSHISTORY": "TENTATIVE",
+               "EVENTCODETOVALIDATE": "TSKAC",
+               "DATEOFLOG": "2017-02-12",
+               "DATETIMESTAMP": "2017-01-21 14:14:48"
+              },
+               {
+               "DOSSIERNUMBER": "EA14880185",
+               "APPLICATIONNUMBER": "EA14880185",
+               "CaseId": "61296",
+               "HTY_ID": "2964254",
+               "TYPEOFLOG": "Event",
+               "DESCRIPTION": "Search report publication out",
+               "USERNAME": "JC54915 (John Cena)",
+               "STATUSHISTORY": "DEFINITIVE",
+               "EVENTCODETOVALIDATE": "",
+               "DATEOFLOG": "2017-01-26",
+               "DATETIMESTAMP": "2017-01-26 16:00:40"
+              },
+              {
+               "DOSSIERNUMBER": "EA14880185",
+               "APPLICATIONNUMBER": "EA14880185",
+               "CaseId": "61298",
+               "HTY_ID": "2964257",
+               "TYPEOFLOG": "Examiner actions",
+               "DESCRIPTION": "Extended European search report",
+               "USERNAME": "VD94616 (Vin Diesel)",
+               "STATUSHISTORY": "DEFINITIVE",
+               "EVENTCODETOVALIDATE": "",
+               "DATEOFLOG": "2017-02-26",
+               "DATETIMESTAMP": "2017-01-22 16:00:52"
+              },
+               {
+               "DOSSIERNUMBER": "EA14880185",
+               "APPLICATIONNUMBER": "EA14880185",
+               "CaseId": "61628",
+               "HTY_ID": "2968597",
+               "TYPEOFLOG": "Examiner actions",
+               "DESCRIPTION": "European search opinion negative",
+               "USERNAME": "JS65102 (Johnathon Schaech)",
+               "STATUSHISTORY": "TENTATIVE",
+               "EVENTCODETOVALIDATE": "TSKAC",
+               "DATEOFLOG": "2017-02-16",
+               "DATETIMESTAMP": "2017-01-21 14:14:48"
+              },
+              {
+               "DOSSIERNUMBER": "EA14880185",
+               "APPLICATIONNUMBER": "EA14880185",
+               "CaseId": "61296",
+               "HTY_ID": "2964254",
+               "TYPEOFLOG": "Event",
+               "DESCRIPTION": "Allocated product order to entrusted examiner",
+               "USERNAME": "JD17350 (John Doe)",
+               "STATUSHISTORY": "DEFINITIVE",
+               "EVENTCODETOVALIDATE": "",
+               "DATEOFLOG": "2017-01-28",
+               "DATETIMESTAMP": "2017-01-28 16:00:47"
+              },
+              {
+               "DOSSIERNUMBER": "EA14880185",
+               "APPLICATIONNUMBER": "EA14880185",
+               "CaseId": "61298",
+               "HTY_ID": "2964257",
+               "TYPEOFLOG": "Event",
+               "DESCRIPTION": "Amendments before examinations filed-in",
+               "USERNAME": "KW47032 (Kate Winslet)",
+               "STATUSHISTORY": "DEFINITIVE",
+               "EVENTCODETOVALIDATE": "",
+               "DATEOFLOG": "2017-01-26",
+               "DATETIMESTAMP": "2017-01-17 16:00:52"
+              },
+              {
+               "DOSSIERNUMBER": "EA14880185",
+               "APPLICATIONNUMBER": "EA14880185",
+               "CaseId": "61628",
+               "HTY_ID": "2968597",
+               "TYPEOFLOG": "Event",
+               "DESCRIPTION": "Search report publication out",
+               "USERNAME": "DB27446 (Drew Barrymore)",
+               "STATUSHISTORY": "TENTATIVE",
+               "EVENTCODETOVALIDATE": "TSKAC",
+               "DATEOFLOG": "2017-02-16",
+               "DATETIMESTAMP": "2017-02-03 14:14:48"
+              },
+              {
+               "DOSSIERNUMBER": "EA14880185",
+               "APPLICATIONNUMBER": "EA14880185",
+               "CaseId": "61628",
+               "HTY_ID": "2968597",
+               "TYPEOFLOG": "Event",
+               "DESCRIPTION": "Date search endedid EP/ISAT-internal",
+               "USERNAME": "AS60145 (Arnold Schwarzenegger)",
+               "STATUSHISTORY": "TENTATIVE",
+               "EVENTCODETOVALIDATE": "TSKAC",
+               "DATEOFLOG": "2017-02-16",
+               "DATETIMESTAMP": "2017-01-21 14:14:48"
+              }
+             ]
+            }

@@ -1,0 +1,1238 @@
+{
+  "Roles_and_permissions": {
+    "label": "Roles and permissions",
+    "_links": {
+      "self": {
+        "href": "/RoleManagement/REG_Role_Management_caseview/50001/RolesAndPermissions"
+      },
+      "api_doc": {
+        "href": "/api-docs/RoleManagement/REG_Role_Management_caseview/50001/RolesAndPermissions"
+      }
+    },
+    "actions": {
+      "@class": "array",
+      "actions": {
+        "name": "AddRole",
+        "title": "Add role",
+        "method": "POST",
+        "href": "/RoleManagement/AddRole/50001"
+      }
+    },
+    "dynamicschema": {
+      "Deputisable": [
+        {
+          "code": "J",
+          "label": "Yes"
+        },
+        {
+          "code": "N",
+          "label": "No"
+        },
+        {
+          "code": "J",
+          "label": "Yes"
+        },
+        {
+          "code": "N",
+          "label": "No"
+        },
+        {
+          "code": "J",
+          "label": "Yes"
+        },
+        {
+          "code": "N",
+          "label": "No"
+        },
+        {
+          "code": "J",
+          "label": "Yes"
+        },
+        {
+          "code": "N",
+          "label": "No"
+        },
+        {
+          "code": "J",
+          "label": "Yes"
+        },
+        {
+          "code": "N",
+          "label": "No"
+        },
+        {
+          "code": "J",
+          "label": "Yes"
+        },
+        {
+          "code": "N",
+          "label": "No"
+        },
+        {
+          "code": "J",
+          "label": "Yes"
+        },
+        {
+          "code": "N",
+          "label": "No"
+        },
+        {
+          "code": "J",
+          "label": "Yes"
+        },
+        {
+          "code": "N",
+          "label": "No"
+        }
+      ],
+      "Restricted": [
+        {
+          "code": "J",
+          "label": "Yes"
+        },
+        {
+          "code": "N",
+          "label": "No"
+        },
+        {
+          "code": "J",
+          "label": "Yes"
+        },
+        {
+          "code": "N",
+          "label": "No"
+        },
+        {
+          "code": "J",
+          "label": "Yes"
+        },
+        {
+          "code": "N",
+          "label": "No"
+        },
+        {
+          "code": "J",
+          "label": "Yes"
+        },
+        {
+          "code": "N",
+          "label": "No"
+        },
+        {
+          "code": "J",
+          "label": "Yes"
+        },
+        {
+          "code": "N",
+          "label": "No"
+        },
+        {
+          "code": "J",
+          "label": "Yes"
+        },
+        {
+          "code": "N",
+          "label": "No"
+        },
+        {
+          "code": "J",
+          "label": "Yes"
+        },
+        {
+          "code": "N",
+          "label": "No"
+        },
+        {
+          "code": "J",
+          "label": "Yes"
+        },
+        {
+          "code": "N",
+          "label": "No"
+        }
+      ],
+      "Status": [
+        {
+          "code": "Active",
+          "label": "Active"
+        },
+        {
+          "code": "Inactive",
+          "label": "Inactive"
+        }
+      ],
+      "AssociatedOrganisationalRoles": [
+        {
+          "code": "AM_ARE_SeCaExpert",
+          "label": "SeCa Expert"
+        },
+        {
+          "code": "AM_ARE_StockManager",
+          "label": "Stock Manager"
+        },
+        {
+          "code": "AM_ARE_ParaTechnical",
+          "label": "PA admemp para-technical"
+        },
+        {
+          "code": "AM_ARE_FormalitiesOfficer",
+          "label": "Patent formalities officer"
+        },
+        {
+          "code": "AM_ARE_Examiner",
+          "label": "Examiner"
+        },
+        {
+          "code": "AM_ARE_Director",
+          "label": "PA dir"
+        },
+        {
+          "code": "AM_ARE_PAAdmempPatentFO",
+          "label": "PA admemp patent FO"
+        },
+        {
+          "code": "AM_ARE_PAExp",
+          "label": "PA exp"
+        },
+        {
+          "code": "AM_ARE_PAExpCO",
+          "label": "PA exp CO"
+        },
+        {
+          "code": "AM_ARE_PAHod",
+          "label": "PA hod"
+        },
+        {
+          "code": "AM_ARE_PAHos",
+          "label": "PA hos"
+        },
+        {
+          "code": "AM_ARE_PAPd",
+          "label": "PA pd"
+        },
+        {
+          "code": "AM_ARE_PEAdmempClassification",
+          "label": "PE admemp classification"
+        },
+        {
+          "code": "AM_ARE_PEAdmempPatentProcManage",
+          "label": "PE admemp patent proc manage"
+        },
+        {
+          "code": "AM_ARE_PEAdminOperationalDevelopment",
+          "label": "PE admin Operational development"
+        },
+        {
+          "code": "AM_ARE_PEAdminClassification",
+          "label": "PE admin classification"
+        },
+        {
+          "code": "AM_ARE_PEAdminPatentProcManage",
+          "label": "PE admin patent proc manager"
+        },
+        {
+          "code": "AM_ARE_PEDirOperationalDevelopment",
+          "label": "PE dir Operational development"
+        },
+        {
+          "code": "AM_ARE_PEDirOperations",
+          "label": "PE dir Operations"
+        },
+        {
+          "code": "AM_ARE_PEDirClassification",
+          "label": "PE dir classification"
+        },
+        {
+          "code": "AM_ARE_PEDirPatentProcManage",
+          "label": "PE dir patent proc manage"
+        },
+        {
+          "code": "AM_ARE_PEExaminer",
+          "label": "PE examiner"
+        },
+        {
+          "code": "AM_ARE_PESenexp",
+          "label": "PE senexp"
+        },
+        {
+          "code": "AM_ARE_PETmClassification",
+          "label": "PE tm classification"
+        },
+        {
+          "code": "AM_ARE_PETmOperations",
+          "label": "PE tm operations"
+        },
+        {
+          "code": "AM_ARE_PrincipalDirector",
+          "label": "Principal Director"
+        },
+        {
+          "code": "OtherRole",
+          "label": "Other role"
+        },
+        {
+          "code": "AM_ARE_ExternalServiceEmployee",
+          "label": "External Service Employee"
+        },
+        {
+          "code": "AM_ARE_ASAdmempManagementAssists",
+          "label": "AS admemp management assists"
+        }
+      ],
+      "DefaultRole": [
+        {
+          "code": "YesMarkAsDefaultRole",
+          "label": "Yes"
+        },
+        {
+          "code": "No",
+          "label": "No"
+        }
+      ]
+    },
+    "paging": {
+      "totalresults": {
+        "@type": "number",
+        "#text": "7"
+      },
+      "pagesize": {
+        "param": "pagesize",
+        "currentpagesize": {
+          "@type": "number",
+          "#text": "25"
+        },
+        "option": [
+          {
+            "@type": "number",
+            "#text": "10"
+          },
+          {
+            "@type": "number",
+            "#text": "25"
+          },
+          {
+            "@type": "number",
+            "#text": "50"
+          }
+        ]
+      },
+      "param": "page",
+      "currentpage": {
+        "@type": "number",
+        "#text": "1"
+      },
+      "maxpages": {
+        "@type": "number",
+        "#text": "1"
+      }
+    },
+    "sorting": {
+      "param": "sort",
+      "option": [
+        "RoleName",
+        "RoleStartDate",
+        "RoleEndDate"
+      ]
+    },
+    "_embedded": {
+      "results": [
+        {
+          "REG_User_role": {
+            "actions": [
+              {
+                "name": "UpdateUserRole",
+                "title": "Update user role",
+                "method": "POST",
+                "href": "/RoleManagement/UpdateUserRole/50001",
+                "fields": [
+                  {
+                    "name": "REG_User_roleRecordId",
+                    "type": "number",
+                    "value": "50003"
+                  },
+                  {
+                    "name": "RoleName",
+                    "type": "text",
+                    "value": "director"
+                  },
+                  {
+                    "name": "RoleStartDate",
+                    "type": "date",
+                    "value": "11-05-2016"
+                  },
+                  {
+                    "name": "RoleEndDate",
+                    "type": "date",
+                    "value": "31-12-2099"
+                  },
+                  {
+                    "name": "Deputisable",
+                    "type": "text",
+                    "value": "J"
+                  },
+                  {
+                    "name": "Restricted",
+                    "type": "text",
+                    "value": "N"
+                  },
+                  {
+                    "name":"RoleNameLabel",
+                    "type":"text",
+                    "value":"Director"
+                  }
+                ]
+              },
+              {
+                "name": "AddPermissionToRole",
+                "title": "Add permission to role",
+                "method": "POST",
+                "href": "/RoleManagement/AddPermissionToRole/50001",
+                "fields": {
+                  "@class": "array",
+                  "fields": {
+                    "name": "REG_User_roleRecordId",
+                    "type": "number",
+                    "value": "50003"
+                  }
+                }
+              },
+              {
+                "name": "MarkAsDefaultRole",
+                "title": "Mark as default role",
+                "method": "POST",
+                "href": "/RoleManagement/MarkAsDefaultRole/50001",
+                "fields": {
+                  "@class": "array",
+                  "fields": {
+                    "name": "REG_User_roleRecordId",
+                    "type": "number",
+                    "value": "50003"
+                  }
+                }
+              },
+              {
+                "name": "DuplicateRoleAndPermission",
+                "title": "Duplicate role and permissions",
+                "method": "POST",
+                "href": "/RoleManagement/DuplicateRoleAndPermission/50001",
+                "fields": {
+                  "@class": "array",
+                  "fields": {
+                    "name": "REG_User_roleRecordId",
+                    "type": "number",
+                    "value": "50003"
+                  }
+                }
+              },
+              {
+                "name": "RemoveRole",
+                "title": "Remove role",
+                "method": "POST",
+                "href": "/RoleManagement/RemoveRole/50001",
+                "fields": {
+                  "@class": "array",
+                  "fields": {
+                    "name": "REG_User_roleRecordId",
+                    "type": "number",
+                    "value": "50003"
+                  }
+                }
+              }
+            ],
+            "_id": {
+              "@type": "number",
+              "#text": "50003"
+            },
+            "_links": {
+              "self": {
+                "href": "/RoleManagement/REG_Role_Management_caseview/50001/RolesAndPermissions/50003"
+              },
+              "Permissions": {
+                "href": "/RoleManagement/REG_Role_Management_caseview/50001/RolesAndPermissions/50003/Permissions"
+              }
+            },
+            "RoleName": "director",
+            "RoleStartDate": "2016-05-11",
+            "RoleEndDate": "2099-12-31",
+            "Deputisable": "J",
+            "Restricted": "N",
+            "Status": "Active",
+            "RoleNameLabel": "Director",
+            "AssociatedOrganisationalRoles": {
+              "@class": "array",
+              "option": "AM_ARE_PEDirOperations"
+            },
+            "DefaultRole": "YesMarkAsDefaultRole"
+          }
+        },
+        {
+          "REG_User_role": {
+            "actions": [
+              {
+                "name": "UpdateUserRole",
+                "title": "Update user role",
+                "method": "POST",
+                "href": "/RoleManagement/UpdateUserRole/50001",
+                "fields": [
+                  {
+                    "name": "REG_User_roleRecordId",
+                    "type": "number",
+                    "value": "50149"
+                  },
+                  {
+                    "name": "RoleName",
+                    "type": "text",
+                    "value": "formality_officer"
+                  },
+                  {
+                    "name": "RoleStartDate",
+                    "type": "date",
+                    "value": "11-05-2016"
+                  },
+                  {
+                    "name": "RoleEndDate",
+                    "type": "date",
+                    "value": "31-12-2099"
+                  },
+                  {
+                    "name": "Deputisable",
+                    "type": "text",
+                    "value": "J"
+                  },
+                  {
+                    "name": "Restricted",
+                    "type": "text",
+                    "value": "N"
+                  },
+                  {
+                    "name":"RoleNameLabel",
+                    "type":"text",
+                    "value":"Formality Officer"
+                  }
+                ]
+              },
+              {
+                "name": "AddPermissionToRole",
+                "title": "Add permission to role",
+                "method": "POST",
+                "href": "/RoleManagement/AddPermissionToRole/50001",
+                "fields": {
+                  "@class": "array",
+                  "fields": {
+                    "name": "REG_User_roleRecordId",
+                    "type": "number",
+                    "value": "50149"
+                  }
+                }
+              },
+              {
+                "name": "MarkAsDefaultRole",
+                "title": "Mark as default role",
+                "method": "POST",
+                "href": "/RoleManagement/MarkAsDefaultRole/50001",
+                "fields": {
+                  "@class": "array",
+                  "fields": {
+                    "name": "REG_User_roleRecordId",
+                    "type": "number",
+                    "value": "50149"
+                  }
+                }
+              },
+              {
+                "name": "DuplicateRoleAndPermission",
+                "title": "Duplicate role and permissions",
+                "method": "POST",
+                "href": "/RoleManagement/DuplicateRoleAndPermission/50001",
+                "fields": {
+                  "@class": "array",
+                  "fields": {
+                    "name": "REG_User_roleRecordId",
+                    "type": "number",
+                    "value": "50149"
+                  }
+                }
+              },
+              {
+                "name": "RemoveRole",
+                "title": "Remove role",
+                "method": "POST",
+                "href": "/RoleManagement/RemoveRole/50001",
+                "fields": {
+                  "@class": "array",
+                  "fields": {
+                    "name": "REG_User_roleRecordId",
+                    "type": "number",
+                    "value": "50149"
+                  }
+                }
+              }
+            ],
+            "_id": {
+              "@type": "number",
+              "#text": "50149"
+            },
+            "_links": {
+              "self": {
+                "href": "/RoleManagement/REG_Role_Management_caseview/50001/RolesAndPermissions/50149"
+              },
+              "Permissions": {
+                "href": "/RoleManagement/REG_Role_Management_caseview/50001/RolesAndPermissions/50149/Permissions"
+              }
+            },
+            "RoleName": "formality_officer",
+            "RoleStartDate": "2016-05-11",
+            "RoleEndDate": "2099-12-31",
+            "Deputisable": "J",
+            "Restricted": "N",
+            "Status": "Active",
+            "RoleNameLabel": "Formality Officer",
+            "AssociatedOrganisationalRoles": [
+              "AM_ARE_PAAdmempPatentFO",
+              "AM_ARE_PAExp",
+              "AM_ARE_PAHod",
+              "AM_ARE_PAHos"
+            ],
+            "DefaultRole": "YesMarkAsDefaultRole"
+          }
+        },
+        {
+          "REG_User_role": {
+            "actions": [
+              {
+                "name": "UpdateUserRole",
+                "title": "Update user role",
+                "method": "POST",
+                "href": "/RoleManagement/UpdateUserRole/50001",
+                "fields": [
+                  {
+                    "name": "REG_User_roleRecordId",
+                    "type": "number",
+                    "value": "50267"
+                  },
+                  {
+                    "name": "RoleName",
+                    "type": "text",
+                    "value": "stock_manager"
+                  },
+                  {
+                    "name": "RoleStartDate",
+                    "type": "date",
+                    "value": "11-05-2016"
+                  },
+                  {
+                    "name": "RoleEndDate",
+                    "type": "date",
+                    "value": "31-12-2099"
+                  },
+                  {
+                    "name": "Deputisable",
+                    "type": "text",
+                    "value": "J"
+                  },
+                  {
+                    "name": "Restricted",
+                    "type": "text",
+                    "value": "N"
+                  },
+                  {
+                    "name":"RoleNameLabel",
+                    "type":"text",
+                    "value":"Stock Manager"
+                  }
+                ]
+              },
+              {
+                "name": "AddPermissionToRole",
+                "title": "Add permission to role",
+                "method": "POST",
+                "href": "/RoleManagement/AddPermissionToRole/50001",
+                "fields": {
+                  "@class": "array",
+                  "fields": {
+                    "name": "REG_User_roleRecordId",
+                    "type": "number",
+                    "value": "50267"
+                  }
+                }
+              },
+              {
+                "name": "MarkAsDefaultRole",
+                "title": "Mark as default role",
+                "method": "POST",
+                "href": "/RoleManagement/MarkAsDefaultRole/50001",
+                "fields": {
+                  "@class": "array",
+                  "fields": {
+                    "name": "REG_User_roleRecordId",
+                    "type": "number",
+                    "value": "50267"
+                  }
+                }
+              },
+              {
+                "name": "DuplicateRoleAndPermission",
+                "title": "Duplicate role and permissions",
+                "method": "POST",
+                "href": "/RoleManagement/DuplicateRoleAndPermission/50001",
+                "fields": {
+                  "@class": "array",
+                  "fields": {
+                    "name": "REG_User_roleRecordId",
+                    "type": "number",
+                    "value": "50267"
+                  }
+                }
+              },
+              {
+                "name": "RemoveRole",
+                "title": "Remove role",
+                "method": "POST",
+                "href": "/RoleManagement/RemoveRole/50001",
+                "fields": {
+                  "@class": "array",
+                  "fields": {
+                    "name": "REG_User_roleRecordId",
+                    "type": "number",
+                    "value": "50267"
+                  }
+                }
+              }
+            ],
+            "_id": {
+              "@type": "number",
+              "#text": "50267"
+            },
+            "_links": {
+              "self": {
+                "href": "/RoleManagement/REG_Role_Management_caseview/50001/RolesAndPermissions/50267"
+              },
+              "Permissions": {
+                "href": "/RoleManagement/REG_Role_Management_caseview/50001/RolesAndPermissions/50267/Permissions"
+              }
+            },
+            "RoleName": "stock_manager",
+            "RoleStartDate": "2016-05-11",
+            "RoleEndDate": "2099-12-31",
+            "Deputisable": "J",
+            "Restricted": "N",
+            "Status": "Active",
+            "RoleNameLabel": "Stock Manager",
+            "AssociatedOrganisationalRoles": [
+              "AM_ARE_ParaTechnical",
+              "AM_ARE_PEDirOperations"
+            ],
+            "DefaultRole": "YesMarkAsDefaultRole"
+          }
+        },
+        {
+          "REG_User_role": {
+            "actions": [
+              {
+                "name": "UpdateUserRole",
+                "title": "Update user role",
+                "method": "POST",
+                "href": "/RoleManagement/UpdateUserRole/50001",
+                "fields": [
+                  {
+                    "name": "REG_User_roleRecordId",
+                    "type": "number",
+                    "value": "50210"
+                  },
+                  {
+                    "name": "RoleName",
+                    "type": "text",
+                    "value": "seca_expert"
+                  },
+                  {
+                    "name": "RoleStartDate",
+                    "type": "date",
+                    "value": "11-05-2016"
+                  },
+                  {
+                    "name": "RoleEndDate",
+                    "type": "date",
+                    "value": "31-12-2099"
+                  },
+                  {
+                    "name": "Deputisable",
+                    "type": "text",
+                    "value": "J"
+                  },
+                  {
+                    "name": "Restricted",
+                    "type": "text",
+                    "value": "N"
+                  },
+                  {
+                    "name":"RoleNameLabel",
+                    "type":"text",
+                    "value":"Seca Expert"
+                  }
+                ]
+              },
+              {
+                "name": "AddPermissionToRole",
+                "title": "Add permission to role",
+                "method": "POST",
+                "href": "/RoleManagement/AddPermissionToRole/50001",
+                "fields": {
+                  "@class": "array",
+                  "fields": {
+                    "name": "REG_User_roleRecordId",
+                    "type": "number",
+                    "value": "50210"
+                  }
+                }
+              },
+              {
+                "name": "MarkAsDefaultRole",
+                "title": "Mark as default role",
+                "method": "POST",
+                "href": "/RoleManagement/MarkAsDefaultRole/50001",
+                "fields": {
+                  "@class": "array",
+                  "fields": {
+                    "name": "REG_User_roleRecordId",
+                    "type": "number",
+                    "value": "50210"
+                  }
+                }
+              },
+              {
+                "name": "DuplicateRoleAndPermission",
+                "title": "Duplicate role and permissions",
+                "method": "POST",
+                "href": "/RoleManagement/DuplicateRoleAndPermission/50001",
+                "fields": {
+                  "@class": "array",
+                  "fields": {
+                    "name": "REG_User_roleRecordId",
+                    "type": "number",
+                    "value": "50210"
+                  }
+                }
+              },
+              {
+                "name": "RemoveRole",
+                "title": "Remove role",
+                "method": "POST",
+                "href": "/RoleManagement/RemoveRole/50001",
+                "fields": {
+                  "@class": "array",
+                  "fields": {
+                    "name": "REG_User_roleRecordId",
+                    "type": "number",
+                    "value": "50210"
+                  }
+                }
+              }
+            ],
+            "_id": {
+              "@type": "number",
+              "#text": "50210"
+            },
+            "_links": {
+              "self": {
+                "href": "/RoleManagement/REG_Role_Management_caseview/50001/RolesAndPermissions/50210"
+              },
+              "Permissions": {
+                "href": "/RoleManagement/REG_Role_Management_caseview/50001/RolesAndPermissions/50210/Permissions"
+              }
+            },
+            "RoleName": "seca_expert",
+            "RoleStartDate": "2016-05-11",
+            "RoleEndDate": "2099-12-31",
+            "Deputisable": "J",
+            "Restricted": "N",
+            "Status": "Active",
+            "DefaultRole": "No",
+            "RoleNameLabel": "Seca Expert"
+          }
+        },
+        {
+          "REG_User_role": {
+            "actions": [
+              {
+                "name": "UpdateUserRole",
+                "title": "Update user role",
+                "method": "POST",
+                "href": "/RoleManagement/UpdateUserRole/50001",
+                "fields": [
+                  {
+                    "name": "REG_User_roleRecordId",
+                    "type": "number",
+                    "value": "279448"
+                  },
+                  {
+                    "name": "RoleName",
+                    "type": "text",
+                    "value": "system_admin"
+                  },
+                  {
+                    "name": "RoleStartDate",
+                    "type": "date",
+                    "value": "29-06-2016"
+                  },
+                  {
+                    "name": "RoleEndDate",
+                    "type": "date",
+                    "value": "31-12-2099"
+                  },
+                  {
+                    "name": "Deputisable",
+                    "type": "text",
+                    "value": "N"
+                  },
+                  {
+                    "name": "Restricted",
+                    "type": "text",
+                    "value": "N"
+                  },
+                  {
+                    "name":"RoleNameLabel",
+                    "type":"text",
+                    "value":"System Admin"
+                  }
+                ]
+              },
+              {
+                "name": "AddPermissionToRole",
+                "title": "Add permission to role",
+                "method": "POST",
+                "href": "/RoleManagement/AddPermissionToRole/50001",
+                "fields": {
+                  "@class": "array",
+                  "fields": {
+                    "name": "REG_User_roleRecordId",
+                    "type": "number",
+                    "value": "279448"
+                  }
+                }
+              },
+              {
+                "name": "MarkAsDefaultRole",
+                "title": "Mark as default role",
+                "method": "POST",
+                "href": "/RoleManagement/MarkAsDefaultRole/50001",
+                "fields": {
+                  "@class": "array",
+                  "fields": {
+                    "name": "REG_User_roleRecordId",
+                    "type": "number",
+                    "value": "279448"
+                  }
+                }
+              },
+              {
+                "name": "DuplicateRoleAndPermission",
+                "title": "Duplicate role and permissions",
+                "method": "POST",
+                "href": "/RoleManagement/DuplicateRoleAndPermission/50001",
+                "fields": {
+                  "@class": "array",
+                  "fields": {
+                    "name": "REG_User_roleRecordId",
+                    "type": "number",
+                    "value": "279448"
+                  }
+                }
+              },
+              {
+                "name": "RemoveRole",
+                "title": "Remove role",
+                "method": "POST",
+                "href": "/RoleManagement/RemoveRole/50001",
+                "fields": {
+                  "@class": "array",
+                  "fields": {
+                    "name": "REG_User_roleRecordId",
+                    "type": "number",
+                    "value": "279448"
+                  }
+                }
+              }
+            ],
+            "_id": {
+              "@type": "number",
+              "#text": "279448"
+            },
+            "_links": {
+              "self": {
+                "href": "/RoleManagement/REG_Role_Management_caseview/50001/RolesAndPermissions/279448"
+              },
+              "Permissions": {
+                "href": "/RoleManagement/REG_Role_Management_caseview/50001/RolesAndPermissions/279448/Permissions"
+              }
+            },
+            "RoleName": "system_admin",
+            "RoleStartDate": "2016-06-29",
+            "RoleEndDate": "2099-12-31",
+            "Deputisable": "N",
+            "Restricted": "N",
+            "Status": "Active",
+            "DefaultRole": "No",
+            "RoleNameLabel": "System Admin"
+          }
+        },
+        {
+          "REG_User_role": {
+            "actions": [
+              {
+                "name": "UpdateUserRole",
+                "title": "Update user role",
+                "method": "POST",
+                "href": "/RoleManagement/UpdateUserRole/50001",
+                "fields": [
+                  {
+                    "name": "REG_User_roleRecordId",
+                    "type": "number",
+                    "value": "76390"
+                  },
+                  {
+                    "name": "RoleName",
+                    "type": "text",
+                    "value": "team_manager"
+                  },
+                  {
+                    "name": "RoleStartDate",
+                    "type": "date",
+                    "value": "31-05-2016"
+                  },
+                  {
+                    "name": "RoleEndDate",
+                    "type": "date",
+                    "value": "31-12-2099"
+                  },
+                  {
+                    "name": "Deputisable",
+                    "type": "text",
+                    "value": "J"
+                  },
+                  {
+                    "name": "Restricted",
+                    "type": "text",
+                    "value": "N"
+                  },
+                  {
+                    "name":"RoleNameLabel",
+                    "type":"text",
+                    "value":"Team Manager"
+                  }
+                ]
+              },
+              {
+                "name": "AddPermissionToRole",
+                "title": "Add permission to role",
+                "method": "POST",
+                "href": "/RoleManagement/AddPermissionToRole/50001",
+                "fields": {
+                  "@class": "array",
+                  "fields": {
+                    "name": "REG_User_roleRecordId",
+                    "type": "number",
+                    "value": "76390"
+                  }
+                }
+              },
+              {
+                "name": "MarkAsDefaultRole",
+                "title": "Mark as default role",
+                "method": "POST",
+                "href": "/RoleManagement/MarkAsDefaultRole/50001",
+                "fields": {
+                  "@class": "array",
+                  "fields": {
+                    "name": "REG_User_roleRecordId",
+                    "type": "number",
+                    "value": "76390"
+                  }
+                }
+              },
+              {
+                "name": "DuplicateRoleAndPermission",
+                "title": "Duplicate role and permissions",
+                "method": "POST",
+                "href": "/RoleManagement/DuplicateRoleAndPermission/50001",
+                "fields": {
+                  "@class": "array",
+                  "fields": {
+                    "name": "REG_User_roleRecordId",
+                    "type": "number",
+                    "value": "76390"
+                  }
+                }
+              },
+              {
+                "name": "RemoveRole",
+                "title": "Remove role",
+                "method": "POST",
+                "href": "/RoleManagement/RemoveRole/50001",
+                "fields": {
+                  "@class": "array",
+                  "fields": {
+                    "name": "REG_User_roleRecordId",
+                    "type": "number",
+                    "value": "76390"
+                  }
+                }
+              }
+            ],
+            "_id": {
+              "@type": "number",
+              "#text": "76390"
+            },
+            "_links": {
+              "self": {
+                "href": "/RoleManagement/REG_Role_Management_caseview/50001/RolesAndPermissions/76390"
+              },
+              "Permissions": {
+                "href": "/RoleManagement/REG_Role_Management_caseview/50001/RolesAndPermissions/76390/Permissions"
+              }
+            },
+            "RoleName": "team_manager",
+            "RoleStartDate": "2016-05-31",
+            "RoleEndDate": "2099-12-31",
+            "Deputisable": "J",
+            "Restricted": "N",
+            "Status": "Active",
+            "DefaultRole": "No",
+            "RoleNameLabel": "Team Manager"
+          }
+        },
+        {
+          "REG_User_role": {
+            "actions": [
+              {
+                "name": "UpdateUserRole",
+                "title": "Update user role",
+                "method": "POST",
+                "href": "/RoleManagement/UpdateUserRole/50001",
+                "fields": [
+                  {
+                    "name": "REG_User_roleRecordId",
+                    "type": "number",
+                    "value": "50074"
+                  },
+                  {
+                    "name": "RoleName",
+                    "type": "text",
+                    "value": "examiner"
+                  },
+                  {
+                    "name": "RoleStartDate",
+                    "type": "date",
+                    "value": "11-05-2016"
+                  },
+                  {
+                    "name": "RoleEndDate",
+                    "type": "date",
+                    "value": "31-12-2099"
+                  },
+                  {
+                    "name": "Deputisable",
+                    "type": "text",
+                    "value": "N"
+                  },
+                  {
+                    "name": "Restricted",
+                    "type": "text",
+                    "value": "N"
+                  },
+                  {
+                    "name":"RoleNameLabel",
+                    "type":"text",
+                    "value":"Examiner"
+                  }
+                ]
+              },
+              {
+                "name": "AddPermissionToRole",
+                "title": "Add permission to role",
+                "method": "POST",
+                "href": "/RoleManagement/AddPermissionToRole/50001",
+                "fields": {
+                  "@class": "array",
+                  "fields": {
+                    "name": "REG_User_roleRecordId",
+                    "type": "number",
+                    "value": "50074"
+                  }
+                }
+              },
+              {
+                "name": "MarkAsDefaultRole",
+                "title": "Mark as default role",
+                "method": "POST",
+                "href": "/RoleManagement/MarkAsDefaultRole/50001",
+                "fields": {
+                  "@class": "array",
+                  "fields": {
+                    "name": "REG_User_roleRecordId",
+                    "type": "number",
+                    "value": "50074"
+                  }
+                }
+              },
+              {
+                "name": "DuplicateRoleAndPermission",
+                "title": "Duplicate role and permissions",
+                "method": "POST",
+                "href": "/RoleManagement/DuplicateRoleAndPermission/50001",
+                "fields": {
+                  "@class": "array",
+                  "fields": {
+                    "name": "REG_User_roleRecordId",
+                    "type": "number",
+                    "value": "50074"
+                  }
+                }
+              },
+              {
+                "name": "RemoveRole",
+                "title": "Remove role",
+                "method": "POST",
+                "href": "/RoleManagement/RemoveRole/50001",
+                "fields": {
+                  "@class": "array",
+                  "fields": {
+                    "name": "REG_User_roleRecordId",
+                    "type": "number",
+                    "value": "50074"
+                  }
+                }
+              }
+            ],
+            "_id": {
+              "@type": "number",
+              "#text": "50074"
+            },
+            "_links": {
+              "self": {
+                "href": "/RoleManagement/REG_Role_Management_caseview/50001/RolesAndPermissions/50074"
+              },
+              "Permissions": {
+                "href": "/RoleManagement/REG_Role_Management_caseview/50001/RolesAndPermissions/50074/Permissions"
+              }
+            },
+            "RoleName": "examiner",
+            "RoleStartDate": "2016-05-11",
+            "RoleEndDate": "2099-12-31",
+            "Deputisable": "N",
+            "Restricted": "N",
+            "Status": "Active",
+            "RoleNameLabel": "Examiner",
+            "AssociatedOrganisationalRoles": [
+              "AM_ARE_PEDirOperations",
+              "AM_ARE_PEDirPatentProcManage",
+              "AM_ARE_PEExaminer",
+              "AM_ARE_PESenexp",
+              "AM_ARE_PETmOperations"
+            ],
+            "DefaultRole": "YesMarkAsDefaultRole"
+          }
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,654 @@
+{
+  "List_organisational_accounts": {
+    "_links": {
+      "self": {
+        "href": "/AccountManagement/ListOrgAccounts"
+      },
+      "api_doc": {
+        "href": "/api-docs/AccountManagement/ListOrgAccounts"
+      }
+    },
+    "filter": [
+      {
+        "stringfilter": {
+          "param": "OrgName",
+          "label": "Organisation name"
+        }
+      },
+      {
+        "stringfilter": {
+          "param": "OrgUnitNumber",
+          "label": "Organisational unit"
+        }
+      },
+      {
+        "choicefilter": {
+          "param": "AccountType",
+          "label": "Account type",
+          "options": [
+            {
+              "key": "AM_OAT_EPO",
+              "count": {
+                "@type": "number",
+                "#text": "0"
+              },
+              "label": "EPO"
+            },
+            {
+              "key": "AM_OAT_Directorate",
+              "count": {
+                "@type": "number",
+                "#text": "9"
+              },
+              "label": "Directorate"
+            },
+            {
+              "key": "AM_OAT_SISUnit",
+              "count": {
+                "@type": "number",
+                "#text": "2"
+              },
+              "label": "SIS Unit"
+            },
+            {
+              "key": "AM_OAT_Team",
+              "count": {
+                "@type": "number",
+                "#text": "8"
+              },
+              "label": "Team"
+            }
+          ]
+        }
+      }
+    ],
+    "dynamicschema": {
+      "AccountType": [
+        {
+          "code": "AM_OAT_EPO",
+          "label": "EPO"
+        },
+        {
+          "code": "AM_OAT_Directorate",
+          "label": "Directorate"
+        },
+        {
+          "code": "AM_OAT_SISUnit",
+          "label": "SIS Unit"
+        },
+        {
+          "code": "AM_OAT_Team",
+          "label": "Team"
+        }
+      ],
+      "OrgLocation": [
+        {
+          "code": "AM_EOL_Berlin",
+          "label": "Berlin"
+        },
+        {
+          "code": "AM_EOL_TheHague",
+          "label": "The Hague"
+        },
+        {
+          "code": "AM_EOL_Munich",
+          "label": "Munich"
+        },
+        {
+          "code": "AM_EOL_Vienna",
+          "label": "Vienna"
+        },
+        {
+          "code": "AM_EOL_Brussels",
+          "label": "Brussels"
+        }
+      ]
+    },
+    "paging": {
+      "totalresults": {
+        "@type": "number",
+        "#text": "19"
+      },
+      "pagesize": {
+        "param": "pagesize",
+        "currentpagesize": {
+          "@type": "number",
+          "#text": "25"
+        },
+        "option": [
+          {
+            "@type": "number",
+            "#text": "10"
+          },
+          {
+            "@type": "number",
+            "#text": "25"
+          },
+          {
+            "@type": "number",
+            "#text": "50"
+          }
+        ]
+      },
+      "param": "page",
+      "currentpage": {
+        "@type": "number",
+        "#text": "1"
+      },
+      "maxpages": {
+        "@type": "number",
+        "#text": "1"
+      }
+    },
+    "sorting": {
+      "param": "sort",
+      "currentsort": "OrgName asc",
+      "option": [
+        "AccountType",
+        "OrganisationID",
+        "OrgName",
+        "OrgUnitNumber",
+        "CASENAME",
+        "ID"
+      ]
+    },
+    "_embedded": {
+      "results": [
+        {
+          "Organisational_account": {
+            "_id": {
+              "@type": "number",
+              "#text": "54415"
+            },
+            "_links": {
+              "self": {
+                "href": "/AccountManagement/ref_ACMOrg/54415"
+              },
+              "RelatedUserAccounts": {
+                "href": "/AccountManagement/ListOrgAccounts/54415/RelatedUserAccounts"
+              }
+            },
+            "AccountType": "AM_OAT_Directorate",
+            "OrganisationID": "1653",
+            "OrgName": "Deutsch",
+            "OrgUnitNumber": "1653",
+            "OrgLocation": null,
+            "CASENAME": "Deutsch",
+            "ID": {
+              "@type": "number",
+              "#text": "54415"
+            }
+          }
+        },
+        {
+          "Organisational_account": {
+            "_id": {
+              "@type": "number",
+              "#text": "54456"
+            },
+            "_links": {
+              "self": {
+                "href": "/AccountManagement/ref_ACMOrg/54456"
+              },
+              "RelatedUserAccounts": {
+                "href": "/AccountManagement/ListOrgAccounts/54456/RelatedUserAccounts"
+              }
+            },
+            "AccountType": "AM_OAT_Directorate",
+            "OrganisationID": "1652",
+            "OrgName": "Herrera",
+            "OrgUnitNumber": "1652",
+            "OrgLocation": null,
+            "CASENAME": "Herrera",
+            "ID": {
+              "@type": "number",
+              "#text": "54456"
+            }
+          }
+        },
+        {
+          "Organisational_account": {
+            "_id": {
+              "@type": "number",
+              "#text": "54442"
+            },
+            "_links": {
+              "self": {
+                "href": "/AccountManagement/ref_ACMOrg/54442"
+              },
+              "RelatedUserAccounts": {
+                "href": "/AccountManagement/ListOrgAccounts/54442/RelatedUserAccounts"
+              }
+            },
+            "AccountType": "AM_OAT_Directorate",
+            "OrganisationID": "1655",
+            "OrgName": "Kouzelis",
+            "OrgUnitNumber": "1655",
+            "OrgLocation": null,
+            "CASENAME": "Kouzelis",
+            "ID": {
+              "@type": "number",
+              "#text": "54442"
+            }
+          }
+        },
+        {
+          "Organisational_account": {
+            "_id": {
+              "@type": "number",
+              "#text": "56530"
+            },
+            "_links": {
+              "self": {
+                "href": "/AccountManagement/ref_ACMOrg/56530"
+              },
+              "RelatedUserAccounts": {
+                "href": "/AccountManagement/ListOrgAccounts/56530/RelatedUserAccounts"
+              }
+            },
+            "AccountType": "AM_OAT_Directorate",
+            "OrganisationID": "1301",
+            "OrgName": "Mergoni",
+            "OrgUnitNumber": "1301",
+            "OrgLocation": "AM_EOL_TheHague",
+            "CASENAME": "Mergoni",
+            "ID": {
+              "@type": "number",
+              "#text": "56530"
+            }
+          }
+        },
+        {
+          "Organisational_account": {
+            "_id": {
+              "@type": "number",
+              "#text": "54463"
+            },
+            "_links": {
+              "self": {
+                "href": "/AccountManagement/ref_ACMOrg/54463"
+              },
+              "RelatedUserAccounts": {
+                "href": "/AccountManagement/ListOrgAccounts/54463/RelatedUserAccounts"
+              }
+            },
+            "AccountType": "AM_OAT_Directorate",
+            "OrganisationID": "1662",
+            "OrgName": "Pille",
+            "OrgUnitNumber": "1662",
+            "OrgLocation": null,
+            "CASENAME": "Pille",
+            "ID": {
+              "@type": "number",
+              "#text": "54463"
+            }
+          }
+        },
+        {
+          "Organisational_account": {
+            "_id": {
+              "@type": "number",
+              "#text": "54411"
+            },
+            "_links": {
+              "self": {
+                "href": "/AccountManagement/ref_ACMOrg/54411"
+              },
+              "RelatedUserAccounts": {
+                "href": "/AccountManagement/ListOrgAccounts/54411/RelatedUserAccounts"
+              }
+            },
+            "AccountType": "AM_OAT_SISUnit",
+            "OrganisationID": "H08",
+            "OrgName": "SIS Unit H08",
+            "OrgUnitNumber": "H08",
+            "OrgLocation": null,
+            "CASENAME": "SIS Unit H08",
+            "ID": {
+              "@type": "number",
+              "#text": "54411"
+            }
+          }
+        },
+        {
+          "Organisational_account": {
+            "_id": {
+              "@type": "number",
+              "#text": "54410"
+            },
+            "_links": {
+              "self": {
+                "href": "/AccountManagement/ref_ACMOrg/54410"
+              },
+              "RelatedUserAccounts": {
+                "href": "/AccountManagement/ListOrgAccounts/54410/RelatedUserAccounts"
+              }
+            },
+            "AccountType": "AM_OAT_SISUnit",
+            "OrganisationID": "M08",
+            "OrgName": "SIS Unit M08",
+            "OrgUnitNumber": "M08",
+            "OrgLocation": null,
+            "CASENAME": "SIS Unit M08",
+            "ID": {
+              "@type": "number",
+              "#text": "54410"
+            }
+          }
+        },
+        {
+          "Organisational_account": {
+            "_id": {
+              "@type": "number",
+              "#text": "54431"
+            },
+            "_links": {
+              "self": {
+                "href": "/AccountManagement/ref_ACMOrg/54431"
+              },
+              "RelatedUserAccounts": {
+                "href": "/AccountManagement/ListOrgAccounts/54431/RelatedUserAccounts"
+              }
+            },
+            "AccountType": "AM_OAT_Directorate",
+            "OrganisationID": "1657",
+            "OrgName": "Schölvinck",
+            "OrgUnitNumber": "1657",
+            "OrgLocation": null,
+            "CASENAME": "Schölvinck",
+            "ID": {
+              "@type": "number",
+              "#text": "54431"
+            }
+          }
+        },
+        {
+          "Organisational_account": {
+            "_id": {
+              "@type": "number",
+              "#text": "54506"
+            },
+            "_links": {
+              "self": {
+                "href": "/AccountManagement/ref_ACMOrg/54506"
+              },
+              "RelatedUserAccounts": {
+                "href": "/AccountManagement/ListOrgAccounts/54506/RelatedUserAccounts"
+              }
+            },
+            "AccountType": "AM_OAT_Team",
+            "OrganisationID": "10005389",
+            "OrgName": "Team 1 of 1651",
+            "OrgUnitNumber": "10005389",
+            "OrgLocation": null,
+            "CASENAME": "Team 1 of 1651",
+            "ID": {
+              "@type": "number",
+              "#text": "54506"
+            }
+          }
+        },
+        {
+          "Organisational_account": {
+            "_id": {
+              "@type": "number",
+              "#text": "54491"
+            },
+            "_links": {
+              "self": {
+                "href": "/AccountManagement/ref_ACMOrg/54491"
+              },
+              "RelatedUserAccounts": {
+                "href": "/AccountManagement/ListOrgAccounts/54491/RelatedUserAccounts"
+              }
+            },
+            "AccountType": "AM_OAT_Team",
+            "OrganisationID": "10005391",
+            "OrgName": "Team 1 of 1652",
+            "OrgUnitNumber": "10005391",
+            "OrgLocation": null,
+            "CASENAME": "Team 1 of 1652",
+            "ID": {
+              "@type": "number",
+              "#text": "54491"
+            }
+          }
+        },
+        {
+          "Organisational_account": {
+            "_id": {
+              "@type": "number",
+              "#text": "54484"
+            },
+            "_links": {
+              "self": {
+                "href": "/AccountManagement/ref_ACMOrg/54484"
+              },
+              "RelatedUserAccounts": {
+                "href": "/AccountManagement/ListOrgAccounts/54484/RelatedUserAccounts"
+              }
+            },
+            "AccountType": "AM_OAT_Team",
+            "OrganisationID": "10005395",
+            "OrgName": "Team 1 of 1653",
+            "OrgUnitNumber": "10005395",
+            "OrgLocation": null,
+            "CASENAME": "Team 1 of 1653",
+            "ID": {
+              "@type": "number",
+              "#text": "54484"
+            }
+          }
+        },
+        {
+          "Organisational_account": {
+            "_id": {
+              "@type": "number",
+              "#text": "54477"
+            },
+            "_links": {
+              "self": {
+                "href": "/AccountManagement/ref_ACMOrg/54477"
+              },
+              "RelatedUserAccounts": {
+                "href": "/AccountManagement/ListOrgAccounts/54477/RelatedUserAccounts"
+              }
+            },
+            "AccountType": "AM_OAT_Team",
+            "OrganisationID": "10005392",
+            "OrgName": "Team 1 of 1654",
+            "OrgUnitNumber": "10005392",
+            "OrgLocation": null,
+            "CASENAME": "Team 1 of 1654",
+            "ID": {
+              "@type": "number",
+              "#text": "54477"
+            }
+          }
+        },
+        {
+          "Organisational_account": {
+            "_id": {
+              "@type": "number",
+              "#text": "54500"
+            },
+            "_links": {
+              "self": {
+                "href": "/AccountManagement/ref_ACMOrg/54500"
+              },
+              "RelatedUserAccounts": {
+                "href": "/AccountManagement/ListOrgAccounts/54500/RelatedUserAccounts"
+              }
+            },
+            "AccountType": "AM_OAT_Team",
+            "OrganisationID": "10005394",
+            "OrgName": "Team 1 of 1655",
+            "OrgUnitNumber": "10005394",
+            "OrgLocation": null,
+            "CASENAME": "Team 1 of 1655",
+            "ID": {
+              "@type": "number",
+              "#text": "54500"
+            }
+          }
+        },
+        {
+          "Organisational_account": {
+            "_id": {
+              "@type": "number",
+              "#text": "54504"
+            },
+            "_links": {
+              "self": {
+                "href": "/AccountManagement/ref_ACMOrg/54504"
+              },
+              "RelatedUserAccounts": {
+                "href": "/AccountManagement/ListOrgAccounts/54504/RelatedUserAccounts"
+              }
+            },
+            "AccountType": "AM_OAT_Team",
+            "OrganisationID": "10005396",
+            "OrgName": "Team 1 of 1657",
+            "OrgUnitNumber": "10005396",
+            "OrgLocation": null,
+            "CASENAME": "Team 1 of 1657",
+            "ID": {
+              "@type": "number",
+              "#text": "54504"
+            }
+          }
+        },
+        {
+          "Organisational_account": {
+            "_id": {
+              "@type": "number",
+              "#text": "54501"
+            },
+            "_links": {
+              "self": {
+                "href": "/AccountManagement/ref_ACMOrg/54501"
+              },
+              "RelatedUserAccounts": {
+                "href": "/AccountManagement/ListOrgAccounts/54501/RelatedUserAccounts"
+              }
+            },
+            "AccountType": "AM_OAT_Team",
+            "OrganisationID": "10005393",
+            "OrgName": "Team 1 of 1662",
+            "OrgUnitNumber": "10005393",
+            "OrgLocation": null,
+            "CASENAME": "Team 1 of 1662",
+            "ID": {
+              "@type": "number",
+              "#text": "54501"
+            }
+          }
+        },
+        {
+          "Organisational_account": {
+            "_id": {
+              "@type": "number",
+              "#text": "54503"
+            },
+            "_links": {
+              "self": {
+                "href": "/AccountManagement/ref_ACMOrg/54503"
+              },
+              "RelatedUserAccounts": {
+                "href": "/AccountManagement/ListOrgAccounts/54503/RelatedUserAccounts"
+              }
+            },
+            "AccountType": "AM_OAT_Team",
+            "OrganisationID": "10005390",
+            "OrgName": "Team 2 of 1651",
+            "OrgUnitNumber": "10005390",
+            "OrgLocation": null,
+            "CASENAME": "Team 2 of 1651",
+            "ID": {
+              "@type": "number",
+              "#text": "54503"
+            }
+          }
+        },
+        {
+          "Organisational_account": {
+            "_id": {
+              "@type": "number",
+              "#text": "54449"
+            },
+            "_links": {
+              "self": {
+                "href": "/AccountManagement/ref_ACMOrg/54449"
+              },
+              "RelatedUserAccounts": {
+                "href": "/AccountManagement/ListOrgAccounts/54449/RelatedUserAccounts"
+              }
+            },
+            "AccountType": "AM_OAT_Directorate",
+            "OrganisationID": "1654",
+            "OrgName": "Theodoropoulos",
+            "OrgUnitNumber": "1654",
+            "OrgLocation": null,
+            "CASENAME": "Theodoropoulos",
+            "ID": {
+              "@type": "number",
+              "#text": "54449"
+            }
+          }
+        },
+        {
+          "Organisational_account": {
+            "_id": {
+              "@type": "number",
+              "#text": "54470"
+            },
+            "_links": {
+              "self": {
+                "href": "/AccountManagement/ref_ACMOrg/54470"
+              },
+              "RelatedUserAccounts": {
+                "href": "/AccountManagement/ListOrgAccounts/54470/RelatedUserAccounts"
+              }
+            },
+            "AccountType": "AM_OAT_Directorate",
+            "OrganisationID": "1658",
+            "OrgName": "Thormählen",
+            "OrgUnitNumber": "1658",
+            "OrgLocation": null,
+            "CASENAME": "Thormählen",
+            "ID": {
+              "@type": "number",
+              "#text": "54470"
+            }
+          }
+        },
+        {
+          "Organisational_account": {
+            "_id": {
+              "@type": "number",
+              "#text": "54425"
+            },
+            "_links": {
+              "self": {
+                "href": "/AccountManagement/ref_ACMOrg/54425"
+              },
+              "RelatedUserAccounts": {
+                "href": "/AccountManagement/ListOrgAccounts/54425/RelatedUserAccounts"
+              }
+            },
+            "AccountType": "AM_OAT_Directorate",
+            "OrganisationID": "1651",
+            "OrgName": "Weiand",
+            "OrgUnitNumber": "1651",
+            "OrgLocation": null,
+            "CASENAME": "Weiand",
+            "ID": {
+              "@type": "number",
+              "#text": "54425"
+            }
+          }
+        }
+      ]
+    }
+  }
+}

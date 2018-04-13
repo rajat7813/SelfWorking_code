@@ -1,0 +1,121 @@
+{
+  "_links": {
+    "document": {
+      "href": "{serviceUrl}/publication/{applicationRID}/document"
+    },
+    "application": {
+      "href": "{serviceUrl}/application/448859100"
+    },
+    "family": {
+      "href": "{serviceUrl}/family/055134491"
+    },
+    "self": {
+      "href": "{serviceUrl}/publication/{applicationRID}"
+    },
+    "annotations": {
+      "href": "{serviceUrl}/publication/{applicationRID}/annotations"
+    }
+  },
+  "_embedded": {
+    "document": {
+      "_links": {
+        "content": {
+          "href": "{serviceUrl}/tei/publication/{applicationRID}"
+        },
+        "sections": {
+          "href": "{serviceUrl}/publication/{applicationRID}/sections"
+        },
+        "facsimile": {
+          "href": "{serviceUrl}/publication/{applicationRID}/facsimiles/{facsimileId}"
+        },
+        "page": {
+          "href": "{serviceUrl}/publication/{applicationRID}/facsimiles/{facsimileId}/{pageNumber}"
+        },
+        "biblio": {
+          "href": "{serviceUrl}/tei/publication/{applicationRID}/biblio"
+        },
+        "parent": {
+          "href": "{serviceUrl}/publication/{applicationRID}"
+        },
+        "self": {
+          "href": "{serviceUrl}/publication/{applicationRID}/document"
+        },
+        "facsimiles": {
+          "href": "{serviceUrl}/publication/{applicationRID}/facsimiles"
+        },
+        "facsimile:content": {
+          "href": "{serviceUrl}/tei/publication/{applicationRID}/facsimile/{facsimileId}"
+        },
+        "section": {
+          "href": "{serviceUrl}/tei/publication/{applicationRID}/sections/{sectionId}"
+        }
+      },
+      "sections": {
+        "abstract": [{
+          "sectionId": "70176f65-8fb2-4a97-82d9-655dc3ff812e"
+        }],
+        "biblio": [{
+          "facsimileId": "QklCTElPL0RFMTAyMDE0MDExMzc5QTE",
+          "facsimileFirstPageNumber": 1,
+          "facsimileLastPageNumber": 1
+        }],
+        "claims": [{
+          "dateProduced": "2016-01-30",
+          "sectionId": "cd681098-e7ce-4c27-b0f1-e0e33a342fae",
+          "facsimileId": "Q0xBSU1TL0RFMTAyMDE0MDExMzc5QTE",
+          "sectionQuality": "02",
+          "sectionProvider": "DPMA",
+          "facsimileFirstPageNumber": 6,
+          "facsimileLastPageNumber": 6,
+          "sectionDate": "2016-01-30",
+          "formatSubtype": "ST36",
+          "language": "DE",
+          "format": "XML"
+        }],
+        "description": [{
+          "dateProduced": "2016-01-30",
+          "sectionId": "25428b68-da6e-4e97-8865-63a0267835d8",
+          "facsimileId": "REVTQ1JJUFRJT04vREUxMDIwMTQwMTEzNzlBMQ",
+          "sectionQuality": "02",
+          "sectionProvider": "DPMA",
+          "facsimileFirstPageNumber": 2,
+          "facsimileLastPageNumber": 5,
+          "sectionDate": "2016-01-30",
+          "formatSubtype": "ST36",
+          "language": "DE",
+          "format": "XML"
+        }],
+        "drawings": [{
+          "facsimileId": "RFJBV0lOR1MvREUxMDIwMTQwMTEzNzlBMQ",
+          "facsimileFirstPageNumber": 7,
+          "facsimileLastPageNumber": 7
+        }]
+      }
+    }
+  },
+  "id": "{applicationRID}",
+  "title": "Dichtung zwischen zwei sich gegeneinander bewegenden Oberflächen",
+  "date": "2016-02-11",
+  "applicationId": "448859100",
+  "sequenceNumber": "DE102014011379A1",
+  "number": {
+    "CC": "DE",
+    "SN": "102014011379",
+    "KC": "A1"
+  },
+  "dwpi": {
+    "sequenceNumber": "DE102014011379A1",
+    "date": "2016-02-11",
+    "_links": {
+      "self": {
+        "href": "{serviceUrl}/dwpi/{applicationRID}"
+      }
+    },
+    "id": "{applicationRID}",
+    "number": {
+      "CC": "DE",
+      "SN": "102014011379",
+      "KC": "A1"
+    }
+  }
+}

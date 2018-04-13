@@ -1,0 +1,85 @@
+{
+  "label": "string",
+  "paging": {
+    "param": "string",
+    "currentpage": 0,
+    "maxpages": 0,
+    "totalresults": 0,
+    "pagesize": {
+      "param": "string",
+      "currentpagesize": 10,
+      "option": [
+        10
+      ]
+    }
+  },
+  "sorting": {
+    "param": "string",
+    "currentsort": "string",
+    "option": [
+      "UPS_ID"
+    ]
+  },
+  "filter": [
+    [
+      {
+        "stringfilter": {
+          "param": "UserID",
+          "label": "UserID",
+          "value": "%s"
+        }
+      }
+    ]
+  ],
+  "dynamicschema": {},
+  "_links": {
+    "self": {
+      "href": "string"
+    },
+    "api_doc": {
+      "href": "string"
+    }
+  },
+  "_embedded": {
+    "results": [
+      {
+        "Overview_user_preferred_setting": {
+          "CategoryType": "ManageDefaultLayoutSettings",
+          "KindType": "FontSize",
+          "ValueText": "%s",
+          "_id": 0,
+          "_links": {
+            "self": {
+              "href": "string"
+            },
+            "api_doc": {
+              "href": "string"
+            },
+            "AdditionalDetails": {
+              "href": "string"
+            }
+          }
+        }
+      },
+      {
+        "Overview_user_preferred_setting": {
+          "CategoryType": "ManageDefaultLayoutSettings",
+          "KindType": "WarningMessage",
+          "ValueText": "%s",
+          "_id": 0,
+          "_links": {
+            "self": {
+              "href": "string"
+            },
+            "api_doc": {
+              "href": "string"
+            },
+            "AdditionalDetails": {
+              "href": "string"
+            }
+          }
+        }
+      }
+    ]
+  }
+}

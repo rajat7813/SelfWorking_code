@@ -1,0 +1,99 @@
+{
+  "AM34ListNewAccountRoles":
+  [
+    {
+      "AM34_Result": "OK",
+      "AM34_Explanation": ""
+    },
+    {
+      "RoleName": "director",
+      "RoleStartDate": "2016-05-11",
+      "RoleEndDate": "2099-12-31",
+      "Deputisable": "J",
+      "Restricted": "N",
+      "Status": "Active",
+      "DefaultRole": "No",
+      "AssociatedOrganisationalRoles": "AM_ARE_PEDirOperations",
+      "REG_User_roleRecordId": "50003",
+      "RoleNameLabel": "Director"
+    },
+    {
+      "RoleName": "formalities_officer",
+      "RoleStartDate": "2016-05-11",
+      "RoleEndDate": "2099-12-31",
+      "Deputisable": "J",
+      "Restricted": "N",
+      "Status": "Active",
+      "DefaultRole": "No",
+      "AssociatedOrganisationalRoles": "AM_ARE_PAAdmempPatentFO,AM_ARE_PAExp,AM_ARE_PAHod,AM_ARE_PAHos",
+      "REG_User_roleRecordId": "50149",
+      "RoleNameLabel": "Formality Officer"
+    },
+    {
+      "RoleName": "seca_expert",
+      "RoleStartDate": "2016-05-11",
+      "RoleEndDate": "2099-12-31",
+      "Deputisable": "J",
+      "Restricted": "N",
+      "Status": "Active",
+      "DefaultRole": "No",
+      "AssociatedOrganisationalRoles": "",
+      "REG_User_roleRecordId": "50210",
+      "RoleNameLabel": "Seca Expert"
+    },
+    {
+      "RoleName": "system_admin",
+      "RoleStartDate": "2016-06-29",
+      "RoleEndDate": "2099-12-31",
+      "Deputisable": "N",
+      "Restricted": "N",
+      "Status": "Active",
+      "DefaultRole": "No",
+      "AssociatedOrganisationalRoles": "",
+      "REG_User_roleRecordId": "279448",
+      "RoleNameLabel": "System Admin"
+    },
+    {
+      "RoleName": "team_manager",
+      "RoleStartDate": "2016-05-31",
+      "RoleEndDate": "2099-12-31",
+      "Deputisable": "J",
+      "Restricted": "N",
+      "Status": "Active",
+      "DefaultRole": "No",
+      "AssociatedOrganisationalRoles": "",
+      "REG_User_roleRecordId": "76390",
+      "RoleNameLabel": "Team Manager"
+    },
+    {
+      "RoleName": "stock_manager",
+      "RoleStartDate": "2016-05-31",
+      "RoleEndDate": "2099-12-31",
+      "Deputisable": "J",
+      "Restricted": "N",
+      "Status": "Active",
+      "DefaultRole": "No",
+      "AssociatedOrganisationalRoles": "",
+      "REG_User_roleRecordId": "77456",
+      "RoleNameLabel": "Stock Manager"
+    },
+    {
+      "TechField": "A61F9/013"
+    },
+    {
+      "TechField": "A61F9/02"
+    },
+    {
+      "TechField": "A61M1/00"
+    },
+    {
+      "TechField": "A61M11/00"
+    },
+    {
+      "TechField": "A61M39/00"
+    },
+    {
+      "TechField": "A61M5/00"
+    }
+  ]
+}

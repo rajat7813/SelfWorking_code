@@ -1,0 +1,145 @@
+{
+  "Find_deputised_roles": {
+    "_links": {
+      "self": {
+        "href": "/AccountManagement/caseview-user_account/789318/FunctionalRolesDeputisedToOthersHistory/33"
+      },
+      "api_doc": {
+        "href": "/api-docs/AccountManagement/caseview-user_account/789318/FunctionalRolesDeputisedToOthersHistory/33"
+      }
+    },
+    "dynamicschema": {
+      "StatusAccountRole": [
+        {
+          "code": "Active",
+          "label": "Active"
+        },
+        {
+          "code": "NActive",
+          "label": "Not Active"
+        }
+      ],
+      "CurrRoleOwner": {
+        "@class": "array",
+        "option": {
+          "code": "789294",
+          "label": "Examiner 11 eDossier Testing"
+        }
+      },
+      "CurrStatusAccountRole": [
+        {
+          "code": "Active",
+          "label": "Active"
+        },
+        {
+          "code": "NActive",
+          "label": "Not Active"
+        }
+      ],
+      "CurrAssignmentTypeSource": [
+        {
+          "code": "AM_ATS_Deputization",
+          "label": "Deputization"
+        },
+        {
+          "code": "AM_ATS_Owner",
+          "label": "Owner"
+        },
+        {
+          "code": "AM_ATS_Redeputization",
+          "label": "Redeputization"
+        }
+      ],
+      "CurrRoleAssignor": {
+        "@class": "array",
+        "option": {
+          "code": "435594",
+          "label": "Bas van Bakel"
+        }
+      },
+      "CurrInstructor": {
+        "@class": "array",
+        "option": {
+          "code": "789318",
+          "label": "Examiner 10 eDossier Testing"
+        }
+      },
+      "CurrOriDirectorateID": {
+        "@class": "array",
+        "option": {
+          "code": "1662",
+          "label": "Pille"
+        }
+      },
+      "CurrRoleAssignmentStatus": [
+        {
+          "code": "AM_ASS_Draft",
+          "label": "Draft"
+        },
+        {
+          "code": "AM_ASS_Proposed",
+          "label": "Proposed"
+        },
+        {
+          "code": "AM_ASS_Assigned",
+          "label": "Assigned"
+        },
+        {
+          "code": "AM_ASS_Revoked",
+          "label": "Revoked"
+        },
+        {
+          "code": "AM_ASS_Cancelled",
+          "label": "Cancelled"
+        },
+        {
+          "code": "AM_ASS_Rejected",
+          "label": "Rejected"
+        },
+        {
+          "code": "AM_ASS_Accepted",
+          "label": "Accepted"
+        }
+      ]
+    },
+    "_id": {
+      "@type": "number",
+      "#text": "33"
+    },
+    "ID": {
+      "@type": "number",
+      "#text": "33"
+    },
+    "FunctionalRoleRecordId": {
+      "@type": "number",
+      "#text": "804421"
+    },
+    "RoleName": "Stock manager",
+    "StartDateAssignmentType": "2016-07-04",
+    "EndDateAssignmentType": null,
+    "StatusAccountRole": "Active",
+    "CaseID": {
+      "@type": "number",
+      "#text": "789318"
+    },
+    "CurrRoleOwner": "789294",
+    "CurrRoleOwnerId": {
+      "@type": "number",
+      "#text": "789294"
+    },
+    "CurrRoleRecordId": {
+      "@type": "number",
+      "#text": "866595"
+    },
+    "CurrStartDateAssignmentType": "2016-07-06",
+    "CurrEndDateAssignmentType": "2016-07-09",
+    "CurrStatusAccountRole": "NActive",
+    "CurrAssignmentTypeSource": "AM_ATS_Deputization",
+    "CurrRoleAssignor": "435594",
+    "CurrInstructor": "789318",
+    "CurrOriDirectorateID": "1662",
+    "CurrRoleAssignmentStatus": "AM_ASS_Assigned",
+    "CurrDeputisationComment": "BvB 06 JUly 2016 4PM",
+    "CurrAssignmentRoleDetail": "A61F2/01,A61F13/00,A61F2/02,A61F2/06,A61F2/07,A61F2/08,A61F2/24,A61F2/26,A61F2/28"
+  }
+}

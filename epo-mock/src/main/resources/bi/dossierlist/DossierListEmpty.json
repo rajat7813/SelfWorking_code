@@ -1,0 +1,12 @@
+{"SE36GetDossierList": [
+  {
+    "SE36_Result": "OK",
+    "SE36_Explanation": ""
+  },
+  {
+    "Total": "0",
+    "Page_Size": "15",
+    "Current_Page": "1",
+    "Total_Pages": "1"
+  }
+]}

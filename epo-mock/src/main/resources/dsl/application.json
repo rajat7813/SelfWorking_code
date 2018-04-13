@@ -1,0 +1,79 @@
+{
+  "_links": {
+    "family": {
+      "href": "{serviceUrl}/family/097243172"
+    },
+    "pre-publication": {
+      "href": "{serviceUrl}/pre-publication/{applicationRID}/{applicationNumber}"
+    },
+    "self": {
+      "href": "{serviceUrl}/application/{applicationRID}"
+    }
+  },
+  "id": "{applicationRID}",
+  "familyId": "097243172",
+  "number": {},
+  "_embedded": {
+    "pre-publication": {
+      "sequenceNumber": "{applicationNumber}",
+      "applicationNumber": "{applicationNumber}",
+      "applicationID": "{applicationRID}",
+      "_links": {
+        "self": {
+          "href": "{serviceUrl}/pre-publication/{applicationRID}/{applicationNumber}"
+        }
+      },
+      "id": "{applicationRID}/{applicationNumber}"
+    },
+    "publications": [
+      {
+        "title": "Procédé et appareil d'exécution des applications dans un dispositif tactile",
+        "sequenceNumber": "EP2725466A1",
+        "date": "2014-04-30",
+        "_links": {
+          "self": {
+            "href": "http://kimeapi-i.internal.epo.org/api/publication/416550933"
+          }
+        },
+        "id": "XX416550933",
+        "number": {
+          "CC": "EP",
+          "SN": "2725466",
+          "KC": "A1"
+        }
+      },
+      {
+        "title": "Difficulties of living in Russia",
+        "sequenceNumber": "EP2725466A2",
+        "date": "2014-05-30",
+        "_links": {
+          "self": {
+            "href": "http://kimeapi-i.internal.epo.org/api/publication/416550934"
+          }
+        },
+        "id": "416550934",
+        "number": {
+          "CC": "EP",
+          "SN": "2725467",
+          "KC": "A1"
+        }
+      },
+      {
+        "title": "Difficulties of living in Russia2",
+        "sequenceNumber": "EP2725466A2",
+        "date": "2014-05-30",
+        "_links": {
+          "self": {
+            "href": "http://kimeapi-i.internal.epo.org/api/publication/416550934"
+          }
+        },
+        "id": "WW416550935",
+        "number": {
+          "CC": "EP",
+          "SN": "2725467",
+          "KC": "A1"
+        }
+      }
+    ]
+  }
+}

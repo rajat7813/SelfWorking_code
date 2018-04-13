@@ -1,0 +1,9 @@
+{
+  "AM29GetAccountPermissions": [
+    {
+      "username": "EDOEX10@INTERNAL.EPO.ORG",
+      "rolename": "Stock Manager",
+      "permissions": "Stock Manager,accept_deputisation,allocation,re_allocation,re_distribution,technical_acceptance"
+    }
+  ]
+}

@@ -1,0 +1,7 @@
+{"TR01UpdateTrays": [{
+  "TR01_Result": "OK",
+  "TR01_Explanation": "",
+  "CaseID": "62599",
+  "Modules": "FOWorkmanager,Workmanager,eStore,Stockmanager,Director",
+  "refreshed": "false"
+}]}

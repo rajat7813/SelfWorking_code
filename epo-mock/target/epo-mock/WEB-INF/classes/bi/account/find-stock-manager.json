@@ -1,0 +1,615 @@
+{
+  "Find_Stock_Manager": {
+    "_links": {
+      "self": {
+        "href": "/AccountManagement/FindStockManager"
+      },
+      "api_doc": {
+        "href": "/api-docs/AccountManagement/FindStockManager"
+      }
+    },
+    "filter": [
+      {
+        "stringfilter": {
+          "param": "Class",
+          "label": "Class"
+        }
+      },
+      {
+        "stringfilter": {
+          "param": "Directorate",
+          "label": "Directorate"
+        }
+      },
+      {
+        "stringfilter": {
+          "param": "Directoratecode",
+          "label": "Directoratecode"
+        }
+      }
+    ],
+    "dynamicschema": {
+      "Role": [
+        {
+          "code": "AM_ARE_SeCaExpert",
+          "label": "SeCa Expert"
+        },
+        {
+          "code": "AM_ARE_StockManager",
+          "label": "Stock Manager"
+        },
+        {
+          "code": "AM_ARE_ParaTechnical",
+          "label": "PA admemp para-technical"
+        },
+        {
+          "code": "AM_ARE_FormalitiesOfficer",
+          "label": "Patent formalities officer"
+        },
+        {
+          "code": "AM_ARE_Examiner",
+          "label": "Examiner"
+        },
+        {
+          "code": "AM_ARE_Director",
+          "label": "PA dir"
+        },
+        {
+          "code": "AM_ARE_PAAdmempPatentFO",
+          "label": "PA admemp patent FO"
+        },
+        {
+          "code": "AM_ARE_PAExp",
+          "label": "PA exp"
+        },
+        {
+          "code": "AM_ARE_PAExpCO",
+          "label": "PA exp CO"
+        },
+        {
+          "code": "AM_ARE_PAHod",
+          "label": "PA hod"
+        },
+        {
+          "code": "AM_ARE_PAHos",
+          "label": "PA hos"
+        },
+        {
+          "code": "AM_ARE_PAPd",
+          "label": "PA pd"
+        },
+        {
+          "code": "AM_ARE_PEAdmempClassification",
+          "label": "PE admemp classification"
+        },
+        {
+          "code": "AM_ARE_PEAdmempPatentProcManage",
+          "label": "PE admemp patent proc manage"
+        },
+        {
+          "code": "AM_ARE_PEAdminOperationalDevelopment",
+          "label": "PE admin Operational development"
+        },
+        {
+          "code": "AM_ARE_PEAdminClassification",
+          "label": "PE admin classification"
+        },
+        {
+          "code": "AM_ARE_PEAdminPatentProcManage",
+          "label": "PE admin patent proc manage"
+        },
+        {
+          "code": "AM_ARE_PEDirOperationalDevelopment",
+          "label": "PE dir Operational development"
+        },
+        {
+          "code": "AM_ARE_PEDirOperations",
+          "label": "PE dir Operations"
+        },
+        {
+          "code": "AM_ARE_PEDirClassification",
+          "label": "PE dir classification"
+        },
+        {
+          "code": "AM_ARE_PEDirPatentProcManage",
+          "label": "PE dir patent proc manage"
+        },
+        {
+          "code": "AM_ARE_PEExaminer",
+          "label": "PE examiner"
+        },
+        {
+          "code": "AM_ARE_PESenexp",
+          "label": "PE senexp"
+        },
+        {
+          "code": "AM_ARE_PETmClassification",
+          "label": "PE tm classification"
+        },
+        {
+          "code": "AM_ARE_PETmOperations",
+          "label": "PE tm operations"
+        },
+        {
+          "code": "AM_ARE_PrincipalDirector",
+          "label": "Principal Director"
+        },
+        {
+          "code": "AM_ARE_BISystemUser",
+          "label": "BISystemUser"
+        }
+      ]
+    },
+    "paging": {
+      "totalresults": {
+        "@type": "number",
+        "#text": "19"
+      },
+      "pagesize": {
+        "param": "pagesize",
+        "currentpagesize": {
+          "@type": "number",
+          "#text": "25"
+        },
+        "option": [
+          {
+            "@type": "number",
+            "#text": "10"
+          },
+          {
+            "@type": "number",
+            "#text": "25"
+          },
+          {
+            "@type": "number",
+            "#text": "50"
+          }
+        ]
+      },
+      "param": "page",
+      "currentpage": {
+        "@type": "number",
+        "#text": "1"
+      },
+      "maxpages": {
+        "@type": "number",
+        "#text": "1"
+      }
+    },
+    "sorting": {
+      "param": "sort",
+      "option": [
+        "UserID",
+        "StockManager",
+        "eDossier",
+        "Phone",
+        "Site",
+        "Directorate",
+        "Class",
+        "Directoratecode"
+      ]
+    },
+    "_embedded": {
+      "results": [
+        {
+          "Find_Stock_Managers": {
+            "_id": {
+              "@type": "number",
+              "#text": "1"
+            },
+            "_links": {
+              "self": {
+                "href": "/AccountManagement/FindStockManager/1"
+              }
+            },
+            "UserID": "EDODI07",
+            "StockManager": "eDossier Test Director 07",
+            "eDossier": "t.b.d.",
+            "Phone": "t.b.d.",
+            "Site": "N/A",
+            "Role": "AM_ARE_PEDirOperations",
+            "Directorate": "Schölvinck",
+            "Directoratecode": "200",
+            "Class": null
+          }
+        },
+        {
+          "Find_Stock_Managers": {
+            "_id": {
+              "@type": "number",
+              "#text": "2"
+            },
+            "_links": {
+              "self": {
+                "href": "/AccountManagement/FindStockManager/2"
+              }
+            },
+            "UserID": "EDOEX02",
+            "StockManager": "eDossier Test Examiner 02",
+            "eDossier": "t.b.d.",
+            "Phone": "t.b.d.",
+            "Site": "N/A",
+            "Role": "AM_ARE_Examiner",
+            "Directorate": "Weiand",
+            "Directoratecode": "200",
+            "Class": "A61F1/00,A61F11/00,A61F9/00,A61F9/00772,A61F9/013,A61F9/02,A61G1/00,A61H1/00,A61J1/00"
+          }
+        },
+        {
+          "Find_Stock_Managers": {
+            "_id": {
+              "@type": "number",
+              "#text": "3"
+            },
+            "_links": {
+              "self": {
+                "href": "/AccountManagement/FindStockManager/3"
+              }
+            },
+            "UserID": "EDODI01",
+            "StockManager": "eDossier Test Director 01",
+            "eDossier": "t.b.d.",
+            "Phone": "t.b.d.",
+            "Site": "N/A",
+            "Role": "AM_ARE_PEDirOperations",
+            "Directorate": "Weiand",
+            "Directoratecode": "200",
+            "Class": null
+          }
+        },
+        {
+          "Find_Stock_Managers": {
+            "_id": {
+              "@type": "number",
+              "#text": "4"
+            },
+            "_links": {
+              "self": {
+                "href": "/AccountManagement/FindStockManager/4"
+              }
+            },
+            "UserID": "EDODI01",
+            "StockManager": "eDossier Test Director 01",
+            "eDossier": "t.b.d.",
+            "Phone": "t.b.d.",
+            "Site": "N/A",
+            "Role": "AM_ARE_PEDirOperations",
+            "Directorate": "Weiand",
+            "Directoratecode": "300",
+            "Class": null
+          }
+        },
+        {
+          "Find_Stock_Managers": {
+            "_id": {
+              "@type": "number",
+              "#text": "5"
+            },
+            "_links": {
+              "self": {
+                "href": "/AccountManagement/FindStockManager/5"
+              }
+            },
+            "UserID": "EDOEX01",
+            "StockManager": "eDossier Test Examiner 01",
+            "eDossier": "t.b.d.",
+            "Phone": "t.b.d.",
+            "Site": "N/A",
+            "Role": "AM_ARE_Examiner",
+            "Directorate": "Weiand",
+            "Directoratecode": "300",
+            "Class": "A61F1/00,A61F11/00,A61F9/00,A61F9/00772,A61F9/013,A61F9/02,A61G1/00,A61H1/00,A61J1/00"
+          }
+        },
+        {
+          "Find_Stock_Managers": {
+            "_id": {
+              "@type": "number",
+              "#text": "6"
+            },
+            "_links": {
+              "self": {
+                "href": "/AccountManagement/FindStockManager/6"
+              }
+            },
+            "UserID": "EDODI04",
+            "StockManager": "eDossier Test Director 04",
+            "eDossier": "t.b.d.",
+            "Phone": "t.b.d.",
+            "Site": "N/A",
+            "Role": "AM_ARE_PEDirOperations",
+            "Directorate": "Theodoropoulos",
+            "Directoratecode": "300",
+            "Class": null
+          }
+        },
+        {
+          "Find_Stock_Managers": {
+            "_id": {
+              "@type": "number",
+              "#text": "7"
+            },
+            "_links": {
+              "self": {
+                "href": "/AccountManagement/FindStockManager/7"
+              }
+            },
+            "UserID": "EDODI88",
+            "StockManager": "eDossier Test Director 88",
+            "eDossier": "t.b.d.",
+            "Phone": "t.b.d.",
+            "Site": "N/A",
+            "Role": "AM_ARE_PEDirOperations",
+            "Directorate": "Pille",
+            "Directoratecode": "400",
+            "Class": null
+          }
+        },
+        {
+          "Find_Stock_Managers": {
+            "_id": {
+              "@type": "number",
+              "#text": "8"
+            },
+            "_links": {
+              "self": {
+                "href": "/AccountManagement/FindStockManager/8"
+              }
+            },
+            "UserID": "EDODI06",
+            "StockManager": "eDossier Test Director 06",
+            "eDossier": "t.b.d.",
+            "Phone": "t.b.d.",
+            "Site": "N/A",
+            "Role": "AM_ARE_PEDirOperations",
+            "Directorate": "Pille",
+            "Directoratecode": "400",
+            "Class": null
+          }
+        },
+        {
+          "Find_Stock_Managers": {
+            "_id": {
+              "@type": "number",
+              "#text": "9"
+            },
+            "_links": {
+              "self": {
+                "href": "/AccountManagement/FindStockManager/9"
+              }
+            },
+            "UserID": "HL52713",
+            "StockManager": "Hans Lepelaar",
+            "eDossier": "t.b.d.",
+            "Phone": "t.b.d.",
+            "Site": "N/A",
+            "Role": "AM_ARE_Examiner",
+            "Directorate": "Pille",
+            "Directoratecode": "400",
+            "Class": null
+          }
+        },
+        {
+          "Find_Stock_Managers": {
+            "_id": {
+              "@type": "number",
+              "#text": "10"
+            },
+            "_links": {
+              "self": {
+                "href": "/AccountManagement/FindStockManager/10"
+              }
+            },
+            "UserID": "EDOEX11",
+            "StockManager": "Edo 11 Edoex11 eDossier Test Examiner",
+            "eDossier": "t.b.d.",
+            "Phone": "t.b.d.",
+            "Site": "N/A",
+            "Role": "AM_ARE_Examiner",
+            "Directorate": "Pille",
+            "Directoratecode": "400",
+            "Class": null
+          }
+        },
+        {
+          "Find_Stock_Managers": {
+            "_id": {
+              "@type": "number",
+              "#text": "11"
+            },
+            "_links": {
+              "self": {
+                "href": "/AccountManagement/FindStockManager/11"
+              }
+            },
+            "UserID": "EDOEX11",
+            "StockManager": "Edo 11 Edoex11 eDossier Test Examiner",
+            "eDossier": "t.b.d.",
+            "Phone": "t.b.d.",
+            "Site": "N/A",
+            "Role": "AM_ARE_Examiner",
+            "Directorate": "Pille",
+            "Directoratecode": "400",
+            "Class": "detail"
+          }
+        },
+        {
+          "Find_Stock_Managers": {
+            "_id": {
+              "@type": "number",
+              "#text": "12"
+            },
+            "_links": {
+              "self": {
+                "href": "/AccountManagement/FindStockManager/12"
+              }
+            },
+            "UserID": "JL52038",
+            "StockManager": "Jan Loele",
+            "eDossier": "t.b.d.",
+            "Phone": "t.b.d.",
+            "Site": "N/A",
+            "Role": "AM_ARE_Examiner",
+            "Directorate": "Pille",
+            "Directoratecode": "400",
+            "Class": null
+          }
+        },
+        {
+          "Find_Stock_Managers": {
+            "_id": {
+              "@type": "number",
+              "#text": "13"
+            },
+            "_links": {
+              "self": {
+                "href": "/AccountManagement/FindStockManager/13"
+              }
+            },
+            "UserID": "EDOEX10",
+            "StockManager": "EDO10 Test Examiner 10",
+            "eDossier": "t.b.d.",
+            "Phone": "t.b.d.",
+            "Site": "N/A",
+            "Role": "AM_ARE_Examiner\n AM_ARE_BISystemUser",
+            "Directorate": "Pille",
+            "Directoratecode": "400",
+            "Class": "A61F1/00,A61F11/00,A61F2/01,A61F2/02,A61F2/06,A61F2/07,A61F2/08,A61F2/24,A61F2/26"
+          }
+        },
+        {
+          "Find_Stock_Managers": {
+            "_id": {
+              "@type": "number",
+              "#text": "14"
+            },
+            "_links": {
+              "self": {
+                "href": "/AccountManagement/FindStockManager/14"
+              }
+            },
+            "UserID": "EDOEX12",
+            "StockManager": "Edo12 Edoex12 Testuser eDfS",
+            "eDossier": "t.b.d.",
+            "Phone": "t.b.d.",
+            "Site": "N/A",
+            "Role": "AM_ARE_Examiner",
+            "Directorate": "Pille",
+            "Directoratecode": "400",
+            "Class": null
+          }
+        },
+        {
+          "Find_Stock_Managers": {
+            "_id": {
+              "@type": "number",
+              "#text": "15"
+            },
+            "_links": {
+              "self": {
+                "href": "/AccountManagement/FindStockManager/15"
+              }
+            },
+            "UserID": "EDOEX12",
+            "StockManager": "Edo12 Edoex12 Testuser eDfS",
+            "eDossier": "t.b.d.",
+            "Phone": "t.b.d.",
+            "Site": "N/A",
+            "Role": "AM_ARE_Examiner",
+            "Directorate": "Pille",
+            "Directoratecode": "400",
+            "Class": null
+          }
+        },
+        {
+          "Find_Stock_Managers": {
+            "_id": {
+              "@type": "number",
+              "#text": "16"
+            },
+            "_links": {
+              "self": {
+                "href": "/AccountManagement/FindStockManager/16"
+              }
+            },
+            "UserID": "EDOEX06",
+            "StockManager": "eDossier Test Examiner 06",
+            "eDossier": "t.b.d.",
+            "Phone": "t.b.d.",
+            "Site": "N/A",
+            "Role": "AM_ARE_Examiner",
+            "Directorate": "Pille",
+            "Directoratecode": "400",
+            "Class": "A61F2/01,A61F13/00,A61F2/02,A61F2/07,A61F2/08,A61F2/24,A61F2/26,A61F2/28,A61F2/95,A61F3/00,A61F9/00736,A61F9/0079,A61F9/02,A61F11/00,A61M5/00,A61M25/00,A61N1/00,A61M11/00,A61F9/007"
+          }
+        },
+        {
+          "Find_Stock_Managers": {
+            "_id": {
+              "@type": "number",
+              "#text": "17"
+            },
+            "_links": {
+              "self": {
+                "href": "/AccountManagement/FindStockManager/17"
+              }
+            },
+            "UserID": "EDODI08",
+            "StockManager": "eDossier Test Director 08",
+            "eDossier": "t.b.d.",
+            "Phone": "t.b.d.",
+            "Site": "N/A",
+            "Role": "AM_ARE_PEDirOperations",
+            "Directorate": "Thormählen",
+            "Directoratecode": "400",
+            "Class": null
+          }
+        },
+        {
+          "Find_Stock_Managers": {
+            "_id": {
+              "@type": "number",
+              "#text": "18"
+            },
+            "_links": {
+              "self": {
+                "href": "/AccountManagement/FindStockManager/18"
+              }
+            },
+            "UserID": "EDODI03",
+            "StockManager": "eDossier Test Director 03",
+            "eDossier": "t.b.d.",
+            "Phone": "t.b.d.",
+            "Site": "N/A",
+            "Role": "AM_ARE_PEDirOperations",
+            "Directorate": "Deutsch",
+            "Directoratecode": "200",
+            "Class": null
+          }
+        },
+        {
+          "Find_Stock_Managers": {
+            "_id": {
+              "@type": "number",
+              "#text": "19"
+            },
+            "_links": {
+              "self": {
+                "href": "/AccountManagement/FindStockManager/19"
+              }
+            },
+            "UserID": "EDOEX16",
+            "StockManager": "eDossier Test Examiner 16",
+            "eDossier": "t.b.d.",
+            "Phone": "t.b.d.",
+            "Site": "N/A",
+            "Role": "AM_ARE_Examiner",
+            "Directorate": "Deutsch",
+            "Directoratecode": "200",
+            "Class": "A47B1/00, A47C1/00"
+          }
+        }
+      ]
+    }
+  }
+}

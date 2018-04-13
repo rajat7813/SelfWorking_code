@@ -1,0 +1,315 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<teiCorpus subtype="simple" type="patentFamily">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <bibl subtype="simple" type="patentFamily">
+                    <idno type="familyId">035395621</idno>
+                </bibl>
+            </titleStmt>
+        </fileDesc>
+    </teiHeader>
+    <teiCorpus type="application">
+        <teiHeader>
+            <fileDesc>
+                <titleStmt>
+                    <bibl type="application">
+                        <idno notation="docdb" type="docNumber">11156677</idno>
+                        <authority>
+                            <orgName type="regional">EP</orgName>
+                        </authority>
+                        <classCode scheme="kindCode">A</classCode>
+                        <date type="dateOfFiling" when="2006-09-26"/>
+                        <idno notation="docdb" type="docId">332381791</idno>
+                        <idno notation="original" type="docNumber">EP 11 156 677.4</idno>
+                    </bibl>
+                </titleStmt>
+            </fileDesc>
+        </teiHeader>
+        <TEI availability="confidential" type="applicationDocument">
+            <teiHeader>
+                <fileDesc>
+                    <publicationStmt>
+                        <listPlace type="designationOfStates">
+                            <listPlace type="designationEPC">
+                                <place type="contractingStates">
+                                    <country>AT</country>
+                                    <country>BE</country>
+                                    <country>BG</country>
+                                    <country>CH</country>
+                                    <country>CY</country>
+                                    <country>CZ</country>
+                                    <country>DE</country>
+                                    <country>DK</country>
+                                    <country>EE</country>
+                                    <country>ES</country>
+                                    <country>FI</country>
+                                    <country>FR</country>
+                                    <country>GB</country>
+                                    <country>GR</country>
+                                    <country>HU</country>
+                                    <country>IE</country>
+                                    <country>IS</country>
+                                    <country>IT</country>
+                                    <country>LI</country>
+                                    <country>LT</country>
+                                    <country>LU</country>
+                                    <country>LV</country>
+                                    <country>MC</country>
+                                    <country>NL</country>
+                                    <country>PL</country>
+                                    <country>PT</country>
+                                    <country>RO</country>
+                                    <country>SE</country>
+                                    <country>SI</country>
+                                    <country>SK</country>
+                                    <country>TR</country>
+                                </place>
+                            </listPlace>
+                        </listPlace>
+                    </publicationStmt>
+                    <noteStmt>
+                        <note corresp="192c1a45036e4b794ef6712632dc1ba8" type="abstract_information">
+                            <idno type="lang">en</idno>
+                        </note>
+                    </noteStmt>
+                    <sourceDesc>
+                        <listBibl type="doublures">
+                            <bibl type="application">
+                                <authority>
+                                    <orgName type="regional">EP</orgName>
+                                </authority>
+                                <idno notation="docdb" type="docNumber">05020948</idno>
+                                <classCode scheme="kindCode">A</classCode>
+                                <date when="2005-09-26"/>
+                            </bibl>
+                            <bibl type="application">
+                                <authority>
+                                    <orgName type="regional">EP</orgName>
+                                </authority>
+                                <idno notation="docdb" type="docNumber">10182770</idno>
+                                <classCode scheme="kindCode">A</classCode>
+                                <date when="2006-09-26"/>
+                            </bibl>
+                            <bibl type="application">
+                                <authority>
+                                    <orgName type="regional">EP</orgName>
+                                </authority>
+                                <idno notation="docdb" type="docNumber">10182778</idno>
+                                <classCode scheme="kindCode">A</classCode>
+                                <date when="2006-09-26"/>
+                            </bibl>
+                            <bibl type="application">
+                                <authority>
+                                    <orgName type="regional">EP</orgName>
+                                </authority>
+                                <idno notation="docdb" type="docNumber">10182788</idno>
+                                <classCode scheme="kindCode">A</classCode>
+                                <date when="2006-09-26"/>
+                            </bibl>
+                            <bibl type="application">
+                                <authority>
+                                    <orgName type="regional">EP</orgName>
+                                </authority>
+                                <idno notation="docdb" type="docNumber">2006066759</idno>
+                                <classCode scheme="kindCode">W</classCode>
+                                <date when="2006-09-26"/>
+                            </bibl>
+                            <bibl type="application">
+                                <authority>
+                                    <orgName type="regional">EP</orgName>
+                                </authority>
+                                <idno notation="docdb" type="docNumber">2006066763</idno>
+                                <classCode scheme="kindCode">W</classCode>
+                                <date when="2006-09-26"/>
+                            </bibl>
+                            <bibl type="application">
+                                <authority>
+                                    <orgName type="regional">EP</orgName>
+                                </authority>
+                                <idno notation="docdb" type="docNumber">06012325</idno>
+                                <classCode scheme="kindCode">A</classCode>
+                                <date when="2006-06-14"/>
+                            </bibl>
+                            <bibl type="application">
+                                <authority>
+                                    <orgName type="regional">EP</orgName>
+                                </authority>
+                                <idno notation="docdb" type="docNumber">11156676</idno>
+                                <classCode scheme="kindCode">A</classCode>
+                                <date when="2006-09-26"/>
+                            </bibl>
+                            <bibl type="application">
+                                <authority>
+                                    <orgName type="regional">EP</orgName>
+                                </authority>
+                                <idno notation="docdb" type="docNumber">11156679</idno>
+                                <classCode scheme="kindCode">A</classCode>
+                                <date when="2006-09-26"/>
+                            </bibl>
+                            <bibl type="application">
+                                <authority>
+                                    <orgName type="regional">EP</orgName>
+                                </authority>
+                                <idno notation="docdb" type="docNumber">10182755</idno>
+                                <classCode scheme="kindCode">A</classCode>
+                                <date when="2006-09-26"/>
+                            </bibl>
+                        </listBibl>
+                        <listBibl type="priorityClaims">
+                            <bibl type="application">
+                                <authority>
+                                    <orgName type="regional">EP</orgName>
+                                </authority>
+                                <date when="2005-09-26"/>
+                                <idno notation="docdb" type="docNumber">05020948</idno>
+                                <classCode scheme="kindCode">A</classCode>
+                                <idno notation="dnum" type="docNumber">EPA    05020948</idno>
+                                <idno notation="original" type="docNumber">05020948.5</idno>
+                            </bibl>
+                        </listBibl>
+                        <listBibl type="divisionals">
+                            <bibl status="oldestParent" type="application">
+                                <authority>
+                                    <orgName type="regional">EP</orgName>
+                                </authority>
+                                <idno notation="docdb" type="docNumber">06806837</idno>
+                                <classCode scheme="kindCode">A</classCode>
+                                <date type="dateOfFiling" when="2006-09-26"/>
+                            </bibl>
+                        </listBibl>
+                    </sourceDesc>
+                    <titleStmt>
+                        <funder role="applicant">
+                            <name notation="unknown">Qiagen GmbH</name>
+                            <address type="adrStruct">
+                                <addrLine>IP&amp;L
+Qiagen Str. 1, 40724 Hilden</addrLine>
+                                <country type="national">DE</country>
+                            </address>
+                        </funder>
+                        <funder role="applicant">
+                            <name notation="unknown">WILLIAMSON, Alexander, S.</name>
+                            <address type="adrStruct">
+                                <addrLine>14601 Bobcat Court, Leo, IN 46765</addrLine>
+                                <country type="national">US</country>
+                            </address>
+                        </funder>
+                        <funder role="applicant">
+                            <name notation="unknown">GUTMANN, Christian</name>
+                        </funder>
+                        <funder role="applicant">
+                            <name notation="unknown">PARSONS, Mark</name>
+                        </funder>
+                        <title notation="docdba" type="invention" xml:id="_f46f46" xml:lang="en">Method for processing a fluid and fluid processing device</title>
+                        <title notation="docdba" type="invention" xml:id="_c3a020" xml:lang="de">Verfahren und Vorrichtung zur Behandlung eines Fluids</title>
+                        <title notation="docdba" type="invention" xml:id="_88422c" xml:lang="fr">Procédé et dispositif pour le traitement d'un fluide</title>
+                        <title type="procedural" xml:id="_f46f46" xml:lang="en">Method for processing a fluid and fluid processing device</title>
+                        <author role="inventor">
+                            <persName notation="unknown">Schäfer, Andreas</persName>
+                            <address type="adrStruct">
+                                <addrLine>QIAGEN GmbH@QIAGEN Str. 1, 40724 Hilden</addrLine>
+                                <country type="national">DE</country>
+                            </address>
+                        </author>
+                        <author role="inventor">
+                            <persName notation="unknown">Voit, Thomas</persName>
+                            <address type="adrStruct">
+                                <addrLine>QIAGEN GmbH@QIAGEN Str. 1, 40724 Hilden</addrLine>
+                                <country type="national">DE</country>
+                            </address>
+                        </author>
+                        <author role="inventor">
+                            <persName notation="unknown">Zbinden, Markus</persName>
+                            <address type="adrStruct">
+                                <addrLine>@Silberbachstr. 9a, 9032 Engelburg</addrLine>
+                                <country type="national">CH</country>
+                            </address>
+                        </author>
+                        <author role="inventor">
+                            <persName notation="unknown">Schmiede, Andreas</persName>
+                            <address type="adrStruct">
+                                <addrLine>@Diestelweg 15, 42929 Wermelskirchen</addrLine>
+                                <country type="national">DE</country>
+                            </address>
+                        </author>
+                        <editor role="representative">
+                            <address type="adrTotal">
+                                Vossius &amp; Partner
+                                <lb/>
+                                Patentanwälte Rechtsanwälte mbB
+                                <lb/>
+                                Siebertstrasse test 1
+                                <lb/>
+                                81675 München
+                            </address>
+                        </editor>
+                    </titleStmt>
+                </fileDesc>
+                <profileDesc>
+                    <langUsage type="filingLanguage">
+                        <language ident="en"/>
+                    </langUsage>
+                    <textClass>
+                        <classCode scheme="ipc" type="mainClassification">
+                            <ident type="classificationSymbol">B04B5/04</ident>
+                        </classCode>
+                        <classCode scheme="ipc" type="mainClassification">
+                            <ident type="classificationSymbol">G01N35/00</ident>
+                        </classCode>
+                        <classCode scheme="ipc" type="mainClassification">
+                            <ident type="classificationSymbol">B01L3/06</ident>
+                        </classCode>
+                        <classCode scheme="cpc" type="Pre Class">
+                            <ident type="classificationSymbol">B01L4/04</ident>
+                        </classCode>
+                        <classCode scheme="cpc" type="Directorate">
+                            <ident type="classificationSymbol">B05L2/02</ident>
+                        </classCode>
+                        <classCode scheme="cpc" type="Directorate">
+                            <ident type="classificationSymbol">B07L7/07</ident>
+                        </classCode>
+                        <classCode scheme="cpc" type="Pre Class">
+                            <ident type="classificationSymbol">B08L8/07</ident>
+                        </classCode>
+                        <classCode scheme="cpc" type="Pre Class">
+                            <ident type="classificationSymbol">B09L7/07</ident>
+                        </classCode>
+                        <classCode scheme="undetermined" type="preClassification">
+                            <ident type="classificationSymbol">B04B5/0421</ident>
+                        </classCode>
+                    </textClass>
+                </profileDesc>
+                <revisionDesc>
+                    <listChange>
+                        <change when="2011-04-08" xml:id="_f46f46"/>
+                        <change when="2011-06-06" xml:id="_c3a020"/>
+                        <change when="2011-06-06" xml:id="_88422c"/>
+                    </listChange>
+                </revisionDesc>
+                <creation>
+                    <listChange>
+                        <change xml:id="192c1a45036e4b794ef6712632dc1ba8">
+                            <date type="dateProduced">20110302</date>
+                            <orgName type="supplier">JOUVE</orgName>
+                            <idno type="formatSubtype">ST36XOCR</idno>
+                            <idno type="qualityLevel">02</idno>
+                            <language ident="EN"/>
+                            <idno type="section">A</idno>
+                        </change>
+                    </listChange>
+                </creation>
+            </teiHeader>
+            <text>
+                <front>
+                    <div change="192c1a45036e4b794ef6712632dc1ba8" facs="./ERFZ0XN39787FI4" type="abstract" xml:id="e3161c7db5cfddf62bd5b4e1cf5335e3" xml:lang="en">
+                        <p n="0001" xml:id="_dc1ba80002">The present invention relates to improved methods for processing fluids and to a fluid processing device (1) for use in a centrifuge comprising: With the fluid processing devices and the methods according to the invention, it is possible to simplify the centrifugal processing steps for a given fluid processing sequence and to automate them.</p>
+                    </div>
+                    <div type="abstractFigures">
+                        <figure n="14a" resp="#applicant" sortKey="1"/>
+                    </div>
+                </front>
+            </text>
+        </TEI>
+    </teiCorpus>
+</teiCorpus>

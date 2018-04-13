@@ -1,0 +1,3497 @@
+{
+  "Autosuggestion_config":{
+    "_links":{
+      "self":{
+        "href":"/AccountManagement/AutosuggestionConfig"
+      },
+      "api_doc":{
+        "href":"/api-docs/AccountManagement/AutosuggestionConfig"
+      }
+    },
+    "filter":[
+      {
+        "stringfilter":{
+          "param":"Directorate",
+          "label":"Directorate",
+          "value":"1655"
+        }
+      },
+      {
+        "choicefilter":{
+          "param":"Team",
+          "label":"Team",
+          "options":[
+            {
+              "key":"50018",
+              "count":{
+                "@type":"number",
+                "#text":"0"
+              },
+              "label":"Team Test 2 (1407)"
+            },
+            {
+              "key":"50025",
+              "count":{
+                "@type":"number",
+                "#text":"0"
+              },
+              "label":"Team test 3 (1409)"
+            },
+            {
+              "key":"50039",
+              "count":{
+                "@type":"number",
+                "#text":"0"
+              },
+              "label":"Team Test (1407)"
+            },
+            {
+              "key":"50078",
+              "count":{
+                "@type":"number",
+                "#text":"0"
+              },
+              "label":"1954 TEAM 3 G06F11, G0F17/50"
+            },
+            {
+              "key":"50081",
+              "count":{
+                "@type":"number",
+                "#text":"0"
+              },
+              "label":"1660 TEAM OPTICAL DIAGNOSIS"
+            },
+            {
+              "key":"50089",
+              "count":{
+                "@type":"number",
+                "#text":"0"
+              },
+              "label":"1851 TEAM H04L5"
+            },
+            {
+              "key":"50093",
+              "count":{
+                "@type":"number",
+                "#text":"0"
+              },
+              "label":"1808 TEAM H05B"
+            },
+            {
+              "key":"50094",
+              "count":{
+                "@type":"number",
+                "#text":"0"
+              },
+              "label":"1808 TEAM H01H-A"
+            },
+            {
+              "key":"50095",
+              "count":{
+                "@type":"number",
+                "#text":"0"
+              },
+              "label":"1901 TEAM G10L"
+            },
+            {
+              "key":"50099",
+              "count":{
+                "@type":"number",
+                "#text":"0"
+              },
+              "label":"1874 TEAM OPTICAL COMMUNICATION"
+            },
+            {
+              "key":"50100",
+              "count":{
+                "@type":"number",
+                "#text":"0"
+              },
+              "label":"1901 TEAM G06K9_S"
+            },
+            {
+              "key":"50101",
+              "count":{
+                "@type":"number",
+                "#text":"0"
+              },
+              "label":"1954 TEAM 2 G06F8/9"
+            },
+            {
+              "key":"50102",
+              "count":{
+                "@type":"number",
+                "#text":"0"
+              },
+              "label":"1901 TEAM H04RS"
+            },
+            {
+              "key":"50103",
+              "count":{
+                "@type":"number",
+                "#text":"0"
+              },
+              "label":"1901 TEAM G06K9_G"
+            },
+            {
+              "key":"50121",
+              "count":{
+                "@type":"number",
+                "#text":"0"
+              },
+              "label":"1652 TEAM ELECTROTHERAPY"
+            },
+            {
+              "key":"50122",
+              "count":{
+                "@type":"number",
+                "#text":"0"
+              },
+              "label":"1660 TEAM DIAGNOSTIC IMAGING"
+            },
+            {
+              "key":"50123",
+              "count":{
+                "@type":"number",
+                "#text":"0"
+              },
+              "label":"1652 TEAM ELECTROTHERAPY&ELECTROSURGERY"
+            },
+            {
+              "key":"50124",
+              "count":{
+                "@type":"number",
+                "#text":"0"
+              },
+              "label":"1652 TEAM RADIATION&LASER THERAPY"
+            },
+            {
+              "key":"50127",
+              "count":{
+                "@type":"number",
+                "#text":"0"
+              },
+              "label":"1754 TEAM AEROSPACE, SHIPS (B64, B63)"
+            },
+            {
+              "key":"50128",
+              "count":{
+                "@type":"number",
+                "#text":"0"
+              },
+              "label":"1754 TEAM SEATS, RAILWAYS (B60N, B61)"
+            },
+            {
+              "key":"50129",
+              "count":{
+                "@type":"number",
+                "#text":"0"
+              },
+              "label":"1703 Team Physical Operations"
+            },
+            {
+              "key":"50131",
+              "count":{
+                "@type":"number",
+                "#text":"0"
+              },
+              "label":"1703 TEAM PLASTICS & PROCESSES"
+            },
+            {
+              "key":"50132",
+              "count":{
+                "@type":"number",
+                "#text":"0"
+              },
+              "label":"1804 TEAM 01 H02J"
+            },
+            {
+              "key":"50134",
+              "count":{
+                "@type":"number",
+                "#text":"0"
+              },
+              "label":"1808 TEAM H01H-B"
+            },
+            {
+              "key":"50136",
+              "count":{
+                "@type":"number",
+                "#text":"0"
+              },
+              "label":"1754 TEAM PIPES, HYDRAULICS (F16L, F15B)"
+            },
+            {
+              "key":"50143",
+              "count":{
+                "@type":"number",
+                "#text":"0"
+              },
+              "label":"1559 TEAM INVESTIG.MATERIAL PROPERTIES"
+            },
+            {
+              "key":"50155",
+              "count":{
+                "@type":"number",
+                "#text":"0"
+              },
+              "label":"TEAM FILTER/MEMBRANE (1370)"
+            },
+            {
+              "key":"50158",
+              "count":{
+                "@type":"number",
+                "#text":"0"
+              },
+              "label":"1410 TEAM 1 GENES&PEPTIDES"
+            },
+            {
+              "key":"50161",
+              "count":{
+                "@type":"number",
+                "#text":"0"
+              },
+              "label":"TEAM STERILISATION/DISINFECTION (1370)"
+            },
+            {
+              "key":"50163",
+              "count":{
+                "@type":"number",
+                "#text":"0"
+              },
+              "label":"TEAM FLUID SEPARATION (1370)"
+            },
+            {
+              "key":"50165",
+              "count":{
+                "@type":"number",
+                "#text":"0"
+              },
+              "label":"1504 TEAM 2 SOLAR CELLS"
+            },
+            {
+              "key":"50168",
+              "count":{
+                "@type":"number",
+                "#text":"0"
+              },
+              "label":"1556 TEAM MAGNETICS H01F"
+            },
+            {
+              "key":"50170",
+              "count":{
+                "@type":"number",
+                "#text":"0"
+              },
+              "label":"1504 TEAM OPTICS"
+            },
+            {
+              "key":"50171",
+              "count":{
+                "@type":"number",
+                "#text":"0"
+              },
+              "label":"1504 TEAM 1 SOLAR CELLS"
+            },
+            {
+              "key":"50173",
+              "count":{
+                "@type":"number",
+                "#text":"0"
+              },
+              "label":"1559 TEAM GEOPHYSICS"
+            },
+            {
+              "key":"50174",
+              "count":{
+                "@type":"number",
+                "#text":"0"
+              },
+              "label":"1559 TEAM RADIATION DETECTION&HOROLOGY"
+            },
+            {
+              "key":"50193",
+              "count":{
+                "@type":"number",
+                "#text":"0"
+              },
+              "label":"Team Polyolefins (1377)"
+            },
+            {
+              "key":"50217",
+              "count":{
+                "@type":"number",
+                "#text":"0"
+              },
+              "label":"1954 TEAM 1 G06F8/9"
+            },
+            {
+              "key":"50219",
+              "count":{
+                "@type":"number",
+                "#text":"0"
+              },
+              "label":"1851 TEAM H04L1JMQ"
+            },
+            {
+              "key":"50265",
+              "count":{
+                "@type":"number",
+                "#text":"0"
+              },
+              "label":"Team 1 of 1651"
+            },
+            {
+              "key":"50273",
+              "count":{
+                "@type":"number",
+                "#text":"0"
+              },
+              "label":"Team 2 of 1659"
+            },
+            {
+              "key":"50275",
+              "count":{
+                "@type":"number",
+                "#text":"0"
+              },
+              "label":"Team 2 of 1656"
+            },
+            {
+              "key":"50278",
+              "count":{
+                "@type":"number",
+                "#text":"0"
+              },
+              "label":"Team 1 of 1653"
+            },
+            {
+              "key":"50280",
+              "count":{
+                "@type":"number",
+                "#text":"0"
+              },
+              "label":"Team 1 of 1657"
+            },
+            {
+              "key":"50281",
+              "count":{
+                "@type":"number",
+                "#text":"0"
+              },
+              "label":"Team 1 of 1603"
+            },
+            {
+              "key":"50284",
+              "count":{
+                "@type":"number",
+                "#text":"0"
+              },
+              "label":"Team 2 of 1651"
+            },
+            {
+              "key":"50288",
+              "count":{
+                "@type":"number",
+                "#text":"5"
+              },
+              "label":"Team 1 of 1655"
+            },
+            {
+              "key":"50292",
+              "count":{
+                "@type":"number",
+                "#text":"0"
+              },
+              "label":"Team 1 of 1659"
+            },
+            {
+              "key":"50294",
+              "count":{
+                "@type":"number",
+                "#text":"0"
+              },
+              "label":"Team 1 of 1656"
+            },
+            {
+              "key":"50369",
+              "count":{
+                "@type":"number",
+                "#text":"0"
+              },
+              "label":"TMA Inhalation (1664)"
+            },
+            {
+              "key":"50374",
+              "count":{
+                "@type":"number",
+                "#text":"0"
+              },
+              "label":"TMA Soft prothesis (1664)"
+            },
+            {
+              "key":"50377",
+              "count":{
+                "@type":"number",
+                "#text":"0"
+              },
+              "label":"TMA Prothetics and biopsy (1664)"
+            },
+            {
+              "key":"50379",
+              "count":{
+                "@type":"number",
+                "#text":"0"
+              },
+              "label":"TMA Medical injection (1664)"
+            },
+            {
+              "key":"50380",
+              "count":{
+                "@type":"number",
+                "#text":"0"
+              },
+              "label":"TMA Agriculture (1656)"
+            },
+            {
+              "key":"50381",
+              "count":{
+                "@type":"number",
+                "#text":"0"
+              },
+              "label":"Team Tobac&Handheld-cutting tools (1656)"
+            },
+            {
+              "key":"50382",
+              "count":{
+                "@type":"number",
+                "#text":"0"
+              },
+              "label":"TMA Kitchen equip, Machines Food (1656)"
+            },
+            {
+              "key":"50386",
+              "count":{
+                "@type":"number",
+                "#text":"0"
+              },
+              "label":"TMA Surgery IB (1664)"
+            },
+            {
+              "key":"50388",
+              "count":{
+                "@type":"number",
+                "#text":"0"
+              },
+              "label":"TMA Surgery III (1664)"
+            },
+            {
+              "key":"50389",
+              "count":{
+                "@type":"number",
+                "#text":"0"
+              },
+              "label":"1754 Team Aerospace, Valves (B64,F16K)"
+            },
+            {
+              "key":"50393",
+              "count":{
+                "@type":"number",
+                "#text":"0"
+              },
+              "label":"TMA Surgery IA (1664)"
+            },
+            {
+              "key":"50395",
+              "count":{
+                "@type":"number",
+                "#text":"0"
+              },
+              "label":"TMA Fin work, spec doors&windows (1614)"
+            },
+            {
+              "key":"50398",
+              "count":{
+                "@type":"number",
+                "#text":"10"
+              },
+              "label":"TMA Agriculture 1 (1655)"
+            },
+            {
+              "key":"50401",
+              "count":{
+                "@type":"number",
+                "#text":"8"
+              },
+              "label":"TMA Agriculture 2 (1655)"
+            },
+            {
+              "key":"50404",
+              "count":{
+                "@type":"number",
+                "#text":"0"
+              },
+              "label":"Team Travel equipment/ Cosmetics (1653)"
+            },
+            {
+              "key":"50407",
+              "count":{
+                "@type":"number",
+                "#text":"0"
+              },
+              "label":"TMA Chairs, beds, upholstery (1653)"
+            },
+            {
+              "key":"50411",
+              "count":{
+                "@type":"number",
+                "#text":"5"
+              },
+              "label":"TMA Footwear (1655)"
+            },
+            {
+              "key":"50412",
+              "count":{
+                "@type":"number",
+                "#text":"8"
+              },
+              "label":"TMA Defence (1655)"
+            },
+            {
+              "key":"50413",
+              "count":{
+                "@type":"number",
+                "#text":"0"
+              },
+              "label":"TMA Drilling and Mining (1614)"
+            },
+            {
+              "key":"50414",
+              "count":{
+                "@type":"number",
+                "#text":"0"
+              },
+              "label":"TMA Tables, Office & Shop furnit (1653)"
+            },
+            {
+              "key":"50416",
+              "count":{
+                "@type":"number",
+                "#text":"0"
+              },
+              "label":"TMA Fermentation Processes (1501)"
+            },
+            {
+              "key":"50417",
+              "count":{
+                "@type":"number",
+                "#text":"0"
+              },
+              "label":"TMA Piston and Membrane Pumps (1616)"
+            },
+            {
+              "key":"50419",
+              "count":{
+                "@type":"number",
+                "#text":"0"
+              },
+              "label":"TMA Rotary and Other Pumps (1616)"
+            },
+            {
+              "key":"50420",
+              "count":{
+                "@type":"number",
+                "#text":"0"
+              },
+              "label":"TMA Intake (1616)"
+            },
+            {
+              "key":"50421",
+              "count":{
+                "@type":"number",
+                "#text":"0"
+              },
+              "label":"Team Exhaust (1616)"
+            },
+            {
+              "key":"50422",
+              "count":{
+                "@type":"number",
+                "#text":"0"
+              },
+              "label":"TMA Drilling, Mining and Foundat (1614)"
+            },
+            {
+              "key":"50424",
+              "count":{
+                "@type":"number",
+                "#text":"0"
+              },
+              "label":"TMA Road, Railways and Build elem(1614)"
+            },
+            {
+              "key":"50426",
+              "count":{
+                "@type":"number",
+                "#text":"0"
+              },
+              "label":"TMA Constr partic purp & hydrolo (1614)"
+            },
+            {
+              "key":"50427",
+              "count":{
+                "@type":"number",
+                "#text":"0"
+              },
+              "label":"TMA Eng Mech,Eng Cool,Start,Ignit(1616)"
+            },
+            {
+              "key":"50428",
+              "count":{
+                "@type":"number",
+                "#text":"0"
+              },
+              "label":"TMA 2nd Medical Use TH (1453)"
+            },
+            {
+              "key":"50429",
+              "count":{
+                "@type":"number",
+                "#text":"0"
+              },
+              "label":"Team Textiles (1377)"
+            },
+            {
+              "key":"50430",
+              "count":{
+                "@type":"number",
+                "#text":"0"
+              },
+              "label":"TMA Laminates (1377)"
+            },
+            {
+              "key":"50431",
+              "count":{
+                "@type":"number",
+                "#text":"0"
+              },
+              "label":"TMA Galenics The Hague (1455)"
+            },
+            {
+              "key":"50432",
+              "count":{
+                "@type":"number",
+                "#text":"0"
+              },
+              "label":"TMA Target Drugs&Short Peptides (1453)"
+            },
+            {
+              "key":"50433",
+              "count":{
+                "@type":"number",
+                "#text":"0"
+              },
+              "label":"TMA Biomaterials (1455)"
+            },
+            {
+              "key":"50434",
+              "count":{
+                "@type":"number",
+                "#text":"0"
+              },
+              "label":"Team Lemon Cosmetics (1468)"
+            },
+            {
+              "key":"50435",
+              "count":{
+                "@type":"number",
+                "#text":"0"
+              },
+              "label":"TMA Olive Galenics (1468)"
+            },
+            {
+              "key":"50436",
+              "count":{
+                "@type":"number",
+                "#text":"0"
+              },
+              "label":"Team Amber Cosmetics (1468)"
+            },
+            {
+              "key":"50437",
+              "count":{
+                "@type":"number",
+                "#text":"0"
+              },
+              "label":"TMA Ivory Cosmetics"
+            },
+            {
+              "key":"50440",
+              "count":{
+                "@type":"number",
+                "#text":"0"
+              },
+              "label":"Team FO-PS-EP"
+            },
+            {
+              "key":"50458",
+              "count":{
+                "@type":"number",
+                "#text":"0"
+              },
+              "label":"TMA Sec-5 Business Security (1870)"
+            },
+            {
+              "key":"50460",
+              "count":{
+                "@type":"number",
+                "#text":"0"
+              },
+              "label":"TMA Sec-6 Loc Based Services&Sec (1870)"
+            },
+            {
+              "key":"50462",
+              "count":{
+                "@type":"number",
+                "#text":"0"
+              },
+              "label":"TMA Sec-3 Gov&Medic Data Security(1870)"
+            },
+            {
+              "key":"50463",
+              "count":{
+                "@type":"number",
+                "#text":"0"
+              },
+              "label":"TMA Sec-4 Security Foundations (1870)"
+            },
+            {
+              "key":"50464",
+              "count":{
+                "@type":"number",
+                "#text":"0"
+              },
+              "label":"Team Sec-7 Applic sec&Trust Managt(1870)"
+            },
+            {
+              "key":"50465",
+              "count":{
+                "@type":"number",
+                "#text":"0"
+              },
+              "label":"TMA Sec-8 Protocol Security (1870)"
+            },
+            {
+              "key":"50466",
+              "count":{
+                "@type":"number",
+                "#text":"0"
+              },
+              "label":"TMA G10H&L (1914)"
+            },
+            {
+              "key":"50467",
+              "count":{
+                "@type":"number",
+                "#text":"0"
+              },
+              "label":"TMA H04RS (1914)"
+            },
+            {
+              "key":"50468",
+              "count":{
+                "@type":"number",
+                "#text":"0"
+              },
+              "label":"TMA G02F (1914)"
+            },
+            {
+              "key":"50469",
+              "count":{
+                "@type":"number",
+                "#text":"0"
+              },
+              "label":"TMA G09G (1914)"
+            },
+            {
+              "key":"50470",
+              "count":{
+                "@type":"number",
+                "#text":"0"
+              },
+              "label":"TMA 7 (1879)"
+            },
+            {
+              "key":"50472",
+              "count":{
+                "@type":"number",
+                "#text":"0"
+              },
+              "label":"TMA 5 (1879)"
+            },
+            {
+              "key":"50473",
+              "count":{
+                "@type":"number",
+                "#text":"0"
+              },
+              "label":"TMA 6 (1879)"
+            },
+            {
+              "key":"50475",
+              "count":{
+                "@type":"number",
+                "#text":"0"
+              },
+              "label":"TMA 2 G06Q (1871)"
+            },
+            {
+              "key":"50476",
+              "count":{
+                "@type":"number",
+                "#text":"0"
+              },
+              "label":"TMA Data retrieval (1871)"
+            },
+            {
+              "key":"50477",
+              "count":{
+                "@type":"number",
+                "#text":"0"
+              },
+              "label":"TMA 1 G06Q (1871)"
+            },
+            {
+              "key":"50478",
+              "count":{
+                "@type":"number",
+                "#text":"0"
+              },
+              "label":"TMA Sec-1 Mobile Security (1870)"
+            },
+            {
+              "key":"50479",
+              "count":{
+                "@type":"number",
+                "#text":"0"
+              },
+              "label":"TMA Sec-2 Threat Detect&Counterm (1870)"
+            },
+            {
+              "key":"50480",
+              "count":{
+                "@type":"number",
+                "#text":"0"
+              },
+              "label":"TMA 3 G06Q (1871)"
+            },
+            {
+              "key":"50481",
+              "count":{
+                "@type":"number",
+                "#text":"0"
+              },
+              "label":"TMA Medical Informatics (1871)"
+            },
+            {
+              "key":"50484",
+              "count":{
+                "@type":"number",
+                "#text":"0"
+              },
+              "label":"TMA Multimedia Applic, Protocols (1875)"
+            },
+            {
+              "key":"50485",
+              "count":{
+                "@type":"number",
+                "#text":"0"
+              },
+              "label":"TMA Couplings (1762)"
+            },
+            {
+              "key":"50488",
+              "count":{
+                "@type":"number",
+                "#text":"0"
+              },
+              "label":"Team Vehicle Signal and Light (1762)"
+            },
+            {
+              "key":"50490",
+              "count":{
+                "@type":"number",
+                "#text":"0"
+              },
+              "label":"TMA 1 (1879)"
+            },
+            {
+              "key":"50491",
+              "count":{
+                "@type":"number",
+                "#text":"0"
+              },
+              "label":"TMA Power Saving (1875)"
+            },
+            {
+              "key":"50492",
+              "count":{
+                "@type":"number",
+                "#text":"0"
+              },
+              "label":"TMA Satellite Communications (1875)"
+            },
+            {
+              "key":"50495",
+              "count":{
+                "@type":"number",
+                "#text":"0"
+              },
+              "label":"TMA 3 (1879)"
+            },
+            {
+              "key":"50496",
+              "count":{
+                "@type":"number",
+                "#text":"0"
+              },
+              "label":"TMA 4 (1879)"
+            },
+            {
+              "key":"50498",
+              "count":{
+                "@type":"number",
+                "#text":"0"
+              },
+              "label":"TMA 2 (1879)"
+            },
+            {
+              "key":"50499",
+              "count":{
+                "@type":"number",
+                "#text":"0"
+              },
+              "label":"Team Transmissions (1762)"
+            },
+            {
+              "key":"50502",
+              "count":{
+                "@type":"number",
+                "#text":"0"
+              },
+              "label":"Team 1 (1658)"
+            },
+            {
+              "key":"50505",
+              "count":{
+                "@type":"number",
+                "#text":"0"
+              },
+              "label":"TMA A (1658)"
+            },
+            {
+              "key":"50506",
+              "count":{
+                "@type":"number",
+                "#text":"0"
+              },
+              "label":"TMA Dashboard&Air-conditioning (1762)"
+            },
+            {
+              "key":"50507",
+              "count":{
+                "@type":"number",
+                "#text":"0"
+              },
+              "label":"TMA Packaging and containers (1731)"
+            },
+            {
+              "key":"50508",
+              "count":{
+                "@type":"number",
+                "#text":"0"
+              },
+              "label":"TMA Conveyers (1731)"
+            },
+            {
+              "key":"50514",
+              "count":{
+                "@type":"number",
+                "#text":"0"
+              },
+              "label":"TMA Brakes, Braking Syst&Wheels (1762)"
+            },
+            {
+              "key":"50516",
+              "count":{
+                "@type":"number",
+                "#text":"0"
+              },
+              "label":"TMA Break force Reg & Conjoint (1762)"
+            },
+            {
+              "key":"50521",
+              "count":{
+                "@type":"number",
+                "#text":"0"
+              },
+              "label":"TMA Dentistry (1658)"
+            },
+            {
+              "key":"50709",
+              "count":{
+                "@type":"number",
+                "#text":"0"
+              },
+              "label":"1874 TEAM Coding"
+            },
+            {
+              "key":"50710",
+              "count":{
+                "@type":"number",
+                "#text":"0"
+              },
+              "label":"1954 TEAM 4 G06F13"
+            },
+            {
+              "key":"50715",
+              "count":{
+                "@type":"number",
+                "#text":"0"
+              },
+              "label":"1705 TEAM Cranes"
+            },
+            {
+              "key":"50716",
+              "count":{
+                "@type":"number",
+                "#text":"0"
+              },
+              "label":"1874 Team Baseband & Relay"
+            },
+            {
+              "key":"50717",
+              "count":{
+                "@type":"number",
+                "#text":"0"
+              },
+              "label":"1874 Team MIMO & NFC"
+            },
+            {
+              "key":"50718",
+              "count":{
+                "@type":"number",
+                "#text":"0"
+              },
+              "label":"1705 TEAM Clothes and Jewellery"
+            },
+            {
+              "key":"50721",
+              "count":{
+                "@type":"number",
+                "#text":"0"
+              },
+              "label":"1874 TEAM Transmitters & Receivers"
+            },
+            {
+              "key":"50724",
+              "count":{
+                "@type":"number",
+                "#text":"0"
+              },
+              "label":"1568 TEAM WAVe"
+            },
+            {
+              "key":"50725",
+              "count":{
+                "@type":"number",
+                "#text":"0"
+              },
+              "label":"1568 TEAM LithoMag"
+            },
+            {
+              "key":"50726",
+              "count":{
+                "@type":"number",
+                "#text":"0"
+              },
+              "label":"1568 TEAM DiMe"
+            },
+            {
+              "key":"50727",
+              "count":{
+                "@type":"number",
+                "#text":"0"
+              },
+              "label":"1568 TEAM PhotoXero"
+            },
+            {
+              "key":"50728",
+              "count":{
+                "@type":"number",
+                "#text":"0"
+              },
+              "label":"1705 TEAM B65H"
+            },
+            {
+              "key":"50729",
+              "count":{
+                "@type":"number",
+                "#text":"0"
+              },
+              "label":"1705 TEAM Elevators"
+            },
+            {
+              "key":"50730",
+              "count":{
+                "@type":"number",
+                "#text":"0"
+              },
+              "label":"1568 TEAM G01D"
+            },
+            {
+              "key":"50731",
+              "count":{
+                "@type":"number",
+                "#text":"0"
+              },
+              "label":"1501 TEAM Diagnosis & Vertebral Column"
+            },
+            {
+              "key":"50732",
+              "count":{
+                "@type":"number",
+                "#text":"0"
+              },
+              "label":"1501 TEAM Catheters and Lancets"
+            },
+            {
+              "key":"50735",
+              "count":{
+                "@type":"number",
+                "#text":"0"
+              },
+              "label":"1466 TEAM Medic. Use (A61K35, 36, 38, A61P) B"
+            },
+            {
+              "key":"50736",
+              "count":{
+                "@type":"number",
+                "#text":"0"
+              },
+              "label":"1466 TEAM Medic. Use (A61K31, 45, A61P) A"
+            },
+            {
+              "key":"50737",
+              "count":{
+                "@type":"number",
+                "#text":"0"
+              },
+              "label":"1375 TEAM Detergents, Expl., Fertilisers"
+            },
+            {
+              "key":"50738",
+              "count":{
+                "@type":"number",
+                "#text":"0"
+              },
+              "label":"1466 TEAM Medic. Use (A61K35, 36, 38, A61P) A"
+            },
+            {
+              "key":"50739",
+              "count":{
+                "@type":"number",
+                "#text":"0"
+              },
+              "label":"1501 TEAM Chemistry, Capacitors&Resistors"
+            },
+            {
+              "key":"50740",
+              "count":{
+                "@type":"number",
+                "#text":"0"
+              },
+              "label":"1466 TEAM Medic. Use (A61K31, 45, A61P) B"
+            },
+            {
+              "key":"50741",
+              "count":{
+                "@type":"number",
+                "#text":"0"
+              },
+              "label":"1375 TEAM Luminescence, LC materials"
+            },
+            {
+              "key":"50742",
+              "count":{
+                "@type":"number",
+                "#text":"0"
+              },
+              "label":"1375 TEAM Inorganic"
+            },
+            {
+              "key":"50743",
+              "count":{
+                "@type":"number",
+                "#text":"0"
+              },
+              "label":"1373 TEAM 5 Batteries and Fuel Cells 2"
+            },
+            {
+              "key":"50747",
+              "count":{
+                "@type":"number",
+                "#text":"0"
+              },
+              "label":"1371 TEAM 4 Lab  equipment"
+            },
+            {
+              "key":"50749",
+              "count":{
+                "@type":"number",
+                "#text":"0"
+              },
+              "label":"1371 TEAM 5 Water-treatment&Gasification"
+            },
+            {
+              "key":"50750",
+              "count":{
+                "@type":"number",
+                "#text":"0"
+              },
+              "label":"1371 TEAM 2 Gas-treatment&Distillation"
+            },
+            {
+              "key":"50751",
+              "count":{
+                "@type":"number",
+                "#text":"0"
+              },
+              "label":"1371 TEAM Refining"
+            },
+            {
+              "key":"50752",
+              "count":{
+                "@type":"number",
+                "#text":"0"
+              },
+              "label":"1373 TEAM 3 Coatings"
+            },
+            {
+              "key":"50753",
+              "count":{
+                "@type":"number",
+                "#text":"0"
+              },
+              "label":"1373 TEAM 4 Batteries and Fuel Cells 1"
+            },
+            {
+              "key":"50754",
+              "count":{
+                "@type":"number",
+                "#text":"0"
+              },
+              "label":"1373 TEAM 1 Alloys"
+            },
+            {
+              "key":"50755",
+              "count":{
+                "@type":"number",
+                "#text":"0"
+              },
+              "label":"1373 TEAM 2 Metall. Processes/ Devices"
+            },
+            {
+              "key":"50758",
+              "count":{
+                "@type":"number",
+                "#text":"0"
+              },
+              "label":"Team Polycondensates (1377)"
+            },
+            {
+              "key":"50760",
+              "count":{
+                "@type":"number",
+                "#text":"0"
+              },
+              "label":"1371 TEAM CCMS"
+            },
+            {
+              "key":"50762",
+              "count":{
+                "@type":"number",
+                "#text":"0"
+              },
+              "label":"1958 TEAM Q20"
+            },
+            {
+              "key":"50763",
+              "count":{
+                "@type":"number",
+                "#text":"0"
+              },
+              "label":"1958 TEAM QRest"
+            },
+            {
+              "key":"50770",
+              "count":{
+                "@type":"number",
+                "#text":"0"
+              },
+              "label":"1958 TEAM 9B"
+            },
+            {
+              "key":"50773",
+              "count":{
+                "@type":"number",
+                "#text":"0"
+              },
+              "label":"1804 TEAM 03 H02J"
+            },
+            {
+              "key":"50776",
+              "count":{
+                "@type":"number",
+                "#text":"0"
+              },
+              "label":"TEAM Medical Informatics (1871)"
+            },
+            {
+              "key":"50778",
+              "count":{
+                "@type":"number",
+                "#text":"0"
+              },
+              "label":"1804 TEAM 02 H02J"
+            },
+            {
+              "key":"50780",
+              "count":{
+                "@type":"number",
+                "#text":"0"
+              },
+              "label":"Team 2 G06Q (1871)"
+            },
+            {
+              "key":"50781",
+              "count":{
+                "@type":"number",
+                "#text":"0"
+              },
+              "label":"Team 3 G06Q (1871)"
+            },
+            {
+              "key":"50782",
+              "count":{
+                "@type":"number",
+                "#text":"0"
+              },
+              "label":"Team 1 (1879)"
+            },
+            {
+              "key":"50783",
+              "count":{
+                "@type":"number",
+                "#text":"0"
+              },
+              "label":"Team 1 G06Q (1871)"
+            },
+            {
+              "key":"50790",
+              "count":{
+                "@type":"number",
+                "#text":"3"
+              },
+              "label":"Team 2 of 1655"
+            },
+            {
+              "key":"50791",
+              "count":{
+                "@type":"number",
+                "#text":"0"
+              },
+              "label":"Team 2 of 1653"
+            },
+            {
+              "key":"50792",
+              "count":{
+                "@type":"number",
+                "#text":"0"
+              },
+              "label":"Team 2 of 1603"
+            },
+            {
+              "key":"50793",
+              "count":{
+                "@type":"number",
+                "#text":"0"
+              },
+              "label":"Team 1 of 1602"
+            },
+            {
+              "key":"50794",
+              "count":{
+                "@type":"number",
+                "#text":"0"
+              },
+              "label":"Team 2 of 1658"
+            },
+            {
+              "key":"50795",
+              "count":{
+                "@type":"number",
+                "#text":"0"
+              },
+              "label":"Team 1 of 1658"
+            },
+            {
+              "key":"50796",
+              "count":{
+                "@type":"number",
+                "#text":"0"
+              },
+              "label":"Team 2 of 1657"
+            },
+            {
+              "key":"50797",
+              "count":{
+                "@type":"number",
+                "#text":"0"
+              },
+              "label":"Team 2 of 1602"
+            },
+            {
+              "key":"50809",
+              "count":{
+                "@type":"number",
+                "#text":"0"
+              },
+              "label":"TMA 3 N19/21 (1908)"
+            },
+            {
+              "key":"50811",
+              "count":{
+                "@type":"number",
+                "#text":"0"
+              },
+              "label":"TMA 4 N5 (1902)"
+            },
+            {
+              "key":"50812",
+              "count":{
+                "@type":"number",
+                "#text":"0"
+              },
+              "label":"TMA 1 N19 (1908)"
+            },
+            {
+              "key":"50813",
+              "count":{
+                "@type":"number",
+                "#text":"0"
+              },
+              "label":"TMA 2 N21 (1908)"
+            },
+            {
+              "key":"50814",
+              "count":{
+                "@type":"number",
+                "#text":"0"
+              },
+              "label":"TMA 5 N5/9/13 (1902)"
+            },
+            {
+              "key":"50815",
+              "count":{
+                "@type":"number",
+                "#text":"0"
+              },
+              "label":"TMA G05B Automatic Control (1927)"
+            },
+            {
+              "key":"50817",
+              "count":{
+                "@type":"number",
+                "#text":"0"
+              },
+              "label":"TMA B60L Electric Vehicles (1927)"
+            },
+            {
+              "key":"50818",
+              "count":{
+                "@type":"number",
+                "#text":"0"
+              },
+              "label":"TMA Antennas and microwaves (1927)"
+            },
+            {
+              "key":"61081",
+              "count":{
+                "@type":"number",
+                "#text":"0"
+              },
+              "label":"BVB TEAM"
+            }
+          ]
+        }
+      }
+    ],
+    "dynamicschema":{
+      "Team":[
+        {
+          "code":"50018",
+          "label":"Team Test 2 (1407)"
+        },
+        {
+          "code":"50025",
+          "label":"Team test 3 (1409)"
+        },
+        {
+          "code":"50039",
+          "label":"Team Test (1407)"
+        },
+        {
+          "code":"50078",
+          "label":"1954 TEAM 3 G06F11, G0F17/50"
+        },
+        {
+          "code":"50081",
+          "label":"1660 TEAM OPTICAL DIAGNOSIS"
+        },
+        {
+          "code":"50089",
+          "label":"1851 TEAM H04L5"
+        },
+        {
+          "code":"50093",
+          "label":"1808 TEAM H05B"
+        },
+        {
+          "code":"50094",
+          "label":"1808 TEAM H01H-A"
+        },
+        {
+          "code":"50095",
+          "label":"1901 TEAM G10L"
+        },
+        {
+          "code":"50099",
+          "label":"1874 TEAM OPTICAL COMMUNICATION"
+        },
+        {
+          "code":"50100",
+          "label":"1901 TEAM G06K9_S"
+        },
+        {
+          "code":"50101",
+          "label":"1954 TEAM 2 G06F8/9"
+        },
+        {
+          "code":"50102",
+          "label":"1901 TEAM H04RS"
+        },
+        {
+          "code":"50103",
+          "label":"1901 TEAM G06K9_G"
+        },
+        {
+          "code":"50121",
+          "label":"1652 TEAM ELECTROTHERAPY"
+        },
+        {
+          "code":"50122",
+          "label":"1660 TEAM DIAGNOSTIC IMAGING"
+        },
+        {
+          "code":"50123",
+          "label":"1652 TEAM ELECTROTHERAPY&ELECTROSURGERY"
+        },
+        {
+          "code":"50124",
+          "label":"1652 TEAM RADIATION&LASER THERAPY"
+        },
+        {
+          "code":"50127",
+          "label":"1754 TEAM AEROSPACE, SHIPS (B64, B63)"
+        },
+        {
+          "code":"50128",
+          "label":"1754 TEAM SEATS, RAILWAYS (B60N, B61)"
+        },
+        {
+          "code":"50129",
+          "label":"1703 Team Physical Operations"
+        },
+        {
+          "code":"50131",
+          "label":"1703 TEAM PLASTICS & PROCESSES"
+        },
+        {
+          "code":"50132",
+          "label":"1804 TEAM 01 H02J"
+        },
+        {
+          "code":"50134",
+          "label":"1808 TEAM H01H-B"
+        },
+        {
+          "code":"50136",
+          "label":"1754 TEAM PIPES, HYDRAULICS (F16L, F15B)"
+        },
+        {
+          "code":"50143",
+          "label":"1559 TEAM INVESTIG.MATERIAL PROPERTIES"
+        },
+        {
+          "code":"50155",
+          "label":"TEAM FILTER/MEMBRANE (1370)"
+        },
+        {
+          "code":"50158",
+          "label":"1410 TEAM 1 GENES&PEPTIDES"
+        },
+        {
+          "code":"50161",
+          "label":"TEAM STERILISATION/DISINFECTION (1370)"
+        },
+        {
+          "code":"50163",
+          "label":"TEAM FLUID SEPARATION (1370)"
+        },
+        {
+          "code":"50165",
+          "label":"1504 TEAM 2 SOLAR CELLS"
+        },
+        {
+          "code":"50168",
+          "label":"1556 TEAM MAGNETICS H01F"
+        },
+        {
+          "code":"50170",
+          "label":"1504 TEAM OPTICS"
+        },
+        {
+          "code":"50171",
+          "label":"1504 TEAM 1 SOLAR CELLS"
+        },
+        {
+          "code":"50173",
+          "label":"1559 TEAM GEOPHYSICS"
+        },
+        {
+          "code":"50174",
+          "label":"1559 TEAM RADIATION DETECTION&HOROLOGY"
+        },
+        {
+          "code":"50193",
+          "label":"Team Polyolefins (1377)"
+        },
+        {
+          "code":"50217",
+          "label":"1954 TEAM 1 G06F8/9"
+        },
+        {
+          "code":"50219",
+          "label":"1851 TEAM H04L1JMQ"
+        },
+        {
+          "code":"50265",
+          "label":"Team 1 of 1651"
+        },
+        {
+          "code":"50273",
+          "label":"Team 2 of 1659"
+        },
+        {
+          "code":"50275",
+          "label":"Team 2 of 1656"
+        },
+        {
+          "code":"50278",
+          "label":"Team 1 of 1653"
+        },
+        {
+          "code":"50280",
+          "label":"Team 1 of 1657"
+        },
+        {
+          "code":"50281",
+          "label":"Team 1 of 1603"
+        },
+        {
+          "code":"50284",
+          "label":"Team 2 of 1651"
+        },
+        {
+          "code":"50288",
+          "label":"Team 1 of 1655"
+        },
+        {
+          "code":"50292",
+          "label":"Team 1 of 1659"
+        },
+        {
+          "code":"50294",
+          "label":"Team 1 of 1656"
+        },
+        {
+          "code":"50369",
+          "label":"TMA Inhalation (1664)"
+        },
+        {
+          "code":"50374",
+          "label":"TMA Soft prothesis (1664)"
+        },
+        {
+          "code":"50377",
+          "label":"TMA Prothetics and biopsy (1664)"
+        },
+        {
+          "code":"50379",
+          "label":"TMA Medical injection (1664)"
+        },
+        {
+          "code":"50380",
+          "label":"TMA Agriculture (1656)"
+        },
+        {
+          "code":"50381",
+          "label":"Team Tobac&Handheld-cutting tools (1656)"
+        },
+        {
+          "code":"50382",
+          "label":"TMA Kitchen equip, Machines Food (1656)"
+        },
+        {
+          "code":"50386",
+          "label":"TMA Surgery IB (1664)"
+        },
+        {
+          "code":"50388",
+          "label":"TMA Surgery III (1664)"
+        },
+        {
+          "code":"50389",
+          "label":"1754 Team Aerospace, Valves (B64,F16K)"
+        },
+        {
+          "code":"50393",
+          "label":"TMA Surgery IA (1664)"
+        },
+        {
+          "code":"50395",
+          "label":"TMA Fin work, spec doors&windows (1614)"
+        },
+        {
+          "code":"50398",
+          "label":"TMA Agriculture 1 (1655)"
+        },
+        {
+          "code":"50401",
+          "label":"TMA Agriculture 2 (1655)"
+        },
+        {
+          "code":"50404",
+          "label":"Team Travel equipment/ Cosmetics (1653)"
+        },
+        {
+          "code":"50407",
+          "label":"TMA Chairs, beds, upholstery (1653)"
+        },
+        {
+          "code":"50411",
+          "label":"TMA Footwear (1655)"
+        },
+        {
+          "code":"50412",
+          "label":"TMA Defence (1655)"
+        },
+        {
+          "code":"50413",
+          "label":"TMA Drilling and Mining (1614)"
+        },
+        {
+          "code":"50414",
+          "label":"TMA Tables, Office & Shop furnit (1653)"
+        },
+        {
+          "code":"50416",
+          "label":"TMA Fermentation Processes (1501)"
+        },
+        {
+          "code":"50417",
+          "label":"TMA Piston and Membrane Pumps (1616)"
+        },
+        {
+          "code":"50419",
+          "label":"TMA Rotary and Other Pumps (1616)"
+        },
+        {
+          "code":"50420",
+          "label":"TMA Intake (1616)"
+        },
+        {
+          "code":"50421",
+          "label":"Team Exhaust (1616)"
+        },
+        {
+          "code":"50422",
+          "label":"TMA Drilling, Mining and Foundat (1614)"
+        },
+        {
+          "code":"50424",
+          "label":"TMA Road, Railways and Build elem(1614)"
+        },
+        {
+          "code":"50426",
+          "label":"TMA Constr partic purp & hydrolo (1614)"
+        },
+        {
+          "code":"50427",
+          "label":"TMA Eng Mech,Eng Cool,Start,Ignit(1616)"
+        },
+        {
+          "code":"50428",
+          "label":"TMA 2nd Medical Use TH (1453)"
+        },
+        {
+          "code":"50429",
+          "label":"Team Textiles (1377)"
+        },
+        {
+          "code":"50430",
+          "label":"TMA Laminates (1377)"
+        },
+        {
+          "code":"50431",
+          "label":"TMA Galenics The Hague (1455)"
+        },
+        {
+          "code":"50432",
+          "label":"TMA Target Drugs&Short Peptides (1453)"
+        },
+        {
+          "code":"50433",
+          "label":"TMA Biomaterials (1455)"
+        },
+        {
+          "code":"50434",
+          "label":"Team Lemon Cosmetics (1468)"
+        },
+        {
+          "code":"50435",
+          "label":"TMA Olive Galenics (1468)"
+        },
+        {
+          "code":"50436",
+          "label":"Team Amber Cosmetics (1468)"
+        },
+        {
+          "code":"50437",
+          "label":"TMA Ivory Cosmetics"
+        },
+        {
+          "code":"50440",
+          "label":"Team FO-PS-EP"
+        },
+        {
+          "code":"50458",
+          "label":"TMA Sec-5 Business Security (1870)"
+        },
+        {
+          "code":"50460",
+          "label":"TMA Sec-6 Loc Based Services&Sec (1870)"
+        },
+        {
+          "code":"50462",
+          "label":"TMA Sec-3 Gov&Medic Data Security(1870)"
+        },
+        {
+          "code":"50463",
+          "label":"TMA Sec-4 Security Foundations (1870)"
+        },
+        {
+          "code":"50464",
+          "label":"Team Sec-7 Applic sec&Trust Managt(1870)"
+        },
+        {
+          "code":"50465",
+          "label":"TMA Sec-8 Protocol Security (1870)"
+        },
+        {
+          "code":"50466",
+          "label":"TMA G10H&L (1914)"
+        },
+        {
+          "code":"50467",
+          "label":"TMA H04RS (1914)"
+        },
+        {
+          "code":"50468",
+          "label":"TMA G02F (1914)"
+        },
+        {
+          "code":"50469",
+          "label":"TMA G09G (1914)"
+        },
+        {
+          "code":"50470",
+          "label":"TMA 7 (1879)"
+        },
+        {
+          "code":"50472",
+          "label":"TMA 5 (1879)"
+        },
+        {
+          "code":"50473",
+          "label":"TMA 6 (1879)"
+        },
+        {
+          "code":"50475",
+          "label":"TMA 2 G06Q (1871)"
+        },
+        {
+          "code":"50476",
+          "label":"TMA Data retrieval (1871)"
+        },
+        {
+          "code":"50477",
+          "label":"TMA 1 G06Q (1871)"
+        },
+        {
+          "code":"50478",
+          "label":"TMA Sec-1 Mobile Security (1870)"
+        },
+        {
+          "code":"50479",
+          "label":"TMA Sec-2 Threat Detect&Counterm (1870)"
+        },
+        {
+          "code":"50480",
+          "label":"TMA 3 G06Q (1871)"
+        },
+        {
+          "code":"50481",
+          "label":"TMA Medical Informatics (1871)"
+        },
+        {
+          "code":"50484",
+          "label":"TMA Multimedia Applic, Protocols (1875)"
+        },
+        {
+          "code":"50485",
+          "label":"TMA Couplings (1762)"
+        },
+        {
+          "code":"50488",
+          "label":"Team Vehicle Signal and Light (1762)"
+        },
+        {
+          "code":"50490",
+          "label":"TMA 1 (1879)"
+        },
+        {
+          "code":"50491",
+          "label":"TMA Power Saving (1875)"
+        },
+        {
+          "code":"50492",
+          "label":"TMA Satellite Communications (1875)"
+        },
+        {
+          "code":"50495",
+          "label":"TMA 3 (1879)"
+        },
+        {
+          "code":"50496",
+          "label":"TMA 4 (1879)"
+        },
+        {
+          "code":"50498",
+          "label":"TMA 2 (1879)"
+        },
+        {
+          "code":"50499",
+          "label":"Team Transmissions (1762)"
+        },
+        {
+          "code":"50502",
+          "label":"Team 1 (1658)"
+        },
+        {
+          "code":"50505",
+          "label":"TMA A (1658)"
+        },
+        {
+          "code":"50506",
+          "label":"TMA Dashboard&Air-conditioning (1762)"
+        },
+        {
+          "code":"50507",
+          "label":"TMA Packaging and containers (1731)"
+        },
+        {
+          "code":"50508",
+          "label":"TMA Conveyers (1731)"
+        },
+        {
+          "code":"50514",
+          "label":"TMA Brakes, Braking Syst&Wheels (1762)"
+        },
+        {
+          "code":"50516",
+          "label":"TMA Break force Reg & Conjoint (1762)"
+        },
+        {
+          "code":"50521",
+          "label":"TMA Dentistry (1658)"
+        },
+        {
+          "code":"50709",
+          "label":"1874 TEAM Coding"
+        },
+        {
+          "code":"50710",
+          "label":"1954 TEAM 4 G06F13"
+        },
+        {
+          "code":"50715",
+          "label":"1705 TEAM Cranes"
+        },
+        {
+          "code":"50716",
+          "label":"1874 Team Baseband & Relay"
+        },
+        {
+          "code":"50717",
+          "label":"1874 Team MIMO & NFC"
+        },
+        {
+          "code":"50718",
+          "label":"1705 TEAM Clothes and Jewellery"
+        },
+        {
+          "code":"50721",
+          "label":"1874 TEAM Transmitters & Receivers"
+        },
+        {
+          "code":"50724",
+          "label":"1568 TEAM WAVe"
+        },
+        {
+          "code":"50725",
+          "label":"1568 TEAM LithoMag"
+        },
+        {
+          "code":"50726",
+          "label":"1568 TEAM DiMe"
+        },
+        {
+          "code":"50727",
+          "label":"1568 TEAM PhotoXero"
+        },
+        {
+          "code":"50728",
+          "label":"1705 TEAM B65H"
+        },
+        {
+          "code":"50729",
+          "label":"1705 TEAM Elevators"
+        },
+        {
+          "code":"50730",
+          "label":"1568 TEAM G01D"
+        },
+        {
+          "code":"50731",
+          "label":"1501 TEAM Diagnosis & Vertebral Column"
+        },
+        {
+          "code":"50732",
+          "label":"1501 TEAM Catheters and Lancets"
+        },
+        {
+          "code":"50735",
+          "label":"1466 TEAM Medic. Use (A61K35, 36, 38, A61P) B"
+        },
+        {
+          "code":"50736",
+          "label":"1466 TEAM Medic. Use (A61K31, 45, A61P) A"
+        },
+        {
+          "code":"50737",
+          "label":"1375 TEAM Detergents, Expl., Fertilisers"
+        },
+        {
+          "code":"50738",
+          "label":"1466 TEAM Medic. Use (A61K35, 36, 38, A61P) A"
+        },
+        {
+          "code":"50739",
+          "label":"1501 TEAM Chemistry, Capacitors&Resistors"
+        },
+        {
+          "code":"50740",
+          "label":"1466 TEAM Medic. Use (A61K31, 45, A61P) B"
+        },
+        {
+          "code":"50741",
+          "label":"1375 TEAM Luminescence, LC materials"
+        },
+        {
+          "code":"50742",
+          "label":"1375 TEAM Inorganic"
+        },
+        {
+          "code":"50743",
+          "label":"1373 TEAM 5 Batteries and Fuel Cells 2"
+        },
+        {
+          "code":"50747",
+          "label":"1371 TEAM 4 Lab  equipment"
+        },
+        {
+          "code":"50749",
+          "label":"1371 TEAM 5 Water-treatment&Gasification"
+        },
+        {
+          "code":"50750",
+          "label":"1371 TEAM 2 Gas-treatment&Distillation"
+        },
+        {
+          "code":"50751",
+          "label":"1371 TEAM Refining"
+        },
+        {
+          "code":"50752",
+          "label":"1373 TEAM 3 Coatings"
+        },
+        {
+          "code":"50753",
+          "label":"1373 TEAM 4 Batteries and Fuel Cells 1"
+        },
+        {
+          "code":"50754",
+          "label":"1373 TEAM 1 Alloys"
+        },
+        {
+          "code":"50755",
+          "label":"1373 TEAM 2 Metall. Processes/ Devices"
+        },
+        {
+          "code":"50758",
+          "label":"Team Polycondensates (1377)"
+        },
+        {
+          "code":"50760",
+          "label":"1371 TEAM CCMS"
+        },
+        {
+          "code":"50762",
+          "label":"1958 TEAM Q20"
+        },
+        {
+          "code":"50763",
+          "label":"1958 TEAM QRest"
+        },
+        {
+          "code":"50770",
+          "label":"1958 TEAM 9B"
+        },
+        {
+          "code":"50773",
+          "label":"1804 TEAM 03 H02J"
+        },
+        {
+          "code":"50776",
+          "label":"TEAM Medical Informatics (1871)"
+        },
+        {
+          "code":"50778",
+          "label":"1804 TEAM 02 H02J"
+        },
+        {
+          "code":"50780",
+          "label":"Team 2 G06Q (1871)"
+        },
+        {
+          "code":"50781",
+          "label":"Team 3 G06Q (1871)"
+        },
+        {
+          "code":"50782",
+          "label":"Team 1 (1879)"
+        },
+        {
+          "code":"50783",
+          "label":"Team 1 G06Q (1871)"
+        },
+        {
+          "code":"50790",
+          "label":"Team 2 of 1655"
+        },
+        {
+          "code":"50791",
+          "label":"Team 2 of 1653"
+        },
+        {
+          "code":"50792",
+          "label":"Team 2 of 1603"
+        },
+        {
+          "code":"50793",
+          "label":"Team 1 of 1602"
+        },
+        {
+          "code":"50794",
+          "label":"Team 2 of 1658"
+        },
+        {
+          "code":"50795",
+          "label":"Team 1 of 1658"
+        },
+        {
+          "code":"50796",
+          "label":"Team 2 of 1657"
+        },
+        {
+          "code":"50797",
+          "label":"Team 2 of 1602"
+        },
+        {
+          "code":"50809",
+          "label":"TMA 3 N19/21 (1908)"
+        },
+        {
+          "code":"50811",
+          "label":"TMA 4 N5 (1902)"
+        },
+        {
+          "code":"50812",
+          "label":"TMA 1 N19 (1908)"
+        },
+        {
+          "code":"50813",
+          "label":"TMA 2 N21 (1908)"
+        },
+        {
+          "code":"50814",
+          "label":"TMA 5 N5/9/13 (1902)"
+        },
+        {
+          "code":"50815",
+          "label":"TMA G05B Automatic Control (1927)"
+        },
+        {
+          "code":"50817",
+          "label":"TMA B60L Electric Vehicles (1927)"
+        },
+        {
+          "code":"50818",
+          "label":"TMA Antennas and microwaves (1927)"
+        },
+        {
+          "code":"61081",
+          "label":"BVB TEAM"
+        }
+      ]
+    },
+    "paging":{
+      "totalresults":{
+        "@type":"number",
+        "#text":"45"
+      },
+      "pagesize":{
+        "param":"pagesize",
+        "currentpagesize":{
+          "@type":"number",
+          "#text":"25"
+        },
+        "option":[
+          {
+            "@type":"number",
+            "#text":"10"
+          },
+          {
+            "@type":"number",
+            "#text":"25"
+          },
+          {
+            "@type":"number",
+            "#text":"50"
+          },
+          {
+            "@type":"number",
+            "#text":"2000"
+          }
+        ]
+      },
+      "param":"page",
+      "currentpage":{
+        "@type":"number",
+        "#text":"1"
+      },
+      "maxpages":{
+        "@type":"number",
+        "#text":"2"
+      }
+    },
+    "sorting":{
+      "param":"sort",
+      "option":[
+        "CaseID",
+        "UserID",
+        "Fullname",
+        "Directorate",
+        "MasterWeighting2ndExaminer",
+        "MasterWeightingChair",
+        "SlaveWeighting2ndExaminer",
+        "SlaveWeightingChair",
+        "CoachID",
+        "CoachFullname",
+        "Team"
+      ]
+    },
+    "_embedded":{
+      "results":[
+        {
+          "Autosuggestionconfig":{
+            "actions":{
+              "@class":"array",
+              "actions":{
+                "name":"formUpdateAllocationWeightsCase",
+                "title":"UAW",
+                "method":"POST",
+                "href":"/AccountManagement/formUpdateAllocationWeightsCase",
+                "fields":{
+                  "@class":"array",
+                  "fields":{
+                    "name":"ID",
+                    "type":"number",
+                    "value":"50894"
+                  }
+                }
+              }
+            },
+            "_id":{
+              "@type":"number",
+              "#text":"50894"
+            },
+            "_links":{
+              "self":{
+                "href":"/AccountManagement/AutosuggestionConfig/50894"
+              }
+            },
+            "CaseID":{
+              "@type":"number",
+              "#text":"50894"
+            },
+            "UserID":"EDOEX20",
+            "Fullname":"Examiner 20 eDossier Testing",
+            "Directorate":"1655",
+            "MasterWeighting2ndExaminer":{
+              "@type":"number",
+              "#text":"6"
+            },
+            "MasterWeightingChair":{
+              "@type":"number",
+              "#text":"5"
+            },
+            "SlaveWeighting2ndExaminer":{
+              "@type":"number",
+              "#text":"0"
+            },
+            "SlaveWeightingChair":{
+              "@type":"number",
+              "#text":"1"
+            },
+            "CoachID":"WV03540",
+            "CoachFullname":"Wim Vermander",
+            "Team":"50288"
+          }
+        },
+        {
+          "Autosuggestionconfig":{
+            "actions":{
+              "@class":"array",
+              "actions":{
+                "name":"formUpdateAllocationWeightsCase",
+                "title":"UAW",
+                "method":"POST",
+                "href":"/AccountManagement/formUpdateAllocationWeightsCase",
+                "fields":{
+                  "@class":"array",
+                  "fields":{
+                    "name":"ID",
+                    "type":"number",
+                    "value":"50895"
+                  }
+                }
+              }
+            },
+            "_id":{
+              "@type":"number",
+              "#text":"50895"
+            },
+            "_links":{
+              "self":{
+                "href":"/AccountManagement/AutosuggestionConfig/50895"
+              }
+            },
+            "CaseID":{
+              "@type":"number",
+              "#text":"50895"
+            },
+            "UserID":"EDODI05",
+            "Fullname":"Director 05 eDossier Testing",
+            "Directorate":"1655",
+            "MasterWeighting2ndExaminer":null,
+            "MasterWeightingChair":null,
+            "SlaveWeighting2ndExaminer":null,
+            "SlaveWeightingChair":null,
+            "CoachID":null,
+            "CoachFullname":null,
+            "Team":null
+          }
+        },
+        {
+          "Autosuggestionconfig":{
+            "actions":{
+              "@class":"array",
+              "actions":{
+                "name":"formUpdateAllocationWeightsCase",
+                "title":"UAW",
+                "method":"POST",
+                "href":"/AccountManagement/formUpdateAllocationWeightsCase",
+                "fields":{
+                  "@class":"array",
+                  "fields":{
+                    "name":"ID",
+                    "type":"number",
+                    "value":"50925"
+                  }
+                }
+              }
+            },
+            "_id":{
+              "@type":"number",
+              "#text":"50925"
+            },
+            "_links":{
+              "self":{
+                "href":"/AccountManagement/AutosuggestionConfig/50925"
+              }
+            },
+            "CaseID":{
+              "@type":"number",
+              "#text":"50925"
+            },
+            "UserID":"MP53426",
+            "Fullname":"Matthias Pacevicius",
+            "Directorate":"1655",
+            "MasterWeighting2ndExaminer":null,
+            "MasterWeightingChair":null,
+            "SlaveWeighting2ndExaminer":null,
+            "SlaveWeightingChair":null,
+            "CoachID":null,
+            "CoachFullname":null,
+            "Team":"50398"
+          }
+        },
+        {
+          "Autosuggestionconfig":{
+            "actions":{
+              "@class":"array",
+              "actions":{
+                "name":"formUpdateAllocationWeightsCase",
+                "title":"UAW",
+                "method":"POST",
+                "href":"/AccountManagement/formUpdateAllocationWeightsCase",
+                "fields":{
+                  "@class":"array",
+                  "fields":{
+                    "name":"ID",
+                    "type":"number",
+                    "value":"50927"
+                  }
+                }
+              }
+            },
+            "_id":{
+              "@type":"number",
+              "#text":"50927"
+            },
+            "_links":{
+              "self":{
+                "href":"/AccountManagement/AutosuggestionConfig/50927"
+              }
+            },
+            "CaseID":{
+              "@type":"number",
+              "#text":"50927"
+            },
+            "UserID":"RO04091",
+            "Fullname":"Ricardo Oltra García",
+            "Directorate":"1655",
+            "MasterWeighting2ndExaminer":null,
+            "MasterWeightingChair":null,
+            "SlaveWeighting2ndExaminer":null,
+            "SlaveWeightingChair":null,
+            "CoachID":null,
+            "CoachFullname":null,
+            "Team":"50401"
+          }
+        },
+        {
+          "Autosuggestionconfig":{
+            "actions":{
+              "@class":"array",
+              "actions":{
+                "name":"formUpdateAllocationWeightsCase",
+                "title":"UAW",
+                "method":"POST",
+                "href":"/AccountManagement/formUpdateAllocationWeightsCase",
+                "fields":{
+                  "@class":"array",
+                  "fields":{
+                    "name":"ID",
+                    "type":"number",
+                    "value":"50931"
+                  }
+                }
+              }
+            },
+            "_id":{
+              "@type":"number",
+              "#text":"50931"
+            },
+            "_links":{
+              "self":{
+                "href":"/AccountManagement/AutosuggestionConfig/50931"
+              }
+            },
+            "CaseID":{
+              "@type":"number",
+              "#text":"50931"
+            },
+            "UserID":"TJ01711",
+            "Fullname":"Mark Jones",
+            "Directorate":"1655",
+            "MasterWeighting2ndExaminer":{
+              "@type":"number",
+              "#text":"1"
+            },
+            "MasterWeightingChair":{
+              "@type":"number",
+              "#text":"3"
+            },
+            "SlaveWeighting2ndExaminer":{
+              "@type":"number",
+              "#text":"0"
+            },
+            "SlaveWeightingChair":{
+              "@type":"number",
+              "#text":"0"
+            },
+            "CoachID":"EDODI05",
+            "CoachFullname":"Director 05 eDossier Testing",
+            "Team":"50411"
+          }
+        },
+        {
+          "Autosuggestionconfig":{
+            "actions":{
+              "@class":"array",
+              "actions":{
+                "name":"formUpdateAllocationWeightsCase",
+                "title":"UAW",
+                "method":"POST",
+                "href":"/AccountManagement/formUpdateAllocationWeightsCase",
+                "fields":{
+                  "@class":"array",
+                  "fields":{
+                    "name":"ID",
+                    "type":"number",
+                    "value":"50932"
+                  }
+                }
+              }
+            },
+            "_id":{
+              "@type":"number",
+              "#text":"50932"
+            },
+            "_links":{
+              "self":{
+                "href":"/AccountManagement/AutosuggestionConfig/50932"
+              }
+            },
+            "CaseID":{
+              "@type":"number",
+              "#text":"50932"
+            },
+            "UserID":"MG02729",
+            "Fullname":"Maarten Giesen",
+            "Directorate":"1655",
+            "MasterWeighting2ndExaminer":null,
+            "MasterWeightingChair":null,
+            "SlaveWeighting2ndExaminer":null,
+            "SlaveWeightingChair":null,
+            "CoachID":null,
+            "CoachFullname":null,
+            "Team":"50412"
+          }
+        },
+        {
+          "Autosuggestionconfig":{
+            "actions":{
+              "@class":"array",
+              "actions":{
+                "name":"formUpdateAllocationWeightsCase",
+                "title":"UAW",
+                "method":"POST",
+                "href":"/AccountManagement/formUpdateAllocationWeightsCase",
+                "fields":{
+                  "@class":"array",
+                  "fields":{
+                    "name":"ID",
+                    "type":"number",
+                    "value":"51039"
+                  }
+                }
+              }
+            },
+            "_id":{
+              "@type":"number",
+              "#text":"51039"
+            },
+            "_links":{
+              "self":{
+                "href":"/AccountManagement/AutosuggestionConfig/51039"
+              }
+            },
+            "CaseID":{
+              "@type":"number",
+              "#text":"51039"
+            },
+            "UserID":"EDOEX21",
+            "Fullname":"Examiner 21 eDossier Testing",
+            "Directorate":"1655",
+            "MasterWeighting2ndExaminer":null,
+            "MasterWeightingChair":null,
+            "SlaveWeighting2ndExaminer":null,
+            "SlaveWeightingChair":null,
+            "CoachID":null,
+            "CoachFullname":null,
+            "Team":"50790"
+          }
+        },
+        {
+          "Autosuggestionconfig":{
+            "actions":{
+              "@class":"array",
+              "actions":{
+                "name":"formUpdateAllocationWeightsCase",
+                "title":"UAW",
+                "method":"POST",
+                "href":"/AccountManagement/formUpdateAllocationWeightsCase",
+                "fields":{
+                  "@class":"array",
+                  "fields":{
+                    "name":"ID",
+                    "type":"number",
+                    "value":"51244"
+                  }
+                }
+              }
+            },
+            "_id":{
+              "@type":"number",
+              "#text":"51244"
+            },
+            "_links":{
+              "self":{
+                "href":"/AccountManagement/AutosuggestionConfig/51244"
+              }
+            },
+            "CaseID":{
+              "@type":"number",
+              "#text":"51244"
+            },
+            "UserID":"SC03911",
+            "Fullname":"Sabino Cianci",
+            "Directorate":"1655",
+            "MasterWeighting2ndExaminer":null,
+            "MasterWeightingChair":null,
+            "SlaveWeighting2ndExaminer":null,
+            "SlaveWeightingChair":null,
+            "CoachID":null,
+            "CoachFullname":null,
+            "Team":"50411"
+          }
+        },
+        {
+          "Autosuggestionconfig":{
+            "actions":{
+              "@class":"array",
+              "actions":{
+                "name":"formUpdateAllocationWeightsCase",
+                "title":"UAW",
+                "method":"POST",
+                "href":"/AccountManagement/formUpdateAllocationWeightsCase",
+                "fields":{
+                  "@class":"array",
+                  "fields":{
+                    "name":"ID",
+                    "type":"number",
+                    "value":"51438"
+                  }
+                }
+              }
+            },
+            "_id":{
+              "@type":"number",
+              "#text":"51438"
+            },
+            "_links":{
+              "self":{
+                "href":"/AccountManagement/AutosuggestionConfig/51438"
+              }
+            },
+            "CaseID":{
+              "@type":"number",
+              "#text":"51438"
+            },
+            "UserID":"WV03540",
+            "Fullname":"Wim Vermander",
+            "Directorate":"1655",
+            "MasterWeighting2ndExaminer":null,
+            "MasterWeightingChair":null,
+            "SlaveWeighting2ndExaminer":null,
+            "SlaveWeightingChair":null,
+            "CoachID":null,
+            "CoachFullname":null,
+            "Team":"50412"
+          }
+        },
+        {
+          "Autosuggestionconfig":{
+            "actions":{
+              "@class":"array",
+              "actions":{
+                "name":"formUpdateAllocationWeightsCase",
+                "title":"UAW",
+                "method":"POST",
+                "href":"/AccountManagement/formUpdateAllocationWeightsCase",
+                "fields":{
+                  "@class":"array",
+                  "fields":{
+                    "name":"ID",
+                    "type":"number",
+                    "value":"51509"
+                  }
+                }
+              }
+            },
+            "_id":{
+              "@type":"number",
+              "#text":"51509"
+            },
+            "_links":{
+              "self":{
+                "href":"/AccountManagement/AutosuggestionConfig/51509"
+              }
+            },
+            "CaseID":{
+              "@type":"number",
+              "#text":"51509"
+            },
+            "UserID":"MS03784",
+            "Fullname":"Alexandra Forjaz",
+            "Directorate":"1655",
+            "MasterWeighting2ndExaminer":null,
+            "MasterWeightingChair":null,
+            "SlaveWeighting2ndExaminer":null,
+            "SlaveWeightingChair":null,
+            "CoachID":null,
+            "CoachFullname":null,
+            "Team":"50398"
+          }
+        },
+        {
+          "Autosuggestionconfig":{
+            "actions":{
+              "@class":"array",
+              "actions":{
+                "name":"formUpdateAllocationWeightsCase",
+                "title":"UAW",
+                "method":"POST",
+                "href":"/AccountManagement/formUpdateAllocationWeightsCase",
+                "fields":{
+                  "@class":"array",
+                  "fields":{
+                    "name":"ID",
+                    "type":"number",
+                    "value":"51578"
+                  }
+                }
+              }
+            },
+            "_id":{
+              "@type":"number",
+              "#text":"51578"
+            },
+            "_links":{
+              "self":{
+                "href":"/AccountManagement/AutosuggestionConfig/51578"
+              }
+            },
+            "CaseID":{
+              "@type":"number",
+              "#text":"51578"
+            },
+            "UserID":"EE51005",
+            "Fullname":"Els Espeel",
+            "Directorate":"1655",
+            "MasterWeighting2ndExaminer":null,
+            "MasterWeightingChair":null,
+            "SlaveWeighting2ndExaminer":null,
+            "SlaveWeightingChair":null,
+            "CoachID":null,
+            "CoachFullname":null,
+            "Team":"50401"
+          }
+        },
+        {
+          "Autosuggestionconfig":{
+            "actions":{
+              "@class":"array",
+              "actions":{
+                "name":"formUpdateAllocationWeightsCase",
+                "title":"UAW",
+                "method":"POST",
+                "href":"/AccountManagement/formUpdateAllocationWeightsCase",
+                "fields":{
+                  "@class":"array",
+                  "fields":{
+                    "name":"ID",
+                    "type":"number",
+                    "value":"51919"
+                  }
+                }
+              }
+            },
+            "_id":{
+              "@type":"number",
+              "#text":"51919"
+            },
+            "_links":{
+              "self":{
+                "href":"/AccountManagement/AutosuggestionConfig/51919"
+              }
+            },
+            "CaseID":{
+              "@type":"number",
+              "#text":"51919"
+            },
+            "UserID":"AM02947",
+            "Fullname":"Alain Merckx",
+            "Directorate":"1655",
+            "MasterWeighting2ndExaminer":null,
+            "MasterWeightingChair":null,
+            "SlaveWeighting2ndExaminer":null,
+            "SlaveWeightingChair":null,
+            "CoachID":null,
+            "CoachFullname":null,
+            "Team":"50398"
+          }
+        },
+        {
+          "Autosuggestionconfig":{
+            "actions":{
+              "@class":"array",
+              "actions":{
+                "name":"formUpdateAllocationWeightsCase",
+                "title":"UAW",
+                "method":"POST",
+                "href":"/AccountManagement/formUpdateAllocationWeightsCase",
+                "fields":{
+                  "@class":"array",
+                  "fields":{
+                    "name":"ID",
+                    "type":"number",
+                    "value":"51985"
+                  }
+                }
+              }
+            },
+            "_id":{
+              "@type":"number",
+              "#text":"51985"
+            },
+            "_links":{
+              "self":{
+                "href":"/AccountManagement/AutosuggestionConfig/51985"
+              }
+            },
+            "CaseID":{
+              "@type":"number",
+              "#text":"51985"
+            },
+            "UserID":"RP53287",
+            "Fullname":"Rob Postma",
+            "Directorate":"1655",
+            "MasterWeighting2ndExaminer":null,
+            "MasterWeightingChair":null,
+            "SlaveWeighting2ndExaminer":null,
+            "SlaveWeightingChair":null,
+            "CoachID":null,
+            "CoachFullname":null,
+            "Team":"50401"
+          }
+        },
+        {
+          "Autosuggestionconfig":{
+            "actions":{
+              "@class":"array",
+              "actions":{
+                "name":"formUpdateAllocationWeightsCase",
+                "title":"UAW",
+                "method":"POST",
+                "href":"/AccountManagement/formUpdateAllocationWeightsCase",
+                "fields":{
+                  "@class":"array",
+                  "fields":{
+                    "name":"ID",
+                    "type":"number",
+                    "value":"52495"
+                  }
+                }
+              }
+            },
+            "_id":{
+              "@type":"number",
+              "#text":"52495"
+            },
+            "_links":{
+              "self":{
+                "href":"/AccountManagement/AutosuggestionConfig/52495"
+              }
+            },
+            "CaseID":{
+              "@type":"number",
+              "#text":"52495"
+            },
+            "UserID":"MN52503",
+            "Fullname":"Morgan Nédélec",
+            "Directorate":"1655",
+            "MasterWeighting2ndExaminer":null,
+            "MasterWeightingChair":null,
+            "SlaveWeighting2ndExaminer":null,
+            "SlaveWeightingChair":null,
+            "CoachID":null,
+            "CoachFullname":null,
+            "Team":"50401"
+          }
+        },
+        {
+          "Autosuggestionconfig":{
+            "actions":{
+              "@class":"array",
+              "actions":{
+                "name":"formUpdateAllocationWeightsCase",
+                "title":"UAW",
+                "method":"POST",
+                "href":"/AccountManagement/formUpdateAllocationWeightsCase",
+                "fields":{
+                  "@class":"array",
+                  "fields":{
+                    "name":"ID",
+                    "type":"number",
+                    "value":"52769"
+                  }
+                }
+              }
+            },
+            "_id":{
+              "@type":"number",
+              "#text":"52769"
+            },
+            "_links":{
+              "self":{
+                "href":"/AccountManagement/AutosuggestionConfig/52769"
+              }
+            },
+            "CaseID":{
+              "@type":"number",
+              "#text":"52769"
+            },
+            "UserID":"LC53514",
+            "Fullname":"Lucian Chirvase",
+            "Directorate":"1655",
+            "MasterWeighting2ndExaminer":null,
+            "MasterWeightingChair":null,
+            "SlaveWeighting2ndExaminer":null,
+            "SlaveWeightingChair":null,
+            "CoachID":null,
+            "CoachFullname":null,
+            "Team":null
+          }
+        },
+        {
+          "Autosuggestionconfig":{
+            "actions":{
+              "@class":"array",
+              "actions":{
+                "name":"formUpdateAllocationWeightsCase",
+                "title":"UAW",
+                "method":"POST",
+                "href":"/AccountManagement/formUpdateAllocationWeightsCase",
+                "fields":{
+                  "@class":"array",
+                  "fields":{
+                    "name":"ID",
+                    "type":"number",
+                    "value":"52804"
+                  }
+                }
+              }
+            },
+            "_id":{
+              "@type":"number",
+              "#text":"52804"
+            },
+            "_links":{
+              "self":{
+                "href":"/AccountManagement/AutosuggestionConfig/52804"
+              }
+            },
+            "CaseID":{
+              "@type":"number",
+              "#text":"52804"
+            },
+            "UserID":"EDOEX19",
+            "Fullname":"Examiner 19 eDossier Testing",
+            "Directorate":"1655",
+            "MasterWeighting2ndExaminer":{
+              "@type":"number",
+              "#text":"2"
+            },
+            "MasterWeightingChair":{
+              "@type":"number",
+              "#text":"2"
+            },
+            "SlaveWeighting2ndExaminer":{
+              "@type":"number",
+              "#text":"2"
+            },
+            "SlaveWeightingChair":{
+              "@type":"number",
+              "#text":"1"
+            },
+            "CoachID":null,
+            "CoachFullname":null,
+            "Team":"50288"
+          }
+        },
+        {
+          "Autosuggestionconfig":{
+            "actions":{
+              "@class":"array",
+              "actions":{
+                "name":"formUpdateAllocationWeightsCase",
+                "title":"UAW",
+                "method":"POST",
+                "href":"/AccountManagement/formUpdateAllocationWeightsCase",
+                "fields":{
+                  "@class":"array",
+                  "fields":{
+                    "name":"ID",
+                    "type":"number",
+                    "value":"52927"
+                  }
+                }
+              }
+            },
+            "_id":{
+              "@type":"number",
+              "#text":"52927"
+            },
+            "_links":{
+              "self":{
+                "href":"/AccountManagement/AutosuggestionConfig/52927"
+              }
+            },
+            "CaseID":{
+              "@type":"number",
+              "#text":"52927"
+            },
+            "UserID":"DC53591",
+            "Fullname":"Adrian Ciubotariu",
+            "Directorate":"1655",
+            "MasterWeighting2ndExaminer":null,
+            "MasterWeightingChair":null,
+            "SlaveWeighting2ndExaminer":null,
+            "SlaveWeightingChair":null,
+            "CoachID":null,
+            "CoachFullname":null,
+            "Team":null
+          }
+        },
+        {
+          "Autosuggestionconfig":{
+            "actions":{
+              "@class":"array",
+              "actions":{
+                "name":"formUpdateAllocationWeightsCase",
+                "title":"UAW",
+                "method":"POST",
+                "href":"/AccountManagement/formUpdateAllocationWeightsCase",
+                "fields":{
+                  "@class":"array",
+                  "fields":{
+                    "name":"ID",
+                    "type":"number",
+                    "value":"53112"
+                  }
+                }
+              }
+            },
+            "_id":{
+              "@type":"number",
+              "#text":"53112"
+            },
+            "_links":{
+              "self":{
+                "href":"/AccountManagement/AutosuggestionConfig/53112"
+              }
+            },
+            "CaseID":{
+              "@type":"number",
+              "#text":"53112"
+            },
+            "UserID":"MB52592",
+            "Fullname":"Maarten Balzar",
+            "Directorate":"1655",
+            "MasterWeighting2ndExaminer":null,
+            "MasterWeightingChair":null,
+            "SlaveWeighting2ndExaminer":null,
+            "SlaveWeightingChair":null,
+            "CoachID":null,
+            "CoachFullname":null,
+            "Team":"50398"
+          }
+        },
+        {
+          "Autosuggestionconfig":{
+            "actions":{
+              "@class":"array",
+              "actions":{
+                "name":"formUpdateAllocationWeightsCase",
+                "title":"UAW",
+                "method":"POST",
+                "href":"/AccountManagement/formUpdateAllocationWeightsCase",
+                "fields":{
+                  "@class":"array",
+                  "fields":{
+                    "name":"ID",
+                    "type":"number",
+                    "value":"53160"
+                  }
+                }
+              }
+            },
+            "_id":{
+              "@type":"number",
+              "#text":"53160"
+            },
+            "_links":{
+              "self":{
+                "href":"/AccountManagement/AutosuggestionConfig/53160"
+              }
+            },
+            "CaseID":{
+              "@type":"number",
+              "#text":"53160"
+            },
+            "UserID":"BC03312",
+            "Fullname":"Benoît Claudel",
+            "Directorate":"1655",
+            "MasterWeighting2ndExaminer":null,
+            "MasterWeightingChair":null,
+            "SlaveWeighting2ndExaminer":null,
+            "SlaveWeightingChair":null,
+            "CoachID":null,
+            "CoachFullname":null,
+            "Team":"50411"
+          }
+        },
+        {
+          "Autosuggestionconfig":{
+            "actions":{
+              "@class":"array",
+              "actions":{
+                "name":"formUpdateAllocationWeightsCase",
+                "title":"UAW",
+                "method":"POST",
+                "href":"/AccountManagement/formUpdateAllocationWeightsCase",
+                "fields":{
+                  "@class":"array",
+                  "fields":{
+                    "name":"ID",
+                    "type":"number",
+                    "value":"53502"
+                  }
+                }
+              }
+            },
+            "_id":{
+              "@type":"number",
+              "#text":"53502"
+            },
+            "_links":{
+              "self":{
+                "href":"/AccountManagement/AutosuggestionConfig/53502"
+              }
+            },
+            "CaseID":{
+              "@type":"number",
+              "#text":"53502"
+            },
+            "UserID":"DS03253",
+            "Fullname":"Dirk Schwingel",
+            "Directorate":"1655",
+            "MasterWeighting2ndExaminer":null,
+            "MasterWeightingChair":null,
+            "SlaveWeighting2ndExaminer":null,
+            "SlaveWeightingChair":null,
+            "CoachID":null,
+            "CoachFullname":null,
+            "Team":"50412"
+          }
+        },
+        {
+          "Autosuggestionconfig":{
+            "actions":{
+              "@class":"array",
+              "actions":{
+                "name":"formUpdateAllocationWeightsCase",
+                "title":"UAW",
+                "method":"POST",
+                "href":"/AccountManagement/formUpdateAllocationWeightsCase",
+                "fields":{
+                  "@class":"array",
+                  "fields":{
+                    "name":"ID",
+                    "type":"number",
+                    "value":"53583"
+                  }
+                }
+              }
+            },
+            "_id":{
+              "@type":"number",
+              "#text":"53583"
+            },
+            "_links":{
+              "self":{
+                "href":"/AccountManagement/AutosuggestionConfig/53583"
+              }
+            },
+            "CaseID":{
+              "@type":"number",
+              "#text":"53583"
+            },
+            "UserID":"SS51679",
+            "Fullname":"Stephan Seide",
+            "Directorate":"1655",
+            "MasterWeighting2ndExaminer":null,
+            "MasterWeightingChair":null,
+            "SlaveWeighting2ndExaminer":null,
+            "SlaveWeightingChair":null,
+            "CoachID":null,
+            "CoachFullname":null,
+            "Team":"50288"
+          }
+        },
+        {
+          "Autosuggestionconfig":{
+            "actions":{
+              "@class":"array",
+              "actions":{
+                "name":"formUpdateAllocationWeightsCase",
+                "title":"UAW",
+                "method":"POST",
+                "href":"/AccountManagement/formUpdateAllocationWeightsCase",
+                "fields":{
+                  "@class":"array",
+                  "fields":{
+                    "name":"ID",
+                    "type":"number",
+                    "value":"54024"
+                  }
+                }
+              }
+            },
+            "_id":{
+              "@type":"number",
+              "#text":"54024"
+            },
+            "_links":{
+              "self":{
+                "href":"/AccountManagement/AutosuggestionConfig/54024"
+              }
+            },
+            "CaseID":{
+              "@type":"number",
+              "#text":"54024"
+            },
+            "UserID":"HV51675",
+            "Fullname":"Erik Van Leeuwen",
+            "Directorate":"1655",
+            "MasterWeighting2ndExaminer":null,
+            "MasterWeightingChair":null,
+            "SlaveWeighting2ndExaminer":null,
+            "SlaveWeightingChair":null,
+            "CoachID":null,
+            "CoachFullname":null,
+            "Team":"50790"
+          }
+        },
+        {
+          "Autosuggestionconfig":{
+            "actions":{
+              "@class":"array",
+              "actions":{
+                "name":"formUpdateAllocationWeightsCase",
+                "title":"UAW",
+                "method":"POST",
+                "href":"/AccountManagement/formUpdateAllocationWeightsCase",
+                "fields":{
+                  "@class":"array",
+                  "fields":{
+                    "name":"ID",
+                    "type":"number",
+                    "value":"54360"
+                  }
+                }
+              }
+            },
+            "_id":{
+              "@type":"number",
+              "#text":"54360"
+            },
+            "_links":{
+              "self":{
+                "href":"/AccountManagement/AutosuggestionConfig/54360"
+              }
+            },
+            "CaseID":{
+              "@type":"number",
+              "#text":"54360"
+            },
+            "UserID":"IK52868",
+            "Fullname":"Ismail Utku Kiyak",
+            "Directorate":"1655",
+            "MasterWeighting2ndExaminer":null,
+            "MasterWeightingChair":null,
+            "SlaveWeighting2ndExaminer":null,
+            "SlaveWeightingChair":null,
+            "CoachID":null,
+            "CoachFullname":null,
+            "Team":"50398"
+          }
+        },
+        {
+          "Autosuggestionconfig":{
+            "actions":{
+              "@class":"array",
+              "actions":{
+                "name":"formUpdateAllocationWeightsCase",
+                "title":"UAW",
+                "method":"POST",
+                "href":"/AccountManagement/formUpdateAllocationWeightsCase",
+                "fields":{
+                  "@class":"array",
+                  "fields":{
+                    "name":"ID",
+                    "type":"number",
+                    "value":"54467"
+                  }
+                }
+              }
+            },
+            "_id":{
+              "@type":"number",
+              "#text":"54467"
+            },
+            "_links":{
+              "self":{
+                "href":"/AccountManagement/AutosuggestionConfig/54467"
+              }
+            },
+            "CaseID":{
+              "@type":"number",
+              "#text":"54467"
+            },
+            "UserID":"AR50576",
+            "Fullname":"Ángel Rojo Galindo",
+            "Directorate":"1655",
+            "MasterWeighting2ndExaminer":null,
+            "MasterWeightingChair":null,
+            "SlaveWeighting2ndExaminer":null,
+            "SlaveWeightingChair":null,
+            "CoachID":null,
+            "CoachFullname":null,
+            "Team":"50401"
+          }
+        },
+        {
+          "Autosuggestionconfig":{
+            "actions":{
+              "@class":"array",
+              "actions":{
+                "name":"formUpdateAllocationWeightsCase",
+                "title":"UAW",
+                "method":"POST",
+                "href":"/AccountManagement/formUpdateAllocationWeightsCase",
+                "fields":{
+                  "@class":"array",
+                  "fields":{
+                    "name":"ID",
+                    "type":"number",
+                    "value":"54615"
+                  }
+                }
+              }
+            },
+            "_id":{
+              "@type":"number",
+              "#text":"54615"
+            },
+            "_links":{
+              "self":{
+                "href":"/AccountManagement/AutosuggestionConfig/54615"
+              }
+            },
+            "CaseID":{
+              "@type":"number",
+              "#text":"54615"
+            },
+            "UserID":"LB51908",
+            "Fullname":"Lucía Batres Arnal",
+            "Directorate":"1655",
+            "MasterWeighting2ndExaminer":null,
+            "MasterWeightingChair":null,
+            "SlaveWeighting2ndExaminer":null,
+            "SlaveWeightingChair":null,
+            "CoachID":null,
+            "CoachFullname":null,
+            "Team":"50398"
+          }
+        }
+      ]
+    }
+  }
+}
