@@ -1,5 +1,0 @@
-{
-	"EVENT_POST":"http://edfs-services-i.internal.epo.org/account/restServices/PostLegacyEventV1/{EventCode}/{ParameterType}/{ParameterValue}",
-	"DOCUMENT_CREATE":"http://edfs-services-i.internal.epo.org/account/restServices/PostDocumentV1",
-	"DOCUMENT_UPLOAD":"http://edfs-services-i.internal.epo.org/account/restServices/DocumentsV2/{DocumentId}"
-}
