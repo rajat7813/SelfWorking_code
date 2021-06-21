@@ -1,0 +1,50 @@
+AWSTemplateFormatVersion: 2010-09-09
+
+Description: > 
+  Creates the documents bucket for AMC EADR
+
+Parameters:
+  NamePrefix:
+    Description: Prefix added to the name of resources created in this stack
+    Type: String
+    Default: amc-eadr
+
+Resources:
+  DocumentsBucket:
+    Type: AWS::S3::Bucket
+    DeletionPolicy: Retain
+    Properties:
+      BucketName: !Sub ${NamePrefix}-documents-${AWS::Region}-${AWS::AccountId}
+      AccessControl: Private
+      BucketEncryption:
+        ServerSideEncryptionConfiguration: 
+          - ServerSideEncryptionByDefault:
+              SSEAlgorithm: AES256          
+
+  DocumentsBucketPolicy:
+    Type: AWS::S3::BucketPolicy
+    Properties:
+      Bucket: !Ref DocumentsBucket
+      PolicyDocument:
+        Id: !Sub ${NamePrefix}-DocumentsBucketPolicy
+        Version: 2012-10-17
+        Statement:
+          - Effect: Allow
+            Principal:
+              AWS: !Sub arn:aws:iam::${AWS::AccountId}:root
+            Action: 
+              - s3:ListBucket
+              - s3:PutObject
+              - s3:GetObject
+              - s3:DeleteObject
+            Resource: 
+              - !Sub arn:aws:s3:::${DocumentsBucket}
+              - !Sub arn:aws:s3:::${DocumentsBucket}/*
+
+Outputs:
+  DocumentsBucket:
+    Description: "The name of the document bucket"
+    Value: !Ref DocumentsBucket
+
+  DocumentsBucketArn:
+    Value: !GetAtt DocumentsBucket.Arn    

@@ -1,0 +1,46 @@
+version: 0.2
+
+env:
+  variables:
+    RELEASE: 19.09.01
+
+phases:
+  install:
+    runtime-versions:
+      python: 3.7
+  pre_build:
+    commands:
+      - echo Retrieving information from atifacts...
+      - ls -al $CODEBUILD_SRC_DIR
+      - ls -al $CODEBUILD_SRC_DIR_EcrArtifactBiz
+      - ls -al $CODEBUILD_SRC_DIR_EcrArtifactWeb
+      - ls -al $CODEBUILD_SRC_DIR_EcrArtifactNotification
+      - SHORT_SOURCE_VERSION=$(echo $CODEBUILD_RESOLVED_SOURCE_VERSION | head -c 8)
+      - VERSION=$RELEASE.$SHORT_SOURCE_VERSION
+      - IAP_BIZ_TAG=$(cat $CODEBUILD_SRC_DIR_EcrArtifactBiz/imageDetail.json | jq -r 'if (.ImageTags[0] != "latest") then .ImageTags[0] else .ImageTags[1] end')
+      - IAP_WEB_TAG=$(cat $CODEBUILD_SRC_DIR_EcrArtifactWeb/imageDetail.json | jq -r 'if (.ImageTags[0] != "latest") then .ImageTags[0] else .ImageTags[1] end')
+      - IAP_NOTIFICATION_TAG=$(cat $CODEBUILD_SRC_DIR_EcrArtifactNotification/imageDetail.json | jq -r 'if (.ImageTags[0] != "latest") then .ImageTags[0] else .ImageTags[1] end')
+      - echo $IAP_BIZ_TAG
+      - echo $IAP_WEB_TAG
+  build:
+    commands:
+      - echo Building the parameters file...
+      - ARTIFACTS_BUCKET=${PREFIX}-artifacts-${AWS_REGION}-${ARTIFACTS_ACCOUNT}
+      # AWS CloudFormation Artifacts (Template Configuration File)
+      # https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/continuous-delivery-codepipeline-cfn-artifacts.html
+      - echo "{\"Parameters\":{\"Version\":\"$VERSION\", \"IapBizTag\":\"$IAP_BIZ_TAG\", \"IapWebTag\":\"$IAP_WEB_TAG\", \"IapNotificationTag\":\"$IAP_NOTIFICATION_TAG\"}}" > templates/app/master-parameters.json
+      - cat templates/app/master-parameters.json
+
+  post_build:
+    commands:
+      - echo Copying CloudFormation templates to S3
+      - aws s3 cp --recursive templates s3://$ARTIFACTS_BUCKET/$VERSION/templates/
+
+artifacts:
+  files:
+    - buildspec.yml
+    - templates/app/master.yml
+    - templates/app/master-parameters.json
+
+  name: BuildArtifact
+ 

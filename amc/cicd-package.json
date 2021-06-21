@@ -1,0 +1,18 @@
+{
+    "packageType": "v0.2",
+    "systemName": "amc-itcase",
+    "systemVersion": "20.06",
+    "codeRepository": {
+        "type": "SVN",
+        "url": "CODE_REPOSITORY_URL",
+        "branch": "BRANCH_NAME",
+        "commit": "COMMIT_ID"
+    },
+    "build": {
+        "number": "BUILD_NUMBER",
+        "date": "BUILD_DATE_TIME"
+    },
+    "deploy": {
+        "infrastructure": "aws"
+    }
+}

@@ -1,0 +1,107 @@
+AWSTemplateFormatVersion: 2010-09-09
+Description: >-
+  Monitoring for IAP
+
+Parameters:
+  ClusterName:
+    Type: String
+
+  ServiceName:
+    Type: String
+
+  TargetGroup:
+    Type: String
+
+  Alb:
+    Type: String
+    
+  Environment:
+    Type: String    
+    
+Mappings:
+  EnvironmentMap:
+    dev:
+      AlarmsSender: iapnotif.arcdev@wipo.int
+      LogsSender: iapnotif.arcdev@wipo.int
+    acc:
+      AlarmsSender: iaptnotif.arctest@wipo.int
+      LogsSender: iaptnotif.arctest@wipo.int
+    prd:
+      AlarmsSender: iap@wipo.int
+      LogsSender: iap@wipo.int
+    
+
+Resources:    
+  MonitoringAlarmsSenderIap:
+    Type: AWS::SSM::Parameter
+    Properties:
+      Name: "/iap/alarms/sender"
+      Type: String
+      Value: !FindInMap [EnvironmentMap, !Ref Environment, AlarmsSender]
+      Description: SSM Parameter for ManageAlarms lambda Email iap-sender
+
+  MonitoringAlarmsRecipientsIap:
+    Type: AWS::SSM::Parameter
+    Properties:
+      Name: "/iap/alarms/recipients"
+      Type: StringList
+      Value: "lotfi.khodja@wipo.int,rajat.arora@wipo.int,vishal.ahirwar@wipo.int,ravi.balakrishnan@wipo.int,snehil.sharma@wipo.int,anuradha.choudhary@wipo.int,manisha.narula@wipo.int"
+      Description: SSM Parameter for ManageAlarms lambda Email iap-recipients
+
+  MonitoringLogsSenderIap:
+    Type: AWS::SSM::Parameter
+    Properties:
+      Name: "/iap/logs/sender"
+      Type: String
+      Value: !FindInMap [EnvironmentMap, !Ref Environment, LogsSender]
+      Description: SSM Parameter for ManageLogEvents Email iap-sender
+
+  MonitoringLogsRecipientsIap:
+    Type: AWS::SSM::Parameter
+    Properties:
+      Name: "/iap/logs/recipients"
+      Type: StringList
+      Value: "lotfi.khodja@wipo.int,rajat.arora@wipo.int,vishal.ahirwar@wipo.int,ravi.balakrishnan@wipo.int,snehil.sharma@wipo.int,anuradha.choudhary@wipo.int,manisha.narula@wipo.int"
+      Description: SSM Parameter for ManageLogEvents Email iap-recipients
+
+  HealthyHostAlarm:
+    Type: AWS::CloudWatch::Alarm
+    Properties:
+      AlarmDescription: cases where HealthyHostCount is less than 1
+      AlarmName: "iap-healthyhost-alarm"
+      AlarmActions:
+      - '{{resolve:secretsmanager:pct-common-healthyHost-channel}}'
+      MetricName: HealthyHostCount
+      Namespace: AWS/ApplicationELB
+      Statistic: Minimum
+      Period: 60
+      EvaluationPeriods: 1
+      Threshold: 1
+      ComparisonOperator: LessThanThreshold
+      Dimensions:
+      - Name: TargetGroup
+        Value: !Ref TargetGroup
+      - Name: LoadBalancer
+        Value: !Ref Alb
+
+  MemoryConsumptionAlarm:
+    Type: AWS::CloudWatch::Alarm
+    Properties:
+      AlarmName: "iap-memory-alarm"
+      AlarmDescription: memory consumption threshold 
+      AlarmActions:
+      - '{{resolve:secretsmanager:pct-common-memoryConsumption-channel}}'
+      MetricName: MemoryUtilization
+      Namespace: AWS/ECS
+      Statistic: Average
+      Period: 60
+      EvaluationPeriods: 1
+      Threshold: 90
+      ComparisonOperator: GreaterThanThreshold
+      Dimensions:
+      - Name: ClusterName
+        Value: !Ref ClusterName
+      - Name: ServiceName
+        Value: !Ref ServiceName
+        
+

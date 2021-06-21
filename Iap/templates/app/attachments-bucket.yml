@@ -1,0 +1,34 @@
+AWSTemplateFormatVersion: 2010-09-09
+
+Description: > 
+  Creates the attachments bucket for IAP notifications
+
+Parameters:
+  NamePrefix:
+    Description: Prefix added to the name of resources created in this stack
+    Type: String
+    Default: iap-app
+
+Resources:
+  AttachmentsBucket:
+    Type: AWS::S3::Bucket
+    DeletionPolicy: Retain
+    Properties:
+      BucketName: !Sub ${NamePrefix}-attachments-${AWS::Region}-${AWS::AccountId}
+      BucketEncryption:
+        ServerSideEncryptionConfiguration: 
+          - ServerSideEncryptionByDefault:
+              SSEAlgorithm: AES256 
+      PublicAccessBlockConfiguration:
+        BlockPublicAcls : true
+        BlockPublicPolicy : true
+        IgnorePublicAcls : true
+        RestrictPublicBuckets : true
+
+Outputs:
+  AttachmentsBucket:
+    Description: "The name of the document bucket"
+    Value: !Ref AttachmentsBucket
+
+  AttachmentsBucketArn:
+    Value: !GetAtt AttachmentsBucket.Arn    

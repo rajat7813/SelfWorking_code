@@ -1,0 +1,351 @@
+AWSTemplateFormatVersion: 2010-09-09
+
+Description: >
+  Deploys the IAP AWS resources
+
+Parameters:
+
+  Environment:
+    Description: "Environment type (controls various parameters of the deployment, ip ranges, size of the EC2 instances, tags, etc.)"
+    Type: String
+    AllowedValues: [dev, acc, prd]
+    Default: dev
+
+  NamePrefix:
+    Description: Prefix added to the name of resources created in this stack (must be the same as the one of the pipeline)
+    Type: String
+
+  ArtifactsAccount:
+    Type: String
+    Description: The account is where the artifact are stored (s3, ecr)
+    Default: 770725503646
+
+  Version:
+    Type: String
+    Description: The version id of the service
+
+  IapBizTag:
+    Type: String
+    Description: The tag of the IAP Business docker image to be deployed
+
+  IapWebTag:
+    Type: String
+    Description: The tag of the IAP Web docker image to be deployed
+
+  IapNotificationTag:
+    Type: String
+    Description: The tag of the IAP Notification docker image to be deployed
+
+Conditions:
+
+  IsNotDev: !Not [!Equals [!Ref Environment, dev]]
+  IsPrd: !Equals [!Ref Environment, prd]
+
+Mappings:
+
+  EnvironmentMap:
+
+    dev:
+      VpcId: vpc-0aac3d4f7f8640212
+      VpcCidrBlock: 10.44.56.0/23
+      PublicSubnet1Id: subnet-069176d915f004f02
+      PublicSubnet2Id: subnet-0b9cbd87b0b1100d7
+      AppSubnet1Id: subnet-0a15b55436deb7c9b
+      AppSubnet2Id: subnet-001602e2e88b5c156
+      PrivateRouteTable: rtb-07e5d82cbcd853468
+      PrivateNamespaceId: ns-dvgxiimeflizurlr
+      DesiredInstances: 1
+      ContainerType: medium
+      DBInstanceId: ''
+      DBHostSSMParameter: /iap/db/host
+      DBUserSSMParameter: /iap/db/user
+      DBPasswordSSMParameter: /iap/db/password
+      EnableHttps: true
+      DnsSubDomain: 'iap'
+      HostedZoneName: pct.dev.web1.wipo.int.
+      #CertificateArn: arn:aws:acm:eu-central-1:770725503646:certificate/65108e88-5d82-49c6-9562-f790862b63e4
+      CertificateArn: arn:aws:acm:eu-central-1:770725503646:certificate/9ef14583-8da5-4484-8724-8aa41fc1cdae
+      LogRetentionDays: 7
+      S3ImageBucket: iap-app-images-eu-central-1-770725503646
+      WorkingEnvironment: DEV
+      NavBarUrl: https://www3dev.wipo.int/webcomponents
+      WipoAccountUrl: https://www3dev.wipo.int/wipoaccounts
+      PaiDomain: pai.pct.dev.web1.wipo.int
+      IapDomain: iap.pct.dev.web1.wipo.int
+      WipoAcademyToken: bbea52bd1ee941958eedbe818ce6926d
+      WipoAcademyURL: https://welcdev.wipo.int/lms/webservice/rest/server.php
+      ResolverOutboundRuleId: rslvr-rr-564cf911bf81487e9
+
+    acc:
+      VpcId: vpc-0c283c410f36c4a66
+      VpcCidrBlock: 10.43.158.0/23
+      PublicSubnet1Id: subnet-02d1d8977a1bc0877
+      PublicSubnet2Id: subnet-0478ece73ec2fc423
+      AppSubnet1Id: subnet-09f46d3e398dc46ab
+      AppSubnet2Id: subnet-00cb5bf46283a6528
+      PrivateRouteTable: rtb-03016a72eb428dbc5
+      PrivateNamespaceId: ns-7e47ydapsxcxaxuy
+      DesiredInstances: 1
+      ContainerType: medium
+      DBInstanceId: iap-test
+      DBHostSSMParameter: /iap/test/db/host
+      DBUserSSMParameter: /iap/test/db/user
+      DBPasswordSSMParameter: /iap/test/db/password
+      EnableHttps: true
+      DnsSubDomain: iaptest
+      HostedZoneName: pct.acc.web1.wipo.int.
+      CertificateArn: arn:aws:acm:eu-central-1:746146769806:certificate/3a95d75b-2da7-4a49-bab7-e5569b5f99c3
+      LogRetentionDays: 7
+      S3ImageBucket: iap-app-images-eu-central-1-770725503646
+      WorkingEnvironment: TEST
+      NavBarUrl: https://www5.wipo.int/webcomponents
+      WipoAccountUrl: https://www5.wipo.int/wipoaccounts
+      PaiDomain: ''
+      IapDomain: iaptest.pct.acc.web1.wipo.int
+      WipoAcademyToken: 1cd49ff7a13d39d39c5f2836bc95f209
+      WipoAcademyURL: https://welctest.wipo.int/lms/webservice/rest/server.php
+      ResolverOutboundRuleId: rslvr-rr-564cf911bf81487e9
+
+
+    prd:
+      VpcId: vpc-012836958534ddb36
+      VpcCidrBlock: 10.43.54.0/23
+      PublicSubnet1Id: subnet-0be389f2eb41c68c1
+      PublicSubnet2Id: subnet-0913f71cdb41243cf
+      AppSubnet1Id: subnet-0768af4152942e7b1
+      AppSubnet2Id: subnet-02dc99fadd4619b4c
+      PrivateRouteTable: rtb-0a610e424ce8be012
+      PrivateNamespaceId: ns-krbinhectdacdyae
+      DesiredInstances: 1
+      ContainerType: medium
+      DBInstanceId: iap
+      DBHostSSMParameter: /iap/prd/db/host
+      DBUserSSMParameter: /iap/prd/db/user
+      DBPasswordSSMParameter: /iap/prd/db/password
+      EnableHttps: true
+      DnsSubDomain: app
+      HostedZoneName: iap.pct.prd.web1.wipo.int.
+      CertificateArn: arn:aws:acm:eu-central-1:239241585122:certificate/0c756832-f854-4031-9694-a9d8751e89cd
+      LogRetentionDays: 365
+      S3ImageBucket: iap-app-images-eu-central-1-770725503646
+      WorkingEnvironment: PROD
+      NavBarUrl: https://webcomponents.wipo.int
+      WipoAccountUrl: https://www3.wipo.int/wipoaccounts
+      PaiDomain: pai.wipo.int
+      IapDomain: iap.wipo.int
+      WipoAcademyToken: 9f0d8f801ca881b5c8dc2d2e4515b805
+      WipoAcademyURL: https://welc.wipo.int/lms/webservice/rest/server.php
+      ResolverOutboundRuleId: rslvr-rr-564cf911bf81487e9
+
+
+Resources:
+
+  # The artifacts bucket is s3://${NamePrefix}-artifacts-${AWS::Region}-${ArtifactsAccount}
+  # The logs bucket is s3://${NamePrefix}-logs-${AWS::Region}-${AWS::AccountId}
+  # The SSM parameters for the DB are iap/host, iap/user, iap/password
+  # The SSM parameters for the OIDC are /iap/oidc/client-id, /iap/oidc/client-secret
+
+  S3Endpoint:
+    Type: AWS::EC2::VPCEndpoint
+    Properties:
+      PolicyDocument:
+        Version: "2012-10-17"
+        Statement:
+          - Effect: Allow
+            Principal: "*"
+            Action:
+              - s3:ListBucket
+              - s3:ListObject
+              - s3:GetObject
+              - s3:PutObject
+            Resource:
+              - 'arn:aws:s3:::*'
+          - Effect: Allow
+            Principal: "*"
+            Action:
+              - s3:DeleteObject
+            Resource:
+              - !Sub arn:aws:s3:::${AttachmentsBucket.Outputs.AttachmentsBucket}/*   
+      RouteTableIds:
+        - !FindInMap [EnvironmentMap, !Ref Environment, PrivateRouteTable]
+      ServiceName: !Sub com.amazonaws.${AWS::Region}.s3
+      VpcId: !FindInMap [EnvironmentMap, !Ref Environment, VpcId]
+
+  Alb:
+    Type: AWS::CloudFormation::Stack
+    Properties:
+      TemplateURL: !Sub https://${NamePrefix}-artifacts-${AWS::Region}-${ArtifactsAccount}.s3.amazonaws.com/${Version}/templates/app/alb.yml
+      Parameters:
+        NamePrefix: !Ref NamePrefix
+        VpcId: !FindInMap [EnvironmentMap, !Ref Environment, VpcId]
+        VpcCidrBlock: !FindInMap [EnvironmentMap, !Ref Environment, VpcCidrBlock]
+        PublicSubnet1: !FindInMap [EnvironmentMap, !Ref Environment, PublicSubnet1Id]
+        PublicSubnet2: !FindInMap [EnvironmentMap, !Ref Environment, PublicSubnet2Id]
+        EnableHttps: !FindInMap [EnvironmentMap, !Ref Environment, EnableHttps]
+        DnsSubDomain: !FindInMap [EnvironmentMap, !Ref Environment, DnsSubDomain]
+        HostedZoneName: !FindInMap [EnvironmentMap, !Ref Environment, HostedZoneName]
+        CertificateArn: !FindInMap [EnvironmentMap, !Ref Environment, CertificateArn]
+        LogsBucket: !Sub ${NamePrefix}-logs-${AWS::Region}-${AWS::AccountId}
+        Environment: !Ref Environment
+        PaiDomain: !FindInMap [EnvironmentMap, !Ref Environment, PaiDomain]
+        IapDomain: !FindInMap [EnvironmentMap, !Ref Environment, IapDomain]
+
+      Tags:
+        - Key: environment
+          Value: !Ref Environment
+        - Key: technical-owner
+          Value: lotfi.khodja@wipo.int
+        - Key: business-owner
+          Value: allison.mages@wipo.int
+        - Key: service
+          Value: iap
+        - Key: budget-unit-code
+          Value: '0122'
+        - Key: business-impact-level
+          Value: '2'
+        - Key: data-classification
+          Value: for_offical_use_only
+
+  IapApp:
+    Type: AWS::CloudFormation::Stack
+    Properties:
+      TemplateURL: !Sub https://${NamePrefix}-artifacts-${AWS::Region}-${ArtifactsAccount}.s3.amazonaws.com/${Version}/templates/app/iap-app.yml
+      Parameters:
+        NamePrefix: !Ref NamePrefix
+        ArtifactsAccount: !Ref ArtifactsAccount
+        VpcId: !FindInMap [EnvironmentMap, !Ref Environment, VpcId]
+        VpcCidrBlock: !FindInMap [EnvironmentMap, !Ref Environment, VpcCidrBlock]
+        Subnet1: !FindInMap [EnvironmentMap, !Ref Environment, AppSubnet1Id]
+        Subnet2: !FindInMap [EnvironmentMap, !Ref Environment, AppSubnet2Id]
+        DesiredInstances: !FindInMap [EnvironmentMap, !Ref Environment, DesiredInstances]
+        ContainerType: !FindInMap [EnvironmentMap, !Ref Environment, ContainerType]
+        #OidcDiscoveryBaseUrl: !If [IsPrd, 'https://www3.wipo.int', 'https://www5.wipo.int']
+        OidcDiscoveryBaseUrl: !If [IsPrd, 'https://www3.wipo.int', !If [IsNotDev, 'https://www5.wipo.int', 'https://logindev.wipo.int']]
+        OidcClientBaseUrl: !If [IsPrd, 'https://iap.wipo.int', !GetAtt Alb.Outputs.Url]
+        ListenerArn: !GetAtt Alb.Outputs.ListenerArn
+        PrivateNamespaceId: !FindInMap [EnvironmentMap, !Ref Environment, PrivateNamespaceId]
+        BizTag: !Ref IapBizTag
+        WebTag: !Ref IapWebTag
+        NotificationTag: !Ref IapNotificationTag
+        DBHostSSMParameter: !FindInMap [EnvironmentMap, !Ref Environment, DBHostSSMParameter]
+        DBUserSSMParameter: !FindInMap [EnvironmentMap, !Ref Environment, DBUserSSMParameter]
+        DBPasswordSSMParameter: !FindInMap [EnvironmentMap, !Ref Environment, DBPasswordSSMParameter]
+        OIDCClientIdSSMParameter: /iap/oidc/client-id
+        OIDCClientSecretSSMParameter: /iap/oidc/client-secret
+        KMSJavaKeySSMParameter: /iap/kms/java-key-arn
+        LogRetentionDays: !FindInMap [EnvironmentMap, !Ref Environment, LogRetentionDays]
+        S3ImageBucket: !FindInMap [EnvironmentMap, !Ref Environment, S3ImageBucket]
+        WorkingEnvironment: !FindInMap [EnvironmentMap, !Ref Environment, WorkingEnvironment]
+        NavBarUrl: !FindInMap [EnvironmentMap, !Ref Environment, NavBarUrl]
+        WipoAccountUrl: !FindInMap [EnvironmentMap, !Ref Environment, WipoAccountUrl]
+        IapDomain: !FindInMap [EnvironmentMap, !Ref Environment, IapDomain]
+        WipoAcademyToken: !FindInMap [EnvironmentMap, !Ref Environment, WipoAcademyToken]
+        WipoAcademyURL: !FindInMap [EnvironmentMap, !Ref Environment, WipoAcademyURL]
+        AttachmentsBucket: !Sub '${AttachmentsBucket.Outputs.AttachmentsBucket}'
+      Tags:
+        - Key: environment
+          Value: !Ref Environment
+        - Key: technical-owner
+          Value: lotfi.khodja@wipo.int
+        - Key: business-owner
+          Value: allison.mages@wipo.int
+        - Key: service
+          Value: iap
+        - Key: budget-unit-code
+          Value: '0122'
+        - Key: business-impact-level
+          Value: '2'
+        - Key: data-classification
+          Value: for_offical_use_only
+
+  AttachmentsBucket:
+    Type: AWS::CloudFormation::Stack
+    Properties:
+      TemplateURL: !Sub https://${NamePrefix}-artifacts-${AWS::Region}-${ArtifactsAccount}.s3.amazonaws.com/${Version}/templates/app/attachments-bucket.yml
+      Parameters:
+        NamePrefix: !Ref NamePrefix
+
+  Dashboards:
+    Type: AWS::CloudFormation::Stack
+    Condition: IsNotDev
+    Properties:
+      TemplateURL: !Sub https://${NamePrefix}-artifacts-${AWS::Region}-${ArtifactsAccount}.s3.amazonaws.com/${Version}/templates/app/dashboards.yml
+      Parameters:
+        NamePrefix: !Ref NamePrefix
+        Alb: !GetAtt Alb.Outputs.Name
+        DBInstanceId: !FindInMap [EnvironmentMap, !Ref Environment, DBInstanceId]
+        EcsClusterName: !GetAtt IapApp.Outputs.ClusterName
+        EcsServiceName: !GetAtt IapApp.Outputs.ServiceName
+      Tags:
+        - Key: environment
+          Value: !Ref Environment
+        - Key: technical-owner
+          Value: lotfi.khodja@wipo.int
+        - Key: business-owner
+          Value: allison.mages@wipo.int
+        - Key: service
+          Value: iap
+        - Key: budget-unit-code
+          Value: '0122'
+        - Key: business-impact-level
+          Value: '2'
+        - Key: data-classification
+          Value: for_offical_use_only
+
+  Alarms:
+    Type: AWS::CloudFormation::Stack
+    Condition: IsNotDev
+    Properties:
+      TemplateURL: !Sub https://${NamePrefix}-artifacts-${AWS::Region}-${ArtifactsAccount}.s3.amazonaws.com/${Version}/templates/app/alarms.yml
+      Parameters:
+        NamePrefix: !Ref NamePrefix
+        Alb: !GetAtt Alb.Outputs.Name
+        DBInstanceId: !FindInMap [EnvironmentMap, !Ref Environment, DBInstanceId]
+      Tags:
+        - Key: environment
+          Value: !Ref Environment
+        - Key: technical-owner
+          Value: lotfi.khodja@wipo.int
+        - Key: business-owner
+          Value: allison.mages@wipo.int
+        - Key: service
+          Value: iap
+        - Key: budget-unit-code
+          Value: '0122'
+        - Key: business-impact-level
+          Value: '2'
+        - Key: data-classification
+          Value: for_offical_use_only
+
+  Monitoring:
+    Type: AWS::CloudFormation::Stack
+    Properties:
+      TemplateURL: !Sub https://${NamePrefix}-artifacts-${AWS::Region}-${ArtifactsAccount}.s3.amazonaws.com/${Version}/templates/app/common-monitoring.yml
+      Parameters:
+        Alb: !GetAtt Alb.Outputs.FullName
+        ClusterName: !GetAtt IapApp.Outputs.ClusterName
+        ServiceName: !GetAtt IapApp.Outputs.ServiceName
+        TargetGroup: !GetAtt IapApp.Outputs.TargetGroup
+        Environment: !Ref Environment
+      Tags:
+        - Key: environment
+          Value: !Ref Environment
+        - Key: technical-owner
+          Value: lotfi.khodja@wipo.int
+        - Key: business-owner
+          Value: allison.mages@wipo.int
+        - Key: service
+          Value: iap
+        - Key: budget-unit-code
+          Value: '0122'
+        - Key: business-impact-level
+          Value: '2'
+        - Key: data-classification
+          Value: for_offical_use_only
+
+
+Outputs:
+
+  AlbDNSName:
+    Description: "The DNS Name of the Alb"
+    Value: !GetAtt Alb.Outputs.DNSName

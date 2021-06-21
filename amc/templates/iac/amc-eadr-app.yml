@@ -1,0 +1,415 @@
+AWSTemplateFormatVersion: 2010-09-09
+
+Description: >
+    This template deploys the App ECS resources
+
+Parameters:
+
+  NamePrefix:
+    Description: Prefix added to the name of resources created in this stack
+    Type: String
+
+  ArtifactsAccount:
+    Type: String
+    Description: The account is where the artifact are stored (s3, ecr)
+    Default: 469750137758
+
+  VpcId:
+    Type: AWS::EC2::VPC::Id
+    Description: The Vpc Id
+
+  VpcCidrBlock:
+    Description: 'The CIDR Block for the VPC'
+    Type: String
+    AllowedPattern: '^((\d{1,3})\.){3}\d{1,3}/\d{1,2}$'
+
+  Subnets:
+    Description: "Set of subnets where the load balancer will be deployed"
+    Type: List<AWS::EC2::Subnet::Id>
+    Description: Subnets in which the load balancer will be deployed
+    
+  OidcDiscoveryBaseUrl:
+    Type: String
+    Description: The base URL of the OIDC
+
+  OidcClientBaseUrl:
+    Type: String
+    Description: The base URL to pass to the OIDC for redirections    
+    
+  DesiredInstances:
+    Description: Desired number of instances that will be running (spread across all AZs)
+    Type: String
+    Default: 1  
+
+  ContainerType:
+    Description: low for DEV, high for LAB and PROD
+    Type: String
+    Default: small
+    AllowedValues: [micro, small, medium, large]
+
+  MaxInstances:
+    Description: Max number instances that will be running (spread across all AZs)
+    Type: String
+    Default: 1    
+    
+  ListenerArn:
+    Type: String
+    Description: The Arn of the Application Load Balancer listner
+
+#  PrivateNamespaceId:
+#    Type: String
+#    Description: API calls and DNS queries in VPCs 
+    
+  WebTag:
+    Type: String
+    Description: The tag of the Web docker image to be deployed
+
+  LogRetentionDays:
+    Type: Number
+    Description: Number of days of Log retention of CloudWatch.
+    Default: 7
+    AllowedValues: [1, 3, 5, 7, 14, 30, 60, 90, 120, 150, 180, 365, 400, 545, 731, 1827, 3653]
+    
+  DocumentsBucket:
+    Type: String
+    Description: The name of the documents bucket
+    
+  EadrAppUrl:
+    Type: String
+    Description: The base URL of the application  
+    
+  ElasticsearchEndpointUrl:
+    Type: String
+    Description: Elasticsearch Endpoint URL
+
+  DBHostSSMParameter:
+    Type: AWS::SSM::Parameter::Value<String>
+    Description: PostgreSQL RDS DB Hostname
+
+  DBUserSSMParameter:
+    Type: AWS::SSM::Parameter::Value<String>
+    Description: PostgreSQL RDS DB User
+
+  DBPasswordSSMParameter:
+    Type: AWS::SSM::Parameter::Name
+    Description: PostgreSQL RDS DB User password
+
+  OIDCClientIdSSMParameter:
+    Type: AWS::SSM::Parameter::Value<String>
+    Description: The SSM parameter name for the OIDC client id
+
+  OIDCClientSecretSSMParameter:
+    Type: AWS::SSM::Parameter::Name
+    Description: The SSM parameter name for the OIDC client secret 
+    
+  SESRoleArnSSMParameter:
+    Type: AWS::SSM::Parameter::Value<String>
+    Description: The SSM parameter name for the role used to send emails with SES
+    Default: /amc/eadr/ses/role-arn      
+
+Mappings:
+  ContainerTypeMap:
+    micro:
+      Cpu: 256
+      Memory: 512  
+    small:
+      Cpu: 512
+      Memory: 1024
+    medium:
+      Cpu: 1024
+      Memory: 2048
+    large:
+      Cpu: 2048
+      Memory: 4096
+
+Resources:
+
+  HttpListenerRule:
+    Type: AWS::ElasticLoadBalancingV2::ListenerRule
+    Properties: 
+      Actions: 
+        - Type: forward
+          TargetGroupArn: !Ref TargetGroup
+      Conditions: 
+        - Field: path-pattern
+          Values: 
+            - '/*'
+      ListenerArn: !Ref ListenerArn
+      Priority: 30
+
+  TargetGroup:
+    Type: AWS::ElasticLoadBalancingV2::TargetGroup
+    Properties:
+      VpcId: !Ref VpcId
+      Port: 8080
+      Protocol: HTTP
+      TargetType: ip
+      Matcher: 
+        HttpCode: 200
+      HealthCheckPath: /eadr/health
+      HealthCheckProtocol: HTTP
+      HealthCheckIntervalSeconds: 30
+      HealthyThresholdCount: 2
+      UnhealthyThresholdCount: 5
+      TargetGroupAttributes: 
+        - Key: deregistration_delay.timeout_seconds
+          Value: "30"
+        - Key: stickiness.enabled
+          Value: 'true'
+        - Key: stickiness.lb_cookie.duration_seconds
+          Value: '3600'
+
+  Cluster:
+    Type: AWS::ECS::Cluster
+    Properties:
+      ClusterName: !Sub ${NamePrefix}-cluster
+
+  TaskExecutionRole:
+    Type: AWS::IAM::Role
+    Properties:
+      Path: /
+      AssumeRolePolicyDocument:
+        Version: 2012-10-17
+        Statement:
+          - Action: sts:AssumeRole
+            Effect: Allow
+            Principal:
+              Service: 
+                - ecs-tasks.amazonaws.com
+      ManagedPolicyArns:
+        - arn:aws:iam::aws:policy/service-role/AmazonECSTaskExecutionRolePolicy
+        - arn:aws:iam::aws:policy/AmazonEC2ContainerRegistryReadOnly
+        - arn:aws:iam::aws:policy/AmazonSSMReadOnlyAccess
+        - arn:aws:iam::aws:policy/AmazonS3ReadOnlyAccess
+      #PermissionsBoundary: !Sub arn:aws:iam::${AWS::AccountId}:policy/WIPO-PermissionsBoundary
+
+  TaskAPIRole:
+    Type: AWS::IAM::Role
+    Properties:
+      Path: /
+      AssumeRolePolicyDocument:
+        Version: 2012-10-17
+        Statement:
+          - Action: sts:AssumeRole
+            Effect: Allow
+            Principal:
+              Service: 
+                - ecs-tasks.amazonaws.com
+      ManagedPolicyArns:
+        - arn:aws:iam::aws:policy/service-role/AmazonECSTaskExecutionRolePolicy
+        - arn:aws:iam::aws:policy/AmazonS3ReadOnlyAccess
+      #PermissionsBoundary: !Sub arn:aws:iam::${AWS::AccountId}:policy/WIPO-PermissionsBoundary
+      
+  TaskRolePolicy:
+    Type: AWS::IAM::Policy
+    Properties:
+      PolicyName: !Sub ${NamePrefix}-task-role-policy
+      PolicyDocument:
+        Version: 2012-10-17
+        Statement:
+          - Effect: Allow
+            Action:
+              - s3:PutObject
+              - ses:SendEmail
+            Resource: '*'
+          - Effect: Allow
+            Action:
+              - sts:AssumeRole
+            Resource: arn:aws:iam::716241334947:role/ses-role-arb-acc          
+      Roles: 
+        - !Ref TaskAPIRole      
+
+  WebLogGroup:
+    Type: AWS::Logs::LogGroup
+    Properties:
+      LogGroupName: !Sub ${NamePrefix}-web/fargate
+      RetentionInDays: !Ref LogRetentionDays
+
+  WebSecurityGroup:
+    Type: AWS::EC2::SecurityGroup
+    Properties:
+      GroupDescription: AMC CG web app security group
+      VpcId: !Ref VpcId
+      SecurityGroupIngress:
+        - Description: Inbound port of the application
+          IpProtocol: tcp
+          CidrIp: !Ref VpcCidrBlock
+          FromPort: 8080
+          ToPort: 8080
+        - Description: Inbound port from AWS Services
+          IpProtocol: tcp
+          CidrIp: !Ref VpcCidrBlock
+          FromPort: 443
+          ToPort: 443
+        - Description: Inbound port of the application
+          IpProtocol: tcp
+          CidrIp: 10.0.0.0/8
+          FromPort: 8080
+          ToPort: 8080
+        - Description: Inbound port from AWS Services
+          IpProtocol: tcp
+          CidrIp: 10.0.0.0/8
+          FromPort: 443
+          ToPort: 443          
+      SecurityGroupEgress:
+        - Description: Outbound port to AWS Services
+          IpProtocol: tcp
+          CidrIp: 0.0.0.0/0
+          FromPort: 443
+          ToPort: 443
+        - Description: Outbound port to RDS PostgreSQL Cluster
+          IpProtocol: tcp
+          CidrIp: !Ref VpcCidrBlock
+          FromPort: 5432
+          ToPort: 5432          
+
+#  WebDiscoveryService:
+#    Type: AWS::ServiceDiscovery::Service
+#    Properties: 
+#      Description: Discovery Service for the Web Application
+#      DnsConfig:
+#        RoutingPolicy: MULTIVALUE
+#        DnsRecords:
+#          - TTL: 60
+#            Type: A
+#          - TTL: 60
+#            Type: SRV
+#      HealthCheckCustomConfig: 
+#        FailureThreshold: 1
+#      Name: !Sub ${NamePrefix}-web
+#      NamespaceId: !Ref PrivateNamespaceId
+
+  WebService:
+    Type: AWS::ECS::Service
+    DependsOn: HttpListenerRule
+    Properties:
+      ServiceName: !Sub ${NamePrefix}-web
+      Cluster: !Ref Cluster
+      DesiredCount: !Ref DesiredInstances
+      TaskDefinition: !Ref WebTaskDefinition
+      LaunchType: FARGATE
+      NetworkConfiguration:
+        AwsvpcConfiguration:
+          SecurityGroups:
+            - !Ref WebSecurityGroup
+          Subnets: 
+            Ref: Subnets
+      LoadBalancers:
+        - ContainerName: !Sub ${NamePrefix}-web
+          ContainerPort: 8080
+          TargetGroupArn: !Ref TargetGroup
+#      ServiceRegistries:
+#        - RegistryArn: !GetAtt WebDiscoveryService.Arn
+#          Port: 8080
+
+  WebTaskDefinition:
+    Type: AWS::ECS::TaskDefinition
+    Properties:
+      Family: !Sub ${NamePrefix}-web
+      RequiresCompatibilities: 
+        - "FARGATE"
+      Memory: !FindInMap [ContainerTypeMap, !Ref ContainerType, Memory]
+      Cpu: !FindInMap [ContainerTypeMap, !Ref ContainerType, Cpu]
+      NetworkMode: awsvpc
+      ExecutionRoleArn: !GetAtt TaskExecutionRole.Arn
+      TaskRoleArn: !GetAtt TaskAPIRole.Arn
+      ContainerDefinitions:
+        - Name: !Sub ${NamePrefix}-web
+          Image: !Join [":", [!Sub "${ArtifactsAccount}.dkr.ecr.${AWS::Region}.amazonaws.com/${NamePrefix}-web", !Ref WebTag]]
+          Essential: true
+          PortMappings:
+            - ContainerPort: 8080
+          Environment:
+            - Name: S3_BUCKET_NAME 
+              Value: !Ref DocumentsBucket
+            - Name: EADR_APP_URL 
+              Value: !Ref EadrAppUrl    
+            - Name: ES_ENDPOINT_URL 
+              Value: !Ref ElasticsearchEndpointUrl 
+            - Name: DB_CONNECTION_STRING
+              Value: !Sub jdbc:postgresql://${DBHostSSMParameter}:5432/EADR1?currentSchema=ecaf"&amp;"ApplicationName=${NamePrefix}-${WebTag}
+            - Name: DB_USER
+              Value: !Ref DBUserSSMParameter
+            - Name: OIDC_DISCOVERY_URL
+              Value: !Sub ${OidcDiscoveryBaseUrl}/am/oauth2/.well-known/openid-configuration
+            - Name: OIDC_CLIENT_ID
+              Value: !Ref OIDCClientIdSSMParameter
+            - Name: OIDC_CLIENT_RETURN_URL
+              Value: !Sub ${OidcClientBaseUrl}/home.html
+            - Name: OIDC_CLIENT_LOGOUT_URL
+              Value: !Sub ${OidcClientBaseUrl}/en_nodecor/logout.jsp 
+            - Name: SES_ROLE_ARN
+              Value: !Ref SESRoleArnSSMParameter  
+          Secrets:
+            - Name: DB_PASSWORD
+              ValueFrom: !Ref DBPasswordSSMParameter
+            - Name: OIDC_CLIENT_SECRET
+              ValueFrom: !Ref OIDCClientSecretSSMParameter              
+          LogConfiguration:
+            LogDriver: awslogs
+            Options:
+              awslogs-region: !Ref AWS::Region
+              awslogs-group: !Ref WebLogGroup
+              awslogs-stream-prefix: !Sub ${NamePrefix}-web
+              
+  ScalingRole:
+    Type: 'AWS::IAM::Role'
+    Properties:
+      AssumeRolePolicyDocument:
+        Version: 2012-10-17
+        Statement:
+          - Effect: Allow
+            Principal:
+              Service:
+                - application-autoscaling.amazonaws.com
+            Action:
+              - 'sts:AssumeRole'
+      Path: /
+      Policies:
+        - PolicyName: ApplicationAutoScalingPolicy
+          PolicyDocument:
+            Version: 2012-10-17
+            Statement:
+              - Effect: Allow
+                Action: '*'
+                Resource: '*'
+      PermissionsBoundary: !Sub arn:aws:iam::${AWS::AccountId}:policy/WIPO-PermissionsBoundary
+
+  WebScalableTarget:
+    Type: AWS::ApplicationAutoScaling::ScalableTarget
+    Properties:
+      MaxCapacity: !Ref MaxInstances
+      MinCapacity: !Ref DesiredInstances
+      ResourceId: !Join ["/", ["service", !Ref Cluster, !GetAtt WebService.Name]]
+      RoleARN: !GetAtt ScalingRole.Arn
+      ScalableDimension: ecs:service:DesiredCount
+      ServiceNamespace: ecs
+
+  WebScalingPolicy:
+    Type: AWS::ApplicationAutoScaling::ScalingPolicy
+    Properties:
+      PolicyName: AverageCPUUtilizationPolicy
+      PolicyType: TargetTrackingScaling
+      ScalingTargetId: !Ref WebScalableTarget
+      TargetTrackingScalingPolicyConfiguration:
+        TargetValue: 80.0
+        ScaleInCooldown: 30
+        ScaleOutCooldown: 30
+        PredefinedMetricSpecification:
+          PredefinedMetricType: ECSServiceAverageCPUUtilization
+          
+Outputs:
+
+  ClusterName:
+    Description: The name of the ECS cluster
+    Value: !Ref Cluster
+
+  ServiceName:
+    Description: The name of the ECS service
+    Value: !GetAtt WebService.Name
+    
+  AppSecurityGroupId:
+    Description: The id of the App security group
+    Value: !Ref WebSecurityGroup   
+    
+    

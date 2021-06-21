@@ -1,0 +1,420 @@
+AWSTemplateFormatVersion: '2010-09-09'
+Transform: AWS::Serverless-2016-10-31
+
+Description: > 
+  AMC eADR Case API
+  
+Globals:
+  Api:
+    OpenApiVersion: 3.0.1
+      
+Parameters:
+
+  NamePrefix:
+    Description: Prefix added to the name of resources created in this stack
+    Type: String
+    
+  VpcId:
+    Type: AWS::EC2::VPC::Id
+    Description: The Vpc Id
+    
+  VpcCidrBlock:
+    Description: The CIDR Block for the VPC
+    Type: String
+    AllowedPattern: '^((\d{1,3})\.){3}\d{1,3}/\d{1,2}$'    
+
+  Subnet1:
+    Type: AWS::EC2::Subnet::Id
+    Description: Private App subnet 1
+
+  Subnet2:
+    Type: AWS::EC2::Subnet::Id
+    Description: Private App subnet 2  
+    
+  Subnet3:
+    Type: AWS::EC2::Subnet::Id
+    Description: Private App subnet 3      
+
+  AppSecurityGroup:
+    Type: String
+    Description: Api security group 
+    
+  ApiStageName:
+    Description: The stage name reference to the deployment 
+    Type: String
+    Default: dev
+    
+  ArtifactsBucket:
+    Description: Lambda CodeUri Bucket used to store the artifacts
+    Type: String
+    
+  ArtifactBucketKey:
+    Description: Path to the Lambda code artifact in the ArtifactsBucket
+    Type: String  
+  
+Resources:
+
+  ApiGatewayEndpoint:
+    Type: AWS::EC2::VPCEndpoint
+    Properties:
+      VpcEndpointType: Interface
+      SecurityGroupIds: 
+        - !Ref AppSecurityGroup
+      SubnetIds:
+        - !Ref Subnet1
+        - !Ref Subnet2
+        - !Ref Subnet3
+      ServiceName: !Sub "com.amazonaws.${AWS::Region}.execute-api"
+      VpcId: !Ref VpcId
+      PrivateDnsEnabled: true
+
+  CreateCaseFunction:
+    Type: AWS::Serverless::Function
+    Properties:
+      FunctionName: !Sub ${NamePrefix}-case-api-lambda
+      Role: !GetAtt CreateCaseFunctionRole.Arn
+      Handler: org.wipo.eadr.CaseAPIRequestHandler::handleRequest
+      CodeUri: 
+        Bucket: !Ref ArtifactsBucket
+        Key: !Ref ArtifactBucketKey
+      Runtime: java8
+      MemorySize: 512
+      Timeout: 30
+      VpcConfig: 
+        SecurityGroupIds: 
+          - !Ref AppSecurityGroup
+        SubnetIds: 
+          - !Ref Subnet1
+          - !Ref Subnet2   
+          - !Ref Subnet3
+      Events:
+        ApiEvent:
+          Type: Api
+          Properties:
+            Path: /cases
+            Method: POST
+            RestApiId:
+              Ref: CaseApi  
+  UpdateActorFunction:
+    Type: AWS::Serverless::Function
+    Properties:
+      FunctionName: !Sub ${NamePrefix}-actor-api-lambda
+      Role: !GetAtt CreateCaseFunctionRole.Arn
+      Handler: org.wipo.eadr.ActorAPIRequestHandler::handleRequest
+      CodeUri: 
+        Bucket: !Ref ArtifactsBucket
+        Key: !Ref ArtifactBucketKey
+      Runtime: java8
+      MemorySize: 512
+      Timeout: 30
+      VpcConfig: 
+        SecurityGroupIds: 
+          - !Ref AppSecurityGroup
+        SubnetIds: 
+          - !Ref Subnet1
+          - !Ref Subnet2   
+          - !Ref Subnet3
+      Events:
+        ApiEvent:
+          Type: Api
+          Properties:
+            Path: /actors
+            Method: POST
+            RestApiId:
+              Ref: CaseApi               
+
+
+  CreateCaseFunctionRole:          
+    Type: AWS::IAM::Role
+    Properties:
+      RoleName: !Sub ${NamePrefix}-case-api-lambda-role
+      AssumeRolePolicyDocument:
+        Version: '2012-10-17'
+        Statement:
+        - Effect: Allow
+          Principal:
+            Service:
+            - lambda.amazonaws.com
+          Action:
+          - sts:AssumeRole
+      Path: /
+      Policies:
+      - PolicyName: AWSLambdaVPCAccessExecutionRole
+        PolicyDocument:
+          Version: '2012-10-17'
+          Statement:
+          - Effect: Allow
+            Action:
+            - logs:CreateLogGroup
+            - logs:CreateLogStream
+            - logs:PutLogEvents
+            - ec2:CreateNetworkInterface
+            - ec2:DescribeNetworkInterfaces
+            - ec2:DeleteNetworkInterface
+            Resource: "*"
+      - PolicyName: AMCCaseAPIParameterStoreAccess
+        PolicyDocument:
+          Version: '2012-10-17'
+          Statement:
+          - Effect: Allow
+            Action:
+            - ssm:GetParameterHistory
+            - ssm:GetParametersByPath
+            - ssm:GetParameters
+            - ssm:GetParameter
+            Resource:
+            - arn:aws:ssm:eu-central-1:770725503646:parameter/amc/eadr/db/*   
+
+  CaseApi:
+    Type: AWS::Serverless::Api
+    Properties:
+      StageName: !Ref ApiStageName
+      Name: !Sub ${NamePrefix}-case-api
+      EndpointConfiguration: PRIVATE
+      Auth:
+        ApiKeyRequired: true
+        UsagePlan:
+          CreateUsagePlan: PER_API
+          UsagePlanName: !Sub ${NamePrefix}-case-api-usage-plan
+          Description: Case API usage plan
+          Quota:
+            Limit: 1000
+            Period: MONTH
+          Throttle:
+            BurstLimit: 10
+            RateLimit: 10
+          Tags:
+            - Key: environment
+              Value: !Ref ApiStageName
+            - Key: service
+              Value: amc
+        ResourcePolicy:
+          CustomStatements: {
+                "Effect": "Allow",
+                "Principal": "*",
+                "Action": "execute-api:Invoke",
+                "Resource": "execute-api:/*",
+                "Condition": {
+                    "StringEquals": {
+                        "aws:sourceVpc": !Ref VpcId
+                    }
+                }
+            }       
+      DefinitionBody:
+        openapi: 3.0.1
+        info:
+          description: API to create cases in the AMC eADR DB
+          version: "1.0.1"
+          title: amc-eadr-case-api
+          contact:
+            email: komivi.djeha@wipo.int
+        x-amazon-apigateway-request-validators:
+              Validate body:
+                validateRequestParameters: false
+                validateRequestBody: true
+        x-amazon-apigateway-gateway-responses:
+          BAD_REQUEST_BODY:
+            responseTemplates:
+              application/json: '{"error": "$context.error.validationErrorString"}'
+        paths:
+          /cases:
+            post:
+              summary: Create case in the AMC eADR DB
+              operationId: create-single-case
+              description: Create a new case
+              responses:
+                '201':
+                  description: Case created
+                '400':
+                  description: 'BadRequest, invalid payload'
+              requestBody:
+                content:
+                  application/json:
+                    schema:
+                      $ref: '#/components/schemas/Case'
+                description: Case object request payload
+              x-amazon-apigateway-request-validator: 'Validate body'
+              x-amazon-apigateway-integration:                  
+                uri: !Sub arn:aws:apigateway:${AWS::Region}:lambda:path/2015-03-31/functions/${CreateCaseFunction.Arn}/invocations
+                type: aws_proxy
+                httpMethod: POST
+                responses:
+                  default:
+                    statusCode: '201'
+                passthroughBehavior: NEVER
+                contentHandling: CONVERT_TO_TEXT
+          /actors:
+            post:
+              summary: Update the actor username AMC eADR DB
+              operationId: update-single-actor
+              description: Update the actor username
+              responses:
+                '201':
+                  description: Actor updated
+                '400':
+                  description: 'BadRequest, invalid payload'
+              requestBody:
+                content:
+                  application/json:
+                    schema:
+                      $ref: '#/components/schemas/ActorUsername'
+                description: Case object request payload
+              x-amazon-apigateway-request-validator: 'Validate body'
+              x-amazon-apigateway-integration:                  
+                uri: !Sub arn:aws:apigateway:${AWS::Region}:lambda:path/2015-03-31/functions/${UpdateActorFunction.Arn}/invocations
+                type: aws_proxy
+                httpMethod: POST
+                responses:
+                  default:
+                    statusCode: '201'
+                passthroughBehavior: NEVER
+                contentHandling: CONVERT_TO_TEXT
+        servers:
+          - url: https://amc-eadr.pct.{environment}.web1.wipo.int/eadr/api/v1
+            variables:
+              environment:
+                default: dev
+                enum:  
+                  - dev
+                  - acc  
+                  - prd
+        components:
+          schemas:
+            Case:
+              type: object
+              required:
+                - id
+                - name
+                - date
+                - statusCode
+                - outcomeCode
+                - submissionAgreement
+                - submissionLawsuit
+                - arbitrationLawsuit
+                - arbitrationLocation
+                - notes
+                - actors
+                - complainants
+                - respondents
+              properties:
+                id:
+                  type: number
+                name:
+                  type: string
+                date:
+                  type: string
+                  format: date-time
+                  example: '2016-08-29T09:12:33.001Z'
+                statusCode:
+                  type: string    
+                outcomeCode:
+                  type: string 
+                submissionAgreement:
+                  type: string      
+                submissionLawsuit:
+                  type: string         
+                arbitrationLawsuit:
+                  type: string   
+                arbitrationLocation:
+                  type: string                     
+                notes:
+                  type: array
+                  items:
+                    $ref: '#/components/schemas/Note'
+                actors:
+                  type: array
+                  items:
+                    $ref: '#/components/schemas/Actor'
+                complainants:
+                  type: array
+                  items:
+                    $ref: '#/components/schemas/Complainant'  
+                respondents:
+                  type: array
+                  items:
+                    $ref: '#/components/schemas/Respondent'                      
+            Note:
+              type: object
+              required:
+                - id
+                - type
+                - displaySeq
+                - content
+                - created
+                - updated
+              properties:
+                id:
+                  type: number 
+                type:
+                  type: number 
+                displaySeq:
+                  type: number 
+                content:
+                  type: string 
+                created:
+                  type: string
+                  format: date-time
+                  example: '2016-08-29T09:12:33.001Z'
+                updated:
+                  type: string
+                  format: date-time
+                  example: '2016-08-29T09:12:33.001Z'   
+            Actor:
+              type: object
+              required:
+                - id
+                - firstname
+                - surname
+                - email
+                - company
+                - address
+                - role
+              properties:
+                id:
+                  type: number 
+                firstname:
+                  type: string 
+                surname:
+                  type: string 
+                email:
+                  type: string 
+                company:
+                  type: string
+                address:
+                  type: string
+                role:
+                  type: number 
+            ActorUsername:
+              type: object
+              required:
+                - id
+                - username
+              properties:
+                id:
+                  type: number 
+                username:
+                  type: string                  
+            Complainant:
+              type: object
+              required:
+                - name
+              properties:
+                name:
+                  type: string
+            Respondent:
+              type: object
+              required:
+                - name
+              properties:
+                name:
+                  type: string                    
+        
+Outputs:
+
+  FunctionArn:
+    Description: ARN of the LambdaFunction
+    Value: !GetAtt CreateCaseFunction.Arn
+    
+  FunctionArn:
+    Description: ARN of the Update LambdaFunction
+    Value: !GetAtt UpdateActorFunction.Arn

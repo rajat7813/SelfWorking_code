@@ -1,0 +1,118 @@
+AWSTemplateFormatVersion: 2010-09-09
+
+Description: > 
+  Creates the cross-account role for deployment to acceptance
+
+Parameters:
+
+  NamePrefix:
+    Description: Prefix added to the name of resources created in this stack
+    Type: String
+
+  DevelopmentAccount:
+    Description: The id of the development account
+    Type: String
+    Default: 469750137758
+
+Resources:
+
+  CrossAccountRole:
+    Type: AWS::IAM::Role
+    Properties:
+      RoleName: !Sub ${NamePrefix}-cross-account-role
+      AssumeRolePolicyDocument:
+        Version: 2012-10-17
+        Statement:
+          - Effect: Allow
+            Principal:
+              AWS:
+                - !Sub arn:aws:iam::${DevelopmentAccount}:root
+            Action:
+              - sts:AssumeRole
+      Path: /
+      #PermissionsBoundary: !Sub arn:aws:iam::${AWS::AccountId}:policy/WIPO-PermissionsBoundary
+
+  CrossAccountPolicy:
+    Type: AWS::IAM::Policy
+    Properties:
+      PolicyName: !Sub ${NamePrefix}-cross-account-policy
+      PolicyDocument:
+        Version: 2012-10-17
+        Statement:
+          - Effect: Allow
+            Action: 
+              - cloudformation:*
+              - s3:*
+              - iam:PassRole
+            Resource: '*'
+      Roles: 
+        - !Ref CrossAccountRole
+
+  KmsCrossAccountPolicy:
+    Type: AWS::IAM::Policy
+    Properties:
+      PolicyName: !Sub ${NamePrefix}-kms-cross-account-policy
+      PolicyDocument:
+        Version: 2012-10-17
+        Statement:
+          - Effect: Allow
+            Action:
+              - kms:Decrypt
+            Resource: !Sub arn:aws:kms:${AWS::Region}:${DevelopmentAccount}:key/*
+      Roles: 
+        - !Ref CrossAccountRole
+
+  DeploymentRole:
+    Type: AWS::IAM::Role
+    Properties:
+      RoleName: !Sub ${NamePrefix}-deployment-role
+      AssumeRolePolicyDocument:
+        Version: 2012-10-17
+        Statement:
+          - Effect: Allow
+            Principal:
+              Service:
+                - cloudformation.amazonaws.com
+            Action:
+              - sts:AssumeRole
+      Path: /
+      #PermissionsBoundary: !Sub arn:aws:iam::${AWS::AccountId}:policy/WIPO-PermissionsBoundary
+
+  DeploymentPolicy:
+    Type: AWS::IAM::Policy
+    Properties:
+      PolicyName: !Sub ${NamePrefix}-deployment-policy
+      PolicyDocument:
+        Version: 2012-10-17
+        Statement:
+          - Effect: Allow
+            Action: '*'
+            Resource: '*'
+      Roles: 
+        - !Ref DeploymentRole
+
+Outputs:
+
+  CrossAccountRoleName:
+    Description: The name of the cross account role
+    Value: !Ref CrossAccountRole
+    Export:
+      Name: !Sub ${NamePrefix}-CrossAccountRoleName
+  
+  CrossAccountRoleArn:
+    Description: The Arn of the cross account role
+    Value: !GetAtt CrossAccountRole.Arn
+    Export:
+      Name: !Sub ${NamePrefix}-CrossAccountRoleArn
+
+  DeploymentRoleName:
+    Description: The Name of the deployment role
+    Value: !Ref DeploymentRole
+    Export:
+      Name: !Sub ${NamePrefix}-DeploymentRoleName
+
+  DeploymentRoleArn:
+    Description: The Arn of the deployment role
+    Value: !GetAtt DeploymentRole.Arn
+    Export:
+      Name: !Sub ${NamePrefix}-DeploymentRoleArn

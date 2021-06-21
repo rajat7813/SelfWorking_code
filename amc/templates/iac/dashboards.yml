@@ -1,0 +1,107 @@
+AWSTemplateFormatVersion: 2010-09-09
+Description: >-
+  Deploys the dashboards
+
+Parameters:
+
+  NamePrefix:
+    Description: Prefix added to the name of resources created in this stack
+    Type: String
+
+  DBInstanceId:
+    Description: DB Instance ID
+    Type: String
+
+  EcsClusterName:
+    Description: ECS Cluster name
+    Type: String
+
+  EcsServiceName:
+    Description: ECS service name
+    Type: String
+
+  Alb:
+    Description: Load Balancer name
+    Type: String
+
+Resources:
+
+  MysqlDashboard:
+    Type: AWS::CloudWatch::Dashboard
+    Properties:
+      DashboardName: !Sub ${NamePrefix}-db
+      DashboardBody: !Sub |
+        { "widgets": [
+        { "type": "metric", "width": 6, "height": 6, "properties": { "title": "CPU Utilization (rds)", "view": "timeSeries", "stacked": false, "region": "${AWS::Region}", "yAxis": { "right": { "min": 0, "max": 100 }, "left": { "min": 0, "max": 100 } }, "metrics": [
+         [ "AWS/RDS", "CPUUtilization", "DBInstanceIdentifier", "${DBInstanceId}", { "label": "CPU Utilization" } ] ]
+        } },
+        { "type": "metric", "width": 6, "height": 6, "properties": { "title": "DB Connections (rds)", "view": "timeSeries", "stacked": false, "region": "${AWS::Region}", "yAxis": { "right": { "min": 0, "max": 100 }, "left": { "min": 0, "max": 100 } }, "metrics": [
+         [ "AWS/RDS", "DatabaseConnections", "DBInstanceIdentifier", "${DBInstanceId}", { "label": "DB Connections" } ] ]
+        } },
+        { "type": "metric", "width": 6, "height": 6, "properties": { "title": "Memory (rds)", "view": "timeSeries", "stacked": false, "region": "${AWS::Region}", "yAxis": { "right": { "min": 0 }, "left": { "min": 0 } }, "metrics": [
+         [ "AWS/RDS", "FreeableMemory", "DBInstanceIdentifier", "${DBInstanceId}", { "label": "Freeable Memory" } ] ]
+        } },
+        { "type": "metric", "width": 6, "height": 6, "properties": { "title": "Storage (rds)", "view": "timeSeries", "stacked": false, "region": "${AWS::Region}", "yAxis": { "right": { "min": 0 }, "left": { "min": 0 } }, "metrics": [
+         [ "AWS/RDS", "FreeStorageSpace", "DBInstanceIdentifier", "${DBInstanceId}", { "label": "Free Storage Space" } ] ]
+        } },
+        { "type": "metric", "width": 6, "height": 6, "properties": { "title": "Disk Queue (rds)", "view": "timeSeries", "stacked": false, "region": "${AWS::Region}", "yAxis": { "right": { "min": 0 }, "left": { "min": 0 } }, "metrics": [
+         [ "AWS/RDS", "DiskQueueDepth", "DBInstanceIdentifier", "${DBInstanceId}", { "label": "Disk Queue Depth" } ] ]
+        } },
+        { "type": "metric", "width": 6, "height": 6, "properties": { "title": "Network Throughput (rds)", "view": "timeSeries", "stacked": false, "region": "${AWS::Region}", "yAxis": { "right": { "min": 0 }, "left": { "min": 0 } }, "metrics": [
+         [ "AWS/RDS", "NetworkReceiveThroughput", "DBInstanceIdentifier", "${DBInstanceId}", { "label": "Receive" } ],
+         [ "AWS/RDS", "NetworkTransmitThroughput", "DBInstanceIdentifier", "${DBInstanceId}", { "label": "Transmit" } ] ]
+        } },
+        { "type": "metric", "width": 6, "height": 6, "properties": { "title": "DB Throughput (rds)", "view": "timeSeries", "stacked": false, "region": "${AWS::Region}", "yAxis": { "right": { "min": 0 }, "left": { "min": 0 } }, "metrics": [
+         [ "AWS/RDS", "ReadThroughput", "DBInstanceIdentifier", "${DBInstanceId}", { "label": "Read" } ],
+         [ "AWS/RDS", "WriteThroughput", "DBInstanceIdentifier", "${DBInstanceId}", { "label": "Write" } ] ]
+        } },
+        { "type": "metric", "width": 6, "height": 6, "properties": { "title": "DB IOPS (rds)", "view": "timeSeries", "stacked": false, "region": "${AWS::Region}", "yAxis": { "right": { "min": 0 }, "left": { "min": 0 } }, "metrics": [
+         [ "AWS/RDS", "ReadIOPS", "DBInstanceIdentifier", "${DBInstanceId}", { "label": "Read" } ],
+         [ "AWS/RDS", "WriteIOPS", "DBInstanceIdentifier", "${DBInstanceId}", { "label": "Write" } ] ]
+        } },
+        { "type": "metric", "width": 6, "height": 6, "properties": { "title": "DB Latency (rds)", "view": "timeSeries", "stacked": false, "region": "${AWS::Region}", "yAxis": { "right": { "min": 0 }, "left": { "min": 0 } }, "metrics": [
+         [ "AWS/RDS", "ReadLatency", "DBInstanceIdentifier", "${DBInstanceId}", { "label": "Read" } ],
+         [ "AWS/RDS", "WriteLatency", "DBInstanceIdentifier", "${DBInstanceId}", { "label": "Write" } ] ]
+        } }
+        ]}
+
+  ECSClusterDashboard:
+    Type: AWS::CloudWatch::Dashboard
+    Properties:
+      DashboardName: !Sub ${NamePrefix}-ecs-cluster
+      DashboardBody: !Sub |
+        { "widgets": [
+        { "type": "metric", "width": 6, "height": 6, "properties": { "title": "ECS Cluster CPU (ecs)", "view": "timeSeries", "stacked": false, "region": "${AWS::Region}", "yAxis": { "right": { "min": 0, "max": 100 }, "left": { "min": 0, "max": 100 } }, "metrics": [
+         [ "AWS/ECS", "CPUReservation", "ClusterName", "${EcsClusterName}", { "label": "CPU Reservation" } ],
+         [ "AWS/ECS", "CPUUtilization", "ClusterName", "${EcsClusterName}", { "label": "CPU Utilization" } ] ]
+        } },
+        { "type": "metric", "width": 6, "height": 6, "properties": { "title": "ECS Cluster Memory (ecs)", "view": "timeSeries", "stacked": false, "region": "${AWS::Region}", "yAxis": { "right": { "min": 0, "max": 100 }, "left": { "min": 0, "max": 100 } }, "metrics": [
+         [ "AWS/ECS", "MemoryReservation", "ClusterName", "${EcsClusterName}", { "label": "Memory Reservation" } ],
+         [ "AWS/ECS", "MemoryUtilization", "ClusterName", "${EcsClusterName}", { "label": "Memory Utilization" } ] ]
+        } },
+        { "type": "metric", "width": 6, "height": 6, "properties": { "title": "Container Service - CPU (ecs)", "view": "timeSeries", "stacked": false, "region": "${AWS::Region}", "yAxis": { "right": { "min": 0, "max": 100 }, "left": { "min": 0, "max": 100 } }, "metrics": [
+         [ "AWS/ECS", "CPUUtilization", "ServiceName", "${EcsServiceName}", "ClusterName", "${EcsClusterName}", { "label": "CPU Utilization" } ] ]
+        } },
+        { "type": "metric", "width": 6, "height": 6, "properties": { "title": "Container Service - Memory (ecs)", "view": "timeSeries", "stacked": false, "region": "${AWS::Region}", "yAxis": { "right": { "min": 0, "max": 100 }, "left": { "min": 0 } }, "metrics": [
+         [ "AWS/ECS", "MemoryUtilization", "ServiceName", "${EcsServiceName}", "ClusterName", "${EcsClusterName}", { "label": "Memory Utilization" } ] ]
+        } }
+        ]}
+
+  LoadBalancerApplicationDashboard:
+    Type: AWS::CloudWatch::Dashboard
+    Properties:
+      DashboardName: !Sub ${NamePrefix}-alb
+      DashboardBody: !Sub |
+        { "widgets": [
+        { "type": "metric", "width": 6, "height": 6, "properties": { "title": "ALB Connections (alb)", "view": "timeSeries", "stacked": false, "region": "${AWS::Region}", "yAxis": { "right": { "min": 0 }, "left": { "min": 0 } }, "metrics": [
+         [ "AWS/ApplicationELB", "NewConnectionCount", "LoadBalancer", "${Alb}", { "label": "New Connections" } ],
+         [ "AWS/ApplicationELB", "ActiveConnectionCount", "LoadBalancer", "${Alb}", { "label": "Active Connections" } ],
+         [ "AWS/ApplicationELB", "RequestCount", "LoadBalancer", "${Alb}", { "label": "Requests" } ] ]
+        } },
+        { "type": "metric", "width": 6, "height": 6, "properties": { "title": "ALB HTTP Codes (alb)", "view": "timeSeries", "stacked": false, "region": "${AWS::Region}", "yAxis": { "right": { "min": 0 }, "left": { "min": 0 } }, "metrics": [
+         [ "AWS/ApplicationELB", "HTTPCode_ELB_4XX_Count", "LoadBalancer", "${Alb}", { "label": "HTTP 4XX Count" } ],
+         [ "AWS/ApplicationELB", "HTTPCode_ELB_5XX_Count", "LoadBalancer", "${Alb}", { "label": "HTTP 5XX Count" } ] ]
+        } }
+        ]}
+
+

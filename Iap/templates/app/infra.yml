@@ -1,0 +1,78 @@
+AWSTemplateFormatVersion: 2010-09-09
+
+Description: > 
+  Creates the VPC, subnets, internet gateway and nat gateway
+
+Parameters:
+
+  NamePrefix:
+    Description: Prefix added to the name of resources created in this stack
+    Type: String
+
+  VpcCidrBlock:
+    Description: 'The CIDR Block for the VPC'
+    Type: String
+    Default: '10.44.56.0/23'
+    AllowedPattern: '^((\d{1,3})\.){3}\d{1,3}/\d{1,2}$'
+
+  CreateNATgateways: 
+    Description: Option to create Nat Gateways.
+    Default: false
+    Type: String
+    AllowedValues:
+      - true
+      - false
+    ConstraintDescription: Must specify whether or not to create
+
+  LogRetentionDays:
+    Type: Number
+    Description: Number of days of Log retention of CloudWatch.
+    Default: 7
+    AllowedValues: [1, 3, 5, 7, 14, 30, 60, 90, 120, 150, 180, 365, 400, 545, 731, 1827, 3653]
+
+Resources:
+
+  S3Endpoint:
+    Type: 'AWS::EC2::VPCEndpoint'
+    Properties:
+      PolicyDocument:
+        Version: "2012-10-17"
+        Statement:
+          - Effect: Allow
+            Principal: "*"
+            Action: 
+              - s3:ListObject
+              - s3:GetObject
+              - s3:PutObject
+            Resource: 
+              - 'arn:aws:s3:::*'
+      RouteTableIds:
+        - rtb-07e5d82cbcd853468
+      ServiceName: !Sub com.amazonaws.${AWS::Region}.s3
+      VpcId: vpc-0aac3d4f7f8640212
+
+Outputs:
+
+  VpcId:
+    Description: "The VPC ID for Vpc"
+    Value: vpc-0aac3d4f7f8640212
+
+  PublicSubnet1Id:
+    Description: "The public Subnet ID 1"
+    Value: subnet-069176d915f004f02
+
+  PublicSubnet2Id:
+    Description: "The public Subnet ID 2"
+    Value: subnet-0b9cbd87b0b1100d7
+
+  AppSubnet1Id:
+    Description: "The app private Subnet ID 1"
+    Value: subnet-0a15b55436deb7c9b
+
+  AppSubnet2Id:
+    Description: "The app private Subnet ID 2"
+    Value: subnet-001602e2e88b5c156
+
+  PrivateNamespaceId:
+    Description: API calls and DNS queries in VPCs
+    Value: ns-dvgxiimeflizurlr

@@ -1,0 +1,812 @@
+AWSTemplateFormatVersion: 2010-09-09
+
+Description: >
+    This template deploys the App ECS resources
+
+Parameters:
+
+  NamePrefix:
+    Description: Prefix added to the name of resources created in this stack
+    Type: String
+
+  ArtifactsAccount:
+    Type: String
+    Description: The account is where the artifact are stored (s3, ecr)
+    Default: 469750137758
+
+  VpcId:
+    Type: AWS::EC2::VPC::Id
+    Description: The Vpc Id
+
+  VpcCidrBlock:
+    Description: 'The CIDR Block for the VPC'
+    Type: String
+    AllowedPattern: '^((\d{1,3})\.){3}\d{1,3}/\d{1,2}$'
+
+  Subnet1:
+    Type: AWS::EC2::Subnet::Id
+    Description: App subnet 1
+
+  Subnet2:
+    Type: AWS::EC2::Subnet::Id
+    Description: App subnet 2
+
+  OidcDiscoveryBaseUrl:
+    Type: String
+    Description: The base URL of the OIDC
+
+  OidcClientBaseUrl:
+    Type: String
+    Description: The base URL to pass to the OIDC for redirections
+
+  ListenerArn:
+    Type: String
+    Description: The Arn of the Application Load Balancer listner
+
+  PrivateNamespaceId:
+    Type: String
+    Description: API calls and DNS queries in VPCs
+
+  BizTag:
+    Type: String
+    Description: The tag of the Business docker image to be deployed
+
+  WebTag:
+    Type: String
+    Description: The tag of the Web docker image to be deployed
+
+  NotificationTag:
+    Type: String
+    Description: The tag of the IAP Notification docker image to be deployed
+
+  DBHostSSMParameter:
+    Type: AWS::SSM::Parameter::Value<String>
+    Description: The SSM parameter name for the DB host name
+
+  DBUserSSMParameter:
+    Type: AWS::SSM::Parameter::Value<String>
+    Description: The SSM parameter name for the DB user name
+
+  DBPasswordSSMParameter:
+    Type: AWS::SSM::Parameter::Name
+    Description: The SSM parameter name for the DB password
+
+  OIDCClientIdSSMParameter:
+    Type: AWS::SSM::Parameter::Value<String>
+    Description: The SSM parameter name for the OIDC client id
+
+  OIDCClientSecretSSMParameter:
+    Type: AWS::SSM::Parameter::Name
+    Description: The SSM parameter name for the OIDC client secret
+
+  KMSJavaKeySSMParameter:
+    Type: AWS::SSM::Parameter::Value<String>
+    Description: The SSM parameter name for KMS key ARN used to encrypt data with AWS Java SDK
+    
+  ReCaptchaV2SiteSSMParameter:
+    Type: AWS::SSM::Parameter::Value<String>
+    Description: The SSM parameter name for Google ReCaptcha V2 site key
+    Default: /iap/reCAPTCHA/V2/site-key
+
+  ReCaptchaV2SecretSSMParameter:
+    Type: AWS::SSM::Parameter::Name
+    Description: The SSM parameter name for Google ReCaptcha V2 secret key
+    Default: /iap/reCAPTCHA/V2/secret-key
+    
+  ReCaptchaV3SiteSSMParameter:
+    Type: AWS::SSM::Parameter::Value<String>
+    Description: The SSM parameter name for Google ReCaptcha V3 site key
+    Default: /iap/reCAPTCHA/V3/site-key
+
+  ReCaptchaV3SecretSSMParameter:
+    Type: AWS::SSM::Parameter::Name
+    Description: The SSM parameter name for Google ReCaptcha V3 secret key
+    Default: /iap/reCAPTCHA/V3/secret-key
+
+  ContainerType:
+    Description: low for DEV, high for LAB and PROD
+    Type: String
+    Default: small
+    AllowedValues: [small, medium, large]
+
+  DesiredInstances:
+    Description: Desired number of instances that will be running (spread across all AZs)
+    Type: String
+    Default: 1
+
+  MaxInstances:
+    Description: Max number instances that will be running (spread across all AZs)
+    Type: String
+    #Default: 3
+    Default: 1
+
+  LogRetentionDays:
+    Type: Number
+    Description: Number of days of Log retention of CloudWatch.
+    Default: 7
+    AllowedValues: [1, 3, 5, 7, 14, 30, 60, 90, 120, 150, 180, 365, 400, 545, 731, 1827, 3653]
+
+  S3ImageBucket:
+    Type: String
+    Default: iap-app-images-eu-central-1-770725503646
+
+  WorkingEnvironment:
+    Type: String
+    Description: Environment as shown in web interface
+    Default: TBD
+
+  WipoAcademyToken:
+    Type: String
+    Description: Token related to WIPO Academy rest end points
+    Default: TBD
+
+  WipoAcademyURL:
+    Type: String
+    Description: WIPO Academy rest end point URL
+    Default: TBD
+
+  NavBarUrl:
+    Type: String
+    Description: NavBar URL
+    Default: TBD
+
+  WipoAccountUrl:
+    Type: String
+    Description: wipoaccount URL
+    Default: TBD
+
+  IapDomain:
+    Description: domain name starting with pai
+    Type: String
+    Default: iap.pct.dev.web1.wipo.int
+
+  AttachmentsBucket:
+    Type: String
+    Description: bucket used to store attachments
+
+  ResolverOutboundRuleId:
+    Type: String
+    Description: DNS OutBound Rule ID for wipo.int
+    Default: rslvr-rr-564cf911bf81487e9
+
+Mappings:
+  ContainerTypeMap:
+    small:
+      Cpu: 512
+      Memory: 1024
+    medium:
+      Cpu: 1024
+      Memory: 2048
+    large:
+      Cpu: 2048
+      Memory: 4096
+
+Resources:
+
+  EcrEndpoint:
+    Type: AWS::EC2::VPCEndpoint
+    Properties:
+      VpcEndpointType: Interface
+      SecurityGroupIds:
+        - !Ref BizSecurityGroup
+        - !Ref WebSecurityGroup
+        - !Ref NotificationSecurityGroup
+      SubnetIds:
+        - !Ref Subnet1
+        - !Ref Subnet2
+      ServiceName: !Sub "com.amazonaws.${AWS::Region}.ecr.dkr"
+      VpcId: !Ref VpcId
+      PrivateDnsEnabled: true
+
+  CloudWatchEndpoint:
+    Type: AWS::EC2::VPCEndpoint
+    Properties:
+      VpcEndpointType: Interface
+      SecurityGroupIds:
+        - !Ref BizSecurityGroup
+        - !Ref WebSecurityGroup
+        - !Ref NotificationSecurityGroup
+      SubnetIds:
+        - !Ref Subnet1
+        - !Ref Subnet2
+      ServiceName: !Sub "com.amazonaws.${AWS::Region}.logs"
+      VpcId: !Ref VpcId
+      PrivateDnsEnabled: true
+
+  HttpListenerRule:
+    Type: AWS::ElasticLoadBalancingV2::ListenerRule
+    Properties:
+      Actions:
+        - Type: forward
+          TargetGroupArn: !Ref TargetGroup
+      Conditions:
+        - Field: host-header
+          Values:
+            - !Ref IapDomain
+        - Field: path-pattern
+          Values:
+            - '/*'
+      ListenerArn: !Ref ListenerArn
+      Priority: 20
+
+  TargetGroup:
+    Type: AWS::ElasticLoadBalancingV2::TargetGroup
+    Properties:
+      VpcId: !Ref VpcId
+      Port: 8080
+      Protocol: HTTP
+      TargetType: ip
+      Matcher:
+        HttpCode: 200-299
+      HealthCheckPath: /
+      HealthCheckProtocol: HTTP
+      HealthCheckIntervalSeconds: 10
+      HealthyThresholdCount: 2
+      UnhealthyThresholdCount: 5
+      TargetGroupAttributes:
+        - Key: deregistration_delay.timeout_seconds
+          Value: "30"
+        - Key: stickiness.enabled
+          Value: 'true'
+        - Key: stickiness.lb_cookie.duration_seconds
+          Value: '3600'
+
+  Cluster:
+    Type: AWS::ECS::Cluster
+    Properties:
+      ClusterName: !Sub ${NamePrefix}-cluster
+
+  TaskExecutionRole:
+    Type: AWS::IAM::Role
+    Properties:
+      Path: /
+      AssumeRolePolicyDocument:
+        Version: 2012-10-17
+        Statement:
+          - Action: sts:AssumeRole
+            Effect: Allow
+            Principal:
+              Service:
+                - ecs-tasks.amazonaws.com
+      ManagedPolicyArns:
+        - arn:aws:iam::aws:policy/service-role/AmazonECSTaskExecutionRolePolicy
+        - arn:aws:iam::aws:policy/AmazonEC2ContainerRegistryReadOnly
+        - arn:aws:iam::aws:policy/AmazonSSMReadOnlyAccess
+        - arn:aws:iam::aws:policy/AmazonS3ReadOnlyAccess
+      PermissionsBoundary: !Sub arn:aws:iam::${AWS::AccountId}:policy/WIPO-PermissionsBoundary
+
+  TaskAPIRole:
+    Type: AWS::IAM::Role
+    Properties:
+      Path: /
+      AssumeRolePolicyDocument:
+        Version: 2012-10-17
+        Statement:
+          - Action: sts:AssumeRole
+            Effect: Allow
+            Principal:
+              Service:
+                - ecs-tasks.amazonaws.com
+      ManagedPolicyArns:
+        - arn:aws:iam::aws:policy/service-role/AmazonECSTaskExecutionRolePolicy
+        - arn:aws:iam::aws:policy/AmazonS3ReadOnlyAccess
+      PermissionsBoundary: !Sub arn:aws:iam::${AWS::AccountId}:policy/WIPO-PermissionsBoundary
+
+  #allow TaskAPIRole to use KMS
+  TaskKmsPolicy:
+    Type: AWS::IAM::Policy
+    Properties:
+      PolicyName: iap-app-kms-encryption-policy
+      PolicyDocument:
+        Version: 2012-10-17
+        Statement:
+          - Effect: Allow
+            Action: 'kms:*'
+            Resource: '*'
+      Roles:
+        - !Ref TaskAPIRole
+
+  #allow TaskAPIRole to use ses:SendEmail
+  TaskSendEmailPolicy:
+    Type: AWS::IAM::Policy
+    Properties:
+      PolicyName: iap-app-ses-sendemail-policy
+      PolicyDocument:
+        Version: 2012-10-17
+        Statement:
+          - Effect: Allow
+            Action:
+              - 'ses:SendEmail'
+              - 'ses:SendRawEmail'
+            Resource: '*'
+      Roles:
+        - !Ref TaskAPIRole
+
+  AttachmentsBucketPolicy:
+    Type: AWS::IAM::Policy
+    Properties:
+      PolicyName: !Sub ${NamePrefix}-attachments-bucket-policy
+      PolicyDocument:
+        Version: 2012-10-17
+        Statement:
+          - Effect: Allow
+            Action:
+              - s3:PutObject
+              - s3:DeleteObject
+              - s3:GetObject
+              - s3:ListBucket
+            Resource:
+              - !Sub arn:aws:s3:::${AttachmentsBucket}
+              - !Sub arn:aws:s3:::${AttachmentsBucket}/*
+      Roles:
+        - !Ref TaskAPIRole
+
+  BizLogGroup:
+    Type: AWS::Logs::LogGroup
+    Properties:
+      LogGroupName: !Sub ${NamePrefix}-biz/fargate
+      RetentionInDays: !Ref LogRetentionDays
+
+  BizSecurityGroup:
+    Type: AWS::EC2::SecurityGroup
+    Properties:
+      GroupDescription: App security group
+      VpcId: !Ref VpcId
+      SecurityGroupIngress:
+        - Description: Ingress port of the application
+          IpProtocol: tcp
+          CidrIp: !Ref VpcCidrBlock
+          FromPort: 8082
+          ToPort: 8082
+        - Description: Ingress port of the endpoints
+          IpProtocol: tcp
+          CidrIp: !Ref VpcCidrBlock
+          FromPort: 443
+          ToPort: 443
+      SecurityGroupEgress:
+        - Description: Egress port of the endpoints
+          IpProtocol: tcp
+          CidrIp: !Ref VpcCidrBlock
+          FromPort: 3306
+          ToPort: 3306
+        - Description: Egress port of the endpoints
+          IpProtocol: tcp
+          CidrIp: 0.0.0.0/0
+          FromPort: 443
+          ToPort: 443
+
+  BizDiscoveryService:
+    Type: AWS::ServiceDiscovery::Service
+    Properties:
+      Description: Discovery Service for the Biz Application
+      DnsConfig:
+        RoutingPolicy: MULTIVALUE
+        DnsRecords:
+          - TTL: 60
+            Type: A
+          - TTL: 60
+            Type: SRV
+      HealthCheckCustomConfig:
+        FailureThreshold: 1
+      Name: !Sub ${NamePrefix}-biz
+      NamespaceId: !Ref PrivateNamespaceId
+
+  BizService:
+    Type: AWS::ECS::Service
+    DependsOn: HttpListenerRule
+    Properties:
+      ServiceName: !Sub ${NamePrefix}-biz
+      Cluster: !Ref Cluster
+      DesiredCount: !Ref DesiredInstances
+      TaskDefinition: !Ref BizTaskDefinition
+      LaunchType: FARGATE
+      NetworkConfiguration:
+        AwsvpcConfiguration:
+          SecurityGroups:
+            - !Ref BizSecurityGroup
+          Subnets:
+            - !Ref Subnet1
+            - !Ref Subnet2
+      ServiceRegistries:
+        - RegistryArn: !GetAtt BizDiscoveryService.Arn
+          Port: 8082
+
+  BizTaskDefinition:
+    Type: AWS::ECS::TaskDefinition
+    Properties:
+      Family: !Sub ${NamePrefix}-biz
+      RequiresCompatibilities:
+        - "FARGATE"
+      Memory: !FindInMap [ContainerTypeMap, !Ref ContainerType, Memory]
+      Cpu: !FindInMap [ContainerTypeMap, !Ref ContainerType, Cpu]
+      NetworkMode: awsvpc
+      ExecutionRoleArn: !GetAtt TaskExecutionRole.Arn
+      TaskRoleArn: !GetAtt TaskAPIRole.Arn
+      ContainerDefinitions:
+        - Name: !Sub ${NamePrefix}-biz
+          Image: !Join [":", [!Sub "${ArtifactsAccount}.dkr.ecr.${AWS::Region}.amazonaws.com/${NamePrefix}-biz", !Ref BizTag]]
+          Essential: true
+          PortMappings:
+            - ContainerPort: 8082
+          Environment:
+            - Name: DB_CONNECTION_STRING
+              Value: !Sub jdbc:mysql://${DBHostSSMParameter}:3306/IAP1
+            - Name: DB_USER
+              Value: !Ref DBUserSSMParameter
+            - Name: WorkingEnvironment
+              Value: !Ref WorkingEnvironment
+          Secrets:
+            - Name: DB_PASSWORD
+              ValueFrom: !Ref DBPasswordSSMParameter
+          LogConfiguration:
+            LogDriver: awslogs
+            Options:
+              awslogs-region: !Ref AWS::Region
+              awslogs-group: !Ref BizLogGroup
+              awslogs-stream-prefix: !Sub ${NamePrefix}-biz
+
+  WebLogGroup:
+    Type: AWS::Logs::LogGroup
+    Properties:
+      LogGroupName: !Sub ${NamePrefix}-web/fargate
+      RetentionInDays: !Ref LogRetentionDays
+
+  WebSecurityGroup:
+    Type: AWS::EC2::SecurityGroup
+    Properties:
+      GroupDescription: App security group
+      VpcId: !Ref VpcId
+      SecurityGroupIngress:
+        - Description: Ingress port of the application
+          IpProtocol: tcp
+          CidrIp: !Ref VpcCidrBlock
+          FromPort: 8080
+          ToPort: 8080
+        - Description: Ingress port of the endpoints
+          IpProtocol: tcp
+          CidrIp: !Ref VpcCidrBlock
+          FromPort: 443
+          ToPort: 443
+      SecurityGroupEgress:
+        - Description: Egress port of the endpoints
+          IpProtocol: tcp
+          CidrIp: !Ref VpcCidrBlock
+          FromPort: 8082
+          ToPort: 8082
+        - Description: Egress port of the endpoints
+          IpProtocol: tcp
+          CidrIp: 0.0.0.0/0
+          FromPort: 443
+          ToPort: 443
+
+  WebDiscoveryService:
+    Type: AWS::ServiceDiscovery::Service
+    Properties:
+      Description: Discovery Service for the Web Application
+      DnsConfig:
+        RoutingPolicy: MULTIVALUE
+        DnsRecords:
+          - TTL: 60
+            Type: A
+          - TTL: 60
+            Type: SRV
+      HealthCheckCustomConfig:
+        FailureThreshold: 1
+      Name: !Sub ${NamePrefix}-web
+      NamespaceId: !Ref PrivateNamespaceId
+
+  WebService:
+    Type: AWS::ECS::Service
+    DependsOn: HttpListenerRule
+    Properties:
+      ServiceName: !Sub ${NamePrefix}-web
+      Cluster: !Ref Cluster
+      DesiredCount: !Ref DesiredInstances
+      TaskDefinition: !Ref WebTaskDefinition
+      LaunchType: FARGATE
+      NetworkConfiguration:
+        AwsvpcConfiguration:
+          SecurityGroups:
+            - !Ref WebSecurityGroup
+          Subnets:
+            - !Ref Subnet1
+            - !Ref Subnet2
+      LoadBalancers:
+        - ContainerName: !Sub ${NamePrefix}-web
+          ContainerPort: 8080
+          TargetGroupArn: !Ref TargetGroup
+      ServiceRegistries:
+        - RegistryArn: !GetAtt WebDiscoveryService.Arn
+          Port: 8080
+
+  WebTaskDefinition:
+    Type: AWS::ECS::TaskDefinition
+    Properties:
+      Family: !Sub ${NamePrefix}-web
+      RequiresCompatibilities:
+        - "FARGATE"
+      Memory: !FindInMap [ContainerTypeMap, !Ref ContainerType, Memory]
+      Cpu: !FindInMap [ContainerTypeMap, !Ref ContainerType, Cpu]
+      NetworkMode: awsvpc
+      ExecutionRoleArn: !GetAtt TaskExecutionRole.Arn
+      TaskRoleArn: !GetAtt TaskAPIRole.Arn
+      ContainerDefinitions:
+        - Name: !Sub ${NamePrefix}-web
+          Image: !Join [":", [!Sub "${ArtifactsAccount}.dkr.ecr.${AWS::Region}.amazonaws.com/${NamePrefix}-web", !Ref WebTag]]
+          Essential: true
+          PortMappings:
+            - ContainerPort: 8080
+          Environment:
+            - Name: IAP_BUSINESS_URL
+              Value: !Join ["", ["http://", !GetAtt BizDiscoveryService.Name, ".local:8082/iap-business/services"]]
+            - Name: OIDC_DISCOVERY_URL
+              Value: !Sub ${OidcDiscoveryBaseUrl}/am/oauth2/.well-known/openid-configuration
+            - Name: OIDC_CLIENT_ID
+              Value: !Ref OIDCClientIdSSMParameter
+            - Name: OIDC_CLIENT_RETURN_URL
+              Value: !Sub ${OidcClientBaseUrl}/iap/home.xhtml
+            - Name: OIDC_CLIENT_LOGOUT_URL
+              Value: !Sub ${OidcClientBaseUrl}/iap/logout.xhtml
+            - Name: WorkingEnvironment
+              Value: !Ref WorkingEnvironment
+            - Name: NavBarUrl
+              Value: !Ref NavBarUrl
+            - Name: WipoAccountUrl
+              Value: !Ref WipoAccountUrl
+            - Name: KMS_JAVA_KEY_ARN
+              Value: !Ref KMSJavaKeySSMParameter
+            - Name: WipoAcademyToken
+              Value: !Ref WipoAcademyToken
+            - Name: WipoAcademyURL
+              Value: !Ref WipoAcademyURL
+            - Name: ATTACHMENTS_BUCKET_NAME
+              Value: !Ref AttachmentsBucket
+            - Name: RECAPTCHA_V2_SITE_KEY
+              Value: !Ref ReCaptchaV2SiteSSMParameter
+            - Name: RECAPTCHA_V3_SITE_KEY
+              Value: !Ref ReCaptchaV3SiteSSMParameter              
+          Secrets:
+            - Name: OIDC_CLIENT_SECRET
+              ValueFrom: !Ref OIDCClientSecretSSMParameter
+            - Name: RECAPTCHA_V2_SECRET_KEY
+              ValueFrom: !Ref ReCaptchaV2SecretSSMParameter
+            - Name: RECAPTCHA_V3_SECRET_KEY
+              ValueFrom: !Ref ReCaptchaV3SecretSSMParameter              
+          LogConfiguration:
+            LogDriver: awslogs
+            Options:
+              awslogs-region: !Ref AWS::Region
+              awslogs-group: !Ref WebLogGroup
+              awslogs-stream-prefix: !Sub ${NamePrefix}-web
+
+  ScalingRole:
+    Type: 'AWS::IAM::Role'
+    Properties:
+      AssumeRolePolicyDocument:
+        Version: 2012-10-17
+        Statement:
+          - Effect: Allow
+            Principal:
+              Service:
+                - application-autoscaling.amazonaws.com
+            Action:
+              - 'sts:AssumeRole'
+      Path: /
+      Policies:
+        - PolicyName: ApplicationAutoScalingPolicy
+          PolicyDocument:
+            Version: 2012-10-17
+            Statement:
+              - Effect: Allow
+                Action: '*'
+                Resource: '*'
+      PermissionsBoundary: !Sub arn:aws:iam::${AWS::AccountId}:policy/WIPO-PermissionsBoundary
+
+  BizScalableTarget:
+    Type: AWS::ApplicationAutoScaling::ScalableTarget
+    Properties:
+      MaxCapacity: !Ref MaxInstances
+      MinCapacity: !Ref DesiredInstances
+      ResourceId: !Join ["/", ["service", !Ref Cluster, !GetAtt BizService.Name]]
+      RoleARN: !GetAtt ScalingRole.Arn
+      ScalableDimension: ecs:service:DesiredCount
+      ServiceNamespace: ecs
+
+  BizScalingPolicy:
+    Type: AWS::ApplicationAutoScaling::ScalingPolicy
+    Properties:
+      PolicyName: AverageCPUUtilizationPolicy
+      PolicyType: TargetTrackingScaling
+      ScalingTargetId: !Ref BizScalableTarget
+      TargetTrackingScalingPolicyConfiguration:
+        TargetValue: 80.0
+        ScaleInCooldown: 30
+        ScaleOutCooldown: 30
+        PredefinedMetricSpecification:
+          PredefinedMetricType: ECSServiceAverageCPUUtilization
+
+  WebScalableTarget:
+    Type: AWS::ApplicationAutoScaling::ScalableTarget
+    Properties:
+      MaxCapacity: !Ref MaxInstances
+      MinCapacity: !Ref DesiredInstances
+      ResourceId: !Join ["/", ["service", !Ref Cluster, !GetAtt WebService.Name]]
+      RoleARN: !GetAtt ScalingRole.Arn
+      ScalableDimension: ecs:service:DesiredCount
+      ServiceNamespace: ecs
+
+  WebScalingPolicy:
+    Type: AWS::ApplicationAutoScaling::ScalingPolicy
+    Properties:
+      PolicyName: AverageCPUUtilizationPolicy
+      PolicyType: TargetTrackingScaling
+      ScalingTargetId: !Ref WebScalableTarget
+      TargetTrackingScalingPolicyConfiguration:
+        TargetValue: 80.0
+        ScaleInCooldown: 30
+        ScaleOutCooldown: 30
+        PredefinedMetricSpecification:
+          PredefinedMetricType: ECSServiceAverageCPUUtilization
+
+#notification services
+  NotificationLogGroup:
+    Type: AWS::Logs::LogGroup
+    Properties:
+      LogGroupName: !Sub ${NamePrefix}-notification/fargate
+      RetentionInDays: !Ref LogRetentionDays
+
+  NotificationService:
+    Type: AWS::ECS::Service
+    DependsOn: HttpListenerRule
+    Properties:
+      ServiceName: !Sub ${NamePrefix}-notification
+      Cluster: !Ref Cluster
+      DesiredCount: !Ref DesiredInstances
+      TaskDefinition: !Ref NotificationTaskDefinition
+      LaunchType: FARGATE
+      NetworkConfiguration:
+        AwsvpcConfiguration:
+          SecurityGroups:
+            - !Ref NotificationSecurityGroup
+          Subnets:
+            - !Ref Subnet1
+            - !Ref Subnet2
+      #LoadBalancers:
+      #  - ContainerName: !Sub ${NamePrefix}-notification
+      #    ContainerPort: 8080
+      #    TargetGroupArn: !Ref TargetGroup
+      ServiceRegistries:
+        - RegistryArn: !GetAtt NotificationDiscoveryService.Arn
+          Port: 8080
+
+  NotificationTaskDefinition:
+    Type: AWS::ECS::TaskDefinition
+    Properties:
+      Family: !Sub ${NamePrefix}-notification
+      RequiresCompatibilities:
+        - "FARGATE"
+      Memory: !FindInMap [ContainerTypeMap, !Ref ContainerType, Memory]
+      Cpu: !FindInMap [ContainerTypeMap, !Ref ContainerType, Cpu]
+      NetworkMode: awsvpc
+      ExecutionRoleArn: !GetAtt TaskExecutionRole.Arn
+      TaskRoleArn: !GetAtt TaskAPIRole.Arn
+      ContainerDefinitions:
+        - Name: !Sub ${NamePrefix}-notification
+          Image: !Join [":", [!Sub "${ArtifactsAccount}.dkr.ecr.${AWS::Region}.amazonaws.com/${NamePrefix}-notification", !Ref NotificationTag]]
+          Essential: true
+          PortMappings:
+            - ContainerPort: 8080
+          Environment:
+            - Name: IAP_BUSINESS_URL
+              Value: !Join ["", ["http://", !GetAtt BizDiscoveryService.Name, ".local:8082/iap-business/services"]]
+            - Name: OIDC_DISCOVERY_URL
+              Value: !Sub ${OidcDiscoveryBaseUrl}/am/oauth2/.well-known/openid-configuration
+            - Name: OIDC_CLIENT_ID
+              Value: !Ref OIDCClientIdSSMParameter
+            - Name: OIDC_CLIENT_RETURN_URL
+              Value: !Sub ${OidcClientBaseUrl}/iap/home.xhtml
+            - Name: OIDC_CLIENT_LOGOUT_URL
+              Value: !Sub ${OidcClientBaseUrl}/iap/logout.xhtml
+            - Name: S3_Image_Bucket
+              Value: !Sub "${NamePrefix}-images-${AWS::Region}-${AWS::AccountId}"
+            - Name: WorkingEnvironment
+              Value: !Ref WorkingEnvironment
+            - Name: ATTACHMENTS_BUCKET_NAME
+              Value: !Ref AttachmentsBucket
+          Secrets:
+            - Name: OIDC_CLIENT_SECRET
+              ValueFrom: !Ref OIDCClientSecretSSMParameter
+          LogConfiguration:
+            LogDriver: awslogs
+            Options:
+              awslogs-region: !Ref AWS::Region
+              awslogs-group: !Ref NotificationLogGroup
+              awslogs-stream-prefix: !Sub ${NamePrefix}-notification
+
+  NotificationScalableTarget:
+    Type: AWS::ApplicationAutoScaling::ScalableTarget
+    Properties:
+      MaxCapacity: !Ref MaxInstances
+      MinCapacity: !Ref DesiredInstances
+      ResourceId: !Join ["/", ["service", !Ref Cluster, !GetAtt NotificationService.Name]]
+      RoleARN: !GetAtt ScalingRole.Arn
+      ScalableDimension: ecs:service:DesiredCount
+      ServiceNamespace: ecs
+
+  NotificationScalingPolicy:
+    Type: AWS::ApplicationAutoScaling::ScalingPolicy
+    Properties:
+      PolicyName: AverageCPUUtilizationPolicy
+      PolicyType: TargetTrackingScaling
+      ScalingTargetId: !Ref NotificationScalableTarget
+      TargetTrackingScalingPolicyConfiguration:
+        TargetValue: 80.0
+        ScaleInCooldown: 30
+        ScaleOutCooldown: 30
+        PredefinedMetricSpecification:
+          PredefinedMetricType: ECSServiceAverageCPUUtilization
+
+  NotificationSecurityGroup:
+    Type: AWS::EC2::SecurityGroup
+    Properties:
+      GroupDescription: App security group
+      VpcId: !Ref VpcId
+      SecurityGroupIngress:
+        - Description: Ingress port of the application
+          IpProtocol: tcp
+          CidrIp: !Ref VpcCidrBlock
+          FromPort: 8080
+          ToPort: 8080
+        - Description: Ingress port of the endpoints
+          IpProtocol: tcp
+          CidrIp: !Ref VpcCidrBlock
+          FromPort: 443
+          ToPort: 443
+      SecurityGroupEgress:
+        - Description: Egress port of the endpoints
+          IpProtocol: tcp
+          CidrIp: !Ref VpcCidrBlock
+          FromPort: 8082
+          ToPort: 8082
+        - Description: Egress port of the endpoints
+          IpProtocol: tcp
+          CidrIp: 0.0.0.0/0
+          FromPort: 443
+          ToPort: 443
+
+  NotificationDiscoveryService:
+    Type: AWS::ServiceDiscovery::Service
+    Properties:
+      Description: Discovery Service for the Notification Services Application
+      DnsConfig:
+        RoutingPolicy: MULTIVALUE
+        DnsRecords:
+          - TTL: 60
+            Type: A
+          - TTL: 60
+            Type: SRV
+      HealthCheckCustomConfig:
+        FailureThreshold: 1
+      Name: !Sub ${NamePrefix}-notification
+      NamespaceId: !Ref PrivateNamespaceId
+
+  ResolverOutbound:
+    Type: AWS::Route53Resolver::ResolverRuleAssociation
+    Properties:
+      Name: !Sub ${NamePrefix}-DNS-Outbound-Forward-Rule-association
+      ResolverRuleId: !Ref ResolverOutboundRuleId
+      VPCId: !Ref VpcId
+
+Outputs:
+
+  ClusterName:
+    Description: The name of the ECS cluster
+    Value: !Ref Cluster
+
+  ServiceName:
+    Description: The name of the ECS service
+    Value: !GetAtt BizService.Name
+
+  TargetGroup:
+    Description: Target group of the web aplication
+    Value: !GetAtt TargetGroup.TargetGroupFullName

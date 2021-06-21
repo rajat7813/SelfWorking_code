@@ -1,0 +1,128 @@
+AWSTemplateFormatVersion: '2010-09-09'
+
+Description: > 
+  AMC eADR Elasticsearch stack
+      
+Parameters:
+
+  NamePrefix:
+    Description: Prefix added to the name of resources created in this stack (must be the same as the one of the pipeline)
+    Type: String
+    
+  VpcId:
+    Type: AWS::EC2::VPC::Id
+    Description: The Vpc Id
+    
+  VpcCidrBlock:
+    Description: 'The CIDR Block for the VPC'
+    Type: String
+    AllowedPattern: '^((\d{1,3})\.){3}\d{1,3}/\d{1,2}$'    
+
+  Subnet1:
+    Type: AWS::EC2::Subnet::Id
+    Description: Private App subnet 1
+
+  Subnet2:
+    Type: AWS::EC2::Subnet::Id
+    Description: Private App subnet 2    
+    
+  EBSVolumeSize:
+    Description: The size of the EBS volume for each data node
+    Type: Number
+    Default: 10
+    
+  ElasticsearchVersion:
+    Description: Elasticsearch version
+    Type: String
+    Default: '5.5'
+    AllowedValues: ['7.4', '7.1', '6.8', '6.7', '6.5', '6.4', '6.3', '6.2', '6.0', '5.6', '5.5'] # aws es list-elasticsearch-versions --query "ElasticsearchVersions[]"
+  
+  DataInstanceCount:
+    Description: The number of data nodes to use in the Elasticsearch cluster
+    Type: Number
+    Default: 1
+    
+  DataInstanceType:
+    Description: The instance type for your data nodes
+    Type: 'String'
+    Default: 't2.small.elasticsearch'
+    AllowedValues: ['t2.small.elasticsearch', 't2.medium.elasticsearch', 'm3.medium.elasticsearch', 'c5.large.elasticsearch']
+    
+  LogRetentionDays:
+    Type: Number
+    Description: Number of days of Log retention of CloudWatch.
+    Default: 7
+    AllowedValues: [1, 3, 5, 7, 14, 30, 60, 90, 120, 150, 180, 365, 400, 545, 731, 1827, 3653]    
+    
+  ExtendedEncryption:
+    Description: Enable Encryption at Rest and Node-to-node Encryption
+    Default: false
+    Type: String
+    AllowedValues: [true, false]  
+     
+Conditions:
+
+  IsSingleClusterInstance: !Equals [!Ref DataInstanceCount, '1']
+  UseExtendedEncryption: !Equals [!Ref ExtendedEncryption, true]
+  
+Resources:
+      
+  SecurityGroup:
+    Type: AWS::EC2::SecurityGroup
+    Properties:
+      GroupDescription: AMC eADR Elasticsearch security group
+      VpcId: !Ref VpcId
+      SecurityGroupIngress:
+        - Description: Inbound port from AWS Elasticsearch VPC Endpoint
+          IpProtocol: tcp
+          CidrIp: !Ref VpcCidrBlock
+          FromPort: 443
+          ToPort: 443        
+
+  ElasticsearchDomain:
+    Type: AWS::Elasticsearch::Domain
+    Properties:
+      DomainName: !Sub ${NamePrefix}-cluster
+      ElasticsearchClusterConfig: 
+        ZoneAwarenessConfig: !If [IsSingleClusterInstance, !Ref 'AWS::NoValue', {AvailabilityZoneCount: 2}]
+        ZoneAwarenessEnabled: !If [IsSingleClusterInstance, false, true]
+        DedicatedMasterEnabled: false
+        InstanceCount: !Ref DataInstanceCount
+        InstanceType: !Ref DataInstanceType
+      ElasticsearchVersion: !Ref ElasticsearchVersion
+      EBSOptions:
+        EBSEnabled: true
+        VolumeSize: !Ref EBSVolumeSize
+      EncryptionAtRestOptions: !If [UseExtendedEncryption, {Enabled: true, KmsKeyId: !Sub 'arn:aws:kms:${AWS::Region}:${AWS::AccountId}:alias/aws/es'}, !Ref 'AWS::NoValue']
+      NodeToNodeEncryptionOptions: !If [UseExtendedEncryption, {Enabled: true}, {Enabled: false}]
+      DomainEndpointOptions:
+        EnforceHTTPS: true     
+      SnapshotOptions:
+        AutomatedSnapshotStartHour: 23
+      VPCOptions:
+        SecurityGroupIds:
+        - !Ref SecurityGroup
+        SubnetIds: !If
+        - IsSingleClusterInstance
+        - - !Ref Subnet2
+        - - !Ref Subnet1
+          - !Ref Subnet2
+      AccessPolicies:
+        Version: '2012-10-17'
+        Statement:
+        - Effect: Allow
+          Principal:
+            AWS: '*'
+          Action:
+          - 'es:*'
+          Resource: !Sub arn:aws:es:${AWS::Region}:${AWS::AccountId}:domain/${NamePrefix}-cluster/*    
+
+Outputs:
+
+  DomainName:
+    Description: The ARN of the Elasticsearch domain
+    Value: !GetAtt ElasticsearchDomain.DomainArn
+    
+  EndpointUrl:
+    Description: The URL of the Elasticsearch Domain Endpoint
+    Value: !GetAtt ElasticsearchDomain.DomainEndpoint

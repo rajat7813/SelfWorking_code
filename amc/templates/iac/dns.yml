@@ -1,0 +1,116 @@
+AWSTemplateFormatVersion: 2010-09-09
+Description: >-
+  Create DNS main entries
+
+Parameters:
+
+  NamePrefix:
+    Description: "Prefix for any naming properties"
+    Type: String
+
+  Environment:
+    Description: "Environment type"
+    Type: String
+    AllowedValues: [sbx, dev, acc, prd]
+  
+  VpcId:
+    Type: AWS::EC2::VPC::Id
+    Description: VPC linked to this hosted zone
+  
+  AccountShortName:
+    Description: "The short name of the AWS account"
+    Type: String
+    
+Conditions:
+  IsNotDev: !Not [!Equals [!Ref Environment, dev]]
+  isDevelopment: !Equals ['dev' , !Ref Environment]
+  isAcceptance: !Equals ['acc' , !Ref Environment]
+  isProduction: !Equals ['prd' , !Ref Environment]
+  isNotProduction: !Not [Condition: isProduction]      
+
+Resources:
+
+  # PrivateHostedZone:
+  #   Type: AWS::Route53::HostedZone
+  #   Properties: 
+  #     HostedZoneConfig: 
+  #       Comment: !Sub 'Private hosted zone for ${NamePrefix}'
+  #     Name: !Sub '${NamePrefix}.${AccountShortName}.${Environment}.intra1.wipo.int'
+  #     VPCs: 
+  #       - VPCId: !Sub '${VpcId}'
+  #         VPCRegion: !Sub '${AWS::Region}'
+
+  PublicHostedZone:
+    Type: AWS::Route53::HostedZone
+    Properties: 
+      HostedZoneConfig: 
+        Comment: !Sub 'Public hosted zone for ${NamePrefix}'
+      Name: !Sub '${NamePrefix}.${AccountShortName}.${Environment}.web1.wipo.int'
+
+  PrivateDnsNamespace:
+    Type: AWS::ServiceDiscovery::PrivateDnsNamespace
+    Properties: 
+      Description: !Sub 'Private dns namespace for ${NamePrefix}'
+      Name: !Sub '${NamePrefix}.${AccountShortName}.${Environment}.intra1.wipo.int'
+      Vpc: !Ref VpcId
+
+  # Register public mane servers to parent hosted zone
+  PublicSubDomainRecordSet:
+    Type: AWS::Route53::RecordSet
+    Properties:
+      Comment: !Sub 'NS definition for ${NamePrefix} sub-domain'
+      HostedZoneName: !Sub '${AccountShortName}.${Environment}.web1.wipo.int.'
+      Name: !Sub '${NamePrefix}.${AccountShortName}.${Environment}.web1.wipo.int.'
+      Type: NS
+      TTL: '900'
+      ResourceRecords: !GetAtt PublicHostedZone.NameServers
+          
+  APIPrivateHostedZone:
+    Type: AWS::Route53::HostedZone
+    Condition: IsNotDev
+    Properties: 
+      HostedZoneConfig: 
+        Comment: !Sub 'Private hosted zone for api.${NamePrefix}'
+      Name: !Sub 'api.${NamePrefix}.${AccountShortName}.${Environment}.intra1.wipo.int'
+      VPCs: 
+        - VPCId: !Sub '${VpcId}'
+          VPCRegion: !Sub '${AWS::Region}'
+          
+  APIDNSRecord:
+    Type: AWS::Route53::RecordSet
+    Condition: IsNotDev
+    Properties:
+      HostedZoneName: !Sub 'api.${NamePrefix}.${AccountShortName}.${Environment}.intra1.wipo.int.'
+      Comment: API DNS name
+      Name: !Sub 'api.${NamePrefix}.${AccountShortName}.${Environment}.intra1.wipo.int' 
+      Type: A
+      AliasTarget:
+        HostedZoneId: Z273ZU8SZ5RJPC
+        DNSName: vpce-06f9997176ac5e75d-r67lqemc.execute-api.eu-central-1.vpce.amazonaws.com
+          
+
+Outputs:
+
+  PrivateDnsNamespace:
+    Description: Private dns namespace
+    Value: !Ref PrivateDnsNamespace
+
+  PrivateDnsNamespaceArn:
+    Description: Private dns namespace arn
+    Value: !Sub '${PrivateDnsNamespace.Arn}'
+
+  PrivateDnsNamespaceName:
+    Description: Private dns namespace name
+    Value: !Sub '${NamePrefix}.${AccountShortName}.${Environment}.intra1.wipo.int'
+
+  PublicHostedZone:
+    Description: Public hosted zone
+    Value: !Ref PublicHostedZone
+
+  PublicHostedZoneName:
+    Description: Public hosted zone name
+    Value: !Sub '${NamePrefix}.${AccountShortName}.${Environment}.web1.wipo.int'
+
+#  LoadBalancerHostedZoneID:
+#    Description: Load Balancer Hosted zone Id 
+#    Value: !GetAtt LoadBalancer.CanonicalHostedZoneID

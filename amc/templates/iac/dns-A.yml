@@ -1,0 +1,49 @@
+AWSTemplateFormatVersion: 2010-09-09
+Description: >-
+  Cloudfront distribution for Loadbalancer
+
+Parameters:
+
+  NamePrefix:
+    Description: "Prefix for any naming properties"
+    Type: String
+
+  DnsName:
+    Description: "Name"
+    Type: String
+
+  DnsHostedZoneName:
+    Description: "Hosted Zone Name"
+    Type: String
+    AllowedPattern: (?!-)[a-zA-Z0-9-.]{1,63}(?<!-)
+    ConstraintDescription: Must be a valid DNS zone name
+
+  AliasDnsHostedZoneId:
+    Description: "Hosted Zone Id of the target"
+    Type: String
+
+  AliasDnsName:
+    Description: "Name of the target"
+    Type: String
+
+
+Resources:
+
+  DNSRecord:
+    Type: AWS::Route53::RecordSet
+    Properties:
+      HostedZoneName: !Sub
+        '${DnsHostedZoneName}.'
+      Comment: DNS name
+      Name: !Sub
+        '${DnsName}'
+      Type: A
+      AliasTarget:
+        HostedZoneId: !Ref AliasDnsHostedZoneId
+        DNSName: !Ref AliasDnsName
+
+
+Outputs:
+  DomainName:
+    Description: Domain name
+    Value: !Ref DNSRecord

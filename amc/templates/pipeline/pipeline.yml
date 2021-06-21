@@ -1,0 +1,768 @@
+AWSTemplateFormatVersion: 2010-09-09
+
+Description: > 
+  Creates the pipeline for AMC_EADR deployment
+
+Parameters:
+
+  NamePrefix:
+    Description: Prefix added to the name of resources created in this stack
+    Type: String
+    Default: amc-eadr
+
+  EnableDeploymentToDev:
+    Description: Enables the deployment of the app stack to the development account. When disabled it removes the existing stack
+    Type: String
+    AllowedValues: [true, false]
+    Default: true
+
+  EnableDeploymentToAcc:
+    Description: Enables the deployment of the app stack to the acceptance account. When disabled it removes the existing stack
+    Type: String
+    AllowedValues: [true, false]
+    Default: true
+
+  DevelopmentAccount:
+    Description: The id of the acceptance account
+    Type: String
+    AllowedPattern: '^\d{12}$'
+    Default: 770725503646
+    
+  AcceptanceAccount:
+    Description: The id of the acceptance account
+    Type: String
+    AllowedPattern: '^\d{12}$'
+    Default: 214311150171
+
+  ProductionAccount:
+    Description: The id of the production account
+    Type: String
+    AllowedPattern: '^\d{12}$'
+    Default: 239241585122
+
+  BudgetUnitCode:
+    Description: The value for the budget-unit-code tag
+    Type: String
+    Default: 0122-10986
+  
+  BusinessImpactLevel: 
+    Description: The value for the business-impact-level tag
+    Type: String
+    AllowedValues: ['1', '2', '3', '4']
+    Default: 2
+                
+  BusinessOwner: 
+    Description: The value for the business-owner tag
+    Type: String
+    Default: Pierre Brachet
+  
+  BusinessUnitName: 
+    Description: The value for the business-unit-name tag
+    Type: String
+    Default: PCTIS
+
+  DataClassification: 
+    Description: The value for the data-classification tag
+    Type: String
+    AllowedValues: ['public', 'for_official_use_only', 'confidential', 'highly_confidential']
+    Default: confidential
+
+  TechnicalOwner: 
+    Description: The value for the technical-owner tag
+    Type: String
+    Default: Lotfi Khodja
+
+Conditions:
+
+  EnableDeploymentToDev: !Equals [!Ref EnableDeploymentToDev, true]
+  EnableDeploymentToAcc: !Equals [!Ref EnableDeploymentToAcc, true]
+    
+Resources:
+
+  KMSKey:
+    Type: AWS::KMS::Key
+    Properties:
+      Description: Used by Assumed Roles in dev/acc/prd accounts to Encrypt/Decrypt artifacts
+      EnableKeyRotation: true
+      KeyPolicy:
+        Version: "2012-10-17"
+        Id: !Ref AWS::StackName
+        Statement:
+          - Sid: Allows admin of the key
+            Effect: Allow
+            Principal:
+              AWS: !Sub arn:aws:iam::${AWS::AccountId}:root
+            Action:
+              - kms:Create*
+              - kms:Describe*
+              - kms:Enable*
+              - kms:List*
+              - kms:Put*
+              - kms:Update*
+              - kms:Revoke*
+              - kms:Disable*
+              - kms:Get*
+              - kms:Delete*
+              - kms:ScheduleKeyDeletion
+              - kms:CancelKeyDeletion
+            Resource: "*"
+          - Sid: Allow use of the key to other accounts
+            Effect: Allow
+            Principal:
+              AWS: 
+                - !Sub arn:aws:iam::${AWS::AccountId}:root
+                - !GetAtt BuildRole.Arn
+                - !GetAtt PipelineRole.Arn
+            Action:
+              - kms:Encrypt
+              - kms:Decrypt
+              - kms:ReEncrypt*
+              - kms:GenerateDataKey*
+              - kms:DescribeKey
+            Resource: "*"
+          - Sid: Allow use of the key to other accounts
+            Effect: Allow
+            Principal:
+              AWS: 
+                - !Sub arn:aws:iam::${DevelopmentAccount}:root
+                - !Sub arn:aws:iam::${AcceptanceAccount}:root
+                #- !Sub arn:aws:iam::${ProductionAccount}:root
+            Action:
+              - kms:Decrypt
+              - kms:DescribeKey
+            Resource: "*"
+
+  KMSAlias:
+    Type: AWS::KMS::Alias
+    Properties:
+      AliasName: !Sub alias/${NamePrefix}-crossaccount-cmk
+      TargetKeyId: !Ref KMSKey
+
+  ArtifactsBucket:
+    Type: AWS::S3::Bucket
+    DeletionPolicy: Retain
+    UpdateReplacePolicy: Retain
+    Properties:
+      BucketName: !Sub ${NamePrefix}-artifacts-${AWS::Region}-${AWS::AccountId}
+      BucketEncryption:
+        ServerSideEncryptionConfiguration: 
+          - ServerSideEncryptionByDefault:
+              SSEAlgorithm: aws:kms
+              KMSMasterKeyID: !Ref KMSKey
+      VersioningConfiguration:
+        Status: Enabled
+
+  ArtifactsBucketPolicy:
+    Type: AWS::S3::BucketPolicy
+    Properties:
+      Bucket: !Ref ArtifactsBucket
+      PolicyDocument:
+        Id: !Sub ${NamePrefix}-artifacts-bucket-policy
+        Version: 2012-10-17
+        Statement:
+          - Effect: Allow
+            Principal:
+              AWS: 
+                - !Sub arn:aws:iam::${DevelopmentAccount}:root
+                - !Sub arn:aws:iam::${AcceptanceAccount}:root
+                - !Sub arn:aws:iam::${ProductionAccount}:root
+            Action: 
+              - s3:ListBucket
+              - s3:GetObject
+            Resource: 
+              - !Sub arn:aws:s3:::${ArtifactsBucket}
+              - !Sub arn:aws:s3:::${ArtifactsBucket}/*
+
+  AmcEadrWebRepository:
+    DeletionPolicy: Retain
+    UpdateReplacePolicy: Retain
+    Type: AWS::ECR::Repository
+    Properties: 
+      LifecyclePolicy: 
+        LifecyclePolicyText: |
+          {
+            "rules": [{
+              "rulePriority": 1,
+              "description": "Expires untagged images older than 5 days",
+              "selection": {
+                "tagStatus": "untagged",
+                "countType": "sinceImagePushed",
+                "countUnit": "days",
+                "countNumber": 5
+              },
+              "action": { "type": "expire" }
+            }]
+          }
+      RepositoryName: !Sub ${NamePrefix}-web
+      RepositoryPolicyText:
+        Version: 2012-10-17
+        Statement:
+          - Effect: Allow
+            Principal:
+              AWS: 
+                - !Sub arn:aws:iam::${AWS::AccountId}:root
+            Action: 
+              - ecr:GetAuthorizationToken
+              - ecr:BatchCheckLayerAvailability
+              - ecr:GetDownloadUrlForLayer
+              - ecr:GetRepositoryPolicy
+              - ecr:DescribeRepositories
+              - ecr:ListImages
+              - ecr:DescribeImages
+              - ecr:BatchGetImage
+              - ecr:InitiateLayerUpload
+              - ecr:UploadLayerPart
+              - ecr:CompleteLayerUpload
+              - ecr:PutImage
+          - Effect: Allow
+            Principal:
+              AWS: 
+                - !Sub arn:aws:iam::${DevelopmentAccount}:root
+                - !Sub arn:aws:iam::${AcceptanceAccount}:root
+                - !Sub arn:aws:iam::${ProductionAccount}:root
+            Action: 
+              - ecr:GetAuthorizationToken
+              - ecr:BatchCheckLayerAvailability
+              - ecr:GetDownloadUrlForLayer
+              - ecr:GetRepositoryPolicy
+              - ecr:DescribeRepositories
+              - ecr:ListImages
+              - ecr:DescribeImages
+              - ecr:BatchGetImage
+              
+  #ECR trigger was commented to avoid the issue of multiple/hanging deployments
+  #EcrEventRule:
+  #  Type: AWS::Events::Rule
+  #  Properties:
+  #    EventPattern:
+  #      source:
+  #        - aws.ecr
+  #      detail:
+  #        eventName:
+  #          - PutImage
+  #        requestParameters:
+  #          repositoryName:
+  #            - !Ref AmcEadrWebRepository
+  #          imageTag:
+  #            - latest
+  #    Targets:
+  #      -
+  #        Arn: !Sub arn:aws:codepipeline:${AWS::Region}:${AWS::AccountId}:${Pipeline}
+  #        RoleArn: !GetAtt EcrEventRole.Arn
+  #        Id: !Sub ${NamePrefix}-pipeline
+
+  EcrEventRole:
+    Type: AWS::IAM::Role
+    Properties:
+      AssumeRolePolicyDocument:
+        Version: 2012-10-17
+        Statement:
+          - Effect: Allow
+            Principal:
+              Service:
+                - events.amazonaws.com
+            Action: sts:AssumeRole
+      Path: /
+      Policies:
+        - PolicyName: !Sub ${NamePrefix}-ecr-event-pipeline-execution
+          PolicyDocument:
+            Version: 2012-10-17
+            Statement:
+              - Effect: Allow
+                Action: codepipeline:StartPipelineExecution
+                Resource: !Sub arn:aws:codepipeline:${AWS::Region}:${AWS::AccountId}:${Pipeline}
+
+  BuildRole:
+    Type: AWS::IAM::Role
+    Properties:
+      RoleName: !Sub ${NamePrefix}-build-role
+      AssumeRolePolicyDocument:
+        Version: 2012-10-17
+        Statement:
+          - Effect: Allow
+            Principal:
+              Service:
+                - codebuild.amazonaws.com
+            Action:
+              - sts:AssumeRole
+      Path: /
+
+  ReleaseLambdaRole:
+    Type: AWS::IAM::Role
+    Properties:
+      RoleName: !Sub ${NamePrefix}-release-lambda-role
+      AssumeRolePolicyDocument:
+        Version: '2012-10-17'
+        Statement:
+        - Effect: Allow
+          Principal:
+            Service:
+            - lambda.amazonaws.com
+          Action:
+          - sts:AssumeRole
+      ManagedPolicyArns:
+      - arn:aws:iam::aws:policy/service-role/AWSLambdaBasicExecutionRole
+
+  PipelineRole:
+    Type: AWS::IAM::Role
+    Properties:
+      RoleName: !Sub ${NamePrefix}-pipeline-role
+      AssumeRolePolicyDocument:
+        Version: 2012-10-17
+        Statement:
+          - Effect: Allow
+            Principal:
+              Service:
+                - codepipeline.amazonaws.com
+            Action:
+              - sts:AssumeRole
+      Path: /
+
+  CmkPolicy:
+    Type: AWS::IAM::Policy
+    Properties:
+      PolicyName: !Sub ${NamePrefix}-cmk-policy
+      PolicyDocument:
+        Version: 2012-10-17
+        Statement:
+          - Effect: Allow
+            Action:
+              - kms:Encrypt
+              - kms:Decrypt
+              - kms:ReEncrypt*
+              - kms:GenerateDataKey*
+              - kms:DescribeKey
+            Resource: !GetAtt KMSKey.Arn
+      Roles:
+        - !Ref BuildRole
+        - !Ref ReleaseLambdaRole
+
+  ArtifactsBucketReadWritePolicy:
+    Type: AWS::IAM::Policy
+    Properties:
+      PolicyName: !Sub ${NamePrefix}-artifacts-bucket-readwrite-policy
+      PolicyDocument:
+        Version: 2012-10-17
+        Statement:
+          - Effect: Allow
+            Action:
+              - s3:PutObject*
+              - s3:GetObject*
+              - s3:ListBucket
+            Resource:
+              - !Sub arn:aws:s3:::${ArtifactsBucket}
+              - !Sub arn:aws:s3:::${ArtifactsBucket}/*
+      Roles:
+        - !Ref BuildRole
+        - !Ref ReleaseLambdaRole
+
+  PipelinePutJobStatusPolicy:
+    Type: AWS::IAM::Policy
+    Properties:
+      PolicyName: !Sub ${NamePrefix}-pipeline-put-jobs-status-policy
+      PolicyDocument:
+        Version: 2012-10-17
+        Statement:
+          - Effect: Allow
+            Action:
+              - codepipeline:PutJobSuccessResult
+              - codepipeline:PutJobFailureResult
+            Resource: '*'
+      Roles:
+        - !Ref ReleaseLambdaRole
+
+  BuildProjectPolicy:
+    Type: AWS::IAM::Policy
+    Properties:
+      PolicyName: !Sub ${NamePrefix}-build-policy
+      PolicyDocument:
+        Version: 2012-10-17
+        Statement:
+          - Effect: Allow
+            Action:
+              - s3:PutObject
+              - s3:DeleteObject
+              - s3:GetObject
+              - s3:ListBucket
+            Resource:
+              - !Sub arn:aws:s3:::${ArtifactsBucket}
+              - !Sub arn:aws:s3:::${ArtifactsBucket}/*
+          - Effect: Allow
+            Action:
+              - logs:CreateLogGroup
+              - logs:CreateLogStream
+              - logs:PutLogEvents
+            Resource: !Sub arn:aws:logs:${AWS::Region}:${AWS::AccountId}:log-group:*
+      Roles:
+        - !Ref BuildRole
+
+  BuildProject:
+    Type: AWS::CodeBuild::Project
+    DependsOn: BuildProjectPolicy
+    Properties:
+      Name: !Ref NamePrefix
+      Description: !Ref NamePrefix
+      EncryptionKey: !GetAtt KMSKey.Arn
+      ServiceRole: !GetAtt BuildRole.Arn
+      Artifacts:
+        Type: CODEPIPELINE
+      Environment:
+        Type: LINUX_CONTAINER
+        ComputeType: BUILD_GENERAL1_SMALL
+        Image: aws/codebuild/amazonlinux2-x86_64-standard:1.0
+        EnvironmentVariables:
+          - Name: PREFIX
+            Value: !Ref NamePrefix
+          - Name: ARTIFACTS_ACCOUNT
+            Value: !Ref AWS::AccountId
+          - Name: BUDGET_UNIT_CODE
+            Value: !Ref BudgetUnitCode
+          - Name: BUSINESS_IMPACT_LEVEL
+            Value: !Ref BusinessImpactLevel
+          - Name: BUSINESS_OWNER
+            Value: !Ref BusinessOwner
+          - Name: BUSINESS_UNIT_NAME
+            Value: !Ref BusinessUnitName
+          - Name: DATA_CLASSIFICATION
+            Value: !Ref DataClassification
+          - Name: TECHNICAL_OWNER
+            Value: !Ref TechnicalOwner
+        PrivilegedMode: false
+      Source:
+        Type: CODEPIPELINE
+        BuildSpec: |
+          version: 0.2
+          phases:
+            pre_build:
+              commands:
+                - echo Retrieving information from artifacts...
+                - DATE=$(date '+%y-%m-%d')
+                - echo $DATE
+                - ls -al $CODEBUILD_SRC_DIR
+                - COMMIT=$(jq -r '.codeRepository.commit' cicd-package.json | head -c 8)
+                - SHORT_SOURCE_VERSION=$(echo $CODEBUILD_RESOLVED_SOURCE_VERSION | head -c 8)
+                - BUILD_ID=$DATE.$COMMIT.$SHORT_SOURCE_VERSION
+                #- AMC_EADR_WEB_TAG=$(cat $CODEBUILD_SRC_DIR_EcrArtifactWeb/imageDetail.json | jq -r 'if (.ImageTags[0] != "latest") then .ImageTags[0] else .ImageTags[1] end')
+                - AMC_EADR_WEB_TAG=$(cat $CODEBUILD_SRC_DIR_EcrArtifactWeb/imageDetail.json | jq -r 'if (.ImageTags[0] != "latest") then .ImageTags[0] else (if (.ImageTags[1] != null) then .ImageTags[1] else "latest" end) end')
+            build:
+              commands:
+                - ARTIFACTS_BUCKET=${PREFIX}-artifacts-${AWS_REGION}-${ARTIFACTS_ACCOUNT}
+                - echo Building the parameters file...
+                # AWS CloudFormation Artifacts (Template Configuration File)
+                # https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/continuous-delivery-codepipeline-cfn-artifacts.html
+                - printf '{"Parameters":{' > templates/iac/master-parameters.json
+                - printf '"BuildId":"%s",' $BUILD_ID >> templates/iac/master-parameters.json
+                - printf '"EadrWebTag":"%s"},' $AMC_EADR_WEB_TAG >> templates/iac/master-parameters.json
+                - printf '"Tags":{' >> templates/iac/master-parameters.json
+                - printf '"budget-unit-code":"%s",' "${BUDGET_UNIT_CODE}" >> templates/iac/master-parameters.json
+                - printf '"business-impact-level":"%s",' "${BUSINESS_IMPACT_LEVEL}" >> templates/iac/master-parameters.json
+                - printf '"business-owner":"%s",' "${BUSINESS_OWNER}" >> templates/iac/master-parameters.json
+                - printf '"business-unit-name":"%s",' "${BUSINESS_UNIT_NAME}" >> templates/iac/master-parameters.json
+                - printf '"data-classification":"%s",' "${DATA_CLASSIFICATION}" >> templates/iac/master-parameters.json
+                - printf '"service":"%s",' "${PREFIX}" >> templates/iac/master-parameters.json
+                - printf '"technical-owner":"%s"}}' "${TECHNICAL_OWNER}" >> templates/iac/master-parameters.json
+                - cat templates/iac/master-parameters.json
+            post_build:
+              commands:
+                - echo Copying application, database and cloudFormation templates to S3
+                - zip templates/iac/master.zip templates/iac/master.yml templates/iac/master-parameters.json
+                - aws s3 cp --recursive artifacts s3://$ARTIFACTS_BUCKET/builds/$BUILD_ID/artifacts/
+                - aws s3 cp --recursive templates s3://$ARTIFACTS_BUCKET/builds/$BUILD_ID/templates/
+
+          artifacts:
+            files:
+              - templates/iac/master.yml
+              - templates/iac/master-parameters.json
+            name: BuildArtifact
+      TimeoutInMinutes: 10
+      LogsConfig:
+        CloudWatchLogs:
+          GroupName: !Ref BuildLogGroup
+          Status: ENABLED
+
+  BuildLogGroup:
+    Type: AWS::Logs::LogGroup
+    Properties:
+      LogGroupName: !Sub ${NamePrefix}/build
+      RetentionInDays: 7
+
+  ReleaseLambda:
+    Type: AWS::Lambda::Function
+    Properties:
+      Handler: index.handler
+      Role: !GetAtt ReleaseLambdaRole.Arn
+      MemorySize: 256
+      Timeout: 30
+      Runtime: python3.7
+      Code: 
+        ZipFile: |
+          import json
+          import boto3
+          import botocore
+          import logging
+          import zipfile
+          import tempfile
+
+          s3=boto3.client('s3', config=botocore.client.Config(signature_version='s3v4'))
+          pipeline = boto3.client('codepipeline')
+
+          logger = logging.getLogger()
+          logger.setLevel(logging.INFO)
+
+          def get_build_id(s3, artifact, file_in_zip):
+            tmp_file = tempfile.NamedTemporaryFile()
+            bucket = artifact['location']['s3Location']['bucketName']
+            key = artifact['location']['s3Location']['objectKey']
+            logger.info(bucket)
+            logger.info(key)
+
+            with tempfile.NamedTemporaryFile() as tmp_file:
+                s3.download_file(bucket, key, tmp_file.name)
+                with zipfile.ZipFile(tmp_file.name, 'r') as zip:
+                    json_bytes = zip.read(file_in_zip)
+
+            json_file = json.loads(json_bytes.decode("utf-8"))
+            logger.info(json_file)
+            return json_file['Parameters']['BuildId']
+
+          def handler(event, context):
+
+            try:
+
+              job_data = event['CodePipeline.job']['data']
+              artifact = job_data['inputArtifacts'][0]
+
+              build_id = get_build_id(s3, artifact, 'templates/iac/master-parameters.json')
+
+              bucket = artifact['location']['s3Location']['bucketName']
+              source_key = 'builds/{}/templates/iac/master.zip'.format(build_id)
+              dest_key = 'releases/master-acc-{}.zip'.format(build_id)
+              source = '{}/{}'.format(bucket, source_key)
+              dest = '{}/{}'.format(bucket, dest_key)
+              
+              s3.copy_object(Bucket=bucket, Key=dest_key, CopySource=source)
+              logger.info('copied {} to {}'.format(source, dest))
+
+              pipeline.put_job_success_result(jobId=event['CodePipeline.job']['id'])
+
+            except Exception as e:
+              logger.error(e)
+              pipeline.put_job_failure_result(jobId=event['CodePipeline.job']['id'], failureDetails={'message': str(e), 'type': 'JobFailed'})
+
+            return 'Completed'
+
+  ReleaseLambdaLogGroup:
+    Type: AWS::Logs::LogGroup
+    DependsOn: ReleaseLambda
+    Properties:
+      LogGroupName: !Sub /aws/lambda/${ReleaseLambda}
+      RetentionInDays: 7
+
+  PipelinePolicy:
+    Type: AWS::IAM::Policy
+    Properties:
+      PolicyName: !Sub ${NamePrefix}-codepipeline-policy
+      PolicyDocument:
+        Version: 2012-10-17
+        Statement:
+          - Effect: Allow
+            Action: iam:PassRole
+            Resource: '*'
+            Condition:
+              StringEqualsIfExists:
+                iam:PassedToService:
+                  - cloudformation.amazonaws.com
+                  - ec2.amazonaws.com
+                  - ecs-tasks.amazonaws.com
+          - Effect: Allow
+            Action:
+              - ec2:*
+              - elasticloadbalancing:*
+              - autoscaling:*
+              - cloudwatch:*
+              - s3:*
+              - sns:*
+              - cloudformation:*
+              - rds:*
+              - sqs:*
+              - ecs:*
+            Resource: '*'
+          - Effect: Allow
+            Action:
+              - lambda:InvokeFunction
+              - lambda:ListFunctions
+            Resource: '*'
+          - Effect: Allow
+            Action:
+              - codebuild:BatchGetBuilds
+              - codebuild:StartBuild
+            Resource: '*'
+          - Effect: Allow
+            Action:
+              - ecr:DescribeImages
+            Resource: '*'
+      Roles:
+        - !Ref PipelineRole
+
+  AssumeRolePolicy:
+    Type: AWS::IAM::Policy
+    Properties:
+      PolicyName: !Sub ${NamePrefix}-assume-role-policy
+      PolicyDocument:
+        Version: 2012-10-17
+        Statement:
+          - Effect: Allow
+            Action:
+              - sts:AssumeRole
+            Resource:
+              - !Sub arn:aws:iam::${DevelopmentAccount}:role/${NamePrefix}-cicd-role
+              - !Sub arn:aws:iam::${AcceptanceAccount}:role/${NamePrefix}-cicd-role
+              #- !Sub arn:aws:iam::${ProductionAccount}:role/${NamePrefix}-cicd-role
+      Roles:
+        - !Ref PipelineRole
+
+  Pipeline:
+    Type: AWS::CodePipeline::Pipeline
+    DependsOn: AssumeRolePolicy
+    Properties:
+      RoleArn:
+        !GetAtt PipelineRole.Arn
+      Name: !Ref NamePrefix
+      ArtifactStore:
+        Type: S3
+        Location: !Ref ArtifactsBucket
+        EncryptionKey:
+          Id: !GetAtt KMSKey.Arn
+          Type: KMS
+#      DisableInboundStageTransitions:
+#        - StageName: DeployToAcceptance
+#          Reason: DeployOnceApproved
+      Stages:
+        - Name: Sources
+          Actions:
+            - Name: S3SourceTemplates
+              ActionTypeId:
+                Category: Source
+                Owner: AWS
+                Version: '1'
+                Provider: S3
+              Configuration:
+                S3Bucket: !Ref ArtifactsBucket
+                S3ObjectKey: package.zip
+              OutputArtifacts:
+                - Name: SourceArtifact
+              RunOrder: 1
+            - Name: ECRSourceAmcEadrGeneratorWeb
+              ActionTypeId:
+                Category: Source
+                Owner: AWS
+                Version: '1'
+                Provider: ECR
+              Configuration:
+                RepositoryName: !Ref AmcEadrWebRepository
+              OutputArtifacts:
+                - Name: EcrArtifactWeb
+              RunOrder: 1
+              
+        - Name: Build
+          Actions:
+          - Name: Build
+            ActionTypeId:
+              Category: Build
+              Owner: AWS
+              Version: '1'
+              Provider: CodeBuild
+            Configuration:
+              ProjectName: !Ref BuildProject
+              PrimarySource: SourceArtifact
+            RunOrder: 1
+            InputArtifacts:
+              - Name: SourceArtifact
+              - Name: EcrArtifactWeb
+            OutputArtifacts:
+              - Name: BuildArtifact
+        - Name: DeployToDevelopment
+          Actions:
+            - Name: Deploy
+              ActionTypeId:
+                Category: Deploy
+                Owner: AWS
+                Version: '1'
+                Provider: CloudFormation
+              Configuration:
+                ActionMode: !If [EnableDeploymentToDev, REPLACE_ON_FAILURE, DELETE_ONLY]
+                StackName: !Sub ${NamePrefix}-stack
+                Capabilities: CAPABILITY_NAMED_IAM,CAPABILITY_AUTO_EXPAND
+                TemplatePath: BuildArtifact::templates/iac/master.yml
+                ParameterOverrides: !Sub '{"Environment": "dev", "NamePrefix": "${NamePrefix}", "ArtifactsAccount": "${AWS::AccountId}", "AccountShortName": "pct"}'
+                TemplateConfiguration: BuildArtifact::templates/iac/master-parameters.json
+                RoleArn: !Sub arn:aws:iam::${DevelopmentAccount}:role/${NamePrefix}-deployment-role 
+              InputArtifacts:
+                - Name: BuildArtifact
+              RunOrder: 1
+              RoleArn: !Sub arn:aws:iam::${DevelopmentAccount}:role/${NamePrefix}-cicd-role
+        - Name: DeployToAcceptance
+          Actions:
+            - Name: Deploy
+              ActionTypeId:
+                Category: Deploy
+                Owner: AWS
+                Version: '1'
+                Provider: CloudFormation
+              Configuration:
+                ActionMode: REPLACE_ON_FAILURE
+                StackName: !Sub ${NamePrefix}-stack
+                Capabilities: CAPABILITY_NAMED_IAM,CAPABILITY_AUTO_EXPAND
+                TemplatePath: BuildArtifact::templates/iac/master.yml
+                ParameterOverrides: !Sub '{"Environment": "acc", "NamePrefix": "${NamePrefix}", "ArtifactsAccount": "${AWS::AccountId}", "AccountShortName": "arb"}'
+                TemplateConfiguration: BuildArtifact::templates/iac/master-parameters.json
+                RoleArn: !Sub arn:aws:iam::${AcceptanceAccount}:role/${NamePrefix}-deployment-role
+              InputArtifacts:
+                - Name: BuildArtifact
+              RunOrder: 1
+              RoleArn: !Sub arn:aws:iam::${AcceptanceAccount}:role/${NamePrefix}-cicd-role
+        #    - Name: Release
+        #      ActionTypeId:
+        #        Category: Invoke
+        #        Owner: AWS
+        #        Version: '1'
+        #        Provider: Lambda
+        #      Configuration:
+        #        FunctionName: !Ref ReleaseLambda
+        #      InputArtifacts:
+        #        - Name: BuildArtifact
+        #      RunOrder: 2
+#        - Name: DeployToProduction
+#          Actions:
+#            - Name: Deploy
+#              ActionTypeId:
+#                Category: Deploy
+#                Owner: AWS
+#                Version: '1'
+#                Provider: CloudFormation
+#              Configuration:
+#                ActionMode: REPLACE_ON_FAILURE
+#                StackName: !Sub ${NamePrefix}-stack
+#                Capabilities: CAPABILITY_NAMED_IAM,CAPABILITY_AUTO_EXPAND
+#                TemplatePath: BuildArtifact::templates/iac/master.yml
+#                ParameterOverrides: !Sub '{"Environment": "prd", "NamePrefix": "${NamePrefix}", "ArtifactsAccount": "${AWS::AccountId}", "AccountShortName": "arb"}'
+#                TemplateConfiguration: BuildArtifact::templates/iac/master-parameters.json
+#                RoleArn: !Sub arn:aws:iam::${ProductionAccount}:role/${NamePrefix}-deployment-role
+#              InputArtifacts:
+#                - Name: BuildArtifact
+#              RunOrder: 1
+#              RoleArn: !Sub arn:aws:iam::${ProductionAccount}:role/${NamePrefix}-cicd-role
+
+Outputs:
+
+  ArtifactsBucket:
+    Description: "The name of the artifact bucket"
+    Value: !Ref ArtifactsBucket
+
+  ArtifactsBucketArn:
+    Description: "The Arn of the artifact bucket"
+    Value: !GetAtt ArtifactsBucket.Arn
+
+  KMSKeyArn:
+    Description: "The Arn of the KMS key"
+    Value: !GetAtt KMSKey.Arn

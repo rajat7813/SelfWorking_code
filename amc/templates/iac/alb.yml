@@ -1,0 +1,204 @@
+AWSTemplateFormatVersion: '2010-09-09'
+Description: >-
+  Application loadbalancer
+
+Parameters:
+
+  NamePrefix:
+    Description: "Prefix for any naming properties"
+    Type: String
+
+  VpcId:
+    Description: "VPC of the load balancer"
+    Type: AWS::EC2::VPC::Id
+    Description: Select a VPC that allows instances access to the Internet
+
+  VpcCidrBlock:
+    Description: 'The CIDR Block for the VPC'
+    Type: String
+    AllowedPattern: '^((\d{1,3})\.){3}\d{1,3}/\d{1,2}$'    
+
+  IngressCidrBlock:
+    Description: The ingress CIDR block for the load balancer
+    Type: String
+    AllowedPattern: '^((\d{1,3})\.){3}\d{1,3}/\d{1,2}$'
+
+  Subnets:
+    Description: "Set of subnets where the load balancer will be deployed"
+    Type: List<AWS::EC2::Subnet::Id>
+    Description: Subnets in which the load balancer will be deployed
+
+  LogsBucket:
+    Description: "Logs bucket"
+    Type: String
+
+  LogsPrefix:
+    Description: "Logs prefix"
+    Type: String
+
+#  LoadBalancerCertificateArn:
+#    Description: "Load balancer web certificate"
+#    Type: 'AWS::SSM::Parameter::Value<String>'
+#    Default: ''
+
+  LoadBalancerCertificateArn:
+    Description: "Load balancer web certificate"
+    Type: String
+    Default: arn:aws:acm:eu-central-1:214311150171:certificate/e9949092-b69e-4dea-9678-6c7961d5cf3e
+
+  ShortName:
+    Description: "Load balancer short name"
+    Type: 'String'
+
+Resources:
+
+  LoadBalancerRole:
+    Type: AWS::IAM::Role
+    Properties:
+      RoleName: !Sub '${NamePrefix}-loadbalancing-role'
+      AssumeRolePolicyDocument:
+        Statement:
+          - Effect: Allow
+            Principal:
+              Service:
+                - elasticloadbalancing.amazonaws.com
+            Action:
+              - sts:AssumeRole
+      Path: /
+      Policies:
+      - PolicyName: !Sub '${NamePrefix}-${ShortName}-policy'
+        PolicyDocument:
+          Statement:
+            - Effect: Allow
+              Action:
+                - s3:PutObject
+              Resource:
+              - !Sub 
+                  'arn:aws:s3:::${LogsBucket}'
+              - !Sub 
+                  'arn:aws:s3:::${LogsBucket}/*'
+
+  LoadBalancerSecurityGroup:
+    Type: AWS::EC2::SecurityGroup
+    Properties:
+      GroupDescription: Application Load Balancer security group
+      VpcId: !Ref VpcId
+      SecurityGroupIngress:
+        - Description: Allow access to the load balancer on port 80
+          IpProtocol: tcp
+          FromPort: '80'
+          ToPort: '80'
+          CidrIp: !Ref IngressCidrBlock
+        - Description: Allow access to the load balancer on port 443
+          IpProtocol: tcp
+          FromPort: '443'
+          ToPort: '443'
+          CidrIp: !Ref IngressCidrBlock
+      SecurityGroupEgress:
+        - Description: Ingress port of the target groups
+          IpProtocol: tcp
+          CidrIp: !Ref VpcCidrBlock
+          FromPort: 8080
+          ToPort: 8080    
+      Tags:
+      - Key: Name
+        Value: !Sub '${NamePrefix}-${ShortName}-sg'
+
+  LoadBalancer:
+    Type: AWS::ElasticLoadBalancingV2::LoadBalancer
+    Properties:
+      Scheme: 'internet-facing'
+      LoadBalancerAttributes:
+        - Key: idle_timeout.timeout_seconds
+          Value: '30'
+        - Key: access_logs.s3.enabled
+          Value: true
+        - Key: access_logs.s3.bucket
+          Value: !Ref LogsBucket
+        - Key: access_logs.s3.prefix
+          Value: !Ref LogsPrefix
+      Subnets: !Ref Subnets
+      SecurityGroups: 
+        - !Ref LoadBalancerSecurityGroup
+      Tags:
+        - Key: Name
+          Value: !Sub '${NamePrefix}-${ShortName}'
+
+  LoadBalancerRedirectlistener:
+    Type: "AWS::ElasticLoadBalancingV2::Listener"
+    Properties:
+      DefaultActions:
+       - Type: "redirect"
+         RedirectConfig:
+            Protocol: "HTTPS"
+            Port: "443"
+            Host: "#{host}"
+            Path: "/#{path}"
+            Query: "#{query}"
+            StatusCode: "HTTP_301"
+      LoadBalancerArn: !Ref LoadBalancer
+      Port: 80
+      Protocol: "HTTP"
+  
+  LoadBalancerListener:
+    Type: AWS::ElasticLoadBalancingV2::Listener
+    Properties:
+      DefaultActions:
+        - Type: fixed-response
+          FixedResponseConfig:
+            ContentType: text/html
+            StatusCode: '404'
+            MessageBody: '<html><head><title>HTTP 404</title></head><body><h1>404 Not Found</h1></body></html>'
+      LoadBalancerArn: !Ref LoadBalancer
+      Port: '443'
+      Protocol: 'HTTPS'      
+      Certificates:
+        - CertificateArn: !Ref LoadBalancerCertificateArn
+
+  AutoscalingRole:
+    Type: AWS::IAM::Role
+    Properties:
+      RoleName: !Sub '${NamePrefix}-autoscaling-role'
+      AssumeRolePolicyDocument:
+        Statement:
+          - Effect: Allow
+            Principal:
+              Service:
+                - application-autoscaling.amazonaws.com
+            Action:
+              - 'sts:AssumeRole'
+      Path: /
+      Policies:
+        - PolicyName: !Sub '${NamePrefix}-autoscaling-policy'
+          PolicyDocument:
+            Statement:
+              - Effect: Allow
+                Action:
+                  - application-autoscaling:*
+                  - cloudwatch:DescribeAlarms
+                  - cloudwatch:PutMetricAlarm
+                  - ecs:DescribeServices
+                  - ecs:UpdateService
+                Resource: '*'
+
+Outputs:
+
+  LoadBalancer:
+    Description: Load Balancer Ref
+    Value: !Ref LoadBalancer
+
+  LoadBalancerFullName:
+    Description: Load Balancer full name
+    Value: !GetAtt LoadBalancer.LoadBalancerFullName
+
+  LoadBalancerDNSName:
+    Description: Your Application Load Balancer DNS name
+    Value: !GetAtt LoadBalancer.DNSName
+
+  LoadBalancerHostedZoneID:
+    Description: Load Balancer Hosted zone Id 
+    Value: !GetAtt LoadBalancer.CanonicalHostedZoneID
+
+  LoadBalancerListenerArn:
+    Description: Load Balancer Listener
+    Value: !Ref LoadBalancerListener

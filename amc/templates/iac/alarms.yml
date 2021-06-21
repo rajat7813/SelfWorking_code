@@ -1,0 +1,200 @@
+AWSTemplateFormatVersion: 2010-09-09
+Description: >-
+  v1.1 [{{CONTEXT}}] {{DESCRIPTION}}. Children({{CHILDREN}}). Requires({{DEPENDENCIES}}).
+
+Parameters:
+
+  NamePrefix:
+    Description: Prefix added to the name of resources created in this stack
+    Type: String
+
+  DBInstanceId:
+    Description: DB Instance ID
+    Type: String
+
+  Alb:
+    Description: ALB Name
+    Type: String
+    
+  ElasticsearchDomain:
+    Description: ElasticSearch Cluster Domain Name
+    Type: String    
+
+Resources:
+
+  SupportTopic:
+    Type: AWS::SNS::Topic
+    Properties:
+      TopicName: !Sub ${NamePrefix}-support-topic
+      DisplayName: !Sub ${NamePrefix}-support-topic
+
+  TopicsPolicy:
+    Type: AWS::SNS::TopicPolicy
+    Properties:
+      PolicyDocument:
+        Version: '2012-10-17'
+        Statement:
+        - Sid: !Sub ${NamePrefix}-topic-s3-policy
+          Effect: Allow
+          Principal:
+            Service: [ 's3.amazonaws.com' ]
+          Action: ['SNS:Publish']
+          Resource: !Ref SupportTopic
+        - Sid: !Sub ${NamePrefix}-topic-account-policy
+          Effect: Allow
+          Principal:
+            AWS: '*'
+          Action: ['SNS:Publish']
+          Resource: !Ref SupportTopic
+          Condition:
+            StringEquals:
+              'AWS:SourceAccount': !Sub ${AWS::AccountId}
+      Topics:
+        - !Ref SupportTopic
+
+  DBDiskSpaceAlarm:
+    Type: AWS::CloudWatch::Alarm
+    Properties:
+      AlarmName: !Sub ${NamePrefix}-db-low-disk-space
+      AlarmDescription: Alarm when the DB RDS instance disk space is below 10GB
+      MetricName: FreeStorageSpace
+      Namespace: AWS/DB
+      Statistic: Average
+      AlarmActions: 
+        - !Ref SupportTopic
+      InsufficientDataActions: 
+        - !Ref SupportTopic
+      Period: 300
+      EvaluationPeriods: 2
+      Threshold: 10737418240
+      Dimensions:
+      - Name: "DBInstanceIdentifier"
+        Value: !Ref DBInstanceId
+      ComparisonOperator: LessThanThreshold
+
+  DBCPUAlarm:
+    Type: AWS::CloudWatch::Alarm
+    Properties:
+      AlarmName: !Sub ${NamePrefix}-db-high-cpu
+      AlarmDescription: Alarm when the DB RDS instance CPU usage is over 70% for more than 15 minutes
+      MetricName: CPUUtilization
+      Namespace: AWS/DB
+      Statistic: Average
+      AlarmActions: 
+       - !Ref SupportTopic
+      InsufficientDataActions: 
+       - !Ref SupportTopic
+      Period: 300
+      EvaluationPeriods: 3
+      Threshold: 70
+      Dimensions:
+      - Name: "DBInstanceIdentifier"
+        Value: !Ref DBInstanceId
+      ComparisonOperator: GreaterThanThreshold
+
+  ALBExt4xxErrorsAlarm:
+    Type: AWS::CloudWatch::Alarm
+    Properties:
+      AlarmName: !Sub ${NamePrefix}-alb-errors-4xx
+      AlarmDescription: Alarm when the ALB issues more than 50 HTTP 4xx errors within a 5 minutes window
+      MetricName: HTTPCode_ELB_4XX_Count
+      Namespace: AWS/ApplicationELB
+      Statistic: Average
+      AlarmActions:
+       - !Ref SupportTopic
+      Period: 300
+      EvaluationPeriods: 1
+      Threshold: 50
+      Dimensions:
+      - Name: "LoadBalancer"
+        Value: !Ref Alb
+      ComparisonOperator: GreaterThanThreshold
+
+  ALBExt5xxErrorsAlarm:
+    Type: AWS::CloudWatch::Alarm
+    Properties:
+      AlarmName: !Sub ${NamePrefix}-alb-errors-5xx
+      AlarmDescription: Alarm when the ALB issues more than 50 HTTP 5xx errors within a 5 minutes window
+      MetricName: HTTPCode_ELB_5XX_Count
+      Namespace: AWS/ApplicationELB
+      Statistic: Average
+      AlarmActions:
+        - !Ref SupportTopic
+      Period: 300
+      EvaluationPeriods: 1
+      Threshold: 50
+      Dimensions:
+      - Name: "LoadBalancer"
+        Value: !Ref Alb
+      ComparisonOperator: GreaterThanThreshold
+      
+  ElasticSearchStatusRedAlarm:
+    Type: AWS::CloudWatch::Alarm
+    Properties:
+      AlarmName: !Sub ${NamePrefix}-es-status-red
+      AlarmDescription: Alarm when at least one primary shard and its replicas are not allocated to a node
+      MetricName: ClusterStatus.red
+      Namespace: AWS/ES
+      Statistic: Maximum
+      AlarmActions:
+        - !Ref SupportTopic      
+      Period: 300
+      EvaluationPeriods: 1
+      Threshold: 0 
+      Dimensions:
+      - Name: "DomainName"
+        Value: !Ref ElasticsearchDomain      
+      ComparisonOperator: GreaterThanThreshold
+       
+  ElasticSearchFreeStorageSpaceAlarm:
+    Type: 'AWS::CloudWatch::Alarm'
+    Properties:
+      AlarmName: !Sub ${NamePrefix}-es-free-space
+      AlarmDescription: Alarm when cluster is running out of free disk space
+      MetricName: FreeStorageSpace
+      Namespace: AWS/ES
+      Statistic: Minimum
+      AlarmActions:
+        - !Ref SupportTopic  
+      Period: 300
+      EvaluationPeriods: 1
+      Threshold: 2500 #MB     
+      Dimensions:
+      - Name: "DomainName"
+        Value: !Ref ElasticsearchDomain
+      ComparisonOperator: LessThanThreshold
+
+  ElasticSearchCPUUtilizationAlarm:
+    Type: 'AWS::CloudWatch::Alarm'
+    Properties:
+      AlarmName: !Sub ${NamePrefix}-es-cpu
+      AlarmDescription: Alarm when average CPU utilization over the last 5 minutes is over 80%
+      MetricName: CPUUtilization
+      Namespace: AWS/ES'
+      Statistic: Average  
+      AlarmActions:
+        - !Ref SupportTopic      
+      Period: 300
+      EvaluationPeriods: 1
+      Threshold: 80
+      Dimensions:
+      - Name: "DomainName"
+        Value: !Ref ElasticsearchDomain         
+      ComparisonOperator: GreaterThanThreshold
+
+  ElasticSearchJVMMemoryPressureAlarm:
+    Type: 'AWS::CloudWatch::Alarm'
+    Properties:
+      AlarmName: !Sub ${NamePrefix}-es-memory
+      AlarmDescription: Alarm when average JVM memory pressure over last 5 minutes is over 80%
+      MetricName: JVMMemoryPressure
+      Namespace: AWS/ES 
+      Statistic: Average
+      Period: 300
+      EvaluationPeriods: 1
+      Threshold: 80
+      Dimensions:
+      - Name: "DomainName"
+        Value: !Ref ElasticsearchDomain         
+      ComparisonOperator: GreaterThanThreshold   
+      

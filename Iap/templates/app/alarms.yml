@@ -1,0 +1,125 @@
+AWSTemplateFormatVersion: 2010-09-09
+Description: >-
+  v1.1 [{{CONTEXT}}] {{DESCRIPTION}}. Children({{CHILDREN}}). Requires({{DEPENDENCIES}}).
+
+Parameters:
+
+  NamePrefix:
+    Description: Prefix added to the name of resources created in this stack
+    Type: String
+
+  DBInstanceId:
+    Description: DB Instance ID
+    Type: String
+
+  Alb:
+    Description: ALB Name
+    Type: String
+
+Resources:
+
+  SupportTopic:
+    Type: AWS::SNS::Topic
+    Properties:
+      TopicName: !Sub ${NamePrefix}-support-topic
+      DisplayName: !Sub ${NamePrefix}-support-topic
+
+  TopicsPolicy:
+    Type: AWS::SNS::TopicPolicy
+    Properties:
+      PolicyDocument:
+        Version: '2012-10-17'
+        Statement:
+        - Sid: !Sub ${NamePrefix}-topic-s3-policy
+          Effect: Allow
+          Principal:
+            Service: [ 's3.amazonaws.com' ]
+          Action: ['SNS:Publish']
+          Resource: !Ref SupportTopic
+        - Sid: !Sub ${NamePrefix}-topic-account-policy
+          Effect: Allow
+          Principal:
+            AWS: '*'
+          Action: ['SNS:Publish']
+          Resource: !Ref SupportTopic
+          Condition:
+            StringEquals:
+              'AWS:SourceAccount': !Sub ${AWS::AccountId}
+      Topics:
+        - !Ref SupportTopic
+
+  DBDiskSpaceAlarm:
+    Type: AWS::CloudWatch::Alarm
+    Properties:
+      AlarmName: !Sub ${NamePrefix}-db-low-disk-space
+      AlarmDescription: Alarm when the DB RDS instance disk space is below 10GB
+      MetricName: FreeStorageSpace
+      Namespace: AWS/DB
+      Statistic: Average
+      AlarmActions: 
+        - !Ref SupportTopic
+      InsufficientDataActions: 
+        - !Ref SupportTopic
+      Period: 300
+      EvaluationPeriods: 2
+      Threshold: 10737418240
+      Dimensions:
+      - Name: "DBInstanceIdentifier"
+        Value: !Ref DBInstanceId
+      ComparisonOperator: LessThanThreshold
+
+  DBCPUAlarm:
+    Type: AWS::CloudWatch::Alarm
+    Properties:
+      AlarmName: !Sub ${NamePrefix}-db-high-cpu
+      AlarmDescription: Alarm when the DB RDS instance CPU usage is over 70% for more than 15 minutes
+      MetricName: CPUUtilization
+      Namespace: AWS/DB
+      Statistic: Average
+      AlarmActions: 
+       - !Ref SupportTopic
+      InsufficientDataActions: 
+       - !Ref SupportTopic
+      Period: 300
+      EvaluationPeriods: 3
+      Threshold: 70
+      Dimensions:
+      - Name: "DBInstanceIdentifier"
+        Value: !Ref DBInstanceId
+      ComparisonOperator: GreaterThanThreshold
+
+  ALBExt4xxErrorsAlarm:
+    Type: AWS::CloudWatch::Alarm
+    Properties:
+      AlarmName: !Sub ${NamePrefix}-alb-errors-4xx
+      AlarmDescription: Alarm when the ALB issues more than 50 HTTP 4xx errors within a 5 minutes window
+      MetricName: HTTPCode_ELB_4XX_Count
+      Namespace: AWS/ApplicationELB
+      Statistic: Average
+      AlarmActions:
+       - !Ref SupportTopic
+      Period: 300
+      EvaluationPeriods: 1
+      Threshold: 50
+      Dimensions:
+      - Name: "LoadBalancer"
+        Value: !Ref Alb
+      ComparisonOperator: GreaterThanThreshold
+
+  ALBExt5xxErrorsAlarm:
+    Type: AWS::CloudWatch::Alarm
+    Properties:
+      AlarmName: !Sub ${NamePrefix}-alb-errors-5xx
+      AlarmDescription: Alarm when the ALB issues more than 50 HTTP 5xx errors within a 5 minutes window
+      MetricName: HTTPCode_ELB_5XX_Count
+      Namespace: AWS/ApplicationELB
+      Statistic: Average
+      AlarmActions:
+        - !Ref SupportTopic
+      Period: 300
+      EvaluationPeriods: 1
+      Threshold: 50
+      Dimensions:
+      - Name: "LoadBalancer"
+        Value: !Ref Alb
+      ComparisonOperator: GreaterThanThreshold

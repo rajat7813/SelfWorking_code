@@ -1,0 +1,70 @@
+AWSTemplateFormatVersion: 2010-09-09
+
+Description: > 
+  Creates the log bucket for IAP
+
+Parameters:
+
+  NamePrefix:
+    Description: Prefix added to the name of resources created in this stack
+    Type: String
+
+  LogRetentionDays:
+    Type: Number
+    Description: Number of days of Log retention of CloudWatch.
+    Default: 7
+    AllowedValues: [1, 3, 5, 7, 14, 30, 60, 90, 120, 150, 180, 365, 400, 545, 731, 1827, 3653]
+
+Resources:
+
+  LogsBucket:
+    Type: AWS::S3::Bucket
+    DeletionPolicy: Retain
+    Properties:
+      BucketName: !Sub ${NamePrefix}-logs-${AWS::Region}-${AWS::AccountId}
+      AccessControl: Private
+      BucketEncryption:
+        ServerSideEncryptionConfiguration: 
+          - ServerSideEncryptionByDefault:
+              SSEAlgorithm: AES256
+      LifecycleConfiguration:
+        Rules:
+          - Id: StandardPolicy
+            Status: Enabled
+            ExpirationInDays: !Ref LogRetentionDays
+
+  LogsBucketPolicy:
+    Type: AWS::S3::BucketPolicy
+    Properties:
+      Bucket: !Ref LogsBucket
+      PolicyDocument:
+        Id: !Sub ${NamePrefix}-LogsBucketPolicy
+        Version: 2012-10-17
+        Statement:
+          - Effect: Allow
+            Principal:
+              AWS: !Sub arn:aws:iam::${AWS::AccountId}:root
+            Action: 
+              - s3:ListBucket
+              - s3:PutObject
+              - s3:GetObject
+              - s3:DeleteObject
+            Resource: 
+              - !Sub arn:aws:s3:::${LogsBucket}
+              - !Sub arn:aws:s3:::${LogsBucket}/*
+          - Effect: Allow
+            Principal:
+              AWS: arn:aws:iam::054676820928:root
+            Action: 
+              - s3:PutObject
+            Resource: 
+              - !Sub arn:aws:s3:::${LogsBucket}/*
+
+Outputs:
+
+  LogsBucket:
+    Description: "The name of the logs bucket"
+    Value: !Ref LogsBucket
+
+  LogsBucketArn:
+    Value: !GetAtt LogsBucket.Arn

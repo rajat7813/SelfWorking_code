@@ -1,0 +1,359 @@
+AWSTemplateFormatVersion: 2010-09-09
+
+Description: > 
+  Deploys the AMC eADR AWS resources
+
+Parameters:
+
+  Environment:
+    Description: "Environment type (controls various parameters of the deployment, ip ranges, size of the EC2 instances, tags, etc.)"
+    Type: String
+    AllowedValues: [dev, acc, prd]
+    Default: dev
+
+  NamePrefix:
+    Description: Prefix added to the name of resources created in this stack (must be the same as the one of the pipeline)
+    Type: String
+    Default: amc-eadr
+
+  ArtifactsAccount:
+    Type: String
+    Description: The account is where the artifact are stored (s3, ecr)
+    Default: 734516707349
+
+  BuildId:
+    Type: String
+    Description: The BuildId id of the service
+
+  EadrWebTag:
+    Type: String
+    Description: The tag of the AMC eADR Web docker image to be deployed
+    Default: latest
+    
+  CreateElasticsearchCluster:
+    Description: Specify whether the Elasticsearch cluster should be created or not
+    Default: true
+    Type: String
+    AllowedValues: [true, false]
+    
+  AccountShortName:
+    Description: "The short name of the AWS account"
+    Type: String
+    Default: arb
+    
+  WipoExternalIpRange:
+    Description: "WIPO External IP range (CIDR, e.g. 193.5.88.0/21)"
+    Type: String
+    Default: 193.5.88.0/21
+    
+
+Conditions:
+  IsNotDev: !Not [!Equals [!Ref Environment, dev]]
+  isDevelopment: !Equals ['dev' , !Ref Environment]
+  isAcceptance: !Equals ['acc' , !Ref Environment]
+  isProduction: !Equals ['prd' , !Ref Environment]
+  isNotProduction: !Not [Condition: isProduction]  
+  CreateElasticsearch: !Equals [!Ref CreateElasticsearchCluster, true]
+  isInternal: !And [!Not [Condition: isAcceptance], !Not [Condition: isProduction]]
+
+Mappings:
+
+  EnvironmentMap:
+    
+    dev:
+      #VpcId: vpc-0d0ecdb86ecf93c89
+      VpcCidrBlock: 10.44.70.0/23
+      #PublicSubnet1Id: subnet-0bea3d52e17eed86e
+      #PublicSubnet2Id: subnet-0788422f79f14c4c4
+      #AppSubnet1Id: subnet-0609e1ce7aacd8da2
+      #AppSubnet2Id: subnet-004fabd8d833cef6b    
+      PrivateRouteTable: rtb-0243223f1bdcd151d
+      PrivateNamespaceId: ns-dvgxiimeflizurlr
+      DesiredInstances: 1
+      MaxInstances: 2
+      ContainerType: small
+      EnableHttps: true
+      DnsSubDomain: ''
+      #HostedZoneName: amc.pct.dev.web1.wipo.int.
+      CertificateArn: arn:aws:acm:eu-central-1:770725503646:certificate/e74e71c6-c50b-42c1-b83d-aae3a02a82b6
+      LogRetentionDays: 7
+      DBHostSSMParameter: /amc/eadr/db/app/host
+      DBUserSSMParameter: /amc/eadr/db/app/user
+      DBPasswordSSMParameter: /amc/eadr/db/app/password  
+      OIDCClientIdSSMParameter: /amc/eadr/oidc/client-id
+      OIDCClientSecretSSMParameter: /amc/eadr/oidc/client-secret
+      ElasticsearchVersion: '7.4'
+      EBSVolumeSize: 10
+      ESDataInstanceCount: 1
+      ESExtendedEncryption: false      
+      ESDataInstanceType: 't2.small.elasticsearch'
+      ESSubnet1Id: subnet-01fe2ccdb74fd79af
+      ESSubnet2Id: subnet-0cb83501248b89629
+      CaseApiLambdaBucket: amc-binary
+      CaseApiLambdaArtifact: amc-eadr-case-api-1.0-SNAPSHOT.jar
+      DBInstanceId: ''
+
+    acc:
+      VpcCidrBlock: 10.43.194.0/23
+      PrivateRouteTable: rtb-0243223f1bdcd151d
+      #PrivateNamespaceId: ns-dvgxiimeflizurlr
+      DesiredInstances: 1
+      MaxInstances: 2
+      ContainerType: small
+      EnableHttps: true
+      DnsSubDomain: ''
+      HostedZoneName: amc.pct.dev.web1.wipo.int.
+      CertificateArn: arn:aws:acm:eu-central-1:214311150171:certificate/e9949092-b69e-4dea-9678-6c7961d5cf3e
+      LogRetentionDays: 7
+      DBHostSSMParameter: /amc/eadr/db/app/host
+      DBUserSSMParameter: /amc/eadr/db/app/user
+      DBPasswordSSMParameter: /amc/eadr/db/app/password  
+      OIDCClientIdSSMParameter: /amc/eadr/oidc/client-id
+      OIDCClientSecretSSMParameter: /amc/eadr/oidc/client-secret
+      ElasticsearchVersion: '7.4'
+      EBSVolumeSize: 10
+      ESDataInstanceCount: 1
+      ESExtendedEncryption: false      
+      ESDataInstanceType: 't2.small.elasticsearch'
+      ESSubnet1Id: subnet-01fe2ccdb74fd79af
+      ESSubnet2Id: subnet-0cb83501248b89629
+      CaseApiLambdaBucket: amc-binary-acc
+      CaseApiLambdaArtifact: amc-eadr-case-api-1.0-SNAPSHOT.jar
+      DBInstanceId: ''
+
+
+
+
+Resources:
+
+  # The artifacts bucket is s3://${NamePrefix}-artifacts-${AWS::Region}-${ArtifactsAccount}
+  # The logs bucket is s3://${NamePrefix}-logs-${AWS::Region}-${AWS::AccountId}
+  Infrastructure:
+    Type: AWS::CloudFormation::Stack
+    Properties:
+      TemplateURL: !Sub https://${NamePrefix}-artifacts-${AWS::Region}-${ArtifactsAccount}.s3.amazonaws.com/builds/${BuildId}/templates/iac/infra.yml
+      Parameters:
+        NamePrefix: !Ref NamePrefix
+        #VpcCidrBlock: !Sub '/${NamePrefix}/vpc/VpcCidrBlock'
+        VpcCidrBlock: !FindInMap [EnvironmentMap, !Ref Environment, VpcCidrBlock]
+        #CreateTransitGatewayAttachment: !Sub '/${NamePrefix}/vpc/TransitGateway'
+        #LogRetentionDays: !Sub '/${NamePrefix}/vpc/LogRetentionDays'
+        LogRetentionDays: !FindInMap [EnvironmentMap, !Ref Environment, LogRetentionDays] 
+      
+  Elasticsearch:
+    Type: AWS::CloudFormation::Stack
+    Condition: CreateElasticsearch
+    Properties:
+      TemplateURL: !Sub https://${NamePrefix}-artifacts-${AWS::Region}-${ArtifactsAccount}.s3.amazonaws.com/builds/${BuildId}/templates/iac/elasticsearch.yml
+      Parameters:
+        NamePrefix: !Ref NamePrefix
+        VpcId: !Sub '${Infrastructure.Outputs.VpcId}'
+        #VpcId: !ImportValue amc-common-VpcId
+        VpcCidrBlock: !FindInMap [EnvironmentMap, !Ref Environment, VpcCidrBlock]
+        #VpcCidrBlock: !ImportValue amc-common-VpcCidr
+        Subnet1: !Sub '${Infrastructure.Outputs.DataSubnet1Id}'
+        #Subnet1: !ImportValue amc-common-DataSubnet1Id
+        Subnet2: !Sub '${Infrastructure.Outputs.DataSubnet2Id}'
+        #Subnet2: !ImportValue amc-common-DataSubnet2Id
+        ElasticsearchVersion: !FindInMap [EnvironmentMap, !Ref Environment, ElasticsearchVersion]
+        EBSVolumeSize: !FindInMap [EnvironmentMap, !Ref Environment, EBSVolumeSize]  
+        DataInstanceCount: !FindInMap [EnvironmentMap, !Ref Environment, ESDataInstanceCount]
+        DataInstanceType: !FindInMap [EnvironmentMap, !Ref Environment, ESDataInstanceType]
+        ExtendedEncryption: !FindInMap [EnvironmentMap, !Ref Environment, ESExtendedEncryption]
+      Tags:
+        - Key: environment
+          Value: !Ref Environment     
+        - Key: service
+          Value: !Ref NamePrefix
+
+  Alb:
+    Type: AWS::CloudFormation::Stack
+    Properties:
+      TemplateURL: !Sub https://${NamePrefix}-artifacts-${AWS::Region}-${ArtifactsAccount}.s3.amazonaws.com/builds/${BuildId}/templates/iac/alb.yml
+      Parameters:
+        NamePrefix: !Ref NamePrefix
+        VpcId: !Sub '${Infrastructure.Outputs.VpcId}'
+        IngressCidrBlock: !If [isInternal, !Ref WipoExternalIpRange, '0.0.0.0/0']
+        VpcCidrBlock: !FindInMap [EnvironmentMap, !Ref Environment, VpcCidrBlock]
+        Subnets: !Sub  '${Infrastructure.Outputs.PublicSubnet1Id},${Infrastructure.Outputs.PublicSubnet2Id},${Infrastructure.Outputs.PublicSubnet3Id}'
+        LogsBucket: !Sub '${Infrastructure.Outputs.LogsBucket}'
+        LogsPrefix: 'loadbalancer'
+        #LoadBalancerCertificateArn: !Sub '/${NamePrefix}/ec2/LoadBalancerCertificateArn'
+        #LoadBalancerCertificateArn: !FindInMap [EnvironmentMap, !Ref Environment, CertificateArn]
+        LoadBalancerCertificateArn: !If [isProduction, !Ref ProdCertificate, !Ref NonProdCertificate]
+        ShortName: 'loadbalancer'
+
+  AmcEadrApp:
+    Type: AWS::CloudFormation::Stack
+    Properties:
+      TemplateURL: !Sub https://${NamePrefix}-artifacts-${AWS::Region}-${ArtifactsAccount}.s3.amazonaws.com/builds/${BuildId}/templates/iac/amc-eadr-app.yml      
+      Parameters:
+        NamePrefix: !Ref NamePrefix
+        ArtifactsAccount: !Ref ArtifactsAccount
+        VpcId: !Sub '${Infrastructure.Outputs.VpcId}'
+        VpcCidrBlock: !FindInMap [EnvironmentMap, !Ref Environment, VpcCidrBlock]
+        Subnets: !Sub '${Infrastructure.Outputs.AppSubnet1Id},${Infrastructure.Outputs.AppSubnet2Id},${Infrastructure.Outputs.AppSubnet3Id}'
+        DesiredInstances: !FindInMap [EnvironmentMap, !Ref Environment, DesiredInstances]
+        MaxInstances: !FindInMap [EnvironmentMap, !Ref Environment, DesiredInstances]
+        ContainerType: !FindInMap [EnvironmentMap, !Ref Environment, ContainerType]
+        OidcDiscoveryBaseUrl: !If [isProduction, 'https://www3.wipo.int', !If [IsNotDev, 'https://www5.wipo.int', 'https://logindev.wipo.int']]
+        #OidcClientBaseUrl: !If [isProduction, 'https://amc.wipo.int', !GetAtt LoadBalancerDns.Outputs.Url]
+        #OidcClientBaseUrl: !If [isProduction, 'https://amc.wipo.int', 'https://amc.pct.dev.web1.wipo.int/eadr']
+        OidcClientBaseUrl: !If [isProduction, 'https://amc.wipo.int', !Sub 'https://${LoadBalancerDns.Outputs.DomainName}/eadr']
+        ListenerArn: !GetAtt Alb.Outputs.LoadBalancerListenerArn
+        #ListenerArn: !ImportValue amc-common-loadBalancerArn
+        #PrivateNamespaceId: !FindInMap [EnvironmentMap, !Ref Environment, PrivateNamespaceId]
+        WebTag: !Ref EadrWebTag
+        LogRetentionDays: !FindInMap [EnvironmentMap, !Ref Environment, LogRetentionDays]
+        DocumentsBucket: !Sub ${NamePrefix}-documents-${AWS::Region}-${AWS::AccountId}
+        #EadrAppUrl: !GetAtt LoadBalancerDns.Outputs.Url
+        EadrAppUrl: !Sub 'https://${LoadBalancerDns.Outputs.DomainName}/eadr'
+        ElasticsearchEndpointUrl: !GetAtt Elasticsearch.Outputs.EndpointUrl
+        DBHostSSMParameter: !FindInMap [EnvironmentMap, !Ref Environment, DBHostSSMParameter]
+        DBUserSSMParameter: !FindInMap [EnvironmentMap, !Ref Environment, DBUserSSMParameter]
+        DBPasswordSSMParameter: !FindInMap [EnvironmentMap, !Ref Environment, DBPasswordSSMParameter]
+        OIDCClientIdSSMParameter: !FindInMap [EnvironmentMap, !Ref Environment, OIDCClientIdSSMParameter]
+        OIDCClientSecretSSMParameter: !FindInMap [EnvironmentMap, !Ref Environment, OIDCClientSecretSSMParameter]
+
+      Tags:
+        - Key: environment
+          Value: !Ref Environment
+        - Key: service
+          Value: !Ref NamePrefix      
+
+  CaseApi:
+    Type: AWS::CloudFormation::Stack
+    Properties:
+      TemplateURL: !Sub https://${NamePrefix}-artifacts-${AWS::Region}-${ArtifactsAccount}.s3.amazonaws.com/builds/${BuildId}/templates/iac/api.yml
+      Parameters:
+        NamePrefix: !Ref NamePrefix
+        VpcId: !Sub '${Infrastructure.Outputs.VpcId}'
+        #VpcId: !ImportValue amc-common-VpcId
+        VpcCidrBlock: !FindInMap [EnvironmentMap, !Ref Environment, VpcCidrBlock]
+        #VpcCidrBlock: !ImportValue amc-common-VpcCidr
+        Subnet1: !Sub '${Infrastructure.Outputs.DataSubnet1Id}'
+        #Subnet1: !ImportValue amc-common-AppSubnet1Id
+        Subnet2: !Sub '${Infrastructure.Outputs.DataSubnet2Id}'
+        #Subnet2: !ImportValue amc-common-AppSubnet2Id
+        Subnet3: !Sub '${Infrastructure.Outputs.DataSubnet3Id}'
+        AppSecurityGroup: !GetAtt AmcEadrApp.Outputs.AppSecurityGroupId          
+        ApiStageName: !Ref Environment
+        ArtifactsBucket: !FindInMap [EnvironmentMap, !Ref Environment, CaseApiLambdaBucket]
+        ArtifactBucketKey: !FindInMap [EnvironmentMap, !Ref Environment, CaseApiLambdaArtifact]
+      Tags:
+        - Key: environment
+          Value: !Ref Environment     
+        - Key: service
+          Value: 'amc-eadr'            
+
+#  Dashboards:
+#    Type: AWS::CloudFormation::Stack
+#    Condition: IsNotDev
+#    Properties:
+#      TemplateURL: !Sub https://${NamePrefix}-artifacts-${AWS::Region}-${ArtifactsAccount}.s3.amazonaws.com/builds/${BuildId}/templates/iac/dashboards.yml
+#      Parameters:
+#        NamePrefix: !Ref NamePrefix
+#        Alb: !GetAtt Alb.Outputs.Name
+#        EcsClusterName: !GetAtt AmcEadrApp.Outputs.ClusterName
+#        EcsServiceName: !GetAtt AmcEadrApp.Outputs.ServiceName
+#      Tags:
+#        - Key: environment
+#          Value: !Ref Environment
+          
+  LoadBalancerDns:
+    Type: AWS::CloudFormation::Stack
+    DependsOn: DNS
+    Properties:
+      TemplateURL: !Sub https://${NamePrefix}-artifacts-${AWS::Region}-${ArtifactsAccount}.s3.amazonaws.com/builds/${BuildId}/templates/iac/dns-A.yml
+      Parameters:
+        NamePrefix: !Ref NamePrefix
+        DnsName: !Sub '${NamePrefix}.${AccountShortName}.${Environment}.web1.wipo.int'
+        #DnsHostedZoneName: !Sub '${NamePrefix}.${AccountShortName}.${Environment}.web1.wipo.int'
+        DnsHostedZoneName: !Sub '${NamePrefix}.${AccountShortName}.${Environment}.web1.wipo.int'
+        #DnsHostedZoneName: !Sub '${NamePrefix}.${!FindInMap [EnvironmentMap, !Ref Environment, AccountShortName]}.${Environment}.web1.wipo.int'
+        AliasDnsHostedZoneId: !Sub '${Alb.Outputs.LoadBalancerHostedZoneID}'
+        #AliasDnsHostedZoneId: !ImportValue amc-common-LoadBalancerHostedZoneID
+        AliasDnsName: !Sub '${Alb.Outputs.LoadBalancerDNSName}'
+        #AliasDnsName: !ImportValue amc-common-LoadBalancerDnsName
+
+  DNS:
+    Type: AWS::CloudFormation::Stack
+    Properties:
+      TemplateURL: !Sub https://${NamePrefix}-artifacts-${AWS::Region}-${ArtifactsAccount}.s3.amazonaws.com/builds/${BuildId}/templates/iac/dns.yml
+      Parameters:
+        NamePrefix: !Ref NamePrefix
+        Environment: !Ref Environment
+        VpcId: !Sub '${Infrastructure.Outputs.VpcId}'
+        #VpcId: !ImportValue amc-common-VpcId
+        AccountShortName: !Ref AccountShortName       
+
+
+#  Alarms:
+#    Type: AWS::CloudFormation::Stack
+#    Condition: IsNotDev
+#    Properties:
+#      TemplateURL: !Sub https://${NamePrefix}-artifacts-${AWS::Region}-${ArtifactsAccount}.s3.amazonaws.com/builds/${BuildId}/templates/iac/alarms.yml
+#      Parameters:
+#        NamePrefix: !Ref NamePrefix
+#        DBInstanceId: !FindInMap [EnvironmentMap, !Ref Environment, DBInstanceId]
+#        Alb: !GetAtt Alb.Outputs.Name
+#        ElasticsearchDomain: !GetAtt Elasticsearch.Outputs.DomainName
+#      Tags:
+#        - Key: environment
+#          Value: !Ref Environment
+#        - Key: service
+#          Value: 'amc'  
+
+
+#  LogsBucket:
+#    Type: AWS::CloudFormation::Stack
+#    Properties:
+#      TemplateURL: !Sub https://${NamePrefix}-artifacts-${AWS::Region}-${ArtifactsAccount}.s3.amazonaws.com/builds/${BuildId}/templates/iac/logs.yml
+#      Parameters:
+#        NamePrefix: !Ref NamePrefix
+#        LogRetentionDays: !FindInMap [EnvironmentMap, !Ref Environment, LogRetentionDays] 
+#      Tags:
+#        - Key: environment
+#          Value: !Ref Environment 
+
+  DocumentsBucket:
+    Type: AWS::CloudFormation::Stack
+    Properties:
+      TemplateURL: !Sub https://${NamePrefix}-artifacts-${AWS::Region}-${ArtifactsAccount}.s3.amazonaws.com/builds/${BuildId}/templates/iac/documents-bucket.yml
+      Parameters:
+        NamePrefix: !Ref NamePrefix
+      Tags:
+        - Key: service
+          Value: !Ref NamePrefix 
+          
+  NonProdCertificate: 
+    Type: "AWS::CertificateManager::Certificate"
+    Condition: isNotProduction
+    Properties: 
+      DomainName: !Sub '${NamePrefix}.${AccountShortName}.${Environment}.web1.wipo.int'
+      DomainValidationOptions: 
+            - DomainName: !Sub '${NamePrefix}.${AccountShortName}.${Environment}.web1.wipo.int'
+              HostedZoneId: !Sub '${DNS.Outputs.PublicHostedZone}'
+      ValidationMethod: DNS
+      Tags:
+        - Key: Name
+          Value: !Sub '${NamePrefix}-${Environment}' 
+          
+  ProdCertificate: 
+    Type: "AWS::CertificateManager::Certificate"
+    Condition: isProduction
+    Properties: 
+      DomainName: amc.wipo.int
+      ValidationMethod: DNS
+      Tags:
+        - Key: Name
+          Value: amc-public           
+          
+
+
+
+#Outputs:
+#    
+#  AlbDNSName:
+#    Description: "The URL of the applicaiton"
+#    Value: !GetAtt Alb.Outputs.Url    
