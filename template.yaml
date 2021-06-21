@@ -1,0 +1,6 @@
+Resources:
+  LogsBucket:
+    Type: AWS::S3::Bucket
+    Properties:
+      BucketName: training1321234213123123123124343425
+      AccessControl: Private
