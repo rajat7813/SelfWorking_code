@@ -1,0 +1,220 @@
+{
+    "viewItemId": 61279,
+    "wpUser": null,
+    "wpTimestamps": null,
+    "wpPremiumCertificate": null,
+    "emailSentTo": "riha.sharma@wipo.int",
+    "startDate": 1582889190000,
+    "endDate": null,
+    "remark": null,
+    "viewType": {
+        "viewType": "6",
+        "enName": "Notify when the user buys bundles"
+    },
+    "viewDate": null,
+    "wpNotificationStatusCodes": null,
+    "sentDate": null,
+    "wpUserBundle": {
+        "id": 271,
+        "startDate": 1582889135000,
+        "endDate": 1646047535000,
+        "remark": null,
+        "consumedTimestamps": 0,
+        "bundleName": "cccc",
+        "wpBundlePlans": {
+            "id": 2,
+            "name": "Pack of 100",
+            "totalTimestamps": 100,
+            "pricePerTimestamp": 20,
+            "currency": "CHF",
+            "description": "NA",
+            "itemCode": "BDB"
+        },
+        "paymentId": "EPAY-SQD3-3QG8",
+        "wpStatusCodes": {
+            "statusCode": 1,
+            "statusName": "Paid"
+        },
+        "wpUser": {
+            "userid": 51,
+            "logonName": "TESTFP",
+            "firstName": "riha",
+            "lastName": "SHARMA",
+            "email": "riha.sharma@wipo.int",
+            "country": null,
+            "stateCode": "CH",
+            "startDate": "2020-02-28",
+            "endDate": null,
+            "lang": "EN",
+            "address": null,
+            "phone": null,
+            "company": null
+        }
+    }
+}
+,
+{
+    "viewItemId": 61281,
+    "wpUser": null,
+    "wpTimestamps": null,
+    "wpPremiumCertificate": null,
+    "emailSentTo": "mahima.sharma@soprasteria.com",
+    "startDate": 1582889418000,
+    "endDate": null,
+    "remark": null,
+    "viewType": {
+        "viewType": "6",
+        "enName": "Notify when the user buys bundles"
+    },
+    "viewDate": null,
+    "wpNotificationStatusCodes": null,
+    "sentDate": null,
+    "wpUserBundle": {
+        "id": 272,
+        "startDate": 1582889383000,
+        "endDate": 1646047783000,
+        "remark": null,
+        "consumedTimestamps": 0,
+        "bundleName": "second Bundle",
+        "wpBundlePlans": {
+            "id": 2,
+            "name": "Pack of 100",
+            "totalTimestamps": 100,
+            "pricePerTimestamp": 20,
+            "currency": "CHF",
+            "description": "NA",
+            "itemCode": "BDB"
+        },
+        "paymentId": "EPAY-SG8A-J9LI",
+        "wpStatusCodes": {
+            "statusCode": 1,
+            "statusName": "Paid"
+        },
+        "wpUser": {
+            "userid": 31,
+            "logonName": "PSTESTUSER4",
+            "firstName": "Mahima",
+            "lastName": "SHARMA",
+            "email": "mahima.sharma@soprasteria.com",
+            "country": null,
+            "stateCode": "MA",
+            "startDate": "2019-12-20",
+            "endDate": null,
+            "lang": "EN",
+            "address": null,
+            "phone": null,
+            "company": "Steria"
+        }
+    }
+}
+,
+{
+    "viewItemId": 61282,
+    "wpUser": null,
+    "wpTimestamps": null,
+    "wpPremiumCertificate": null,
+    "emailSentTo": "shruti.gupta@soprasteria.com",
+    "startDate": 1582889446000,
+    "endDate": null,
+    "remark": null,
+    "viewType": {
+        "viewType": "6",
+        "enName": "Notify when the user buys bundles"
+    },
+    "viewDate": null,
+    "wpNotificationStatusCodes": null,
+    "sentDate": null,
+    "wpUserBundle": {
+        "id": 273,
+        "startDate": 1582889418000,
+        "endDate": 1646047818000,
+        "remark": null,
+        "consumedTimestamps": 0,
+        "bundleName": "batman",
+        "wpBundlePlans": {
+            "id": 1,
+            "name": "Pack of 10",
+            "totalTimestamps": 10,
+            "pricePerTimestamp": 23,
+            "currency": "CHF",
+            "description": null,
+            "itemCode": "BDA"
+        },
+        "paymentId": "EPAY-S695-UI34",
+        "wpStatusCodes": {
+            "statusCode": 1,
+            "statusName": "Paid"
+        },
+        "wpUser": {
+            "userid": 50,
+            "logonName": "SHRUTI",
+            "firstName": "Shruti",
+            "lastName": "GUPTA",
+            "email": "shruti.gupta@soprasteria.com",
+            "country": null,
+            "stateCode": "IN",
+            "startDate": "2020-02-28",
+            "endDate": null,
+            "lang": "EN",
+            "address": "Noida",
+            "phone": "987654321",
+            "company": "Sopra"
+        }
+    }
+}
+,
+{
+    "viewItemId": 61283,
+    "wpUser": null,
+    "wpTimestamps": null,
+    "wpPremiumCertificate": null,
+    "emailSentTo": "shruti.gupta@soprasteria.com",
+    "startDate": 1582889615000,
+    "endDate": null,
+    "remark": null,
+    "viewType": {
+        "viewType": "6",
+        "enName": "Notify when the user buys bundles"
+    },
+    "viewDate": null,
+    "wpNotificationStatusCodes": null,
+    "sentDate": null,
+    "wpUserBundle": {
+        "id": 274,
+        "startDate": 1582889464000,
+        "endDate": 1646047864000,
+        "remark": null,
+        "consumedTimestamps": 0,
+        "bundleName": "Shaktiman",
+        "wpBundlePlans": {
+            "id": 2,
+            "name": "Pack of 100",
+            "totalTimestamps": 100,
+            "pricePerTimestamp": 20,
+            "currency": "CHF",
+            "description": "NA",
+            "itemCode": "BDB"
+        },
+        "paymentId": "EPAY-SUAZ-I73F",
+        "wpStatusCodes": {
+            "statusCode": 1,
+            "statusName": "Paid"
+        },
+        "wpUser": {
+            "userid": 50,
+            "logonName": "SHRUTI",
+            "firstName": "Shruti",
+            "lastName": "GUPTA",
+            "email": "shruti.gupta@soprasteria.com",
+            "country": null,
+            "stateCode": "IN",
+            "startDate": "2020-02-28",
+            "endDate": null,
+            "lang": "EN",
+            "address": "Noida",
+            "phone": "987654321",
+            "company": "Sopra"
+        }
+    }
+}
+]"
