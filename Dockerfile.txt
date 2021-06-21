@@ -1,0 +1,50 @@
+FROM tomcat:8.5-jdk8-openjdk-slim
+
+# Ensure root user is used               
+#USER root 
+# Install required libs
+#RUN yum update -y
+#RUN yum install -y sudo
+
+
+
+ARG TOMCAT_HOME=/usr/local/tomcat
+
+RUN mkdir -p /data/wipo-proof/logs/
+ADD wdts-client-cert.p12 /data/wipo-proof
+
+WORKDIR ${TOMCAT_HOME}
+
+
+###delete webapps
+RUN rm -rf ${TOMCAT_HOME}/webapps/docs
+RUN rm -rf ${TOMCAT_HOME}/webapps/examples
+RUN rm -rf ${TOMCAT_HOME}/webapps/manager
+RUN rm -rf ${TOMCAT_HOME}/webapps/host-manager
+RUN rm -rf ${TOMCAT_HOME}/webapps/ROOT/*.jsp
+RUN rm -rf ${TOMCAT_HOME}/webapps/ROOT/*.html
+
+
+
+ADD setenv.sh $TOMCAT_HOME/bin
+ADD index.html ${TOMCAT_HOME}/webapps/ROOT/
+
+COPY wdts.war ${TOMCAT_HOME}/webapps/
+COPY truststore.jks ${TOMCAT_HOME}/
+
+
+#custom server.xml after Pen Test recommandations
+COPY server.xml /usr/local/tomcat/conf/server.xml
+
+# Create tomcat user
+RUN groupadd -r tomcat && useradd -g tomcat -d ${TOMCAT_HOME} -s /sbin/nologin  -c "Tomcat user" tomcat && chown -R tomcat:tomcat ${TOMCAT_HOME}
+RUN chown -R tomcat:tomcat /data
+
+EXPOSE 8080
+EXPOSE 8009
+
+USER tomcat
+# Launch Tomcat
+CMD ["./bin/catalina.sh", "run"]
+
+

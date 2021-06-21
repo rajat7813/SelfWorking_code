@@ -1,0 +1,83 @@
+﻿# Copyright (c) 1993-2009 Microsoft Corp.
+#
+# This is a sample HOSTS file used by Microsoft TCP/IP for Windows.
+#
+# This file contains the mappings of IP addresses to host names. Each
+# entry should be kept on an individual line. The IP address should
+# be placed in the first column followed by the corresponding host name.
+# The IP address and the host name should be separated by at least one
+# space.
+#
+# Additionally, comments (such as these) may be inserted on individual
+# lines or following the machine name denoted by a '#' symbol.
+#
+# For example:
+#
+#      102.54.94.97     rhino.acme.com          # source server
+#       38.25.63.10     x.acme.com              # x client host
+
+# localhost name resolution is handled within DNS itself.
+#	127.0.0.1       localhost
+#	::1             localhost
+172.31.128.29 wiracdev01-vip.wipo.int
+172.31.128.30 wiracdev02-vip.wipo.int
+10.224.242.3    mail.wipo.int
+172.31.128.3 intranet.wipo.int
+172.31.128.13   svn.wipo.int
+172.31.128.3    offshoreportal.wipo.int
+#172.31.128.51 www3dev.wipo.int
+172.31.128.4    pctdev.wipo.int
+172.31.128.6    devscan.wipo.int
+172.31.128.11   vs321565.wipo.int
+172.31.128.7    devscan.wipo.int
+172.31.128.8    devrac1.wipo.int
+172.31.128.8    devrac1-vip.wipo.int
+172.31.128.9    devrac2.wipo.int
+172.31.128.9    devrac2-vip.wipo.int
+172.31.128.10   devrac3.wipo.int
+172.31.128.10   devrac3-vip.wipo.int
+172.31.128.12   vs321566.wipo.int
+172.31.128.14   pcttest.wipo.int
+172.31.128.16   VPC000015.adi.wipo.int
+172.31.128.27   oamdev3.wipo.int
+172.31.128.15   epctasacpt.wipo.int 
+172.31.128.31   idstore.wipo.int
+172.31.128.4    epctbizdevrules1.wipo.int
+172.31.128.18   VPC000009.adi.wipo.int
+172.31.128.43   pctintranetdev.wipo.int 
+172.31.128.46   devsrv3.wipo.intF
+172.31.128.45   accscan.wipo.int
+172.31.128.35   www3dev.wipo.int
+172.31.128.51   logindev1.wipo.int
+172.31.128.52   www-test.wipo.int
+172.31.128.53   www3-test.wipo.int
+172.31.128.13 qtest.wipo.int
+172.31.128.13 sessions.qtest.wipo.int
+172.31.128.13 insights.qtest.wipo.int
+172.31.128.13 parameters.qtest.wipo.int
+172.31.128.13 launch.qtest.wipo.int
+172.31.128.13 pulse.qtest.wipo.int
+172.31.128.13 scenario.qtest.wipo.int
+172.31.128.57  VPCWIN1000110.wipo.int
+172.31.128.74  10.47.247.33
+172.31.128.3   10.47.247.30
+10.224.242.3      mail.wipo.int 
+10.224.242.6    connect.wipo.int
+192.168.1.2 host.docker.internal
+192.168.1.2 gateway.docker.internal
+192.168.1.4 host.docker.internal
+192.168.1.4 gateway.docker.internal
+10.224.242.9 pctwsdev.wipo.int
+# Added by Docker Desktop
+192.168.1.6 host.docker.internal
+192.168.1.6 gateway.docker.internal
+# To allow the same kube context to work on the host and the container:
+127.0.0.1 kubernetes.docker.internal
+# End of section
+10.224.242.15 pcttest-prem.wipo.int
+10.47.245.176 VPCWIN1000252.adi.wipo.int
+
+
+
+
+
