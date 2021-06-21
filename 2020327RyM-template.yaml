@@ -1,0 +1,6 @@
+Resources:
+  LogsBucket:
+    Type: AWS::S3::Bucket
+    Properties:
+#     BucketName: !Sub ${NamePrefix}-logs-${AWS::Region}-${AWS::AccountId}
+      AccessControl: Private

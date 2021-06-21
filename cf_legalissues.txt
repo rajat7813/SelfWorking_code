@@ -1,0 +1,562 @@
+AWSTemplateFormatVersion: 2010-09-09
+
+Description: > 
+  Creates the pipeline for LEGALISSUES deployment
+
+Parameters:
+
+  NamePrefix:
+    Description: Prefix added to the name of resources created in this stack
+    Type: String
+
+  AcceptanceAccount:
+    Description: The id of the acceptance account
+    Type: String
+    Default: 746146769806
+
+  ProductionAccount:
+    Description: The id of the production account
+    Type: String
+    Default: 239241585122
+    
+Resources:
+
+  KMSKey:
+    Type: AWS::KMS::Key
+    Properties:
+      Description: Used by Assumed Roles in dev/acc/prd accounts to Encrypt/Decrypt artifacts
+      EnableKeyRotation: true
+      KeyPolicy:
+        Version: "2012-10-17"
+        Id: !Ref AWS::StackName
+        Statement:
+          - Sid: Allows admin of the key
+            Effect: Allow
+            Principal:
+              AWS: !Sub arn:aws:iam::${AWS::AccountId}:root
+            Action:
+              - kms:Create*
+              - kms:Describe*
+              - kms:Enable*
+              - kms:List*
+              - kms:Put*
+              - kms:Update*
+              - kms:Revoke*
+              - kms:Disable*
+              - kms:Get*
+              - kms:Delete*
+              - kms:ScheduleKeyDeletion
+              - kms:CancelKeyDeletion
+            Resource: "*"
+          - Sid: Allow use of the key to other accounts
+            Effect: Allow
+            Principal:
+              AWS: 
+                - !Sub arn:aws:iam::${AWS::AccountId}:root
+                - !Sub arn:aws:iam::${AcceptanceAccount}:root
+                - !Sub arn:aws:iam::${ProductionAccount}:root
+                - !GetAtt BuildRole.Arn
+                - !GetAtt DeploymentRole.Arn
+                - !GetAtt PipelineRole.Arn
+            Action:
+              - kms:Encrypt
+              - kms:Decrypt
+              - kms:ReEncrypt*
+              - kms:GenerateDataKey*
+              - kms:DescribeKey
+            Resource: "*"
+
+#  KMSAlias:
+#    Type: AWS::KMS::Alias
+#    Properties:
+#      AliasName: !Sub alias/${NamePrefix}-crossaccount-cmk
+#      TargetKeyId: !Ref KMSKey
+
+  ArtifactsBucket:
+    Type: AWS::S3::Bucket
+    DeletionPolicy: Retain
+    Properties:
+      BucketName: !Sub ${NamePrefix}-artifacts-${AWS::Region}-${AWS::AccountId}
+      BucketEncryption:
+        ServerSideEncryptionConfiguration: 
+          - ServerSideEncryptionByDefault:
+              SSEAlgorithm: aws:kms
+              KMSMasterKeyID: !Ref KMSKey
+      VersioningConfiguration:
+        Status: Enabled
+
+  ArtifactsBucketPolicy:
+    Type: AWS::S3::BucketPolicy
+    Properties:
+      Bucket: !Ref ArtifactsBucket
+      PolicyDocument:
+        Id: !Sub ${NamePrefix}-artifacts-bucket-policy
+        Version: 2012-10-17
+        Statement:
+          - Effect: Allow
+            Principal:
+              AWS: 
+                - !Sub arn:aws:iam::${AcceptanceAccount}:root
+                - !Sub arn:aws:iam::${ProductionAccount}:root
+            Action: 
+              - s3:ListBucket
+              - s3:GetObject
+            Resource: 
+              - !Sub arn:aws:s3:::${ArtifactsBucket}
+              - !Sub arn:aws:s3:::${ArtifactsBucket}/*
+
+  legalissuesWebRepository:
+    DeletionPolicy: Retain
+    Type: AWS::ECR::Repository
+    Properties: 
+      LifecyclePolicy: 
+        LifecyclePolicyText: |
+          {
+            "rules": [{
+              "rulePriority": 1,
+              "description": "Only keep 10000 images",
+              "selection": {
+                "tagStatus": "any",
+                "countType": "imageCountMoreThan",
+                "countNumber": 10000
+              },
+              "action": { "type": "expire" }
+            }]
+          }
+      RepositoryName: !Sub ${NamePrefix}-web
+      RepositoryPolicyText:
+        Version: 2012-10-17
+        Statement:
+          - Effect: Allow
+            Principal:
+              AWS: 
+                - !Sub arn:aws:iam::${AWS::AccountId}:root
+            Action: 
+              - ecr:GetAuthorizationToken
+              - ecr:BatchCheckLayerAvailability
+              - ecr:GetDownloadUrlForLayer
+              - ecr:GetRepositoryPolicy
+              - ecr:DescribeRepositories
+              - ecr:ListImages
+              - ecr:DescribeImages
+              - ecr:BatchGetImage
+              - ecr:InitiateLayerUpload
+              - ecr:UploadLayerPart
+              - ecr:CompleteLayerUpload
+              - ecr:PutImage
+          - Effect: Allow
+            Principal:
+              AWS: 
+                - !Sub arn:aws:iam::${AcceptanceAccount}:root
+                - !Sub arn:aws:iam::${ProductionAccount}:root
+            Action: 
+              - ecr:GetAuthorizationToken
+              - ecr:BatchCheckLayerAvailability
+              - ecr:GetDownloadUrlForLayer
+              - ecr:GetRepositoryPolicy
+              - ecr:DescribeRepositories
+              - ecr:ListImages
+              - ecr:DescribeImages
+              - ecr:BatchGetImage
+              
+#  ECR trigger was commented to avoid the issue of multiple/hanging deployments
+#  EcrEventRule:
+#    Type: AWS::Events::Rule
+#    Properties:
+#      EventPattern:
+#        source:
+#          - aws.ecr
+#        detail:
+#          eventName:
+#            - PutImage
+#          requestParameters:
+#            repositoryName:
+#              - !Ref legalissuesBizRepository
+#              - !Ref legalissuesWebRepository
+#              - !Ref legalissuesNotificationRepository
+#            imageTag:
+#              - latest
+#      Targets:
+#        -
+#          Arn: !Sub arn:aws:codepipeline:${AWS::Region}:${AWS::AccountId}:${Pipeline}
+#          RoleArn: !GetAtt EcrEventRole.Arn
+#          Id: !Sub ${NamePrefix}-pipeline
+
+  EcrEventRole:
+    Type: AWS::IAM::Role
+    Properties:
+      AssumeRolePolicyDocument:
+        Version: 2012-10-17
+        Statement:
+          - Effect: Allow
+            Principal:
+              Service:
+                - events.amazonaws.com
+            Action: sts:AssumeRole
+      Path: /
+      Policies:
+        - PolicyName: !Sub ${NamePrefix}-ecr-event-pipeline-execution
+          PolicyDocument:
+            Version: 2012-10-17
+            Statement:
+              - Effect: Allow
+                Action: codepipeline:StartPipelineExecution
+                Resource: !Sub arn:aws:codepipeline:${AWS::Region}:${AWS::AccountId}:${Pipeline}
+      PermissionsBoundary: !Sub arn:aws:iam::${AWS::AccountId}:policy/WIPO-PermissionsBoundary
+
+  BuildRole:
+    Type: AWS::IAM::Role
+    Properties:
+      RoleName: !Sub ${NamePrefix}-build-role
+      AssumeRolePolicyDocument:
+        Version: 2012-10-17
+        Statement:
+          - Effect: Allow
+            Principal:
+              Service:
+                - codebuild.amazonaws.com
+            Action:
+              - sts:AssumeRole
+      Path: /
+      PermissionsBoundary: !Sub arn:aws:iam::${AWS::AccountId}:policy/WIPO-PermissionsBoundary
+
+  DeploymentRole:
+    Type: AWS::IAM::Role
+    Properties:
+      RoleName: !Sub ${NamePrefix}-deployment-role
+      AssumeRolePolicyDocument:
+        Version: 2012-10-17
+        Statement:
+          - Effect: Allow
+            Principal:
+              Service:
+                - codebuild.amazonaws.com
+                - cloudformation.amazonaws.com
+            Action:
+              - sts:AssumeRole
+      Path: /
+      PermissionsBoundary: !Sub arn:aws:iam::${AWS::AccountId}:policy/WIPO-PermissionsBoundary
+
+  PipelineRole:
+    Type: AWS::IAM::Role
+    Properties:
+      RoleName: !Sub ${NamePrefix}-pipeline-role
+      AssumeRolePolicyDocument:
+        Version: 2012-10-17
+        Statement:
+          - Effect: Allow
+            Principal:
+              Service:
+                - codepipeline.amazonaws.com
+            Action:
+              - sts:AssumeRole
+      Path: /
+      PermissionsBoundary: !Sub arn:aws:iam::${AWS::AccountId}:policy/WIPO-PermissionsBoundary
+
+  CmkPolicy:
+    Type: AWS::IAM::Policy
+    Properties:
+      PolicyName: !Sub ${NamePrefix}-cmk-policy
+      PolicyDocument:
+        Version: 2012-10-17
+        Statement:
+          - Effect: Allow
+            Action:
+              - kms:Encrypt
+              - kms:Decrypt
+              - kms:ReEncrypt*
+              - kms:GenerateDataKey*
+              - kms:DescribeKey
+            Resource: !GetAtt KMSKey.Arn
+      Roles:
+        - !Ref BuildRole
+        - !Ref DeploymentRole
+
+  BuildProjectPolicy:
+    Type: AWS::IAM::Policy
+    Properties:
+      PolicyName: !Sub ${NamePrefix}-build-policy
+      PolicyDocument:
+        Version: 2012-10-17
+        Statement:
+          - Effect: Allow
+            Action:
+              - s3:PutObject
+              - s3:DeleteObject
+              - s3:GetObject
+              - s3:ListBucket
+            Resource:
+              - !Sub arn:aws:s3:::${ArtifactsBucket}
+              - !Sub arn:aws:s3:::${ArtifactsBucket}/*
+          - Effect: Allow
+            Action:
+              - logs:CreateLogGroup
+              - logs:CreateLogStream
+              - logs:PutLogEvents
+            Resource: !Sub arn:aws:logs:${AWS::Region}:${AWS::AccountId}:log-group:*
+      Roles:
+        - !Ref BuildRole
+
+  BuildProject:
+    Type: AWS::CodeBuild::Project
+    DependsOn: BuildProjectPolicy
+    Properties:
+      Name: !Ref NamePrefix
+      Description: !Ref NamePrefix
+      EncryptionKey: !GetAtt KMSKey.Arn
+      ServiceRole: !GetAtt BuildRole.Arn
+      Artifacts:
+        Type: CODEPIPELINE
+      Environment:
+        Type: LINUX_CONTAINER
+        ComputeType: BUILD_GENERAL1_SMALL
+        Image: aws/codebuild/amazonlinux2-x86_64-standard:1.0
+        EnvironmentVariables:
+          - Name: PREFIX
+            Value: !Ref NamePrefix
+          - Name: ARTIFACTS_ACCOUNT
+            Value: !Ref AWS::AccountId
+        PrivilegedMode: false
+      Source:
+        Type: CODEPIPELINE
+      TimeoutInMinutes: 10
+      LogsConfig:
+        CloudWatchLogs:
+          GroupName: !Ref BuildLogGroup
+          Status: ENABLED
+
+  BuildLogGroup:
+    Type: AWS::Logs::LogGroup
+    Properties:
+      LogGroupName: !Sub ${NamePrefix}/build
+      RetentionInDays: 7
+
+  DeploymentPolicy:
+    Type: AWS::IAM::Policy
+    Properties:
+      PolicyName: !Sub ${NamePrefix}-deployment-policy
+      PolicyDocument:
+        Version: 2012-10-17
+        Statement:
+          - Effect: Allow
+            Action: '*'
+            Resource: '*'
+      Roles: 
+        - !Ref DeploymentRole
+
+  PipelinePolicy:
+    Type: AWS::IAM::Policy
+    Properties:
+      PolicyName: !Sub ${NamePrefix}-codepipeline-policy
+      PolicyDocument:
+        Version: 2012-10-17
+        Statement:
+          - Effect: Allow
+            Action: iam:PassRole
+            Resource: '*'
+            Condition:
+              StringEqualsIfExists:
+                iam:PassedToService:
+                  - cloudformation.amazonaws.com
+                  - ec2.amazonaws.com
+                  - ecs-tasks.amazonaws.com
+          - Effect: Allow
+            Action:
+              - codecommit:CancelUploadArchive
+              - codecommit:GetBranch
+              - codecommit:GetCommit
+              - codecommit:GetUploadArchiveStatus
+              - codecommit:UploadArchive
+            Resource: '*'
+          - Effect: Allow
+            Action:
+              - ec2:*
+              - elasticloadbalancing:*
+              - autoscaling:*
+              - cloudwatch:*
+              - s3:*
+              - sns:*
+              - cloudformation:*
+              - rds:*
+              - sqs:*
+              - ecs:*
+            Resource: '*'
+          - Effect: Allow
+            Action:
+              - lambda:InvokeFunction
+              - lambda:ListFunctions
+            Resource: '*'
+          - Effect: Allow
+            Action:
+              - cloudformation:CreateStack
+              - cloudformation:DeleteStack
+              - cloudformation:DescribeStacks
+              - cloudformation:UpdateStack
+              - cloudformation:CreateChangeSet
+              - cloudformation:DeleteChangeSet
+              - cloudformation:DescribeChangeSet
+              - cloudformation:ExecuteChangeSet
+              - cloudformation:SetStackPolicy
+              - cloudformation:ValidateTemplate
+            Resource: '*'
+          - Effect: Allow
+            Action:
+              - codebuild:BatchGetBuilds
+              - codebuild:StartBuild
+            Resource: '*'
+          - Effect: Allow
+            Action:
+              - ecr:DescribeImages
+            Resource: '*'
+      Roles:
+        - !Ref PipelineRole
+
+#  AssumeRolePolicy:
+#    Type: AWS::IAM::Policy
+#    Properties:
+#      PolicyName: !Sub ${NamePrefix}-assume-role-policy
+#      PolicyDocument:
+#        Version: 2012-10-17
+#        Statement:
+#          - Effect: Allow
+#            Action:
+#              - sts:AssumeRole
+#            Resource:
+#              - !Sub arn:aws:iam::${AcceptanceAccount}:role/${NamePrefix}-cross-account-role
+#              - !Sub arn:aws:iam::${ProductionAccount}:role/${NamePrefix}-cross-account-role
+#      Roles:
+#        - !Ref PipelineRole
+
+  Pipeline:
+    Type: AWS::CodePipeline::Pipeline
+    #DependsOn: AssumeRolePolicy
+    Properties:
+      RoleArn:
+        !GetAtt PipelineRole.Arn
+      Name: !Ref NamePrefix
+      ArtifactStore:
+        Type: S3
+        Location: !Ref ArtifactsBucket
+        EncryptionKey:
+          Id: !GetAtt KMSKey.Arn
+          Type: KMS
+#      DisableInboundStageTransitions:
+#        - StageName: DeployToAcceptance
+#          Reason: DeployOnceApproved
+      Stages:
+        - Name: Sources
+          Actions:
+            - Name: S3SourceTemplates
+              ActionTypeId:
+                Category: Source
+                Owner: AWS
+                Version: '1'
+                Provider: S3
+              Configuration:
+                S3Bucket: !Ref ArtifactsBucket
+                S3ObjectKey: legalissues.zip
+              OutputArtifacts:
+                - Name: SourceArtifact
+              RunOrder: 1
+            - Name: ECRSourcelegalissuesWeb
+              ActionTypeId:
+                Category: Source
+                Owner: AWS
+                Version: '1'
+                Provider: ECR
+              Configuration:
+                RepositoryName: !Ref legalissuesWebRepository
+              OutputArtifacts:
+                - Name: EcrArtifactWeb
+              RunOrder: 1
+              
+        - Name: Build
+          Actions:
+          - Name: Build
+            ActionTypeId:
+              Category: Build
+              Owner: AWS
+              Version: '1'
+              Provider: CodeBuild
+            Configuration:
+              ProjectName: !Ref BuildProject
+              PrimarySource: SourceArtifact
+            RunOrder: 1
+            InputArtifacts:
+              - Name: SourceArtifact
+              - Name: EcrArtifactWeb
+            OutputArtifacts:
+              - Name: BuildArtifact
+        - Name: DeployToDevelopment
+          Actions:
+            - Name: Deploy
+              ActionTypeId:
+                Category: Deploy
+                Owner: AWS
+                Version: '1'
+                Provider: CloudFormation
+              Configuration:
+                ActionMode: REPLACE_ON_FAILURE
+                StackName: !Sub ${NamePrefix}-stack
+                Capabilities: CAPABILITY_NAMED_IAM
+                TemplatePath: BuildArtifact::templates/app/master.yml
+                ParameterOverrides: !Sub '{"Environment": "dev", "NamePrefix": "${NamePrefix}", "ArtifactsAccount": "${AWS::AccountId}"}'
+                TemplateConfiguration: BuildArtifact::templates/app/master-parameters.json
+                RoleArn: !GetAtt DeploymentRole.Arn
+              InputArtifacts:
+                - Name: BuildArtifact
+              RunOrder: 1
+#        - Name: DeployToAcceptance
+#          Actions:
+#            - Name: Deploy
+#              ActionTypeId:
+#                Category: Deploy
+#                Owner: AWS
+#                Version: '1'
+#                Provider: CloudFormation
+#              Configuration:
+#                ActionMode: REPLACE_ON_FAILURE
+#                StackName: !Sub ${NamePrefix}-stack
+#                Capabilities: CAPABILITY_NAMED_IAM
+#                TemplatePath: BuildArtifact::templates/app/master.yml
+#                ParameterOverrides: !Sub '{"Environment": "acc", "NamePrefix": "${NamePrefix}", "ArtifactsAccount": "${AWS::AccountId}"}'
+#                TemplateConfiguration: BuildArtifact::templates/app/master-parameters.json
+#                RoleArn: !Sub arn:aws:iam::${AcceptanceAccount}:role/${NamePrefix}-deployment-role
+#              InputArtifacts:
+#                - Name: BuildArtifact
+#              RunOrder: 1
+#              RoleArn: !Sub arn:aws:iam::${AcceptanceAccount}:role/${NamePrefix}-cross-account-role
+#        - Name: DeployToProduction
+#          Actions:
+#            - Name: Deploy
+#              ActionTypeId:
+#                Category: Deploy
+#                Owner: AWS
+#                Version: '1'
+#                Provider: CloudFormation
+#              Configuration:
+#                ActionMode: REPLACE_ON_FAILURE
+#                StackName: !Sub ${NamePrefix}-stack
+#                Capabilities: CAPABILITY_NAMED_IAM
+#                TemplatePath: BuildArtifact::templates/app/master.yml
+#                ParameterOverrides: !Sub '{"Environment": "prd", "NamePrefix": "${NamePrefix}", "ArtifactsAccount": "${AWS::AccountId}"}'
+#                TemplateConfiguration: BuildArtifact::templates/app/master-parameters.json
+#                RoleArn: !Sub arn:aws:iam::${ProductionAccount}:role/${NamePrefix}-deployment-role
+#              InputArtifacts:
+#                - Name: BuildArtifact
+#              RunOrder: 1
+#              RoleArn: !Sub arn:aws:iam::${ProductionAccount}:role/${NamePrefix}-cross-account-role
+
+Outputs:
+
+  ArtifactsBucket:
+    Description: "The name of the artifact bucket"
+    Value: !Ref ArtifactsBucket
+
+  ArtifactsBucketArn:
+    Description: "The Arn of the artifact bucket"
+    Value: !GetAtt ArtifactsBucket.Arn
+
+  KMSKeyArn:
+    Description: "The Arn of the KMS key"
+    Value: !GetAtt KMSKey.Arn
