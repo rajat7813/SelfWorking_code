@@ -1,0 +1,208 @@
+https://login11.wipo.int/am/saml2/jsp/idpSSOInit.jsp?metaAlias=/internal/idp1&spEntityID=urn:amazon:webservices
+
+
+
+770725503646
+
+iap-devops
+
+iap-dev-devops
+
+
+frankfurt
+
+keytool --importcert -alias google -trustcacerts -file ~/abc/cert.der -keystore truststore.jks
+
+keytool --list -keystore truststore.jks
+keytool -list -keystore truststore.jks
+keytool -list -keystore truststore.jks -alias -v
+keytool -list -keystore truststore.jks -alias www.google.com -v
+
+sudo keytool -list -keystore truststore.jks -alias logindev -v
+sudo keytool -export -keystore truststore.jks -alias logindev -file .
+
+############################################################################################################
+
+SRC_DIR=/data2/bamboo-build-dir/IAP-ITO-JOB1/iap-renderer/target/classes/intr/wipo/iap/resources/sample-notifications/generic
+###DEST_DIR=/data/bamboo-home/xml-data/build-dir/ET-ER-CPZ/target/ePCTRenderer-zips
+DEST_DIR=/data2/bamboo-build-dir/IAP-ITO-JOB1/iap-renderer/target/IAPRenderer-zips
+
+#rm -r ${DEST_DIR} || true
+mkdir -p ${DEST_DIR}
+
+cd ${DEST_DIR}
+for lang in en es fr
+do
+   ### store just the name of the files, without directory names
+   zip -j ${lang}HTMLs ${SRC_DIR}/${lang}/output/*.html
+done
+
+
+#################################################################################################
+
+
+
+scp file.txt remote_username@10.10.0.2:/remote/directory
+scp truststore.jks devarorar@devsrv41:/tmp/rajat/
+
+sudo find / -type f -name "-DIM4JAVA_TOOLPATH"
+  679  sudo grep -ir "-DIM4JAVA_TOOLPATH" /
+  680  sudo grep -ir -DIM4JAVA_TOOLPATH /
+
+sudo ln -s /data/showcase/drafts drafts
+
+
+
+   JAVA_OPTS="-Xms512m -Xmx2560m -XX:MetaspaceSize=256M -XX:MaxMetaspaceSize=512m -Djava.net.preferIPv4Stack=true -Djboss.as.management.blocking.timeout=600"
+
+
+
+C:\WINDOWS\system32>nslookup rds.iap.pct.dev.intra1.wipo.int
+Server:  PDC3.ADI.WIPO.INT
+Address:  10.32.2.144
+
+Non-authoritative answer:
+Name:    iap-dev.chath1nqz0sq.eu-central-1.rds.amazonaws.com
+Address:  10.44.57.133
+Aliases:  rds.iap.pct.dev.intra1.wipo.int
+
+
+https://intranet.wipo.int/nexus/repository/wipo-public/
+
+pct-deployment
+pctDepl0yudt
+
+
+#####################################################################################################################
+
+
+printenv codeBranch
+
+echo ${bamboo.inject.variable1}
+
+#export
+
+#####################################################################################################################
+
+
+Project_name=`mvn org.apache.maven.plugins:maven-help-plugin:3.2.0:evaluate -Dexpression=project.artifactId -q -DforceStdout`
+version=`mvn org.apache.maven.plugins:maven-help-plugin:3.2.0:evaluate -Dexpression=project.version -q -DforceStdout`
+cd cloudformation/
+
+Url=${bamboo.repository.svn.repositoryUrl}
+file=cicd-package.json
+
+cat $file
+
+sed -i 's/https:\/\/svn.wipo.int\/svn\/pctis\/support\/PCTLegal\/trunk\/LegalIssues/Svn_Url/g' $file
+sed -i 's/legalissues/Project_name/g' $file
+#sed -i 's/Svn_Url/$g' $file
+
+echo $Project_name
+sed -i 's/BUILD_NUMBER/${bamboo.buildNumber}/g' $file
+sed -i 's/BUILD_DATE_TIME/${bamboo.buildTimeStamp}/g' $file
+sed -i 's/COMMIT_ID/${bamboo.repository.revision.number}/g' $file
+sed -i "s/Project_name/$Project_name/g" $file
+sed -i "s/Svn_Url/${Url//\//\\/}/g" $file
+sed -i "s/20.06/${version}/g" $file
+
+cat $file
+
+
+#######################################################################################################################
+
+
+Url=${bamboo.repository.svn.repositoryUrl}
+
+echo "variable1=`echo $Url | egrep -o '/(tags|branches)/[^/]+|/trunk'`" >> output.txt
+
+#export codeBranch
+
+#set codeBranch=$codeBranch
+
+#echo $codeBranch
+
+
+##############################################################################################################
+
+Project_name=`mvn org.apache.maven.plugins:maven-help-plugin:3.2.0:evaluate -Dexpression=project.artifactId -q -DforceStdout`
+version=`mvn org.apache.maven.plugins:maven-help-plugin:3.2.0:evaluate -Dexpression=project.version -q -DforceStdout`
+cd cloudformation/
+
+Url=${bamboo.repository.svn.repositoryUrl}
+file=cicd-package.json
+
+cat $file
+
+sed -i 's/https:\/\/svn.wipo.int\/svn\/pctis\/support\/PCTLegal\/trunk\/LegalIssues/Svn_Url/g' $file
+sed -i 's/legalissues/Project_name/g' $file
+#sed -i 's/Svn_Url/$g' $file
+
+echo $Project_name
+sed -i 's/BUILD_NUMBER/${bamboo.buildNumber}/g' $file
+sed -i 's/BUILD_DATE_TIME/${bamboo.buildTimeStamp}/g' $file
+sed -i 's/COMMIT_ID/${bamboo.repository.revision.number}/g' $file
+sed -i "s/Project_name/$Project_name/g" $file
+sed -i "s/Svn_Url/${Url//\//\\/}/g" $file
+sed -i "s/20.06/${version}/g" $file
+
+cat $file
+
+
+#####################################################################################################################
+
+
+
+#export http_proxy=http://wcs.wipo.int:3128 
+#export https_proxy=https://wcs.wipo.int:3128 
+
+#docker login devsrv41.wipo.int:8123 -u pct-docker-deployment -p abcd1234
+
+
+cp /tmp/rajat/notif/Dockerfile /data/aws/iap-notification-services-for-ecs/.
+
+#cd /tmp/rajat
+
+cd /data/aws/iap-notification-services-for-ecs/
+ls -lrt
+
+
+echo "##############################################################"
+
+echo ${bamboo.planRepository.repositoryUrl}
+
+echo "##############################################################"
+
+
+######################################################################################################################
+
+
+cd /data/mockup/
+
+ls -l
+
+#rm -rf sample.csv
+
+#echo "KR,PCT/EP2019/000001,1020037000001,E,20190614,,
+#KR,PCT/EP2019/000002,1020037000001,P,20190614,,
+#KR,PCT/EP2019/000003,1020037000001,E,20190614,1020047000010,A1" > sample.csv
+
+
+
+
+echo "<?xml version=\"1.0\" encoding=\"UTF-8\"?>
+<!DOCTYPE wo-national-phase-information SYSTEM \"wo-national-phase-information-v1-5.dtd\">
+<wo-national-phase-information country='KR' file-name= 'KR-IB-npsd-000001.zip' date-produced = '20190625' >
+  <wo-national-office-event office-code='KR' international-application = 'PCT/EP2019/000001' national-application = '1020037000001' event-type = 'E' event-date = '20190625' publication-kind-code='A1' />
+  <wo-national-office-event office-code='KR' international-application = 'PCT/EP2019/000002' national-application = '1020037000002' event-type = 'A' event-date = '20190625'/>
+  <wo-national-office-event office-code='KR' international-application = 'PCT/EP2019/000003' national-application = '1020037000003' event-type = 'E' event-date='20190625'/> 
+  <wo-national-office-event office-code='IB' international-application = 'PCT/EP2019/000004' national-application = '1020037000004' event-type = 'E' event-date='20190625'/> 
+</wo-national-phase-information>" > npe-upload.txt
+
+
+
+hostname
+
+
+#################################################################################################
+

@@ -1,0 +1,74 @@
+Hi Lotfi,
+
+
+As discussed in the call,
+
+I have done a POC to push and pull Docker Images from local to nexus.
+
+Please Find the attachment of pushing and pulling Docker image to nexus repo.
+
+A specific Docker repository should be created for our projects, which are defined on specific port.
+
+Steps to push the Image to Docker repository,
+
+Tag the image and then push the image to nexus same as we do for ECR.
+​Configuration changes required on Docker server :
+To interact with nexus repo below changes should be done in “/etc/docker/daemon.json”:
+{
+
+"insecure-registries": [
+
+"repo-ip:8082"
+
+]
+
+}
+
+
+To authenticate machine with nexus-repo :
+docker login -u docker -p docker123 repo-ip:8082
+
+This will create an entry in ~/.docker/config.json:
+
+{
+"auths": {
+
+"your-repo:8082": {
+
+"auth": "xyz"
+
+}
+
+}
+We can also create Docker (proxy ) to get the images from public repository (https://registry-1.docker.io/) to our nexus and group them in Docker ( group).
+
+
+I have tried this with windows Docker, Could you please install nexus on server where we have Docker,
+
+There we can push the image through bamboo plan and try this, we can create role and user for docker in Nexus.
+
+Please give admin rights in nexus also.​
+
+
+Regards,
+Rajat Arora
+<< nexus.PNG (45.1KB) push and pull imgae.PNG (62.8KB) taging -and auth.PNG (150.2KB) (258.1KB) >>
+
+
+
+
+
+######################################################################################################
+
+
+
+
+
+
+
+
+
+
+
+
+
